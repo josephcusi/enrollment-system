@@ -1,4 +1,4 @@
-<?= $this->include('admin/include/top')?>
+<?= $this->include('admin/include/top')?> <!--include top-->
 
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
