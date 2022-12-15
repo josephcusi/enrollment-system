@@ -15,10 +15,10 @@ class Prospectus extends BaseController
     public function r_prospectus()
     {
         $prospectus_model = new ProspectusModel();
-        $values = [
-            'prospectus'=> $prospectus_model->findAll()
-        ];
-        //var_dump($values);
+        $values ['humss'] = $prospectus_model->where('strand', 'HUMSS')->find();
+        $values ['abm'] = $prospectus_model->where('strand', 'ABM')->find();
+        $values ['stem'] = $prospectus_model->where('strand', 'STEM')->find();
+        $values['validation'] = $this->validator;
         return view('admin/prospectus', $values);
     }
     public function newprospectus()
@@ -52,13 +52,7 @@ class Prospectus extends BaseController
         ]);
 
         if (!$validated) {
-            $prospectus_model = new ProspectusModel();
-            $data = [
-                'prospectus'=> $prospectus_model->findAll()
-            ];
-            $data['validation'] = $this->validator;
-            
-            return view('admin/prospectus', $data);
+            return $this->r_prospectus();
         }
         else
         {
