@@ -42,24 +42,24 @@ class User extends BaseController
                     ]
                 ]
             ]);
-    
+
             if (!$validated) {
                 return view('auth/login', ['validation' => $this->validator]);
             } else {
                 $email = $this->request->getPost('email');
                 $password = $this->request->getPost('password');
-    
+
                 $user_model = new UserModel();
                 $user_info = $user_model->where('email', $email)->first();
-    
+
                 if ($user_info) {
                     $checkPass = Hash::Check($password, $user_info['password']);
-                    if (!$checkPass) 
+                    if (!$checkPass)
                     {
                         session()->setFlashdata('fail', 'Incorrect Password Provided');
                         return redirect()->to('login');
-                    } 
-                    else 
+                    }
+                    else
                     {
                         $userEmail = $user_info['email'];
                         $profile = new Profile();
@@ -67,19 +67,19 @@ class User extends BaseController
                         {
                             session()->set('loggedInUser', $userEmail);
                             return $profile->retrieve_profile($userEmail);
-    
+
                         }
                         elseif($user_info['usertype'] == "student" and $user_info['status'] == "pending")
                         {
                             return redirect()->back()->with('fail', 'Your email is not verified yet.');
                         }
                         else{
-                            
+
                             session()->set('loggedInUser', $userEmail);
                             return $profile->admin_dash($userEmail);
                         }
-                       
-    
+
+
                     }
                 } else {
                     session()->setFlashdata('fail', 'Incorrect Email');
@@ -88,7 +88,7 @@ class User extends BaseController
             }
 
 
-        
+
     }
 
     public function insert_reg()
@@ -180,13 +180,13 @@ class User extends BaseController
 
     public function logout()
     {
-        
+
         if (session()->has('loggedInUser')) {
             session()->destroy('loggeInUser');
-            
+
         }
         return redirect()->to('login?access=loggedout')->with('success', 'Log Out');
 
-        
+
     }
 }
