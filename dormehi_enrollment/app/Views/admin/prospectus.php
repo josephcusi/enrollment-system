@@ -125,7 +125,7 @@
         <div class="row">
           <div class="col-md-3">
 
-            
+
             <div class="card card-primary card-outline">
               <div class="card-body box-profile">
                 <div class="text-center">
@@ -175,14 +175,14 @@
                   <th>Pre-Requisit</th>
                   <th>Actions</th>
                 </tr>
-                <?php foreach($prospectus as $prospectus_value):?>
+                <?php foreach($humss as $humss_value):?>
                   <tr>
-                    <td><?= $prospectus_value['subject']?></td>
-                    <td><?= $prospectus_value['title']?></td>
-                    <td><?= $prospectus_value['unit']?></td>
-                    <td><?= $prospectus_value['pre_requisit']?></td>
+                    <td><?= $humss_value['subject']?></td>
+                    <td><?= $humss_value['title']?></td>
+                    <td><?= $humss_value['unit']?></td>
+                    <td><?= $humss_value['pre_requisit']?></td>
                     <td>
-                      <a href="<?=base_url('edit_prospectus'.$prospectus_value['id'])?>"><button type="button" class="btn btn-secondary btn-sm">update</button>
+                      <a href="<?=base_url('edit_prospectus'.$humss_value['id'])?>"><button type="button" class="btn btn-secondary btn-sm">update</button>
                       <a href="#"><button type="button" class="btn btn-primary btn-sm">delete</button>
                     </td>
                   </tr>
@@ -198,14 +198,14 @@
                   <th>Pre-Requisit</th>
                   <th>Actions</th>
                 </tr>
-                <?php foreach($prospectus as $prospectus_value):?>
+                <?php foreach($abm as $abm_values):?>
                   <tr>
-                    <td><?= $prospectus_value['subject']?></td>
-                    <td><?= $prospectus_value['title']?></td>
-                    <td><?= $prospectus_value['unit']?></td>
-                    <td><?= $prospectus_value['pre_requisit']?></td>
+                    <td><?= $abm_values['subject']?></td>
+                    <td><?= $abm_values['title']?></td>
+                    <td><?= $abm_values['unit']?></td>
+                    <td><?= $abm_values['pre_requisit']?></td>
                     <td>
-                      <a href="<?=base_url('edit_prospectus'.$prospectus_value['id'])?>"><button type="button" class="btn btn-secondary btn-sm">update</button>
+                      <a href="<?=base_url('edit_prospectus'.$abm_values['id'])?>"><button type="button" class="btn btn-secondary btn-sm">update</button>
                       <a href="#"><button type="button" class="btn btn-primary btn-sm">delete</button>
                     </td>
                   </tr>
@@ -221,14 +221,14 @@
                   <th>Pre-Requisit</th>
                   <th>Actions</th>
                 </tr>
-                <?php foreach($prospectus as $prospectus_value):?>
+                <?php foreach($stem as $stem_values):?>
                   <tr>
-                    <td><?= $prospectus_value['subject']?></td>
-                    <td><?= $prospectus_value['title']?></td>
-                    <td><?= $prospectus_value['unit']?></td>
-                    <td><?= $prospectus_value['pre_requisit']?></td>
+                    <td><?= $stem_values['subject']?></td>
+                    <td><?= $stem_values['title']?></td>
+                    <td><?= $stem_values['unit']?></td>
+                    <td><?= $stem_values['pre_requisit']?></td>
                     <td>
-                      <a href="<?=base_url('edit_prospectus'.$prospectus_value['id'])?>"><button type="button" class="btn btn-secondary btn-sm">update</button>
+                      <a href="<?=base_url('edit_prospectus'.$stem_values['id'])?>"><button type="button" class="btn btn-secondary btn-sm">update</button>
                       <a href="#"><button type="button" class="btn btn-primary btn-sm">delete</button>
                     </td>
                   </tr>
@@ -269,4 +269,3 @@ function openStrand(evt, cityName) {
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 </script>
-
