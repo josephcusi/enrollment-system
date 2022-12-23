@@ -124,7 +124,7 @@
           <?php foreach($pre_enrolled as $pre_enrolled_value):?>
             <tr>
               <td><?= $pre_enrolled_value['lrn'];?></td>
-              <td><?//= $user['firstname'] .' ' . $user['middlename'] . ' ' . $user['lastname'];?></td>
+              <td><?= $user['firstname'] .' ' . $user['middlename'] . ' ' . $user['lastname'];?></td>
               <td><?= $pre_enrolled_value['year_level'];?></td>
               <td><?//= $pre_enrolled_value['section'];?></td>
               <td><?= $pre_enrolled_value['status'];?></td>
