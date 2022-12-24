@@ -13,7 +13,10 @@ class User extends BaseController
     {
         helper(['url', 'form']);
     }
-
+    public function emailVerification()
+    {
+      return view('auth/emailVerification');
+    }
     public function login()
     {
         return view('Auth/login');
