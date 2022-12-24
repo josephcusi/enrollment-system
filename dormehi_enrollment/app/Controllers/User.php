@@ -176,7 +176,7 @@ class User extends BaseController
             if (!$query) {
                 return redirect()->back()->with('fail', 'Something went wrong.');
             } else {
-                return redirect()->to('login')->with('success', 'Register Successfully!');
+                return redirect()->to('emailVerification')->with('success', 'Register Successfully!');
             }
         }
     }
