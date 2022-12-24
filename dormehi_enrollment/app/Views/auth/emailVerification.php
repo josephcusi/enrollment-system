@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
     <!-- ===== CSS ===== -->
-    <link rel="stylesheet" href="http://localhost/enrollment/vendor/cssjs/css/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="<?=base_url()?>/cssjs/css/style.css" type="text/css" media="all" />
 
     <!-- ===== CSS ===== -->
     <!--<title>Login & Registration Form</title>-->
@@ -21,7 +21,7 @@
         <?php if(!empty(session()->getFlashdata('fail'))) : ?>
         <div class="alert alert-danger"><?= session()->getFlashdata('fail'); ?></div>
         <?php endif ?>
-        
+
         <?php if(!empty(session()->getFlashdata('success'))) : ?>
         <div class="alert alert-success"><?= session()->getFlashdata('success'); ?></div>
         <?php endif ?>
