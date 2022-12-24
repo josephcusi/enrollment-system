@@ -43,6 +43,7 @@ $routes->get('/', 'User::login');
 $routes->get('/login', 'User::login');
 $routes->get('/register', 'User::register');
 $routes->post('/auth', 'User::auth');
+$routes->get('/emailVerification', 'User::emailVerification');
 $routes->post('/insert_reg', 'User::insert_reg');
 $routes->get('/logout', 'User::logout');
 
