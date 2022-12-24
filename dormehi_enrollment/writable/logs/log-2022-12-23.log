@@ -1,0 +1,14 @@
+CRITICAL - 2022-12-23 17:45:41 --> Undefined constant "App\Controllers\user_model"
+in APPPATH\Controllers\PreEnrolled.php on line 32.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->pre_enrolled_reg()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-23 17:45:43 --> Undefined constant "App\Controllers\user_model"
+in APPPATH\Controllers\PreEnrolled.php on line 32.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->pre_enrolled_reg()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
