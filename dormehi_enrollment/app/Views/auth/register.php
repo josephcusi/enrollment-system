@@ -26,7 +26,7 @@
                 <div class="logo"></div>
                 <span class="title">DORMEHI</span>
 
-                <form action="<?= base_url('insert_reg'); ?>" method="post">
+                <form action="<?= base_url('/store'); ?>" method="post">
                     <?= csrf_field(); ?>
                     <div class="input-field">
                             <input type="text" name="lrn" placeholder="Student LRN">

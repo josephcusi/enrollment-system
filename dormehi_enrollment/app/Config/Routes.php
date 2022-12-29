@@ -46,6 +46,12 @@ $routes->post('/auth', 'User::auth');
 $routes->get('/emailVerification', 'User::emailVerification');
 $routes->post('/insert_reg', 'User::insert_reg');
 $routes->get('/logout', 'User::logout');
+$routes->get('/mail', 'AccountController::mail');
+// $routes->get('/register', 'AccountController::register');
+$routes->match(['get', 'post'],'/store', 'AccountController::store');
+$routes->match(['get', 'post'],'/login', 'AccountController::login');
+$routes->match(['get', 'post'],'/register', 'AccountController::register');
+$routes->match(['get', 'post'],'/verify/(:any)', 'AccountController::verify/$1');
 
 
 //------------USER PROFILE------------
