@@ -1,6 +1,5 @@
 
 <!DOCTYPE html>
-<!-- === Coding by CodingLab | www.codinglabweb.com === -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -19,6 +18,11 @@
 
     <!-- ===== CSS ===== -->
     <link rel="stylesheet" href="<?=base_url()?>/cssjs/css/style.css" type="text/css" media="all" />
+    <style>
+        body{
+            background-image: url('<?=base_url()?>/cssjs/img/bgg.jpg');
+        }
+    </style>
 
     <!-- ===== CSS ===== -->
     <!--<title>Login & Registration Form</title>-->

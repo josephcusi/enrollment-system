@@ -1,6 +1,5 @@
-<!--
+
 <!DOCTYPE html>
-<!-- === Coding by CodingLab | www.codinglabweb.com === -->
 <html lang="en">
 
 <head>
@@ -15,6 +14,11 @@
 
     <!-- ===== CSS ===== -->
     <link rel="stylesheet" href="<?=base_url()?>/cssjs/css/style.css" type="text/css" media="all" />
+    <style>
+        body{
+            background-image: url('<?=base_url()?>/cssjs/img/bgg.jpg');
+        }
+    </style>
 
     <!--<title>Login & Registration Form</title>-->
 </head>
@@ -23,7 +27,7 @@
     <div class="container glass">
         <div class="forms">
             <div class="form signup">
-                <div class="logo"></div>
+                <div class="logo" style="background-image: url('<?=base_url()?>/cssjs/img/dormehiLogo.png');"></div>
                 <span class="title">DORMEHI</span>
 
                 <form action="<?= base_url('/store'); ?>" method="post">
