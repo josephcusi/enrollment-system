@@ -114,11 +114,12 @@ class AccountController extends BaseController
         'status' => 'active'
       ];
       $user_model->set($data)->where('token', $id)->update();
-      return redirect()->to('login')->with('success', 'Account was succesfully verified!');
-    }else{
-      return redirect()->to('login')->with('warning', 'Invalid link!');
+      $session->setFlashdata('success', 'Account was succesfully verified');
+      }else{
+      $session->setFlashdata('fail', 'Invalid link!');
+     }
+     return redirect('login');
    }
-  }
     public function sendMail($to, $subject, $message)
     {
       $to = $to;
