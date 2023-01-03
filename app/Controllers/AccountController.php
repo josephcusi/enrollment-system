@@ -130,6 +130,7 @@ class AccountController extends BaseController
       $email->setMailType("html");
       $email->setTo($to);
       $email->setFrom('zasuke277379597@gmail.com', $subject);
+      $email->setSubject('Confirm your Registration');
       $email->setMessage($message);
       if ($email->send()){
         echo '';
