@@ -153,7 +153,7 @@
               <div class="card-header p-2">
                 <ul>
                 <div class="dropdown"style = "float:right; margin-right:10%">
-                  <a href class="dropbt">Settings</a>
+                  <a href="#" class="dropbt">Settings</a>
                   <div class="dropdown-content">
                     <a style = "color:maroon">Grade 11</a>
                     <a href="#">1st Semester</a>
