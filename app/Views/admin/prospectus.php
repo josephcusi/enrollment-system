@@ -152,9 +152,8 @@
             <div class="card">
               <div class="card-header p-2">
                 <ul>
-                <p class="text-muted text-left">Humanities and Social Sciences - 1st Year - 1st Semester</p>
                 <div class="dropdown"style = "float:right; margin-right:10%">
-                <a href="#" class="dropbt">Settings</a>
+                  <a href class="dropbt">Settings</a>
                   <div class="dropdown-content">
                     <a style = "color:maroon">Grade 11</a>
                     <a href="#">1st Semester</a>
@@ -168,6 +167,7 @@
               </div>
               <div id="humss" class="tabcontent">
                 <table class="table table-bordered table-striped" style = "font-family:poppins">
+              <thead>
                 <tr>
                   <th>Subject</th>
                   <th>Title</th>
@@ -175,7 +175,9 @@
                   <th>Pre-Requisit</th>
                   <th>Actions</th>
                 </tr>
+              </thead>
                 <?php foreach($humss as $humss_value):?>
+                  <tbody>
                   <tr>
                     <td><?= $humss_value['subject']?></td>
                     <td><?= $humss_value['title']?></td>
@@ -186,11 +188,13 @@
                       <a href="#"><button type="button" class="btn btn-primary btn-sm">delete</button>
                     </td>
                   </tr>
+                </tbody>
                   <?php endforeach;?>
               </table>
               </div>
               <div id="abm" class="tabcontent">
               <table class="table table-bordered table-striped" style = "font-family:poppins">
+              <thead>
                 <tr>
                   <th>Subject</th>
                   <th>Title</th>
@@ -198,7 +202,9 @@
                   <th>Pre-Requisit</th>
                   <th>Actions</th>
                 </tr>
+                </thead>
                 <?php foreach($abm as $abm_values):?>
+                  <tbody>
                   <tr>
                     <td><?= $abm_values['subject']?></td>
                     <td><?= $abm_values['title']?></td>
@@ -209,11 +215,13 @@
                       <a href="#"><button type="button" class="btn btn-primary btn-sm">delete</button>
                     </td>
                   </tr>
+                </tbody>
                   <?php endforeach;?>
               </table>
               </div>
               <div id="stem" class="tabcontent">
               <table class="table table-bordered table-striped" style = "font-family:poppins">
+              <thead>
                 <tr>
                   <th>Subject</th>
                   <th>Title</th>
@@ -221,7 +229,10 @@
                   <th>Pre-Requisit</th>
                   <th>Actions</th>
                 </tr>
+                </thead>
+                <tbody>
                 <?php foreach($stem as $stem_values):?>
+
                   <tr>
                     <td><?= $stem_values['subject']?></td>
                     <td><?= $stem_values['title']?></td>
@@ -232,6 +243,7 @@
                       <a href="#"><button type="button" class="btn btn-primary btn-sm">delete</button>
                     </td>
                   </tr>
+                </tbody>
                   <?php endforeach;?>
                 </table>
               </div>

@@ -153,7 +153,7 @@
               <div class="card-header p-2">
                 <ul>
                 <div class="dropdown"style = "float:right; margin-right:10%">
-                  <a href="#" class="dropbt">Settings</a>
+                  <a href class="dropbt">Settings</a>
                   <div class="dropdown-content">
                     <a style = "color:maroon">Grade 11</a>
                     <a href="#">1st Semester</a>
@@ -167,6 +167,7 @@
               </div>
               <div id="humss" class="tabcontent">
                 <table class="table table-bordered table-striped" style = "font-family:poppins">
+                <thead>
                 <tr>
                 <th>Section</th>
                 <th>Strand</th>
@@ -175,6 +176,8 @@
                 <th>Subject Count</th>
                 <th>Actions</th>
                 </tr>
+                <thead>
+                <tbody>
                 <?php foreach($HUMSS as $section_value):?>
                   <tr>
                   <td><?= $section_value['section']?></td>
@@ -188,11 +191,13 @@
                     <a href="<?= site_url('delete/'.$section_value['id']) ?>"><button type="button" class="btn btn-primary btn-sm">delete</button>
                   </td>
                   </tr>
+                  </tbody>
                   <?php endforeach;?>
               </table>
               </div>
               <div id="abm" class="tabcontent">
               <table class="table table-bordered table-striped" style = "font-family:poppins">
+              <thead>
                 <tr>
                 <th>Section</th>
                 <th>Strand</th>
@@ -201,7 +206,9 @@
                 <th>Subject Count</th>
                 <th>Actions</th>
                 </tr>
+                </thead>
                 <?php foreach($ABM as $section_value):?>
+                <tbody>
                   <tr>
                   <td><?= $section_value['section']?></td>
                   <td><?= $section_value['strand']?></td>
@@ -214,11 +221,13 @@
                     <a href="<?= site_url('delete/'.$section_value['id']) ?>"><button type="button" class="btn btn-primary btn-sm">delete</button>
                   </td>
                   </tr>
+                </tbody>
                   <?php endforeach;?>
               </table>
               </div>
               <div id="stem" class="tabcontent">
               <table class="table table-bordered table-striped" style = "font-family:poppins">
+                <thead>
                 <tr>
                 <th>Section</th>
                 <th>Strand</th>
@@ -227,7 +236,9 @@
                 <th>Subject Count</th>
                 <th>Actions</th>
                 </tr>
+                </thead>
                 <?php foreach($STEM as $section_value):?>
+                  <tbody>
                   <tr>
                   <td><?= $section_value['section']?></td>
                   <td><?= $section_value['strand']?></td>
@@ -240,6 +251,7 @@
                     <a href="<?= site_url('delete/'.$section_value['id']) ?>"><button type="button" class="btn btn-primary btn-sm">delete</button>
                   </td>
                   </tr>
+                </tbody>
                   <?php endforeach;?>
                 </table>
               </div>
