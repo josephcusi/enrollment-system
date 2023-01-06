@@ -23,10 +23,14 @@ class Section extends BaseController
         $section_model = new SectionModel();
         $prospectus_model = new ProspectusModel();
         $values = [
-            'section'=> $section_model->findAll()
+            'HUMSS'=> $section_model->where('strand', 'HUMSS')->find(),
+            'ABM'=> $section_model->where('strand', 'ABM')->find(),
+            'STEM'=> $section_model->where('strand', 'STEM')->find()
         ];
         $values['validation'] = $this->validator;
-        $values['subject_count'] = $prospectus_model->get()->getNumRows();;
+        $values['Humss'] = $prospectus_model->where('strand', 'HUMSS')->get()->getNumRows();
+        $values['Abm'] = $prospectus_model->where('strand', 'ABM')->get()->getNumRows();
+        $values['Stem'] = $prospectus_model->where('strand', 'STEM')->get()->getNumRows();
         //var_dump($values);
         return view('admin/section', $values);
     }

@@ -98,64 +98,183 @@
 </aside>
 
 </div>
-<br>
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
 
 
   <!-- Main content -->
-  <div class="card">
-    <div class="card-header">
-      <h3 class="card-title"style = "font-family:poppins">Section Table</h3>
-    </div>
-    <!-- /.card-header -->
-    <div class="card-body">
+  <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Section</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Section</a></li>
+              <li class="breadcrumb-item active">Section</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
 
-      <table id="example1" class="table table-bordered table-striped" style = "font-family:poppins">
-      <button type="button" class="btn btn-default" style = "margin-left: 90%; font-family:poppins; margin-bottom:1%; background-color:maroon; color: white;" data-toggle="modal" data-target="#new-section">New Section</button>
-      <?= $this->include('admin/include/sectionmodal/newSection')?>
-        <thead>
-          <tr>
-
-            <th>Section</th>
-            <th>Strand</th>
-            <th>Semester</th>
-            <th>Year Level</th>
-            <th>Subject Count</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-            <?php foreach($section as $section_value):?>
-          <tr>
-
-            <td><?= $section_value['section']?></td>
-            <td><?= $section_value['strand']?></td>
-            <td><?= $section_value['semester']?></td>
-            <td><?=$section_value['year_level']?></td>
-            <td><?=$subject_count?></td>
-            <td>
-              <a href="<?=base_url('schedule')?>"><button type="button" class="btn btn-secondary btn-sm">schedule</button>
-              <a href="<?=site_url('edit/'.$section_value['id'])?>"><button type="button" class="btn btn-secondary btn-sm">update</button>
-              <a href="<?= site_url('delete/'.$section_value['id']) ?>"><button type="button" class="btn btn-primary btn-sm">delete</button>
-            </td>
-          </tr>
-
-          </tr>
-          <?php endforeach;?>
-        </tbody>
-        <tfoot>
-        </tfoot>
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-3">
 
 
-      </table>
-    <!-- /.card-body -->
-  </div>
+            <div class="card card-primary card-outline">
+              <div class="card-body box-profile">
+                <div class="text-center">
 
-  <!-- /.content -->
-</div>
+                </div>
+                <p class="text-muted text-left">Strand</p>
+                <ul class="list-group list-group-unbordered mb-3 nav nav-pills">
+                <li class="nav-item"><a type="button" class="tablinks nav-link active" onclick="openStrand(event, 'humss')" id="defaultOpen" >HUMSS</a></li>
+                    <li class="nav-item"><a type="button" class="tablinks nav-link" onclick="openStrand(event, 'abm')" id="defaultOpen" >ABM</a></li>
+                    <li class="nav-item"><a type="button" class="tablinks nav-link" onclick="openStrand(event, 'stem')" id="defaultOpen" >STEM</a></li>
+                  </ul>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+
+            <!-- About Me Box -->
+
+
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+          <div class="col-md-9">
+            <div class="card">
+              <div class="card-header p-2">
+                <ul>
+                <div class="dropdown"style = "float:right; margin-right:10%">
+                  <a href class="dropbt">Settings</a>
+                  <div class="dropdown-content">
+                    <a style = "color:maroon">Grade 11</a>
+                    <a href="#">1st Semester</a>
+                    <a href="#">2nd Semester</a>
+                    <a style = "color:maroon">Grade 12</a>
+                    <a href="#">1st Semester</a>
+                    <a href="#">2nd Semester</a>
+                  </div>
+                </div>
+                </ul>
+              </div>
+              <div id="humss" class="tabcontent">
+                <table class="table table-bordered table-striped" style = "font-family:poppins">
+                <tr>
+                <th>Section</th>
+                <th>Strand</th>
+                <th>Semester</th>
+                <th>Year Level</th>
+                <th>Subject Count</th>
+                <th>Actions</th>
+                </tr>
+                <?php foreach($HUMSS as $section_value):?>
+                  <tr>
+                  <td><?= $section_value['section']?></td>
+                  <td><?= $section_value['strand']?></td>
+                  <td><?= $section_value['semester']?></td>
+                  <td><?=$section_value['year_level']?></td>
+                  <td><?=$Humss?></td>
+                  <td>
+                    <a href="<?=base_url('schedule')?>"><button type="button" class="btn btn-secondary btn-sm">schedule</button>
+                    <a href="<?=site_url('edit/'.$section_value['id'])?>"><button type="button" class="btn btn-secondary btn-sm">update</button>
+                    <a href="<?= site_url('delete/'.$section_value['id']) ?>"><button type="button" class="btn btn-primary btn-sm">delete</button>
+                  </td>
+                  </tr>
+                  <?php endforeach;?>
+              </table>
+              </div>
+              <div id="abm" class="tabcontent">
+              <table class="table table-bordered table-striped" style = "font-family:poppins">
+                <tr>
+                <th>Section</th>
+                <th>Strand</th>
+                <th>Semester</th>
+                <th>Year Level</th>
+                <th>Subject Count</th>
+                <th>Actions</th>
+                </tr>
+                <?php foreach($ABM as $section_value):?>
+                  <tr>
+                  <td><?= $section_value['section']?></td>
+                  <td><?= $section_value['strand']?></td>
+                  <td><?= $section_value['semester']?></td>
+                  <td><?=$section_value['year_level']?></td>
+                  <td><?=$Abm?></td>
+                  <td>
+                    <a href="<?=base_url('schedule')?>"><button type="button" class="btn btn-secondary btn-sm">schedule</button>
+                    <a href="<?=site_url('edit/'.$section_value['id'])?>"><button type="button" class="btn btn-secondary btn-sm">update</button>
+                    <a href="<?= site_url('delete/'.$section_value['id']) ?>"><button type="button" class="btn btn-primary btn-sm">delete</button>
+                  </td>
+                  </tr>
+                  <?php endforeach;?>
+              </table>
+              </div>
+              <div id="stem" class="tabcontent">
+              <table class="table table-bordered table-striped" style = "font-family:poppins">
+                <tr>
+                <th>Section</th>
+                <th>Strand</th>
+                <th>Semester</th>
+                <th>Year Level</th>
+                <th>Subject Count</th>
+                <th>Actions</th>
+                </tr>
+                <?php foreach($STEM as $section_value):?>
+                  <tr>
+                  <td><?= $section_value['section']?></td>
+                  <td><?= $section_value['strand']?></td>
+                  <td><?= $section_value['semester']?></td>
+                  <td><?=$section_value['year_level']?></td>
+                  <td><?=$Stem?></td>
+                  <td>
+                    <a href="<?=base_url('schedule')?>"><button type="button" class="btn btn-secondary btn-sm">schedule</button>
+                    <a href="<?=site_url('edit/'.$section_value['id'])?>"><button type="button" class="btn btn-secondary btn-sm">update</button>
+                    <a href="<?= site_url('delete/'.$section_value['id']) ?>"><button type="button" class="btn btn-primary btn-sm">delete</button>
+                  </td>
+                  </tr>
+                  <?php endforeach;?>
+                </table>
+              </div>
+                <button type="button" class="btn btn-default" class="btn btn-default" style = "float:right; font-family:poppins; margin-bottom:1%; background-color:maroon; color: white;" data-toggle="modal" data-target="#new-section">New Section</button>
+                 <?= $this->include('admin/include/sectionmodal/newSection')?>
+            </div>
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </section>
   <!-- /.content -->
 </div>
 </body>
 <?= $this->include('admin/include/end')?>
 <?= $this->include('admin/include/footer')?>
+
+<script>
+function openStrand(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
