@@ -41,6 +41,7 @@ $routes->set404Override();
 //--------------USER-----------------
 $routes->get('/', 'User::login');
 $routes->get('/login', 'User::login');
+$routes->get('/forgot', 'User::forgot');
 $routes->get('/register', 'User::register');
 $routes->post('/auth', 'User::auth');
 $routes->get('/emailVerification', 'User::emailVerification');
@@ -52,6 +53,13 @@ $routes->match(['get', 'post'],'/store', 'AccountController::store');
 $routes->match(['get', 'post'],'/login', 'AccountController::login');
 $routes->match(['get', 'post'],'/register', 'AccountController::register');
 $routes->match(['get', 'post'],'/verify/(:any)', 'AccountController::verify/$1');
+
+//authcontroller/ forgot//
+$routes->get('forgot-password', 'AuthController::forgot');
+$routes->post('forgot-password', 'AuthController::forgot');
+$routes->get('reset_Password', 'AuthController::reset_Password');
+$routes->get('login', 'AuthController::login');
+$routes->post('reset-password', 'AuthController::resetPassword');
 
 
 //------------USER PROFILE------------
