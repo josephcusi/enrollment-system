@@ -44,6 +44,8 @@
             <div class="form login">
               <div class="logo" style="background-image: url('<?=base_url()?>/cssjs/img/dormehiLogo.png');"></div>
                   <span class="title">DORMEHI</span>
+                  <p class = "a" style="font-family: 'Poppins';font-size: 20px; text-align:center">Forgot your Password ?</p>
+                  <p class = "b" style="font-family: 'Poppins';font-size: 15px; text-align:center">Enter your email and we'll send you a reset link.</p>
 
                   <form action="<?= site_url('forgot-password') ?>" method="post">
                   <?= csrf_field(); ?>
