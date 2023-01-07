@@ -1,5 +1,6 @@
 
 <!DOCTYPE html>
+<!-- === Coding by CodingLab | www.codinglabweb.com === -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -28,6 +29,7 @@
     <!--<title>Login & Registration Form</title>-->
 </head>
 <body>
+
     <div class="container glass">
         <?php if(!empty(session()->getFlashdata('fail'))) : ?>
         <div class="alert alert-danger"><?= session()->getFlashdata('fail'); ?></div>
@@ -37,41 +39,29 @@
         <div class="alert alert-success"><?= session()->getFlashdata('success'); ?></div>
         <?php endif ?>
 
+
         <div class="forms">
             <div class="form login">
               <div class="logo" style="background-image: url('<?=base_url()?>/cssjs/img/dormehiLogo.png');"></div>
                   <span class="title">DORMEHI</span>
-                  <form action="<?= base_url('auth'); ?>" method="post">
+
+                  <form action="<?= site_url('forgot-password') ?>" method="post">
                   <?= csrf_field(); ?>
                     <div class="input-field">
-                        <input type="text" placeholder="Email" name="email">
+                        <input type="text" placeholder="Email" name="email" value="<?= old('email') ?>">
                         <i class="uil uil-envelope icon"></i>
                     </div>
                     <span class="text-danger"><?= isset($validation) ? display_error($validation, 'email') : '' ?></span>
-                    <div class="input-field">
-                        <input type="password" class="password" placeholder="Password" name="password">
-                        <i class="uil uil-lock icon"></i>
-                    </div>
-                    <span class="text-danger"><?= isset($validation) ? display_error($validation, 'password') : '' ?></span>
-                    <div class="checkbox-text">
-                        <div class="checkbox-content">
-                            <input type="checkbox" id="logCheck">
-                            <label for="logCheck" class="text">Remember me</label>
-                        </div>
-                        <a href="<?php echo base_url('forgot');?>" class="text">Forgot password?</a>
-                    </div>
-
                     <div class="input-field button">
-
-                    <button value="Login" class="btn btn-success toastsDefaultSuccess">
-                  Login
+                    <button type = submit value = "Send Reset Link" class="btn btn-success toastsDefaultSuccess">
+                  Send Reset Link
                 </button>
                     </div>
                 </form>
 
                 <div class="login-signup">
-                    <span class="text">Not a member?
-                        <a href="<?php echo base_url('register');?>" class="text signup-link">Signup Now</a>
+                    <span class="text">Go back to login?
+                        <a href="<?php echo base_url('login');?>" class="text signup-link">Login</a>
                     </span>
                 </div>
             </div>

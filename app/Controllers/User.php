@@ -21,6 +21,10 @@ class User extends BaseController
     {
         return view('Auth/login');
     }
+    public function forgot()
+    {
+        return view('Auth/forgot');
+    }
     public function register()
     {
         return view('Auth/register');
