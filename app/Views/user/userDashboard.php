@@ -97,6 +97,14 @@
       <?php if(!empty(session()->getFlashdata('dashboard'))) : ?>
       <script>swal("Welcome", "You successfully login your account.", "success");</script>
       <?php endif ?>
+
+      <?php if(!empty(session()->getFlashdata('saveprofile'))) : ?>
+      <script>swal("Saved", "Profile has been successfully updated.", "success");</script>
+      <?php endif ?>
+
+      <?php if(!empty(session()->getFlashdata('missing'))) : ?>
+      <script>swal("Oopps!", "Please fill out all missing fields.", "warning");</script>
+      <?php endif ?>
       <!-- Content Header (Page header) -->
       <section class="content-header">
         <div class="container-fluid">

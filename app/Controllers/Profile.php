@@ -196,6 +196,7 @@ class Profile extends BaseController
         if (!$validated)
         {
             session()->setFlashdata('validation', $this->validator);
+            session()->setFlashdata('missing', 'Welcome');
             return $this->retrieve_profile($email);
         }
         else {
@@ -251,6 +252,7 @@ class Profile extends BaseController
             }
             else
             {
+                session()->setFlashdata('saveprofile', 'Incorrect Password Provided');
                 return $this->retrieve_profile($email);
             }
         }
@@ -263,7 +265,7 @@ class Profile extends BaseController
 
         $data['year'] =  $year_model->where('status', 'active')->first();
         $data['user'] = $user_model->where('email', session()->get('loggedInUser'))->first();
-      
+
         return view('user/newregistration', $data);
     }
 
@@ -279,12 +281,12 @@ class Profile extends BaseController
         if($registration_model->insert($data)){
             return view('User/Registration');
         }
-        
+
     }
 
     public function registration()
     {
-        
+
         $user_model = new UserModel();
         $userdata['userdata'] = $user_model->where('email', session()->get('loggedInUser'))->first();
         $lrn = '';
@@ -304,7 +306,7 @@ class Profile extends BaseController
                 'rules' => 'required',
                 'errors' => [
                     'required' => 'Subject is required.'
-                    
+
                 ]
             ],
             'strand' => [
@@ -317,14 +319,14 @@ class Profile extends BaseController
                 'rules' => 'required',
                 'errors' => [
                     'required' => 'Unit is required.'
-                   
+
                 ]
             ],
             'semester' => [
                 'rules' => 'required',
                 'errors' => [
                     'required' => 'Pre-Requisit is required.'
-                    
+
                 ]
             ]
         ]);
@@ -336,7 +338,7 @@ class Profile extends BaseController
             $data = [
                 'registration'=> $registration_model->findAll()
             ];
-           
+
             $data['validation'] = $this->validator;
 
             return view('user/registration', $data);
@@ -374,7 +376,7 @@ class Profile extends BaseController
         $registration_model = new RegistrationModel();
         $data['user'] = $registration_model->find($id);
         return view('user/updateReg', $data);
-    } 
+    }
     public function update($id)
     {
         $registration_model = new RegistrationModel();
