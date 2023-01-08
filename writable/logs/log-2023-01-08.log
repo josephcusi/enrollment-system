@@ -1,0 +1,50 @@
+CRITICAL - 2023-01-08 13:10:39 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 867.
+ 1 SYSTEMPATH\BaseModel.php(867): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Profile.php(431): CodeIgniter\Model->update('60', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->updateProfile('60')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-08 13:11:03 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 867.
+ 1 SYSTEMPATH\BaseModel.php(867): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Profile.php(431): CodeIgniter\Model->update('60', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->updateProfile('60')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-08 13:12:30 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 867.
+ 1 SYSTEMPATH\BaseModel.php(867): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Profile.php(431): CodeIgniter\Model->update('60', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->updateProfile('60')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-08 13:14:31 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 867.
+ 1 SYSTEMPATH\BaseModel.php(867): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Profile.php(431): CodeIgniter\Model->update('60', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->updateProfile('60')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-08 13:15:02 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 867.
+ 1 SYSTEMPATH\BaseModel.php(867): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Profile.php(431): CodeIgniter\Model->update('61', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->updateProfile('61')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

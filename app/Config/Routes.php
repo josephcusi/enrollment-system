@@ -81,6 +81,7 @@ $routes->post('/insert_registration', 'Profile::insert_registration');
 $routes->get('/updateReg', 'Profile::updateReg');
 $routes->get('/edit_reg/(:any)', 'Profile::edit_reg/$1');
 $routes->put('/update/(:any)', 'Profile::update/$1');
+$routes->put('/updateProfile/(:any)', 'Profile::updateProfile/$1');
 
 });
 
