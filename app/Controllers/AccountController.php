@@ -91,7 +91,7 @@ class AccountController extends BaseController
       ' We are almost done setting up your account! Just one more step: please verify your email address by clicking
         <a href="'.base_url().'/verify/'.$token.'">verify your account.</a>';
       $this->sendMail($to, $subject, $message);
-      return redirect()->to('login')->with('success', 'Your request has been sent. Please check your email.');
+      return redirect()->to('login')->with('register', 'Your request has been sent. Please check your email.');
     }else{
       $data['validation']=$this->validator;
       echo view('auth/register', $data);
@@ -114,9 +114,9 @@ class AccountController extends BaseController
         'status' => 'active'
       ];
       $user_model->set($data)->where('token', $id)->update();
-      $session->setFlashdata('success', 'Account was succesfully verified');
+      $session->setFlashdata('verify', 'Account was succesfully verified');
       }else{
-      $session->setFlashdata('fail', 'Invalid link!');
+      $session->setFlashdata('invalid', 'Invalid link!');
      }
      return redirect('login');
    }

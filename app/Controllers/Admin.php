@@ -39,11 +39,11 @@ class Admin extends BaseController
     }
     public function adminlogout()
     {
-        
+
         if (session()->has('loggedInUser')) {
-            session()->destroy('loggeInUser');
-            
+            session()->remove('loggedInUser');
+
         }
-        return redirect()->to('login?access=loggedout')->with('success', 'Log Out');
+        return redirect()->to('login?access=loggedout')->with('logoutz', 'Log Out');
     }
 }

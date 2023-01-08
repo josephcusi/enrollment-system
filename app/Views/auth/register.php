@@ -25,6 +25,10 @@
 
 <body>
     <div class="container glass">
+      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+      <?php if(!empty(session()->getFlashdata('fail'))) : ?>
+      <script>swal("Ooppss!", "Something went wrong.", "error");</script>
+      <?php endif ?>
         <div class="forms">
             <div class="form signup">
                 <div class="logo" style="background-image: url('<?=base_url()?>/cssjs/img/dormehiLogo.png');"></div>
@@ -92,6 +96,7 @@
         </div>
     </div>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 
 </html>

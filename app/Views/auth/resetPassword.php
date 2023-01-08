@@ -26,9 +26,14 @@
 
 <body>
     <div class="container glass">
-      <?php if(!empty(session()->getFlashdata('fail'))) : ?>
-      <div class="alert alert-danger"><?= session()->getFlashdata('fail'); ?></div>
-      <?php endif ?>
+      <script src="<?= base_url()?>/dist/js/sweetalert.js"></script>
+        <?php if(!empty(session()->getFlashdata('changepass'))) : ?>
+        <script>swal("Change your Password", "You can now change your password.", "info");</script>
+        <?php endif ?>
+
+        <?php if(!empty(session()->getFlashdata('invalid'))) : ?>
+        <script>swal("Invalid Token!", "You can't change your password.", "error");</script>
+        <?php endif ?>
 
         <div class="forms">
             <div class="form signup">
@@ -54,10 +59,15 @@
                             <button type = "submit" value="Reset Password">Reset Password</button>
                         </div>
                 </form>
-
+                <div class="login-signup">
+                    <span class="text">Go back to login?
+                        <a href="<?php echo base_url('login');?>" class="text signup-link">Login</a>
+                    </span>
+                </div>
             </div>
         </div>
     </div>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>

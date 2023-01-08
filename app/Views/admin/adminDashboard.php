@@ -99,6 +99,10 @@
 
 </div>
 <div class="content-wrapper">
+  <script src="<?= base_url()?>/dist/js/sweetalert.js"></script>
+  <?php if(!empty(session()->getFlashdata('admindashboard'))) : ?>
+  <script>swal("Welcome Admin!", "You successfully login your account.", "success");</script>
+  <?php endif ?>
   <!-- Content Header (Page header) -->
   <div class="content-header">
     <div class="container-fluid">
@@ -206,6 +210,7 @@
   </section>
   <!-- /.content -->
 </div>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 <?= $this->include('admin/include/end')?>
 <?= $this->include('admin/include/footer')?>

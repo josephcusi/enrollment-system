@@ -27,7 +27,8 @@ class AuthCheckFilter implements FilterInterface
     {
         if(!session()->has('loggedInUser'))
         {
-            return redirect()->to('login')->with('fail', 'You must be logged in, To access this page.');
+          session()->setFlashdata('sheesh', 'Incor');
+          return redirect()->to('login');
         }
     }
 

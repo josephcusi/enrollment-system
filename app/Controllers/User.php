@@ -63,8 +63,8 @@ class User extends BaseController
                     $checkPass = Hash::Check($password, $user_info['password']);
                     if (!$checkPass)
                     {
-                        session()->setFlashdata('fail', 'Incorrect Password Provided');
-                        return redirect()->to('login');
+                      session()->setFlashdata('incorrect_pass', 'Incorrect Password Provided');
+                    return redirect()->to('login');
                     }
                     else
                     {
@@ -72,25 +72,28 @@ class User extends BaseController
                         $profile = new Profile();
                         if($user_info['usertype'] == "student" and $user_info['status'] == "active")
                         {
-                            session()->set('loggedInUser', $userEmail);
-                            return $profile->retrieve_profile($userEmail);
+                          session()->set('loggedInUser', $userEmail);
+                          session()->setFlashdata('dashboard', 'Welcome');
+                          return $profile->retrieve_profile($userEmail);
 
                         }
                         elseif($user_info['usertype'] == "student" and $user_info['status'] == "pending")
                         {
-                            return redirect()->back()->with('fail', 'Your email is not verified yet.');
+                          session()->setFlashdata('notverify', 'Your email is not verified yet. Please check your email');
+                          return redirect()->to('login');
                         }
                         else{
 
-                            session()->set('loggedInUser', $userEmail);
-                            return $profile->admin_dash($userEmail);
+                          session()->set('loggedInUser', $userEmail);
+                          session()->setFlashdata('admindashboard', 'Welcome');
+                          return $profile->admin_dash($userEmail);
                         }
 
 
                     }
                 } else {
-                    session()->setFlashdata('fail', 'Incorrect Email');
-                    return redirect()->to('login');
+                  session()->setFlashdata('incorrect_email', 'Incorrect Email');
+                  return redirect()->to('login');
                 }
             }
 
@@ -189,10 +192,9 @@ class User extends BaseController
     {
 
         if (session()->has('loggedInUser')) {
-            session()->destroy('loggeInUser');
-
+            session()->remove('loggedInUser');
         }
-        return redirect()->to('login?access=loggedout')->with('success', 'Log Out');
+        return redirect()->to('login?access=loggedout')->with('logoutz', 'Log Out');
 
 
     }

@@ -69,8 +69,8 @@ public function resetPassword()
     $user = $user_model->where('reset_token', $token)->first();
 
     if (! $user) {
-        $session->setFlashdata('fail', 'Invalid password reset token.');
-        return redirect()->to('reset_Password')->with('fail', 'Invalid password reset token.');
+        session()->setFlashdata('invalid', 'Incorrect Email');
+        return redirect()->to('reset_Password')->with('invalid', 'Invalid password reset token.');
     }
 
     if ($this->request->getMethod() == 'post') {
@@ -93,7 +93,7 @@ $user_model->save([
 ]);
 
 // Show a success message and log the user in
-$session->setFlashdata('success', 'Your password has been reset successfully.');
+session()->setFlashdata('passwordreset', 'Your password has been reset successfully.');
 return redirect()->to(base_url('login'));
 }
 }
@@ -103,6 +103,7 @@ public function login()
 }
 public function reset_Password()
 {
+  session()->setFlashdata('changepass', 'Incorrect Email');
   return view('auth/resetPassword');
 }
 

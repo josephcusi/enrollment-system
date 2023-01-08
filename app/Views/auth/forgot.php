@@ -31,13 +31,14 @@
 <body>
 
     <div class="container glass">
-        <?php if(!empty(session()->getFlashdata('fail'))) : ?>
-        <div class="alert alert-danger"><?= session()->getFlashdata('fail'); ?></div>
-        <?php endif ?>
+      <script src="<?= base_url()?>/dist/js/sweetalert.js"></script>
+      <?php if(!empty(session()->getFlashdata('fail'))) : ?>
+      <script>swal("Oopss!", "The email address you entered was not found.", "error");</script>
+      <?php endif ?>
 
-        <?php if(!empty(session()->getFlashdata('success'))) : ?>
-        <div class="alert alert-success"><?= session()->getFlashdata('success'); ?></div>
-        <?php endif ?>
+      <?php if(!empty(session()->getFlashdata('success'))) : ?>
+      <script>swal("Link sent!", "A reset link has been sent to your email address.", "success");</script>
+      <?php endif ?>
 
 
         <div class="forms">
@@ -70,6 +71,6 @@
 
         </div>
     </div>
-
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>

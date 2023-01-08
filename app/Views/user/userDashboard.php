@@ -92,6 +92,11 @@
 
     </div>
     <div class="content-wrapper">
+      <script src="<?= base_url()?>/dist/js/sweetalert.js"></script>
+      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+      <?php if(!empty(session()->getFlashdata('dashboard'))) : ?>
+      <script>swal("Welcome", "You successfully login your account.", "success");</script>
+      <?php endif ?>
       <!-- Content Header (Page header) -->
       <section class="content-header">
         <div class="container-fluid">
@@ -286,12 +291,12 @@
                       </div>
                     </div>
                     </div>
-                  </div>  
+                  </div>
                     </div>
-                   
+
                     <!-- /.tab-pane -->
                     <div class="tab-pane" id="address">
-                     
+
                         <p class="a" style="font-size:1.5em; font-family: Poppins;color:maroon;">Address</p>
                         <div class="form-group row">
                           <label for="address" class="col-sm-1 col-form-label">Street</label>
@@ -469,6 +474,7 @@
     </section>
     <!-- /.content -->
     </div>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </body>
   <?= $this->include('user/include/end') ?>
     <?= $this->include('user/include/footer') ?>
