@@ -48,3 +48,16 @@ in SYSTEMPATH\BaseModel.php on line 867.
  6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-08 13:42:06 --> Undefined array key "profile_picture"
+in APPPATH\Views\user\userDashboard.php on line 132.
+ 1 APPPATH\Views\user\userDashboard.php(132): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "profile_picture"', 'APPPATH\\Views\\user\\userDashboard.php', 132)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\userDashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/userdashboard', [], true)
+ 5 APPPATH\Controllers\Profile.php(50): view('user/userdashboard', [...])
+ 6 APPPATH\Controllers\User.php(77): App\Controllers\Profile->retrieve_profile('reyondarandell842@gmail.com')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->auth()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
