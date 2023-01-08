@@ -103,7 +103,7 @@
       <?php endif ?>
 
       <?php if(!empty(session()->getFlashdata('missing'))) : ?>
-      <script>swal("Oopps!", "Please fill out all missing fields.", "warning");</script>
+      <script>swal("Missing Fields!", "Please fill out all missing fields.", "warning");</script>
       <?php endif ?>
       <!-- Content Header (Page header) -->
       <section class="content-header">
