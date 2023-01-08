@@ -131,13 +131,66 @@
             <div class="col-md-3">
 
               <!-- Profile Image -->
-              <div class="card card-primary card-outline">
-
-                <div class="card-body box-profile">
-                  <div class="text-center">
-                    <img class="profile-user-img img-fluid img-circle" style="width:210px; background-color:maroon;"
-                      src="../../dist/img/profile.jpg" alt="User profile picture">
-                  </div>
+                        <!-- Profile Image -->
+                        <div class="card card-primary card-outline">
+                            <div class="card-body box-profile">
+                                <div class="profile-user-img img-fluid img-circle"
+                                                style="width:250px; height:240px; background-image:url(../../dist/img/profile.jfif); border-color:maroon; background-size:cover;">
+                                    <?php $i = 0; foreach($profile_picture as $prof):?>
+                                        <?php  $i++; if ($i == 1):?>
+                                            <a href="#" class="btn btn-info btn-sm btn-edit" data-id="<?=$prof['id']?>" style="background:white;border:0; ">
+                                            
+                                                <img class="profile-user-img img-fluid img-circle"
+                                                style="width:250px; height:240px; background-image:url(../../dist/img/profile.jfif); border-color:maroon; background-size:cover;  position:absolute; left:74px; top: 20px;" src="<?= base_url().'/'.'profile/'.$prof['profile_picture'] ?>">
+                                               
+                                            </a>
+                                        <?php endif;?>
+                                        <?php endforeach;?>
+                                 
+                                </div>
+                                <?php foreach($profile_picture as $prof):?>
+                                <div class="modal fade" id="profilepicture">
+                                    <div class="modal-dialog" style="font-family:poppins">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title">Profile</h4>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <?php if(session()->has('validation')){
+                                            $errorFlash = session()->getFlashdata('validation');} ?>
+                                            <div class="modal-body">
+                                                <form action="<?= base_url('updateProfile/'.$prof['id']); ?>" method="post"
+                                                    enctype="multipart/form-data">
+                                                    <input type="hidden" name="_method" value="PUT" />
+                                                    <div class="form-row"
+                                                        style="text-align:center; justify-content:center;">
+                                                        <div class="form-group col-md-10 prof_pict">
+                                                            <label for="profile_picture">Profile Picture</label>
+                                                            <input type="file" name="profile_picture"
+                                                                class="form-control profile_pics" size="30" accept="image/*" required>
+                                                            <span class="text-danger">
+                                                                <?= isset($errorFlash) ? display_error($errorFlash, 'profile_picture') : '' ?>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <!-- Submit button -->
+                                            <div class="modal-footer justify-content-between">
+                                                <button type="button" class="btn btn-default"
+                                                    data-dismiss="modal">Close</button>
+                                                <button type="submit" class="btn btn-primary">Save changes</button>
+                                            </div>
+                                            </form>
+                                        </div>
+                                        <!-- /.modal-content -->
+                                    </div>
+                                    <!-- /.modal-dialog -->
+                                </div>
+                                <!-- /.modal -->
+                                <?php endforeach;?>
                   <?php if(session()->has('validation')){
                     $errorFlash = session()->getFlashdata('validation');
                   } ?>
@@ -486,3 +539,20 @@
   </body>
   <?= $this->include('user/include/end') ?>
     <?= $this->include('user/include/footer') ?>
+    <script src="<?=base_url()?>/cssjs/js/jquery.min.js"></script>
+<script src="<?=base_url()?>/cssjs/js/bundle.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        // sa button
+        $('.btn-edit').on('click',function(){
+            // data galing buton
+            // const id = $(this).data('id');
+            // const profile_picture = $(this).data('profile');
+            // // sa modal
+            // $('.profile_pics').val(profile_picture).trigger('change');
+            // Call Modal 
+            $('#profilepicture').modal('show');
+        });
+    });
+</script>

@@ -38,6 +38,10 @@ class Profile extends BaseController
         $profile_model = new ProfileModel();
         $profile = $profile_model->where('email', $email)->find();
 
+        $profile_model = new ProfileModel();
+        $user_profile['profile_picture'] = $profile_model->where('email', $email = session()->get('loggedInUser'))->findAll();
+
+
         if(count($profile) != 0)
         {
             $user_model = new UserModel();
@@ -401,5 +405,35 @@ class Profile extends BaseController
             'prospectus'=> $prospectus_model->findAll()
         ];
         return view('user/regSubject', $values);
+    }
+       public function updateProfile($id){
+        $validated = $this->validate([
+            'profile_picture' => [
+                'label' => 'Image File',
+                'rules' => 'uploaded[profile_picture]'
+                    . '|is_image[profile_picture]'
+                    . '|mime_in[profile_picture,image/png,image/jpeg]'
+            ],
+        ]);
+        $email = session()->get('loggedInUser');
+        if (!$validated)
+        {
+            session()->setFlashdata('validation', $this->validator);
+            return $this->retrieve_profile($email);
+        }
+         else
+        {
+            $profile_model = new ProfileModel();
+            $prof_pic = $this->request->getFile('profile_picture');
+            if (!$prof_pic->hasMoved()) {
+                $prof_pic->move(FCPATH . 'profile');
+
+                $data = [
+                    'profile_picture' => $prof_pic->getClientName()
+                ];
+                $profile_model->update($id, $data);
+                return $this->retrieve_profile($email);
+            }
+        }
     }
 }
