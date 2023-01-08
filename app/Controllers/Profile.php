@@ -34,12 +34,9 @@ class Profile extends BaseController
     }
 
     public function retrieve_profile($email = null)
-    {   
+    {
         $profile_model = new ProfileModel();
         $profile = $profile_model->where('email', $email)->find();
-
-        $profile_model = new ProfileModel();
-        $user_profile['profile_picture'] = $profile_model->where('email', $email = session()->get('loggedInUser'))->findAll();
 
         if(count($profile) != 0)
         {
@@ -54,8 +51,8 @@ class Profile extends BaseController
         {
             $user_model = new UserModel();
             $user_profile['userInfo'] = $user_model->where('email', $email)->first();
+
             return view('user/userdashboard', $user_profile);
-            //var_dump($user_profile);
         }
     }
     public function myprofile()
@@ -199,6 +196,7 @@ class Profile extends BaseController
         if (!$validated)
         {
             session()->setFlashdata('validation', $this->validator);
+            session()->setFlashdata('missing', 'Welcome');
             return $this->retrieve_profile($email);
         }
         else {
@@ -254,6 +252,7 @@ class Profile extends BaseController
             }
             else
             {
+                session()->setFlashdata('saveprofile', 'Incorrect Password Provided');
                 return $this->retrieve_profile($email);
             }
         }
@@ -266,7 +265,7 @@ class Profile extends BaseController
 
         $data['year'] =  $year_model->where('status', 'active')->first();
         $data['user'] = $user_model->where('email', session()->get('loggedInUser'))->first();
-      
+
         return view('user/newregistration', $data);
     }
 
@@ -282,12 +281,12 @@ class Profile extends BaseController
         if($registration_model->insert($data)){
             return view('User/Registration');
         }
-        
+
     }
 
     public function registration()
     {
-        
+
         $user_model = new UserModel();
         $userdata['userdata'] = $user_model->where('email', session()->get('loggedInUser'))->first();
         $lrn = '';
@@ -307,7 +306,7 @@ class Profile extends BaseController
                 'rules' => 'required',
                 'errors' => [
                     'required' => 'Subject is required.'
-                    
+
                 ]
             ],
             'strand' => [
@@ -320,14 +319,14 @@ class Profile extends BaseController
                 'rules' => 'required',
                 'errors' => [
                     'required' => 'Unit is required.'
-                   
+
                 ]
             ],
             'semester' => [
                 'rules' => 'required',
                 'errors' => [
                     'required' => 'Pre-Requisit is required.'
-                    
+
                 ]
             ]
         ]);
@@ -339,7 +338,7 @@ class Profile extends BaseController
             $data = [
                 'registration'=> $registration_model->findAll()
             ];
-           
+
             $data['validation'] = $this->validator;
 
             return view('user/registration', $data);
@@ -377,7 +376,7 @@ class Profile extends BaseController
         $registration_model = new RegistrationModel();
         $data['user'] = $registration_model->find($id);
         return view('user/updateReg', $data);
-    } 
+    }
     public function update($id)
     {
         $registration_model = new RegistrationModel();
@@ -403,62 +402,4 @@ class Profile extends BaseController
         ];
         return view('user/regSubject', $values);
     }
-    public function updateProfile($id){
-        $validated = $this->validate([
-            'profile_picture' => [
-                'label' => 'Image File',
-                'rules' => 'uploaded[profile_picture]'
-                    . '|is_image[profile_picture]'
-                    . '|mime_in[profile_picture,image/png,image/jpeg]'
-            ],
-        ]);
-        $email = session()->get('loggedInUser');
-        if (!$validated)
-        {
-            session()->setFlashdata('validation', $this->validator);
-            return $this->retrieve_profile($email);
-        }
-         else
-        {
-            $profile_model = new ProfileModel();
-            $prof_pic = $this->request->getFile('profile_picture');
-            if (!$prof_pic->hasMoved()) {
-                $prof_pic->move(FCPATH . 'profile');
-
-                $data = [
-                    'profile_picture' => $prof_pic->getClientName()
-                ];
-                $profile_model->update($id, $data);
-                return $this->retrieve_profile($email);
-            }
-        }
-    }
-    // public function updateStreet($id)
-    // {
-    //     $validated = $this->validate([
-    //         'street' => [
-    //             'rules' => 'required',
-    //             'errors' => [
-    //                 'required' => 'Your street address is required.'
-    //             ]
-    //         ]
-    //     ]);
-    //         $email = session()->get('loggedInUser');
-    //         if (!$validated)
-    //         {
-    //             // session()->setFlashdata('validation', $this->validator);
-    //             // return $this->retrieve_profile($email);
-    //             print "1";
-    //         }
-    //         else {
-    //             $street = $this->request->getPost('street');
-    //             $profile_model = new ProfileModel();
-    //             $data = [
-    //                 'street'        => $street
-    //             ];
-                   
-    //             $profile_model->update($id, $data);
-    //             print "2";
-    //         }
-    //     }
-    }
+}
