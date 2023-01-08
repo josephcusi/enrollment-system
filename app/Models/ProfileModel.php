@@ -34,7 +34,8 @@ class ProfileModel extends Model
                                     'elem_year',
                                     'high_school', 
                                     'high_address', 
-                                    'high_year'
+                                    'high_year',
+                                    'profile_picture'
                                 ];
 
     // Dates
