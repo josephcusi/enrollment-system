@@ -134,17 +134,16 @@
                         <!-- Profile Image -->
                         <div class="card card-primary card-outline">
                             <div class="card-body box-profile">
-                                <div class="profile-user-img img-fluid img-circle"
-                                                style="width:250px; height:240px; background-image:url(../../dist/img/profile.jfif); border-color:maroon; background-size:cover;">
-                                    <?php $i = 0; foreach($profile_picture as $prof):?>
-                                        <?php  $i++; if ($i == 1):?>
+                                <div class="text-center"
+                                                >
+                                    <?php foreach($profile_picture as $prof):?>
                                             <a href="#" class="btn btn-info btn-sm btn-edit" data-id="<?=$prof['id']?>" style="background:white;border:0; ">
                                             
                                                 <img class="profile-user-img img-fluid img-circle"
-                                                style="width:250px; height:240px; background-image:url(../../dist/img/profile.jfif); border-color:maroon; background-size:cover;  position:absolute; left:74px; top: 20px;" src="<?= base_url().'/'.'profile/'.$prof['profile_picture'] ?>">
+                                                style="width:250px; height:240px; background-image:url(../../dist/img/profile.jfif); border-color:maroon; background-size:cover;" src="<?= base_url().'/'.'profile/'.$prof['profile_picture'] ?>">
                                                
                                             </a>
-                                        <?php endif;?>
+                                   
                                         <?php endforeach;?>
                                  
                                 </div>
@@ -508,7 +507,6 @@
                       <?php endforeach; ?>
                       <div class="form-group row">
                         <div class="offset-sm-1 col-sm-5">
-
                           <button type="submit" class="btn btn-danger">Save</button>
 
                           </button>

@@ -43,8 +43,8 @@ $routes->get('/', 'User::login');
 $routes->get('/login', 'User::login');
 $routes->get('/forgot', 'User::forgot');
 $routes->get('/register', 'User::register');
-$routes->post('/auth', 'User::auth');
 $routes->get('/emailVerification', 'User::emailVerification');
+$routes->post('/retrieve_profile', 'User::retrieve_profile');
 $routes->post('/insert_reg', 'User::insert_reg');
 $routes->get('/logout', 'User::logout');
 $routes->get('/mail', 'AccountController::mail');
@@ -64,9 +64,10 @@ $routes->post('reset-password', 'AuthController::resetPassword');
 
 //------------USER PROFILE------------
 $routes->group('', ['filter' => 'AuthCheck'], function ($routes) {
-    $routes->get('/auth', 'User::auth');
+$routes->get('/auth', 'User::auth');
 $routes->get('/insert_reg', 'User::insert_reg');
 $routes->get('/get_profile', 'Profile::get_profile');
+$routes->get('/retrieve_profile', 'Profile::retrieve_profile');
 $routes->post('/insertProfile', 'Profile::insertProfile');
 $routes->get('/try', 'Profile::try');
 $routes->get('/registration', 'Profile::registration');

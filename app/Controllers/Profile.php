@@ -33,9 +33,10 @@ class Profile extends BaseController
         return view('user/newRegistration');
     }
 
-    public function retrieve_profile($email = null)
+    public function retrieve_profile($emailvoid = null)
     {
         $profile_model = new ProfileModel();
+        $email = session()->get('loggedInUser');
         $profile = $profile_model->where('email', $email)->find();
 
         $profile_model = new ProfileModel();
@@ -62,7 +63,7 @@ class Profile extends BaseController
     public function myprofile()
     {
         $email = session()->get('loggedInUser');
-        return $this->retrieve_profile($email);
+        return redirect('retrieve_profile');
     }
 
     public function admin_dash($email)
@@ -196,12 +197,12 @@ class Profile extends BaseController
         ]);
 
 
-        $email = session()->get('loggedInUser');
+        
         if (!$validated)
         {
             session()->setFlashdata('validation', $this->validator);
             session()->setFlashdata('missing', 'Welcome');
-            return $this->retrieve_profile($email);
+            return redirect('retrieve_profile');
         }
         else {
             $street = $this->request->getPost('street');
@@ -225,7 +226,7 @@ class Profile extends BaseController
             $high_year = $this->request->getPost('high_year');
 
             $values = [
-                'email' => $email,
+                'email' => $email = session()->get('loggedInUser'),
                 'street' => $street,
                 'gender' => $gender,
                 'religion' => $religion,
@@ -257,7 +258,7 @@ class Profile extends BaseController
             else
             {
                 session()->setFlashdata('saveprofile', 'Incorrect Password Provided');
-                return $this->retrieve_profile($email);
+                return redirect('retrieve_profile');
             }
         }
     }
@@ -419,7 +420,7 @@ class Profile extends BaseController
         if (!$validated)
         {
             session()->setFlashdata('validation', $this->validator);
-            return $this->retrieve_profile($email);
+            return rider->retrieve_profile($email);
         }
          else
         {
@@ -432,7 +433,8 @@ class Profile extends BaseController
                     'profile_picture' => $prof_pic->getClientName()
                 ];
                 $profile_model->update($id, $data);
-                return $this->retrieve_profile($email);
+                session()->setFlashdata('saveprofile', 'Incorrect Password Provided');
+                return redirect('retrieve_profile');
             }
         }
     }

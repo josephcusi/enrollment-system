@@ -30,7 +30,7 @@ class User extends BaseController
         return view('Auth/register');
     }
 
-    public function auth()
+    public function retrieve_profile()
     {
             $validated = $this->validate([
                 'email' => [
