@@ -66,7 +66,7 @@
             <div class="form login">
               <div class="logo" style="background-image: url('<?=base_url()?>/cssjs/img/dormehiLogo.png');"></div>
                   <span class="title">DORMEHI</span>
-                  <form action="<?= base_url('auth'); ?>" method="post">
+                  <form action="<?= base_url('retrieve_profile'); ?>" method="post">
                   <?= csrf_field(); ?>
                     <div class="input-field">
                         <input type="text" placeholder="Email" name="email">
