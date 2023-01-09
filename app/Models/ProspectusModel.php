@@ -14,7 +14,7 @@ class ProspectusModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['strand', 'year_level','semsester', 'subject', 'title', 'unit', 'pre_requisit'];
+    protected $allowedFields    = ['strand_id', 'year_level','semester', 'subject', 'title', 'unit', 'pre_requisit'];
 
     // Dates
     protected $useTimestamps = false;

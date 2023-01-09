@@ -5,6 +5,8 @@ namespace App\Controllers;
 use App\Controllers\BaseController;
 use App\Models\SectionModel;
 use App\Models\ProspectusModel;
+use App\Models\StrandModel;
+use App\Models\YearModel;
 
 class Section extends BaseController
 {
@@ -20,24 +22,40 @@ class Section extends BaseController
     }
     public function section()
     {
+
         $section_model = new SectionModel();
+        $year_model = new YearModel();
         $prospectus_model = new ProspectusModel();
+        session()->setFlashdata('strand', 'humss');
+        $strand_model = new StrandModel();
+        $strand_id = $strand_model->where('strand', 'HUMSS')->find();
         $values = [
-            'HUMSS'=> $section_model->where('strand', 'HUMSS')->find(),
-            'ABM'=> $section_model->where('strand', 'ABM')->find(),
-            'STEM'=> $section_model->where('strand', 'STEM')->find()
-        ];
-        $values['validation'] = $this->validator;
-        $values['Humss'] = $prospectus_model->where('strand', 'HUMSS')->get()->getNumRows();
-        $values['Abm'] = $prospectus_model->where('strand', 'ABM')->get()->getNumRows();
-        $values['Stem'] = $prospectus_model->where('strand', 'STEM')->get()->getNumRows();
-        //var_dump($values);
+            'section' => $section_model->select('*, section_tbl.id' )
+                ->join('strand_tbl', 'section_tbl.strand_id = strand_tbl.id', 'right')
+                ->where('section_tbl.strand_id', $strand_id[0]['id'])->get()->getResultArray()
+            
+        ];  
+    //   var_dump($values['count']);
         return view('admin/section', $values);
+    }
+    public function strandSec($strand)
+    {
+        $section_model = new SectionModel();
+        $strand_model = new StrandModel();
+        $strand_id = $strand_model->where('strand', $strand)->find();
+        $data = [
+            'section' => $section_model->select('*, section_tbl.id')
+                ->join('strand_tbl', 'section_tbl.strand_id = strand_tbl.id', 'right')
+                ->where('strand_id', $strand_id[0]['id'])->get()->getResultArray()
+        ];
+       // var_dump($data['count']);
+         session()->setFlashdata('strand', $strand);
+         return view('admin/section', $data);
     }
     public function newsection()
     {
         $validated = $this->validate([
-            'strand' => [
+            'strand_id' => [
                 'rules' => 'required',
                 'errors' => [
                     'required' => 'Strand is required!'
@@ -49,13 +67,7 @@ class Section extends BaseController
                     'required' => 'Section is required!',
                     'is_unique' => 'Section is Already Exist'
                 ]
-                ],
-            'semester' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Semester is required!'
-                ]
-                ],
+            ],
             'year_level' => [
                 'rules' => 'required',
                 'errors' => [
@@ -69,16 +81,17 @@ class Section extends BaseController
         }
         else
         {
-            $strand = $this->request->getPost('strand');
             $section = $this->request->getPost('section');
-            $semester = $this->request->getPost('semester');
             $year_level = $this->request->getPost('year_level');
+            $strand_model = new StrandModel();
+            $strand = $this->request->getPost('strand_id');
+            $strand_id = $strand_model->where('strand', $strand)->find();
+            
 
             $values = [
-                'strand' => $strand,
-                'section' => $section,
-                'semester' => $semester,
+                'strand_id' => $strand_id[0]['id'],
                 'year_level' => $year_level,
+                'section' => $section,
             ];
 
             $section_model = new SectionModel();
@@ -87,7 +100,7 @@ class Section extends BaseController
             if (!$query) {
                 return redirect()->back()->with('fail', 'Something went wrong.');
             } else {
-                return $this->section();
+                return redirect()->route('section');
             }
         }
     }
@@ -95,7 +108,7 @@ class Section extends BaseController
     {
         $section_model = new SectionModel();
         $section_model->delete($id);
-        return $this->section();
+        return redirect()->route('section');
     }
     public function edit($id)
     {
@@ -118,6 +131,6 @@ class Section extends BaseController
             'year_level' => $year_level
         ];
         $section_model->update($id, $data);
-        return $this->section();
+        return redirect()->route('section');
     }
 }

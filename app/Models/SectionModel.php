@@ -14,7 +14,7 @@ class SectionModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['section', 'strand', 'semester', 'year_level', 'subject_count',];
+    protected $allowedFields    = ['section', 'strand_id', 'year_level',];
 
     // Dates
     protected $useTimestamps = false;

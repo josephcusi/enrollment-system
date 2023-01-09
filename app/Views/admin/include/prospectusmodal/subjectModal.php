@@ -1,8 +1,8 @@
-<div class="modal fade" id="newSubject">
+<div class="modal fade subjectmodal" id="newSubject">
         <div class="modal-dialog" style = "font-family:poppins">
           <div class="modal-content">
             <div class="modal-header">
-              <h4 class="modal-title">Subject Maintenance</h4>
+              <h4 class="modal-title"><?=$strand?></h4>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -40,6 +40,31 @@
                             <?= isset($validation) ? display_error($validation, 'pre_requisit') : '' ?>
                       </span>
                     </div>
+                    <div class="form-group col-md-6">
+                      <label for="year_level">Year Level</label>
+                      <select class="form-control"id="studentStrand" name = "year_level">
+
+                      <option type="text" class="form-control" id="year_level" placeholder="Year Level" value="Grade 11">Grade 11</option>
+                      <option type="text" class="form-control" id="year_level" placeholder="Year Level" value="Grade 12">Grade 12</option>
+                   
+                     </select>
+                     
+                      <span class="text-danger">
+                            <?= isset($validation) ? display_error($validation, 'year_level') : '' ?>
+                      </span>
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="semester">Semester</label>
+                      <select class="form-control"id="studentStrand" name = "semester">
+                  
+                      <option type="text" class="form-control" id="semester" placeholder="1st Semester" value="1st Semester">1st Semester</option>
+                      <option type="text" class="form-control" id="semester" placeholder="1st Semester" value="1st Semester">2nd Semester</option>
+                     
+                     </select>
+                      <span class="text-danger">
+                            <?= isset($validation) ? display_error($validation, 'semester') : '' ?>
+                      </span>
+                    </div>
                   </div>
                   </div>
                   <!-- Submit button -->
@@ -53,4 +78,3 @@
         </div>
         <!-- /.modal-dialog -->
       </div>
-      <!-- /.modal -->
