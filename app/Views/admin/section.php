@@ -133,9 +133,11 @@
                 </div>
                 <p class="text-muted text-left">Strand</p>
                 <ul class="list-group list-group-unbordered mb-3 nav nav-pills">
-                <li class="nav-item"><a type="button" class="tablinks nav-link active" onclick="openStrand(event, 'humss')" id="defaultOpen" >HUMSS</a></li>
-                    <li class="nav-item"><a type="button" class="tablinks nav-link" onclick="openStrand(event, 'abm')" id="defaultOpen" >ABM</a></li>
-                    <li class="nav-item"><a type="button" class="tablinks nav-link" onclick="openStrand(event, 'stem')" id="defaultOpen" >STEM</a></li>
+                <?php $strand = session()->getFlashdata('strand');?>
+                <li class="nav-item"><a type="button" class="tablinks nav-link <?php if($strand == 'humss'){echo 'active' ;} ?>" id="defaultOpen" href="<?= base_url('strandSec/'.'humss')?>">HUMSS</a></li>
+                    <li class="nav-item"><a type="button" class="tablinks nav-link <?php if($strand == 'abm'){echo 'active';} ?>" id="defaultOpen "  href="<?= base_url('strandSec/'.'abm')?>">ABM</a></li>
+                    <li class="nav-item"><a type="button" class="tablinks nav-link <?php if($strand == 'stem'){echo 'active';} ?>" id="defaultOpen "  href="<?= base_url('strandSec/'.'stem')?>">STEM</a></li>
+                  </ul>
                   </ul>
               </div>
               <!-- /.card-body -->
@@ -150,41 +152,20 @@
           <!-- /.col -->
           <div class="col-md-9">
             <div class="card">
-              <div class="card-header p-2">
-                <ul>
-                <div class="dropdown"style = "float:right; margin-right:10%">
-                  <a href class="dropbt">Settings</a>
-                  <div class="dropdown-content">
-                    <a style = "color:maroon">Grade 11</a>
-                    <a href="#">1st Semester</a>
-                    <a href="#">2nd Semester</a>
-                    <a style = "color:maroon">Grade 12</a>
-                    <a href="#">1st Semester</a>
-                    <a href="#">2nd Semester</a>
-                  </div>
-                </div>
-                </ul>
-              </div>
               <div id="humss" class="tabcontent">
                 <table class="table table-bordered table-striped" style = "font-family:poppins">
                 <thead>
                 <tr>
                 <th>Section</th>
-                <th>Strand</th>
-                <th>Semester</th>
                 <th>Year Level</th>
-                <th>Subject Count</th>
                 <th>Actions</th>
                 </tr>
                 <thead>
                 <tbody>
-                <?php foreach($HUMSS as $section_value):?>
+                <?php foreach($section as $section_value):?>
                   <tr>
                   <td><?= $section_value['section']?></td>
-                  <td><?= $section_value['strand']?></td>
-                  <td><?= $section_value['semester']?></td>
                   <td><?=$section_value['year_level']?></td>
-                  <td><?=$Humss?></td>
                   <td>
                     <a href="<?=base_url('schedule')?>"><button type="button" class="btn btn-secondary btn-sm">schedule</button>
                     <a href="<?=site_url('edit/'.$section_value['id'])?>"><button type="button" class="btn btn-secondary btn-sm">update</button>
@@ -195,68 +176,59 @@
                   <?php endforeach;?>
               </table>
               </div>
-              <div id="abm" class="tabcontent">
-              <table class="table table-bordered table-striped" style = "font-family:poppins">
-              <thead>
-                <tr>
-                <th>Section</th>
-                <th>Strand</th>
-                <th>Semester</th>
-                <th>Year Level</th>
-                <th>Subject Count</th>
-                <th>Actions</th>
-                </tr>
-                </thead>
-                <?php foreach($ABM as $section_value):?>
-                <tbody>
-                  <tr>
-                  <td><?= $section_value['section']?></td>
-                  <td><?= $section_value['strand']?></td>
-                  <td><?= $section_value['semester']?></td>
-                  <td><?=$section_value['year_level']?></td>
-                  <td><?=$Abm?></td>
-                  <td>
-                    <a href="<?=base_url('schedule')?>"><button type="button" class="btn btn-secondary btn-sm">schedule</button>
-                    <a href="<?=site_url('edit/'.$section_value['id'])?>"><button type="button" class="btn btn-secondary btn-sm">update</button>
-                    <a href="<?= site_url('delete/'.$section_value['id']) ?>"><button type="button" class="btn btn-primary btn-sm">delete</button>
-                  </td>
-                  </tr>
-                </tbody>
-                  <?php endforeach;?>
-              </table>
-              </div>
-              <div id="stem" class="tabcontent">
-              <table class="table table-bordered table-striped" style = "font-family:poppins">
-                <thead>
-                <tr>
-                <th>Section</th>
-                <th>Strand</th>
-                <th>Semester</th>
-                <th>Year Level</th>
-                <th>Subject Count</th>
-                <th>Actions</th>
-                </tr>
-                </thead>
-                <?php foreach($STEM as $section_value):?>
-                  <tbody>
-                  <tr>
-                  <td><?= $section_value['section']?></td>
-                  <td><?= $section_value['strand']?></td>
-                  <td><?= $section_value['semester']?></td>
-                  <td><?=$section_value['year_level']?></td>
-                  <td><?=$Stem?></td>
-                  <td>
-                    <a href="<?=base_url('schedule')?>"><button type="button" class="btn btn-secondary btn-sm">schedule</button>
-                    <a href="<?=site_url('edit/'.$section_value['id'])?>"><button type="button" class="btn btn-secondary btn-sm">update</button>
-                    <a href="<?= site_url('delete/'.$section_value['id']) ?>"><button type="button" class="btn btn-primary btn-sm">delete</button>
-                  </td>
-                  </tr>
-                </tbody>
-                  <?php endforeach;?>
-                </table>
-              </div>
                 <button type="button" class="btn btn-default" class="btn btn-default" style = "float:right; font-family:poppins; margin-bottom:1%; background-color:maroon; color: white;" data-toggle="modal" data-target="#new-section">New Section</button>
-                 <?= $this->include('admin/include/sectionmodal/newSection')?>
+                 
+
+                <div class="modal fade" id="new-section">
+        <div class="modal-dialog" style = "font-family:poppins">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Section Maintenance</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+            <form action="<?= base_url('newsection'); ?>" method="post">
+            <?= csrf_field(); ?>
+                    <div class="form-row">
+                    <input type="hidden" name="strand_id" class="form-control" value="<?=$strand?>">
+                    <div class="form-group col-md-6">
+                      <label for="inputSection">Section</label>
+                      <input type="text" name="section" class="form-control" id="inputSection" placeholder="Section">
+                      <span class="text-danger">
+                            <?= isset($validation) ? display_error($validation, 'section') : '' ?>
+                      </span>
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="inputYearLevel">Year Level</label>
+                      <select class="form-control"id="studentStrand" name = "year_level">
+
+                      <option type="text" class="form-control" id="year_level" placeholder="Year Level" value="Grade 11">Grade 11</option>
+                      <option type="text" class="form-control" id="year_level" placeholder="Year Level" value="Grade 12">Grade 12</option>
+
+                      </select>
+                      <span class="text-danger">
+                            <?= isset($validation) ? display_error($validation, 'year_level') : '' ?>
+                      </span>
+                    </div>
+                  </div>
+                  </div>
+                  <!-- Submit button -->
+                  <div class="modal-footer justify-content-between">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  <button type="submit" class="btn btn-primary">Save changes</button>
+          </div>
+              </form>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+
+
+
             </div>
             </div>
             <!-- /.card -->
@@ -271,22 +243,3 @@
 </body>
 <?= $this->include('admin/include/end')?>
 <?= $this->include('admin/include/footer')?>
-
-<script>
-function openStrand(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-</script>

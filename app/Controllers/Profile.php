@@ -8,6 +8,7 @@ use App\Models\ProfileModel;
 use App\Models\YearModel;
 use App\Models\RegistrationModel;
 use App\Models\ProspectusModel;
+use App\Models\StrandModel;
 
 class Profile extends BaseController
 {
@@ -30,7 +31,12 @@ class Profile extends BaseController
     }
     public function newRegistration()
     {
-        return view('user/newRegistration');
+        $strand_model = new StrandModel();
+        $data = [
+            'strands' => $strand_model->findAll(),
+        ];
+        var_dump($data['strands']);
+        // return view('user/newRegistration', $data);
     }
 
     public function retrieve_profile($emailvoid = null)
@@ -267,11 +273,24 @@ class Profile extends BaseController
     {
         $year_model = new YearModel();
         $user_model = new UserModel();
+        $strand_model = new StrandModel();
+        $profile_model = new ProfileModel();
+        $email = session()->get('loggedInUser');
+        $count = count($profile_model->where('email', $email)->findAll());
+        
+        if($count < 1) {
+            session()->setFlashdata('notExist', 'Please fill out your profile first');
+            return redirect()->route('registration');
+        }
+        else{
+            $data['year'] =  $year_model->where('status', 'active')->first();
+            $data['user'] = $user_model->where('email', session()->get('loggedInUser'))->first();
+            $data['strands'] = $strand_model->findAll();
+    
+            return view('user/newregistration', $data);
+        }
 
-        $data['year'] =  $year_model->where('status', 'active')->first();
-        $data['user'] = $user_model->where('email', session()->get('loggedInUser'))->first();
-
-        return view('user/newregistration', $data);
+        
     }
 
     public function save_registration()
@@ -293,7 +312,8 @@ class Profile extends BaseController
     {
 
         $user_model = new UserModel();
-        $userdata['userdata'] = $user_model->where('email', session()->get('loggedInUser'))->first();
+        $email = session()->get('loggedInUser');
+        $userdata['userdata'] = $user_model->where('email', $email)->first();
         $lrn = '';
         foreach ($userdata as $user_lrn) {
             $lrn = $user_lrn['lrn'];
@@ -364,12 +384,27 @@ class Profile extends BaseController
                 'semester' => $semester,
                 'status' => 'pending'
             ];
-            if($registration_model->insert($data))
-            $prospectus_model = new ProspectusModel();
-            $values = [
-                'prospectus'=> $prospectus_model->findAll()
+            $yearSem = [
+                'year_level' => $yearlevel,
+                'semester' => $semester
             ];
+            $count = count($registration_model->where($yearSem)->findAll());
+            if($count < 1){
+                $registration_model->insert($data);
+            }
+            else{
+                session()->setFlashdata('duplicate', 'Duplicate input');
+            }
+            
+            $prospectus_model = new ProspectusModel();
+            $strand_model = new StrandModel();
+            $strand_id = $strand_model->where('strand', $strand)->find();
+            $values = [
+                'prospectus'=> $prospectus_model->where('strand_id', $strand_id[0]['id'])->where('year_level', $yearlevel)->where('semester', $semester)->findAll()
+            ];
+            //var_dump($values['prospectus']);
             return view('user/regSubject', $values);
+           
         }
     }
     public function updateReg()

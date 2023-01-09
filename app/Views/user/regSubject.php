@@ -136,7 +136,8 @@
                     </tbody>
                   </table>
                   <div class="modal-footer justify-content-between">
-                  <a href="<?=site_url('registration/'.$prospectus_value['id'])?>"><button type="submit" class="btn btn-primary" style = "margin-left:100%">Submit</button></a>
+                    
+                  <a href="<?=site_url('registration')?>"><button type="submit" class="btn btn-primary" style = "margin-left:100%">Submit</button></a>
                  </div>
                   <!-- /.tab-pane -->
                 <!-- /.tab-content -->

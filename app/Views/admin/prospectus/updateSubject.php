@@ -129,8 +129,37 @@
                       <label for="PreRequisit">Pre-requisit</label>
                       <input type="text" name="pre_requisit" class="form-control" id="PreRequisit" placeholder="Pre-Requisit" value="<?=$prospectus['pre_requisit']?>">
                     </div>
+                  
+                    <div class="form-group col-md-6">
+                      <label for="year_level">Year Level</label>
+                      <select class="form-control"id="studentStrand" name = "year_level">
+
+                      <option type="text" class="form-control" id="year_level" placeholder="Year Level" value="Grade 11">Grade 11</option>
+                      <option type="text" class="form-control" id="year_level" placeholder="Year Level" value="Grade 12">Grade 12</option>
+                   
+                     </select>
+                     
+                      <span class="text-danger">
+                            <?= isset($validation) ? display_error($validation, 'year_level') : '' ?>
+                      </span>
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="semester">Semester</label>
+                      <select class="form-control"id="studentStrand" name = "semester">
+                  
+                      <option type="text" class="form-control" id="semester" placeholder="1st Semester" value="1st Semester">1st Semester</option>
+                      <option type="text" class="form-control" id="semester" placeholder="1st Semester" value="1st Semester">2nd Semester</option>
+                     
+                     </select>
+                      <span class="text-danger">
+                            <?= isset($validation) ? display_error($validation, 'semester') : '' ?>
+                      </span>
+                    </div>
                   </div>
                   </div>
+                  
+                  </div>
+                  
                   <!-- Submit button -->
                   <div class="modal-footer justify-content-between">
                   <button type="submit" class="btn btn-primary">Save changes</button>

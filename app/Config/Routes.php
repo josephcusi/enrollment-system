@@ -83,6 +83,7 @@ $routes->get('/updateReg', 'Profile::updateReg');
 $routes->get('/edit_reg/(:any)', 'Profile::edit_reg/$1');
 $routes->put('/update/(:any)', 'Profile::update/$1');
 $routes->put('/updateProfile/(:any)', 'Profile::updateProfile/$1');
+$routes->get('/strandProspectus/(:any)', 'Prospectus::strandProspectus/$1');
 
 });
 
@@ -110,11 +111,12 @@ $routes->get('/addSchedule', 'Section::addSchedule');
 $routes->get('/delete/(:any)', 'Section::delete/$1');
 $routes->get('/edit/(:any)', 'Section::edit/$1');
 $routes->put('/section_update/(:any)', 'Section::section_update/$1');
+$routes->get('/strandSec/(:any)', 'Section::strandSec/$1');
 
 //-----------ADMIN PROSPECTUS---------
 $routes->get('/r_prospectus', 'Prospectus::r_prospectus');
 $routes->post('/newprospectus', 'Prospectus::newprospectus');
-$routes->get('/edit_prospectus(:any)', 'Prospectus::edit_prospectus/$1');
+$routes->get('/edit_prospectus/(:any)', 'Prospectus::edit_prospectus/$1');
 $routes->put('/updateProspectus/(:any)', 'Prospectus::updateProspectus/$1');
 
 //-----------ADMIN PRE ENROLLED---------

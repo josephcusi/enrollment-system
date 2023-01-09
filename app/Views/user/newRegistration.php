@@ -120,9 +120,9 @@
                    <div class="form-group col-md-6">
                      <label for="studentStrand">Strand</label>
                      <select class="form-control"id="studentStrand" name = "strand">
-                     <option type="text" value="HUMSS">HUMSS</option>
-                     <option type="text" value="ABM">ABM</option>
-                     <option type="text" value="STEM">STEM</option>
+                      <?php foreach($strands as $strand): ?>
+                        <option type="text" value="<?= $strand['strand']?>"><?= $strand['strand'] ?></option>
+                      <?php endforeach; ?>
                      </select>
                      <span class="text-danger"><?= isset($validation) ? display_error($validation, 'strand') : '' ?></span>
                    </div>

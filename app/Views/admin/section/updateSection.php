@@ -121,20 +121,13 @@
                       </span>
                     </div>
                     <div class="form-group col-sm-6 mx-auto">
-                      <label for="inputStrand">Strand</label>
-                      <input type="text" name="strand" class="form-control" id="inputStrand" value="<?= $section['strand']?>" placeholder="Strand" required>
-                      <span class="text-danger">
-                      </span>
-                    </div>
-                    <div class="form-group col-sm-6 mx-auto">
-                      <label for="inputSemester">Semester</label>
-                      <input type="text" name="semester" class="form-control" value="<?= $section['semester']?>" id="inputSemester" placeholder="Semester" required>
-                      <span class="text-danger">
-                      </span>
-                    </div>
-                    <div class="form-group col-sm-6 mx-auto">
                       <label for="inputYearLevel">Year Level</label>
-                      <input type="text" name="year_level" class="form-control" value="<?= $section['year_level']?>" id="inputYearLevel" placeholder="YearLevel" required>
+                      <select class="form-control"id="studentStrand" name = "year_level">
+
+                      <option type="text" class="form-control" id="year_level" placeholder="Year Level" value="Grade 11">Grade 11</option>
+                      <option type="text" class="form-control" id="year_level" placeholder="Year Level" value="Grade 12">Grade 12</option>
+
+                      </select>
                       <span class="text-danger">
                       </span>
                     </div>
