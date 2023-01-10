@@ -20,20 +20,6 @@
                       </span>
                     </div>
                     <div class="form-group col-md-6">
-                      <label for="inputYear">Year</label>
-                      <input type="text" name="year" class="form-control" id="inputYear" placeholder="Year">
-                      <span class="text-danger">
-                            <?= isset($validation) ? display_error($validation, 'year') : '' ?>
-                      </span>
-                    </div>
-                    <div class="form-group col-md-6">
-                      <label for="inputMonth">Month</label>
-                      <input type="text" name="month" class="form-control" id="inputMonth" placeholder="Month">
-                      <span class="text-danger">
-                            <?= isset($validation) ? display_error($validation, 'month') : '' ?>
-                      </span>
-                    </div>
-                    <div class="form-group col-md-6">
                       <label for="inputType">Type</label>
                       <input type="text" name="type" class="form-control" id="inputType" placeholder="Type">
                       <span class="text-danger">

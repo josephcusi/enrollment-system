@@ -38,20 +38,6 @@ class Strand extends BaseController
                     'required' => 'Title is required.'
                 ]
             ],
-            'year' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Year is required.'
-                   
-                ]
-            ],
-            'month' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Month is required.'
-                    
-                ]
-            ],
             'type' => [
                 'rules' => 'required',
                 'errors' => [
@@ -75,15 +61,11 @@ class Strand extends BaseController
         {
             $strand = $this->request->getPost('strand');
             $title = $this->request->getPost('title');
-            $year = $this->request->getPost('year');
-            $month = $this->request->getPost('month');
             $type = $this->request->getPost('type');
 
             $values = [
                 'strand' => $strand,
                 'title' => $title,
-                'year' => $year,
-                'month' => $month,
                 'type' => $type,
             ];
 
@@ -120,20 +102,6 @@ class Strand extends BaseController
                     'required' => 'Title is required.'
                 ]
             ],
-            'year' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Year is required.'
-                   
-                ]
-            ],
-            'month' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Month is required.'
-                    
-                ]
-            ],
             'type' => [
                 'rules' => 'required',
                 'errors' => [
@@ -152,15 +120,11 @@ class Strand extends BaseController
             $strand_model = new StrandModel();
             $strand = $this->request->getPost('strand');
             $title = $this->request->getPost('title');
-            $year = $this->request->getPost('year');
-            $month = $this->request->getPost('month');
             $type = $this->request->getPost('type');
 
             $data = [
                 'strand' => $strand,
                 'title' => $title,
-                'year' => $year,
-                'month' => $month,
                 'type' => $type
             ];
             $strand_model->update($id, $data);

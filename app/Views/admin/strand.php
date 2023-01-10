@@ -119,8 +119,6 @@
           <tr>
             <th>Strand</th>
             <th>Title</th>
-            <th>Year</th>
-            <th>Month</th>
             <th>Type</th>
             <th>Actions</th>
           </tr>
@@ -130,8 +128,6 @@
           <tr>
           <td><?= $strand_value['strand']?></td>
             <td><?= $strand_value['title']?></td>
-            <td><?= $strand_value['year']?></td>
-            <td><?=$strand_value['month']?></td>
             <td><?=$strand_value['type']?></td>
             <td>
             <a href="<?=site_url('edit_strand/'.$strand_value['id'])?>"><button type="button" class="btn btn-secondary btn-sm">update</button>
