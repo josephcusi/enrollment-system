@@ -433,6 +433,8 @@ class Profile extends BaseController
     public function edit_reg($id)
     {
         $registration_model = new RegistrationModel();
+        $user_model = new UserModel();
+        $data['userName'] = $user_model->where('email', $email = session()->get('loggedInUser'))->find();
         $data['user'] = $registration_model->find($id);
         return view('user/updateReg', $data);
     }

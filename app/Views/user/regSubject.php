@@ -82,11 +82,13 @@
   <br>
       <!-- Main content -->
 
-      <div class="col-md-12">
-        <div class="card">
-          <div class="card-header p-2">
-          </div>
+      <section class="content-header">
+        <div class="card card-primary card-outline mx-auto" style = "width:85%; margin-top:7% ">
+
           <div class="card-body">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
             <div class="tab-content">
               <div class="active tab-pane" id="basic_info">
 
@@ -141,8 +143,13 @@
 
       <!-- /.content -->
     </div>
+    </div>
+    </div>
 
 
+
+
+</section>
 </body>
 
 <?= $this->include('user/include/end')?>

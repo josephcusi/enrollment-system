@@ -77,7 +77,7 @@
         </li>
         <br>
         <br>
-        
+
 
           </ul>
         </li>
@@ -94,12 +94,15 @@
 
 
   <!-- Main content -->
-  <div class="card">
+  <section class="content-header">
+<br>
+<br>
+  <div class = "container-fluid">
+  <div class="card card-primary card-outline mx-auto" style = "width:95%">
+    <div class = "card-body">
     <div class="card-header">
-      <h3 class="card-title"style = "font-family:poppins">Update Table</h3>
+    <h3 class="card-title"style = "font-family:poppins">Update Table - <span style = "color:maroon">Update Section Table</span></h3>
     </div>
-    <!-- /.card-header -->
-    <div class="card-body">
     <form action="<?= site_url('updateProspectus/'.$prospectus['id']) ?>" method="post">
                     <input type="hidden" name="_method" value="PUT" />
                   <?= csrf_field(); ?>
@@ -149,7 +152,7 @@
                   </div>
                   </div>
 
-                  </div>
+
 
                   <!-- Submit button -->
                   <div class="modal-footer justify-content-between">

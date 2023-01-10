@@ -77,7 +77,7 @@
         </li>
         <br>
         <br>
-        
+
 
           </ul>
         </li>
@@ -158,7 +158,7 @@
           </div>
           <!-- /.col -->
           <div class="col-md-9">
-            <div class="card">
+            <div class="card card-primary card-outline">
               <div id="humss" class="tabcontent">
                 <table class="table table-bordered table-striped" style = "font-family:poppins">
               <thead>

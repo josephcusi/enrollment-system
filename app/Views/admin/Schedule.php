@@ -77,7 +77,7 @@
         </li>
         <br>
         <br>
-        
+
 
           </ul>
         </li>
@@ -92,14 +92,21 @@
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
 
-
+<br>
+<br>
   <!-- Main content -->
-  <div class="card">
-    <div class="card-header">
+  <section class="content-header">
+
+    <div class="card card-primary card-outline mx-auto" style = "width:95%">
+      <div class="card-body">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
       <h3 class="card-title"style = "font-family:poppins">Section|Schedule Table</h3>
-    </div>
+<br>
+<br>
     <!-- /.card-header -->
-    <div class="card-body">
+
 
       <table id="example1" class="table table-bordered table-striped" style = "font-family:poppins">
 
@@ -145,6 +152,12 @@
 
   <!-- /.content -->
 </div>
+</div>
+</div>
+</div>
+</div>
+
+</section>
   <!-- /.content -->
 </div>
 </body>

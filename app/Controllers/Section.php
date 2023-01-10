@@ -16,7 +16,9 @@ class Section extends BaseController
         helper(['url', 'form']);
     }
     public function schedule(){
-        return view('admin/schedule');
+      $user_model = new UserModel();
+      $data['userName'] = $user_model->where('email', $email = session()->get('loggedInUser'))->find();
+        return view('admin/schedule', $data);
     }
     public function addSchedule(){
         return view('admin/addSchedule');

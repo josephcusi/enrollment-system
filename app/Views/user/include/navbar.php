@@ -33,12 +33,13 @@
                             <?php echo " " ?>
                             <?= isset($name['lastname']) ? $name['lastname'] : $userName['lastname']; ?>
     </a>
-    <div class="dropdown-content" style = "margin-left:30%; margin-top:2%;">
+    <div class="dropdown-content " style = "margin-left:30%; margin-top:2%;">
       <a href="<?=site_url()?>logout" style = "font-family:poppins; margin-left:17%; font-weight:bolder" method="post">LOGOUT</a>
     </div>
       </div>
       </div>
     <?php endforeach;?>
+
     <!-- Messages Dropdown Menu -->
     <li class="nav-item">
       <a class="nav-link" data-widget="fullscreen" href="#" role="button">

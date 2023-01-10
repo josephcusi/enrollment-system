@@ -63,7 +63,7 @@
         </li>
         <br>
         <br>
-          
+
           </ul>
           </li>
 
@@ -83,7 +83,7 @@
 
 
   <!-- Main content -->
-  <div class="card">
+  <div class="card card-primary card-outline">
     <div class="card-header">
       <h3 class="card-title"style = "font-family:poppins">Section|Schedule Table</h3>
     </div>

@@ -63,7 +63,7 @@
         </li>
         <br>
         <br>
-          
+
           </ul>
           </li>
 
@@ -86,7 +86,8 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Prospectus</h1>
+            <h1 <class="a" style="color:maroon; font-family: 'Poppins';font-size: 22px"><strong>PROSPECTUS</strong>
+            </h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -127,24 +128,11 @@
             <!-- /.card -->
           </div>
           <!-- /.col -->
+
           <div class="col-md-9">
-            <div class="card">
-              <div class="card-header p-2">
-                <ul>
-                <p href = "#" class="text-muted text-left">Humanities and Social Sciences - 1st Year - 1st Semester</p>
-                <div class="dropdown"style = "float:right; margin-right:10%">
-                  <a href="#" class="dropbt">Settings</a>
-                  <div class="dropdown-content">
-                    <a style = "color:maroon">Grade 11</a>
-                    <a href="#">1st Semester</a>
-                    <a href="#">2nd Semester</a>
-                    <a style = "color:maroon">Grade 12</a>
-                    <a href="#">1st Semester</a>
-                    <a href="#">2nd Semester</a>
-                  </div>
-                </div>
-                </ul>
-              </div>
+            <div class="card card-primary card-outline">
+            
+
               <div class="card-body">
 
                   <table id="example1" class="table table-bordered table-striped" style = "font-family:poppins">
@@ -180,7 +168,8 @@
             <!-- /.card -->
           </div>
           <!-- /.col -->
-        </div>
+
+
         <!-- /.row -->
       </div><!-- /.container-fluid -->
     </section>

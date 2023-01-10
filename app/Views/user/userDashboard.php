@@ -63,7 +63,7 @@
         </li>
         <br>
         <br>
-          
+
           </ul>
           </li>
 
@@ -92,6 +92,7 @@
       <?php endif ?>
       <!-- Content Header (Page header) -->
       <section class="content-header">
+
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
@@ -216,7 +217,8 @@
             </div>
             <!-- /.col -->
             <div class="col-md-9">
-              <div class="card">
+              <div class="card card-primary card-outline mx-auto">
+
                 <div class="card-header p-2">
                   <ul class="nav nav-pills">
                     <li class="nav-item"><a class="nav-link active" href="#basic_info" data-toggle="tab">Basic

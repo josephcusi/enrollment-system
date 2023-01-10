@@ -77,7 +77,7 @@
         </li>
         <br>
         <br>
-        
+
 
           </ul>
         </li>
@@ -92,9 +92,10 @@
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
 
-
+<br>
+<br>
   <!-- Main content -->
-  <div class="card">
+  <div class="card card-primary card-outline mx-auto" style = "width:95%">
     <div class="card-header">
       <h3 class="card-title"style = "font-family:poppins">Section Table</h3>
     </div>

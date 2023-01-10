@@ -77,6 +77,7 @@
 </div>
 
     <!-- Main content -->
+
     <div class="content-wrapper">
       <script src="<?= base_url()?>/dist/js/sweetalert.js"></script>
       <?php if(!empty(session()->getFlashdata('enroll'))) : ?>
@@ -87,11 +88,13 @@
   <br>
       <!-- Main content -->
 
-      <div class="col-md-12">
-        <div class="card">
-          <div class="card-header p-2">
-          </div>
+      <section class="content-header">
+        <div class="card card-primary card-outline mx-auto" style = "width:95%; margin-top:7% ">
+
           <div class="card-body">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
             <div class="tab-content">
               <div class="active tab-pane" id="basic_info">
                 <div class = "card-header">
@@ -145,7 +148,11 @@
 
       <!-- /.content -->
     </div>
+    </div>
 
+
+</section>
+</div>
 
 </body>
 

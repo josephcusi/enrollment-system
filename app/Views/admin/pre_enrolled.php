@@ -77,7 +77,7 @@
         </li>
         <br>
         <br>
-        
+
 
           </ul>
         </li>
@@ -94,12 +94,16 @@
 
 <br>
     <!-- Main content -->
-    <div class="card">
-      <div class="card-header">
-        <h3 class="card-title" style = "font-family:poppins">Pre-Enrolled</h3>
-      </div>
-      <!-- /.card-header -->
-      <div class="card-body">
+    <section class="content-header">
+
+      <div class="card card-primary card-outline mx-auto" style = "width:95%">
+        <div class="card-body">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+        <h3 class="card-title" style = "font-family:poppins">Pre-Enrolled Table</h3>
+        <br>
+        <br>
         <table id="example1" class="table table-bordered table-striped" style = "font-family:poppins">
           <thead>
             <tr>
@@ -135,7 +139,12 @@
 
     <!-- /.content -->
   </div>
+</div>
+</div>
+</div>
 
+
+</section>
   </body>
   <?= $this->include('admin/include/end')?>
   <?= $this->include('admin/include/footer')?>
