@@ -48,6 +48,9 @@ class Profile extends BaseController
         $profile_model = new ProfileModel();
         $user_profile['profile_picture'] = $profile_model->where('email', $email = session()->get('loggedInUser'))->findAll();
 
+        $user_model = new UserModel();
+        $user_profile['userName'] = $user_model->where('email', $email = session()->get('loggedInUser'))->find();
+
 
         if(count($profile) != 0)
         {
