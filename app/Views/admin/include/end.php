@@ -48,7 +48,7 @@
 <script src="<?=base_url()?>/plugins/datatables-buttons/js/buttons.print.min.js"></script>
 <script src="<?=base_url()?>/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
 <!-- AdminLTE App -->
-<script src="<?=base_url()?>/dist/js/adminlte.min.js"></script>
+
 <!-- AdminLTE for demo purposes -->
 
 <!-- Page specific script -->
