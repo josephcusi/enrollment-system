@@ -135,15 +135,21 @@ class Prospectus extends BaseController
     {
         $prospectus_model = new ProspectusModel();
         $strand = $this->request->getPost('strand');
+        $subject = $this->request->getPost('subject');
+        $pre_requisit = $this->request->getPost('pre_requisit');
         $title = $this->request->getPost('title');
         $unit = $this->request->getPost('unit');
-        $pre_requisit = $this->request->getPost('pre_requisit');
+        $year_level = $this->request->getPost('year_level');
+        $semester = $this->request->getPost('semester');
 
         $data = [
             'strand' => $strand,
+            'subject' => $subject,
             'title' => $title,
             'unit' => $unit,
-            'pre_requisit' => $pre_requisit
+            'pre_requisit' => $pre_requisit,
+            'year_level' => $year_level,
+
         ];
         $prospectus_model->update($id, $data);
         //session()->setFlashdata('updateprospectus', 'Duplicate input');
