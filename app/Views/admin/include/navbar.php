@@ -24,7 +24,7 @@
     </div>
     <div class="dropdown">
       <div class="info">
-      <a class="d-block" style="color:white; background-color:#212529;  margin-top:1.5%; border-radius:18px; padding:7px" href="#">
+      <a class="d-block" style="color:white; background-color:#212529; font-family:poppins;  margin-top:1.5%; border-radius:18px; padding:7px" href="#">
 
                             <?= isset($name['firstname']) ? $name['firstname'] : $userName['firstname'];?>
                             <?=" " ?>
