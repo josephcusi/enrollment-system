@@ -33,8 +33,8 @@ class Section extends BaseController
             'section' => $section_model->select('*, section_tbl.id' )
                 ->join('strand_tbl', 'section_tbl.strand_id = strand_tbl.id', 'right')
                 ->where('section_tbl.strand_id', $strand_id[0]['id'])->get()->getResultArray()
-            
-        ];  
+
+        ];
     //   var_dump($values['count']);
         return view('admin/section', $values);
     }
@@ -77,6 +77,8 @@ class Section extends BaseController
         ]);
 
         if (!$validated) {
+            //session()->setFlashdata('updatesection', 'Duplicate input');
+            session()->setFlashdata('notupdatesection', 'Duplicate input');
             return $this->section();
         }
         else
@@ -86,7 +88,7 @@ class Section extends BaseController
             $strand_model = new StrandModel();
             $strand = $this->request->getPost('strand_id');
             $strand_id = $strand_model->where('strand', $strand)->find();
-            
+
 
             $values = [
                 'strand_id' => $strand_id[0]['id'],
@@ -98,8 +100,10 @@ class Section extends BaseController
             $query = $section_model->insert($values);
 
             if (!$query) {
+                session()->setFlashdata('notupdatesection', 'Duplicate input');
                 return redirect()->back()->with('fail', 'Something went wrong.');
             } else {
+                session()->setFlashdata('subjectadded', 'added');
                 return redirect()->route('section');
             }
         }
@@ -108,6 +112,7 @@ class Section extends BaseController
     {
         $section_model = new SectionModel();
         $section_model->delete($id);
+        session()->setFlashdata('subjectdelete', 'deleted');
         return redirect()->route('section');
     }
     public function edit($id)
@@ -131,6 +136,7 @@ class Section extends BaseController
             'year_level' => $year_level
         ];
         $section_model->update($id, $data);
+        session()->setFlashdata('updatesection', 'Duplicate input');
         return redirect()->route('section');
     }
 }

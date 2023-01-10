@@ -25,7 +25,7 @@ class Prospectus extends BaseController
             'prospectus' => $prospectus_model->select('*, prospectrus_tbl.id' )
                 ->join('strand_tbl', 'prospectrus_tbl.strand_id = strand_tbl.id', 'right')
                 ->where('prospectrus_tbl.strand_id', $strand_id[0]['id'])->get()->getResultArray(),
-        ];  
+        ];
     //    var_dump($values['prospectus']);
         return view('admin/prospectus', $values);
     }
@@ -39,7 +39,7 @@ class Prospectus extends BaseController
                 ->join('strand_tbl', 'prospectrus_tbl.strand_id = strand_tbl.id', 'right')
                 ->where('strand_id', $strand_id[0]['id'])->get()->getResultArray(),
         ];
-  
+
         session()->setFlashdata('strand', $strand);
         return view('admin/prospectus', $data);
     }
@@ -87,6 +87,7 @@ class Prospectus extends BaseController
 
         if (!$validated) {
             session()->setFlashdata('validation', $this->validator);
+            session()->setFlashdata('notupdatesection', 'Duplicate input');
             return redirect()->route('r_prospectus');
         }
         else
@@ -99,9 +100,9 @@ class Prospectus extends BaseController
             $semester = $this->request->getPost('semester');
             $strand = $this->request->getPost('strand');
             $strand_model = new StrandModel();
-            
+
             $strand_id = $strand_model->where('strand', $strand)->find();
-            
+
 
             $values = [
                 'strand_id' => $strand_id[0]['id'],
@@ -118,6 +119,7 @@ class Prospectus extends BaseController
             if (!$query) {
                 return redirect()->back()->with('fail', 'Something went wrong.');
             } else {
+              session()->setFlashdata('subjectadded', 'added');
                 return $this->r_prospectus();
             }
         }
@@ -144,6 +146,7 @@ class Prospectus extends BaseController
             'pre_requisit' => $pre_requisit
         ];
         $prospectus_model->update($id, $data);
+        //session()->setFlashdata('updateprospectus', 'Duplicate input');
         return $this->r_prospectus();
     }
 }

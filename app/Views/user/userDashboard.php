@@ -95,11 +95,11 @@
       <script src="<?= base_url()?>/dist/js/sweetalert.js"></script>
       <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
       <?php if(!empty(session()->getFlashdata('dashboard'))) : ?>
-      <script>swal("Welcome", "You successfully login your account.", "success");</script>
+      <script>swal("Welcome!", "You successfully login your account.", "success");</script>
       <?php endif ?>
 
       <?php if(!empty(session()->getFlashdata('saveprofile'))) : ?>
-      <script>swal("Saved", "Profile has been successfully updated.", "success");</script>
+      <script>swal("Saved!", "Profile has been successfully updated.", "success");</script>
       <?php endif ?>
 
       <?php if(!empty(session()->getFlashdata('missing'))) : ?>
@@ -138,14 +138,14 @@
                                                 >
                                     <?php foreach($profile_picture as $prof):?>
                                             <a href="#" class="btn btn-info btn-sm btn-edit" data-id="<?=$prof['id']?>" style="background:white;border:0; ">
-                                            
+
                                                 <img class="profile-user-img img-fluid img-circle"
                                                 style="width:250px; height:240px; background-image:url(../../dist/img/profile.jfif); border-color:maroon; background-size:cover;" src="<?= base_url().'/'.'profile/'.$prof['profile_picture'] ?>">
-                                               
+
                                             </a>
-                                   
+
                                         <?php endforeach;?>
-                                 
+
                                 </div>
                                 <?php foreach($profile_picture as $prof):?>
                                 <div class="modal fade" id="profilepicture">
@@ -549,7 +549,7 @@
             // const profile_picture = $(this).data('profile');
             // // sa modal
             // $('.profile_pics').val(profile_picture).trigger('change');
-            // Call Modal 
+            // Call Modal
             $('#profilepicture').modal('show');
         });
     });

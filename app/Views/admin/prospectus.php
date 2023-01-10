@@ -99,6 +99,23 @@
 
 </div>
 <div class="content-wrapper">
+  <script src="<?= base_url()?>/dist/js/sweetalert.js"></script>
+  <?php if(!empty(session()->getFlashdata('updateprospectus'))) : ?>
+  <script>swal("Updated Successfully!", "Changes has made.", "success");</script>
+  <?php endif ?>
+
+  <script src="<?= base_url()?>/dist/js/sweetalert.js"></script>
+  <?php if(!empty(session()->getFlashdata('subjectadded'))) : ?>
+  <script>swal("Subject Added!", "You successfully added subject.", "success");</script>
+  <?php endif ?>
+
+  <?php if(!empty(session()->getFlashdata('subjectdelete'))) : ?>
+  <script>swal("Subject Deleted!", "You successfully deleted subject.", "success");</script>
+  <?php endif ?>
+
+  <?php if(!empty(session()->getFlashdata('notupdatesection'))) : ?>
+  <script>swal("Duplicate Input!", "Please try another.", "warning");</script>
+  <?php endif ?>
   <!-- Content Header (Page header) -->
 
 
@@ -191,12 +208,12 @@
             <div class="modal-body">
             <form action="<?= base_url('/newprospectus'); ?>" method="post">
             <?= csrf_field(); ?>
-                    
+
                     <div class="form-row">
                     <div class="form-group col-md-6">
                     <input type="hidden" name="strand" class="form-control" value="<?= $strand ?>">
                       <label for="inputSubject">Subject</label>
-                     
+
                       <input type="text" name="subject" class="form-control" id="inputSubject" placeholder="Subject">
                       <span class="text-danger">
                             <?= isset($validation) ? display_error($validation, 'subject') : '' ?>
@@ -229,9 +246,9 @@
 
                       <option type="text" class="form-control" id="year_level" placeholder="Year Level" value="Grade 11">Grade 11</option>
                       <option type="text" class="form-control" id="year_level" placeholder="Year Level" value="Grade 12">Grade 12</option>
-                   
+
                      </select>
-                     
+
                       <span class="text-danger">
                             <?= isset($validation) ? display_error($validation, 'year_level') : '' ?>
                       </span>
@@ -239,10 +256,10 @@
                     <div class="form-group col-md-6">
                       <label for="semester">Semester</label>
                       <select class="form-control"id="studentStrand" name = "semester">
-                  
+
                       <option type="text" class="form-control" id="semester" placeholder="1st Semester" value="1st Semester">1st Semester</option>
                       <option type="text" class="form-control" id="semester" placeholder="1st Semester" value="1st Semester">2nd Semester</option>
-                     
+
                      </select>
                       <span class="text-danger">
                             <?= isset($validation) ? display_error($validation, 'semester') : '' ?>
@@ -262,7 +279,7 @@
         <!-- /.modal-dialog -->
       </div>
 
-              
+
       <!-- /.modal -->
 
 
@@ -283,4 +300,3 @@
 
 <script src="<?=base_url()?>/cssjs/js/jquery.min.js"></script>
 <script src="<?=base_url()?>/cssjs/js/bundle.min.js"></script>
-

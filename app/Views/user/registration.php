@@ -93,6 +93,18 @@
 
     <!-- Main content -->
     <div class="content-wrapper">
+      <script src="<?= base_url()?>/dist/js/sweetalert.js"></script>
+      <?php if(!empty(session()->getFlashdata('notExist'))) : ?>
+      <script>swal("Can't Proceed!", "Please fill out the profile first.", "warning");</script>
+      <?php endif ?>
+
+      <?php if(!empty(session()->getFlashdata('sendapplication'))) : ?>
+      <script>swal("Application Sent!", "You successfully sent your application.", "success");</script>
+      <?php endif ?>
+
+      <?php if(!empty(session()->getFlashdata('duplicate'))) : ?>
+      <script>swal("Duplicate Input!", "You already sent application for this year level and semester.", "warning");</script>
+      <?php endif ?>
       <!-- Content Header (Page header) -->
 
   <br>

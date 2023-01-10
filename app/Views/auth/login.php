@@ -31,35 +31,35 @@
     <div class="container glass">
       <script src="<?= base_url()?>/dist/js/sweetalert.js"></script>
       <?php if(!empty(session()->getFlashdata('incorrect_email'))) : ?>
-      <script>swal("Invalid Email", "Please enter your correct email.", "error");</script>
+      <script>swal("Invalid Email!", "Please enter your correct email.", "error");</script>
       <?php endif ?>
 
       <?php if(!empty(session()->getFlashdata('incorrect_pass'))) : ?>
-      <script>swal("Invalid Password", "Please enter your correct password.", "error");</script>
+      <script>swal("Invalid Password!", "Please enter your correct password.", "error");</script>
       <?php endif ?>
 
       <?php if(!empty(session()->getFlashdata('notverify'))) : ?>
-      <script>swal("Email Not Verified!", "Your email is not verified yet. Verify your email first.", "error");</script>
+      <script>swal("Email Not Verified!", "Your email is not verified yet. Check your email.", "error");</script>
       <?php endif ?>
 
       <?php if(!empty(session()->getFlashdata('register'))) : ?>
-      <script>swal("Registration Successfully", "Please check your email to verify your account", "success");</script>
+      <script>swal("Registration Successfully!", "Please check your email to verify your account", "success");</script>
       <?php endif ?>
 
       <?php if(!empty(session()->getFlashdata('verify'))) : ?>
-      <script>swal("Verification Successfully", "You can now login to your account.", "success");</script>
+      <script>swal("Verification Successfully!", "You can now login to your account.", "success");</script>
       <?php endif ?>
 
       <?php if(!empty(session()->getFlashdata('passwordreset'))) : ?>
-      <script>swal("Password Reset Successfully", "You successfully change your password", "success");</script>
+      <script>swal("Password Reset Successfully!", "You successfully change your password", "success");</script>
       <?php endif ?>
 
       <?php if(!empty(session()->getFlashdata('sheesh'))) : ?>
-      <script>swal("OOPSS!", "You cant access to this page. Please login first.", "warning");</script>
+      <script>swal("Can't Proceed!", "You cant access to this page. Please login first.", "warning");</script>
       <?php endif ?>
 
       <?php if(!empty(session()->getFlashdata('logoutz'))) : ?>
-      <script>swal("Logout Successfully", "You successfully logout your account.", "success");</script>
+      <script>swal("Logout Successfully!", "You successfully logout your account.", "success");</script>
       <?php endif ?>
 
         <div class="forms">

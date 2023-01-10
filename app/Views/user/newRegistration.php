@@ -93,6 +93,10 @@
 
     <!-- Main content -->
     <div class="content-wrapper">
+      <script src="<?= base_url()?>/dist/js/sweetalert.js"></script>
+      <?php if(!empty(session()->getFlashdata('enroll'))) : ?>
+      <script>swal("", "You can now fill out for your enrollment application.", "success");</script>
+      <?php endif ?>
       <!-- Content Header (Page header) -->
 
   <br>

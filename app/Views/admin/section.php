@@ -99,6 +99,23 @@
 
 </div>
 <div class="content-wrapper">
+  <script src="<?= base_url()?>/dist/js/sweetalert.js"></script>
+  <?php if(!empty(session()->getFlashdata('updatesection'))) : ?>
+  <script>swal("Updated Successfully!", "Changes has made.", "success");</script>
+  <?php endif ?>
+
+  <script src="<?= base_url()?>/dist/js/sweetalert.js"></script>
+  <?php if(!empty(session()->getFlashdata('subjectadded'))) : ?>
+  <script>swal("Section Added!", "You successfully added section.", "success");</script>
+  <?php endif ?>
+
+  <?php if(!empty(session()->getFlashdata('subjectdelete'))) : ?>
+  <script>swal("Section Deleted!", "You successfully deleted section.", "success");</script>
+  <?php endif ?>
+
+  <?php if(!empty(session()->getFlashdata('notupdatesection'))) : ?>
+  <script>swal("Duplicate Input!", "Please try another.", "warning");</script>
+  <?php endif ?>
   <!-- Content Header (Page header) -->
 
 
@@ -177,7 +194,7 @@
               </table>
               </div>
                 <button type="button" class="btn btn-default" class="btn btn-default" style = "float:right; font-family:poppins; margin-bottom:1%; background-color:maroon; color: white;" data-toggle="modal" data-target="#new-section">New Section</button>
-                 
+
 
                 <div class="modal fade" id="new-section">
         <div class="modal-dialog" style = "font-family:poppins">

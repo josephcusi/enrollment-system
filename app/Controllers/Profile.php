@@ -203,7 +203,7 @@ class Profile extends BaseController
         ]);
 
 
-        
+
         if (!$validated)
         {
             session()->setFlashdata('validation', $this->validator);
@@ -277,7 +277,7 @@ class Profile extends BaseController
         $profile_model = new ProfileModel();
         $email = session()->get('loggedInUser');
         $count = count($profile_model->where('email', $email)->findAll());
-        
+
         if($count < 1) {
             session()->setFlashdata('notExist', 'Please fill out your profile first');
             return redirect()->route('registration');
@@ -286,11 +286,11 @@ class Profile extends BaseController
             $data['year'] =  $year_model->where('status', 'active')->first();
             $data['user'] = $user_model->where('email', session()->get('loggedInUser'))->first();
             $data['strands'] = $strand_model->findAll();
-    
+            session()->setFlashdata('enroll', 'Please fill out your profile first');
             return view('user/newregistration', $data);
         }
 
-        
+
     }
 
     public function save_registration()
@@ -303,6 +303,7 @@ class Profile extends BaseController
             'semester' => $this->request->getVar('semester')
         ];
         if($registration_model->insert($data)){
+            //session()->setFlashdata('sendapplication', 'Duplicate input');
             return view('User/Registration');
         }
 
@@ -321,6 +322,8 @@ class Profile extends BaseController
         $registration = new RegistrationModel();
         $user['user'] = $user_model->where('email', session()->get('loggedInUser'))->first();
         $user['registration'] = $registration->where('lrn', $lrn)->findAll();
+
+        //session()->setFlashdata('sendapplication', '');
         return view('User/registration', $user);
     }
 
@@ -365,7 +368,7 @@ class Profile extends BaseController
             ];
 
             $data['validation'] = $this->validator;
-
+            //session()->setFlashdata('sendapplication', 'Duplicate input');
             return view('user/registration', $data);
         }
         else
@@ -395,7 +398,7 @@ class Profile extends BaseController
             else{
                 session()->setFlashdata('duplicate', 'Duplicate input');
             }
-            
+
             $prospectus_model = new ProspectusModel();
             $strand_model = new StrandModel();
             $strand_id = $strand_model->where('strand', $strand)->find();
@@ -404,7 +407,7 @@ class Profile extends BaseController
             ];
             //var_dump($values['prospectus']);
             return view('user/regSubject', $values);
-           
+
         }
     }
     public function updateReg()

@@ -105,10 +105,10 @@
           <div class="card-body">
             <div class="tab-content">
               <div class="active tab-pane" id="basic_info">
-               
+
               <div class="tab-pane" id="credential">
                 <div class = "card-header">
-                  
+
                 <p style="font-size:20px; font-family: Poppins;color:maroon; margin-left:45%">Subject</p>
               </div><br><br>
               <div class="card-body">
@@ -136,7 +136,7 @@
                     </tbody>
                   </table>
                   <div class="modal-footer justify-content-between">
-                    
+                  <?php session()->setFlashdata('sendapplication', 'shhessh')?>
                   <a href="<?=site_url('registration')?>"><button type="submit" class="btn btn-primary" style = "margin-left:100%">Submit</button></a>
                  </div>
                   <!-- /.tab-pane -->
