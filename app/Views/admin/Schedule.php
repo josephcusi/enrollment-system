@@ -77,16 +77,7 @@
         </li>
         <br>
         <br>
-        <li class="nav-item">
-          <a href="<?=base_url('/adminlogout')?>" class="nav-link">
-            <i class="nav-icon fas fa-reply" style = "margin-left:4%"></i>
-
-            <p>
-              Log out
-
-            </p>
-          </a>
-        </li>
+        
 
           </ul>
         </li>
@@ -109,13 +100,13 @@
     </div>
     <!-- /.card-header -->
     <div class="card-body">
-    
+
       <table id="example1" class="table table-bordered table-striped" style = "font-family:poppins">
-     
+
         <thead>
           <?php //foreach($section as $sect): ?>
           <tr>
-            
+
             <th>Subject</th>
             <th>Monday</th>
             <th>Tuesday</th>
@@ -128,7 +119,7 @@
         <tbody>
             <?php// foreach($section_tbl as $section_value):?>
           <tr>
-            
+
             <td>Fil 101</td>
             <td></td>
             <td></td>
@@ -140,7 +131,7 @@
             <?= $this->include('admin/addSchedule')?>
             </td>
           </tr>
-        
+
           </tr>
           <?php// endforeach;?>
         </tbody>

@@ -16,14 +16,18 @@ class PreEnrolled extends BaseController
     public function viewPreEnroll()
     {
         $user_profile = new ProfileModel();
+        $user_model = new UserModel();
         $data = [
-            'pre_enrolled'=> $user_profile->findAll()
+            'pre_enrolled'=> $user_profile->findAll(),
+            'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
         ];
         return view('admin/viewPreEnroll', $data);
     }
     public function enroll()
     {
-        return view('admin/enroll');
+      $user_model = new UserModel();
+      $data['userName'] = $user_model->where('email', $email = session()->get('loggedInUser'))->find();
+      return view('admin/enroll', $data);
     }
     public function pre_enrolled_reg()
     {
@@ -31,6 +35,7 @@ class PreEnrolled extends BaseController
         $user_model = new UserModel();
         $data ['user'] = $user_model->where('usertype', 'student')->first();
         $data ['pre_enrolled'] = $registration_model->findAll();
+        $data['userName'] = $user_model->where('email', $email = session()->get('loggedInUser'))->find();
 
         return view('admin/pre_enrolled', $data);
     }

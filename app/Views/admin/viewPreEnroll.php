@@ -77,16 +77,7 @@
       </li>
       <br>
       <br>
-      <li class="nav-item">
-        <a href="<?=base_url('/adminlogout')?>" class="nav-link">
-          <i class="nav-icon fas fa-reply" style = "margin-left:4%"></i>
-
-          <p>
-            Log out
-
-          </p>
-        </a>
-      </li>
+      
 
         </ul>
       </li>

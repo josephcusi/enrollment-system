@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\UserModel;
 use App\Models\RegistrationModel;
+
 use App\Controllers\BaseController;
 
 class Admin extends BaseController
@@ -15,6 +16,7 @@ class Admin extends BaseController
 		$data['usertypeadmin'] = $user_model->where('usertype', 'admin')->get()->getNumRows();
         $data['usertypestudent'] = $user_model->where('usertype', 'student')->get()->getNumRows();
         $data['status'] = $registration_model->where('status', 'pending')->get()->getNumRows();
+        $data['userName'] = $user_model->where('email', $email = session()->get('loggedInUser'))->find();
 		return view('admin/admindashboard', $data);
     }
     public function pre_enrolled()
@@ -31,7 +33,9 @@ class Admin extends BaseController
     }
     public function grading()
     {
-        return view('admin/grading');
+      $user_model = new UserModel();
+      $data['userName'] = $user_model->where('email', $email = session()->get('loggedInUser'))->find();
+        return view('admin/grading', $data);
     }
     public function strand()
     {

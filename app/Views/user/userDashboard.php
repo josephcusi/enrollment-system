@@ -11,24 +11,9 @@
   </a>
 
   <!-- Sidebar -->
-  <?php foreach($userName as $name):?>
+
   <div class="sidebar">
-    <!-- Sidebar user panel (optional) -->
-    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-      <div class="image">
-        <img src="#" class="img-circle elevation-2">
-      </div>
-      <div class="info">
-      <a class="d-block" href="#">
-        <?= isset($name['firstname']) ? $name['firstname'] : $userName['firstname'];?>
-        <?=" " ?>
-        <?= isset($name['middlename']) ? $name['middlename'] : $userName['middlename']; ?>
-        <?php echo " " ?>
-        <?= isset($name['lastname']) ? $name['lastname'] : $userName['lastname']; ?>
-  </a>
-      </div>
-    </div>
-    <?php endforeach;?>
+
 
     <!-- SidebarSearch Form -->
 
@@ -78,15 +63,7 @@
         </li>
         <br>
         <br>
-          <li class="nav-item">
-          <a href="<?=site_url()?>logout" method="post" class="nav-link">
-            <i class="nav-icon fas fa-reply" style = "margin-left:4%"></i>
-
-            <p>
-              Log out
-            </p>
-           </a>
-          </li>
+          
           </ul>
           </li>
 

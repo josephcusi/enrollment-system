@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\StrandModel;
+use App\Models\UserModel;
 
 class Strand extends BaseController
 {
@@ -14,10 +15,12 @@ class Strand extends BaseController
     public function retrieve_strand()
     {
         $strand_model = new StrandModel();
+        $user_model = new UserModel();
         $data = [
-            'strand'=> $strand_model->findAll()
+            'strand'=> $strand_model->findAll(),
+            'userName'=> $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
         ];
-       
+
         $data['validation'] = $this->validator;
         return view('admin/strand', $data);
     }
@@ -29,7 +32,7 @@ class Strand extends BaseController
                 'errors' => [
                     'required' => 'Strand is required.',
                     'is_unique' => 'Strand Already Exist.'
-                    
+
                 ]
             ],
             'title' => [
@@ -42,7 +45,7 @@ class Strand extends BaseController
                 'rules' => 'required',
                 'errors' => [
                     'required' => 'Type is required.'
-                    
+
                 ]
             ]
         ]);
@@ -53,7 +56,7 @@ class Strand extends BaseController
             $data = [
                 'strand'=> $strand_model->findAll()
             ];
-           
+
             $data['validation'] = $this->validator;
             return view('admin/strand', $data);
         }
@@ -82,6 +85,8 @@ class Strand extends BaseController
     public function edit_strand($id)
     {
         $strand_model = new StrandModel();
+        $user_model = new UserModel();
+        $data['userName'] = $user_model->where('email', $email = session()->get('loggedInUser'))->find();
         $data['strand'] = $strand_model->find($id);
         //var_dump($data);
         return view('admin/strand/updateStrand', $data);
@@ -93,7 +98,7 @@ class Strand extends BaseController
                 'rules' => 'required',
                 'errors' => [
                     'required' => 'Strand is required.'
-                    
+
                 ]
             ],
             'title' => [
@@ -106,7 +111,7 @@ class Strand extends BaseController
                 'rules' => 'required',
                 'errors' => [
                     'required' => 'Type is required.'
-                    
+
                 ]
             ]
         ]);

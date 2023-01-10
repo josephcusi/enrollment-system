@@ -7,6 +7,7 @@ use App\Models\SectionModel;
 use App\Models\ProspectusModel;
 use App\Models\StrandModel;
 use App\Models\YearModel;
+use App\Models\UserModel;
 
 class Section extends BaseController
 {
@@ -25,6 +26,7 @@ class Section extends BaseController
 
         $section_model = new SectionModel();
         $year_model = new YearModel();
+        $user_model = new UserModel();
         $prospectus_model = new ProspectusModel();
         session()->setFlashdata('strand', 'humss');
         $strand_model = new StrandModel();
@@ -32,7 +34,8 @@ class Section extends BaseController
         $values = [
             'section' => $section_model->select('*, section_tbl.id' )
                 ->join('strand_tbl', 'section_tbl.strand_id = strand_tbl.id', 'right')
-                ->where('section_tbl.strand_id', $strand_id[0]['id'])->get()->getResultArray()
+                ->where('section_tbl.strand_id', $strand_id[0]['id'])->get()->getResultArray(),
+            'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
 
         ];
     //   var_dump($values['count']);
@@ -42,11 +45,14 @@ class Section extends BaseController
     {
         $section_model = new SectionModel();
         $strand_model = new StrandModel();
+        $user_model = new UserModel();
+
         $strand_id = $strand_model->where('strand', $strand)->find();
         $data = [
             'section' => $section_model->select('*, section_tbl.id')
                 ->join('strand_tbl', 'section_tbl.strand_id = strand_tbl.id', 'right')
-                ->where('strand_id', $strand_id[0]['id'])->get()->getResultArray()
+                ->where('strand_id', $strand_id[0]['id'])->get()->getResultArray(),
+            'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
         ];
        // var_dump($data['count']);
          session()->setFlashdata('strand', $strand);
@@ -118,6 +124,8 @@ class Section extends BaseController
     public function edit($id)
     {
         $section_model = new SectionModel();
+        $user_model = new UserModel();
+        $data['userName'] = $user_model->where('email', $email = session()->get('loggedInUser'))->find();
         $data['section'] = $section_model->find($id);
         return view('admin/section/updateSection', $data);
     }

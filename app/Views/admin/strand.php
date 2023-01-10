@@ -77,16 +77,7 @@
       </li>
       <br>
       <br>
-      <li class="nav-item">
-        <a href="<?=base_url('/adminlogout')?>" class="nav-link">
-          <i class="nav-icon fas fa-reply" style = "margin-left:4%"></i>
-
-          <p>
-            Log out
-
-          </p>
-        </a>
-      </li>
+      
 
         </ul>
       </li>
@@ -104,14 +95,14 @@
 
 <br>
   <!-- Main content -->
-  
+
   <div class="card">
     <div class="card-header">
       <h3 class="card-title"style = "font-family:poppins">Strand Table</h3>
     </div>
     <!-- /.card-header -->
     <div class="card-body">
-    
+
       <table id="example1" class="table table-bordered table-striped" style = "font-family:poppins">
       <button type="button" class="btn btn-default" style = "margin-left: 90%; font-family:poppins; margin-bottom:1%; background-color:maroon; color: white;" data-toggle="modal" data-target="#new-strand">New Strand</button>
       <?= $this->include('admin/include/strandmodal/newStrand')?>

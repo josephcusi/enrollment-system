@@ -15,7 +15,29 @@
   <!-- Right navbar links -->
   <ul class="navbar-nav ml-auto">
     <!-- Navbar Search -->
+    <?php foreach($userName as $name):?>
+    <!-- Sidebar user panel (optional) -->
+    <div class="user-panel mt-1 pb-1 mb-1 d-flex" >
+      <div class="image" style = "margin-left:-15%">
+        <img src="<?=base_url()?>/dist/img/user8-128x128.jpg" class="img-circle elevation-2" alt="User Image">
+      </div>
+    </div>
+    <div class="dropdown">
+      <div class="info">
+      <a class="d-block" style="color:white; background-color:#212529;  margin-top:1.5%; border-radius:18px; padding:7px" href="#">
 
+                            <?= isset($name['firstname']) ? $name['firstname'] : $userName['firstname'];?>
+                            <?=" " ?>
+                            <?= isset($name['middlename']) ? $name['middlename'] : $userName['middlename']; ?>
+                            <?php echo " " ?>
+                            <?= isset($name['lastname']) ? $name['lastname'] : $userName['lastname']; ?>
+    </a>
+    <div class="dropdown-content" style = "margin-left:25%; margin-top:2%;">
+      <a href="<?=site_url()?>logout" style = "font-family:poppins; margin-left:17%; font-weight:bolder" method="post">LOGOUT</a>
+    </div>
+      </div>
+      </div>
+    <?php endforeach;?>
 
     <!-- Messages Dropdown Menu -->
     <li class="nav-item">

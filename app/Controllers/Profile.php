@@ -23,11 +23,15 @@ class Profile extends BaseController
     }
     public function userSchedule()
     {
-        return view('user/userSchedule');
+      $user_model = new UserModel();
+      $user['userName'] = $user_model->where('email', $email = session()->get('loggedInUser'))->find();
+        return view('user/userSchedule', $user);
     }
     public function userProspectus()
     {
-        return view('user/userProspectus');
+      $user_model = new UserModel();
+      $user['userName'] = $user_model->where('email', $email = session()->get('loggedInUser'))->find();
+        return view('user/userProspectus', $user);
     }
     public function newRegistration()
     {
@@ -65,6 +69,7 @@ class Profile extends BaseController
         {
             $user_model = new UserModel();
             $user_profile['userInfo'] = $user_model->where('email', $email)->first();
+            $user_profile['userName'] = $user_model->where('email', $email = session()->get('loggedInUser'))->find();
 
             return view('user/userdashboard', $user_profile);
         }
@@ -82,6 +87,7 @@ class Profile extends BaseController
 		$data['usertypeadmin'] = $admin->where('usertype', 'admin')->get()->getNumRows();
         $data['usertypestudent'] = $admin->where('usertype', 'student')->get()->getNumRows();
         $data['status'] = $registration_model->where('status', 'pending')->get()->getNumRows();
+        $data['userName'] = $admin->where('email', $email = session()->get('loggedInUser'))->find();
         return view('admin/adminDashboard', $data);
     }
     public function insertProfile()
@@ -289,6 +295,7 @@ class Profile extends BaseController
             $data['year'] =  $year_model->where('status', 'active')->first();
             $data['user'] = $user_model->where('email', session()->get('loggedInUser'))->first();
             $data['strands'] = $strand_model->findAll();
+            $data['userName'] = $user_model->where('email', $email = session()->get('loggedInUser'))->find();
             session()->setFlashdata('enroll', 'Please fill out your profile first');
             return view('user/newregistration', $data);
         }
@@ -316,6 +323,7 @@ class Profile extends BaseController
     {
 
         $user_model = new UserModel();
+        $user['userName'] = $user_model->where('email', $email = session()->get('loggedInUser'))->find();
         $email = session()->get('loggedInUser');
         $userdata['userdata'] = $user_model->where('email', $email)->first();
         $lrn = '';
@@ -323,6 +331,7 @@ class Profile extends BaseController
             $lrn = $user_lrn['lrn'];
         }
         $registration = new RegistrationModel();
+
         $user['user'] = $user_model->where('email', session()->get('loggedInUser'))->first();
         $user['registration'] = $registration->where('lrn', $lrn)->findAll();
 
@@ -366,6 +375,7 @@ class Profile extends BaseController
         {
             $registration_model = new RegistrationModel();
             $user_model = new UserModel();
+            $data['userName'] = $user_model->where('email', $email = session()->get('loggedInUser'))->find();
             $data = [
                 'registration'=> $registration_model->findAll()
             ];
@@ -403,10 +413,13 @@ class Profile extends BaseController
             }
 
             $prospectus_model = new ProspectusModel();
+            $user_model = new UserModel();
             $strand_model = new StrandModel();
             $strand_id = $strand_model->where('strand', $strand)->find();
+
             $values = [
-                'prospectus'=> $prospectus_model->where('strand_id', $strand_id[0]['id'])->where('year_level', $yearlevel)->where('semester', $semester)->findAll()
+                'prospectus'=> $prospectus_model->where('strand_id', $strand_id[0]['id'])->where('year_level', $yearlevel)->where('semester', $semester)->findAll(),
+                'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find()
             ];
             //var_dump($values['prospectus']);
             return view('user/regSubject', $values);
