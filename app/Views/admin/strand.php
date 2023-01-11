@@ -96,18 +96,20 @@
 <br>
   <!-- Main content -->
 
-  
-  <br>
+
+
     <!-- Main content -->
-    <div class="card card-primary card-outline mx-auto" style = "width:95%">
-    <div class="card-header">
-      <h3 class="card-title"style = "font-family:poppins">Strand Table</h3>
-    </div>
+
     <!-- /.card-header -->
     <div class="card-body">
-
+      <div class="card card-primary card-outline mx-auto" style = "width:100%">
+        <div class="card-header">
+          <h3 class="card-title"style = "font-family:poppins">Strand Table</h3>
+            <button type="button" class="btn btn-default" style = "float: right; font-family:poppins; margin-bottom:1%; background-color:maroon; color: white;" data-toggle="modal" data-target="#new-strand">New Strand</button>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
       <table id="example1" class="table table-bordered table-striped" style = "font-family:poppins">
-      <button type="button" class="btn btn-default" style = "margin-left: 90%; font-family:poppins; margin-bottom:1%; background-color:maroon; color: white;" data-toggle="modal" data-target="#new-strand">New Strand</button>
       <?= $this->include('admin/include/strandmodal/newStrand')?>
         <thead>
           <tr>
@@ -117,10 +119,11 @@
             <th>Actions</th>
           </tr>
         </thead>
+
         <tbody>
           <?php foreach($strand as $strand_value):?>
           <tr>
-          <td><?= $strand_value['strand']?></td>
+            <td><?= $strand_value['strand']?></td>
             <td><?= $strand_value['title']?></td>
             <td><?=$strand_value['type']?></td>
             <td>
@@ -128,8 +131,9 @@
               <a href="#"><button type="button" class="btn btn-primary btn-sm">delete</button>
             </td>
           </tr>
+          <?php endforeach;?>
         </tbody>
-        <?php endforeach;?>
+
         <tfoot>
         </tfoot>
 
@@ -141,6 +145,7 @@
   <!-- /.content -->
 </div>
 
+</div>
 </body>
 <?= $this->include('admin/include/end')?>
 <?= $this->include('admin/include/footer')?>

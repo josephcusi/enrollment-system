@@ -111,6 +111,7 @@
             <th>Strand</th>
             <th>Semester</th>
             <th>Year Level</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>
@@ -125,8 +126,6 @@
               <a href="<?=base_url('grade')?>"><button type="button" class="btn btn-secondary btn-sm">Grade</button>
 
             </td>
-          </tr>
-
           </tr>
         </tbody>
         <tfoot>

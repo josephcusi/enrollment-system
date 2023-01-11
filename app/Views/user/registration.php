@@ -95,19 +95,19 @@
   <br>
       <!-- Main content -->
 
-      <section class="content-header">
-
-        <div class="card card-primary card-outline mx-auto" style = "width:95%">
           <div class="card-body">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-12">
-          <h3 class="card-title" style = "font-family:poppins">Registration Table</h3>
+            <div class="card card-primary card-outline mx-auto" style = "width:95%">
+              <div class="card-header">
+                <h3 class="card-title"style = "font-family:poppins">Registration Table</h3>
+                <a href="<?=base_url('retrieve_yearUser')?>"><button type="button" class="btn btn-secondary btn-sm" style = "float:right; font-family:poppins; margin-bottom:1%; background-color:maroon; color: white;">New Registration</button></a>
 
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
         <!-- /.card-header -->
 
           <table id="example1" class="table table-bordered table-striped" style = "font-family:poppins">
-            <a href="<?=base_url('retrieve_yearUser')?>"><button type="button" class="btn btn-secondary btn-sm" style = "float:right; font-family:poppins; margin-bottom:1%; background-color:maroon; color: white;">New Registration</button>
+
             <thead>
               <tr>
                 <th>Student LRN</th>

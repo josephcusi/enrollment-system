@@ -97,13 +97,13 @@
     <section class="content-header">
 
       <div class="card card-primary card-outline mx-auto" style = "width:95%">
+        <div class="card-header">
+          <h3 class="card-title"style = "font-family:poppins">Pre-Enrolled Table</h3>
+        </div>
+        <!-- /.card-header -->
         <div class="card-body">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-12">
-        <h3 class="card-title" style = "font-family:poppins">Pre-Enrolled Table</h3>
-        <br>
-        <br>
+
+
         <table id="example1" class="table table-bordered table-striped" style = "font-family:poppins">
           <thead>
             <tr>
@@ -145,6 +145,41 @@
 
 
 </section>
+<script src="<?=base_url()?>/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="<?=base_url()?>/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="<?=base_url()?>/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="<?=base_url()?>/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="<?=base_url()?>/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="<?=base_url()?>/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="<?=base_url()?>/plugins/jszip/jszip.min.js"></script>
+<script src="<?=base_url()?>/plugins/pdfmake/pdfmake.min.js"></script>
+<script src="<?=base_url()?>/plugins/pdfmake/vfs_fonts.js"></script>
+<script src="<?=base_url()?>/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="<?=base_url()?>/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="<?=base_url()?>/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<!-- AdminLTE App -->
+
+<!-- AdminLTE for demo purposes -->
+
+<!-- Page specific script -->
+<script>
+  $(function () {
+    $("#example1").DataTable({
+      "responsive": true, "lengthChange": false, "autoWidth": false,
+
+    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+  });
+</script>
   </body>
+
   <?= $this->include('admin/include/end')?>
   <?= $this->include('admin/include/footer')?>

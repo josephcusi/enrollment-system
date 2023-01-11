@@ -160,8 +160,12 @@
           <!-- /.col -->
           <div class="col-md-9">
             <div class="card card-primary card-outline">
+
+
+              <div class="card-body">
+
               <div id="humss" class="tabcontent">
-                <table class="table table-bordered table-striped" style = "font-family:poppins">
+                <table id="example1" class="table table-bordered table-striped" style = "font-family:poppins">
                 <thead>
                 <tr>
                 <th>Section</th>
@@ -183,8 +187,11 @@
                   </tbody>
                   <?php endforeach;?>
               </table>
+              <div class = "card">
+                <a button type="button"  class="btn btn-default" style = "float:right; font-family:poppins; margin-bottom:; background-color:maroon; color: white;" data-toggle="modal" data-target="#new-section">New Section</button></a>
               </div>
-                <button type="button" class="btn btn-default" class="btn btn-default" style = "float:right; font-family:poppins; margin-bottom:1%; background-color:maroon; color: white;" data-toggle="modal" data-target="#new-section">New Section</button>
+
+
 
 
                 <div class="modal fade" id="new-section">
@@ -241,6 +248,10 @@
             </div>
             <!-- /.card -->
           </div>
+          </div>
+          </div>
+          </div>
+
           <!-- /.col -->
         </div>
         <!-- /.row -->

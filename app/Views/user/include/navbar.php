@@ -46,5 +46,11 @@
         <i class="fas fa-expand-arrows-alt" style = "color:white"></i>
       </a>
     </li>
+    <li class="nav-item">
+
+      <a class="nav-link" data-widget="control-sidebar" data-controlsidebar-slide="false" href="#" role="button">
+        <i class="fas fa-th-large" style = "color:white"></i>
+      </a>
+    </li>
   </ul>
 </nav>

@@ -159,8 +159,15 @@
           <!-- /.col -->
           <div class="col-md-9">
             <div class="card card-primary card-outline">
+
+
+
+
+              <div class="card-body">
+
+
               <div id="humss" class="tabcontent">
-                <table class="table table-bordered table-striped" style = "font-family:poppins">
+            <table id="example1" class="table table-bordered table-striped" style = "font-family:poppins">
               <thead>
                 <tr>
                   <th>Subject</th>
@@ -170,8 +177,9 @@
                   <th>Actions</th>
                 </tr>
               </thead>
-                <?php foreach($prospectus as $prospect):?>
+
                   <tbody>
+                    <?php foreach($prospectus as $prospect):?>
                   <tr>
                     <td><?= $prospect['subject']?></td>
                     <td><?= $prospect['title']?></td>
@@ -182,11 +190,16 @@
                       <a href="#"><button type="button" class="btn btn-primary btn-sm">delete</button>
                     </td>
                   </tr>
-                </tbody>
                   <?php endforeach;?>
+                </tbody>
+
               </table>
               </div>
-              <a  class="btn btn-default btn-edit" style = "float:right; font-family:poppins; margin-bottom:1%; background-color:maroon; color: white;" data-toggle="modal" data-target="#newSubject">New Subject</a>
+              <div class = "card">
+  <a  class="btn btn-default btn-edit" style = "float:right; font-family:poppins; background-color:maroon; color: white;" data-toggle="modal" data-target="#newSubject">New Subject</a>
+</div>
+              <div>
+                <div>
               <div class="modal fade subjectmodal" id="newSubject">
         <div class="modal-dialog" style = "font-family:poppins">
           <div class="modal-content">
@@ -276,6 +289,11 @@
 
             </div>
             </div>
+              </div>
+                </div>
+                  </div>
+                    </div>
+
             <!-- /.card -->
           </div>
           <!-- /.col -->
@@ -288,6 +306,3 @@
 </body>
 <?= $this->include('admin/include/end')?>
 <?= $this->include('admin/include/footer')?>
-
-<script src="<?=base_url()?>/cssjs/js/jquery.min.js"></script>
-<script src="<?=base_url()?>/cssjs/js/bundle.min.js"></script>
