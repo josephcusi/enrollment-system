@@ -27,7 +27,7 @@
         <li class="nav-header">Student</li>
         <li class="nav-item">
           <a href="<?=base_url()?>/myprofile" class="nav-link    ">
-            <i class="nav-icon fas fa-user"></i>
+            <i class="nav-icon fa-solid fa-user"></i>
             <p>
               <strong>My Profile<strong>
               <span class="badge badge-info right"></span>
@@ -38,7 +38,7 @@
         <li class="nav-header">Maintenance</li>
         <li class="nav-item">
           <a href="<?=base_url()?>/registration" class="nav-link active">
-            <i class="nav-icon fas fa-envelope"></i>
+            <i class="fa-sharp fa-solid fa-id-card"></i>
             <p>
               Registration
 
@@ -47,7 +47,7 @@
         </li>
         <li class="nav-item">
           <a href="<?=base_url()?>/userSchedule" class="nav-link">
-            <i class="nav-icon fas fa-envelope"></i>
+            <i class="fa-sharp fa-solid fa-calendar"></i>
             <p>
               Schedule
             </p>
@@ -55,7 +55,7 @@
         </li>
         <li class="nav-item">
           <a href="<?=base_url()?>/userProspectus" class="nav-link">
-            <i class="nav-icon fas fa-envelope"></i>
+            <i class="fa-sharp fa-solid fa-book"></i>
             <p>
               Prospectus
             </p>
