@@ -93,7 +93,7 @@
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
 
-<br>
+
   <!-- Main content -->
 
 
@@ -102,10 +102,10 @@
 
     <!-- /.card-header -->
     <div class="card-body">
-      <div class="card card-primary card-outline mx-auto" style = "width:100%">
+      <div class="card card-primary card-outline mx-auto" style = "width:100%;border-radius:15px">
         <div class="card-header">
           <h3 class="card-title"style = "font-family:poppins">Strand Table</h3>
-            <button type="button" class="btn btn-default" style = "float: right; font-family:poppins; margin-bottom:1%; background-color:maroon; color: white;" data-toggle="modal" data-target="#new-strand">New Strand</button>
+            <button type="button" class="btn btn-default" style = "border-radius:20px;float: right; font-family:poppins; margin-bottom:1%; background-color:maroon; color: white;" data-toggle="modal" data-target="#new-strand">New Strand</button>
         </div>
         <!-- /.card-header -->
         <div class="card-body">
@@ -127,8 +127,8 @@
             <td><?= $strand_value['title']?></td>
             <td><?=$strand_value['type']?></td>
             <td>
-            <a href="<?=site_url('edit_strand/'.$strand_value['id'])?>"><button type="button" class="btn btn-secondary btn-sm">update</button>
-              <a href="#"><button type="button" class="btn btn-primary btn-sm">delete</button>
+            <a href="<?=site_url('edit_strand/'.$strand_value['id'])?>"><button type="button" class="btn btn-secondary btn-sm"style = "border-radius:15px">update</button>
+              <a href="#"><button type="button" class="btn btn-primary btn-sm"style = "border-radius:15px">delete</button>
             </td>
           </tr>
           <?php endforeach;?>

@@ -79,8 +79,8 @@
                     </div>
                     <span class="text-danger"><?= isset($validation) ? display_error($validation, 'password') : '' ?></span>
                     <div class="checkbox-text">
-                        <div class="checkbox-content">
-                            <input type="checkbox" id="logCheck">
+                        <div class="checkbox-content" required>
+                            <input type="checkbox" id="logCheck" required>
                             <label for="logCheck" class="text">Remember me</label>
                         </div>
                         <a href="<?php echo base_url('forgot');?>" class="text">Forgot password?</a>

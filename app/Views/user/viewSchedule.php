@@ -80,10 +80,11 @@
 
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
-
+<br>
+<br>
 
   <!-- Main content -->
-  <div class="card card-primary card-outline">
+  <div class="card card-primary card-outline mx-auto" style = "width:98%; border-radius:15px">
     <div class="card-header">
       <h3 class="card-title"style = "font-family:poppins">Section|Schedule Table</h3>
     </div>

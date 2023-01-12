@@ -92,11 +92,11 @@
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
 
-
+<br>
   <!-- Main content -->
-  <div class="card">
+  <div class="card card-primary card-outline mx-auto" style = "width:98%; border-radius:15px">
     <div class="card-header">
-      <h3 class="card-title"style = "font-family:poppins">Grading Table</h3>
+      <h3 class="card-title"style = "font-family:poppins">Section Table</h3>
     </div>
     <!-- /.card-header -->
     <div class="card-body">
@@ -120,7 +120,7 @@
             <td>90</td>
             <td>passed</td>
             <td>
-              <button type="button" class="btn btn-default"style = "font-family:poppins; background-color:maroon; color: white;" data-toggle="modal" data-target="#addgrade">Add Grade</button>
+              <button type="button" class="btn btn-default"style = "border-radius:20px;font-family:poppins; background-color:maroon; color: white;" data-toggle="modal" data-target="#addgrade">Add Grade</button>
               <?= $this->include('admin/include/grademodal/grademodal')?>
             </td>
           </tr>

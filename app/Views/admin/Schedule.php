@@ -97,7 +97,7 @@
   <!-- Main content -->
   <section class="content-header">
 
-    <div class="card card-primary card-outline mx-auto" style = "width:95%">
+    <div class="card card-primary card-outline mx-auto" style = "width:98%; border-radius:15px">
       <div class="card-body">
     <div class="container-fluid">
       <div class="row">
@@ -134,7 +134,7 @@
             <td></td>
             <td></td>
             <td>
-            <button type="button" class="btn btn-default" style = "background-color:maroon; color: white;"data-toggle="modal" data-target="#addSchedule">Add</button>
+            <button type="button" class="btn btn-primary" style = "border-radius:20px;background-color:maroon; color: white;"data-toggle="modal" data-target="#addSchedule">Add</button>
             <?= $this->include('admin/addSchedule')?>
             </td>
           </tr>

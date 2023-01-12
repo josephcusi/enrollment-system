@@ -94,12 +94,15 @@
 
 
   <!-- Main content -->
-  <div class="card">
+  <section class="content-header">
+<br>
+
+  <div class = "container-fluid">
+  <div class="card card-primary card-outline mx-auto" style = "width:98%; border-radius:15px">
+    <div class = "card-body">
     <div class="card-header">
-      <h3 class="card-title"style = "font-family:poppins">Update Table - <span style = "color:maroon">Update Strand Table</span></h3>
+    <h3 class="card-title"style = "font-family:poppins">Update Table - <span style = "color:maroon">Update Strand Table</span></h3>
     </div>
-    <!-- /.card-header -->
-    <div class="card-body">
         <form action="<?= site_url('update_strand/'.$strand['id']) ?>" method="post">
                     <input type="hidden" name="_method" value="PUT" />
                   <?= csrf_field(); ?>
@@ -120,7 +123,7 @@
                   </div>
                   <!-- Submit button -->
                   <div class="modal-footer justify-content-between">
-                  <button type="submit" class="btn btn-primary">Save changes</button>
+                  <button type="submit" class="btn btn-primary"style = "border-radius:20px">Save changes</button>
           </div>
               </form>
              </div>

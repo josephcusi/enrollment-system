@@ -98,7 +98,7 @@
 <br>
 <br>
   <div class = "container-fluid">
-  <div class="card card-primary card-outline mx-auto" style = "width:95%">
+  <div class="card card-primary card-outline mx-auto" style = "width:98%; border-radius:15px">
     <div class = "card-body">
     <div class="card-header">
     <h3 class="card-title"style = "font-family:poppins">Update Table - <span style = "color:maroon">Update Section Table</span></h3>
@@ -130,7 +130,7 @@
                   <!-- Submit button -->
                   <div class="modal-footer justify-content-between">
 
-                  <button class="btn btn-primary">Save changes</button>
+                  <button class="btn btn-primary" style = "border-radius:20px; background-color:maroon; border-color:maroon">Save changes</button>
           </div>
               </form>
              </div>

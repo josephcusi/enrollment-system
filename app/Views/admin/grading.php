@@ -93,9 +93,9 @@
   <!-- Content Header (Page header) -->
 
 <br>
-<br>
+
   <!-- Main content -->
-  <div class="card card-primary card-outline mx-auto" style = "width:95%">
+  <div class="card card-primary card-outline mx-auto" style = "width:98%; border-radius:15px">
     <div class="card-header">
       <h3 class="card-title"style = "font-family:poppins">Section Table</h3>
     </div>
@@ -123,7 +123,7 @@
             <td>1st Sem</td>
             <td>12</td>
             <td>
-              <a href="<?=base_url('grade')?>"><button type="button" class="btn btn-secondary btn-sm">Grade</button>
+              <a href="<?=base_url('grade')?>"><button type="button" class="btn btn-secondary btn-sm" style = "border-radius:15px">Grade</button>
 
             </td>
           </tr>

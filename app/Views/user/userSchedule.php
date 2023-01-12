@@ -84,7 +84,8 @@
 
   <!-- Main content -->
   <section class="content-header">
-    <div class="card card-primary card-outline mx-auto" style = "width:95%">
+
+    <div class="card card-primary card-outline mx-auto" style = "width:99%; border-radius:15px">
       <div class="card-body">
     <div class="container-fluid">
       <div class="row">
@@ -111,7 +112,7 @@
             <td></td>
             <td></td>
             <td>
-              <a href="<?=base_url('viewSchedule')?>"><button type="button" class="btn btn-secondary btn-sm">schedule</button>
+              <a href="<?=base_url('viewSchedule')?>"><button type="button" class="btn btn-secondary btn-sm" style = "border-radius:15px">schedule</button>
             </td>
 
           </tr>

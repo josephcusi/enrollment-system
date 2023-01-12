@@ -118,7 +118,7 @@
 
               <!-- Profile Image -->
                         <!-- Profile Image -->
-                        <div class="card card-primary card-outline">
+                        <div class="card card-primary card-outline" style = "border-radius:15px">
                             <div class="card-body box-profile">
                                 <div class="text-center"
                                                 >
@@ -217,16 +217,16 @@
             </div>
             <!-- /.col -->
             <div class="col-md-9">
-              <div class="card card-primary card-outline mx-auto">
+              <div class="card card-primary card-outline mx-auto" style = "border-radius:15px">
 
                 <div class="card-header p-2">
                   <ul class="nav nav-pills">
-                    <li class="nav-item"><a class="nav-link active" href="#basic_info" data-toggle="tab">Basic
+                    <li class="nav-item"><a class="nav-link active" style = "border-radius:20px" href="#basic_info" data-toggle="tab">Basic
                         Information</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#credential" data-toggle="tab">Credential</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#address" data-toggle="tab">Address</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#guardian" data-toggle="tab">Guardian</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#education" data-toggle="tab">Education</a></li>
+                    <li class="nav-item"><a class="nav-link"style = "border-radius:20px" href="#credential" data-toggle="tab">Credential</a></li>
+                    <li class="nav-item"><a class="nav-link"style = "border-radius:20px" href="#address" data-toggle="tab">Address</a></li>
+                    <li class="nav-item"><a class="nav-link"style = "border-radius:20px" href="#guardian" data-toggle="tab">Guardian</a></li>
+                    <li class="nav-item"><a class="nav-link"style = "border-radius:20px" href="#education" data-toggle="tab">Education</a></li>
                   </ul>
                 </div><!-- /.card-header -->
                 <div class="card-body">
@@ -254,7 +254,7 @@
                       <div class="form-group row">
                         <label for="lastname" class="col-sm-1 col-form-label">Last Name</label>
                         <div class="col-sm-5">
-                          <input type="text" class="form-control" id="lastname" name="lastname" placeholder="LastName"
+                          <input type="text" class="form-control"style = "border-radius:20px" id="lastname" name="lastname" placeholder="LastName"
                             value="<?=  isset($profile['lastname']) ? $profile['lastname'] : $userInfo['lastname'];  ?>">
                           <span class="text-danger">
                             <?= isset($errorFlash) ? display_error($errorFlash, 'lastname') : '' ?>
@@ -264,7 +264,7 @@
                       <div class="form-group row">
                         <label for="firstname" class="col-sm-1 col-form-label">First Name</label>
                         <div class="col-sm-5">
-                          <input type="text" class="form-control" name="firstname" id="firstname"
+                          <input type="text" class="form-control"style = "border-radius:20px" name="firstname" id="firstname"
                             placeholder="First Name" value="<?=isset($profile['firstname']) ? $profile['firstname'] : $userInfo['firstname'];  ?>">
                           <span class="text-danger">
                             <?= isset($errorFlash) ? display_error($errorFlash, 'firstname') : '' ?>
@@ -274,7 +274,7 @@
                       <div class="form-group row">
                         <label for="middlename" class="col-sm-1 col-form-label">Middle Name</label>
                         <div class="col-sm-5">
-                          <input type="text" class="form-control" id="middlename" name="middlename"
+                          <input type="text" class="form-control"style = "border-radius:20px" id="middlename" name="middlename"
                             placeholder="Middle Name" value="<?= isset($profile['middlename']) ? $profile['middlename'] : $userInfo['middlename'] ; ?>">
                           <span class="text-danger">
                             <?= isset($errorFlash) ? display_error($errorFlash, 'middlename') : '' ?>
@@ -288,7 +288,7 @@
                       <div class="form-row">
                       <div class="form-group col-md-6">
                         <label for="inputGender">Gender</label>
-                        <select class="form-control"id="inputGender" name = "gender" value="<?= isset($profile['gender']) ? $profile['gender'] : '' ; ?>">
+                        <select class="form-control"style = "border-radius:20px"id="inputGender" name = "gender" value="<?= isset($profile['gender']) ? $profile['gender'] : '' ; ?>">
                         <option type="text" class="form-control" id="inputGender">Male</option>
                         <option type="text" class="form-control" id="inputGender">Female</option>
                         </select>
@@ -298,7 +298,7 @@
                       </div>
                       <div class="form-group col-md-6">
                         <label for="inputCivil">Civil Status</label>
-                        <select class="form-control"id="inputCivil" name = "civil_status"  value="<?= isset($profile['civil_status']) ? $profile['civil_status'] : '' ; ?>">
+                        <select class="form-control"style = "border-radius:20px"id="inputCivil" name = "civil_status"  value="<?= isset($profile['civil_status']) ? $profile['civil_status'] : '' ; ?>">
                         <option type="text" class="form-control" id="inputCivil">Single</option>
                         <option type="text" class="form-control" id="inputCivil">Married</option>
                         <option type="text" class="form-control" id="inputCivil">Divorced</option>
@@ -310,28 +310,28 @@
                       </div>
                       <div class="form-group col-md-6">
                         <label for="inputReligion">Religion</label>
-                        <input type="text" name="religion" class="form-control" id="religion" placeholder="Religion" value="<?= isset($profile['religion']) ? $profile['religion'] : '' ; ?>">
+                        <input type="text" name="religion" class="form-control"style = "border-radius:20px" id="religion" placeholder="Religion" value="<?= isset($profile['religion']) ? $profile['religion'] : '' ; ?>">
                         <span class="text-danger">
                               <?= isset($errorFlash) ? display_error($errorFlash, 'religion') : '' ?>
                             </span>
                       </div>
                       <div class="form-group col-md-6">
                         <label for="inputNationality">Nationality</label>
-                        <input type="text" name="nationality" class="form-control" id="nationality" placeholder="Nationality" value="<?= isset($profile['nationality']) ? $profile['nationality'] : '' ; ?>">
+                        <input type="text" name="nationality" class="form-control"style = "border-radius:20px" id="nationality" placeholder="Nationality" value="<?= isset($profile['nationality']) ? $profile['nationality'] : '' ; ?>">
                         <span class="text-danger">
                               <?= isset($errorFlash) ? display_error($errorFlash, 'nationality') : '' ?>
                             </span>
                       </div>
                       <div class="form-group col-md-6">
                         <label for="inputBirthday">Birthday</label>
-                        <input type="date" name="birthday" class="form-control" id="birthday" placeholder="Birthday" value="<?= isset($profile['birthday']) ? $profile['birthday'] : '' ; ?>">
+                        <input type="date" name="birthday" class="form-control"style = "border-radius:20px" id="birthday" placeholder="Birthday" value="<?= isset($profile['birthday']) ? $profile['birthday'] : '' ; ?>">
                         <span class="text-danger">
                               <?= isset($errorFlash) ? display_error($errorFlash, 'birthday') : '' ?>
                             </span>
                       </div>
                       <div class="form-group col-md-6">
                         <label for="birthplace">Birthplace</label>
-                        <input type="text" name="birthplace" class="form-control" id="birthplace" placeholder="Birthplace" value="<?= isset($profile['birthplace']) ? $profile['birthplace'] : '' ; ?>">
+                        <input type="text" name="birthplace" class="form-control"style = "border-radius:20px" id="birthplace" placeholder="Birthplace" value="<?= isset($profile['birthplace']) ? $profile['birthplace'] : '' ; ?>">
                         <span class="text-danger">
                               <?= isset($errorFlash) ? display_error($errorFlash, 'birthplace') : '' ?>
                             </span>
@@ -349,7 +349,7 @@
                           <label for="address" class="col-sm-1 col-form-label">Street</label>
                           <div class="col-sm-5">
                             <div>
-                              <input type="text" name="street" class="form-control" id="street" placeholder="Street"
+                              <input type="text" name="street" class="form-control"style = "border-radius:20px" id="street" placeholder="Street"
                                 value="<?= isset($profile['street']) ? $profile['street'] : '' ; ?>">
                             </div>
                             <span class="text-danger">
@@ -361,7 +361,7 @@
                         <div class="form-group row">
                           <label for="contact" class="col-sm-1 col-form-label">Baranggay</label>
                           <div class="col-sm-5">
-                            <input type="text" name="baranggay" class="form-control" id="baranggay"
+                            <input type="text" name="baranggay" class="form-control"style = "border-radius:20px" id="baranggay"
                               placeholder="Baranggay" value="<?= isset($profile['baranggay']) ? $profile['baranggay'] : '' ; ?>">
                             <span class="text-danger">
                               <?= isset($errorFlash) ? display_error($errorFlash, 'baranggay') : '' ?>
@@ -373,7 +373,7 @@
                         <div class="form-group row">
                           <label for="contact" class="col-sm-1 col-form-label">Provincial Address</label>
                           <div class="col-sm-5">
-                            <input type="text" class="form-control" name="prov_add" id="prov_add"
+                            <input type="text" class="form-control"style = "border-radius:20px" name="prov_add" id="prov_add"
                               placeholder="Provincial" value="<?= isset($profile['prov_add']) ? $profile['prov_add'] : '' ; ?>">
                             <span class="text-danger">
                               <?= isset($errorFlash) ? display_error($errorFlash, 'prov_add') : '' ?>
@@ -384,7 +384,7 @@
                         <div class="form-group row">
                           <label for="pcontact" class="col-sm-1 col-form-label">Contact</label>
                           <div class="col-sm-5">
-                            <input type="text" name="contact" class="form-control" id="contact" placeholder="Contact"
+                            <input type="text" name="contact" class="form-control"style = "border-radius:20px" id="contact" placeholder="Contact"
                               value="<?= isset($profile['contact']) ? $profile['contact'] : '' ; ?>">
                             <span class="text-danger">
                               <?= isset($errorFlash) ? display_error($errorFlash, 'contact') : '' ?>
@@ -398,7 +398,7 @@
                       <div class="form-group row">
                         <label for="guardian" class="col-sm-1 col-form-label">Guardian</label>
                         <div class="col-sm-5">
-                          <input type="text" class="form-control" name="guardian_name" id="guardian_name"
+                          <input type="text" class="form-control"style = "border-radius:20px" name="guardian_name" id="guardian_name"
                             placeholder="Guardian Name" value="<?= isset($profile['guardian_name']) ? $profile['guardian_name'] : '' ; ?>">
                           <span class="text-danger">
                             <?= isset($errorFlash) ? display_error($errorFlash, 'guardian_name') : '' ?>
@@ -408,7 +408,7 @@
                       <div class="form-group row">
                         <label for="contact" class="col-sm-1 col-form-label">Contact</label>
                         <div class="col-sm-5">
-                          <input type="text" class="form-control" name="guardian_contact" id="guardian_contact"
+                          <input type="text" class="form-control"style = "border-radius:20px" name="guardian_contact" id="guardian_contact"
                             placeholder="Contact Number" value="<?= isset($profile['guardian_contact']) ? $profile['guardian_contact'] : '' ; ?>">
                           <span class="text-danger">
                             <?= isset($errorFlash) ? display_error($errorFlash, 'guardian_contact') : '' ?>
@@ -418,7 +418,7 @@
                       <div class="form-group row">
                         <label for="contact" class="col-sm-1 col-form-label">Address</label>
                         <div class="col-sm-5">
-                          <input type="text" class="form-control" name="guardian_address" id="guardian_address"
+                          <input type="text" class="form-control"style = "border-radius:20px" name="guardian_address" id="guardian_address"
                             placeholder="Address" value="<?= isset($profile['guardian_address']) ? $profile['guardian_address'] : '' ; ?>">
                           <span class="text-danger">
                             <?= isset($errorFlash) ? display_error($errorFlash, 'guardian_address') : '' ?>
@@ -432,7 +432,7 @@
                       <div class="form-group row">
                         <label for="school" class="col-sm-1 col-form-label">School Name</label>
                         <div class="col-sm-5">
-                          <input type="text" class="form-control" id="school" name="elem_school"
+                          <input type="text" class="form-control"style = "border-radius:20px" id="school" name="elem_school"
                             placeholder="School Name" value="<?= isset($profile['elem_school']) ? $profile['elem_school'] : '' ; ?>">
                           <span class="text-danger">
                             <?= isset($errorFlash) ? display_error($errorFlash, 'elem_school') : '' ?>
@@ -442,7 +442,7 @@
                       <div class="form-group row">
                         <label for="address" class="col-sm-1 col-form-label">Address</label>
                         <div class="col-sm-5">
-                          <input type="text" class="form-control" id="contact" name="elem_address" placeholder="Address"
+                          <input type="text" class="form-control"style = "border-radius:20px" id="contact" name="elem_address" placeholder="Address"
                             value="<?= isset($profile['elem_address']) ? $profile['elem_address'] : '' ; ?>">
                           <span class="text-danger">
                             <?= isset($errorFlash) ? display_error($errorFlash, 'elem_address') : '' ?>
@@ -452,7 +452,7 @@
                       <div class="form-group row">
                         <label for="year" class="col-sm-1 col-form-label">Year Attendee</label>
                         <div class="col-sm-5">
-                          <input type="text" class="form-control" id="address" name="elem_year"
+                          <input type="text" class="form-control"style = "border-radius:20px" id="address" name="elem_year"
                             placeholder="Year attendee" value="<?= isset($profile['elem_year']) ? $profile['elem_year'] : '' ; ?>">
                           <span class="text-danger">
                             <?= isset($errorFlash) ? display_error($errorFlash, 'elem_year') : '' ?>
@@ -463,7 +463,7 @@
                       <div class="form-group row">
                         <label for="school_name" class="col-sm-1 col-form-label">School Name</label>
                         <div class="col-sm-5">
-                          <input type="text" class="form-control" id="school_name" name="high_school"
+                          <input type="text" class="form-control"style = "border-radius:20px" id="school_name" name="high_school"
                             placeholder="School Name" value="<?= isset($profile['high_school']) ? $profile['high_school'] : '' ; ?>">
                           <span class="text-danger">
                             <?= isset($errorFlash) ? display_error($errorFlash, 'high_school') : '' ?>
@@ -473,7 +473,7 @@
                       <div class="form-group row">
                         <label for="address" class="col-sm-1 col-form-label">Address</label>
                         <div class="col-sm-5">
-                          <input type="text" class="form-control" id="address" name="high_address" placeholder="Address"
+                          <input type="text" class="form-control"style = "border-radius:20px" id="address" name="high_address" placeholder="Address"
                             value="<?= isset($profile['high_address']) ? $profile['high_address'] : '' ; ?>">
                           <span class="text-danger">
                             <?= isset($errorFlash) ? display_error($errorFlash, 'high_address') : '' ?>
@@ -483,7 +483,7 @@
                       <div class="form-group row">
                         <label for="year" class="col-sm-1 col-form-label">Year Attendee</label>
                         <div class="col-sm-5">
-                          <input type="text" class="form-control" id="year" name="high_year" placeholder="Year attendee"
+                          <input type="text" class="form-control"style = "border-radius:20px" id="year" name="high_year" placeholder="Year attendee"
                             value="<?= isset($profile['high_year']) ? $profile['high_year'] : '' ; ?>">
                           <span class="text-danger">
                             <?= isset($errorFlash) ? display_error($errorFlash, 'high_year') : '' ?>

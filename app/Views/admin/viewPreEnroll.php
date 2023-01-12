@@ -94,14 +94,15 @@
 
 <br>
   <!-- Main content -->
-  <div class="card">
-    <div class="card-header">
-      <h3 class="card-title" style = "font-family:poppins;">Pre-Enrolled / <span style = "color:maroon;">Pre-Enrolled Form</span></h3>
-    </div>
-    <!-- /.card-header -->
+  <section class="content-header">
 
-    <div class = "container" style = "margin-left:30%">
-    <div class="card-body">
+    <div class="card card-primary card-outline mx-auto" style = "width:98%; border-radius:15px;">
+      <div class="card-header">
+        <h3 class="card-title"style = "font-family:poppins">Pre-Enrolled Table</h3>
+      </div>
+      <!-- /.card-header -->
+      <div class="card-body">
+
       <div class="tab-pane" id="address">
         <form class="form-horizontal" action="#" method="post">
           <p class="a" style="font-size:1.5em; font-family: Poppins;color:maroon;">Pre-Enrollment Info</p>

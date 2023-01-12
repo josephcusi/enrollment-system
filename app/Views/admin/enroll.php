@@ -96,7 +96,7 @@
       <!-- Main content -->
 
       <div class="col-md-12">
-        <div class="card">
+        <div class="card card-primary card-outline mx-auto" style = "width:98%; border-radius:15px;">
           <div class="card-header">
           </div><!-- /.card-header -->
           <div class="card-body">
@@ -120,7 +120,7 @@
                    </div>
               </div>
                   <div class="modal-footer justify-content-between">
-                  <button type="submit" class="btn btn-primary" style = "margin-left:60%">Submit</button>
+                  <button type="submit" class="btn btn-primary" style = "border-color:maroon; border-radius:20px;margin-left:60%">Submit</button>
                  </div>
                 <!-- /.tab-content -->
               </div>

@@ -134,7 +134,7 @@
           <div class="col-md-3">
 
 
-            <div class="card card-primary card-outline">
+            <div class="card card-primary card-outline" style = "border-radius:15px">
               <div class="card-body box-profile">
                 <div class="text-center">
 
@@ -142,9 +142,9 @@
                 <p class="text-muted text-left">Strand</p>
                 <ul class="list-group list-group-unbordered mb-3 nav nav-pills">
                 <?php $strand = session()->getFlashdata('strand');?>
-                <li class="nav-item"><a type="button" class="tablinks nav-link <?php if($strand == 'humss'){echo 'active' ;} ?>" id="defaultOpen" href="<?= base_url('strandSec/'.'humss')?>">HUMSS</a></li>
-                    <li class="nav-item"><a type="button" class="tablinks nav-link <?php if($strand == 'abm'){echo 'active';} ?>" id="defaultOpen "  href="<?= base_url('strandSec/'.'abm')?>">ABM</a></li>
-                    <li class="nav-item"><a type="button" class="tablinks nav-link <?php if($strand == 'stem'){echo 'active';} ?>" id="defaultOpen "  href="<?= base_url('strandSec/'.'stem')?>">STEM</a></li>
+                <li class="nav-item"><a type="button" class="tablinks nav-link <?php if($strand == 'humss'){echo 'active' ;} ?>"style = "border-radius:20px" id="defaultOpen" href="<?= base_url('strandSec/'.'humss')?>">HUMSS</a></li>
+                    <li class="nav-item"><a type="button" class="tablinks nav-link <?php if($strand == 'abm'){echo 'active';} ?>"style = "border-radius:20px" id="defaultOpen "  href="<?= base_url('strandSec/'.'abm')?>">ABM</a></li>
+                    <li class="nav-item"><a type="button" class="tablinks nav-link <?php if($strand == 'stem'){echo 'active';} ?>"style = "border-radius:20px" id="defaultOpen "  href="<?= base_url('strandSec/'.'stem')?>">STEM</a></li>
                   </ul>
                   </ul>
               </div>
@@ -159,7 +159,7 @@
           </div>
           <!-- /.col -->
           <div class="col-md-9">
-            <div class="card card-primary card-outline">
+            <div class="card card-primary card-outline"style = "border-radius:15px">
 
 
               <div class="card-body">
@@ -179,16 +179,16 @@
                   <td><?= $section_value['section']?></td>
                   <td><?=$section_value['year_level']?></td>
                   <td>
-                    <a href="<?=base_url('schedule')?>"><button type="button" class="btn btn-secondary btn-sm">schedule</button>
-                    <a href="<?=site_url('edit/'.$section_value['id'])?>"><button type="button" class="btn btn-secondary btn-sm">update</button>
-                    <a href="<?= site_url('delete/'.$section_value['id']) ?>"><button type="button" class="btn btn-primary btn-sm">delete</button>
+                    <a href="<?=base_url('schedule')?>"><button type="button" class="btn btn-secondary btn-sm" style = "border-radius:15px">schedule</button>
+                    <a href="<?=site_url('edit/'.$section_value['id'])?>"><button type="button" class="btn btn-secondary btn-sm"style = "border-radius:15px">update</button>
+                    <a href="<?= site_url('delete/'.$section_value['id']) ?>"><button type="button" class="btn btn-primary btn-sm"style = "border-radius:15px">delete</button>
                   </td>
                   </tr>
                   </tbody>
                   <?php endforeach;?>
               </table>
-              <div class = "card">
-                <a button type="button"  class="btn btn-default" style = "float:right; font-family:poppins; margin-bottom:; background-color:maroon; color: white;" data-toggle="modal" data-target="#new-section">New Section</button></a>
+              <div class = "card" style = "border-radius:15px;">
+                <a button type="button"  class="btn btn-default" style = "border-radius:15px;float:right; font-family:poppins; margin-bottom:; background-color:maroon; color: white;" data-toggle="modal" data-target="#new-section">New Section</button></a>
               </div>
 
 

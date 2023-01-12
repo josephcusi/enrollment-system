@@ -96,10 +96,10 @@
       <!-- Main content -->
 
           <div class="card-body">
-            <div class="card card-primary card-outline mx-auto" style = "width:95%">
+            <div class="card card-primary card-outline mx-auto" style = "width:100%; border-radius:15px">
               <div class="card-header">
                 <h3 class="card-title"style = "font-family:poppins">Registration Table</h3>
-                <a href="<?=base_url('retrieve_yearUser')?>"><button type="button" class="btn btn-secondary btn-sm" style = "float:right; font-family:poppins; margin-bottom:1%; background-color:maroon; color: white;">New Registration</button></a>
+                <a href="<?=base_url('retrieve_yearUser')?>"><button type="button" class="btn btn-secondary btn-sm" style = "border-color:maroon;border-radius:15px;float:right; font-family:poppins; margin-bottom:1%; background-color:maroon; color: white;">New Registration</button></a>
 
               </div>
               <!-- /.card-header -->
@@ -125,7 +125,7 @@
                 <td><?=isset($reg['strand']) ? $reg['strand'] : 'N/A'; ?></td>
                 <td><?=isset($reg['status']) ? $reg['status'] : 'N/A'; ?></td>
                 <td>
-                <a href="<?=site_url('edit_reg/'.$reg['id'])?>"><button type="button" class="btn btn-secondary btn-sm">update</button></a>
+                <a href="<?=site_url('edit_reg/'.$reg['id'])?>"><button type="button" class="btn btn-secondary btn-sm" style = "border-radius:15px">update</button></a>
                 </td>
               </tr>
               <?php endforeach; ?>

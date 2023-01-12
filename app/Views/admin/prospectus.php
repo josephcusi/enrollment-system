@@ -134,7 +134,7 @@
           <div class="col-md-3">
 
 
-            <div class="card card-primary card-outline">
+            <div class="card card-primary card-outline" style = "border-radius:15px">
               <div class="card-body box-profile">
                 <div class="text-center">
 
@@ -142,9 +142,9 @@
                 <p class="text-muted text-left">Strand</p>
                 <ul class="list-group list-group-unbordered mb-3 nav nav-pills">
                   <?php $strand = session()->getFlashdata('strand');?>
-                <li class="nav-item"><a type="button" class="tablinks nav-link <?php if($strand == 'humss'){echo 'active' ;} ?>" id="defaultOpen" href="<?= base_url('strandProspectus/'.'humss')?>">HUMSS</a></li>
-                    <li class="nav-item"><a type="button" class="tablinks nav-link <?php if($strand == 'abm'){echo 'active';} ?>" id="defaultOpen "  href="<?= base_url('strandProspectus/'.'abm')?>">ABM</a></li>
-                    <li class="nav-item"><a type="button" class="tablinks nav-link <?php if($strand == 'stem'){echo 'active';} ?>" id="defaultOpen "  href="<?= base_url('strandProspectus/'.'stem')?>">STEM</a></li>
+                <li class="nav-item"><a type="button" class="tablinks nav-link <?php if($strand == 'humss'){echo 'active' ;} ?>"style = "border-radius:20px" id="defaultOpen" href="<?= base_url('strandProspectus/'.'humss')?>">HUMSS</a></li>
+                    <li class="nav-item"><a type="button" class="tablinks nav-link <?php if($strand == 'abm'){echo 'active';} ?>"style = "border-radius:20px" id="defaultOpen "  href="<?= base_url('strandProspectus/'.'abm')?>">ABM</a></li>
+                    <li class="nav-item"><a type="button" class="tablinks nav-link <?php if($strand == 'stem'){echo 'active';} ?>"style = "border-radius:20px" id="defaultOpen "  href="<?= base_url('strandProspectus/'.'stem')?>">STEM</a></li>
                   </ul>
               </div>
               <!-- /.card-body -->
@@ -158,11 +158,7 @@
           </div>
           <!-- /.col -->
           <div class="col-md-9">
-            <div class="card card-primary card-outline">
-
-
-
-
+            <div class="card card-primary card-outline"style = "border-radius:15px">
               <div class="card-body">
 
 
@@ -186,8 +182,8 @@
                     <td><?= $prospect['unit']?></td>
                     <td><?= $prospect['pre_requisit']?></td>
                     <td>
-                      <a href="<?=base_url('edit_prospectus/'.$prospect['id'])?>"><button type="button" class="btn btn-secondary btn-sm">update</button>
-                      <a href="#"><button type="button" class="btn btn-primary btn-sm">delete</button>
+                      <a href="<?=base_url('edit_prospectus/'.$prospect['id'])?>"><button type="button" class="btn btn-secondary btn-sm"style = "border-radius:15px">update</button>
+                      <a href="#"><button type="button" class="btn btn-secondary btn-sm"style = "border-color:maroon;background-color:maroon;border-radius:15px">delete</button>
                     </td>
                   </tr>
                   <?php endforeach;?>
@@ -195,8 +191,8 @@
 
               </table>
               </div>
-              <div class = "card">
-  <a  class="btn btn-default btn-edit" style = "float:right; font-family:poppins; background-color:maroon; color: white;" data-toggle="modal" data-target="#newSubject">New Subject</a>
+              <div class = "card"style = "border-radius:15px">
+  <a  class="btn btn-default btn-edit" style = "border-radius:15px;float:right; font-family:poppins; background-color:maroon; color: white;" data-toggle="modal" data-target="#newSubject">New Subject</a>
 </div>
               <div>
                 <div>

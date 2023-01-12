@@ -96,7 +96,7 @@
     <!-- Main content -->
     <section class="content-header">
 
-      <div class="card card-primary card-outline mx-auto" style = "width:95%">
+      <div class="card card-primary card-outline mx-auto" style = "width:98%; border-radius:15px;">
         <div class="card-header">
           <h3 class="card-title"style = "font-family:poppins">Pre-Enrolled Table</h3>
         </div>
@@ -124,8 +124,8 @@
               <td><?//= $pre_enrolled_value['section'];?></td>
               <td><?= $pre_enrolled_value['status'];?></td>
               <td>
-                <a href="<?=base_url('viewPreEnroll')?>"><button type="button" class="btn btn-secondary btn-sm">view</button>
-                <a href="#"><button type="button" class="btn btn-primary btn-sm">delete</button>
+                <a href="<?=base_url('viewPreEnroll')?>"><button type="button" class="btn btn-secondary btn-sm" style = "border-radius:15px">view</button>
+                <a href="#"><button type="button" class="btn btn-primary btn-sm"style = "border-radius:15px">delete</button>
               </td>
             </tr>
             <?php endforeach;?>
