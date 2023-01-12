@@ -237,17 +237,68 @@
                       <div class="form-group row">
                         <label for="inputEmail" class="col-sm-1 col-form-label">Email</label>
                         <div class="col-sm-5">
-                          <input type="email" name="email" class="form-control" id="email" placeholder="Email" value="<?= isset($profile['email']) ? $profile['email'] : $userInfo['email'] ; ?>">
+                          <input type="email" name="email" class="form-control" id="email" placeholder="Email" value="<?= isset($profile['email']) ? $profile['email'] : $userInfo['email'] ; ?>" disabled>
                         </div>
                       </div>
                       <div class="form-group row">
                         <label for="inputName2" class="col-sm-1 col-form-label">Password</label>
                         <div class="col-sm-5">
                           <input type="password" name="password" class="form-control" id="password"
-                            placeholder="Password" value="<?= isset($profile['password']) ? $profile['password'] : $userInfo['password']; ?>">
+                            placeholder="Password" value="<?= isset($profile['password']) ? $profile['password'] : $userInfo['password']; ?>" disabled>
                         </div>
                       </div>
-
+                      <?php foreach($userName as $password):?>
+                      <button type="submit" class="btn btn-danger btn-editName" data-id="<?=$password['id'];?>" data-password="<?=$password['password'];?>">Save</button>
+                                <div class="modal fade" id="changePassword">
+                                    <div class="modal-dialog" style="font-family:poppins">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title">Profile</h4>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <?php if(session()->has('validation')){
+                                            $errorFlash = session()->getFlashdata('validation');} ?>
+                                            <div class="modal-body">
+                                                <form action="<?= base_url('updatePassword/'.$password['id']); ?>" method="post"
+                                                    enctype="multipart/form-data">
+                                                    <input type="hidden" name="_method" value="PUT" />
+                                                    <div class="form-row"
+                                                        style="text-align:center; justify-content:center;">
+                                                        <div class="form-group col-md-10 password">
+                                                            <label for="password">New Password</label>
+                                                            <input type="password" name="password"
+                                                                class="form-control password" placeholder="New Password" required>
+                                                            <span class="text-danger">
+                                                                <?= isset($errorFlash) ? display_error($errorFlash, 'password') : '' ?>
+                                                            </span>
+                                                        </div>
+                                                        <div class="form-group col-md-10 password">
+                                                            <label for="confPassword">Confirm Password</label>
+                                                            <input type="password" name="confPassword"
+                                                                class="form-control confPassword" placeholder="Confirm Password" required>
+                                                            <span class="text-danger">
+                                                                <?= isset($errorFlash) ? display_error($errorFlash, 'confPassword') : '' ?>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <!-- Submit button -->
+                                            <div class="modal-footer justify-content-between">
+                                                <button type="button" class="btn btn-default"
+                                                    data-dismiss="modal">Close</button>
+                                                <button type="submit" class="btn btn-primary">Save changes</button>
+                                            </div>
+                                            </form>
+                                        </div>
+                                        <!-- /.modal-content -->
+                                    </div>
+                                    <!-- /.modal-dialog -->
+                                </div>
+                                <!-- /.modal -->
+                                <?php endforeach;?>
                     </div>
                     <div class="active tab-pane" id="basic_info">
                       <p style="font-size:1.5em; font-family: Poppins;color:maroon;">Basic Information</p>
@@ -538,6 +589,15 @@
             // $('.profile_pics').val(profile_picture).trigger('change');
             // Call Modal
             $('#profilepicture').modal('show');
+        });
+        $('.btn-editName').on('click',function(){
+            // data galing buton
+            // const id = $(this).data('id');
+            // const profile_picture = $(this).data('profile');
+            // // sa modal
+            // $('.profile_pics').val(profile_picture).trigger('change');
+            // Call Modal
+            $('#changePassword').modal('show');
         });
     });
 </script>

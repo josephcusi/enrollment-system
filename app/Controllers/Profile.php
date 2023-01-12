@@ -9,6 +9,8 @@ use App\Models\YearModel;
 use App\Models\RegistrationModel;
 use App\Models\ProspectusModel;
 use App\Models\StrandModel;
+use App\Libraries\Hash;
+
 
 class Profile extends BaseController
 {
@@ -510,4 +512,42 @@ class Profile extends BaseController
             }
         }
     }
+    public function updatePassword($id)
+    {
+        $validated = $this->validate([
+            'password' => [
+                'rules' => 'required|min_length[6]|max_length[15]',
+                'errors' => [
+                    'required' => 'Password is required!',
+                    'min_length' => 'Password must have morethan 6 characters in length.',
+                    'max_length' => 'Passwords must not have characters more than 15 in length.'
+                ]
+            ],
+            'confPassword' => [
+                'rules' => 'required|min_length[6]|max_length[15]|matches[password]',
+                'errors' => [
+                    'required' => 'Confirm password is required!',
+                    'min_length' => 'Confirm Password must have atleast 6 characters in length.',
+                    'max_length' => 'Confirm Password must not have characters more than 15 in length.',
+                    'matches' => 'Password do not match.'
+                ]
+            ]
+        ]);
+    $email = session()->get('loggedInUser');
+    if (!$validated)
+    {
+        session()->setFlashdata('validation', $this->validator);
+        return redirect('retrieve_profile',$email);
+    }
+    else{
+        $user_model = new UserModel();
+        $password = $this->request->getPost('password');
+
+        $data = [
+            'password' => Hash::make($password)
+        ];
+        $user_model->update($id, $data);
+        return redirect('retrieve_profile');
+    }
+}
 }
