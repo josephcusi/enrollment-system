@@ -23,12 +23,18 @@ class Profile extends BaseController
     }
     public function userSchedule()
     {
+        $profile_model = new ProfileModel();
+        $user['profile_picture'] = $profile_model->where('email', $email = session()->get('loggedInUser'))->findAll();
+
       $user_model = new UserModel();
       $user['userName'] = $user_model->where('email', $email = session()->get('loggedInUser'))->find();
         return view('user/userSchedule', $user);
     }
     public function userProspectus()
     {
+        $profile_model = new ProfileModel();
+        $user['profile_picture'] = $profile_model->where('email', $email = session()->get('loggedInUser'))->findAll();
+
       $user_model = new UserModel();
       $user['userName'] = $user_model->where('email', $email = session()->get('loggedInUser'))->find();
         return view('user/userProspectus', $user);
@@ -285,6 +291,7 @@ class Profile extends BaseController
         $strand_model = new StrandModel();
         $profile_model = new ProfileModel();
         $email = session()->get('loggedInUser');
+     
         $count = count($profile_model->where('email', $email)->findAll());
 
         if($count < 1) {
@@ -292,10 +299,12 @@ class Profile extends BaseController
             return redirect()->route('registration');
         }
         else{
+            
             $data['year'] =  $year_model->where('status', 'active')->first();
             $data['user'] = $user_model->where('email', session()->get('loggedInUser'))->first();
             $data['strands'] = $strand_model->findAll();
             $data['userName'] = $user_model->where('email', $email = session()->get('loggedInUser'))->find();
+            $data['profile_picture'] = $profile_model->where('email', $email = session()->get('loggedInUser'))->findAll();
             session()->setFlashdata('enroll', 'Please fill out your profile first');
             return view('user/newregistration', $data);
         }
@@ -332,6 +341,8 @@ class Profile extends BaseController
         }
         $registration = new RegistrationModel();
 
+        $profile_model = new ProfileModel();
+        $user['profile_picture'] = $profile_model->where('email', $email = session()->get('loggedInUser'))->findAll();
         $user['user'] = $user_model->where('email', session()->get('loggedInUser'))->first();
         $user['registration'] = $registration->where('lrn', $lrn)->findAll();
 
@@ -415,11 +426,14 @@ class Profile extends BaseController
             $prospectus_model = new ProspectusModel();
             $user_model = new UserModel();
             $strand_model = new StrandModel();
+            $profile_model = new ProfileModel();
             $strand_id = $strand_model->where('strand', $strand)->find();
 
             $values = [
                 'prospectus'=> $prospectus_model->where('strand_id', $strand_id[0]['id'])->where('year_level', $yearlevel)->where('semester', $semester)->findAll(),
-                'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find()
+                'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
+                'profile_picture' => $profile_model->where('email', $email = session()->get('loggedInUser'))->findAll()
+                
             ];
             //var_dump($values['prospectus']);
             return view('user/regSubject', $values);
@@ -434,8 +448,10 @@ class Profile extends BaseController
     {
         $registration_model = new RegistrationModel();
         $user_model = new UserModel();
+        $profile_model = new ProfileModel();
         $data['userName'] = $user_model->where('email', $email = session()->get('loggedInUser'))->find();
         $data['user'] = $registration_model->find($id);
+        $data['profile_picture'] = $profile_model->where('email', $email = session()->get('loggedInUser'))->findAll();
         return view('user/updateReg', $data);
     }
     public function update($id)
@@ -476,7 +492,7 @@ class Profile extends BaseController
         if (!$validated)
         {
             session()->setFlashdata('validation', $this->validator);
-            return rider->retrieve_profile($email);
+            return redirect('retrieve_profile',$email);
         }
          else
         {

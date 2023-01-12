@@ -16,12 +16,16 @@
   <ul class="navbar-nav ml-auto">
     <!-- Navbar Search -->
 
-    <?php foreach($userName as $name):?>
+    <?php $i = 0; foreach($userName as $name):?>
+      <?php  $i++; if ($i == 1):?>
     <!-- Sidebar user panel (optional) -->
     <div class="user-panel mt-1 pb-1 mb-1 d-flex" >
+    <?php  foreach($profile_picture as $prof):?>
+      
       <div class="image" style = "margin-left:-15%">
-        <img src="<?=base_url()?>/dist/img/user8-128x128.jpg" class="img-circle elevation-2" alt="User Image">
+        <img style="background-image:url(../../dist/img/profile.jfif); border-color:maroon; background-size:cover; width:40px; height:40px;" src="<?= base_url().'/'.'profile/'.$prof['profile_picture'] ?>" class="img-circle elevation-2" alt="User Image">
       </div>
+      <?php endforeach;?>
 </div>
   <div class="dropdown">
       <div class="info">
@@ -38,6 +42,7 @@
     </div>
       </div>
       </div>
+      <?php endif;?>
     <?php endforeach;?>
 
     <!-- Messages Dropdown Menu -->
