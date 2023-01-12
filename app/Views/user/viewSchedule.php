@@ -24,28 +24,28 @@
         <!-- Add icons to the links using the .nav-icon class
              with font-awesome or any other icon font library -->
 
-        <li class="nav-header">Student</li>
+        <li class="nav-header"style = "font-family:poppins;">Student</li>
         <li class="nav-item">
           <a href="<?=base_url()?>/myprofile" class="nav-link    ">
             <i class="nav-icon fas fa-user"></i>
-            <p>
+            <p style = "font-family:poppins;">
               <strong>My Profile<strong>
               <span class="badge badge-info right"></span>
             </p>
           </a>
         </li>
 
-        <li class="nav-header">Maintenance</li>
+        <li class="nav-header"style = "font-family:poppins;">Maintenance</li>
         <li class="nav-item">
           <a href="<?=base_url()?>/registration" class="nav-link">
             <i class="fa-sharp fa-solid fa-id-card"></i>
-            <p>
+            <p style = "font-family:poppins;">
               Registration
 
             </p>
           </a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item"style = "font-family:poppins;">
           <a href="<?=base_url()?>/userSchedule" class="nav-link active">
             <i class="fa-sharp fa-solid fa-calendar"></i>
             <p>
@@ -53,7 +53,7 @@
             </p>
           </a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item"style = "font-family:poppins;">
           <a href="<?=base_url()?>/userProspectus" class="nav-link">
             <i class="fa-sharp fa-solid fa-book"></i>
             <p>

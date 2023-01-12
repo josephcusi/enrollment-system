@@ -35,40 +35,40 @@
         </li>
         <br>
         <br>
-        <li class="nav-item">
-            <li class="nav-item">
+        <li class="nav-item"style = "font-family:poppins;">
+            <li class="nav-item"style = "font-family:poppins;">
               <a href="<?=base_url('/pre_enrolled_reg')?>" class="nav-link">
                 <i class="far fa-thin fa-newspaper"></i>
                 <p>Pre-Enrolled</p>
               </a>
             </li>
         </li>
-        <li class="nav-item">
-            <li class="nav-item">
+        <li class="nav-item"style = "font-family:poppins;">
+            <li class="nav-item"style = "font-family:poppins;">
               <a href="<?=base_url('/section')?>" class="nav-link active">
                 <i class="fa-sharp fa-solid fa-section"></i>
                 <p>Section</p>
               </a>
             </li>
         </li>
-        <li class="nav-item">
-            <li class="nav-item">
+        <li class="nav-item"style = "font-family:poppins;">
+            <li class="nav-item"style = "font-family:poppins;">
               <a href="<?=base_url('/r_prospectus')?>" class="nav-link">
                 <i class="fa-sharp fa-solid fa-atom"></i>
                 <p>Prospectus</p>
               </a>
             </li>
         </li>
-        <li class="nav-item">
-            <li class="nav-item">
+        <li class="nav-item"style = "font-family:poppins;">
+            <li class="nav-item"style = "font-family:poppins;">
               <a href="<?=base_url('/grading')?>" class="nav-link">
                 <i class="fa-sharp fa-solid fa-barcode"></i>
                 <p>Grading</p>
               </a>
             </li>
         </li>
-        <li class="nav-item">
-            <li class="nav-item">
+        <li class="nav-item"style = "font-family:poppins;">
+            <li class="nav-item"style = "font-family:poppins;">
               <a href="<?=base_url('/retrieve_strand')?>" class="nav-link">
                 <i class="fa-sharp fa-solid fa-envelopes-bulk"></i>
                 <p>Strand</p>

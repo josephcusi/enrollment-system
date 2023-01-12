@@ -1,3 +1,4 @@
+
 <nav class="main-header navbar navbar-expand navbar-white navbar-light" style = "background-color:maroon">
   <!-- Left navbar links -->
   <ul class="navbar-nav" >
@@ -6,7 +7,7 @@
 
     </li>
     <li class="nav-item d-none d-sm-inline-block">
-      <a href="<?=base_url()?>/admin" class="nav-link" style = "color:white"><strong>Home</strong></a>
+      <a href="<?=base_url()?>/admin" class="nav-link" style = "color:white;font-family:poppins;"><strong>Home</strong></a>
 
     </li>
 
