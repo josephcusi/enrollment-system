@@ -23,6 +23,18 @@ class Admin extends BaseController
     {
         return view('admin/pre_enrolled');
     }
+    public function newadmin()
+    {
+      $user_model = new UserModel();
+      $data['userName'] = $user_model->where('email', $email = session()->get('loggedInUser'))->find();
+        return view('admin/newadmin', $data);
+    }
+    public function addadmin()
+    {
+      $user_model = new UserModel();
+      $data['userName'] = $user_model->where('email', $email = session()->get('loggedInUser'))->find();
+        return view('admin/addadmin', $data);
+    }
     public function section()
     {
         return view('admin/section');

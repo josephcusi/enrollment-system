@@ -69,7 +69,7 @@
         </li>
         <li class="nav-item"style = "font-family:poppins;">
             <li class="nav-item"style = "font-family:poppins;">
-              <a href="<?=base_url('/retrieve_strand')?>" class="nav-link active">
+              <a href="<?=base_url('/retrieve_strand')?>" class="nav-link">
                 <i class="fa-sharp fa-solid fa-envelopes-bulk"></i>
                 <p>Strand</p>
               </a>
@@ -77,7 +77,7 @@
         </li>
         <li class="nav-item"style = "font-family:poppins;">
             <li class="nav-item"style = "font-family:poppins;">
-              <a href="<?=base_url('/newadmin')?>" class="nav-link">
+              <a href="<?=base_url('/newadmin')?>" class="nav-link active">
                 <i class="fa-sharp fa-solid fa-envelopes-bulk"></i>
                 <p>Admin</p>
               </a>
@@ -98,45 +98,58 @@
 
 </div>
 <div class="content-wrapper">
+
   <!-- Content Header (Page header) -->
 
-
-  <!-- Main content -->
-  <section class="content-header">
 <br>
+  <!-- Main content -->
 
-  <div class = "container-fluid">
-  <div class="card card-primary card-outline mx-auto" style = "width:98%; border-radius:15px">
-    <div class = "card-body">
-    <div class="card-header">
-    <h3 class="card-title"style = "font-family:poppins">Update Table - <span style = "color:maroon">Update Strand Table</span></h3>
+      <div class="card-body">
+        <div class="card card-primary card-outline mx-auto" style = "width:100%; border-radius:15px">
+          <div class="card-header">
+            <h3 class="card-title"style = "font-family:poppins">Admin Table</h3>
+            <a href="<?=base_url('addadmin')?>"><button type="button" class="btn btn-secondary btn-sm" style = "border-color:maroon;border-radius:15px;float:right; font-family:poppins; margin-bottom:1%; background-color:maroon; color: white;">New Admin</button></a>
+
+          </div>
+          <!-- /.card-header -->
+          <div class="card-body">
+    <!-- /.card-header -->
+
+      <table id="example1" class="table table-bordered table-striped" style = "font-family:poppins">
+
+        <thead>
+          <tr>
+            <th>Admin ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td>ADMIN0001</td>
+            <td>Randell Reyonda</td>
+            <td>reyondarandell842@gmail.com</td>
+            <td>
+            <a href="#"><button type="button" class="btn btn-secondary btn-sm" style = "border-radius:15px">update</button></a>
+            </td>
+          </tr>
+
+        </tbody>
+        <tfoot>
+        </tfoot>
+      </table>
     </div>
-        <form action="<?= site_url('update_strand/'.$strand['id']) ?>" method="post">
-                    <input type="hidden" name="_method" value="PUT" />
-                  <?= csrf_field(); ?>
-                    <div class="form-row">
-                    <div class="form-group col-md-6">
-                      <label for="inputStrand">Strand</label>
-                      <input type="text" name="strand" class="form-control" id="inputStrand" placeholder="Abbreviation" value="<?= $strand['strand']?>">
-                    </div>
-                    <div class="form-group col-md-6">
-                      <label for="inputType">Type</label>
-                      <input type="text" name="type" class="form-control" id="inputType" placeholder="Type" value="<?= $strand['type']?>" id="inputType">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="inputTitle">Title</label>
-                    <input type="text" name="title" class="form-control" id="inputTitle" placeholder="Title" value="<?= $strand['title']?>">
-                  </div>
-                  </div>
-                  <!-- Submit button -->
-                  <div class="modal-footer justify-content-between">
-                  <button type="submit" class="btn btn-primary"style = "border-radius:20px">Save changes</button>
-          </div>
-              </form>
-             </div>
-          </div>
-        </div>
+    <!-- /.card-body -->
+  </div>
+</div>
+<!-- /.card-body -->
+</div>
+</div>
+</div>
+  <!-- /.content -->
+</section>
 </body>
 <?= $this->include('admin/include/end')?>
 <?= $this->include('admin/include/footer')?>

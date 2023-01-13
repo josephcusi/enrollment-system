@@ -99,6 +99,8 @@ $routes->get('/pre_enrolled', 'Admin::pre_enrolled');
 $routes->get('/prospectus', 'Admin::prospectus');
 $routes->get('/grading', 'Admin::grading');
 $routes->get('/strand', 'Admin::strand');
+$routes->get('/newadmin', 'Admin::newadmin');
+$routes->get('/addadmin', 'Admin::addadmin');
 $routes->get('/adminlogout', 'Admin::adminlogout');
 
 //------------ADMIN STRAND------------
