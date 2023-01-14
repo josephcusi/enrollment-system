@@ -1,4 +1,4 @@
-<div class="modal fade" id="changePassword">
+<div class="modal fade" id="profilepicture">
                                     <div class="modal-dialog" style="font-family:poppins">
                                         <div class="modal-content">
                                             <div class="modal-header">
@@ -11,25 +11,17 @@
                                             <?php if(session()->has('validation')){
                                             $errorFlash = session()->getFlashdata('validation');} ?>
                                             <div class="modal-body">
-                                                <form action="<?= base_url('updatePassword/'.$password['id']); ?>" method="post"
+                                                <form action="<?= base_url('updateProfile/'.$prof['id']); ?>" method="post"
                                                     enctype="multipart/form-data">
                                                     <input type="hidden" name="_method" value="PUT" />
                                                     <div class="form-row"
                                                         style="text-align:center; justify-content:center;">
-                                                        <div class="form-group col-md-10 password">
-                                                            <label for="password">New Password</label>
-                                                            <input type="password" name="password"
-                                                                class="form-control password" placeholder="New Password" required>
+                                                        <div class="form-group col-md-10 prof_pict">
+                                                            <label for="profile_picture">Profile Picture</label>
+                                                            <input type="file" name="profile_picture"
+                                                                class="form-control profile_pics" size="30" accept="image/*" required>
                                                             <span class="text-danger">
-                                                                <?= isset($errorFlash) ? display_error($errorFlash, 'password') : '' ?>
-                                                            </span>
-                                                        </div>
-                                                        <div class="form-group col-md-10 password">
-                                                            <label for="confPassword">Confirm Password</label>
-                                                            <input type="password" name="confPassword"
-                                                                class="form-control confPassword" placeholder="Confirm Password" required>
-                                                            <span class="text-danger">
-                                                                <?= isset($errorFlash) ? display_error($errorFlash, 'confPassword') : '' ?>
+                                                                <?= isset($errorFlash) ? display_error($errorFlash, 'profile_picture') : '' ?>
                                                             </span>
                                                         </div>
                                                     </div>
@@ -38,7 +30,7 @@
                                             <div class="modal-footer justify-content-between">
                                                 <button type="button" class="btn btn-default"
                                                     data-dismiss="modal">Close</button>
-                                                <button type="submit" class="btn btn-default" style = "border-radius:20px;background-color:maroon; font-color:white;">Save changes</button>
+                                                <button type="submit" class="btn btn-primary"style = "border-radius:20px; background-color:maroon; border-color:maroon">Save changes</button>
                                             </div>
                                             </form>
                                         </div>

@@ -356,29 +356,29 @@ class Profile extends BaseController
     {
         $validated = $this->validate([
             'lrn' => [
-                'rules' => 'required',
+                'rules' => 'required|is_unique[user_tbl.lrn]',
                 'errors' => [
-                    'required' => 'Subject is required.'
-
+                    'required' => 'Your Last name is required.',
+                    'is_unique' => 'Your LRN is already Exist'
                 ]
             ],
             'strand' => [
                 'rules' => 'required',
                 'errors' => [
-                    'required' => 'Title is required.'
+                    'required' => 'Strand is required.'
                 ]
             ],
             'year_level' => [
                 'rules' => 'required',
                 'errors' => [
-                    'required' => 'Unit is required.'
+                    'required' => 'Year Level is required.'
 
                 ]
             ],
             'semester' => [
                 'rules' => 'required',
                 'errors' => [
-                    'required' => 'Pre-Requisit is required.'
+                    'required' => 'Semester is required.'
 
                 ]
             ]
@@ -395,7 +395,7 @@ class Profile extends BaseController
 
             $data['validation'] = $this->validator;
             //session()->setFlashdata('sendapplication', 'Duplicate input');
-            return view('user/registration', $data);
+            return redirect()->route('registration', $data);
         }
         else
         {
@@ -418,7 +418,7 @@ class Profile extends BaseController
                 'semester' => $semester
             ];
             $count = count($registration_model->where($yearSem)->findAll());
-            if($count < 1){
+            if($count <= 1){
                 $registration_model->insert($data);
             }
             else{

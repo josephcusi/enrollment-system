@@ -134,47 +134,7 @@
 
                                 </div>
                                 <?php foreach($profile_picture as $prof):?>
-                                <div class="modal fade" id="profilepicture">
-                                    <div class="modal-dialog" style="font-family:poppins">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h4 class="modal-title">Profile</h4>
-                                                <button type="button" class="close" data-dismiss="modal"
-                                                    aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <?php if(session()->has('validation')){
-                                            $errorFlash = session()->getFlashdata('validation');} ?>
-                                            <div class="modal-body">
-                                                <form action="<?= base_url('updateProfile/'.$prof['id']); ?>" method="post"
-                                                    enctype="multipart/form-data">
-                                                    <input type="hidden" name="_method" value="PUT" />
-                                                    <div class="form-row"
-                                                        style="text-align:center; justify-content:center;">
-                                                        <div class="form-group col-md-10 prof_pict">
-                                                            <label for="profile_picture">Profile Picture</label>
-                                                            <input type="file" name="profile_picture"
-                                                                class="form-control profile_pics" size="30" accept="image/*" required>
-                                                            <span class="text-danger">
-                                                                <?= isset($errorFlash) ? display_error($errorFlash, 'profile_picture') : '' ?>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                            </div>
-                                            <!-- Submit button -->
-                                            <div class="modal-footer justify-content-between">
-                                                <button type="button" class="btn btn-default"
-                                                    data-dismiss="modal">Close</button>
-                                                <button type="submit" class="btn btn-primary"style = "border-radius:20px; background-color:maroon; border-color:maroon">Save changes</button>
-                                            </div>
-                                            </form>
-                                        </div>
-                                        <!-- /.modal-content -->
-                                    </div>
-                                    <!-- /.modal-dialog -->
-                                </div>
-                                <!-- /.modal -->
+                                  <?php include 'modal/updateProfilePic.php'?>
                                 <?php endforeach;?>
                   <?php if(session()->has('validation')){
                     $errorFlash = session()->getFlashdata('validation');
@@ -249,55 +209,7 @@
                       </div>
                       <?php foreach($userName as $password):?>
                       <button type="submit" class="btn btn-danger btn-editName"style = "border-radius:20px; background-color:maroon; border-color:maroon" data-id="<?=$password['id'];?>" data-password="<?=$password['password'];?>">Update</button>
-                                <div class="modal fade" id="changePassword">
-                                    <div class="modal-dialog" style="font-family:poppins">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h4 class="modal-title">Profile</h4>
-                                                <button type="button" class="close" data-dismiss="modal"
-                                                    aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <?php if(session()->has('validation')){
-                                            $errorFlash = session()->getFlashdata('validation');} ?>
-                                            <div class="modal-body">
-                                                <form action="<?= base_url('updatePassword/'.$password['id']); ?>" method="post"
-                                                    enctype="multipart/form-data">
-                                                    <input type="hidden" name="_method" value="PUT" />
-                                                    <div class="form-row"
-                                                        style="text-align:center; justify-content:center;">
-                                                        <div class="form-group col-md-10 password">
-                                                            <label for="password">New Password</label>
-                                                            <input type="password" name="password"
-                                                                class="form-control password" placeholder="New Password" required>
-                                                            <span class="text-danger">
-                                                                <?= isset($errorFlash) ? display_error($errorFlash, 'password') : '' ?>
-                                                            </span>
-                                                        </div>
-                                                        <div class="form-group col-md-10 password">
-                                                            <label for="confPassword">Confirm Password</label>
-                                                            <input type="password" name="confPassword"
-                                                                class="form-control confPassword" placeholder="Confirm Password" required>
-                                                            <span class="text-danger">
-                                                                <?= isset($errorFlash) ? display_error($errorFlash, 'confPassword') : '' ?>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                            </div>
-                                            <!-- Submit button -->
-                                            <div class="modal-footer justify-content-between">
-                                                <button type="button" class="btn btn-default"
-                                                    data-dismiss="modal">Close</button>
-                                                <button type="submit" class="btn btn-default" style = "border-radius:20px;background-color:maroon; font-color:white;">Save changes</button>
-                                            </div>
-                                            </form>
-                                        </div>
-                                        <!-- /.modal-content -->
-                                    </div>
-                                    <!-- /.modal-dialog -->
-                                </div>
-                                <!-- /.modal -->
+                      <?php include 'modal/passwordModal.php'?>
                                 <?php endforeach;?>
                     </div>
                     <div class="active tab-pane" id="basic_info">
@@ -541,20 +453,26 @@
                           </span>
                         </div>
                       </div>
-                      <?php endif; ?>
-                      <?php endforeach; ?>
                       <div class="form-group row">
                         <div class="offset-sm-1 col-sm-5">
-                          <button type="submit" class="btn btn-danger"style = "border-radius:20px; background-color:maroon; border-color:maroon" data-id="<?=$password['id'];?>" data-password="<?=$password['password'];?>">Save</button>
-
-                          </button>
-
+                        <button type="submit" class="btn btn-danger"style = "border-radius:20px; background-color:maroon; border-color:maroon">Save</button>
+                          <?php foreach($profile_picture as $myProfile):?>
+                          <button type="button" class="btn btn-danger btn-updateprofile"style = "border-radius:20px; background-color:maroon; border-color:maroon"
+                          data-id="<?=$myProfile['id'];?>" data-gender="<?=$myProfile['gender'];?>" data-civil_status="<?=$myProfile['civil_status'];?>" data-religion="<?=$myProfile['religion'];?>"
+                          data-nationality="<?=$myProfile['nationality'];?>" data-birthday="<?=$myProfile['birthday'];?>" data-birthplace="<?=$myProfile['birthplace'];?>" data-street="<?=$myProfile['street'];?>"
+                          data-baranggay="<?=$myProfile['baranggay'];?>" data-prov_add="<?=$myProfile['prov_add'];?>" data-contact="<?=$myProfile['contact'];?>" data-guardian_name="<?=$myProfile['guardian_name'];?>"
+                          data-guardian_contact="<?=$myProfile['guardian_contact'];?>" data-guardian_address="<?=$myProfile['guardian_address'];?>" data-elem_school="<?=$myProfile['elem_school'];?>" data-elem_address="<?=$myProfile['elem_address'];?>"
+                          data-elem_year="<?=$myProfile['elem_year'];?>" data-high_school="<?=$myProfile['high_school'];?>" data-high_address="<?=$myProfile['high_address'];?>" data-high_year="<?=$myProfile['high_year'];?>"                        
+                          >Update</a>
                         </div>
                       </div>
-
                     </div>
                     </form>
+                    <?php include 'modal/updateProfile.php'?>
                   </div>
+                  <?php endforeach; ?>
+                  <?php endif; ?>
+                  <?php endforeach; ?>
                   <!-- /.tab-pane -->
                 </div>
                 <!-- /.tab-content -->
@@ -598,6 +516,51 @@
             // $('.profile_pics').val(profile_picture).trigger('change');
             // Call Modal
             $('#changePassword').modal('show');
+        });
+        $('.btn-updateprofile').on('click',function(){
+            // data galing buton
+            const id = $(this).data('id');
+            const gender = $(this).data('gender');
+            const civil_status = $(this).data('civil_status');
+            const religion = $(this).data('religion');
+            const nationality = $(this).data('nationality');
+            const birthday = $(this).data('birthday');
+            const birthplace = $(this).data('birthplace');
+            const street = $(this).data('street');
+            const baranggay = $(this).data('baranggay');
+            const prov_add = $(this).data('prov_add');
+            const contact = $(this).data('contact');
+            const guardian_name = $(this).data('guardian_name');
+            const guardian_contact = $(this).data('guardian_contact');
+            const guardian_address = $(this).data('guardian_address');
+            const elem_school = $(this).data('elem_school');
+            const elem_address = $(this).data('elem_address');
+            const elem_year = $(this).data('elem_year');
+            const high_school = $(this).data('high_school');
+            const high_address = $(this).data('high_address');
+            const high_year = $(this).data('high_year');
+            // // sa modal
+            $('.gender').val(gender);
+            $('.civil_status').val(civil_status);
+            $('.religion').val(religion);
+            $('.nationality').val(nationality);
+            $('.birthday').val(birthday);
+            $('.birthplace').val(birthplace);
+            $('.street').val(street);
+            $('.baranggay').val(baranggay);
+            $('.prov_add').val(prov_add);
+            $('.contact').val(contact);
+            $('.guardian_name').val(guardian_name);
+            $('.guardian_contact').val(guardian_contact);
+            $('.guardian_address').val(guardian_address);
+            $('.elem_school').val(elem_school);
+            $('.elem_address').val(elem_address);
+            $('.elem_year').val(elem_year);
+            $('.high_school').val(high_school);
+            $('.high_address').val(high_address);
+            $('.high_year').val(high_year).trigger('change');
+            // Call Modal
+            $('#updateProfile').modal('show');
         });
     });
 </script>
