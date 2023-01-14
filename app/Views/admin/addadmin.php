@@ -108,12 +108,15 @@
         <div class="card card-primary card-outline mx-auto" style = "width:100%; border-radius:15px">
           <div class="card-header">
             <h3 class="card-title"style = "font-family:poppins">Admin Registration</h3>
-            
+
 
           </div>
+          <?php if(session()->has('validation')){
+            $errorFlash = session()->getFlashdata('validation');
+          } ?>
           <!-- /.card-header -->
           <div class="card-body">
-
+            <form action="<?= base_url('insertAdmin'); ?>" method="post">
                   <div class="card-body p-0">
                     <div class="bs-stepper">
                       <div class="bs-stepper-header mx-auto" style = "width:85%" role="tablist">
@@ -150,24 +153,27 @@
                             <label for="lastname" class="col-sm-2 col-form-label"style="font-family: Poppins;">Lastname</label>
                             <div class="col-sm-10">
                               <input type="text" name="lastname" class="form-control" id="lastname"
-                                placeholder="Lastname" value="">
+                                placeholder="Lastname">
+                                <span class="text-danger"><?= isset($validation) ? display_error($validation, 'lastname') : '' ?></span>
                             </div>
                           </div>
                           <div class="form-group row"style="font-family: Poppins;">
                             <label for="firstname" class="col-sm-2 col-form-label"style="font-family: Poppins;">Firstname</label>
                             <div class="col-sm-10">
                               <input type="text" name="firstname" class="form-control" id="firstname"
-                                placeholder="Firstname" value="">
+                                placeholder="Firstname">
+                                <span class="text-danger"><?= isset($validation) ? display_error($validation, 'firstname') : '' ?></span>
                             </div>
                           </div>
                           <div class="form-group row"style="font-family: Poppins;">
                             <label for="middlename" class="col-sm-2 col-form-label"style="font-family: Poppins;">Middlename</label>
                             <div class="col-sm-10">
                               <input type="text" name="middlename" class="form-control" id="middlename"
-                                placeholder="Middlename" value="">
+                                placeholder="Middlename">
+                                <span class="text-danger"><?= isset($validation) ? display_error($validation, 'middlename') : '' ?></span>
                             </div>
                           </div>
-                          <button class="btn btn-primary" style = "float:right;font-family:poppins;background-color:maroon;border-color:maroon;border-radius:20px" onclick="stepper.next()">Next</button>
+                          <button type="button" class="btn btn-primary" style = "float:right;font-family:poppins;background-color:maroon;border-color:maroon;border-radius:20px" onclick="stepper.next()">Next</button>
 
                       </div>
                       </div>
@@ -177,19 +183,21 @@
                           <div class="form-group row"style="font-family: Poppins;">
                             <label for="email" class="col-sm-2 col-form-label"style="font-family: Poppins;">Email</label>
                             <div class="col-sm-10">
-                              <input type="email" name="email" class="form-control" id="email"
-                                placeholder="Email" value="">
+                              <input type="email" name="adminEmail" class="form-control" id="adminEmail"
+                                placeholder="Email">
+                                <span class="text-danger"><?= isset($validation) ? display_error($validation, 'adminEmail') : '' ?></span>
                             </div>
                           </div>
                           <div class="form-group row"style="font-family: Poppins;">
                             <label for="password" class="col-sm-2 col-form-label"style="font-family: Poppins;">Password</label>
                             <div class="col-sm-10">
-                              <input type="password" name="password" class="form-control" id="password"
-                                placeholder="Password" value="">
+                              <input type="password" name="adminPassword" class="form-control" id="adminPassword"
+                                placeholder="Password">
+                                <span class="text-danger"><?= isset($validation) ? display_error($validation, 'adminPassword') : '' ?></span>
                             </div>
                           </div>
                           <div class = "a"style = "float:right;">
-                          <button class="btn btn-primary"style = "font-family:poppins;background-color:maroon;border-color:maroon;border-radius:20px" onclick="stepper.previous()">Previous</button>
+                          <button type="button" class="btn btn-primary"style = "font-family:poppins;background-color:maroon;border-color:maroon;border-radius:20px" onclick="stepper.previous()">Previous</button>
                           <button type="submit" class="btn btn-primary"style = "font-family:poppins;background-color:maroon;border-color:maroon;border-radius:20px">Submit</button>
                         </div>
                       </div>
@@ -198,6 +206,7 @@
                   <!-- /.card-body -->
 
                 </div>
+              </form>
                 <!-- /.card -->
               </div>
             </div>
