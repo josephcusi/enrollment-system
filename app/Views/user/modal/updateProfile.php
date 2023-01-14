@@ -10,12 +10,13 @@
             <?php if(session()->has('validation')){
                                             $errorFlash = session()->getFlashdata('validation');} ?>
             <div class="modal-body">
-                <form action="<?= base_url('#'); ?>" method="post">
+                <form action="<?= base_url('updateUserProfile/'.$myProfile['id']); ?>" method="post">
                     <?= csrf_field(); ?>
+                    <input type="hidden" name="_method" value="PUT" />
                     <div class="form-row">
                         <div class="form-group col-md-3">
                             <label for="inputSection">Gender</label>
-                            <select class="form-control gender" id="inputGender" name = "gender" value="<?= isset($profile['gender']) ? $profile['gender'] : '' ; ?>">
+                            <select class="form-control gender" id="inputGender" name = "gender" >
                             <option type="text" class="form-control"style="font-family: Poppins;" id="inputGender">Male</option>
                             <option type="text" class="form-control"style="font-family: Poppins;" id="inputGender">Female</option>
                             </select>
@@ -25,7 +26,7 @@
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputStrand">Civil Status</label>
-                            <select class="form-control civul_status"id="inputCivil" name = "civil_status">
+                            <select class="form-control civil_status"id="inputCivil" name = "civil_status" >
                             <option type="text" class="form-control"style="font-family: Poppins;" id="inputCivil">Single</option>
                             <option type="text" class="form-control"style="font-family: Poppins;" id="inputCivil">Married</option>
                             <option type="text" class="form-control"style="font-family: Poppins;" id="inputCivil">Divorced</option>

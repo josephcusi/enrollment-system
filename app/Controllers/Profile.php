@@ -533,21 +533,200 @@ class Profile extends BaseController
                 ]
             ]
         ]);
-    $email = session()->get('loggedInUser');
-    if (!$validated)
-    {
-        session()->setFlashdata('validation', $this->validator);
-        return redirect('retrieve_profile',$email);
-    }
-    else{
-        $user_model = new UserModel();
-        $password = $this->request->getPost('password');
+        $email = session()->get('loggedInUser');
+        if (!$validated)
+        {
+            session()->setFlashdata('validation', $this->validator);
+            return redirect('retrieve_profile',$email);
+        }
+        else{
+            $user_model = new UserModel();
+            $password = $this->request->getPost('password');
 
-        $data = [
-            'password' => Hash::make($password)
-        ];
-        $user_model->update($id, $data);
-        return redirect('retrieve_profile');
+            $data = [
+                'password' => Hash::make($password)
+            ];
+            $user_model->update($id, $data);
+            return redirect('retrieve_profile');
+        }
     }
-}
-}
+    public function updateUserProfile($id)
+    {
+        $validated = $this->validate([
+            'street' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Your street address is required.'
+                ]
+            ],
+            'gender' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Your Gender is required.'
+                ]
+            ],
+            'religion' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Your Religion is required.'
+                ]
+            ],
+            'birthday' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Your Birthday is required.'
+                ]
+            ],
+            'civil_status' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Your Civil Status is required.'
+                ]
+            ],
+            'nationality' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Your Nationality is required.'
+                ]
+            ],
+            'birthplace' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Your Birthplace is required.'
+                ]
+            ],
+            'baranggay' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Your baranggay address is required!'
+                ]
+            ],
+            'prov_add' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Your Provincial address is required!'
+                ]
+            ],
+            'contact' => [
+                'rules' => 'required|min_length[0]|max_length[13]',
+                'errors' => [
+                    'required' => 'Provincial Contact is required!',
+                    'min_length' => 'Contact must have 13 numbers in length.',
+                    'max_length' => 'Passwords must not have characters more than 13 in length.'
+                ]
+            ],
+            'guardian_name' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Your Guardian Name is required.'
+                ]
+            ],
+            'guardian_contact' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Your Contact number is required!'
+                ]
+            ],
+            'guardian_address' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Your Address is required!'
+                ]
+            ],
+            'elem_school' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Elementary Name is required.'
+                ]
+            ],
+            'elem_address' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Your address is required!'
+                ]
+            ],
+            'elem_year' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Elementary Year attendee is required!'
+                ]
+            ],
+            'high_school' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'High School name is required!'
+                ]
+            ],
+            'high_address' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Your Address is required!'
+                ]
+            ],
+            'high_year' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'High School Year attendee is required!'
+                ]
+            ]
+        ]);
+
+
+
+        if (!$validated)
+        {
+            session()->setFlashdata('validation', $this->validator);
+            return redirect('retrieve_profile');
+        }
+        else {
+            $street = $this->request->getPost('street');
+            $gender = $this->request->getPost('gender');
+            $religion = $this->request->getPost('religion');
+            $birthday = $this->request->getPost('birthday');
+            $civil_status = $this->request->getPost('civil_status');
+            $nationality = $this->request->getPost('nationality');
+            $birthplace = $this->request->getPost('birthplace');
+            $baranggay = $this->request->getPost('baranggay');
+            $prov_add = $this->request->getPost('prov_add');
+            $contact = $this->request->getPost('contact');
+            $guardian_name = $this->request->getPost('guardian_name');
+            $guardian_contact = $this->request->getPost('guardian_contact');
+            $guardian_address = $this->request->getPost('guardian_address');
+            $elem_school = $this->request->getPost('elem_school');
+            $elem_address = $this->request->getPost('elem_address');
+            $elem_year = $this->request->getPost('elem_year');
+            $high_school = $this->request->getPost('high_school');
+            $high_address = $this->request->getPost('high_address');
+            $high_year = $this->request->getPost('high_year');
+
+            $values = [
+                'email' => $email = session()->get('loggedInUser'),
+                'street' => $street,
+                'gender' => $gender,
+                'religion' => $religion,
+                'birthday' => $birthday,
+                'civil_status' => $civil_status,
+                'nationality' => $nationality,
+                'birthplace' => $birthplace,
+                'baranggay' => $baranggay,
+                'prov_add' => $prov_add,
+                'contact' => $contact,
+                'guardian_name' => $guardian_name,
+                'guardian_contact' => $guardian_contact,
+                'guardian_address' => $guardian_address,
+                'elem_school' => $elem_school,
+                'elem_address' => $elem_address,
+                'elem_year' => $elem_year,
+                'high_school' => $high_school,
+                'high_address' => $high_address,
+                'high_year' => $high_year
+
+
+            ];
+            $profile_model = new ProfileModel();
+            $profile_model->update($id, $values);
+            return redirect('retrieve_profile');
+            }
+        }
+    }
+

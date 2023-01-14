@@ -87,6 +87,8 @@ $routes->put('/update/(:any)', 'Profile::update/$1');
 $routes->put('/updateProfile/(:any)', 'Profile::updateProfile/$1');
 $routes->get('/strandProspectus/(:any)', 'Prospectus::strandProspectus/$1');
 $routes->put('/updatePassword/(:any)', 'Profile::updatePassword/$1');
+$routes->put('/updateUserProfile/(:any)', 'Profile::updateUserProfile/$1');
+
 
 
 });
