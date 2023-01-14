@@ -31,14 +31,16 @@ class Admin extends BaseController
     public function newadmin()
     {
       $user_model = new UserModel();
-      $data['userName'] = $user_model->where('email', $email = session()->get('loggedInUser'))->find();
+      $data = ['userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
+      'retrieveAdmin' => $user_model->where('usertype', 'admin')->findAll()
+    ];
         return view('admin/newadmin', $data);
     }
     public function addadmin()
     {
       $user_model = new UserModel();
       $data = [
-        'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find()
+        'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
       ];
         return view('admin/addadmin', $data);
     }
@@ -134,6 +136,5 @@ class Admin extends BaseController
         $user_model->insert($values);
         return redirect()->route('newadmin');
     }
-
 }
 }
