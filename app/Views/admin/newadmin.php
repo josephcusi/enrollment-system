@@ -129,7 +129,7 @@
           <?php foreach($retrieveAdmin as $ret_admin):?>
           <tr>
             <td><?=$ret_admin['lrn'];?></td>
-            <td><?=$ret_admin['lastname'];?><?= ", "?><?=$ret_admin['firstname'];?><?= " "?><?=$ret_admin['middlename'];?></td>
+            <td><?=$ret_admin['lastname'];?><?= " "?><?=$ret_admin['firstname'];?><?= " "?><?=$ret_admin['middlename'];?></td>
             <td><?=$ret_admin['email'];?></td>
             <td>
             <a href="#"><button type="button" class="btn btn-secondary btn-sm" style = "border-radius:15px">update</button></a>

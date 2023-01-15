@@ -123,17 +123,22 @@ class Admin extends BaseController
         $adminPassword = $this->request->getPost('adminPassword');
 
         $values = [
-            'lrn' => "Admin".date('s'),
             'lastname' => $lastname,
             'firstname' => $firstname,
             'middlename' => $middlename,
             'email' => $adminEmail,
             'password' => Hash::make($adminPassword),
-            'usertype' => 'admin'
+            'usertype' => 'admin',
         ];
 
         $user_model = new UserModel();
-        $user_model->insert($values);
+        $admin_lrn = $user_model->insert($values);
+
+        $myLrn = '';
+
+        $lrn = 'ADMIN'.$myLrn.str_pad($admin_lrn, 3, "0", STR_PAD_LEFT);
+        $user_model->set('lrn', $lrn)->where('id', $admin_lrn)->update();
+
         return redirect()->route('newadmin');
     }
 }
