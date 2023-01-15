@@ -16,9 +16,11 @@ class UserSchedule extends BaseController
     public function viewSchedule()
     {
         $profile_model = new ProfileModel();
-        $user['profile_picture'] = $profile_model->where('email', $email = session()->get('loggedInUser'))->findAll();
-      $user_model = new UserModel();
-      $user['userName'] = $user_model->where('email', $email = session()->get('loggedInUser'))->find();
+        $user_model = new UserModel();
+        $user = [
+            'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
+            'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->findAll()
+        ];
         return view('user/viewSchedule', $user);
     }
 

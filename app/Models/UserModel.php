@@ -9,7 +9,7 @@ class UserModel extends Model
     protected $table            = 'user_tbl';
     protected $primaryKey       = 'id';
 
-    protected $allowedFields    = ['lrn','lastname', 'firstname', 'middlename', 'email', 'password', 'token', 'reset_token', 'reset_timestamp', 'status', 'usertype', 'date'];
+    protected $allowedFields    = ['profile_picture', 'lrn','lastname', 'firstname', 'middlename', 'email', 'password', 'token', 'reset_token', 'reset_timestamp', 'status', 'usertype', 'date'];
 
 
 }

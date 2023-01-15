@@ -456,7 +456,7 @@
                       <div class="form-group row">
                         <div class="offset-sm-1 col-sm-5">
                         <button type="submit" class="btn btn-danger"style = "border-radius:20px; background-color:maroon; border-color:maroon">Save</button>
-                          <?php foreach($profile_picture as $myProfile):?>
+                          <?php foreach($profileUpdate as $myProfile):?>
                           <button type="button" class="btn btn-danger btn-updateprofile"style = "border-radius:20px; background-color:maroon; border-color:maroon"
                           data-id="<?=$myProfile['id'];?>" data-gender="<?=$myProfile['gender'];?>" data-civil_status="<?=$myProfile['civil_status'];?>" data-religion="<?=$myProfile['religion'];?>"
                           data-nationality="<?=$myProfile['nationality'];?>" data-birthday="<?=$myProfile['birthday'];?>" data-birthplace="<?=$myProfile['birthplace'];?>" data-street="<?=$myProfile['street'];?>"
