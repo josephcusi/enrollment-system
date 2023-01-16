@@ -16,16 +16,18 @@
   <!-- Right navbar links -->
   <ul class="navbar-nav ml-auto">
     <!-- Navbar Search -->
-    <?php foreach($userName as $name):?>
+    <?php $i = 0; foreach($userName as $name):?>
+      <?php  $i++; if ($i == 1):?>
     <!-- Sidebar user panel (optional) -->
     <div class="user-panel mt-1 pb-1 mb-1 d-flex" >
+      
       <div class="image" style = "margin-left:-15%">
-        <img src="<?=base_url()?>/dist/img/user8-128x128.jpg" class="img-circle elevation-2" alt="User Image">
+        <img style="background-image:url(../../dist/img/profile.jfif); border-color:maroon; background-size:cover; width:35px; height:35px;" src="<?= base_url().'/'.'profile/'.$name['profile_picture'] ?>" class="img-fluid img-circle">
       </div>
-    </div>
-    <div class="dropdown">
+</div>
+  <div class="dropdown">
       <div class="info">
-      <a class="d-block" style="color:white; background-color:#212529;  margin-top:1.5%; border-radius:18px; padding:7px" href="#">
+      <a class="d-block" style="color:white; background-color:#212529; font-family:poppins;  margin-top:1.5%; border-radius:18px; padding:7px" href="#">
 
                             <?= isset($name['firstname']) ? $name['firstname'] : $userName['firstname'];?>
                             <?=" " ?>
@@ -33,11 +35,12 @@
                             <?php echo " " ?>
                             <?= isset($name['lastname']) ? $name['lastname'] : $userName['lastname']; ?>
     </a>
-    <div class="dropdown-content" style = "margin-left:25%; margin-top:2%;">
+    <div class="dropdown-content " style = "margin-left:30%; margin-top:2%;">
       <a href="<?=site_url()?>logout" style = "font-family:poppins; margin-left:17%; font-weight:bolder" method="post">LOGOUT</a>
     </div>
       </div>
       </div>
+      <?php endif;?>
     <?php endforeach;?>
 
     <!-- Messages Dropdown Menu -->

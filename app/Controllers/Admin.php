@@ -18,10 +18,13 @@ class Admin extends BaseController
     {
         $user_model = new UserModel();
         $registration_model = new RegistrationModel();
-		$data['usertypeadmin'] = $user_model->where('usertype', 'admin')->get()->getNumRows();
-        $data['usertypestudent'] = $user_model->where('usertype', 'student')->get()->getNumRows();
-        $data['status'] = $registration_model->where('status', 'pending')->get()->getNumRows();
-        $data['userName'] = $user_model->where('email', $email = session()->get('loggedInUser'))->find();
+        $data = [
+            'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
+            'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
+            'usertypestudent' => $user_model->where('usertype', 'student')->get()->getNumRows(),
+            'usertypeadmin' => $user_model->where('usertype', 'admin')->get()->getNumRows(),
+            'status' => $registration_model->where('status', 'pending')->get()->getNumRows()
+        ];
 		return view('admin/admindashboard', $data);
     }
     public function pre_enrolled()
@@ -31,8 +34,10 @@ class Admin extends BaseController
     public function newadmin()
     {
       $user_model = new UserModel();
-      $data = ['userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
-      'retrieveAdmin' => $user_model->where('usertype', 'admin')->findAll()
+      $data = [
+        'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
+        'retrieveAdmin' => $user_model->where('usertype', 'admin')->findAll(),
+        'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->find()
     ];
         return view('admin/newadmin', $data);
     }
@@ -41,6 +46,7 @@ class Admin extends BaseController
       $user_model = new UserModel();
       $data = [
         'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
+        'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->find()
       ];
         return view('admin/addadmin', $data);
     }
@@ -74,6 +80,12 @@ class Admin extends BaseController
     public function insertAdmin()
     {
         $validated = $this->validate([
+        'profile_picture' => [
+            'label' => 'Image File',
+            'rules' => 'uploaded[profile_picture]'
+                . '|is_image[profile_picture]'
+                . '|mime_in[profile_picture,image/png,image/jpeg]'
+        ],
         'lastname' => [
             'rules' => 'required',
             'errors' => [
@@ -121,6 +133,10 @@ class Admin extends BaseController
         $middlename = $this->request->getPost('middlename');
         $adminEmail = $this->request->getPost('adminEmail');
         $adminPassword = $this->request->getPost('adminPassword');
+        $prof_pic = $this->request->getFile('profile_picture');
+
+        if (!$prof_pic->hasMoved()) {
+            $prof_pic->move(FCPATH . 'profile');
 
         $values = [
             'lastname' => $lastname,
@@ -129,6 +145,7 @@ class Admin extends BaseController
             'email' => $adminEmail,
             'password' => Hash::make($adminPassword),
             'usertype' => 'admin',
+            'profile_picture' => $prof_pic->getClientName()
         ];
 
         $user_model = new UserModel();
@@ -142,4 +159,5 @@ class Admin extends BaseController
         return redirect()->route('newadmin');
     }
 }
+    }
 }

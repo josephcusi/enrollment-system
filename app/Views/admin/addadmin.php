@@ -116,7 +116,7 @@
           } ?>
           <!-- /.card-header -->
           <div class="card-body">
-            <form action="<?= base_url('insertAdmin'); ?>" method="post">
+            <form action="<?= base_url('insertAdmin'); ?>" method="post"  enctype="multipart/form-data">
                   <div class="card-body p-0">
                     <div class="bs-stepper">
                       <div class="bs-stepper-header mx-auto" style = "width:85%" role="tablist">
@@ -140,36 +140,39 @@
 
                         <!-- your steps content here -->
                         <div id="logins-part" class="content" role="tabpanel" aria-labelledby="logins-part-trigger">
-                          <div class="card-body box-profile">
-
-                                          <a href="#" class="btn-edit" data-id=""style="margin-right:5%;background:white;border:0;">
-                                              <img class="profile-user-img img-fluid img-circle"
-                                              style="width:150px; height:150px;float:left; background-image:url(../../dist/img/avatar.png); border-color:maroon; background-size:cover;" src="">
-                                          </a>
-
-                                </div>
-
+                          <br>
+                          <br>
+                          <br>
                           <div class="form-group row"style="font-family: Poppins;">
-                            <label for="lastname" class="col-sm-2 col-form-label"style="font-family: Poppins;">Lastname</label>
+                          <img class="profile-user-img img-fluid img-circle"
+                              style="width:50px; height:50px;margin-left:30px; background-image:url(../../dist/img/profile.jfif); border-color:maroon; background-size:cover;">
                             <div class="col-sm-10">
-                              <input type="text" name="lastname" class="form-control" id="lastname"
-                                placeholder="Lastname">
+                              <input type="file" name="profile_picture" class="form-control"
+                                >
+                                <span class="text-danger"><?= isset($validation) ? display_error($validation, 'profile_picture') : '' ?></span>
+                            </div>
+                          </div>
+                          <div class="form-group row"style="font-family: Poppins;">
+                            <label class="col-sm-2 col-form-label"style="font-family: Poppins;">Last Name</label>
+                            <div class="col-sm-10">
+                              <input type="text" name="lastname" class="form-control"
+                                placeholder="Last Name">
                                 <span class="text-danger"><?= isset($validation) ? display_error($validation, 'lastname') : '' ?></span>
                             </div>
                           </div>
                           <div class="form-group row"style="font-family: Poppins;">
-                            <label for="firstname" class="col-sm-2 col-form-label"style="font-family: Poppins;">Firstname</label>
+                            <label class="col-sm-2 col-form-label"style="font-family: Poppins;">First Name</label>
                             <div class="col-sm-10">
-                              <input type="text" name="firstname" class="form-control" id="firstname"
-                                placeholder="Firstname">
+                              <input type="text" name="firstname" class="form-control"
+                                placeholder="First Name">
                                 <span class="text-danger"><?= isset($validation) ? display_error($validation, 'firstname') : '' ?></span>
                             </div>
                           </div>
                           <div class="form-group row"style="font-family: Poppins;">
-                            <label for="middlename" class="col-sm-2 col-form-label"style="font-family: Poppins;">Middlename</label>
+                            <label class="col-sm-2 col-form-label"style="font-family: Poppins;">Middle Name</label>
                             <div class="col-sm-10">
-                              <input type="text" name="middlename" class="form-control" id="middlename"
-                                placeholder="Middlename">
+                              <input type="text" name="middlename" class="form-control"
+                                placeholder="Middle Name">
                                 <span class="text-danger"><?= isset($validation) ? display_error($validation, 'middlename') : '' ?></span>
                             </div>
                           </div>
@@ -181,17 +184,17 @@
 
                         <div id="information-part" class="content" role="tabpanel" aria-labelledby="information-part-trigger">
                           <div class="form-group row"style="font-family: Poppins;">
-                            <label for="email" class="col-sm-2 col-form-label"style="font-family: Poppins;">Email</label>
+                            <label class="col-sm-2 col-form-label"style="font-family: Poppins;">Email</label>
                             <div class="col-sm-10">
-                              <input type="email" name="adminEmail" class="form-control" id="adminEmail"
+                              <input type="email" name="adminEmail" class="form-control"
                                 placeholder="Email">
                                 <span class="text-danger"><?= isset($validation) ? display_error($validation, 'adminEmail') : '' ?></span>
                             </div>
                           </div>
                           <div class="form-group row"style="font-family: Poppins;">
-                            <label for="password" class="col-sm-2 col-form-label"style="font-family: Poppins;">Password</label>
+                            <label class="col-sm-2 col-form-label"style="font-family: Poppins;">Password</label>
                             <div class="col-sm-10">
-                              <input type="password" name="adminPassword" class="form-control" id="adminPassword"
+                              <input type="password" name="adminPassword" class="form-control"
                                 placeholder="Password">
                                 <span class="text-danger"><?= isset($validation) ? display_error($validation, 'adminPassword') : '' ?></span>
                             </div>

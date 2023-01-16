@@ -19,6 +19,7 @@ class Strand extends BaseController
         $data = [
             'strand'=> $strand_model->findAll(),
             'userName'=> $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
+            'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->find()
         ];
 
         $data['validation'] = $this->validator;
