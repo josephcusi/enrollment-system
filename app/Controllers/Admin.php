@@ -25,6 +25,7 @@ class Admin extends BaseController
             'usertypeadmin' => $user_model->where('usertype', 'admin')->get()->getNumRows(),
             'status' => $registration_model->where('status', 'pending')->get()->getNumRows()
         ];
+        
 		return view('admin/admindashboard', $data);
     }
     public function pre_enrolled()

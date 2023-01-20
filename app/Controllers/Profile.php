@@ -90,17 +90,6 @@ class Profile extends BaseController
         $email = session()->get('loggedInUser');
         return redirect('retrieve_profile');
     }
-
-    public function admin_dash($email)
-    {
-        $admin = new UserModel();
-        $registration_model = new RegistrationModel();
-		$data['usertypeadmin'] = $admin->where('usertype', 'admin')->get()->getNumRows();
-        $data['usertypestudent'] = $admin->where('usertype', 'student')->get()->getNumRows();
-        $data['status'] = $registration_model->where('status', 'pending')->get()->getNumRows();
-        $data['userName'] = $admin->where('email', $email = session()->get('loggedInUser'))->find();
-        return view('admin/adminDashboard', $data);
-    }
     public function insertProfile()
     {
         $validated = $this->validate([

@@ -86,7 +86,7 @@ class User extends BaseController
 
                           session()->set('loggedInUser', $userEmail);
                           session()->setFlashdata('admindashboard', 'Welcome');
-                          return $profile->admin_dash($userEmail);
+                          return redirect()->route('admin');
                         }
 
 
