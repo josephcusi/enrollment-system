@@ -1,0 +1,21 @@
+CRITICAL - 2023-01-21 06:44:30 --> Call to a member function hasMoved() on null
+in APPPATH\Controllers\Profile.php on line 508.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->updateProfile('3')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 06:46:07 --> Call to a member function hasMoved() on null
+in APPPATH\Controllers\Profile.php on line 508.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->updateProfile('3')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 06:46:58 --> Call to a member function hasMoved() on null
+in APPPATH\Controllers\Profile.php on line 508.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->updateProfile('3')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
