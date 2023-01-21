@@ -18,13 +18,14 @@
                                                         style="text-align:center; justify-content:center;">
                                                         <div class="form-group col-md-10 prof_pict">
                                                             <label for="profile_picture">Profile Picture</label>
-                                                            <input type="file" name="profile_picture"
-                                                                class="form-control profile_pics" size="30" accept="image/*" required>
-                                                            <span class="text-danger">
-                                                                <?= isset($errorFlash) ? display_error($errorFlash, 'profile_picture') : '' ?>
-                                                            </span>
+                                                            <input type="file" name="profile_pic"
+                                                                class="form-control password" required>
                                                         </div>
+                                                        <span class="text-danger">
+                                                                <?= isset($errorFlash) ? display_error($errorFlash, 'profile_pic') : '' ?>
+                                                            </span>
                                                     </div>
+                                                    
                                             </div>
                                             <!-- Submit button -->
                                             <div class="modal-footer justify-content-between">

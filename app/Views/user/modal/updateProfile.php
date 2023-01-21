@@ -8,7 +8,7 @@
                 </button>
             </div>
             <?php if(session()->has('validation')){
-                                            $errorFlash = session()->getFlashdata('validation');} ?>
+            $errorFlash = session()->getFlashdata('validation');} ?>
             <div class="modal-body">
                 <form action="<?= base_url('updateUserProfile/'.$myProfile['id']); ?>" method="post">
                     <?= csrf_field(); ?>
@@ -16,160 +16,149 @@
                     <div class="form-row">
                         <div class="form-group col-md-3">
                             <label for="inputSection">Gender</label>
-                            <select class="form-control gender" id="inputGender" name = "gender" >
+                            <select class="form-control updategender" id="inputGender" name = "updategender" >
                             <option type="text" class="form-control"style="font-family: Poppins;" id="inputGender">Male</option>
                             <option type="text" class="form-control"style="font-family: Poppins;" id="inputGender">Female</option>
                             </select>
                             <span class="text-danger">
-                                <?= isset($validation) ? display_error($validation, 'gender') : '' ?>
+                                <?= isset($errorFlash) ? display_error($errorFlash, 'updategender') : '' ?>
                             </span>
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputStrand">Civil Status</label>
-                            <select class="form-control civil_status"id="inputCivil" name = "civil_status" >
+                            <select class="form-control civil_status"id="inputCivil" name = "updatecivil_status" >
                             <option type="text" class="form-control"style="font-family: Poppins;" id="inputCivil">Single</option>
                             <option type="text" class="form-control"style="font-family: Poppins;" id="inputCivil">Married</option>
                             <option type="text" class="form-control"style="font-family: Poppins;" id="inputCivil">Divorced</option>
                             <option type="text" class="form-control"style="font-family: Poppins;" id="inputCivil">Separated</option>
                             </select>
                             <span class="text-danger">
-                                <?= isset($validation) ? display_error($validation, 'civil_status') : '' ?>
+                                <?= isset($errorFlash) ? display_error($errorFlash, 'updatecivil_status') : '' ?>
                             </span>
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputSemester">Religion</label>
-                            <input type="text" name="religion" class="form-control religion" 
+                            <input type="text" name="updatereligion" class="form-control religion" 
                               >
                             <span class="text-danger">
-                                <?= isset($validation) ? display_error($validation, 'religion') : '' ?>
-                            </span>
+                                <?= isset($errorFlash) ? display_error($errorFlash, 'updatereligion') : '' ?>                         </span>
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputYearLevel">Nationality</label>
-                            <input type="text" name="nationality" class="form-control nationality" 
+                            <input type="text" name="updatenationality" class="form-control nationality" 
                               >
                             <span class="text-danger">
-                                <?= isset($validation) ? display_error($validation, 'nationality') : '' ?>
+                            <?= isset($errorFlash) ? display_error($errorFlash, 'updatenationality') : '' ?>
                             </span>
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputYearLevel">Birthday</label>
-                            <input class="birthday" type="date" name="birthday" class="form-control" id="birthday" placeholder="Birthday" >
+                            <input class="birthday" type="date" name="updatebirthday" class="form-control" id="birthday" placeholder="Birthday" >
                             <span class="text-danger">
-                                <?= isset($validation) ? display_error($validation, 'birthday') : '' ?>
-                            </span>
+                                <?= isset($errorFlash) ? display_error($errorFlash, 'updatebirthday') : '' ?>                         </span>
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputYearLevel">Birth Place</label>
-                            <input type="text" name="birthplace" class="form-control birthplace" 
+                            <input type="text" name="updatebirthplace" class="form-control birthplace" 
                               >
                             <span class="text-danger">
-                                <?= isset($validation) ? display_error($validation, 'birthplace') : '' ?>
-                            </span>
+                                <?= isset($errorFlash) ? display_error($errorFlash, 'updatebirthplace') : '' ?>                           </span>
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputYearLevel">Street</label>
-                            <input type="text" name="street" class="form-control street" 
+                            <input type="text" name="updatestreet" class="form-control street" 
                               >
                             <span class="text-danger">
-                                <?= isset($validation) ? display_error($validation, 'street') : '' ?>
-                            </span>
+                                <?= isset($errorFlash) ? display_error($errorFlash, 'updatestreet') : '' ?>                       </span>
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputYearLevel">Baranggay</label>
-                            <input type="text" name="baranggay" class="form-control baranggay" 
+                            <input type="text" name="updatebaranggay" class="form-control baranggay" 
                               >
                             <span class="text-danger">
-                                <?= isset($validation) ? display_error($validation, 'baranggay') : '' ?>
-                            </span>
+                                <?= isset($errorFlash) ? display_error($errorFlash, 'updatebaranggay') : '' ?>                          </span>
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputYearLevel">Provincial Address</label>
-                            <input type="text" name="prov_add" class="form-control prov_add" 
+                            <input type="text" name="updateprov_add" class="form-control prov_add" 
                               >
                             <span class="text-danger">
-                                <?= isset($validation) ? display_error($validation, 'prov_add') : '' ?>
-                            </span>
+                                <?= isset($errorFlash) ? display_error($errorFlash, 'updateprov_add') : '' ?>                         </span>
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputYearLevel">Contact</label>
-                            <input type="text" name="contact" class="form-control contact" 
+                            <input type="text" name="updatecontact" class="form-control contact" 
                               >
                             <span class="text-danger">
-                                <?= isset($validation) ? display_error($validation, 'contact') : '' ?>
-                            </span>
+                                <?= isset($errorFlash) ? display_error($errorFlash, 'updatecontact') : '' ?>                        </span>
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputYearLevel">Guardian Name</label>
-                            <input type="text" name="guardian_name" class="form-control guardian_name" 
+                            <input type="text" name="updateguardian_name" class="form-control guardian_name" 
                               >
                             <span class="text-danger">
-                                <?= isset($validation) ? display_error($validation, 'guardian_name') : '' ?>
+                                <?= isset($errorFlash) ? display_error($errorFlash, 'updateguardian_name') : '' ?>
                             </span>
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputYearLevel">Guardian Contact</label>
-                            <input type="text" name="guardian_contact" class="form-control guardian_contact" 
+                            <input type="text" name="updateguardian_contact" class="form-control guardian_contact" 
                               >
                             <span class="text-danger">
-                                <?= isset($validation) ? display_error($validation, 'guardian_contact') : '' ?>
+                                <?= isset($errorFlash) ? display_error($errorFlash, 'updateguardian_contact') : '' ?>
                             </span>
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputYearLevel">Guardian Address</label>
-                            <input type="text" name="guardian_address" class="form-control guardian_address" 
+                            <input type="text" name="updateguardian_address" class="form-control guardian_address" 
                               >
                             <span class="text-danger">
-                                <?= isset($validation) ? display_error($validation, 'guardian_address') : '' ?>
+                                <?= isset($errorFlash) ? display_error($errorFlash, 'updateguardian_address') : '' ?>
                             </span>
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputYearLevel">Elem. School</label>
-                            <input type="text" name="elem_school" class="form-control elem_school" 
+                            <input type="text" name="updateelem_school" class="form-control elem_school" 
                               >
                             <span class="text-danger">
-                                <?= isset($validation) ? display_error($validation, 'elem_school') : '' ?>
-                            </span>
+                                <?= isset($errorFlash) ? display_error($errorFlash, 'updateelem_school') : '' ?>                            </span>
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputYearLevel">Elem. School Address</label>
-                            <input type="text" name="elem_address" class="form-control elem_address" 
+                            <input type="text" name="updateelem_address" class="form-control elem_address" 
                               >
                             <span class="text-danger">
-                                <?= isset($validation) ? display_error($validation, 'elem_address') : '' ?>
+                                <?= isset($errorFlash) ? display_error($errorFlash, 'updateelem_address') : '' ?>
                             </span>
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputYearLevel">Year Graduated</label>
-                            <input type="text" name="elem_year" class="form-control elem_year" 
+                            <input type="text" name="updateelem_year" class="form-control elem_year" 
                               >
                             <span class="text-danger">
-                                <?= isset($validation) ? display_error($validation, 'elem_year') : '' ?>
-                            </span>
+                                <?= isset($errorFlash) ? display_error($errorFlash, 'updateelem_year') : '' ?>                          </span>
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputYearLevel">High School</label>
-                            <input type="text" name="high_school" class="form-control high_school" 
+                            <input type="text" name="updatehigh_school" class="form-control high_school" 
                               >
                             <span class="text-danger">
-                                <?= isset($validation) ? display_error($validation, 'high_school') : '' ?>
-                            </span>
+                                <?= isset($errorFlash) ? display_error($errorFlash, 'updatehigh_school') : '' ?>                            </span>
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputYearLevel">High School Address</label>
-                            <input type="text" name="high_address" class="form-control high_address" 
+                            <input type="text" name="updatehigh_address" class="form-control high_address" 
                               >
                             <span class="text-danger">
-                                <?= isset($validation) ? display_error($validation, 'high_address') : '' ?>
+                                <?= isset($errorFlash) ? display_error($errorFlash, 'updatehigh_address') : '' ?>
                             </span>
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputYearLevel">Year Graduated</label>
-                            <input type="text" name="high_year" class="form-control high_year" 
+                            <input type="text" name="updatehigh_year" class="form-control high_year" 
                               >
                             <span class="text-danger">
-                                <?= isset($validation) ? display_error($validation, 'high_year') : '' ?>
-                            </span>
+                                <?= isset($errorFlash) ? display_error($errorFlash, 'updatehigh_year') : '' ?>                          </span>
                         </div>
                     </div>
             </div>

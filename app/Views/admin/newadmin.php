@@ -132,11 +132,15 @@
             <td><?=$ret_admin['lastname'];?><?= " "?><?=$ret_admin['firstname'];?><?= " "?><?=$ret_admin['middlename'];?></td>
             <td><?=$ret_admin['email'];?></td>
             <td>
-            <a href="#"><button type="button" class="btn btn-secondary btn-sm" style = "border-radius:15px">update</button></a>
+            <a href="#"> <button type="button" class="btn btn-secondary btn-editAdmin" style = "border-radius:15px"
+            data-profile_picture="<?=$ret_admin['profile_picture'];?>"data-lastname="<?=$ret_admin['lastname'];?>"data-firstname="<?=$ret_admin['firstname'];?>"data-middlename="<?=$ret_admin['middlename'];?>"
+            data-email="<?=$ret_admin['email'];?>" data-password="<?=$ret_admin['password'];?>"
+            
+            >update</button></a>
+            <?php include 'modal/adminUpdate.php'?>
             </td>
           </tr>
           <?php endforeach;?>
-
         </tbody>
         <tfoot>
         </tfoot>
@@ -154,3 +158,27 @@
 </body>
 <?= $this->include('admin/include/end')?>
 <?= $this->include('admin/include/footer')?>
+<script>
+   $(document).ready(function(){
+        // sa button
+        $('.btn-editAdmin').on('click',function(){
+            // data galing buton
+            const id = $(this).data('id');
+            const profile_picture = $(this).data('profile_picture');
+            const lastname = $(this).data('lastname');
+            const firstname = $(this).data('firstname');
+            const middlename = $(this).data('middlename');
+            const email = $(this).data('email');
+            const password = $(this).data('password');
+            // // sa modal
+            $('.Adminprofile_pics').val(profile_picture);
+            $('.Adminlastname').val(lastname);
+            $('.Adminfirstname').val(firstname);
+            $('.Adminmiddlename').val(middlename);
+            $('.Adminemail').val(email);
+            $('.Adminpassword').val(password).trigger('change');
+            // Call Modal
+            $('#adminUpdate').modal('show');
+        });
+      });
+</script>

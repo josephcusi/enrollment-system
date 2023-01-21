@@ -488,11 +488,11 @@ class Profile extends BaseController
     }
        public function updateProfile($id){
         $validated = $this->validate([
-            'profile_picture' => [
+            'profile_pic' => [
                 'label' => 'Image File',
-                'rules' => 'uploaded[profile_picture]'
-                    . '|is_image[profile_picture]'
-                    . '|mime_in[profile_picture,image/png,image/jpeg]'
+                'rules' => 'uploaded[profile_pic]'
+                    . '|is_image[profile_pic]'
+                    . '|mime_in[profile_pic,image/png,image/jpeg]'
             ],
         ]);
         $email = session()->get('loggedInUser');
@@ -558,61 +558,61 @@ class Profile extends BaseController
     public function updateUserProfile($id)
     {
         $validated = $this->validate([
-            'street' => [
+            'updatestreet' => [
                 'rules' => 'required',
                 'errors' => [
                     'required' => 'Your street address is required.'
                 ]
             ],
-            'gender' => [
+            'updategender' => [
                 'rules' => 'required',
                 'errors' => [
                     'required' => 'Your Gender is required.'
                 ]
             ],
-            'religion' => [
+            'updatereligion' => [
                 'rules' => 'required',
                 'errors' => [
                     'required' => 'Your Religion is required.'
                 ]
             ],
-            'birthday' => [
+            'updatebirthday' => [
                 'rules' => 'required',
                 'errors' => [
                     'required' => 'Your Birthday is required.'
                 ]
             ],
-            'civil_status' => [
+            'updatecivil_status' => [
                 'rules' => 'required',
                 'errors' => [
                     'required' => 'Your Civil Status is required.'
                 ]
             ],
-            'nationality' => [
+            'updatenationality' => [
                 'rules' => 'required',
                 'errors' => [
                     'required' => 'Your Nationality is required.'
                 ]
             ],
-            'birthplace' => [
+            'updatebirthplace' => [
                 'rules' => 'required',
                 'errors' => [
                     'required' => 'Your Birthplace is required.'
                 ]
             ],
-            'baranggay' => [
+            'updatebaranggay' => [
                 'rules' => 'required',
                 'errors' => [
                     'required' => 'Your baranggay address is required!'
                 ]
             ],
-            'prov_add' => [
+            'updateprov_add' => [
                 'rules' => 'required',
                 'errors' => [
                     'required' => 'Your Provincial address is required!'
                 ]
             ],
-            'contact' => [
+            'updatecontact' => [
                 'rules' => 'required|min_length[0]|max_length[13]',
                 'errors' => [
                     'required' => 'Provincial Contact is required!',
@@ -620,55 +620,55 @@ class Profile extends BaseController
                     'max_length' => 'Passwords must not have characters more than 13 in length.'
                 ]
             ],
-            'guardian_name' => [
+            'updateguardian_name' => [
                 'rules' => 'required',
                 'errors' => [
                     'required' => 'Your Guardian Name is required.'
                 ]
             ],
-            'guardian_contact' => [
+            'updateguardian_contact' => [
                 'rules' => 'required',
                 'errors' => [
                     'required' => 'Your Contact number is required!'
                 ]
             ],
-            'guardian_address' => [
+            'updateguardian_address' => [
                 'rules' => 'required',
                 'errors' => [
                     'required' => 'Your Address is required!'
                 ]
             ],
-            'elem_school' => [
+            'updateelem_school' => [
                 'rules' => 'required',
                 'errors' => [
                     'required' => 'Elementary Name is required.'
                 ]
             ],
-            'elem_address' => [
+            'updateelem_address' => [
                 'rules' => 'required',
                 'errors' => [
                     'required' => 'Your address is required!'
                 ]
             ],
-            'elem_year' => [
+            'updateelem_year' => [
                 'rules' => 'required',
                 'errors' => [
                     'required' => 'Elementary Year attendee is required!'
                 ]
             ],
-            'high_school' => [
+            'updatehigh_school' => [
                 'rules' => 'required',
                 'errors' => [
                     'required' => 'High School name is required!'
                 ]
             ],
-            'high_address' => [
+            'updatehigh_address' => [
                 'rules' => 'required',
                 'errors' => [
                     'required' => 'Your Address is required!'
                 ]
             ],
-            'high_year' => [
+            'updatehigh_year' => [
                 'rules' => 'required',
                 'errors' => [
                     'required' => 'High School Year attendee is required!'
@@ -684,25 +684,25 @@ class Profile extends BaseController
             return redirect('retrieve_profile');
         }
         else {
-            $street = $this->request->getPost('street');
-            $gender = $this->request->getPost('gender');
-            $religion = $this->request->getPost('religion');
-            $birthday = $this->request->getPost('birthday');
-            $civil_status = $this->request->getPost('civil_status');
-            $nationality = $this->request->getPost('nationality');
-            $birthplace = $this->request->getPost('birthplace');
-            $baranggay = $this->request->getPost('baranggay');
-            $prov_add = $this->request->getPost('prov_add');
-            $contact = $this->request->getPost('contact');
-            $guardian_name = $this->request->getPost('guardian_name');
-            $guardian_contact = $this->request->getPost('guardian_contact');
-            $guardian_address = $this->request->getPost('guardian_address');
-            $elem_school = $this->request->getPost('elem_school');
-            $elem_address = $this->request->getPost('elem_address');
-            $elem_year = $this->request->getPost('elem_year');
-            $high_school = $this->request->getPost('high_school');
-            $high_address = $this->request->getPost('high_address');
-            $high_year = $this->request->getPost('high_year');
+            $street = $this->request->getPost('updatestreet');
+            $gender = $this->request->getPost('updategender');
+            $religion = $this->request->getPost('updatereligion');
+            $birthday = $this->request->getPost('updatebirthday');
+            $civil_status = $this->request->getPost('updatecivil_status');
+            $nationality = $this->request->getPost('updatenationality');
+            $birthplace = $this->request->getPost('updatebirthplace');
+            $baranggay = $this->request->getPost('updatebaranggay');
+            $prov_add = $this->request->getPost('updateprov_add');
+            $contact = $this->request->getPost('updatecontact');
+            $guardian_name = $this->request->getPost('updateguardian_name');
+            $guardian_contact = $this->request->getPost('updateguardian_contact');
+            $guardian_address = $this->request->getPost('updateguardian_address');
+            $elem_school = $this->request->getPost('updateelem_school');
+            $elem_address = $this->request->getPost('updateelem_address');
+            $elem_year = $this->request->getPost('updateelem_year');
+            $high_school = $this->request->getPost('updatehigh_school');
+            $high_address = $this->request->getPost('updatehigh_address');
+            $high_year = $this->request->getPost('updatehigh_year');
 
             $values = [
                 'email' => $email = session()->get('loggedInUser'),

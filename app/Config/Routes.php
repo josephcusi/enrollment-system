@@ -105,6 +105,7 @@ $routes->get('/newadmin', 'Admin::newadmin');
 $routes->get('/addadmin', 'Admin::addadmin');
 $routes->get('/adminlogout', 'Admin::adminlogout');
 $routes->post('/insertAdmin', 'Admin::insertAdmin');
+$routes->put('/adminUpdate/(:any)', 'Admin::adminUpdate/$1');
 
 //------------ADMIN STRAND------------
 $routes->get('/retrieve_strand', 'Strand::retrieve_strand');

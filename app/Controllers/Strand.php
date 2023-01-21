@@ -59,7 +59,7 @@ class Strand extends BaseController
             ];
 
             $data['validation'] = $this->validator;
-            return view('admin/strand', $data);
+            return redirect()->route('retrieve_strand', $data);
         }
         else
         {
@@ -119,7 +119,8 @@ class Strand extends BaseController
 
         if (!$validated)
         {
-            return $this->retrieve_strand();
+            $data['userName'] = $user_model->where('email', $email = session()->get('loggedInUser'))->find();
+            return redirect()->route('insert_strand', $data);
         }
         else
         {

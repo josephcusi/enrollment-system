@@ -111,9 +111,6 @@
 
 
           </div>
-          <?php if(session()->has('validation')){
-            $errorFlash = session()->getFlashdata('validation');
-          } ?>
           <!-- /.card-header -->
           <div class="card-body">
             <form action="<?= base_url('insertAdmin'); ?>" method="post"  enctype="multipart/form-data">
