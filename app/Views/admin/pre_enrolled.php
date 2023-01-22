@@ -118,7 +118,7 @@
               <th>Student LRN</th>
               <th>Name</th>
               <th>Grade Level</th>
-              <th>Section</th>
+              <th>Strand</th>
               <th>Status</th>
               <th>Actions</th>
             </tr>
@@ -127,13 +127,13 @@
           <?php foreach($pre_enrolled as $pre_enrolled_value):?>
             <tr>
               <td><?= $pre_enrolled_value['lrn'];?></td>
-              <td><?= $user['firstname'] .' ' . $user['middlename'] . ' ' . $user['lastname'];?></td>
+              <td><?//= $user['firstname'] .' ' . $user['middlename'] . ' ' . $user['lastname'];?></td>
               <td><?= $pre_enrolled_value['year_level'];?></td>
-              <td><?//= $pre_enrolled_value['section'];?></td>
+              <td><?= $pre_enrolled_value['strand'];?></td>
               <td><?= $pre_enrolled_value['status'];?></td>
               <td>
                 <a href="<?=base_url('viewPreEnroll')?>"><button type="button" class="btn btn-secondary btn-sm" style = "border-radius:15px">view</button>
-                <a href="#"><button type="button" class="btn btn-primary btn-sm"style = "border-radius:15px">delete</button>
+                
               </td>
             </tr>
             <?php endforeach;?>

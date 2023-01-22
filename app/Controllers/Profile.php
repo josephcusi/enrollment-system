@@ -287,7 +287,7 @@ class Profile extends BaseController
         $profile_model = new ProfileModel();
         $user_model = new UserModel();
         $email = session()->get('loggedInUser');
-
+     
         $count = count($profile_model->where('email', $email)->findAll());
 
         if($count < 1) {
@@ -393,7 +393,7 @@ class Profile extends BaseController
                 'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->findAll(),
                 'registration'=> $registration_model->findAll()
             ];
-
+        
             $data['validation'] = $this->validator;
             //session()->setFlashdata('sendapplication', 'Duplicate input');
             return redirect()->route('registration', $data);
@@ -436,7 +436,7 @@ class Profile extends BaseController
                 'prospectus'=> $prospectus_model->where('strand_id', $strand_id[0]['id'])->where('year_level', $yearlevel)->where('semester', $semester)->findAll(),
                 'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
                 'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->findAll()
-
+                
             ];
             //var_dump($values['prospectus']);
             return view('user/regSubject', $values);
@@ -459,7 +459,7 @@ class Profile extends BaseController
             'user' => $registration_model->find($id)
         ];
 
-        return view('user/updateReg', $data);
+        return view('user/updateReg', $user);
     }
     public function update($id)
     {
@@ -504,7 +504,7 @@ class Profile extends BaseController
          else
         {
             $user_model = new UserModel();
-            $prof_pic = $this->request->getFile('profile_pic');
+            $prof_pic = $this->request->getFile('profile_picture');
             if (!$prof_pic->hasMoved()) {
                 $prof_pic->move(FCPATH . 'profile');
 
@@ -734,3 +734,4 @@ class Profile extends BaseController
             }
         }
     }
+

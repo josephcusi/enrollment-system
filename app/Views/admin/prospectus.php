@@ -108,9 +108,6 @@
   <script>swal("Subject Added!", "You successfully added subject.", "success");</script>
   <?php endif ?>
 
-  <?php if(!empty(session()->getFlashdata('subjectdelete'))) : ?>
-  <script>swal("Subject Deleted!", "You successfully deleted subject.", "success");</script>
-  <?php endif ?>
 
   <?php if(!empty(session()->getFlashdata('notupdatesection'))) : ?>
   <script>swal("Duplicate Input!", "Please try another.", "warning");</script>
@@ -191,7 +188,6 @@
                     <td><?= $prospect['pre_requisit']?></td>
                     <td>
                       <a href="<?=base_url('edit_prospectus/'.$prospect['id'])?>"><button type="button" class="btn btn-secondary btn-sm"style = "border-radius:15px">update</button>
-                      <a href="#"><button type="button" class="btn btn-secondary btn-sm"style = "border-color:maroon;background-color:maroon;border-radius:15px">delete</button>
                     </td>
                   </tr>
                   <?php endforeach;?>

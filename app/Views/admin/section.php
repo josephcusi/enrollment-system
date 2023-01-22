@@ -108,10 +108,6 @@
   <script>swal("Section Added!", "You successfully added section.", "success");</script>
   <?php endif ?>
 
-  <?php if(!empty(session()->getFlashdata('subjectdelete'))) : ?>
-  <script>swal("Section Deleted!", "You successfully deleted section.", "success");</script>
-  <?php endif ?>
-
   <?php if(!empty(session()->getFlashdata('notupdatesection'))) : ?>
   <script>swal("Duplicate Input!", "Please try another.", "warning");</script>
   <?php endif ?>
@@ -189,7 +185,6 @@
                   <td>
                     <a href="<?=base_url('schedule')?>"><button type="button" class="btn btn-secondary btn-sm" style = "border-radius:15px">schedule</button>
                     <a href="<?=site_url('edit/'.$section_value['id'])?>"><button type="button" class="btn btn-secondary btn-sm"style = "border-radius:15px">update</button>
-                    <a href="<?= site_url('delete/'.$section_value['id']) ?>"><button type="button" class="btn btn-primary btn-sm"style = "border-radius:15px">delete</button>
                   </td>
                   </tr>
                   </tbody>

@@ -136,7 +136,7 @@
             <td><?=$strand_value['type']?></td>
             <td>
             <a href="<?=site_url('edit_strand/'.$strand_value['id'])?>"><button type="button" class="btn btn-secondary btn-sm"style = "border-radius:15px">update</button>
-              <a href="#"><button type="button" class="btn btn-primary btn-sm"style = "border-radius:15px">delete</button>
+             
             </td>
           </tr>
           <?php endforeach;?>

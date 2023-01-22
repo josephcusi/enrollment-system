@@ -33,7 +33,6 @@ class PreEnrolled extends BaseController
     {
         $registration_model = new RegistrationModel();
         $user_model = new UserModel();
-        $data ['user'] = $user_model->where('usertype', 'student')->first();
         $data ['pre_enrolled'] = $registration_model->findAll();
         $data['userName'] = $user_model->where('email', $email = session()->get('loggedInUser'))->find();
 

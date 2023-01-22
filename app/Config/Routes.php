@@ -118,7 +118,6 @@ $routes->get('/section', 'Section::section');
 $routes->post('/newsection', 'Section::newsection');
 $routes->get('/schedule', 'Section::schedule');
 $routes->get('/addSchedule', 'Section::addSchedule');
-$routes->get('/delete/(:any)', 'Section::delete/$1');
 $routes->get('/edit/(:any)', 'Section::edit/$1');
 $routes->put('/section_update/(:any)', 'Section::section_update/$1');
 $routes->get('/strandSec/(:any)', 'Section::strandSec/$1');

@@ -116,13 +116,6 @@ class Section extends BaseController
             }
         }
     }
-    public function delete($id = null)
-    {
-        $section_model = new SectionModel();
-        $section_model->delete($id);
-        session()->setFlashdata('subjectdelete', 'deleted');
-        return redirect()->route('section');
-    }
     public function edit($id)
     {
         $section_model = new SectionModel();
