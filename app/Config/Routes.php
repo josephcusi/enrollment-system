@@ -132,6 +132,7 @@ $routes->put('/updateProspectus/(:any)', 'Prospectus::updateProspectus/$1');
 $routes->get('/viewPreEnroll', 'PreEnrolled::viewPreEnroll');
 $routes->get('/enroll', 'PreEnrolled::enroll');
 $routes->get('/pre_enrolled_reg', 'PreEnrolled::pre_enrolled_reg');
+$routes->get('/viewPreEnroll/(:any)', 'PreEnrolled::viewPreEnroll/$1');
 
 
 //-----------User Schedule---------

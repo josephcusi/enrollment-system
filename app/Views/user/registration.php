@@ -123,7 +123,7 @@
                 <td><?=$user['lrn']; ?></td>
                 <td><?=$user['firstname'] .' ' . $user['middlename'] . ' ' . $user['lastname']; ?></td>
                 <td><?=isset($reg['strand']) ? $reg['strand'] : 'N/A'; ?></td>
-                <td><?=isset($reg['status']) ? $reg['status'] : 'N/A'; ?></td>
+                <td><?=isset($reg['state']) ? $reg['state'] : 'N/A'; ?></td>
                 <td>
                 <a href="<?=site_url('edit_reg/'.$reg['id'])?>"><button type="button" class="btn btn-secondary btn-sm" style = "border-radius:15px">update</button></a>
                 </td>

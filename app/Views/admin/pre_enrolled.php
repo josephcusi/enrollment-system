@@ -127,12 +127,12 @@
           <?php foreach($pre_enrolled as $pre_enrolled_value):?>
             <tr>
               <td><?= $pre_enrolled_value['lrn'];?></td>
-              <td><?//= $user['firstname'] .' ' . $user['middlename'] . ' ' . $user['lastname'];?></td>
+              <td><?= $pre_enrolled_value['firstname'] .' ' . $pre_enrolled_value['middlename'] . ' ' . $pre_enrolled_value['lastname'];?></td>
               <td><?= $pre_enrolled_value['year_level'];?></td>
               <td><?= $pre_enrolled_value['strand'];?></td>
-              <td><?= $pre_enrolled_value['status'];?></td>
+              <td><?= $pre_enrolled_value['state'];?></td>
               <td>
-                <a href="<?=base_url('viewPreEnroll')?>"><button type="button" class="btn btn-secondary btn-sm" style = "border-radius:15px">view</button>
+                <a href="<?=base_url('viewPreEnroll/'.$pre_enrolled_value['id'])?>"><button type="button" class="btn btn-secondary btn-sm" style = "border-radius:15px">view</button>
                 
               </td>
             </tr>

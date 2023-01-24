@@ -103,14 +103,14 @@
 <br>
   <!-- Main content -->
   <section class="content-header">
-
+    <?php $i = 0; foreach($pre_enrolled as $new_pre_enrolled):?>
+      <?php  $i++; if ($i == 1):?>
     <div class="card card-primary card-outline mx-auto" style = "width:98%; border-radius:15px;">
       <div class="card-header">
         <h3 class="card-title"style = "font-family:poppins">Pre-Enrolled Table</h3>
       </div>
       <!-- /.card-header -->
       <div class="card-body">
-
       <div class="tab-pane" id="address">
         <form class="form-horizontal" action="#" method="post">
           <p class="a" style="font-size:1.5em; font-family: Poppins;color:maroon;">Pre-Enrollment Info</p>
@@ -118,38 +118,38 @@
             <label for="Strand" class="col-sm-2 col-form-label">Strand</label>
             <div class="col-sm-3">
               <div>
-                <input type="text" name="Strand" class="form-control" id="Strand" value="HUMSS" disabled>
+                <input type="text" name="Strand" class="form-control" id="Strand" value="<?=$new_pre_enrolled['strand'];?>" disabled>
               </div>
             </div>
           </div>
           <div class="form-group row">
             <label for="yearLevel" class="col-sm-2 col-form-label">Year Level</label>
             <div class="col-sm-3">
-              <input type="text" name="yearLevel" class="form-control" id="yearLevel" value="Grade 12" disabled>
+              <input type="text" name="yearLevel" class="form-control" id="yearLevel" value="<?=$new_pre_enrolled['year_level'];?>" disabled>
             </div>
           </div>
           <div class="form-group row">
             <label for="semester" class="col-sm-2 col-form-label">Semester</label>
             <div class="col-sm-3">
-              <input type="text" class="form-control" name="semester" id="semester" value="1st Sem" disabled>
+              <input type="text" class="form-control" name="semester" id="semester" value="<?=$new_pre_enrolled['semester'];?>" disabled>
             </div>
           </div>
           <div class="form-group row">
             <label for="schoolyear" class="col-sm-2 col-form-label">School Year</label>
             <div class="col-sm-3">
-              <input type="text" name="schoolyear" class="form-control" id="schoolyear" value="2021-2022" disabled>
+              <input type="text" name="schoolyear" class="form-control" id="schoolyear" value="<?=$new_pre_enrolled['year'];?>" disabled>
             </div>
           </div>
           <div class="form-group row">
             <label for="date" class="col-sm-2 col-form-label">Date</label>
             <div class="col-sm-3">
-              <input type="text" name="date" class="form-control" id="date" value="2021-09-12" disabled>
+              <input type="text" name="date" class="form-control" id="date" value="<?=$new_pre_enrolled['student_created_at'];?>" disabled>
             </div>
           </div>
           <div class="form-group row">
             <label for="status" class="col-sm-2 col-form-label">Status</label>
             <div class="col-sm-3">
-              <input type="text" name="status" class="form-control" id="status" value="Pending" disabled>
+              <input type="text" name="status" class="form-control" id="status" value="<?=$new_pre_enrolled['state'];?>" disabled>
             </div>
           </div>
       </div>
@@ -159,44 +159,44 @@
         <label for="fullname" class="col-sm-2 col-form-label">Full Name</label>
         <div class="col-sm-3">
           <div>
-            <input type="text" name="fullname" class="form-control" id="fullname" value="Bayot Kyusi" disabled>
+            <input type="text" name="fullname" class="form-control" id="fullname" value="<?=$new_pre_enrolled['firstname'];?><?=" "?><?=$new_pre_enrolled['middlename'];?><?=" "?><?=$new_pre_enrolled['lastname'];?>" disabled>
           </div>
         </div>
       </div>
       <div class="form-group row">
         <label for="gender" class="col-sm-2 col-form-label">Gender</label>
         <div class="col-sm-3">
-          <input type="text" name="gender" class="form-control" id="gender" value="Female" disabled>
+          <input type="text" name="gender" class="form-control" id="gender" value="<?=$new_pre_enrolled['gender'];?>" disabled>
         </div>
       </div>
       <div class="form-group row">
         <label for="birthday" class="col-sm-2 col-form-label">Birthday</label>
         <div class="col-sm-3">
-          <input type="text" class="form-control" name="birthday" id="birthday" value="09-01-2022" disabled>
+          <input type="text" class="form-control" name="birthday" id="birthday" value="<?=$new_pre_enrolled['birthday'];?>" disabled>
         </div>
       </div>
       <div class="form-group row">
         <label for="birthplace" class="col-sm-2 col-form-label">Birthplace</label>
         <div class="col-sm-3">
-          <input type="text" name="birthplace" class="form-control" id="birthplace" value="Oriental Mindoro" disabled>
+          <input type="text" name="birthplace" class="form-control" id="birthplace" value="<?=$new_pre_enrolled['birthplace'];?>" disabled>
         </div>
       </div>
       <div class="form-group row">
         <label for="inputCivil" class="col-sm-2 col-form-label">Civil Status</label>
         <div class="col-sm-3">
-          <input type="text" name="inputCivil" class="form-control" id="inputCivil" value="Separated" disabled>
+          <input type="text" name="inputCivil" class="form-control" id="inputCivil" value="<?=$new_pre_enrolled['civil_status'];?>" disabled>
         </div>
       </div>
       <div class="form-group row">
         <label for="religion" class="col-sm-2 col-form-label">Religion</label>
         <div class="col-sm-3">
-          <input type="text" name="religion" class="form-control" id="religion" value="Athiest" disabled>
+          <input type="text" name="religion" class="form-control" id="religion" value="<?=$new_pre_enrolled['religion'];?>" disabled>
         </div>
       </div>
       <div class="form-group row">
         <label for="nationality" class="col-sm-2 col-form-label">Nationality</label>
         <div class="col-sm-3">
-          <input type="text" name="nationality" class="form-control" id="nationality" value="Canadian" disabled>
+          <input type="text" name="nationality" class="form-control" id="nationality" value="<?=$new_pre_enrolled['nationality'];?>" disabled>
         </div>
       </div>
       <div class="modal-footer justify-content-between">
@@ -206,6 +206,8 @@
      </form>
     </div>
   </div>
+  <?php endif;?>
+  <?php endforeach;?>
     <!-- /.card-body -->
   </div>
 

@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Controllers\BaseController;
 use App\Models\UserModel;
 use App\Models\ProfileModel;
+use App\Models\YearModel;
 use App\Libraries\Hash;
 
 class User extends BaseController
@@ -57,6 +58,8 @@ class User extends BaseController
                 $password = $this->request->getPost('password');
 
                 $user_model = new UserModel();
+                $year_level = new YearModel();
+                $year = $year_level->where('status', 'active')->first();
                 $user_info = $user_model->where('email', $email)->first();
 
                 if ($user_info) {
@@ -69,10 +72,20 @@ class User extends BaseController
                     else
                     {
                         $userEmail = $user_info['email'];
+                        $data = [
+                            'id' => $user_info['id'],
+                            'email' => $user_info['email'],
+                            'lrn' => $user_info['lrn'],
+                            'profile_picture' => $user_info['profile_picture'],
+                            'semester' => $year['semester'],
+                            'year' => $year['year'],
+                        ];
+                        session()->set($data);
+                      session()->set('loggedInUser', $userEmail);
                         $profile = new Profile();
                         if($user_info['usertype'] == "student" and $user_info['status'] == "active")
                         {
-                          session()->set('loggedInUser', $userEmail);
+                           
                           session()->setFlashdata('dashboard', 'Welcome');
                           return $profile->retrieve_profile($userEmail);
 

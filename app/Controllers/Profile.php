@@ -316,7 +316,8 @@ class Profile extends BaseController
             'lrn' => $this->request->getVar('lrn'),
             'year_level' => $this->request->getVar('year_level'),
             'strand' => $this->request->getVar('strand'),
-            'semester' => $this->request->getVar('semester')
+            'semester' => $this->request->getVar('semester'),
+            'year' => session()->get('year')
         ];
         if($registration_model->insert($data)){
             //session()->setFlashdata('sendapplication', 'Duplicate input');
@@ -412,7 +413,7 @@ class Profile extends BaseController
                 'strand' => $strand,
                 'year_level'=> $yearlevel,
                 'semester' => $semester,
-                'status' => 'pending'
+                'state' => 'pending'
             ];
             $yearSem = [
                 'year_level' => $yearlevel,

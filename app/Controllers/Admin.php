@@ -23,7 +23,9 @@ class Admin extends BaseController
             'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
             'usertypestudent' => $user_model->where('usertype', 'student')->get()->getNumRows(),
             'usertypeadmin' => $user_model->where('usertype', 'admin')->get()->getNumRows(),
-            'status' => $registration_model->where('status', 'pending')->get()->getNumRows()
+            'status' => $registration_model->where('state', 'pending')->get()->getNumRows()
+
+
         ];
         
 		return view('admin/admindashboard', $data);
