@@ -121,7 +121,7 @@
                     </div>
                     <div class="form-group col-md-6">
                       <label for="inputTitle">Title</label>
-                      <input type="text" name="title" class="form-control" id="inputTitle" placeholder="Title" value="<?=$prospectus['title']?>">
+                      <input type="text" name="title" class="form-control" id="inputTitle" placeholder="Title" value="<?=$prospectus['subject_title']?>">
                     </div>
                     <div class="form-group col-md-6">
                       <label for="inputUnit">Unit</label>

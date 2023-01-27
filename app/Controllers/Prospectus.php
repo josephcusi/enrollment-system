@@ -114,7 +114,7 @@ class Prospectus extends BaseController
             $values = [
                 'strand_id' => $strand_id[0]['id'],
                 'subject' => $subject,
-                'title' => $title,
+                'subject_title' => $title,
                 'unit' => $unit,
                 'pre_requisit' => $pre_requisit,
                 'year_level' => $year_level,

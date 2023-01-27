@@ -171,7 +171,7 @@
             <table id="example1" class="table table-bordered table-striped" style = "font-family:poppins">
               <thead>
                 <tr>
-                  <th>Subject</th>
+                  <th>Subject Code</th>
                   <th>Title</th>
                   <th>Unit</th>
                   <th>Pre-Requisit</th>
@@ -183,7 +183,7 @@
                     <?php foreach($prospectus as $prospect):?>
                   <tr>
                     <td><?= $prospect['subject']?></td>
-                    <td><?= $prospect['title']?></td>
+                    <td><?= $prospect['subject_title']?></td>
                     <td><?= $prospect['unit']?></td>
                     <td><?= $prospect['pre_requisit']?></td>
                     <td>
@@ -216,7 +216,7 @@
                     <div class="form-row">
                     <div class="form-group col-md-6">
                     <input type="hidden" name="strand" class="form-control" value="<?= $strand ?>">
-                      <label for="inputSubject">Subject</label>
+                      <label for="inputSubject">Subject Code</label>
 
                       <input type="text" name="subject" class="form-control" id="inputSubject" placeholder="Subject">
                       <span class="text-danger">

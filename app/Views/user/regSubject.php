@@ -112,9 +112,9 @@
                     <tbody>
                       <?php foreach($prospectus as $prospectus_value):?>
                       <tr>
-                        <td><input type="checkbox"></td>
+                        <td><input type="checkbox" name="propectus_id" value="<?=$prospectus_value['strand_id'];?>"></td>
                         <td><?= $prospectus_value['subject'];?></td>
-                        <td><?= $prospectus_value['title'];?></td>
+                        <td><?= $prospectus_value['subject_title'];?></td>
                         <td><?= $prospectus_value['unit'];?></td>
                         <td><?= $prospectus_value['pre_requisit'];?></td>
                       </tr>

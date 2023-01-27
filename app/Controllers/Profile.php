@@ -431,13 +431,14 @@ class Profile extends BaseController
             $user_model = new UserModel();
             $strand_model = new StrandModel();
             $profile_model = new ProfileModel();
+            $registration_model = new RegistrationModel();
             $strand_id = $strand_model->where('strand', $strand)->find();
 
             $values = [
                 'prospectus'=> $prospectus_model->where('strand_id', $strand_id[0]['id'])->where('year_level', $yearlevel)->where('semester', $semester)->findAll(),
                 'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
-                'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->findAll()
-                
+                'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->findAll(),
+                'subId' => $registration_model->first()
             ];
             //var_dump($values['prospectus']);
             return view('user/regSubject', $values);
@@ -505,7 +506,7 @@ class Profile extends BaseController
          else
         {
             $user_model = new UserModel();
-            $prof_pic = $this->request->getFile('profile_picture');
+            $prof_pic = $this->request->getFile('profile_pic');
             if (!$prof_pic->hasMoved()) {
                 $prof_pic->move(FCPATH . 'profile');
 
@@ -733,6 +734,10 @@ class Profile extends BaseController
             $profile_model->update($id, $values);
             return redirect('retrieve_profile');
             }
+        }
+        public function addsubject()
+        {
+            
         }
     }
 

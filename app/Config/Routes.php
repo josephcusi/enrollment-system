@@ -80,7 +80,7 @@ $routes->get('/newRegistration', 'Profile::newRegistration');
 $routes->get('/retrieve_yearUser', 'Profile::retrieve_yearUser');
 $routes->get('/retrieve_User', 'Profile::retrieve_User');
 $routes->get('/myprofile', 'Profile::myprofile');
-$routes->post('/insert_registration', 'Profile::insert_registration');
+$routes->post('/insert_registration/(:any)', 'Profile::insert_registration/$1');
 $routes->get('/updateReg', 'Profile::updateReg');
 $routes->get('/edit_reg/(:any)', 'Profile::edit_reg/$1');
 $routes->put('/update/(:any)', 'Profile::update/$1');
@@ -133,6 +133,7 @@ $routes->get('/viewPreEnroll', 'PreEnrolled::viewPreEnroll');
 $routes->get('/enroll', 'PreEnrolled::enroll');
 $routes->get('/pre_enrolled_reg', 'PreEnrolled::pre_enrolled_reg');
 $routes->get('/viewPreEnroll/(:any)', 'PreEnrolled::viewPreEnroll/$1');
+$routes->get('/enroll/(:any)', 'PreEnrolled::enroll/$1');
 
 
 //-----------User Schedule---------

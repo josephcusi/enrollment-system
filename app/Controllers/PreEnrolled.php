@@ -25,6 +25,7 @@ class PreEnrolled extends BaseController
         ->join('user_tbl', 'student_registration.lrn=user_tbl.lrn', 'right')
         ->join('user_profile', 'user_tbl.email=user_profile.email', 'right')
         ->where('student_registration.semester', session()->get('semester'))
+        ->where('user_profile.id', $id)
         ->where('school_year.year', session()->get('year'))->get()->getResultArray(),
         
         'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
@@ -32,10 +33,20 @@ class PreEnrolled extends BaseController
         // var_dump($data['pre_enrolled']);
         return view('admin/viewPreEnroll', $data);
     }
-    public function enroll()
+    public function enroll($id)
     {
       $user_model = new UserModel();
-      $data['userName'] = $user_model->where('email', $email = session()->get('loggedInUser'))->find();
+      $registration_model = new RegistrationModel();
+      $data = [ 
+        'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
+        'pre_enrolled' => $registration_model
+        ->select('*')->join('school_year', 'student_registration.semester=school_year.semester', 'right')
+        ->join('user_tbl', 'student_registration.lrn=user_tbl.lrn', 'right')
+        ->join('user_profile', 'user_tbl.email=user_profile.email', 'right')
+        ->where('student_registration.semester', session()->get('semester'))
+        ->where('user_profile.id', $id)
+        ->where('school_year.year', session()->get('year'))->first()
+    ];
       return view('admin/enroll', $data);
     }
     public function pre_enrolled_reg()

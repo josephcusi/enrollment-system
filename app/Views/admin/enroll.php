@@ -123,7 +123,7 @@
                    </div>
                    <div class="form-group col-md-6">
                       <label for="studentLRN" class="col-sm-6 col-form-label">Student LRN</label>
-                      <input type="text" class="form-control" id="studentLRN" placeholder="Learning Reference Number">
+                      <input type="text" class="form-control" value="<?=$pre_enrolled['lrn'];?>" id="studentLRN" placeholder="Learning Reference Number" disabled>
                    </div>
                    </div>
               </div>
