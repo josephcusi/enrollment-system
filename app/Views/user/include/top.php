@@ -40,9 +40,6 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="<?=base_url()?>/dist/css/adminlte.min.css">
 
-
-    <link rel="stylesheet" href="<?=base_url()?>/plugins/bs-stepper/css/bs-stepper.min.css">
-
   <style>
     /*!
  *   AdminLTE v3.2.0
