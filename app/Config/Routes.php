@@ -97,6 +97,7 @@ $routes->put('/updateUserProfile/(:any)', 'Profile::updateUserProfile/$1');
 //------------ADMIN PROFILE------------
 $routes->group('', ['filter' => 'AuthCheck'], function ($routes) {
 $routes->get('/admin', 'Admin::admin');
+$routes->get('gender-data', 'Admin::admin');
 $routes->get('/pre_enrolled', 'Admin::pre_enrolled');
 $routes->get('/prospectus', 'Admin::prospectus');
 $routes->get('/grading', 'Admin::grading');

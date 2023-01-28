@@ -462,13 +462,14 @@
                           data-nationality="<?=$myProfile['nationality'];?>" data-birthday="<?=$myProfile['birthday'];?>" data-birthplace="<?=$myProfile['birthplace'];?>" data-street="<?=$myProfile['street'];?>"
                           data-baranggay="<?=$myProfile['baranggay'];?>" data-prov_add="<?=$myProfile['prov_add'];?>" data-contact="<?=$myProfile['contact'];?>" data-guardian_name="<?=$myProfile['guardian_name'];?>"
                           data-guardian_contact="<?=$myProfile['guardian_contact'];?>" data-guardian_address="<?=$myProfile['guardian_address'];?>" data-elem_school="<?=$myProfile['elem_school'];?>" data-elem_address="<?=$myProfile['elem_address'];?>"
-                          data-elem_year="<?=$myProfile['elem_year'];?>" data-high_school="<?=$myProfile['high_school'];?>" data-high_address="<?=$myProfile['high_address'];?>" data-high_year="<?=$myProfile['high_year'];?>"                        
+                          data-elem_year="<?=$myProfile['elem_year'];?>" data-high_school="<?=$myProfile['high_school'];?>" data-high_address="<?=$myProfile['high_address'];?>" data-high_year="<?=$myProfile['high_year'];?>"
                           >Update</a>
                         </div>
                       </div>
                     </div>
                     </form>
                     <?php include 'modal/updateProfile.php'?>
+
                   </div>
                   <?php endforeach; ?>
                   <?php endif; ?>

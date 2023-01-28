@@ -85,7 +85,7 @@ class User extends BaseController
                         $profile = new Profile();
                         if($user_info['usertype'] == "student" and $user_info['status'] == "active")
                         {
-                           
+
                           session()->setFlashdata('dashboard', 'Welcome');
                           return $profile->retrieve_profile($userEmail);
 
@@ -208,7 +208,5 @@ class User extends BaseController
             session()->remove('loggedInUser');
         }
         return redirect()->to('login?access=loggedout')->with('logoutz', 'Log Out');
-
-
     }
 }

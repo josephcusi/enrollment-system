@@ -78,7 +78,7 @@
         <li class="nav-item"style = "font-family:poppins;">
             <li class="nav-item"style = "font-family:poppins;">
               <a href="<?=base_url('/newadmin')?>" class="nav-link">
-                <i class="fa-sharp fa-solid fa-envelopes-bulk"></i>
+                <i class="nav-icon fa-solid fa-user"></i>
                 <p>Admin</p>
               </a>
             </li>

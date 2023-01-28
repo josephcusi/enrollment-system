@@ -1,33 +1,68 @@
 <?php
 
 namespace App\Controllers;
-
+use CodeIgniter\Database\BaseConnection;
+use CodeIgniter\Database\ConnectionInterface;
 use App\Models\UserModel;
 use App\Models\RegistrationModel;
+use App\Models\ProfileModel;
 use App\Libraries\Hash;
 
 use App\Controllers\BaseController;
 
 class Admin extends BaseController
 {
+    protected $db;
     public function __construct()
     {
         helper(['url', 'form']);
+        $this->db = \Config\Database::connect();
     }
+
+    // public function getGenderData()
+    // {
+    //     $male = $this->db->where('user_profile', array('gender' => 'male'))->num_rows();
+    //     $female = $this->db->where('user_profile', array('gender' => 'female'))->num_rows();
+    //     return array('male' => $male, 'female' => $female);
+    // }
+
     public function admin()
     {
         $user_model = new UserModel();
+        $profile_model = new ProfileModel();
         $registration_model = new RegistrationModel();
+        $male = $this->db->table('user_profile')->where('gender', 'male')->countAllResults();
+        $female = $this->db->table('user_profile')->where('gender', 'female')->countAllResults();
+
+        $total = $male + $female;
+
+        if ($total > 0) {
+            //Calculate the percentage
+            $male_percentage = ($male / $total) * 100;
+            $female_percentage = ($female / $total) * 100;
+        } else {
+            $male_percentage = 0;
+            $female_percentage = 0;
+        }
         $data = [
+            'male_percentage' => $male_percentage,
+            'female_percentage' => $female_percentage,
+            'male' => $profile_model->where('gender', 'male')->get()->getNumRows(),
+            'female' => $profile_model->where('gender', 'female')->get()->getNumRows(),
             'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
             'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
             'usertypestudent' => $user_model->where('usertype', 'student')->get()->getNumRows(),
             'usertypeadmin' => $user_model->where('usertype', 'admin')->get()->getNumRows(),
+            'humss' => $registration_model->where('strand', 'HUMSS')->get()->getNumRows(),
+            'stem' => $registration_model->where('strand', 'STEM')->get()->getNumRows(),
+            'abm' => $registration_model->where('strand', 'ABM')->get()->getNumRows(),
+            'grade11' => $registration_model->where('year_level', 'Grade 11')->get()->getNumRows(),
+            'grade12' => $registration_model->where('year_level', 'Grade 12')->get()->getNumRows(),
             'status' => $registration_model->where('state', 'pending')->get()->getNumRows()
 
 
         ];
-        
+
 		return view('admin/admindashboard', $data);
     }
     public function pre_enrolled()
@@ -224,7 +259,7 @@ class Admin extends BaseController
             $middlename = $this->request->getPost('middlename');
             $password = $this->request->getPost('newPassword');
             $prof_pic = $this->request->getFile('profile_picture');
-            
+
             if (!$prof_pic->hasMoved()) {
                 $prof_pic->move(FCPATH . 'profile');
 

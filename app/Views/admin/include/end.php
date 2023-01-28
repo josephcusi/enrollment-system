@@ -53,6 +53,15 @@
 <script src="<?=base_url()?>/dist/js/demo.js"></script>
 <script src="<?=base_url()?>/dist/js/ControlSidebar.js"></script>
 <script src="<?=base_url()?>/plugins/bs-stepper/js/bs-stepper.min.js"></script>
+
+<!-- ChartJS -->
+<script src="<?=base_url()?>/plugins/chart.js/Chart.min.js"></script>
+<!-- AdminLTE App -->
+
+<!-- AdminLTE for demo purposes -->
+
+<!-- Page specific script -->
+
 <script>
   $(function () {
     //Initialize Select2 Elements

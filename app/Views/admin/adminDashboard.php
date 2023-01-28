@@ -78,7 +78,7 @@
         <li class="nav-item"style = "font-family:poppins;">
             <li class="nav-item"style = "font-family:poppins;">
               <a href="<?=base_url('/newadmin')?>" class="nav-link">
-                <i class="fa-sharp fa-solid fa-envelopes-bulk"></i>
+                <i class="nav-icon fa-solid fa-user"></i>
                 <p>Admin</p>
               </a>
             </li>
@@ -125,94 +125,250 @@
     <div class="container-fluid">
 
       <!-- Info boxes -->
-      <div class="row">
 
-      <div class="col-12 col-sm-6 col-md-3">
-          <div class="info-box" style = "color:maroon; font-family: 'Poppins';">
-            <span class="info-box-icon bg-info elevation-1"><i class="fas fa-users"></i></span>
+      <!-- neww -->
+      <div class="row" style = "font-family:poppins;">
+        <!-- ./col -->
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+          <!-- small box -->
 
+          <div class="small-box bg-info">
+            <div class="inner">
+              <h3><?=$usertypeadmin?></h3>
 
-            <div class="info-box-content">
-              <span class="info-box-text">Total Administrator</span>
-              <span class="info-box-number">
-                <?= $usertypeadmin ?>
-              </span>
+              <p>Total Admin</p>
             </div>
-            <!-- /.info-box-content -->
-          </div>
-          <!-- /.info-box -->
-        </div>
-        <div class="col-12 col-sm-6 col-md-3">
-          <div class="info-box" style = "color:maroon; font-family: 'Poppins';">
-            <span class="info-box-icon bg-info elevation-1"><i class="fas fa-users"></i></span>
-
-
-            <div class="info-box-content">
-              <span class="info-box-text">Total Student</span>
-              <span class="info-box-number">
-                <?= $usertypestudent ?>
-              </span>
+            <div class="icon">
+              <i class="ion ion-person-add"></i>
             </div>
-            <!-- /.info-box-content -->
+            <a href="#" class="small-box-footer"><i class=""></i></a>
           </div>
-          <!-- /.info-box -->
         </div>
-        <!-- /.col -->
-        <div class="col-12 col-sm-6 col-md-3">
-          <div class="info-box mb-3"style = "color:maroon; font-family: 'Poppins';">
-            <span class="info-box-icon bg-success elevation-1"><i class="fas fa-thumbs-up"></i></span>
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+          <!-- small box -->
+          <div class="small-box bg-info">
+            <div class="inner">
 
-            <div class="info-box-content">
-              <span class="info-box-text">Total Pre-Enrolled</span>
-              <span class="info-box-number">N/A</span>
+              <h3><?=$usertypestudent?></h3>
+
+              <p>Total Student</p>
             </div>
-            <!-- /.info-box-content -->
-          </div>
-          <!-- /.info-box -->
-        </div>
-        <!-- /.col -->
-
-        <!-- fix for small devices only -->
-        <div class="clearfix hidden-md-up"></div>
-
-        <div class="col-12 col-sm-6 col-md-3">
-          <div class="info-box mb-3" style = "color:maroon; font-family: 'Poppins';">
-            <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-exclamation-triangle"></i></span>
-
-            <div class="info-box-content">
-              <span class="info-box-text">Pending</span>
-              <span class="info-box-number"><?= $status ?></span>
+            <div class="icon">
+              <i class="ion ion-person-add"></i>
             </div>
-            <!-- /.info-box-content -->
+            <a href="#" class="small-box-footer"><i class=""></i></a>
           </div>
-          <!-- /.info-box -->
         </div>
-        <!-- /.col -->
-        <div class="col-12 col-sm-6 col-md-3">
-          <div class="info-box mb-3"style = "color:maroon; font-family: 'Poppins';">
-            <span class="info-box-icon bg-danger elevation-1"><i class="	fas fa-radiation"></i></span>
+        <div class="col-lg-3 col-6">
+          <!-- small box -->
+          <div class="small-box bg-success">
+            <div class="inner">
+              <h3>0<sup style="font-size: 20px"></sup></h3>
 
-            <div class="info-box-content">
-              <span class="info-box-text">Rejected</span>
-              <span class="info-box-number">N/A</span>
+              <p>Total Pre-Enrolled</p>
             </div>
-            <!-- /.info-box-content -->
+            <div class="icon">
+              <i class="ion ion-stats-bars"></i>
+            </div>
+            <a href="#" class="small-box-footer"><i class=""></i></a>
           </div>
-          <!-- /.info-box -->
         </div>
-        <!-- /.col -->
+        <div class="col-lg-3 col-6">
+          <!-- small box -->
+          <div class="small-box bg-warning">
+            <div class="inner">
+              <h3><?=$status?><sup style="font-size: 20px"></sup></h3>
+
+              <p>Pending</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-stats-bars"></i>
+            </div>
+            <a href="#" class="small-box-footer"><i class=""></i></a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-6">
+          <!-- small box -->
+          <div class="small-box bg-danger">
+            <div class="inner">
+              <h3>0<sup style="font-size: 20px"></sup></h3>
+
+              <p>Rejected</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-stats-bars"></i>
+            </div>
+            <a href="#" class="small-box-footer"><i class=""></i></a>
+          </div>
+        </div>
+        <!-- ./col -->
       </div>
-      <!-- /.row -->
+      </div>
+      <br>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="card">
 
-      <!-- /.row -->
+                  <div class="card-body" >
+                    <p style = "font-family:poppins;">Gender Records</p>
+                    <canvas id="chart-gender" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                  </div>
+                  <!-- /.card-body -->
+                </div>
+              </div>
+              <!-- /.col (LEFT) -->
+              <div class="col-md-6">
+                <!-- LINE CHART -->
+                <div class="card ">
+                  <div class="card-body">
+                    <p style = "font-family:poppins;">Year Level Records</p>
+                    <canvas id="donutChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                  </div>
+                  <!-- /.card-body -->
+                </div>
+              </div>
+              <div class="col-md-6">
+              <div class="card">
 
-      <!-- Main row -->
-      <!-- /.row -->
-    </div><!--/. container-fluid -->
-  </section>
-  <!-- /.content -->
-</div>
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+                <div class="card-body">
+                  <p style = "font-family:poppins;">Strand Records</p>
+                  <canvas id="strand" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                </div>
+                <!-- /.card-body -->
+              </div>
+              </div>
+              <div class="col-md-6">
+              <div class="card">
+
+                <div class="card-body">
+                  <p style = "font-family:poppins;">Strand Records</p>
+                  <canvas id="lodi" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                </div>
+                <!-- /.card-body -->
+              </div>
+              </div>
+              <!-- /.col (RIGHT) -->
+            </div>
+            <!-- /.row -->
+          </div><!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+      </div>
+      <!-- /.content-wrapper -->
+
+      <!-- Control Sidebar -
+
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- jQuery -->
+
+    <!-- Page specific script -->
+
 </body>
+
 <?= $this->include('admin/include/end')?>
+<script>
+  $(function () {
+    /* ChartJS
+     * -------
+     * Here we will create a few charts using ChartJS
+     */
+    //-------------
+    //- DONUT CHART -
+    //-------------
+    // Get context with jQuery - using jQuery's .get() method.
+    var donutChartCanvas = $('#donutChart').get(0).getContext('2d')
+    var donutData        = {
+      labels: ['GRADE 11', 'GRADE 12'],
+      datasets: [
+        {
+          data: [<?= $grade11 ?>, <?= $grade12 ?>],
+          backgroundColor : ['#800000', '#212529',],
+        }
+      ]
+    }
+    var donutOptions     = {
+      maintainAspectRatio : false,
+      responsive : true,
+    }
+    //Create pie or douhnut chart
+    // You can switch between pie and douhnut using the method below.
+    new Chart(donutChartCanvas, {
+      type: 'doughnut',
+      data: donutData,
+      options: donutOptions
+    })
+
+    //-------------
+    //- PIE CHART -
+    //-------------
+    // Get context with jQuery - using jQuery's .get() method.
+    var donutChartCanvas = $('#chart-gender').get(0).getContext('2d')
+    var donutData        = {
+      labels: ['MALE', 'FEMALE'],
+      datasets: [
+        {
+          data: [<?= $male ?>, <?= $female ?>],
+          backgroundColor : ['#800000', '#212529',],
+        }
+      ]
+    }
+    var donutOptions     = {
+      maintainAspectRatio : false,
+      responsive : true,
+    }
+    //Create pie or douhnut chart
+    // You can switch between pie and douhnut using the method below.
+    new Chart(donutChartCanvas, {
+      type: 'pie',
+      data: donutData,
+      options: donutOptions
+    })
+    var donutChartCanvas = $('#strand').get(0).getContext('2d')
+    var donutData        = {
+      labels: ['HUMSS', 'STEM', 'ABM'],
+      datasets: [
+        {
+          data: [<?= $humss ?>, <?= $stem ?>, <?=$abm?>],
+          backgroundColor : ['#800000', '#212529','e8e19d'],
+        }
+      ]
+    }
+    var donutOptions     = {
+      maintainAspectRatio : false,
+      responsive : true,
+    }
+    //Create pie or douhnut chart
+    // You can switch between pie and douhnut using the method below.
+    new Chart(donutChartCanvas, {
+      type: 'pie',
+      data: donutData,
+      options: donutOptions
+    })
+    var donutChartCanvas = $('#lodi').get(0).getContext('2d')
+    var donutData        = {
+      labels: ['Ralph', 'Randell', 'Reyonda'],
+      datasets: [
+        {
+          data: [5, 3, 9],
+          backgroundColor : ['#800000', '#212529','e8e19d'],
+        }
+      ]
+    }
+    var donutOptions     = {
+      maintainAspectRatio : false,
+      responsive : true,
+    }
+    //Create pie or douhnut chart
+    // You can switch between pie and douhnut using the method below.
+    new Chart(donutChartCanvas, {
+      type: 'pie',
+      data: donutData,
+      options: donutOptions
+    })
+  })
+</script>
 <?= $this->include('admin/include/footer')?>
