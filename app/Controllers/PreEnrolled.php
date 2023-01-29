@@ -3,6 +3,9 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use CodeIgniter\Email\Email;
+use CodeIgniter\Database\BaseConnection;
+use CodeIgniter\Database\ConnectionInterface;
 use App\Models\UserModel;
 use App\Models\RegistrationModel;
 use App\Models\SectionModel;
@@ -10,8 +13,10 @@ use App\Models\ProfileModel;
 
 class PreEnrolled extends BaseController
 {
+    protected $db;
     public function __construct()
     {
+        $this->db = \Config\Database::connect();
         helper(['url', 'form']);
     }
     public function viewPreEnroll($id)
@@ -46,6 +51,7 @@ class PreEnrolled extends BaseController
     {
         $user_profile = new ProfileModel();
         $user_model = new UserModel();
+        $lrn = $this->request->getPost('lrn');
         $registration_model = new RegistrationModel();
 
         $data = [
@@ -62,9 +68,26 @@ class PreEnrolled extends BaseController
 
         'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
         ];
+        $session = session();
 
-    // var_dump($data['pre_enrolled']);
-      return view('admin/enroll', $data);
+        $email_data = $registration_model->select('*')->join('school_year', 'student_registration.semester=school_year.semester', 'right')
+        ->join('user_tbl', 'student_registration.lrn=user_tbl.lrn', 'right')
+        ->join('user_profile', 'user_tbl.email=user_profile.email', 'right')
+        ->join('strand_tbl', 'student_registration.strand = strand_tbl.strand', 'right')
+        ->join('section_tbl', 'strand_tbl.id = section_tbl.strand_id', 'right')
+        ->join('student_registration as s', 'user_tbl.lrn=s.lrn', 'right')
+        ->where('student_registration.semester', session()->get('semester'))
+        ->where('user_profile.id', $id)
+        ->where('school_year.year', session()->get('year'))->first();
+        $email = \Config\Services::email();
+        $email->setTo($email_data['email']);
+        $email->setMailType("html");
+        $email->setSubject('Enrollment Status Updated');
+        $email->setFrom('zasuke277379597@gmail.com', 'DOROTEO S. MENDOZA SR. MEMORIAL NATIONAL HIGH SCHOOL');
+        $email->setMessage("Congratulations on your enrollment, we're excited to welcome you to the program and support your academic journey!");
+        $email->send();
+
+       return view('admin/enroll', $data);
     }
     public function pre_enrolled_reg()
     {
@@ -89,6 +112,7 @@ class PreEnrolled extends BaseController
     {
         $registration_model = new RegistrationModel();
         $section_model = new SectionModel();
+
         $state = $this->request->getPost('state');
         $section = $this->request->getPost('section');
 
@@ -111,7 +135,7 @@ class PreEnrolled extends BaseController
         'user_section' => $section
 
     ];
-
+    
     $registration_model->update($id, $value);
     return redirect()->route('pre_enrolled_reg');
     }

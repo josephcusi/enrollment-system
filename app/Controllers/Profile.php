@@ -486,7 +486,7 @@ class Profile extends BaseController
             $email->setMailType("html");
             $email->setSubject('Application Recieved');
             $email->setFrom('zasuke277379597@gmail.com', 'DOROTEO S. MENDOZA SR. MEMORIAL NATIONAL HIGH SCHOOL');
-            $email->setMessage("We recieve your application. Please wait for confirmation of your enrollment status.");
+            $email->setMessage("Thank you for submitting your enrollment application. Our team is currently reviewing it and will get back to you as soon as possible with an update on your status. Please allow us some time to process your application and make a decision. In the meantime, if you have any questions or need additional information, please feel free to reach out to us.");
             $email->send();
             //var_dump($values['prospectus']);
             return view('user/regSubject', $values);
