@@ -14,7 +14,7 @@ class RegistrationModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['lrn', 'strand', 'year_level', 'year', 'semester', 'state'];
+    protected $allowedFields    = ['lrn','user_section', 'strand', 'year_level', 'year', 'semester', 'state'];
 
     // Dates
     protected $useTimestamps = false;

@@ -155,13 +155,13 @@
 
                   <ul class="list-group list-group-unbordered mb-3">
                     <li class="list-group-item" style="color:gray;font-family:poppins">
-                      <b>Strand</b> <a class="float-right" style="color:maroon; font-family:poppins"><?=$student_registration['strand'];?></a>
+                      <b>Strand</b> <a class="float-right" style="color:maroon; font-family:poppins"><?=isset($student_registration['strand']) ? $student_registration['strand'] : 'N/A' ;?></a>
                     </li>
                     <li class="list-group-item" style="color:gray;font-family:poppins">
-                      <b>Section</b><a class="float-right" style="color:maroon;font-family:poppins">NA</a>
+                      <b>Section</b><a class="float-right" style="color:maroon;font-family:poppins"><?=isset($student_registration['semester']) ? $student_registration['user_section'] : 'N/A' ;?></a>
                     </li>
                     <li class="list-group-item" style="color:gray;font-family:poppins">
-                      <b>Semester</b> <a class="float-right" style="color:maroon;font-family:poppins">NA</a>
+                      <b>Semester</b> <a class="float-right" style="color:maroon;font-family:poppins"><?=isset($student_registration['semester']) ? $student_registration['semester'] : 'N/A' ;?></a>
                     </li>
 
                   </ul>
