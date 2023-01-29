@@ -109,12 +109,12 @@
             <div class="card card-primary card-outline" style = "">
               <div class="card-body box-profile">
                 <div class="text-center">
-
+                   <?php foreach($subject as $sub):?>
                 </div>
                 <p class="text-muted text-left">Strand</p>
                 <ul class="list-group list-group-unbordered mb-3">
                   <li class="list-group-item">
-                    <b>HUMSS</b>
+                       <b><?=$sub['strand'];?></b>
                   </li>
                 </ul>
               </div>
@@ -148,13 +148,14 @@
                     </thead>
                     <tbody>
                       <tr>
-                        <td>Fil01</td>
-                        <td>Filipino Sheesh</td>
-                        <td>3</td>
-                        <td>Fil02</td>
+                        <td><?=$sub['subject'];?></td>
+                        <td><?=$sub['subject_title'];?></td>
+                        <td><?=$sub['unit'];?></td>
+                        <td><?=$sub['pre_requisit'];?></td>
                         <td></td>
                         <td></td>
                       </tr>
+                       <?php endforeach?>
                     </tbody>
                     <tfoot>
                     </tfoot>

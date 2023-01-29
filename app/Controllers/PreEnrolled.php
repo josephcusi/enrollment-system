@@ -52,14 +52,16 @@ class PreEnrolled extends BaseController
         ->select('*')->join('school_year', 'student_registration.semester=school_year.semester', 'right')
         ->join('user_tbl', 'student_registration.lrn=user_tbl.lrn', 'right')
         ->join('user_profile', 'user_tbl.email=user_profile.email', 'right')
+        ->join('strand_tbl', 'student_registration.strand = strand_tbl.strand', 'right')
+        ->join('section_tbl', 'strand_tbl.id = section_tbl.strand_id', 'right')
         ->join('student_registration as s', 'user_tbl.lrn=s.lrn', 'right')
         ->where('student_registration.semester', session()->get('semester'))
         ->where('user_profile.id', $id)
         ->where('school_year.year', session()->get('year'))->first(),
-        
+
         'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
         ];
-    
+
     // var_dump($data['pre_enrolled']);
       return view('admin/enroll', $data);
     }
@@ -85,10 +87,13 @@ class PreEnrolled extends BaseController
     public function enrolled($id)
     {
         $registration_model = new RegistrationModel();
+        $section_model = new SectionModel();
         $state = $this->request->getPost('state');
+        $section = $this->request->getPost('section');
 
     $value = [
-        'state' => $state
+        'state' => $state,
+        'user_section' => $section
     ];
 
     $registration_model->update($id, $value);
@@ -98,9 +103,12 @@ class PreEnrolled extends BaseController
     {
         $registration_model = new RegistrationModel();
         $state = "Rejected";
+        $section = "N/A";
 
     $value = [
-        'state' => $state
+        'state' => $state,
+        'user_section' => $section
+
     ];
 
     $registration_model->update($id, $value);

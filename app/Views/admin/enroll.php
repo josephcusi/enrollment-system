@@ -120,8 +120,8 @@
                    <div class="form-group col-md-6">
                     <input type="hidden" value="Enrolled" name="state">
                      <label for="section">Section</label>
-                     <select class="form-control"id="section" name = "section">
-                     <option type="text" class="form-control" id="section">sample</option>
+                     <select class="form-control" id="section" name = "section">
+                     <option type="text" class="form-control" id="section"><?=$pre_enrolled['section'];?></option>
                      </select>
                    </div>
                    <div class="form-group col-md-6">

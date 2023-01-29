@@ -41,10 +41,37 @@ class Profile extends BaseController
     {
         $profile_model = new ProfileModel();
         $user_model = new UserModel();
+        $registration_model = new RegistrationModel();
+        $prospectus_model = new ProspectusModel();
+        $subject = $registration_model->where('state', 'Enrolled')->first();
         $user = [
             'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
             'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->findAll()
         ];
+        if(!$subject){
+            $user = [
+                'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
+                'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->findAll(),
+                'subject' => $prospectus_model->findAll(),
+            ];
+            // var_dump($user['subject']);
+            // return view('user/userProspectus', $user);
+            return redirect()->route('registration');
+        }
+        else{
+            $user = [
+                'subject' => $registration_model->select('*')
+                ->join('user_tbl', 'student_registration.lrn = user_tbl.lrn', 'right')
+                ->join('strand_tbl', 'student_registration.strand = strand_tbl.strand', 'right')
+                ->join('prospectrus_tbl', 'strand_tbl.id = prospectrus_tbl.strand_id')
+                ->where('student_registration.lrn', session()->get('lrn'))
+                ->get()->getResultArray(),
+                'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
+                'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->findAll()
+            ];
+             return view('user/userProspectus', $user);
+                //    var_dump($user['subject']);
+        }
         return view('user/userProspectus', $user);
     }
     public function newRegistration()
