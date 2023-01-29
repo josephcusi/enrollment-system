@@ -136,6 +136,7 @@ $routes->get('/pre_enrolled_reg', 'PreEnrolled::pre_enrolled_reg');
 $routes->get('/viewPreEnroll/(:any)', 'PreEnrolled::viewPreEnroll/$1');
 $routes->get('/enroll/(:any)', 'PreEnrolled::enroll/$1');
 $routes->put('/enrolled/(:any)', 'PreEnrolled::enrolled/$1');
+$routes->get('/rejected/(:any)', 'PreEnrolled::rejected/$1');
 
 
 //-----------User Schedule---------

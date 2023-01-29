@@ -27,8 +27,16 @@ class PreEnrolled extends BaseController
         ->where('student_registration.semester', session()->get('semester'))
         ->where('user_profile.id', $id)
         ->where('school_year.year', session()->get('year'))->get()->getResultArray(),
-        
         'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
+            'rejected' => $registration_model
+        ->select('*')->join('school_year', 'student_registration.semester=school_year.semester', 'right')
+        ->join('user_tbl', 'student_registration.lrn=user_tbl.lrn', 'right')
+        ->join('user_profile', 'user_tbl.email=user_profile.email', 'right')
+        ->join('student_registration as s', 'user_tbl.lrn=s.lrn', 'right')
+        ->where('student_registration.semester', session()->get('semester'))
+        ->where('user_profile.id', $id)
+        ->where('school_year.year', session()->get('year'))->first(),
+
         ];
         // var_dump($data['pre_enrolled']);
         return view('admin/viewPreEnroll', $data);
@@ -78,6 +86,18 @@ class PreEnrolled extends BaseController
     {
         $registration_model = new RegistrationModel();
         $state = $this->request->getPost('state');
+
+    $value = [
+        'state' => $state
+    ];
+
+    $registration_model->update($id, $value);
+    return redirect()->route('pre_enrolled_reg');
+    }
+    public function rejected($id)
+    {
+        $registration_model = new RegistrationModel();
+        $state = "Rejected";
 
     $value = [
         'state' => $state

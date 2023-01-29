@@ -201,7 +201,7 @@
       </div>
       <div class="modal-footer justify-content-between">
         <span><a href="<?=base_url('enroll/'.$new_pre_enrolled['id'])?>"><button type="button" class="btn btn-success btn-sm">ENROLL</button>
-        <a href="#"><button type="button" class="btn btn-danger btn-sm">REJECT</button></span>
+        <a href="<?=base_url('rejected/'.$rejected['id'])?>"><button type="button" class="btn btn-danger btn-sm">REJECT</button></span>
      </div>
      </form>
     </div>
