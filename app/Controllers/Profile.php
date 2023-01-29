@@ -55,17 +55,21 @@ class Profile extends BaseController
 
     public function retrieve_profile($emailvoid = null)
     {
+        $registration_model = new RegistrationModel();
         $profile_model = new ProfileModel();
         $email = session()->get('loggedInUser');
         $profile = $profile_model->where('email', $email)->findAll();
-
 
 
         $user_model = new UserModel();
         $user_profile = [
             'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
             'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->findAll(),
-            'profileUpdate' => $profile_model->where('email', $email)->findAll()
+            'profileUpdate' => $profile_model->where('email', $email)->findAll(),
+            'student_registration' => $registration_model->select('*')
+            ->join('user_tbl', 'student_registration.lrn = user_tbl.lrn', 'right')
+            ->where('student_registration.lrn', session()->get('lrn'))
+            ->first()
         ];
 
         if(count($profile) != 0)
@@ -75,14 +79,14 @@ class Profile extends BaseController
                 ->join('user_profile', 'user_tbl.email = user_profile.email', 'right')
                 ->where('user_tbl.email', $email)->get()->getResultArray();
             return view('user/userdashboard', $user_profile);
-
+            // var_dump( $user_profile['student_registration']);
         }
         else
         {
             $user_model = new UserModel();
             $user_profile['userInfo'] = $user_model->where('email', $email)->first();
-
             return view('user/userdashboard', $user_profile);
+            // var_dump( $user_profile['student_registration']);
         }
     }
     public function myprofile()

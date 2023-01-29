@@ -155,7 +155,7 @@
 
                   <ul class="list-group list-group-unbordered mb-3">
                     <li class="list-group-item" style="color:gray;font-family:poppins">
-                      <b>Strand</b> <a class="float-right" style="color:maroon; font-family:poppins">NA</a>
+                      <b>Strand</b> <a class="float-right" style="color:maroon; font-family:poppins"><?=$student_registration['strand'];?></a>
                     </li>
                     <li class="list-group-item" style="color:gray;font-family:poppins">
                       <b>Section</b><a class="float-right" style="color:maroon;font-family:poppins">NA</a>

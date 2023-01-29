@@ -113,9 +113,12 @@
                 <div class = "card-header">
                 <p style="font-size:20px; font-family: Poppins;color:maroon; margin-left:40%">Approve Maintenance</p>
               </div><br><br>
-                <form style = "margin-left:30%">
+                <form style = "margin-left:30%" action="<?= site_url('enrolled/'.$pre_enrolled['id']);?>" method='post'>
+                <input type="hidden" name="_method" value="PUT" />
+                  <?= csrf_field(); ?>
                    <div class="form-horizontal" style = "font-family:poppins; color:maroon;">
                    <div class="form-group col-md-6">
+                    <input type="hidden" value="Enrolled" name="state">
                      <label for="section">Section</label>
                      <select class="form-control"id="section" name = "section">
                      <option type="text" class="form-control" id="section">sample</option>
