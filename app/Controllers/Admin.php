@@ -6,6 +6,7 @@ use CodeIgniter\Database\ConnectionInterface;
 use App\Models\UserModel;
 use App\Models\RegistrationModel;
 use App\Models\ProfileModel;
+use App\Models\YearModel;
 use App\Libraries\Hash;
 
 use App\Controllers\BaseController;
@@ -29,6 +30,7 @@ class Admin extends BaseController
     public function admin()
     {
         $user_model = new UserModel();
+        $year_level = new YearModel();
         $profile_model = new ProfileModel();
         $registration_model = new RegistrationModel();
         $male = $this->db->table('user_profile')->where('gender', 'male')->countAllResults();
@@ -58,7 +60,14 @@ class Admin extends BaseController
             'abm' => $registration_model->where('strand', 'ABM')->get()->getNumRows(),
             'grade11' => $registration_model->where('year_level', 'Grade 11')->get()->getNumRows(),
             'grade12' => $registration_model->where('year_level', 'Grade 12')->get()->getNumRows(),
-            'status' => $registration_model->where('state', 'pending')->get()->getNumRows()
+            'status' => $registration_model->where('state', 'pending')->get()->getNumRows(),
+            'enroll' => $registration_model->where('state', 'Enrolled')->get()->getNumRows(),
+            'reject' => $registration_model->where('state', 'Rejected')->get()->getNumRows(),
+            // 'y2023' => $year_level->where('semester', '2023')->get()->find(),
+            // 'y2024' => $year_level->where('semester', '2024')->get()->find(),
+
+
+
 
 
         ];

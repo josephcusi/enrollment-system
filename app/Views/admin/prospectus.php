@@ -120,7 +120,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Prospectus</h1>
+            <h1 style = "font-family:poppins;">Prospectus</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -139,7 +139,7 @@
           <div class="col-md-3">
 
 
-            <div class="card card-primary card-outline" style = "border-radius:15px">
+            <div class="card card-primary card-outline" style = "">
               <div class="card-body box-profile">
                 <div class="text-center">
 
@@ -163,12 +163,12 @@
           </div>
           <!-- /.col -->
           <div class="col-md-9">
-            <div class="card card-primary card-outline"style = "border-radius:15px">
+            <div class="card card-primary card-outline mx-auto" style = " ">
               <div class="card-body">
 
 
               <div id="humss" class="tabcontent">
-            <table id="example1" class="table table-bordered table-striped" style = "font-family:poppins">
+            <table id="example1" class="table table-bordered table" style = "font-family:poppins">
               <thead>
                 <tr>
                   <th>Subject Code</th>

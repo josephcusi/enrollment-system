@@ -22,20 +22,20 @@ class ProfileModel extends Model
                                     'civil_status',
                                     'nationality',
                                     'birthplace',
-                                    'street', 
-                                    'baranggay', 
-                                    'prov_add', 
-                                    'contact', 
-                                    'guardian_name', 
-                                    'guardian_contact', 
-                                    'guardian_address', 
-                                    'elem_school', 
-                                    'elem_address', 
+                                    'street',
+                                    'baranggay',
+                                    'prov_add',
+                                    'contact',
+                                    'guardian_name',
+                                    'guardian_contact',
+                                    'guardian_address',
+                                    'elem_school',
+                                    'elem_address',
                                     'elem_year',
-                                    'high_school', 
-                                    'high_address', 
+                                    'high_school',
+                                    'high_address',
                                     'high_year',
-                                    
+
                                 ];
 
     // Dates
@@ -61,4 +61,6 @@ class ProfileModel extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
+
+
 }

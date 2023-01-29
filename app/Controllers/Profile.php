@@ -3,6 +3,8 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use CodeIgniter\Database\BaseConnection;
+use CodeIgniter\Database\ConnectionInterface;
 use App\Models\UserModel;
 use App\Models\ProfileModel;
 use App\Models\YearModel;
@@ -14,9 +16,11 @@ use App\Libraries\Hash;
 
 class Profile extends BaseController
 {
+    protected $db;
     public function __construct()
     {
         helper(['url', 'form']);
+        $this->db = \Config\Database::connect();
     }
 
     public function userDashboard()
@@ -37,40 +41,11 @@ class Profile extends BaseController
     {
         $profile_model = new ProfileModel();
         $user_model = new UserModel();
-        $registration_model = new RegistrationModel();
-        $prospectus_model = new ProspectusModel();
-        $subject = $registration_model->where('state', 'Enrolled')->first();
         $user = [
             'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
             'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->findAll()
         ];
-        if(!$subject){
-            $user = [
-                'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
-                'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->findAll(),
-                'subject' => $prospectus_model->findAll(),
-            ];
-            // var_dump($user['subject']);
-            // return view('user/userProspectus', $user);
-            return redirect()->route('registration');
-        }
-        else{
-            $user = [
-                'subject' => $registration_model->select('*')
-                ->join('user_tbl', 'student_registration.lrn = user_tbl.lrn', 'right')
-                ->join('strand_tbl', 'student_registration.strand = strand_tbl.strand', 'right')
-                ->join('prospectrus_tbl', 'strand_tbl.id = prospectrus_tbl.strand_id')
-                ->where('student_registration.lrn', session()->get('lrn'))
-                ->get()->getResultArray(),
-                'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
-                'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->findAll()
-            ];
-             return view('user/userProspectus', $user);
-                //    var_dump($user['subject']);
-        }
         return view('user/userProspectus', $user);
-        // var_dump($subject);
-        // echo 3;
     }
     public function newRegistration()
     {
@@ -320,7 +295,7 @@ class Profile extends BaseController
         $profile_model = new ProfileModel();
         $user_model = new UserModel();
         $email = session()->get('loggedInUser');
-     
+
         $count = count($profile_model->where('email', $email)->findAll());
 
         if($count < 1) {
@@ -421,13 +396,14 @@ class Profile extends BaseController
         {
             $registration_model = new RegistrationModel();
             $user_model = new UserModel();
+            $to = $this->request->getVar('email');
             $profile_model = new ProfileModel();
             $data = [
                 'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
                 'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->findAll(),
                 'registration'=> $registration_model->findAll()
             ];
-        
+
             $data['validation'] = $this->validator;
             //session()->setFlashdata('sendapplication', 'Duplicate input');
             return redirect()->route('registration', $data);
@@ -462,6 +438,8 @@ class Profile extends BaseController
 
             $prospectus_model = new ProspectusModel();
             $user_model = new UserModel();
+            $session = session();
+            $lrn = $this->request->getPost('lrn');
             $strand_model = new StrandModel();
             $profile_model = new ProfileModel();
             $registration_model = new RegistrationModel();
@@ -471,8 +449,18 @@ class Profile extends BaseController
                 'prospectus'=> $prospectus_model->where('strand_id', $strand_id[0]['id'])->where('year_level', $yearlevel)->where('semester', $semester)->findAll(),
                 'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
                 'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->findAll(),
-                'subId' => $registration_model->first()
+                'subId' => $registration_model->first(),
             ];
+            $session = session();
+            $email_data = $this->db->table('user_tbl')->where('lrn', $lrn)->get()->getRowArray();
+            $emz = $email_data['email'];
+            $email = \Config\Services::email();
+            $email->setTo($emz);
+            $email->setMailType("html");
+            $email->setSubject('Application Recieved');
+            $email->setFrom('zasuke277379597@gmail.com', 'DOROTEO S. MENDOZA SR. MEMORIAL NATIONAL HIGH SCHOOL');
+            $email->setMessage("We recieve your application. Please wait for confirmation of your enrollment status.");
+            $email->send();
             //var_dump($values['prospectus']);
             return view('user/regSubject', $values);
 
@@ -770,7 +758,6 @@ class Profile extends BaseController
         }
         public function addsubject()
         {
-            
+
         }
     }
-

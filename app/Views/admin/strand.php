@@ -104,20 +104,20 @@
 
   <!-- Main content -->
 
-
+<br>
 
     <!-- Main content -->
 
     <!-- /.card-header -->
     <div class="card-body">
-      <div class="card card-primary card-outline mx-auto" style = "width:100%;border-radius:15px">
+      <div class="card card-primary card-outline mx-auto" style = "">
         <div class="card-header">
           <h3 class="card-title"style = "font-family:poppins">Strand Table</h3>
             <button type="button" class="btn btn-default" style = "border-radius:20px;float: right; font-family:poppins; margin-bottom:1%; background-color:maroon; color: white;" data-toggle="modal" data-target="#new-strand">New Strand</button>
         </div>
         <!-- /.card-header -->
         <div class="card-body">
-      <table id="example1" class="table table-bordered table-striped" style = "font-family:poppins">
+      <table id="example1" class="table table-bordered table" style = "font-family:poppins">
       <?= $this->include('admin/include/strandmodal/newStrand')?>
         <thead>
           <tr>

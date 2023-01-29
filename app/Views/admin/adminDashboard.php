@@ -165,9 +165,9 @@
           <!-- small box -->
           <div class="small-box bg-success">
             <div class="inner">
-              <h3>0<sup style="font-size: 20px"></sup></h3>
+              <h3><?=$enroll?><sup style="font-size: 20px"></sup></h3>
 
-              <p>Total Pre-Enrolled</p>
+              <p>Total Enrolled</p>
             </div>
             <div class="icon">
               <i class="ion ion-stats-bars"></i>
@@ -181,7 +181,7 @@
             <div class="inner">
               <h3><?=$status?><sup style="font-size: 20px"></sup></h3>
 
-              <p>Pending</p>
+              <p>Total Pre-Enrolled</p>
             </div>
             <div class="icon">
               <i class="ion ion-stats-bars"></i>
@@ -193,7 +193,7 @@
           <!-- small box -->
           <div class="small-box bg-danger">
             <div class="inner">
-              <h3>0<sup style="font-size: 20px"></sup></h3>
+              <h3><?=$reject?><sup style="font-size: 20px"></sup></h3>
 
               <p>Rejected</p>
             </div>
@@ -208,6 +208,16 @@
       </div>
       <br>
             <div class="row">
+              <div class="col-md-6">
+              <div class="card">
+
+                <div class="card-body">
+                  <p style = "font-family:poppins;">Yearly Enrolled Records</p>
+                  <canvas id="lodi" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                </div>
+                <!-- /.card-body -->
+              </div>
+              </div>
               <div class="col-md-6">
                 <div class="card">
 
@@ -239,16 +249,7 @@
                 <!-- /.card-body -->
               </div>
               </div>
-              <div class="col-md-6">
-              <div class="card">
 
-                <div class="card-body">
-                  <p style = "font-family:poppins;">Strand Records</p>
-                  <canvas id="lodi" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
-                </div>
-                <!-- /.card-body -->
-              </div>
-              </div>
               <!-- /.col (RIGHT) -->
             </div>
             <!-- /.row -->
@@ -348,27 +349,58 @@
       data: donutData,
       options: donutOptions
     })
-    var donutChartCanvas = $('#lodi').get(0).getContext('2d')
-    var donutData        = {
-      labels: ['Ralph', 'Randell', 'Reyonda'],
+    //--------------
+    //- AREA CHART -
+    //--------------
+
+    // Get context with jQuery - using jQuery's .get() method.
+    var areaChartCanvas = $('#lodi').get(0).getContext('2d')
+
+    var areaChartData = {
+      labels  : ['2023', '2024', '2025', '2026', '2027', '2028', '2029'],
       datasets: [
         {
-          data: [5, 3, 9],
-          backgroundColor : ['#800000', '#212529','e8e19d'],
-        }
+          label               : 'Yearly Enrolled Records',
+          backgroundColor     : '#212529',
+          borderColor         : '#212529',
+          pointRadius          : false,
+          pointColor          : '#212529',
+          pointStrokeColor    : '#212529',
+          pointHighlightFill  : '#212529',
+          pointHighlightStroke: '#212529',
+          data                : [<?=$enroll?>,0, 0, 0, 0, 0, 0]
+        },
+
       ]
     }
-    var donutOptions     = {
+
+    var areaChartOptions = {
       maintainAspectRatio : false,
       responsive : true,
+      legend: {
+        display: false
+      },
+      scales: {
+        xAxes: [{
+          gridLines : {
+            display : false,
+          }
+        }],
+        yAxes: [{
+          gridLines : {
+            display : false,
+          }
+        }]
+      }
     }
-    //Create pie or douhnut chart
-    // You can switch between pie and douhnut using the method below.
-    new Chart(donutChartCanvas, {
-      type: 'pie',
-      data: donutData,
-      options: donutOptions
+
+    // This will get the first returned node in the jQuery collection.
+    new Chart(areaChartCanvas, {
+      type: 'line',
+      data: areaChartData,
+      options: areaChartOptions
     })
+
   })
 </script>
 <?= $this->include('admin/include/footer')?>

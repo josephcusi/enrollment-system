@@ -6,7 +6,6 @@ use App\Controllers\BaseController;
 use App\Models\UserModel;
 use App\Models\RegistrationModel;
 use App\Models\ProfileModel;
-use App\Models\SectionModel;
 
 class PreEnrolled extends BaseController
 {
@@ -53,8 +52,6 @@ class PreEnrolled extends BaseController
         ->select('*')->join('school_year', 'student_registration.semester=school_year.semester', 'right')
         ->join('user_tbl', 'student_registration.lrn=user_tbl.lrn', 'right')
         ->join('user_profile', 'user_tbl.email=user_profile.email', 'right')
-        ->join('strand_tbl', 'student_registration.strand = strand_tbl.strand', 'right')
-        ->join('section_tbl', 'strand_tbl.id = section_tbl.strand_id', 'right') 
         ->join('student_registration as s', 'user_tbl.lrn=s.lrn', 'right')
         ->where('student_registration.semester', session()->get('semester'))
         ->where('user_profile.id', $id)
@@ -88,28 +85,22 @@ class PreEnrolled extends BaseController
     public function enrolled($id)
     {
         $registration_model = new RegistrationModel();
-        $section_model = new SectionModel();
         $state = $this->request->getPost('state');
-        $section = $this->request->getPost('section');
 
     $value = [
-        'state' => $state,
-        'user_section' => $section
+        'state' => $state
     ];
 
     $registration_model->update($id, $value);
     return redirect()->route('pre_enrolled_reg');
-    // var_dump($value);
     }
     public function rejected($id)
     {
         $registration_model = new RegistrationModel();
         $state = "Rejected";
-        $section = "N/A";
 
     $value = [
-        'user_section' => $section,
-        'state' => $state,
+        'state' => $state
     ];
 
     $registration_model->update($id, $value);

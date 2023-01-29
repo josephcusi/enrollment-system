@@ -106,15 +106,15 @@
           <div class="col-md-3">
 
 
-            <div class="card card-primary card-outline" style = "border-radius:15px">
+            <div class="card card-primary card-outline" style = "">
               <div class="card-body box-profile">
                 <div class="text-center">
-                <?php foreach($subject as $sub):?>
+
                 </div>
                 <p class="text-muted text-left">Strand</p>
                 <ul class="list-group list-group-unbordered mb-3">
                   <li class="list-group-item">
-                    <b><?=$sub['strand'];?></b>
+                    <b>HUMSS</b>
                   </li>
                 </ul>
               </div>
@@ -130,12 +130,12 @@
           <!-- /.col -->
 
           <div class="col-md-9">
-            <div class="card card-primary card-outline" style = "border-radius:15px">
+            <div class="card card-primary card-outline" style = "">
 
 
               <div class="card-body">
 
-                  <table id="example1" class="table table-bordered table-striped" style = "font-family:poppins">
+                  <table id="example1" class="table table-bordered table" style = "font-family:poppins">
                     <thead>
                       <tr>
                         <th>Subject</th>
@@ -147,16 +147,14 @@
                       </tr>
                     </thead>
                     <tbody>
-                    
                       <tr>
-                        <td><?=$sub['subject'];?></td>
-                        <td><?=$sub['subject_title'];?></td>
-                        <td><?=$sub['unit'];?></td>
-                        <td><?=$sub['pre_requisit'];?></td>
+                        <td>Fil01</td>
+                        <td>Filipino Sheesh</td>
+                        <td>3</td>
+                        <td>Fil02</td>
                         <td></td>
                         <td></td>
                       </tr>
-                      <?php endforeach?>
                     </tbody>
                     <tfoot>
                     </tfoot>

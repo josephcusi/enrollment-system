@@ -101,11 +101,11 @@
 
   <!-- Content Header (Page header) -->
 
-
+<br>
   <!-- Main content -->
 
       <div class="card-body">
-        <div class="card card-primary card-outline mx-auto" style = "width:100%; border-radius:15px">
+        <div class="card card-primary card-outline mx-auto" style = "width:100%; ">
           <div class="card-header">
             <h3 class="card-title"style = "font-family:poppins">Admin Registration</h3>
 

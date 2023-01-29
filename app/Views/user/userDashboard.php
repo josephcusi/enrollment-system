@@ -118,7 +118,7 @@
 
               <!-- Profile Image -->
                         <!-- Profile Image -->
-                        <div class="card card-primary card-outline" style = "border-radius:15px">
+                        <div class="card card-primary card-outline" style = "">
                             <div class="card-body box-profile">
                                 <div class="text-center"
                                                 >
@@ -155,13 +155,13 @@
 
                   <ul class="list-group list-group-unbordered mb-3">
                     <li class="list-group-item" style="color:gray;font-family:poppins">
-                      <b>Strand</b> <a class="float-right" style="color:maroon; font-family:poppins"><?=isset($student_registration['strand']) ? $student_registration['strand'] : 'N/A' ;?></a>
+                      <b>Strand</b> <a class="float-right" style="color:maroon; font-family:poppins">N/A</a>
                     </li>
                     <li class="list-group-item" style="color:gray;font-family:poppins">
-                      <b>Section</b><a class="float-right" style="color:maroon;font-family:poppins"><?=isset($student_registration['semester']) ? $student_registration['user_section'] : 'N/A' ;?></a>
+                      <b>Section</b><a class="float-right" style="color:maroon;font-family:poppins">N/A</a>
                     </li>
                     <li class="list-group-item" style="color:gray;font-family:poppins">
-                      <b>Semester</b> <a class="float-right" style="color:maroon;font-family:poppins"><?=isset($student_registration['semester']) ? $student_registration['semester'] : 'N/A' ;?></a>
+                      <b>Semester</b> <a class="float-right" style="color:maroon;font-family:poppins">M/A</a>
                     </li>
 
                   </ul>
@@ -177,7 +177,7 @@
             </div>
             <!-- /.col -->
             <div class="col-md-9">
-              <div class="card card-primary card-outline mx-auto" style = "border-radius:15px">
+              <div class="card card-primary card-outline mx-auto" style = "">
 
                 <div class="card-header p-2">
                   <ul class="nav nav-pills">

@@ -6,6 +6,7 @@
   $.widget.bridge('uibutton', $.ui.button)
 </script>
 <!-- Bootstrap 4 -->
+
 <script src="<?=base_url()?>/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- ChartJS -->
 <script src="<?=base_url()?>/plugins/chart.js/Chart.min.js"></script>

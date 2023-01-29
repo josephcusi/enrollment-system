@@ -105,7 +105,7 @@
   <!-- Main content -->
   <section class="content-header">
 
-    <div class="card card-primary card-outline mx-auto" style = "width:98%; border-radius:15px">
+    <div class="card card-primary card-outline mx-auto" style = "border-radius:15px;">
       <div class="card-body">
     <div class="container-fluid">
       <div class="row">
@@ -116,7 +116,7 @@
     <!-- /.card-header -->
 
 
-      <table id="example1" class="table table-bordered table-striped" style = "font-family:poppins">
+      <table id="example1" class="table table-bordered table" style = "font-family:poppins">
 
         <thead>
           <?php //foreach($section as $sect): ?>
