@@ -103,21 +103,24 @@
   <script>swal("Welcome Admin!", "You successfully login your account.", "success");</script>
   <?php endif ?>
   <!-- Content Header (Page header) -->
-  <div class="content-header">
+  <section class="content-header">
+
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1 class="m-0"style = "color:maroon; font-family: 'Poppins';font-size: 22px;">DASHBOARD</h1>
-        </div><!-- /.col -->
+          <h1>
+            <class="a" style="color:maroon; font-family: 'Poppins';font-size: 22px"><strong>DASHBOARD</strong>
+          </h1>
+        </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item active">Dashboard</li>
+            <li class="breadcrumb-item active" style="color:maroon;font-family: 'Poppins';">Admin</li>
+            <li class="breadcrumb-item active"style="font-family: 'Poppins';">Dashboard</li>
           </ol>
-        </div><!-- /.col -->
-      </div><!-- /.row -->
+        </div>
+      </div>
     </div><!-- /.container-fluid -->
-  </div>
+  </section>
 
   <!-- Main content -->
   <section class="content">

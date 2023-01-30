@@ -119,15 +119,14 @@ $routes->get('/section', 'Section::section');
 $routes->post('/newsection', 'Section::newsection');
 $routes->get('/schedule', 'Section::schedule');
 $routes->get('/addSchedule', 'Section::addSchedule');
-$routes->get('/edit/(:any)', 'Section::edit/$1');
-$routes->put('/section_update/(:any)', 'Section::section_update/$1');
+$routes->put('/section_update', 'Section::section_update');
 $routes->get('/strandSec/(:any)', 'Section::strandSec/$1');
 
 //-----------ADMIN PROSPECTUS---------
 $routes->get('/r_prospectus', 'Prospectus::r_prospectus');
 $routes->post('/newprospectus', 'Prospectus::newprospectus');
 $routes->get('/edit_prospectus/(:any)', 'Prospectus::edit_prospectus/$1');
-$routes->put('/updateProspectus/(:any)', 'Prospectus::updateProspectus/$1');
+$routes->put('/updateProspectus', 'Prospectus::updateProspectus');
 
 //-----------ADMIN PRE ENROLLED---------
 $routes->get('/viewPreEnroll', 'PreEnrolled::viewPreEnroll');

@@ -92,15 +92,28 @@
       <?php endif ?>
       <!-- Content Header (Page header) -->
 
-  <br>
       <!-- Main content -->
-
+      <section class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1>
+                <class="a" style="color:maroon; font-family: 'Poppins';font-size: 22px"><strong>REGISTRATION</strong>
+              </h1>
+            </div>
+            <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item active" style="font-family:poppins;color:maroon">Home</li>
+                <li class="breadcrumb-item active" style = "font-family:poppins;">Registration</li>
+              </ol>
+            </div>
+          </div>
+        </div><!-- /.container-fluid -->
+      </section>
           <div class="card-body">
             <div class="card card-primary card-outline mx-auto" style = "width:100%;">
               <div class="card-header">
-                <h3 class="card-title"style = "font-family:poppins">Registration Table</h3>
                 <a href="<?=base_url('retrieve_yearUser')?>"><button type="button" class="btn btn-secondary btn-sm" style = "border-color:maroon;border-radius:15px;float:right; font-family:poppins; margin-bottom:1%; background-color:maroon; color: white;">New Registration</button></a>
-
               </div>
               <!-- /.card-header -->
               <div class="card-body">

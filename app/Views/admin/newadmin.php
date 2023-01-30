@@ -101,13 +101,29 @@
 
   <!-- Content Header (Page header) -->
 
-<br>
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1>
+            <class="a" style="color:maroon; font-family: 'Poppins';font-size: 22px"><strong>ADMIN</strong>
+          </h1>
+        </div>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item active" style="color:maroon;font-family: 'Poppins';">Admin</li>
+            <li class="breadcrumb-item active"style="font-family: 'Poppins';">Add</li>
+          </ol>
+        </div>
+      </div>
+    </div><!-- /.container-fluid -->
+  </section>
   <!-- Main content -->
 
       <div class="card-body">
         <div class="card card-primary card-outline mx-auto" style = "width:100%;">
           <div class="card-header">
-            <h3 class="card-title"style = "font-family:poppins">Admin Table</h3>
+
             <a href="<?=base_url('addadmin')?>"><button type="button" class="btn btn-secondary btn-sm" style = "border-color:maroon;border-radius:15px;float:right; font-family:poppins; margin-bottom:1%; background-color:maroon; color: white;">New Admin</button></a>
 
           </div>
@@ -132,11 +148,9 @@
             <td><?=$ret_admin['lastname'];?><?= " "?><?=$ret_admin['firstname'];?><?= " "?><?=$ret_admin['middlename'];?></td>
             <td><?=$ret_admin['email'];?></td>
             <td>
-            <a href="#"> <button type="button" class="btn btn-secondary btn-editAdmin" style = "border-radius:15px"
+            <a href="#"> <button type="button" class="btn btn-secondary btn-editAdmin" style = "border-radius:20px"
             data-profile_picture="<?=$ret_admin['profile_picture'];?>"data-lastname="<?=$ret_admin['lastname'];?>"data-firstname="<?=$ret_admin['firstname'];?>"data-middlename="<?=$ret_admin['middlename'];?>"
-            data-email="<?=$ret_admin['email'];?>" data-password="<?=$ret_admin['password'];?>"
-
-            >update</button></a>
+            data-email="<?=$ret_admin['email'];?>" data-password="<?=$ret_admin['password'];?>" >update</button></a>
             <?php include 'modal/adminUpdate.php'?>
             </td>
           </tr>

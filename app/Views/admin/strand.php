@@ -101,22 +101,34 @@
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
 
-
-  <!-- Main content -->
-
-<br>
-
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1>
+            <class="a" style="color:maroon; font-family: 'Poppins';font-size: 22px"><strong>STRAND</strong>
+          </h1>
+        </div>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item active" style="color:maroon;font-family: 'Poppins';">Admin</li>
+            <li class="breadcrumb-item active"style="font-family: 'Poppins';">Strand</li>
+          </ol>
+        </div>
+      </div>
+    </div><!-- /.container-fluid -->
+  </section>
     <!-- Main content -->
 
     <!-- /.card-header -->
     <div class="card-body">
       <div class="card card-primary card-outline mx-auto" style = "">
         <div class="card-header">
-          <h3 class="card-title"style = "font-family:poppins">Strand Table</h3>
             <button type="button" class="btn btn-default" style = "border-radius:20px;float: right; font-family:poppins; margin-bottom:1%; background-color:maroon; color: white;" data-toggle="modal" data-target="#new-strand">New Strand</button>
         </div>
         <!-- /.card-header -->
         <div class="card-body">
+
       <table id="example1" class="table table-bordered table" style = "font-family:poppins">
       <?= $this->include('admin/include/strandmodal/newStrand')?>
         <thead>

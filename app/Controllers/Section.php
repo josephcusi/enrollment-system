@@ -116,26 +116,15 @@ class Section extends BaseController
             }
         }
     }
-    public function edit($id)
+    public function section_update()
     {
         $section_model = new SectionModel();
-        $user_model = new UserModel();
-        $data['userName'] = $user_model->where('email', $email = session()->get('loggedInUser'))->find();
-        $data['section'] = $section_model->find($id);
-        return view('admin/section/updateSection', $data);
-    }
-    public function section_update($id)
-    {
-        $section_model = new SectionModel();
-        $strand = $this->request->getPost('strand');
+        $id = $this->request->getPost('id');
         $section = $this->request->getPost('section');
-        $semester = $this->request->getPost('semester');
         $year_level = $this->request->getPost('year_level');
 
         $data = [
-            'strand' => $strand,
             'section' => $section,
-            'semester' => $semester,
             'year_level' => $year_level
         ];
         $section_model->update($id, $data);

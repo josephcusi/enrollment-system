@@ -83,21 +83,23 @@
 
   <!-- Main content -->
   <section class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1 <class="a" style="color:maroon; font-family: 'Poppins';font-size: 22px"><strong>PROSPECTUS</strong>
-            </h1>
-          </div>
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Prospectus</a></li>
-              <li class="breadcrumb-item active">Prospectus</li>
-            </ol>
-          </div>
+
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1>
+            <class="a" style="color:maroon; font-family: 'Poppins';font-size: 22px"><strong>PROSPECTUS</strong>
+          </h1>
         </div>
-      </div><!-- /.container-fluid -->
-    </section>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item active" style="font-family:poppins;color:maroon">Home</li>
+            <li class="breadcrumb-item active" style = "font-family:poppins;">Prospectus</li>
+          </ol>
+        </div>
+      </div>
+    </div><!-- /.container-fluid -->
+  </section>
 
     <!-- Main content -->
     <section class="content">
@@ -111,7 +113,7 @@
                 <div class="text-center">
 
                 </div>
-                <p class="text-muted text-left">Strand</p>
+                <p class="text-muted text-left"style="font-family:poppins;">Strand</p>
                 <ul class="list-group list-group-unbordered mb-3">
                   <li class="list-group-item">
                        <b><?//=$sub['strand'];?></b>

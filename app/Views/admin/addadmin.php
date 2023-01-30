@@ -101,16 +101,27 @@
 
   <!-- Content Header (Page header) -->
 
-<br>
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1>
+            <class="a" style="color:maroon; font-family: 'Poppins';font-size: 22px"><strong>ADMIN REGISTRATION</strong>
+          </h1>
+        </div>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item active" style="color:maroon;font-family: 'Poppins';">Admin</li>
+            <li class="breadcrumb-item active"style="font-family: 'Poppins';">Admin Registration</li>
+          </ol>
+        </div>
+      </div>
+    </div><!-- /.container-fluid -->
+  </section>
   <!-- Main content -->
 
       <div class="card-body">
         <div class="card card-primary card-outline mx-auto" style = "width:100%; ">
-          <div class="card-header">
-            <h3 class="card-title"style = "font-family:poppins">Admin Registration</h3>
-
-
-          </div>
           <!-- /.card-header -->
           <div class="card-body">
             <form action="<?= base_url('insertAdmin'); ?>" method="post"  enctype="multipart/form-data">

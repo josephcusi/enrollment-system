@@ -99,6 +99,7 @@ class Prospectus extends BaseController
         }
         else
         {
+
             $subject = $this->request->getPost('subject');
             $title = $this->request->getPost('title');
             $unit = $this->request->getPost('unit');
@@ -131,19 +132,11 @@ class Prospectus extends BaseController
             }
         }
     }
-    public function edit_prospectus($id)
+
+    public function updateProspectus()
     {
         $prospectus_model = new ProspectusModel();
-        $user_model = new UserModel();
-        $data['userName'] = $user_model->where('email', $email = session()->get('loggedInUser'))->find();
-        $data['prospectus'] = $prospectus_model->where('id', $id)->first();
-        // var_dump($data['prospectus']);
-        return view('admin/prospectus/updateSubject', $data);
-    }
-    public function updateProspectus($id)
-    {
-        $prospectus_model = new ProspectusModel();
-        $strand = $this->request->getPost('strand');
+        $id = $this->request->getPost('id');
         $subject = $this->request->getPost('subject');
         $pre_requisit = $this->request->getPost('pre_requisit');
         $title = $this->request->getPost('title');
@@ -152,16 +145,15 @@ class Prospectus extends BaseController
         $semester = $this->request->getPost('semester');
 
         $data = [
-            'strand' => $strand,
+
             'subject' => $subject,
             'title' => $title,
             'unit' => $unit,
             'pre_requisit' => $pre_requisit,
             'year_level' => $year_level,
-
         ];
         $prospectus_model->update($id, $data);
         session()->setFlashdata('updateprospectus', 'Duplicate input');
-        return $this->r_prospectus();
+        return redirect()->route('r_prospectus');
     }
 }

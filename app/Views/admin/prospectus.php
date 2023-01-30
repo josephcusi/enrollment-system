@@ -117,20 +117,22 @@
 
   <!-- Main content -->
   <section class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1 style = "font-family:poppins;">Prospectus</h1>
-          </div>
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Prospectus</a></li>
-              <li class="breadcrumb-item active">Prospectus</li>
-            </ol>
-          </div>
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1>
+            <class="a" style="color:maroon; font-family: 'Poppins';font-size: 22px"><strong>PROSPECTUS</strong>
+          </h1>
         </div>
-      </div><!-- /.container-fluid -->
-    </section>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item active" style="color:maroon;font-family: 'Poppins';">Admin</li>
+            <li class="breadcrumb-item active"style="font-family: 'Poppins';">Prospectus</li>
+          </ol>
+        </div>
+      </div>
+    </div><!-- /.container-fluid -->
+  </section>
 
     <!-- Main content -->
     <section class="content">
@@ -144,7 +146,7 @@
                 <div class="text-center">
 
                 </div>
-                <p class="text-muted text-left">Strand</p>
+                <p class="text-muted text-left"style = "font-family:poppins"  >Strand</p>
                 <ul class="list-group list-group-unbordered mb-3 nav nav-pills">
                   <?php $strand = session()->getFlashdata('strand');?>
                 <li class="nav-item"><a type="button" class="tablinks nav-link <?php if($strand == 'humss'){echo 'active' ;} ?>"style = "border-radius:20px" id="defaultOpen" href="<?= base_url('strandProspectus/'.'humss')?>">HUMSS</a></li>
@@ -187,7 +189,17 @@
                     <td><?= $prospect['unit']?></td>
                     <td><?= $prospect['pre_requisit']?></td>
                     <td>
-                      <a href="<?=base_url('edit_prospectus/'.$prospect['id'])?>"><button type="button" class="btn btn-secondary btn-sm"style = "border-radius:15px">update</button>
+                      <a <button type="button"  class="btn btn-secondary btn-sm btn-updateProspectus" style = "border-radius:15px;"
+                      data-id="<?=$prospect['id']?>"
+                      data-subject="<?=$prospect['subject']?>"
+                      data-subject_title="<?=$prospect['subject_title']?>"
+                      data-unit="<?=$prospect['unit']?>"
+                      data-pre_requisit="<?=$prospect['pre_requisit']?>"
+                      data-year_level="<?=$prospect['year_level']?>"
+                      data-semester="<?=$prospect['semester']?>"
+
+                      >update</button></a>
+                       <?php include'modal/updateprospectus.php';?>
                     </td>
                   </tr>
                   <?php endforeach;?>
@@ -204,7 +216,7 @@
         <div class="modal-dialog" style = "font-family:poppins">
           <div class="modal-content">
             <div class="modal-header">
-              <h4 class="modal-title">Subject Maintenance</h4>
+              <h4 class="modal-title"style = "font-family:poppins">Subject Maintenance</h4>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -306,3 +318,28 @@
 </body>
 <?= $this->include('admin/include/end')?>
 <?= $this->include('admin/include/footer')?>
+<script>
+$(document).ready(function(){
+     // sa button
+     $('.btn-updateProspectus').on('click',function(){
+         // data galing buton
+         const id = $(this).data('id');
+         const subject = $(this).data('subject');
+         const subject_title = $(this).data('subject_title');
+         const unit = $(this).data('unit');
+        const pre_requisit = $(this).data('pre_requisit');
+        const year_level = $(this).data('year_level');
+        const semester = $(this).data('semester');
+         // // sa modal
+          $('.id').val(id);
+         $('.subjectModal').val(subject);
+         $('.subject_titleModal').val(subject_title);
+         $('.unitModal').val(unit);
+          $('.year_levelModal').val(year_level);
+           $('.semesterModal').val(semester);
+        $('.pre_requisitModel').val(pre_requisit).trigger('change');
+         // Call Modal
+         $('#updatesubject').modal('show');
+     });
+   });
+</script>

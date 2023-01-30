@@ -116,20 +116,22 @@
 
   <!-- Main content -->
   <section class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1 style = "font-family:poppins;">Section</h1>
-          </div>
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Section</a></li>
-              <li class="breadcrumb-item active">Section</li>
-            </ol>
-          </div>
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1>
+            <class="a" style="color:maroon; font-family: 'Poppins';font-size: 22px"><strong>SECTION</strong>
+          </h1>
         </div>
-      </div><!-- /.container-fluid -->
-    </section>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item active" style="color:maroon;font-family: 'Poppins';">Admin</li>
+            <li class="breadcrumb-item active"style="font-family: 'Poppins';">Section</li>
+          </ol>
+        </div>
+      </div>
+    </div><!-- /.container-fluid -->
+  </section>
 
     <!-- Main content -->
     <section class="content">
@@ -184,7 +186,11 @@
                   <td><?=$section_value['year_level']?></td>
                   <td>
                     <a href="<?=base_url('schedule')?>"><button type="button" class="btn btn-secondary btn-sm" style = "border-radius:15px">schedule</button>
-                    <a href="<?=site_url('edit/'.$section_value['id'])?>"><button type="button" class="btn btn-secondary btn-sm"style = "border-radius:15px">update</button>
+                    <a <button type="button"  class="btn btn-secondary btn-sm btn-updateSection" style = "border-radius:15px;"
+                    data-id="<?=$section_value['id'];?>" data-section="<?=$section_value['section'];?>" data-year_level="<?=$section_value['year_level'];?>"
+
+                    >update</button></a>
+                     <?php include'modal/updatesection.php';?>
                   </td>
                   </tr>
                   </tbody>
@@ -265,3 +271,21 @@
 </body>
 <?= $this->include('admin/include/end')?>
 <?= $this->include('admin/include/footer')?>
+
+<script>
+$(document).ready(function(){
+     // sa button
+     $('.btn-updateSection').on('click',function(){
+         // data galing buton
+         const id = $(this).data('id');
+        const section = $(this).data('section');
+        const year_level = $(this).data('year_level');
+         // // sa modal
+          $('.id').val(id);
+         $('.sectionModal').val(section);
+        $('.year_levelModal').val(year_level).trigger('change');
+         // Call Modal
+         $('#updatesection').modal('show');
+     });
+   });
+</script>
