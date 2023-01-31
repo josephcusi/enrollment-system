@@ -61,14 +61,6 @@
       </li>
       <li class="nav-item"style = "font-family:poppins;">
           <li class="nav-item"style = "font-family:poppins;">
-            <a href="<?=base_url('/grading')?>" class="nav-link">
-              <i class="fa-sharp fa-solid fa-barcode"></i>
-              <p>Grading</p>
-            </a>
-          </li>
-      </li>
-      <li class="nav-item"style = "font-family:poppins;">
-          <li class="nav-item"style = "font-family:poppins;">
             <a href="<?=base_url('/retrieve_strand')?>" class="nav-link active">
               <i class="fa-sharp fa-solid fa-envelopes-bulk"></i>
               <p>Strand</p>

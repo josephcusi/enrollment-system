@@ -54,6 +54,11 @@ $routes->match(['get', 'post'],'/login', 'AccountController::login');
 $routes->match(['get', 'post'],'/register', 'AccountController::register');
 $routes->match(['get', 'post'],'/verify/(:any)', 'AccountController::verify/$1');
 
+//teacherr side
+$routes->match(['get', 'post'],'/t_dashboard', 'Teacher::t_dashboard');
+$routes->match(['get', 'post'],'/newteacher', 'Teacher::newteacher');
+$routes->match(['get', 'post'],'/addteacher', 'Teacher::addteacher');
+
 //authcontroller/ forgot//
 $routes->get('forgot-password', 'AuthController::forgot');
 $routes->post('forgot-password', 'AuthController::forgot');

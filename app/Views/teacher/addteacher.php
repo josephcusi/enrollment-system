@@ -1,8 +1,8 @@
-<?= $this->include('admin/include/top')?>
+<?= $this->include('teacher/include/top')?>
 
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
-<?= $this->include('admin/include/navbar')?>
+<?= $this->include('teacher/include/navbar')?>
 <aside class="main-sidebar sidebar-dark-secondary elevation-8">
   <!-- Brand Logo -->
   <a href="index3.html" class="brand-link">
@@ -23,58 +23,27 @@
         <!-- Add icons to the links using the .nav-icon class
              with font-awesome or any other icon font library -->
 
-        <li class="nav-header"style = "font-family:poppins;">Admin</li>
-        <li class="nav-item"style = "font-family:poppins;">
-          <a href="<?=base_url()?>/admin" class="nav-link">
-            <i class="nav-icon fas fa-tachometer-alt"></i>
-            <p>
-              <strong>Dashboard<strong>
-              <span class="badge badge-info right"></span>
-            </p>
-          </a>
-        </li>
-        <br>
-        <br>
-        <li class="nav-item"style = "font-family:poppins;">
-            <li class="nav-item"style = "font-family:poppins;">
-              <a href="<?=base_url('/pre_enrolled_reg')?>" class="nav-link">
-                <i class="far fa-thin fa-newspaper"></i>
-                <p>Pre-Enrolled</p>
-              </a>
-            </li>
-        </li>
-        <li class="nav-item"style = "font-family:poppins;">
-            <li class="nav-item"style = "font-family:poppins;">
-              <a href="<?=base_url('/section')?>" class="nav-link">
-                <i class="fa-sharp fa-solid fa-section"></i>
-                <p>Section</p>
-              </a>
-            </li>
-        </li>
-        <li class="nav-item"style = "font-family:poppins;">
-            <li class="nav-item"style = "font-family:poppins;">
-              <a href="<?=base_url('/r_prospectus')?>" class="nav-link">
-                <i class="fa-sharp fa-solid fa-atom"></i>
-                <p>Prospectus</p>
-              </a>
-            </li>
-        </li>
-        <li class="nav-item"style = "font-family:poppins;">
-            <li class="nav-item"style = "font-family:poppins;">
-              <a href="<?=base_url('/retrieve_strand')?>" class="nav-link">
-                <i class="fa-sharp fa-solid fa-envelopes-bulk"></i>
-                <p>Strand</p>
-              </a>
-            </li>
-        </li>
-        <li class="nav-item"style = "font-family:poppins;">
-            <li class="nav-item"style = "font-family:poppins;">
-              <a href="<?=base_url('/newadmin')?>" class="nav-link active">
-                <i class="fa-sharp fa-solid fa-envelopes-bulk"></i>
-                <p>Admin</p>
-              </a>
-            </li>
-        </li>
+             <li class="nav-header"style = "font-family:poppins;">Teacher</li>
+             <li class="nav-header"style = "font-family:poppins;">Teacher</li>
+
+             <br>
+             <li class="nav-item"style = "font-family:poppins;">
+                 <li class="nav-item"style = "font-family:poppins;">
+                   <a href="<?=base_url('t_dashboard')?>" class="nav-link">
+                     <i class="nav-icon fa-solid fa-user"></i>
+                     <p>Student Grade</p>
+                   </a>
+                 </li>
+             </li>
+
+             <li class="nav-item"style = "font-family:poppins;">
+                 <li class="nav-item"style = "font-family:poppins;">
+                   <a href="<?=base_url('newteacher')?>" class="nav-link active"style = "background-color:maroon;">
+                     <i class="nav-icon fa-solid fa-user"></i>
+                     <p>Teacher</p>
+                   </a>
+                 </li>
+             </li>
         <br>
         <br>
 
@@ -98,13 +67,13 @@
       <div class="row mb-2">
         <div class="col-sm-6">
           <h1>
-            <class="a" style="color:maroon; font-family: 'Poppins';font-size: 22px"><strong>ADMIN REGISTRATION</strong>
+            <class="a" style="color:maroon; font-family: 'Poppins';font-size: 22px"><strong>TEACHER REGISTRATION</strong>
           </h1>
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item active" style="color:maroon;font-family: 'Poppins';">Admin</li>
-            <li class="breadcrumb-item active"style="font-family: 'Poppins';">Admin Registration</li>
+            <li class="breadcrumb-item active" style="color:maroon;font-family: 'Poppins';">Teacher</li>
+            <li class="breadcrumb-item active"style="font-family: 'Poppins';">Teacher Registration </li>
           </ol>
         </div>
       </div>
@@ -116,7 +85,7 @@
         <div class="card card-primary card-outline mx-auto" style = "width:100%; ">
           <!-- /.card-header -->
           <div class="card-body">
-            <form action="<?= base_url('insertAdmin'); ?>" method="post"  enctype="multipart/form-data">
+            <form action="#" method="post"  enctype="multipart/form-data">
                   <div class="card-body p-0">
                     <div class="bs-stepper">
                       <div class="bs-stepper-header mx-auto" style = "width:85%" role="tablist">
@@ -186,17 +155,17 @@
                           <div class="form-group row"style="font-family: Poppins;">
                             <label class="col-sm-2 col-form-label"style="font-family: Poppins;">Email</label>
                             <div class="col-sm-10">
-                              <input type="email" name="adminEmail" class="form-control"
+                              <input type="email" name="teacherEmail" class="form-control"
                                 placeholder="Email">
-                                <span class="text-danger"><?= isset($validation) ? display_error($validation, 'adminEmail') : '' ?></span>
+                                <span class="text-danger"><?= isset($validation) ? display_error($validation, 'teacherEmail') : '' ?></span>
                             </div>
                           </div>
                           <div class="form-group row"style="font-family: Poppins;">
                             <label class="col-sm-2 col-form-label"style="font-family: Poppins;">Password</label>
                             <div class="col-sm-10">
-                              <input type="password" name="adminPassword" class="form-control"
+                              <input type="password" name="teacherPassword" class="form-control"
                                 placeholder="Password">
-                                <span class="text-danger"><?= isset($validation) ? display_error($validation, 'adminPassword') : '' ?></span>
+                                <span class="text-danger"><?= isset($validation) ? display_error($validation, 'teacherPassword') : '' ?></span>
                             </div>
                           </div>
                           <div class = "a"style = "float:right;">
@@ -223,5 +192,5 @@
   <!-- /.content -->
 </section>
 </body>
-<?= $this->include('admin/include/end')?>
-<?= $this->include('admin/include/footer')?>
+<?= $this->include('teacher/include/end')?>
+<?= $this->include('teacher/include/footer')?>
