@@ -116,7 +116,7 @@
                 <p class="text-muted text-left"style="font-family:poppins;">Strand</p>
                 <ul class="list-group list-group-unbordered mb-3">
                   <li class="list-group-item">
-                       <b><?//=$sub['strand'];?></b>
+                       <b><?=$subject[0]['strand'];?></b>
                   </li>
                 </ul>
               </div>
@@ -140,23 +140,19 @@
                   <table id="example1" class="table table-bordered table" style = "font-family:poppins">
                     <thead>
                       <tr>
-                        <th>Subject</th>
-                        <th>Title</th>
-                        <th>Unit</th>
-                        <th>Pre Requisit</th>
-                        <th>Grade</th>
+                      <th>LRN</th>
+                        <th>Midterm Grade</th>
+                        <th>Final Grade</th>
                         <th>Remark</th>
                       </tr>
                     </thead>
                     <tbody>
                         <?php foreach($subject as $sub):?>
                       <tr>
-                        <td><?=$sub['subject'];?></td>
-                        <td><?=$sub['subject_title'];?></td>
-                        <td><?=$sub['unit'];?></td>
-                        <td><?=$sub['pre_requisit'];?></td>
-                        <td></td>
-                        <td></td>
+                        <td><?=$sub['lrn'];?></td>
+                        <td><?=$sub['midterm_grade'];?></td>
+                        <td><?=$sub['final_grade'];?></td>
+                        <td><?=$sub['remark'];?></td>
                       </tr>
                        <?php endforeach?>
                     </tbody>

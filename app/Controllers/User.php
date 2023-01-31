@@ -81,7 +81,7 @@ class User extends BaseController
                             'year' => $year['year'],
                         ];
                         session()->set($data);
-                      session()->set('loggedInUser', $userEmail);
+                         session()->set('loggedInUser', $userEmail);
                         $profile = new Profile();
                         if($user_info['usertype'] == "student" and $user_info['status'] == "active")
                         {
@@ -94,6 +94,10 @@ class User extends BaseController
                         {
                           session()->setFlashdata('notverify', 'Your email is not verified yet. Please check your email');
                           return redirect()->to('login');
+                        }
+                        elseif($user_info['usertype'] == "teacher")
+                        {
+                          return redirect()->route('t_dashboard');
                         }
                         else{
 

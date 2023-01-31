@@ -98,18 +98,21 @@
           </tr>
         </thead>
         <tbody>
+          <?php foreach($userInfo as $user):?>
           <tr>
-            <td>110554070039</td>
-            <td>Bayot Kyusi</td>
-            <td>Michael Faraday</td>
-            <td>HUMSS</td>
-            <td>1st Sem</td>
-            <td>12</td>
+            <td><?=$user['lrn'];?></td>
+            <td><?=$user['firstname'];?> <?= ' '?> <?=$user['middlename'];?> <?= ' '?> <?=$user['lastname'];?></td>
+            <td><?=$user['user_section'];?></td>
+            <td><?=$user['strand'];?></td>
+            <td><?=$user['semester'];?></td>
+            <td><?=$user['year_level'];?></td>
             <td>
-              <a href="#"><button type="button" class="btn btn-secondary btn-sm" style = "border-radius:15px">Grade</button>
-
+             <button type="button" class="btn btn-secondary btn-sm btn-add" style = "border-radius:15px" data-id="<?=$user['id'];?>" data-lrn="<?=$user['lrn'];?>">Add Grade</button>
+             <a href="<?=site_url('viewGrade/'. $user['id']);?>"><button type="button" class="btn btn-secondary btn-sm" style = "border-radius:15px">Update</button></a>
+              <?php include 'include/grademodal/grademodal.php';?>
             </td>
           </tr>
+          <?php endforeach;?>
         </tbody>
         <tfoot>
         </tfoot>
@@ -126,3 +129,19 @@
 </body>
 <?= $this->include('teacher/include/end')?>
 <?= $this->include('teacher/include/footer')?>
+<script>
+    $(document).ready(function(){
+        // sa button
+        $('.btn-add').on('click',function(){
+            // data galing buton
+            const id = $(this).data('id');
+            const lrn = $(this).data('lrn');
+            // const profile_picture = $(this).data('profile');
+            // // sa modal
+             $('.idModal').val(id);
+             $('.lrnModal').val(lrn).trigger('change');
+            // Call Modal
+            $('#addgrade').modal('show');
+        });
+    });
+</script>

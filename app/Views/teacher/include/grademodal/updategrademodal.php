@@ -1,4 +1,4 @@
-<div class="modal fade" id="addgrade">
+<div class="modal fade" id="updategrade">
         <div class="modal-dialog" style = "font-family:poppins">
           <div class="modal-content">
             <div class="modal-header">
@@ -8,16 +8,25 @@
               </button>
             </div>
             <div class="modal-body">
-            <form action="<?=site_url('grading')?>" method="post">
+              
+            <form action="<?=site_url('updateGrade/'. $id)?>" method="post">
+            <input type="hidden" name="_method" value="PUT" />
                     <div class="form-horizontal" style = "margin-left:25%">
                     <div class="form-group col-md-9">
+                      <input type="hidden" name="id" class="idModal">
                       <label for="inputgrade">Midterm Grade</label>
-                      <input type="hidden" name="lrn" class="lrnModal">
-                      <input type="number" name="midterm" class="form-control" id="inputgrade" min = "75" max = "100">
+                      <input type="number" name="midterm" class="form-control midterm_modal" id="inputgrade" min = "75" max = "100">
                     </div>
                     <div class="form-group col-md-9">
                       <label for="inputgrade">Final Grade</label>
-                      <input type="number" name="finals" class="form-control" id="inputgrade" min = "75" max = "100">
+                      <input type="number" name="finals" class="form-control final_modal" id="inputgrade" min = "75" max = "100">
+                    </div>
+                    <div class="form-group col-md-9">
+                      <label for="inputgrade">Remarks</label>
+                      <select class="form-control"style = "border-radius:20px" id="inputGender" name = "remark">
+                        <option type="text" class="form-control"style="font-family: Poppins;" id="inputGender">Passed</option>
+                        <option type="text" class="form-control"style="font-family: Poppins;" id="inputGender">Failed</option>
+                        </select>
                     </div>
                   <!-- Submit button -->
                   <div class="modal-footer justify-content-between">

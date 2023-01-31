@@ -1,8 +1,8 @@
-<?= $this->include('admin/include/top')?>
+<?= $this->include('teacher/include/top')?>
 
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
-<?= $this->include('admin/include/navbar')?>
+<?= $this->include('teacher/include/navbar')?>
 <aside class="main-sidebar sidebar-dark-secondary elevation-8">
   <!-- Brand Logo -->
   <a href="index3.html" class="brand-link">
@@ -22,64 +22,23 @@
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
         <!-- Add icons to the links using the .nav-icon class
              with font-awesome or any other icon font library -->
+             <li class="nav-header"style = "font-family:poppins;">Teacher</li>
+        <br>
 
-        <li class="nav-header"style = "font-family:poppins;">Admin</li>
-        <li class="nav-item"style = "font-family:poppins;">
-          <a href="<?=base_url()?>/admin" class="nav-link">
-            <i class="nav-icon fas fa-tachometer-alt"></i>
-            <p>
-              <strong>Dashboard<strong>
-              <span class="badge badge-info right"></span>
-            </p>
-          </a>
-        </li>
-        <br>
-        <br>
         <li class="nav-item"style = "font-family:poppins;">
             <li class="nav-item"style = "font-family:poppins;">
-              <a href="<?=base_url('/pre_enrolled_reg')?>" class="nav-link">
-                <i class="far fa-thin fa-newspaper"></i>
-                <p>Pre-Enrolled</p>
-              </a>
-            </li>
-        </li>
-        <li class="nav-item"style = "font-family:poppins;">
-            <li class="nav-item"style = "font-family:poppins;">
-              <a href="<?=base_url('/section')?>" class="nav-link">
-                <i class="fa-sharp fa-solid fa-section"></i>
-                <p>Section</p>
-              </a>
-            </li>
-        </li>
-        <li class="nav-item"style = "font-family:poppins;">
-            <li class="nav-item"style = "font-family:poppins;">
-              <a href="<?=base_url('/r_prospectus')?>" class="nav-link">
-                <i class="fa-sharp fa-solid fa-atom"></i>
-                <p>Prospectus</p>
-              </a>
-            </li>
-        </li>
-        <li class="nav-item"style = "font-family:poppins;">
-            <li class="nav-item"style = "font-family:poppins;">
-              <a href="<?=base_url('/grading')?>" class="nav-link active">
-                <i class="fa-sharp fa-solid fa-barcode"></i>
-                <p>Grading</p>
-              </a>
-            </li>
-        </li>
-        <li class="nav-item"style = "font-family:poppins;">
-            <li class="nav-item"style = "font-family:poppins;">
-              <a href="<?=base_url('/retrieve_strand')?>" class="nav-link">
-                <i class="fa-sharp fa-solid fa-envelopes-bulk"></i>
-                <p>Strand</p>
-              </a>
-            </li>
-        </li>
-        <li class="nav-item"style = "font-family:poppins;">
-            <li class="nav-item"style = "font-family:poppins;">
-              <a href="<?=base_url('/newadmin')?>" class="nav-link">
+              <a href="<?=base_url('t_dashboard')?>" class="nav-link active"style = "background-color:maroon;">
                 <i class="nav-icon fa-solid fa-user"></i>
-                <p>Admin</p>
+                <p>Student Grade</p>
+              </a>
+            </li>
+        </li>
+
+        <li class="nav-item"style = "font-family:poppins;">
+            <li class="nav-item"style = "font-family:poppins;">
+              <a href="<?=base_url('newteacher')?>" class="nav-link" >
+                <i class="nav-icon fa-solid fa-user"></i>
+                <p>Teacher</p>
               </a>
             </li>
         </li>
@@ -128,26 +87,30 @@
       <table id="example1" class="table table-bordered table" style = "font-family:poppins">
         <thead>
           <tr>
-            <th>Subject</th>
-            <th>Title</th>
-            <th>Unit</th>
+            <th>LRN</th>
+            <th>Midterm Grade</th>
             <th>Final Grade</th>
-            <th>Remark</th>
+            <th>Remarks</th>
             <th>Action</th>
           </tr>
         </thead>
         <tbody>
+          <?php foreach($userInfo as $userGrade):?>
           <tr>
-            <td>Fil 101</td>
-            <td>Filipino</td>
-            <td>3</td>
-            <td>90</td>
-            <td>passed</td>
+            <td><?=$userGrade['lrn']?></td>
+            <td><?=$userGrade['midterm_grade']?></td>
+            <td><?=$userGrade['final_grade']?></td>
+            <td><?=$userGrade['remark']?></td>
             <td>
-              <button type="button" class="btn btn-default"style = "border-radius:20px;font-family:poppins; background-color:maroon; color: white;" data-toggle="modal" data-target="#addgrade">Add Grade</button>
-              <?= $this->include('admin/include/grademodal/grademodal')?>
+              <button type="button" class="btn btn-default btn-update"style = "border-radius:20px;font-family:poppins; background-color:maroon; color: white;"
+              data-id="<?=$userGrade['id']?>"
+              data-midterm="<?=$userGrade['midterm_grade']?>"
+              data-final="<?=$userGrade['final_grade']?>"
+              >Update</button>
+              <?php include 'include/grademodal/updategrademodal.php'?>
             </td>
           </tr>
+          <?php endforeach;?>
         </tbody>
 
 </div>
@@ -164,3 +127,21 @@
 </body>
 <?= $this->include('admin/include/end')?>
 <?= $this->include('admin/include/footer')?>
+<script>
+    $(document).ready(function(){
+        // sa button
+        $('.btn-update').on('click',function(){
+            // data galing buton
+            const id = $(this).data('id');
+            const midterm = $(this).data('midterm');
+            const finals = $(this).data('final');
+            // const profile_picture = $(this).data('profile');
+            // // sa modal
+             $('.idModal').val(id);
+             $('.midterm_modal').val(midterm);
+             $('.final_modal').val(finals).trigger('change');
+            // Call Modal
+            $('#updategrade').modal('show');
+        });
+    });
+</script>

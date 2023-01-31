@@ -63,7 +63,7 @@ class Profile extends BaseController
                 'subject' => $registration_model->select('*')
                 ->join('user_tbl', 'student_registration.lrn = user_tbl.lrn', 'right')
                 ->join('strand_tbl', 'student_registration.strand = strand_tbl.strand', 'right')
-                ->join('prospectrus_tbl', 'strand_tbl.id = prospectrus_tbl.strand_id')
+                ->join('student_grading', 'student_registration.lrn = student_grading.lrn', 'right')
                 ->where('student_registration.lrn', session()->get('lrn'))
                 ->get()->getResultArray(),
                 'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
