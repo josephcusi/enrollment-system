@@ -136,6 +136,8 @@ class PreEnrolled extends BaseController
     $email->setFrom('zasuke277379597@gmail.com', 'DOROTEO S. MENDOZA SR. MEMORIAL NATIONAL HIGH SCHOOL');
     $email->setMessage("Congratulations on your enrollment, we're excited to welcome you to the program and support your academic journey!");
     $email->send();
+
+    session()->setFlashdata('enrolled', 'Welcome');
     return redirect()->route('pre_enrolled_reg');
     // var_dump($email_data);
     }
@@ -171,6 +173,7 @@ class PreEnrolled extends BaseController
     $email->setFrom('zasuke277379597@gmail.com', 'DOROTEO S. MENDOZA SR. MEMORIAL NATIONAL HIGH SCHOOL');
     $email->setMessage("We regret to inform you that your enrollment request has been rejected. If you have any questions or concerns, please contact us for further assistance.");
     $email->send();
+    session()->setFlashdata('rejected', 'Welcome');
     return redirect()->route('pre_enrolled_reg');
 
     }

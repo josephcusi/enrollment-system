@@ -5,6 +5,8 @@ namespace App\Controllers;
 use App\Controllers\BaseController;
 use App\Models\RegistrationModel;
 use App\Models\GradeModel;
+use App\Models\StrandModel;
+use App\Models\UserModel;
 
 class Teacher extends BaseController
 {
@@ -14,6 +16,8 @@ class Teacher extends BaseController
     }
     public function t_dashboard()
     {
+        $strand_model = new StrandModel();
+          $user_model = new UserModel();
         $registration_model = new RegistrationModel;
         $data =[
             'userInfo' => $registration_model
@@ -21,7 +25,8 @@ class Teacher extends BaseController
             ->join('user_tbl', 'student_registration.lrn=user_tbl.lrn', 'right')
             ->join('section_tbl', 'student_registration.user_section = section_tbl.section', 'right')
             ->where('student_registration.state', 'Enrolled')
-            ->get()->getResultArray()
+            ->get()->getResultArray(),
+            'userName' => $user_model->where('email', session()->get('email'))->first(),
         ];
         return view('teacher/t_dashboard', $data);
         // var_dump($data['userInfo']);
@@ -42,7 +47,7 @@ class Teacher extends BaseController
             ->get()->getResultArray(),
             'id' => $id,
         ];
-       
+
         return view('teacher/Grade', $data);
     }
     public function addteacher()
@@ -74,13 +79,14 @@ class Teacher extends BaseController
         ]);
 
             if (!$validated) {
+                session()->setFlashdata('invalid', 'Welcome');
                 return redirect()->route('t_dashboard');
             }
             else
             {
             $registration_model = new RegistrationModel;
             $grade_model = new GradeModel;
-            
+
             $midterm = $this->request->getPost('midterm');
             $final = $this->request->getPost('finals');
             $lrn = $this->request->getPost('lrn');
@@ -90,7 +96,7 @@ class Teacher extends BaseController
                 'lrn' => $lrn
             ];
             $grade_model->insert($value);
-
+            session()->setFlashdata('addgrade', 'Welcome');
             return redirect()->route('t_dashboard');
             // var_dump($data['userInfo']);
         }
@@ -99,7 +105,7 @@ class Teacher extends BaseController
     {
         $registration_model = new RegistrationModel;
         $grade_model = new GradeModel;
-        
+
         $midterm = $this->request->getPost('midterm');
         $final = $this->request->getPost('finals');
         $id = $this->request->getPost('id');
@@ -114,4 +120,5 @@ class Teacher extends BaseController
         return $this->viewGrade($ids);
         // var_dump($ids);
     }
+
 }

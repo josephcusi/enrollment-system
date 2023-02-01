@@ -54,6 +54,7 @@ class Admin extends BaseController
             'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
             'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
             'usertypestudent' => $user_model->where('usertype', 'student')->get()->getNumRows(),
+            'usertypeteacher' => $user_model->where('usertype', 'teacher')->get()->getNumRows(),
             'usertypeadmin' => $user_model->where('usertype', 'admin')->get()->getNumRows(),
             'humss' => $registration_model->where('strand', 'HUMSS')->get()->getNumRows(),
             'stem' => $registration_model->where('strand', 'STEM')->get()->getNumRows(),
@@ -63,6 +64,7 @@ class Admin extends BaseController
             'status' => $registration_model->where('state', 'pending')->get()->getNumRows(),
             'enroll' => $registration_model->where('state', 'Enrolled')->get()->getNumRows(),
             'reject' => $registration_model->where('state', 'Rejected')->get()->getNumRows(),
+            'name' => $user_model->where('email', session()->get('email'))->first(),
             // 'y2023' => $year_level->where('semester', '2023')->get()->find(),
             // 'y2024' => $year_level->where('semester', '2024')->get()->find(),
 
@@ -86,6 +88,7 @@ class Admin extends BaseController
         'retrieveAdmin' => $user_model->where('usertype', 'admin')->findAll(),
         'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->find()
     ];
+
         return view('admin/newadmin', $data);
     }
     public function addadmin()
@@ -202,7 +205,7 @@ class Admin extends BaseController
 
                 $lrn = 'ADMIN'.$myLrn.str_pad($admin_lrn, 3, "0", STR_PAD_LEFT);
                 $user_model->set('lrn', $lrn)->where('id', $admin_lrn)->update();
-
+                session()->setFlashdata('admin', 'Welcome');
                 return redirect()->route('newadmin');
             }
         }

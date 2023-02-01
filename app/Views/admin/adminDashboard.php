@@ -5,7 +5,7 @@
 <?= $this->include('admin/include/navbar')?>
 <aside class="main-sidebar sidebar-dark-secondary elevation-8">
   <!-- Brand Logo -->
-  <a href="index3.html" class="brand-link">
+  <a href="#" class="brand-link">
     <img src="<?=base_url()?>/dist/img/dormehiLogo.png" alt="dormehi Logo" class="brand-image img-circle elevation-3" style="opacity: 10;">
     <span class="brand-text font-weight-light" style="margin-left:10%;"><strong>DORMEHI</strong></span>
   </a>
@@ -92,7 +92,7 @@
 <div class="content-wrapper">
   <script src="<?= base_url()?>/dist/js/sweetalert.js"></script>
   <?php if(!empty(session()->getFlashdata('admindashboard'))) : ?>
-  <script>swal("Welcome Admin!", "You successfully login your account.", "success");</script>
+  <script>swal("Welcome <?= isset($name['firstname']) ? $name['firstname'] : $name['firstname'];?> <?= isset($name['lastname']) ? $name['lastname'] : $userName['lastname'];?>!", "You successfully login your account.", "success");</script>
   <?php endif ?>
   <!-- Content Header (Page header) -->
   <section class="content-header">
@@ -133,6 +133,21 @@
               <h3><?=$usertypeadmin?></h3>
 
               <p>Total Admin</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-person-add"></i>
+            </div>
+            <a href="#" class="small-box-footer"><i class=""></i></a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-6">
+          <!-- small box -->
+          <div class="small-box bg-info">
+            <div class="inner">
+
+              <h3><?=$usertypeteacher?></h3>
+
+              <p>Total Teacher</p>
             </div>
             <div class="icon">
               <i class="ion ion-person-add"></i>

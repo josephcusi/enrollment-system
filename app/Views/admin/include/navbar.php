@@ -20,7 +20,7 @@
       <?php  $i++; if ($i == 1):?>
     <!-- Sidebar user panel (optional) -->
     <div class="user-panel mt-1 pb-1 mb-1 d-flex" >
-      
+
       <div class="image" style = "margin-left:-15%">
         <img style="background-image:url(../../dist/img/profile.jfif); border-color:maroon; background-size:cover; width:35px; height:35px;" src="<?= base_url().'/'.'profile/'.$name['profile_picture'] ?>" class="img-fluid img-circle">
       </div>
@@ -31,8 +31,6 @@
 
                             <?= isset($name['firstname']) ? $name['firstname'] : $userName['firstname'];?>
                             <?=" " ?>
-                            <?= isset($name['middlename']) ? $name['middlename'] : $userName['middlename']; ?>
-                            <?php echo " " ?>
                             <?= isset($name['lastname']) ? $name['lastname'] : $userName['lastname']; ?>
     </a>
     <div class="dropdown-content " style = "margin-left:30%; margin-top:2%;">

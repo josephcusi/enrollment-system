@@ -90,6 +90,10 @@
       <?php if(!empty(session()->getFlashdata('duplicate'))) : ?>
       <script>swal("Duplicate Input!", "You already sent application for this year level and semester.", "warning");</script>
       <?php endif ?>
+
+      <?php if(!empty(session()->getFlashdata('not'))) : ?>
+      <script>swal("Can't Proceed!", "You must be enrolled first to access prospectus page.", "warning");</script>
+      <?php endif ?>
       <!-- Content Header (Page header) -->
 
       <!-- Main content -->

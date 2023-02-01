@@ -46,8 +46,6 @@
         </li>
         <br>
         <br>
-
-
           </ul>
         </li>
 
@@ -59,6 +57,18 @@
 
 </div>
 <div class="content-wrapper">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <?php if(!empty(session()->getFlashdata('invalid'))) : ?>
+  <script>swal("Duplicate!", "You already set grade for this student.", "error");</script>
+  <?php endif ?>
+  <?php if(!empty(session()->getFlashdata('addgrade'))) : ?>
+  <script>swal("Grade Added!", "Registration successfully rejected.", "success");</script>
+  <?php endif ?>
+
+  <?php if(!empty(session()->getFlashdata('teacher'))) : ?>
+  <script>swal("Welcome   <?= isset($userName['firstname']) ? $userName['firstname'] : $userName['firstname'];?>!", "You successfully login your account.", "success");</script>
+  <?php endif ?>
+
   <!-- Content Header (Page header) -->
 
   <section class="content-header">
@@ -108,7 +118,9 @@
             <td><?=$user['year_level'];?></td>
             <td>
              <button type="button" class="btn btn-secondary btn-sm btn-add" style = "border-radius:15px" data-id="<?=$user['id'];?>" data-lrn="<?=$user['lrn'];?>">Add Grade</button>
+
              <a href="<?=site_url('viewGrade/'. $user['id']);?>"><button type="button" class="btn btn-secondary btn-sm" style = "border-radius:15px">Update</button></a>
+
               <?php include 'include/grademodal/grademodal.php';?>
             </td>
           </tr>

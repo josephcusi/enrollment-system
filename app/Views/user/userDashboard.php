@@ -80,7 +80,7 @@
       <script src="<?= base_url()?>/dist/js/sweetalert.js"></script>
       <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
       <?php if(!empty(session()->getFlashdata('dashboard'))) : ?>
-      <script>swal("Welcome!", "You successfully login your account.", "success");</script>
+      <script>swal("Welcome <?= isset($name['firstname']) ? $name['firstname'] : $name['firstname'];?> <?= isset($name['lastname']) ? $name['lastname'] : $userName['lastname'];?>!", "You successfully login your account.", "success");</script>
       <?php endif ?>
 
       <?php if(!empty(session()->getFlashdata('saveprofile'))) : ?>

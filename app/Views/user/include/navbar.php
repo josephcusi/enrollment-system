@@ -33,7 +33,7 @@
 
                             <?= isset($name['firstname']) ? $name['firstname'] : $userName['firstname'];?>
                             <?=" " ?>
-                          
+                            <?= isset($name['lastname']) ? $name['lastname'] : $userName['lastname'];?>
     </a>
     <div class="dropdown-content " style = "margin-left:30%; margin-top:2%;">
       <a href="<?=site_url()?>logout" style = "font-family:poppins; margin-left:17%; font-weight:bolder" method="post">LOGOUT</a>

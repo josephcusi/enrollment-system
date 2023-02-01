@@ -56,6 +56,7 @@ class Profile extends BaseController
             ];
             // var_dump($user['subject']);
             // return view('user/userProspectus', $user);
+            session()->setFlashdata('not', 'Welcome');
             return redirect()->route('registration');
         }
         else{
@@ -88,6 +89,7 @@ class Profile extends BaseController
     {
         $registration_model = new RegistrationModel();
         $profile_model = new ProfileModel();
+        $user_model = new UserModel();
         $email = session()->get('loggedInUser');
         $profile = $profile_model->where('email', $email)->findAll();
 
@@ -100,7 +102,8 @@ class Profile extends BaseController
             'student_registration' => $registration_model->select('*')
             ->join('user_tbl', 'student_registration.lrn = user_tbl.lrn', 'right')
             ->where('student_registration.lrn', session()->get('lrn'))
-            ->first()
+            ->first(),
+            'name' => $user_model->where('email', session()->get('email'))->first(),
         ];
 
         if(count($profile) != 0)

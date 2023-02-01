@@ -90,7 +90,10 @@
 
 </div>
 <div class="content-wrapper">
-
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <?php if(!empty(session()->getFlashdata('admin'))) : ?>
+  <script>swal("Added Successfully!", "You successfully added admin.", "success");</script>
+  <?php endif ?>
   <!-- Content Header (Page header) -->
 
   <section class="content-header">
@@ -140,7 +143,7 @@
             <td><?=$ret_admin['lastname'];?><?= " "?><?=$ret_admin['firstname'];?><?= " "?><?=$ret_admin['middlename'];?></td>
             <td><?=$ret_admin['email'];?></td>
             <td>
-            <a href="#"> <button type="button" class="btn btn-secondary btn-editAdmin" style = "border-radius:20px"
+            <a href="#"> <button type="button" class="btn btn-secondary btn-sm btn-editAdmin" style = "border-radius:20px"
             data-profile_picture="<?=$ret_admin['profile_picture'];?>"data-lastname="<?=$ret_admin['lastname'];?>"data-firstname="<?=$ret_admin['firstname'];?>"data-middlename="<?=$ret_admin['middlename'];?>"
             data-email="<?=$ret_admin['email'];?>" data-password="<?=$ret_admin['password'];?>" >update</button></a>
             <?php include 'modal/adminUpdate.php'?>

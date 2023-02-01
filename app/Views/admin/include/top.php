@@ -18,7 +18,7 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="<?=base_url()?>/plugins/fontawesome-free/css/all.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="<?=base_url()?>/dist/css/adminlte.min.css">
+  
   <!-- Tempusdominus Bootstrap 4 -->
   <link rel="stylesheet" href="<?=base_url()?>/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
   <!-- iCheck -->
@@ -26,7 +26,7 @@
   <!-- JQVMap -->
   <link rel="stylesheet" href="<?=base_url()?>/plugins/jqvmap/jqvmap.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="<?=base_url()?>/dist/css/adminlte.min.css">
+
   <link rel="stylesheet" href="<?=base_url()?>/dist/css/adminlte.css">
   <link rel="stylesheet" href="<?=base_url()?>/dist/css/adminlte.css.map">
   <link rel="stylesheet" href="<?=base_url()?>/dist/css/adminlte.min.css.map">
@@ -45,7 +45,7 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="<?=base_url()?>/dist/css/adminlte.min.css">
   <link rel="stylesheet" href="<?=base_url()?>/plugins/bs-stepper/css/bs-stepper.min.css">
-  
+
 
   <!-- Custom Css -->
 

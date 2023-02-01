@@ -90,6 +90,13 @@
 
   </div>
   <div class="content-wrapper">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <?php if(!empty(session()->getFlashdata('rejected'))) : ?>
+    <script>swal("Rejected!", "Registration successfully rejected.", "success");</script>
+    <?php endif ?>
+    <?php if(!empty(session()->getFlashdata('enrolled'))) : ?>
+    <script>swal("Enrolled!", "Registration has been successfully enrolled.", "success");</script>
+    <?php endif ?>
     <!-- Content Header (Page header) -->
 
     <section class="content-header">
