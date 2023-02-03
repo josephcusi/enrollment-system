@@ -26,16 +26,8 @@ class PreEnrolled extends BaseController
         $registration_model = new RegistrationModel();
 
         $data = [
-            'pre_enrolled' => $registration_model
-        ->select('*')->join('school_year', 'student_registration.semester=school_year.semester', 'right')
-        ->join('user_tbl', 'student_registration.lrn=user_tbl.lrn', 'right')
-        ->join('user_profile', 'user_tbl.email=user_profile.email', 'right')
-        ->where('student_registration.semester', session()->get('semester'))
-        ->where('user_profile.id', $id)
-        ->where('school_year.year', session()->get('year'))->get()->getResultArray(),
-
             'enrolled' => $registration_model
-        ->select('*')->join('school_year', 'student_registration.semester=school_year.semester', 'right')
+        ->select('*, student_registration.id')->join('school_year', 'student_registration.semester=school_year.semester', 'right')
         ->join('user_tbl', 'student_registration.lrn=user_tbl.lrn', 'right')
         ->join('user_profile', 'user_tbl.email=user_profile.email', 'right')
         ->join('strand_tbl', 'student_registration.strand = strand_tbl.strand', 'right')
@@ -43,7 +35,8 @@ class PreEnrolled extends BaseController
         ->join('student_registration as s', 'user_tbl.lrn=s.lrn', 'right')
         ->where('student_registration.semester', session()->get('semester'))
         ->where('user_profile.id', $id)
-        ->where('school_year.year', session()->get('year'))->first(),
+        ->where('school_year.year', session()->get('year'))->get()->getResultArray(),
+        
         'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
             'rejected' => $registration_model
         ->select('*')->join('school_year', 'student_registration.semester=school_year.semester', 'right')
@@ -56,7 +49,7 @@ class PreEnrolled extends BaseController
 
         ];
 
-        // var_dump($data['pre_enrolled']);
+        // var_dump($data['enrolled']);
         return view('admin/viewPreEnroll', $data);
     }
     public function enroll($id)

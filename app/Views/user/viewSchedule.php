@@ -111,7 +111,7 @@
           <?php //foreach($section as $sect): ?>
           <tr>
 
-            <th>Subject</th>
+            <th>Section</th>
             <th>Monday</th>
             <th>Tuesday</th>
             <th>Wednesday</th>
@@ -122,12 +122,12 @@
         <tbody>
             <?php// foreach($section_tbl as $section_value):?>
           <tr>
-            <td>Fil 101</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td><?=isset($userSched['section']) ? $userSched['section'] : 'UNAVAILABLE';?></td>
+            <td><?=isset($userSched['monday']) ? $userSched['monday'] : 'UNAVAILABLE';?> <?= '-'?> <?=isset($userSched['mon_two']) ? $userSched['mon_two'] : 'UNAVAILABLE';?></td>
+            <td><?=isset($userSched['tuesday']) ? $userSched['tuesday'] : 'UNAVAILABLE';?> <?= '-'?> <?=isset($userSched['tue_two']) ? $userSched['tue_two'] : 'UNAVAILABLE';?></td>
+            <td><?=isset($userSched['wednesday']) ? $userSched['wednesday'] : 'UNAVAILABLE';?> <?= '-'?> <?=isset($userSched['wed_two']) ? $userSched['wed_two'] : 'UNAVAILABLE';?></td>
+            <td><?=isset($userSched['thursday']) ? $userSched['thursday'] : 'UNAVAILABLE';?> <?= '-'?> <?=isset($userSched['thu_two']) ? $userSched['thu_two'] : 'UNAVAILABLE';?></td>
+            <td><?=isset($userSched['friday']) ? $userSched['friday'] : 'UNAVAILABLE';?> <?= '-'?> <?=isset($userSched['fri_two']) ? $userSched['fri_two'] : 'UNAVAILABLE';?></td>
           </tr>
 
           </tr>

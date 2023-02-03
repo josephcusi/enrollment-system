@@ -113,21 +113,27 @@
       <table id="example1" class="table table-bordered table" style = "font-family:poppins">
         <thead>
           <tr>
+            <th>Teacher</th>
             <th>Section</th>
             <th>Strand</th>
             <th>Semester</th>
             <th>Year Level</th>
             <th>Subject Count</th>
-            <th>Action</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>
+                    <?= isset($userSched['firstname']) ? $userSched['firstname'] : 'UNAVAILABLE';?>
+                    <?=" " ?>
+                    <?= isset($userSched['middlename']) ? $userSched['middlename'] :''; ?>
+                    <?php echo " " ?>
+                    <?= isset($userSched['lastname']) ? $userSched['lastname'] : ''; ?>
+            </td>
+            <td><?=isset($userSched['section']) ? $userSched['section'] : 'UNAVAILABLE';?></td>
+            <td><?=isset($userSched['strand']) ? $userSched['strand'] : 'UNAVAILABLE';?></td>
+            <td><?=isset($userSched['semester']) ? $userSched['semester'] : 'UNAVAILABLE';?></td>
+            <td><?=isset($userSched['year_level']) ? $userSched['year_level'] : 'UNAVAILABLE';?></td>
             <td>
               <a href="<?=base_url('viewSchedule')?>"><button type="button" class="btn btn-secondary btn-sm" style = "border-radius:15px">schedule</button>
             </td>

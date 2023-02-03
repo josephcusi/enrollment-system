@@ -110,6 +110,7 @@
                                             action="<?=site_url('insert_registration/'.$user['id']);?>" method="post">
                                             <div class="form-horizontal" style="font-family:poppins; color:maroon;">
                                                 <div class="form-group col-md-6">
+                                                    <input type="hidden" name="year" value="<?=$year['year']?>">
                                                     <label for="studentLrn">Student LRN</label>
                                                     <select class="form-control" name="lrn"
                                                         placeholder="<?= $user['lrn'];?>">

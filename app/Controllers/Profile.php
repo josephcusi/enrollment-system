@@ -12,6 +12,7 @@ use App\Models\RegistrationModel;
 use App\Models\ProspectusModel;
 use App\Models\StrandModel;
 use App\Models\GradeModel;
+use App\Models\ScheduleModel;
 use App\Libraries\Hash;
 
 
@@ -32,12 +33,33 @@ class Profile extends BaseController
     {
         $profile_model = new ProfileModel();
         $user_model = new UserModel();
+        $registration_model = new RegistrationModel();
+        $subject = $registration_model->where('state', 'Enrolled') ->where('lrn', session()->get('lrn'))->first();
+        
+        if(!$subject){
+            // var_dump($user['subject']);
+            // return view('user/userProspectus', $user);
+            session()->setFlashdata('not', 'Welcome');
+            return redirect()->route('registration');
+        }
+        else
+        {
         $user = [
+            'userSched' => $user_model
+            ->select('*')
+            ->join('student_registration', 'user_tbl.lrn = student_registration.lrn', 'inner')
+            ->join('section_tbl', 'student_registration.user_section = section_tbl.section', 'inner')
+            ->join('schedule_tbl', 'section_tbl.id = schedule_tbl.section_id', 'inner')
+            ->join('user_tbl as u', 'schedule_tbl.teacher_id = u.id')
+            ->where('user_tbl.email', session()->get('email'))
+            ->first(),
             'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
             'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->findAll()
         ];
         return view('user/userSchedule', $user);
+        // var_dump($user['userSched']);
     }
+}
     public function userProspectus()
     {
         $profile_model = new ProfileModel();
@@ -350,6 +372,7 @@ class Profile extends BaseController
             ];
             session()->setFlashdata('enroll', 'Please fill out your profile first');
             return view('user/newregistration', $data);
+            // var_dump($data['year']);
         }
 
 
@@ -448,6 +471,7 @@ class Profile extends BaseController
         }
         else
         {
+            $year = $this->request->getVar('year');
             $lrn = $this->request->getVar('lrn');
             $strand = $this->request->getVar('strand');
             $yearlevel = $this->request->getVar('year_level');
@@ -456,6 +480,7 @@ class Profile extends BaseController
             $registration_model = new RegistrationModel();
 
             $data = [
+                'year' => $year,
                 'lrn' => $lrn,
                 'strand' => $strand,
                 'year_level'=> $yearlevel,
