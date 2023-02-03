@@ -117,7 +117,7 @@
                 <ul class="list-group list-group-unbordered mb-3">
                   <li class="list-group-item">
                        <b>
-                        <?=isset($subject['strand']) ? $subject['strand'] : 'N/A' ;?>
+                        <?=isset($subject[0]['strand']) ? $subject[0]['strand'] : '' ;?>
                       </b>
                   </li>
                 </ul>

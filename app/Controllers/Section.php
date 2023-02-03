@@ -99,7 +99,7 @@ class Section extends BaseController
         if (!$validated) {
             //session()->setFlashdata('updatesection', 'Duplicate input');
             session()->setFlashdata('notupdatesection', 'Duplicate input');
-            return $this->schedule();
+            return $this->section();
         }
         else
         {
@@ -153,11 +153,79 @@ class Section extends BaseController
                     'is_unique' => 'Section is Already Exist'
                 ]
             ],
+            'teacher' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Field is required!'
+                ]
+            ],
+            'monOne' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Field is required!'
+                ]
+            ],
+            'monTwo' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Field is required!'
+                ]
+            ],
+            'tueOne' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Field is required!'
+                ]
+            ],
+            'tueTwo' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Field is required!'
+                ]
+            ],
+            'wedOne' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Field is required!'
+                ]
+            ],
+            'wedTwo' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Field is required!'
+                ]
+            ],
+            'thuOne' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Field is required!'
+                ]
+            ],
+            'thuTwo' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Field is required!'
+                ]
+            ],
+            'friOne' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Field is required!'
+                ]
+            ],
+            'friTwo' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Field is required!'
+                ]
+            ],
+
         ]);
 
         if (!$validated) {
             //session()->setFlashdata('updatesection', 'Duplicate input');
             session()->setFlashdata('notupdatesection', 'Duplicate input');
+            session()->setFlashdata('validation', $this->validator);
             return $this->schedule($ids);
         }
         else

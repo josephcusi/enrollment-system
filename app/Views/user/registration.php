@@ -94,8 +94,12 @@
       <?php if(!empty(session()->getFlashdata('not'))) : ?>
       <script>swal("Can't Proceed!", "You must be enrolled first to access prospectus page.", "warning");</script>
       <?php endif ?>
-      <!-- Content Header (Page header) -->
 
+      <?php if(!empty(session()->getFlashdata('grade'))) : ?>
+      <script>swal("Can't Proceed!", "You need to finish semester to acces this page.", "warning");</script>
+      <?php endif ?>
+      <!-- Content Header (Page header) -->
+      
       <!-- Main content -->
       <section class="content-header">
         <div class="container-fluid">

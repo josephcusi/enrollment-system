@@ -11,6 +11,7 @@ use App\Models\YearModel;
 use App\Models\RegistrationModel;
 use App\Models\ProspectusModel;
 use App\Models\StrandModel;
+use App\Models\GradeModel;
 use App\Libraries\Hash;
 
 
@@ -52,6 +53,20 @@ class Profile extends BaseController
             return redirect()->route('registration');
         }
         else{
+            $grade_model = new GradeModel();
+            $email = session()->get('loggedInUser');
+            $count = count($grade_model
+            ->select('*')
+            ->join('user_tbl', 'student_grading.lrn = user_tbl.lrn', 'inner')
+            ->where('user_tbl.email', $email)
+            ->get()->getResultArray());
+
+            if($count < 1) {
+                session()->setFlashdata('grade', 'You need to finish semester to acces this page');
+                return redirect()->route('registration');
+                // var_dump($count);
+            }
+            else{
             $user = [
                 'subject' => $registration_model->select('*, student_registration.id')
                 ->join('user_tbl', 'student_registration.lrn = user_tbl.lrn', 'inner')
@@ -66,6 +81,7 @@ class Profile extends BaseController
                 //    var_dump($user['subject']);
                 // echo 2;
         }
+    }
     }
     public function newRegistration()
     {

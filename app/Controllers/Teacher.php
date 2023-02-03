@@ -30,19 +30,21 @@ class Teacher extends BaseController
             'userName' => $user_model->where('email', session()->get('email'))->first(),
         ];
         return view('teacher/t_dashboard', $data);
-        // var_dump($data['userInfo']);
+        // var_dump($data['username']);
     }
     public function newteacher()
     {
         $user_model = new UserModel();
         $teacher = [
-            'view' => $user_model->where('usertype', 'teacher')->findAll()
+            'view' => $user_model->where('usertype', 'teacher')->findAll(),
+            'userName' => $user_model->where('email', session()->get('email'))->first(),
         ];
         return view('teacher/newteacher', $teacher);
     }
     public function viewGrade($id)
     {
         $registration_model = new RegistrationModel;
+        $user_model = new UserModel();
         $data =[
             'userInfo' => $registration_model
             ->select('*, student_grading.id')
@@ -51,13 +53,18 @@ class Teacher extends BaseController
             ->where('student_registration.id', $id)
             ->get()->getResultArray(),
             'id' => $id,
+            'userName' => $user_model->where('email', session()->get('email'))->first(),
         ];
 
         return view('teacher/Grade', $data);
     }
     public function addteacher()
     {
-        return view('teacher/addteacher');
+        $user_model = new UserModel();
+        $data =[
+            'userName' => $user_model->where('email', session()->get('email'))->first(),
+        ];
+        return view('teacher/addteacher', $data);
     }
     public function grading()
     {

@@ -9,6 +9,7 @@
             </div>
             <div class="modal-body"style = "">
             <form class="form-horizontal" action="<?= site_url('addsched/'. $id);?>" method="post">
+            <?= csrf_field(); ?>
             <div class="form-row mt-3">
               <input type="hidden" class="id" name="id">
                       <div class="form-group col-sm-6 mx-auto">
@@ -31,7 +32,7 @@
                       <input type="checkbox" id="monday" name="monday" value="monday">
                       <label for="monday" class="col-sm-6 col-form-label">Monday</label>
                       <input type="time" name="monOne" class="form-control" value="">
-
+                      <span class="text-danger"><?= isset($validation) ? display_error($validation, 'monOne') : '' ?></span>
                     </div>
                     <div class="form-group col-sm-6 mx-auto">
 
