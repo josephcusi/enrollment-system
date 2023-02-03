@@ -42,11 +42,10 @@ class User extends BaseController
                     ]
                 ],
                 'password' => [
-                    'rules' => 'required|min_length[6]|max_length[15]',
+                    'rules' => 'required|min_length[6]',
                     'errors' => [
                         'required' => 'Password is required!',
                         'min_length' => 'Password must have morethan 6 characters in length.',
-                        'max_length' => 'Passwords must not have characters more than 15 in length.'
                     ]
                 ]
             ]);
@@ -157,19 +156,17 @@ class User extends BaseController
                 ]
             ],
             'password' => [
-                'rules' => 'required|min_length[6]|max_length[15]',
+                'rules' => 'required|min_length[6]',
                 'errors' => [
                     'required' => 'Password is required!',
                     'min_length' => 'Password must have morethan 6 characters in length.',
-                    'max_length' => 'Passwords must not have characters more than 15 in length.'
                 ]
             ],
             'passwordConf' => [
-                'rules' => 'required|min_length[6]|max_length[15]|matches[password]',
+                'rules' => 'required|min_length[6]|matches[password]',
                 'errors' => [
                     'required' => 'Confirm password is required!',
                     'min_length' => 'Confirm Password must have atleast 6 characters in length.',
-                    'max_length' => 'Confirm Password must not have characters more than 15 in length.',
                     'matches' => 'Password do not match.'
                 ]
             ]

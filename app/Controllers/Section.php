@@ -8,6 +8,7 @@ use App\Models\ProspectusModel;
 use App\Models\StrandModel;
 use App\Models\YearModel;
 use App\Models\UserModel;
+use App\Models\ScheduleModel;
 
 class Section extends BaseController
 {
@@ -15,13 +16,24 @@ class Section extends BaseController
     {
         helper(['url', 'form']);
     }
-    public function schedule(){
+    public function schedule($id){
       $user_model = new UserModel();
-      $data['userName'] = $user_model->where('email', $email = session()->get('loggedInUser'))->find();
+      $schedule_model = new ScheduleModel();
+      $section_model = new SectionModel();
+      $data = [
+        'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
+        'sched' => $schedule_model
+        ->select('*')
+        ->join('section_tbl', 'schedule_tbl.section_id = section_tbl.id', 'inner')
+        ->where('section_tbl.id', $id)
+        ->get()->getResultArray(),
+        'teacher' => $user_model->where('usertype', 'teacher')->findAll(),
+        'section' => $section_model->where('id', $id)->findAll(),
+        'id' => $id
+
+    ];
         return view('admin/schedule', $data);
-    }
-    public function addSchedule(){
-        return view('admin/addSchedule');
+        // var_dump($data['sched']);
     }
     public function section()
     {
@@ -87,7 +99,7 @@ class Section extends BaseController
         if (!$validated) {
             //session()->setFlashdata('updatesection', 'Duplicate input');
             session()->setFlashdata('notupdatesection', 'Duplicate input');
-            return $this->section();
+            return $this->schedule();
         }
         else
         {
@@ -131,4 +143,58 @@ class Section extends BaseController
         session()->setFlashdata('updatesection', 'Duplicate input');
         return redirect()->route('section');
     }
+    public function addsched($ids)
+    {
+        $validated = $this->validate([
+            'id' => [
+                'rules' => 'required|is_unique[schedule_tbl.section_id]',
+                'errors' => [
+                    'required' => 'Section is required!',
+                    'is_unique' => 'Section is Already Exist'
+                ]
+            ],
+        ]);
+
+        if (!$validated) {
+            //session()->setFlashdata('updatesection', 'Duplicate input');
+            session()->setFlashdata('notupdatesection', 'Duplicate input');
+            return $this->schedule($ids);
+        }
+        else
+        {
+        $schedule_model = new ScheduleModel();
+
+        $teacher = $this->request->getPost('teacher');
+        $section = $this->request->getPost('id');
+        $monOne = $this->request->getPost('monOne');
+        $monTwo = $this->request->getPost('monTwo');
+        $tueOne = $this->request->getPost('tueOne');
+        $tueTwo = $this->request->getPost('tueTwo');
+        $wedOne = $this->request->getPost('wedOne');
+        $wedTwo = $this->request->getPost('wedTwo');
+        $thuOne = $this->request->getPost('thuOne');
+        $thuTwo = $this->request->getPost('thuTwo');
+        $friOne = $this->request->getPost('friOne');
+        $friTwo = $this->request->getPost('friTwo');
+
+        $value = [
+            'teacher_id' => $teacher,
+            'section_id' => $section,
+            'monday' => $monOne,
+            'mon_two' => $monTwo,
+            'tuesday' => $tueOne,  
+            'tue_two' => $tueTwo,
+            'wednesday' => $wedOne,
+            'wed_two' => $wedTwo,
+            'thursday' => $thuOne,
+            'thu_two' => $thuTwo,
+            'friday' => $friOne, 
+            'fri_two' => $friTwo,  
+        ];
+        $schedule_model->insert($value);
+
+        return $this->schedule($ids);
+    }
+
+}
 }

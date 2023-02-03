@@ -111,8 +111,13 @@
   </section>
   <!-- Main content -->
   <section class="content-header">
-
     <div class="card card-primary card-outline mx-auto" style = "">
+      <div class="card-header">
+        <?php foreach($section as $sect):?>
+    <button type="button" class="btn btn-section" style = "border-radius:20px;background-color:maroon; color: white;" data-id='<?=$sect['id']?>'>Add</button>
+    <?= $this->include('admin/addSchedule')?>
+    <?php endforeach;?>
+</div>
       <div class="card-body">
     <div class="container-fluid">
       <div class="row">
@@ -121,12 +126,10 @@
 
 
       <table id="example1" class="table table-bordered table" style = "font-family:poppins">
-
         <thead>
           <?php //foreach($section as $sect): ?>
           <tr>
-
-            <th>Subject</th>
+            <th>Section</th>
             <th>Monday</th>
             <th>Tuesday</th>
             <th>Wednesday</th>
@@ -136,28 +139,25 @@
           </tr>
         </thead>
         <tbody>
-            <?php// foreach($section_tbl as $section_value):?>
+            <?php foreach($sched as $new):?>
           <tr>
-
-            <td>Fil 101</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td><?=$new['section'];?></td>
+            <td><?=$new['monday'];?> <?= '-'?> <?=$new['mon_two'];?></td>
+            <td><?=$new['tuesday'];?> <?= '-'?> <?=$new['tue_two'];?></td>
+            <td><?=$new['wednesday'];?> <?= '-'?> <?=$new['wed_two'];?></td>
+            <td><?=$new['thursday'];?> <?= '-'?> <?=$new['thu_two'];?></td>
+            <td><?=$new['friday'];?> <?= '-'?> <?=$new['fri_two'];?></td>
             <td>
-            <button type="button" class="btn btn-primary" style = "border-radius:20px;background-color:maroon; color: white;"data-toggle="modal" data-target="#addSchedule">Add</button>
-            <?= $this->include('admin/addSchedule')?>
+            <button type="button" class="btn btn-primary" style = "border-radius:20px;background-color:maroon; color: white;"data-toggle="modal" data-target="#addSchedule">Update</button>
+            <?//= $this->include('admin/addSchedule')?>
             </td>
           </tr>
 
           </tr>
-          <?php// endforeach;?>
+          <?php endforeach;?>
         </tbody>
         <tfoot>
         </tfoot>
-
-
       </table>
     <!-- /.card-body -->
   </div>
@@ -175,3 +175,16 @@
 </body>
 <?= $this->include('admin/include/end')?>
 <?= $this->include('admin/include/footer')?>
+<script>
+$(document).ready(function(){
+     // sa button
+     $('.btn-section').on('click',function(){
+         // data galing buton
+         const id = $(this).data('id');
+         // // sa modal
+          $('.id').val(id);
+         // Call Modal
+         $('#addSchedule').modal('show');
+     });
+   });
+</script>

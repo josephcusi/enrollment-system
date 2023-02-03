@@ -96,7 +96,6 @@
   <!-- Main content -->
   <section class="content-header">
     <?php $i = 0; foreach($pre_enrolled as $new_pre_enrolled):?>
-      <?php  $i++; if ($i == 1):?>
     <div class="card card-primary card-outline mx-auto" style = "width:98%; border-radius:15px;">
       <div class="card-header">
         <h3 class="card-title"style = "font-family:poppins">Pre-Enrolled Table</h3>
@@ -200,7 +199,6 @@
      <?php include'modal/enroll.php';?>
     </div>
   </div>
-  <?php endif;?>
   <?php endforeach;?>
     <!-- /.card-body -->
   </div>

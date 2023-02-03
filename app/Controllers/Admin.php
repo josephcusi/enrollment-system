@@ -163,11 +163,10 @@ class Admin extends BaseController
             ]
         ],
         'adminPassword' => [
-            'rules' => 'required|min_length[6]|max_length[15]',
+            'rules' => 'required|min_length[6]',
             'errors' => [
                 'required' => 'Password is required!',
                 'min_length' => 'Password must have morethan 6 characters in length.',
-                'max_length' => 'Passwords must not have characters more than 15 in length.'
             ]
         ]
     ]);
@@ -210,7 +209,7 @@ class Admin extends BaseController
             }
         }
     }
-    public function adminUpdate($id)
+    public function adminUpdate()
     {
         $validated = $this->validate([
             'profile_picture' => [
@@ -238,19 +237,18 @@ class Admin extends BaseController
                 ]
             ],
             'newPassword' => [
-                'rules' => 'required|min_length[6]|max_length[15]',
+                'rules' => 'required|min_length[6]',
                 'errors' => [
                     'required' => 'Password is required!',
                     'min_length' => 'Password must have morethan 6 characters in length.',
-                    'max_length' => 'Passwords must not have characters more than 15 in length.'
+                    
                 ]
             ],
             'confnewPassword' => [
-                'rules' => 'required|min_length[6]|max_length[15]|matches[newPassword]',
+                'rules' => 'required|min_length[6]|matches[newPassword]',
                 'errors' => [
                     'required' => 'Confirm password is required!',
                     'min_length' => 'Confirm Password must have atleast 6 characters in length.',
-                    'max_length' => 'Confirm Password must not have characters more than 15 in length.',
                     'matches' => 'Password do not match.'
                 ]
             ]
@@ -266,6 +264,7 @@ class Admin extends BaseController
         {
 
             $user_model = new UserModel();
+            $id = $this->request->getPost('id');
             $lastname = $this->request->getPost('lastname');
             $firstname = $this->request->getPost('firstname');
             $middlename = $this->request->getPost('middlename');

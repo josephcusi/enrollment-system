@@ -116,7 +116,9 @@
                 <p class="text-muted text-left"style="font-family:poppins;">Strand</p>
                 <ul class="list-group list-group-unbordered mb-3">
                   <li class="list-group-item">
-                       <b><?=$subject[0]['strand'];?></b>
+                       <b>
+                        <?=isset($subject['strand']) ? $subject['strand'] : 'N/A' ;?>
+                      </b>
                   </li>
                 </ul>
               </div>

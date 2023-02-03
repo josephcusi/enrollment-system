@@ -63,6 +63,8 @@ $routes->match(['get', 'post'],'/grading', 'Teacher::grading');
 // $routes->get('/viewGrades', 'Teacher::viewGrades');
 $routes->get('/viewGrade/(:any)', 'Teacher::viewGrade/$1');
 $routes->put('/updateGrade/(:any)', 'Teacher::updateGrade/$1');
+$routes->post('/addNewTeacher', 'Teacher::addNewTeacher');
+$routes->put('/TeacherUpdate', 'Teacher::TeacherUpdate');
 
 //authcontroller/ forgot//
 $routes->get('forgot-password', 'AuthController::forgot');
@@ -115,7 +117,7 @@ $routes->get('/newadmin', 'Admin::newadmin');
 $routes->get('/addadmin', 'Admin::addadmin');
 $routes->get('/adminlogout', 'Admin::adminlogout');
 $routes->post('/insertAdmin', 'Admin::insertAdmin');
-$routes->put('/adminUpdate/(:any)', 'Admin::adminUpdate/$1');
+$routes->put('/adminUpdate', 'Admin::adminUpdate');
 
 //------------ADMIN STRAND------------
 $routes->get('/retrieve_strand', 'Strand::retrieve_strand');
@@ -126,10 +128,10 @@ $routes->put('/update_strand/(:any)', 'Strand::update_strand/$1');
 //-----------ADMIN SECTION---------
 $routes->get('/section', 'Section::section');
 $routes->post('/newsection', 'Section::newsection');
-$routes->get('/schedule', 'Section::schedule');
-$routes->get('/addSchedule', 'Section::addSchedule');
+$routes->get('/schedule/(:any)', 'Section::schedule/$1');
 $routes->put('/section_update', 'Section::section_update');
 $routes->get('/strandSec/(:any)', 'Section::strandSec/$1');
+$routes->post('/addsched/(:any)', 'Section::addsched/$1');
 
 //-----------ADMIN PROSPECTUS---------
 $routes->get('/r_prospectus', 'Prospectus::r_prospectus');

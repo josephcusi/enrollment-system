@@ -20,16 +20,18 @@
     <!-- Sidebar user panel (optional) -->
     <div class="user-panel mt-1 pb-1 mb-1 d-flex" >
 
-      <div class="image" style = "margin-left:-15%">
-        <img style="background-image:url(../../dist/img/profile.jfif); border-color:maroon; background-size:cover; width:35px; height:35px;" src="" class="img-fluid img-circle">
+    <div class="image" style = "margin-left:-15%">
+        <img style="background-image:url(../../dist/img/profile.jfif); border-color:maroon; background-size:cover; width:35px; height:35px;" src="<?= base_url().'/'.'profile/'//$name['profile_picture'] ?>" class="img-fluid img-circle">
       </div>
 </div>
   <div class="dropdown">
       <div class="info">
       <a class="d-block" style="color:white; background-color:#212529; font-family:poppins;  margin-top:1.5%; border-radius:18px; padding:7px" href="#">
-
-
-    </a>
+sadasdasdsadas
+        <?//= isset($name['firstname']) ? $name['firstname'] : $userName['firstname'];?>
+        <?=" " ?>
+        <?//= isset($name['lastname']) ? $name['lastname'] : $userName['lastname']; ?>
+        </a>
     <div class="dropdown-content " style = "margin-left:30%; margin-top:2%;">
       <a href="<?=site_url()?>logout" style = "font-family:poppins; margin-left:17%; font-weight:bolder" method="post">LOGOUT</a>
     </div>

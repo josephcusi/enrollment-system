@@ -1,15 +1,15 @@
-<div class="modal fade" id="adminUpdate">
+<div class="modal fade" id="teacherUpdate">
         <div class="modal-dialog modal-lg" style = "font-family:poppins">
           <div class="modal-content">
             <div class="modal-header">
-              <h4 class="modal-title">Admin Update</h4>
+              <h4 class="modal-title">Teacher Update</h4>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
 
             <div class="modal-body">
-            <form action="<?= base_url('adminUpdate'); ?>" method="post"  enctype="multipart/form-data">
+            <form action="<?= base_url('TeacherUpdate')?>" method="post"  enctype="multipart/form-data">
             <input type="hidden" name="_method" value="PUT" />
                   <div class="card-body p-0">
                     <div class="bs-stepper">
@@ -42,7 +42,7 @@
                           <img class="profile-user-img img-fluid img-circle"
                               style="width:50px; height:50px;margin-left:30px; background-image:url(../../dist/img/profile.jfif); border-color:maroon; background-size:cover;">
                             <div class="col-sm-10">
-                            <input type="hidden" name="id" class="form-control id">
+                              <input type="hidden" name="id" class="id">
                               <input type="file" name="profile_picture" class="form-control"
                             >
                                 <span class="text-danger"><?= isset($errorFlash) ? display_error($errorFlash, 'profile_picture') : '' ?></span>
@@ -51,7 +51,7 @@
                           <div class="form-group row"style="font-family: Poppins;">
                             <label class="col-sm-2 col-form-label"style="font-family: Poppins;">Last Name</label>
                             <div class="col-sm-10">
-                              <input type="text" name="lastname" class="form-control Adminlastname"
+                              <input type="text" name="lastname" class="form-control Teacherlastname"
                                 placeholder="Last Name">
                                 <span class="text-danger"><?= isset($errorFlash) ? display_error($errorFlash, 'lastname') : '' ?></span>
                             </div>
@@ -59,7 +59,7 @@
                           <div class="form-group row"style="font-family: Poppins;">
                             <label class="col-sm-2 col-form-label"style="font-family: Poppins;">First Name</label>
                             <div class="col-sm-10">
-                              <input type="text" name="firstname" class="form-control Adminfirstname"
+                              <input type="text" name="firstname" class="form-control Teacherfirstname"
                                 placeholder="First Name">
                                 <span class="text-danger"><?= isset($errorFlash) ? display_error($errorFlash, 'firstname') : '' ?></span>
                             </div>
@@ -67,7 +67,7 @@
                           <div class="form-group row"style="font-family: Poppins;">
                             <label class="col-sm-2 col-form-label"style="font-family: Poppins;">Middle Name</label>
                             <div class="col-sm-10">
-                              <input type="text" name="middlename" class="form-control Adminmiddlename"
+                              <input type="text" name="middlename" class="form-control Teachermiddlename"
                                 placeholder="Middle Name">
                                 <span class="text-danger"><?= isset($errorFlash) ? display_error($errorFlash, 'middlename') : '' ?></span>
                             </div>
@@ -82,7 +82,7 @@
                           <div class="form-group row"style="font-family: Poppins;">
                             <label class="col-sm-2 col-form-label"style="font-family: Poppins;">Email</label>
                             <div class="col-sm-10">
-                              <input type="email" name="newEmail" class="form-control Adminemail"
+                              <input type="email" name="newEmail" class="form-control Teacheremail"
                                 placeholder="Email" disabled>
                                 <span class="text-danger"><?= isset($errorFlash) ? display_error($errorFlash, 'newEmail') : '' ?></span>
                             </div>

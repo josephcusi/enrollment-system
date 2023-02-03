@@ -103,17 +103,20 @@
           </tr>
         </thead>
         <tbody>
-
+          <?php foreach($view as $newView):?>
           <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+          <td><?=$newView['lrn'];?></td>
+            <td><?=$newView['lastname'];?><?= " "?><?=$newView['firstname'];?><?= " "?><?=$newView['middlename'];?></td>
+            <td><?=$newView['email'];?></td>
             <td>
-            <a href="#"> <button type="button" class="btn btn-secondary btn-sm  btn-editAdmin" style = "border-radius:20px">update</button></a>
-
+            <a href="#"> <button type="button" class="btn btn-secondary btn-sm btn-editTeacher" style = "border-radius:20px"
+            data-id="<?=$newView['id'];?>"
+            data-profile_picture="<?=$newView['profile_picture'];?>"data-lastname="<?=$newView['lastname'];?>"data-firstname="<?=$newView['firstname'];?>"data-middlename="<?=$newView['middlename'];?>"
+            data-email="<?=$newView['email'];?>" data-password="<?=$newView['password'];?>" >update</button></a>
+            <?php include 'modal/teacherUpdate.php'?>
             </td>
           </tr>
-
+          <?php endforeach;?>
         </tbody>
         <tfoot>
         </tfoot>
@@ -134,7 +137,7 @@
 <script>
    $(document).ready(function(){
         // sa button
-        $('.btn-editAdmin').on('click',function(){
+        $('.btn-editTeacher').on('click',function(){
             // data galing buton
             const id = $(this).data('id');
             const profile_picture = $(this).data('profile_picture');
@@ -144,14 +147,15 @@
             const email = $(this).data('email');
             const password = $(this).data('password');
             // // sa modal
-            $('.Adminprofile_pics').val(profile_picture);
-            $('.Adminlastname').val(lastname);
-            $('.Adminfirstname').val(firstname);
-            $('.Adminmiddlename').val(middlename);
-            $('.Adminemail').val(email);
-            $('.Adminpassword').val(password).trigger('change');
+            $('.id').val(id);
+            $('.Teacherprofile_pics').val(profile_picture);
+            $('.Teacherlastname').val(lastname);
+            $('.Teacherfirstname').val(firstname);
+            $('.Teachermiddlename').val(middlename);
+            $('.Teacheremail').val(email);
+            $('.Teacherpassword').val(password).trigger('change');
             // Call Modal
-            $('#adminUpdate').modal('show');
+            $('#teacherUpdate').modal('show');
         });
       });
 </script>

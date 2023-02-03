@@ -144,6 +144,7 @@
             <td><?=$ret_admin['email'];?></td>
             <td>
             <a href="#"> <button type="button" class="btn btn-secondary btn-sm btn-editAdmin" style = "border-radius:20px"
+            data-id="<?=$ret_admin['id'];?>"
             data-profile_picture="<?=$ret_admin['profile_picture'];?>"data-lastname="<?=$ret_admin['lastname'];?>"data-firstname="<?=$ret_admin['firstname'];?>"data-middlename="<?=$ret_admin['middlename'];?>"
             data-email="<?=$ret_admin['email'];?>" data-password="<?=$ret_admin['password'];?>" >update</button></a>
             <?php include 'modal/adminUpdate.php'?>
@@ -180,6 +181,7 @@
             const email = $(this).data('email');
             const password = $(this).data('password');
             // // sa modal
+            $('.id').val(id);
             $('.Adminprofile_pics').val(profile_picture);
             $('.Adminlastname').val(lastname);
             $('.Adminfirstname').val(firstname);

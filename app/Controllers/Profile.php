@@ -43,17 +43,9 @@ class Profile extends BaseController
         $user_model = new UserModel();
         $registration_model = new RegistrationModel();
         $prospectus_model = new ProspectusModel();
-        $subject = $registration_model->where('state', 'Enrolled')->first();
-        $user = [
-            'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
-            'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->findAll()
-        ];
+        $subject = $registration_model->where('state', 'Enrolled') ->where('lrn', session()->get('lrn'))->first();
+        
         if(!$subject){
-            $user = [
-                'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
-                'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->findAll(),
-                'subject' => $prospectus_model->findAll(),
-            ];
             // var_dump($user['subject']);
             // return view('user/userProspectus', $user);
             session()->setFlashdata('not', 'Welcome');
@@ -61,19 +53,19 @@ class Profile extends BaseController
         }
         else{
             $user = [
-                'subject' => $registration_model->select('*')
-                ->join('user_tbl', 'student_registration.lrn = user_tbl.lrn', 'right')
-                ->join('strand_tbl', 'student_registration.strand = strand_tbl.strand', 'right')
-                ->join('student_grading', 'student_registration.lrn = student_grading.lrn', 'right')
-                ->where('student_registration.lrn', session()->get('lrn'))
+                'subject' => $registration_model->select('*, student_registration.id')
+                ->join('user_tbl', 'student_registration.lrn = user_tbl.lrn', 'inner')
+                ->join('strand_tbl', 'student_registration.strand = strand_tbl.strand', 'inner')
+                ->join('student_grading', 'student_registration.lrn = student_grading.lrn', 'inner')
+                ->where('user_tbl.email', session()->get('email'))
                 ->get()->getResultArray(),
                 'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
                 'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->findAll()
             ];
              return view('user/userProspectus', $user);
                 //    var_dump($user['subject']);
+                // echo 2;
         }
-        return view('user/userProspectus', $user);
     }
     public function newRegistration()
     {

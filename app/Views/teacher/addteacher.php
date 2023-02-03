@@ -24,7 +24,6 @@
              with font-awesome or any other icon font library -->
 
              <li class="nav-header"style = "font-family:poppins;">Teacher</li>
-             <li class="nav-header"style = "font-family:poppins;">Teacher</li>
 
              <br>
              <li class="nav-item"style = "font-family:poppins;">
@@ -85,7 +84,7 @@
         <div class="card card-primary card-outline mx-auto" style = "width:100%; ">
           <!-- /.card-header -->
           <div class="card-body">
-            <form action="#" method="post"  enctype="multipart/form-data">
+            <form action="<?=site_url('addNewTeacher');?>" method="post"  enctype="multipart/form-data">
                   <div class="card-body p-0">
                     <div class="bs-stepper">
                       <div class="bs-stepper-header mx-auto" style = "width:85%" role="tablist">
