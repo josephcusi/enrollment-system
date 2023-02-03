@@ -132,7 +132,7 @@ $routes->get('/schedule/(:any)', 'Section::schedule/$1');
 $routes->put('/section_update', 'Section::section_update');
 $routes->get('/strandSec/(:any)', 'Section::strandSec/$1');
 $routes->post('/addsched/(:any)', 'Section::addsched/$1');
-
+$routes->post('/updateSched/(:any)', 'Section::updateSched/$1');
 //-----------ADMIN PROSPECTUS---------
 $routes->get('/r_prospectus', 'Prospectus::r_prospectus');
 $routes->post('/newprospectus', 'Prospectus::newprospectus');

@@ -23,14 +23,14 @@ class Teacher extends BaseController
         $data =[
             'userInfo' => $registration_model
             ->select('*, student_registration.id')
-            ->join('user_tbl', 'student_registration.lrn=user_tbl.lrn', 'right')
-            ->join('section_tbl', 'student_registration.user_section = section_tbl.section', 'right')
+            ->join('user_tbl', 'student_registration.lrn=user_tbl.lrn', 'inner')
+            ->join('section_tbl', 'student_registration.user_section = section_tbl.id', 'inner')
             ->where('student_registration.state', 'Enrolled')
             ->get()->getResultArray(),
             'userName' => $user_model->where('email', session()->get('email'))->first(),
         ];
         return view('teacher/t_dashboard', $data);
-        // var_dump($data['username']);
+        // var_dump($data['userInfo']);
     }
     public function newteacher()
     {

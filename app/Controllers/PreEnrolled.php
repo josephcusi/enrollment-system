@@ -32,7 +32,6 @@ class PreEnrolled extends BaseController
         ->join('user_profile', 'user_tbl.email=user_profile.email', 'right')
         ->join('strand_tbl', 'student_registration.strand = strand_tbl.strand', 'right')
         ->join('section_tbl', 'strand_tbl.id = section_tbl.strand_id', 'right')
-        ->join('student_registration as s', 'user_tbl.lrn=s.lrn', 'right')
         ->where('student_registration.semester', session()->get('semester'))
         ->where('user_profile.id', $id)
         ->where('school_year.year', session()->get('year'))->get()->getResultArray(),
@@ -103,10 +102,11 @@ class PreEnrolled extends BaseController
 
         $state = $this->request->getPost('state');
         $section = $this->request->getPost('section');
+        $section_id =  $section_model->where('section', $section)->first();
 
     $value = [
         'state' => $state,
-        'user_section' => $section
+        'user_section' => $section_id['id']
     ];
 
     $registration_model->update($id, $value);

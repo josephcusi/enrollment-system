@@ -23,7 +23,7 @@ class Section extends BaseController
       $data = [
         'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
         'sched' => $schedule_model
-        ->select('*')
+        ->select('*, schedule_tbl.id')
         ->join('section_tbl', 'schedule_tbl.section_id = section_tbl.id', 'inner')
         ->where('section_tbl.id', $id)
         ->get()->getResultArray(),
@@ -222,47 +222,162 @@ class Section extends BaseController
 
         ]);
 
-        if (!$validated) {
-            //session()->setFlashdata('updatesection', 'Duplicate input');
-            session()->setFlashdata('notupdatesection', 'Duplicate input');
-            session()->setFlashdata('validation', $this->validator);
+            if (!$validated) {
+                //session()->setFlashdata('updatesection', 'Duplicate input');
+                session()->setFlashdata('notupdatesection', 'Duplicate input');
+                session()->setFlashdata('validation', $this->validator);
+                return $this->schedule($ids);
+            }
+            else
+            {
+            $schedule_model = new ScheduleModel();
+
+            $teacher = $this->request->getPost('teacher');
+            $section = $this->request->getPost('id');
+            $monOne = $this->request->getPost('monOne');
+            $monTwo = $this->request->getPost('monTwo');
+            $tueOne = $this->request->getPost('tueOne');
+            $tueTwo = $this->request->getPost('tueTwo');
+            $wedOne = $this->request->getPost('wedOne');
+            $wedTwo = $this->request->getPost('wedTwo');
+            $thuOne = $this->request->getPost('thuOne');
+            $thuTwo = $this->request->getPost('thuTwo');
+            $friOne = $this->request->getPost('friOne');
+            $friTwo = $this->request->getPost('friTwo');
+
+            $value = [
+                'teacher_id' => $teacher,
+                'section_id' => $section,
+                'monday' => $monOne,
+                'mon_two' => $monTwo,
+                'tuesday' => $tueOne,  
+                'tue_two' => $tueTwo,
+                'wednesday' => $wedOne,
+                'wed_two' => $wedTwo,
+                'thursday' => $thuOne,
+                'thu_two' => $thuTwo,
+                'friday' => $friOne, 
+                'fri_two' => $friTwo,  
+            ];
+            $schedule_model->insert($value);
+
             return $this->schedule($ids);
         }
-        else
-        {
-        $schedule_model = new ScheduleModel();
 
-        $teacher = $this->request->getPost('teacher');
-        $section = $this->request->getPost('id');
-        $monOne = $this->request->getPost('monOne');
-        $monTwo = $this->request->getPost('monTwo');
-        $tueOne = $this->request->getPost('tueOne');
-        $tueTwo = $this->request->getPost('tueTwo');
-        $wedOne = $this->request->getPost('wedOne');
-        $wedTwo = $this->request->getPost('wedTwo');
-        $thuOne = $this->request->getPost('thuOne');
-        $thuTwo = $this->request->getPost('thuTwo');
-        $friOne = $this->request->getPost('friOne');
-        $friTwo = $this->request->getPost('friTwo');
-
-        $value = [
-            'teacher_id' => $teacher,
-            'section_id' => $section,
-            'monday' => $monOne,
-            'mon_two' => $monTwo,
-            'tuesday' => $tueOne,  
-            'tue_two' => $tueTwo,
-            'wednesday' => $wedOne,
-            'wed_two' => $wedTwo,
-            'thursday' => $thuOne,
-            'thu_two' => $thuTwo,
-            'friday' => $friOne, 
-            'fri_two' => $friTwo,  
-        ];
-        $schedule_model->insert($value);
-
-        return $this->schedule($ids);
     }
+    public function updateSched($ids)
+    {
+        $validated = $this->validate([
+            'teacher' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Field is required!'
+                ]
+            ],
+            'monOne' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Field is required!'
+                ]
+            ],
+            'monTwo' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Field is required!'
+                ]
+            ],
+            'tueOne' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Field is required!'
+                ]
+            ],
+            'tueTwo' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Field is required!'
+                ]
+            ],
+            'wedOne' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Field is required!'
+                ]
+            ],
+            'wedTwo' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Field is required!'
+                ]
+            ],
+            'thuOne' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Field is required!'
+                ]
+            ],
+            'thuTwo' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Field is required!'
+                ]
+            ],
+            'friOne' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Field is required!'
+                ]
+            ],
+            'friTwo' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Field is required!'
+                ]
+            ],
 
-}
+        ]);
+
+            if (!$validated) {
+                //session()->setFlashdata('updatesection', 'Duplicate input');
+                session()->setFlashdata('notupdatesection', 'Duplicate input');
+                session()->setFlashdata('validation', $this->validator);
+                // return $this->schedule($ids);
+                echo 1;
+            }
+            else
+            {
+            $schedule_model = new ScheduleModel();
+            
+            $teacher = $this->request->getPost('teacher');
+            $id = $this->request->getPost('id');
+            $monOne = $this->request->getPost('monOne');
+            $monTwo = $this->request->getPost('monTwo');
+            $tueOne = $this->request->getPost('tueOne');
+            $tueTwo = $this->request->getPost('tueTwo');
+            $wedOne = $this->request->getPost('wedOne');
+            $wedTwo = $this->request->getPost('wedTwo');
+            $thuOne = $this->request->getPost('thuOne');
+            $thuTwo = $this->request->getPost('thuTwo');
+            $friOne = $this->request->getPost('friOne');
+            $friTwo = $this->request->getPost('friTwo');
+
+            $value = [
+                'teacher_id' => $teacher,
+                'monday' => $monOne,
+                'mon_two' => $monTwo,
+                'tuesday' => $tueOne,  
+                'tue_two' => $tueTwo,
+                'wednesday' => $wedOne,
+                'wed_two' => $wedTwo,
+                'thursday' => $thuOne,
+                'thu_two' => $thuTwo,
+                'friday' => $friOne, 
+                'fri_two' => $friTwo,  
+            ];
+            $schedule_model->update($id, $value);
+
+            return $this->schedule($ids);
+            // echo 2;
+        }
+    }
 }

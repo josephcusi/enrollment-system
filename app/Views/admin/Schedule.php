@@ -115,7 +115,7 @@
       <div class="card-header">
         <?php foreach($section as $sect):?>
     <button type="button" class="btn btn-section" style = "border-radius:20px;background-color:maroon; color: white;" data-id='<?=$sect['id']?>'>Add</button>
-    <?= $this->include('admin/addSchedule')?>
+    <?= $this->include('admin/section/addSchedule')?>
     <?php endforeach;?>
 </div>
       <div class="card-body">
@@ -148,8 +148,12 @@
             <td><?=$new['thursday'];?> <?= '-'?> <?=$new['thu_two'];?></td>
             <td><?=$new['friday'];?> <?= '-'?> <?=$new['fri_two'];?></td>
             <td>
-            <button type="button" class="btn btn-primary" style = "border-radius:20px;background-color:maroon; color: white;"data-toggle="modal" data-target="#addSchedule">Update</button>
-            <?//= $this->include('admin/addSchedule')?>
+            <button type="button" class="btn btn-update" style = "border-radius:20px;background-color:maroon; color: white;"
+            data-id="<?=$new['id'];?>" data-teacher="<?=$new['teacher_id'];?>" data-mon_one="<?=$new['monday'];?>" data-mon_two="<?=$new['mon_two'];?>"
+            data-tue_one="<?=$new['tuesday'];?>" data-tue_two="<?=$new['tue_two'];?>" data-wed_one="<?=$new['wednesday'];?>" data-wed_two="<?=$new['wed_two'];?>"
+            data-thu_one="<?=$new['thursday'];?>" data-thu_two="<?=$new['thu_two'];?>" data-fri_one="<?=$new['friday'];?>" data-fri_two="<?=$new['fri_two'];?>"
+            >Update</button>
+            <?= $this->include('admin/section/updateSchedule')?>
             </td>
           </tr>
 
@@ -185,6 +189,36 @@ $(document).ready(function(){
           $('.id').val(id);
          // Call Modal
          $('#addSchedule').modal('show');
+     });
+     $('.btn-update').on('click',function(){
+         // data galing buton
+         const id = $(this).data('id');
+         const teacher = $(this).data('teacher');
+         const mon_one = $(this).data('mon_one');
+         const mon_two = $(this).data('mon_two');
+         const tue_one = $(this).data('tue_one');
+         const tue_two = $(this).data('tue_two');
+         const wed_one = $(this).data('wed_one');
+         const wed_two = $(this).data('wed_two');
+         const thu_one = $(this).data('thu_one');
+         const thu_two = $(this).data('thu_two');
+         const fri_one = $(this).data('fri_one');
+         const fri_two = $(this).data('fri_two');
+         // // sa modal
+          $('.id').val(id);
+          $('.teacher').val(teacher);
+          $('.mon_one').val(mon_one);
+          $('.mon_two').val(mon_two);
+          $('.tue_one').val(tue_one);
+          $('.tue_two').val(tue_two);
+          $('.wed_one').val(wed_one);
+          $('.wed_two').val(wed_two);
+          $('.thu_one').val(thu_one);
+          $('.thu_two').val(thu_two);
+          $('.fri_one').val(fri_one);
+          $('.fri_two').val(fri_two);
+         // Call Modal
+         $('#updateSched').modal('show');
      });
    });
 </script>
