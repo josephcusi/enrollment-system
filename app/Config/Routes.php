@@ -54,19 +54,6 @@ $routes->match(['get', 'post'],'/login', 'AccountController::login');
 $routes->match(['get', 'post'],'/register', 'AccountController::register');
 $routes->match(['get', 'post'],'/verify/(:any)', 'AccountController::verify/$1');
 
-//teacherr side
-$routes->match(['get', 'post'],'/t_dashboard', 'Teacher::t_dashboard');
-$routes->match(['get', 'post'],'/newteacher', 'Teacher::newteacher');
-$routes->match(['get', 'post'],'/addteacher', 'Teacher::addteacher');
-$routes->get('/grading', 'Teacher::grading');
-$routes->post('/grading/(:any)', 'Teacher::grading/$1');
-// $routes->get('/viewGrade', 'Teacher::viewGrade');
-// $routes->get('/viewGrades', 'Teacher::viewGrades');
-$routes->get('/viewGrade/(:any)', 'Teacher::viewGrade/$1');
-$routes->put('/updateGrade/(:any)', 'Teacher::updateGrade/$1');
-$routes->post('/addNewTeacher', 'Teacher::addNewTeacher');
-$routes->put('/TeacherUpdate', 'Teacher::TeacherUpdate');
-
 //authcontroller/ forgot//
 $routes->get('forgot-password', 'AuthController::forgot');
 $routes->post('forgot-password', 'AuthController::forgot');
@@ -82,6 +69,7 @@ $routes->get('/insert_reg', 'User::insert_reg');
 $routes->get('/get_profile', 'Profile::get_profile');
 $routes->get('/retrieve_profile', 'Profile::retrieve_profile');
 $routes->post('/insertProfile', 'Profile::insertProfile');
+$routes->match(['get', 'post'],'/subject', 'Profile::subject');
 $routes->get('/try', 'Profile::try');
 $routes->get('/registration', 'Profile::registration');
 $routes->get('/registrationz', 'Profile::registrationz');
@@ -153,6 +141,19 @@ $routes->get('/rejected/(:any)', 'PreEnrolled::rejected/$1');
 //-----------User Schedule---------
 $routes->get('/viewSchedule', 'UserSchedule::viewSchedule');
 
+//teacherr side
+$routes->match(['get', 'post'],'/t_dashboard', 'Teacher::t_dashboard');
+$routes->match(['get', 'post'],'/newteacher', 'Teacher::newteacher');
+$routes->match(['get', 'post'],'/addteacher', 'Teacher::addteacher');
+$routes->get('/grading', 'Teacher::grading');
+$routes->post('/grading/(:any)', 'Teacher::grading/$1');
+
+// $routes->get('/viewGrade', 'Teacher::viewGrade');
+// $routes->get('/viewGrades', 'Teacher::viewGrades');
+$routes->get('/viewGrade/(:any)', 'Teacher::viewGrade/$1');
+$routes->put('/updateGrade/(:any)', 'Teacher::updateGrade/$1');
+$routes->post('/addNewTeacher', 'Teacher::addNewTeacher');
+$routes->put('/TeacherUpdate', 'Teacher::TeacherUpdate');
 //-----------Grading
 });
 

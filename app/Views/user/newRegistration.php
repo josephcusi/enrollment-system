@@ -59,10 +59,18 @@
                             <a href="<?=base_url()?>/userProspectus" class="nav-link">
                                 <i class="fa-sharp fa-solid fa-book"></i>
                                 <p>
-                                    Prospectus
+                                    Grade
                                 </p>
                             </a>
                         </li>
+                        <li class="nav-item"style = "font-family:poppins;">
+          <a href="<?=base_url()?>/subject" class="nav-link">
+            <i class="fa-sharp fa-solid fa-book"></i>
+            <p>
+            Subject
+            </p>
+          </a>
+        </li>
                         <br>
                         <br>
                         <!-- -->

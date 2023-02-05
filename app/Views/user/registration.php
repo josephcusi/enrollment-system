@@ -57,7 +57,15 @@
           <a href="<?=base_url()?>/userProspectus" class="nav-link">
           <i class="fa-sharp fa-solid fa-book"></i>
             <p>
-              Prospectus
+            Grade
+            </p>
+          </a>
+        </li>
+        <li class="nav-item"style = "font-family:poppins;">
+          <a href="<?=base_url()?>/subject" class="nav-link">
+            <i class="fa-sharp fa-solid fa-book"></i>
+            <p>
+            Subject
             </p>
           </a>
         </li>
@@ -95,9 +103,18 @@
       <script>swal("Can't Proceed!", "You must be enrolled first to access prospectus page.", "warning");</script>
       <?php endif ?>
 
+      <?php if(!empty(session()->getFlashdata('accessgrade'))) : ?>
+      <script>swal("Can't Proceed!", "You must be enrolled first to access grade page.", "warning");</script>
+      <?php endif ?>
+
       <?php if(!empty(session()->getFlashdata('grade'))) : ?>
       <script>swal("Can't Proceed!", "You need to finish semester to acces this page.", "warning");</script>
       <?php endif ?>
+
+      <?php if(!empty(session()->getFlashdata('newSub'))) : ?>
+      <script>swal("Can't Proceed!", "You must be enrolled first to access subject page.", "warning");</script>
+      <?php endif ?>
+      
       <!-- Content Header (Page header) -->
       
       <!-- Main content -->

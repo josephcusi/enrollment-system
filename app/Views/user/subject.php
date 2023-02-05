@@ -27,7 +27,7 @@
         <li class="nav-header"style = "font-family:poppins;">Student</li>
         <li class="nav-item"style = "font-family:poppins;">
           <a href="<?=base_url()?>/myprofile" class="nav-link    ">
-            <i class="nav-icon fas fa-user"></i>
+            <i class="nav-icon fa-solid fa-user"></i>
             <p>
               <strong>My Profile<strong>
               <span class="badge badge-info right"></span>
@@ -37,8 +37,8 @@
 
         <li class="nav-header"style = "font-family:poppins;">Maintenance</li>
         <li class="nav-item"style = "font-family:poppins;">
-          <a href="<?=base_url()?>/registration" class="nav-link active">
-            <i class="fa-sharp fa-solid fa-id-card"></i>
+          <a href="<?=base_url()?>/registration" class="nav-link">
+          <i class="fa-sharp fa-solid fa-id-card"></i>
             <p>
               Registration
 
@@ -55,14 +55,14 @@
         </li>
         <li class="nav-item"style = "font-family:poppins;">
           <a href="<?=base_url()?>/userProspectus" class="nav-link">
-            <i class="fa-sharp fa-solid fa-book"></i>
+          <i class="fa-sharp fa-solid fa-book"></i>
             <p>
             Grade
             </p>
           </a>
         </li>
         <li class="nav-item"style = "font-family:poppins;">
-          <a href="<?=base_url()?>/subject" class="nav-link">
+          <a href="<?=base_url()?>/subject" class="nav-link active">
             <i class="fa-sharp fa-solid fa-book"></i>
             <p>
             Subject
@@ -71,6 +71,7 @@
         </li>
         <br>
         <br>
+
           </ul>
           </li>
 
@@ -85,79 +86,71 @@
 
     <!-- Main content -->
     <div class="content-wrapper">
+      
       <!-- Content Header (Page header) -->
-
-  <br>
+      
       <!-- Main content -->
-
       <section class="content-header">
-        <div class="card card-primary card-outline mx-auto" style = "width:85%; margin-top:7% ">
-
-          <div class="card-body">
         <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-12">
-            <div class="tab-content">
-              <div class="active tab-pane" id="basic_info">
-
-              <div class="tab-pane" id="credential">
-                <div class = "card-header">
-
-                <p style="font-size:20px; font-family: Poppins;color:maroon; margin-left:45%">Subject</p>
-              </div><br><br>
-              <div class="card-body">
-
-                  <table id="example1" class="table table-bordered table-striped" style = "font-family:poppins">
-                    <thead>
-                      <tr>
-                        <th></th>
-                        <th>Subject</th>
-                        <th>Title</th>
-                        <th>Unit</th>
-                        <th>Pre-Requisit</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <?php foreach($prospectus as $prospectus_value):?>
-                      <tr>
-                        <td><input type="checkbox" name="propectus_id" value="<?=$prospectus_value['strand_id'];?>"></td>
-                        <td><?= $prospectus_value['subject'];?></td>
-                        <td><?= $prospectus_value['subject_title'];?></td>
-                        <td><?= $prospectus_value['unit'];?></td>
-                        <td><?= $prospectus_value['pre_requisit'];?></td>
-                      </tr>
-                      <?php endforeach;?>
-                    </tbody>
-                  </table>
-                  <div class="modal-footer justify-content-between">
-                  <?php session()->setFlashdata('sendapplication', 'shhessh')?>
-                  <a href="<?=site_url('registration')?>"><button type="submit" class="btn btn-primary" style = "margin-left:100%">Submit</button></a>
-                 </div>
-                  <!-- /.tab-pane -->
-                <!-- /.tab-content -->
-              </div>
-              </div>
-              <!-- /.tab-pane -->
-              </form>
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1>
+                <class="a" style="color:maroon; font-family: 'Poppins';font-size: 22px"><strong>Subject</strong>
+              </h1>
             </div>
-              </div>
-              <!-- /.tab-pane -->
-            <!-- /.tab-pane -->
+            <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item active" style="font-family:poppins;color:maroon">Home</li>
+                <li class="breadcrumb-item active" style = "font-family:poppins;">Subject</li>
+              </ol>
+            </div>
           </div>
-          <!-- /.tab-content -->
+        </div><!-- /.container-fluid -->
+      </section>
+          <div class="card-body">
+            <div class="card card-primary card-outline mx-auto" style = "width:100%;">
+              <div class="card-header">
+                
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+        <!-- /.card-header -->
 
-        </div><!-- /.card-body -->
+          <table id="example1" class="table table-bordered table" style = "font-family:poppins">
+
+            <thead>
+              <tr>
+                <th>Subject</th>
+                <th>Title</th>
+                <th>Unit</th>
+                <th>Pre-Requisit</th>
+              </tr>
+            </thead>
+            <tbody>
+              <?php foreach($userSub as $newSub):?>
+              <tr>
+                <td><?=$newSub['subject']?></td>
+                <td><?=$newSub['subject_title']?></td>
+                <td><?=$newSub['unit']?></td>
+                <td><?=$newSub['pre_requisit']?></td>
+              </tr>
+           <?php endforeach;?>
+            </tbody>
+            <tfoot>
+            </tfoot>
+          </table>
+        </div>
+        <!-- /.card-body -->
       </div>
-
+    </div>
+    <!-- /.card-body -->
+  </div>
+</div>
+</div>
       <!-- /.content -->
-    </div>
-    </div>
-    </div>
+    </section>
 
 
-
-
-</section>
 </body>
 
 <?= $this->include('user/include/end')?>

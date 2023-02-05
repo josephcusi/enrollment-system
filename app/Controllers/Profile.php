@@ -34,7 +34,7 @@ class Profile extends BaseController
         $profile_model = new ProfileModel();
         $user_model = new UserModel();
         $registration_model = new RegistrationModel();
-        $subject = $registration_model->where('state', 'Enrolled') ->where('lrn', session()->get('lrn'))->first();
+        $subject = $registration_model->where('state', 'Enrolled')->where('lrn', session()->get('lrn'))->first();
         
         if(!$subject){
             // var_dump($user['subject']);
@@ -71,7 +71,7 @@ class Profile extends BaseController
         if(!$subject){
             // var_dump($user['subject']);
             // return view('user/userProspectus', $user);
-            session()->setFlashdata('not', 'Welcome');
+            session()->setFlashdata('accessgrade', 'Welcome');
             return redirect()->route('registration');
         }
         else{
@@ -528,7 +528,8 @@ class Profile extends BaseController
             $email->setMessage("Thank you for submitting your enrollment application. Our team is currently reviewing it and will get back to you as soon as possible with an update on your status. Please allow us some time to process your application and make a decision. In the meantime, if you have any questions or need additional information, please feel free to reach out to us.");
             $email->send();
             //var_dump($values['prospectus']);
-            return view('user/regSubject', $values);
+            // return view('user/regSubject', $values);
+            return redirect()->route('registration');
 
         }
     }
@@ -822,8 +823,34 @@ class Profile extends BaseController
             return redirect('retrieve_profile');
             }
         }
-        public function addsubject()
+        public function subject()
         {
+            $user_model = new UserModel();
+            $registration_model = new RegistrationModel();
+            $subject = $registration_model->where('state', 'Enrolled')->where('lrn', session()->get('lrn'))->first();
+        
+            if(!$subject){
+                // var_dump($user['subject']);
+                // return view('user/userProspectus', $user);
+                session()->setFlashdata('newSub', 'Welcome');
+                return redirect()->route('registration');
+            }
+            else
+            {
+                $data = [
+                    'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
+                    'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->findAll(),
+                    'userSub' => $user_model
+                    ->select('*, ')
+                    ->join('student_registration', 'user_tbl.lrn = student_registration.lrn', 'inner')
+                    ->join('strand_tbl', 'student_registration.strand = strand_tbl.strand', 'inner')
+                    ->join('prospectrus_tbl', 'strand_tbl.id = prospectrus_tbl.strand_id', 'inner')
+                    ->where('user_tbl.email', session()->get('email'))
+                    ->get()->getResultArray()
+                ];
+                return view('user/subject', $data);
+                // var_dump($data['userSub']);
+            }
 
         }
     }
