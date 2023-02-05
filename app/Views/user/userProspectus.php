@@ -142,7 +142,7 @@
                   <table id="example1" class="table table-bordered table" style = "font-family:poppins">
                     <thead>
                       <tr>
-                      <th>LRN</th>
+                      <th>Subject</th>
                         <th>Midterm Grade</th>
                         <th>Final Grade</th>
                         <th>Remark</th>
@@ -151,7 +151,7 @@
                     <tbody>
                         <?php foreach($subject as $sub):?>
                       <tr>
-                        <td><?=$sub['lrn'];?></td>
+                        <td><?=$sub['subject'];?></td>
                         <td><?=$sub['midterm_grade'];?></td>
                         <td><?=$sub['final_grade'];?></td>
                         <td><?=$sub['remark'];?></td>

@@ -50,7 +50,7 @@ class Profile extends BaseController
             ->join('student_registration', 'user_tbl.lrn = student_registration.lrn', 'inner')
             ->join('section_tbl', 'student_registration.user_section = section_tbl.id', 'inner')
             ->join('schedule_tbl', 'section_tbl.id = schedule_tbl.section_id', 'inner')
-            ->join('user_tbl as u', 'schedule_tbl.teacher_id = u.id')
+            ->join('user_tbl as u', 'schedule_tbl.teacher_id = u.id', 'inner')
             ->where('user_tbl.email', session()->get('email'))
             ->first(),
             'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
@@ -94,6 +94,7 @@ class Profile extends BaseController
                 ->join('user_tbl', 'student_registration.lrn = user_tbl.lrn', 'inner')
                 ->join('strand_tbl', 'student_registration.strand = strand_tbl.strand', 'inner')
                 ->join('student_grading', 'student_registration.lrn = student_grading.lrn', 'inner')
+                ->join('prospectrus_tbl', 'student_grading.subject_id = prospectrus_tbl.id', 'inner')
                 ->where('user_tbl.email', session()->get('email'))
                 ->get()->getResultArray(),
                 'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
@@ -130,7 +131,8 @@ class Profile extends BaseController
             'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->findAll(),
             'profileUpdate' => $profile_model->where('email', $email)->findAll(),
             'student_registration' => $registration_model->select('*')
-            ->join('user_tbl', 'student_registration.lrn = user_tbl.lrn', 'right')
+            ->join('user_tbl', 'student_registration.lrn = user_tbl.lrn', 'inner')
+            ->join('section_tbl', 'student_registration.user_section = section_tbl.id', 'inner')
             ->where('student_registration.lrn', session()->get('lrn'))
             ->first(),
             'name' => $user_model->where('email', session()->get('email'))->first(),
@@ -488,6 +490,7 @@ class Profile extends BaseController
                 'state' => 'pending'
             ];
             $yearSem = [
+                'lrn' => $lrn,
                 'year_level' => $yearlevel,
                 'semester' => $semester
             ];

@@ -24,12 +24,14 @@ class UserSchedule extends BaseController
             ->join('section_tbl', 'student_registration.user_section = section_tbl.id', 'inner')
             ->join('schedule_tbl', 'section_tbl.id = schedule_tbl.section_id', 'inner')
             ->join('user_tbl as u', 'schedule_tbl.teacher_id = u.id')
+            ->join('prospectrus_tbl', 'schedule_tbl.subject_id = prospectrus_tbl.id', 'inner')
             ->where('user_tbl.email', session()->get('email'))
-            ->first(),
+            ->get()->getResultArray(),
             'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
             'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->findAll()
         ];
         return view('user/viewSchedule', $user);
+        // var_dump($user['userSched']);
     }
 
 }

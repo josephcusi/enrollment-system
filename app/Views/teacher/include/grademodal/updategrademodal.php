@@ -13,6 +13,16 @@
             <input type="hidden" name="_method" value="PUT" />
                     <div class="form-horizontal" style = "margin-left:25%">
                     <div class="form-group col-md-9">
+                      <label >Subject</label>
+                      <select class="form-control" name="subject">
+                          <?php foreach($info as $newInfo): ?>
+                          <option type="text" value="<?= $newInfo['id']?>">
+                              <?= $newInfo['subject'] ?>
+                            </option>
+                          <?php endforeach; ?>
+                      </select>
+                    </div>
+                    <div class="form-group col-md-9">
                       <input type="hidden" name="id" class="idModal">
                       <label for="inputgrade">Midterm Grade</label>
                       <input type="number" name="midterm" class="form-control midterm_modal" id="inputgrade" min = "75" max = "100">

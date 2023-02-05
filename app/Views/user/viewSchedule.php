@@ -111,7 +111,7 @@
           <?php //foreach($section as $sect): ?>
           <tr>
 
-            <th>Section</th>
+            <th>Subject</th>
             <th>Monday</th>
             <th>Tuesday</th>
             <th>Wednesday</th>
@@ -120,18 +120,18 @@
           </tr>
         </thead>
         <tbody>
-            <?php// foreach($section_tbl as $section_value):?>
+            <?php foreach($userSched as $sched_value):?>
           <tr>
-            <td><?=isset($userSched['section']) ? $userSched['section'] : 'UNAVAILABLE';?></td>
-            <td><?=isset($userSched['monday']) ? $userSched['monday'] : 'UNAVAILABLE';?> <?= '-'?> <?=isset($userSched['mon_two']) ? $userSched['mon_two'] : 'UNAVAILABLE';?></td>
-            <td><?=isset($userSched['tuesday']) ? $userSched['tuesday'] : 'UNAVAILABLE';?> <?= '-'?> <?=isset($userSched['tue_two']) ? $userSched['tue_two'] : 'UNAVAILABLE';?></td>
-            <td><?=isset($userSched['wednesday']) ? $userSched['wednesday'] : 'UNAVAILABLE';?> <?= '-'?> <?=isset($userSched['wed_two']) ? $userSched['wed_two'] : 'UNAVAILABLE';?></td>
-            <td><?=isset($userSched['thursday']) ? $userSched['thursday'] : 'UNAVAILABLE';?> <?= '-'?> <?=isset($userSched['thu_two']) ? $userSched['thu_two'] : 'UNAVAILABLE';?></td>
-            <td><?=isset($userSched['friday']) ? $userSched['friday'] : 'UNAVAILABLE';?> <?= '-'?> <?=isset($userSched['fri_two']) ? $userSched['fri_two'] : 'UNAVAILABLE';?></td>
+            <td><?=isset($sched_value['subject']) ? $sched_value['subject'] : 'UNAVAILABLE';?></td>
+            <td><?=isset($sched_value['monday']) ? $sched_value['monday'] : 'UNAVAILABLE';?> <?= '-'?> <?=isset($sched_value['mon_two']) ? $sched_value['mon_two'] : 'UNAVAILABLE';?></td>
+            <td><?=isset($sched_value['tuesday']) ? $sched_value['tuesday'] : 'UNAVAILABLE';?> <?= '-'?> <?=isset($sched_value['tue_two']) ? $sched_value['tue_two'] : 'UNAVAILABLE';?></td>
+            <td><?=isset($sched_value['wednesday']) ? $sched_value['wednesday'] : 'UNAVAILABLE';?> <?= '-'?> <?=isset($sched_value['wed_two']) ? $sched_value['wed_two'] : 'UNAVAILABLE';?></td>
+            <td><?=isset($sched_value['thursday']) ? $sched_value['thursday'] : 'UNAVAILABLE';?> <?= '-'?> <?=isset($sched_value['thu_two']) ? $sched_value['thu_two'] : 'UNAVAILABLE';?></td>
+            <td><?=isset($sched_value['friday']) ? $sched_value['friday'] : 'UNAVAILABLE';?> <?= '-'?> <?=isset($sched_value['fri_two']) ? $sched_value['fri_two'] : 'UNAVAILABLE';?></td>
           </tr>
 
           </tr>
-          <?php// endforeach;?>
+          <?php endforeach;?>
         </tbody>
         <tfoot>
         </tfoot>

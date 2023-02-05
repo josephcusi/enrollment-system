@@ -15,6 +15,7 @@ class ScheduleModel extends Model
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
     protected $allowedFields    = [
+        'subject_id',
         'teacher_id',
         'section_id',
         'monday',

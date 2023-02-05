@@ -27,6 +27,19 @@
                       </select>
                     </div>
                   </div>
+                  <div class="form-row mt-3">
+              <input type="hidden" class="id" name="id">
+                      <div class="form-group col-sm-6 mx-auto">
+                      <label for="teacher" class="col-sm-6 col-form-label">Subject</label>
+                      <select class="form-control" name="subject">
+                          <?php foreach($subject as $newSub): ?>
+                          <option type="text" value="<?= $newSub['id']?>">
+                              <?= $newSub['subject'] ?>
+                            </option>
+                          <?php endforeach; ?>
+                      </select>
+                    </div>
+                  </div>
             <div class="form-row mt-3">
                     <div class="form-group col-sm-6 mx-auto">
                       <input type="checkbox" id="monday" name="monday" value="monday">

@@ -20,14 +20,22 @@ class Section extends BaseController
       $user_model = new UserModel();
       $schedule_model = new ScheduleModel();
       $section_model = new SectionModel();
+      $prospectus_model = new ProspectusModel();
       $data = [
         'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
         'sched' => $schedule_model
         ->select('*, schedule_tbl.id')
         ->join('section_tbl', 'schedule_tbl.section_id = section_tbl.id', 'inner')
+        ->join('prospectrus_tbl', 'schedule_tbl.subject_id = prospectrus_tbl.id', 'inner')
         ->where('section_tbl.id', $id)
         ->get()->getResultArray(),
         'teacher' => $user_model->where('usertype', 'teacher')->findAll(),
+        'subject' => $prospectus_model
+        ->select('*, prospectrus_tbl.id')
+        ->join('strand_tbl', 'prospectrus_tbl.strand_id = strand_tbl.id', 'inner')
+        ->join('section_tbl', 'strand_tbl.id = section_tbl.strand_id', 'inner')
+        ->where('section_tbl.id', $id)
+        ->get()->getResultArray(),
         'section' => $section_model->where('id', $id)->findAll(),
         'id' => $id
 
@@ -146,79 +154,13 @@ class Section extends BaseController
     public function addsched($ids)
     {
         $validated = $this->validate([
-            'id' => [
-                'rules' => 'required|is_unique[schedule_tbl.section_id]',
+            'subject' => [
+                'rules' => 'required|is_unique[schedule_tbl.subject_id]',
                 'errors' => [
                     'required' => 'Section is required!',
                     'is_unique' => 'Section is Already Exist'
                 ]
-            ],
-            'teacher' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Field is required!'
-                ]
-            ],
-            'monOne' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Field is required!'
-                ]
-            ],
-            'monTwo' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Field is required!'
-                ]
-            ],
-            'tueOne' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Field is required!'
-                ]
-            ],
-            'tueTwo' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Field is required!'
-                ]
-            ],
-            'wedOne' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Field is required!'
-                ]
-            ],
-            'wedTwo' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Field is required!'
-                ]
-            ],
-            'thuOne' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Field is required!'
-                ]
-            ],
-            'thuTwo' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Field is required!'
-                ]
-            ],
-            'friOne' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Field is required!'
-                ]
-            ],
-            'friTwo' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Field is required!'
-                ]
-            ],
+            ]
 
         ]);
 
@@ -233,6 +175,7 @@ class Section extends BaseController
             $schedule_model = new ScheduleModel();
 
             $teacher = $this->request->getPost('teacher');
+            $subject = $this->request->getPost('subject');
             $section = $this->request->getPost('id');
             $monOne = $this->request->getPost('monOne');
             $monTwo = $this->request->getPost('monTwo');
@@ -246,6 +189,7 @@ class Section extends BaseController
             $friTwo = $this->request->getPost('friTwo');
 
             $value = [
+                'subject_id' => $subject,
                 'teacher_id' => $teacher,
                 'section_id' => $section,
                 'monday' => $monOne,
@@ -267,85 +211,6 @@ class Section extends BaseController
     }
     public function updateSched($ids)
     {
-        $validated = $this->validate([
-            'teacher' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Field is required!'
-                ]
-            ],
-            'monOne' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Field is required!'
-                ]
-            ],
-            'monTwo' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Field is required!'
-                ]
-            ],
-            'tueOne' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Field is required!'
-                ]
-            ],
-            'tueTwo' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Field is required!'
-                ]
-            ],
-            'wedOne' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Field is required!'
-                ]
-            ],
-            'wedTwo' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Field is required!'
-                ]
-            ],
-            'thuOne' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Field is required!'
-                ]
-            ],
-            'thuTwo' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Field is required!'
-                ]
-            ],
-            'friOne' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Field is required!'
-                ]
-            ],
-            'friTwo' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Field is required!'
-                ]
-            ],
-
-        ]);
-
-            if (!$validated) {
-                //session()->setFlashdata('updatesection', 'Duplicate input');
-                session()->setFlashdata('notupdatesection', 'Duplicate input');
-                session()->setFlashdata('validation', $this->validator);
-                // return $this->schedule($ids);
-                echo 1;
-            }
-            else
-            {
             $schedule_model = new ScheduleModel();
             
             $teacher = $this->request->getPost('teacher');
@@ -380,4 +245,3 @@ class Section extends BaseController
             // echo 2;
         }
     }
-}

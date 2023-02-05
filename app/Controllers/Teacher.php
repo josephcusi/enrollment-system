@@ -7,6 +7,7 @@ use App\Models\RegistrationModel;
 use App\Models\GradeModel;
 use App\Models\StrandModel;
 use App\Models\UserModel;
+use App\Models\ScheduleModel;
 use App\Libraries\Hash;
 
 class Teacher extends BaseController
@@ -18,19 +19,24 @@ class Teacher extends BaseController
     public function t_dashboard()
     {
         $strand_model = new StrandModel();
-          $user_model = new UserModel();
+        $user_model = new UserModel();
         $registration_model = new RegistrationModel;
+        $schedule_model = new ScheduleModel;
         $data =[
-            'userInfo' => $registration_model
+            'userInfo' => $user_model
             ->select('*, student_registration.id')
-            ->join('user_tbl', 'student_registration.lrn=user_tbl.lrn', 'inner')
-            ->join('section_tbl', 'student_registration.user_section = section_tbl.id', 'inner')
+            ->join('schedule_tbl', 'user_tbl.id = schedule_tbl.teacher_id', 'inner')
+            ->join('section_tbl', 'schedule_tbl.section_id = section_tbl.id', 'inner')
+            ->join('student_registration', 'section_tbl.id = student_registration.user_section', 'inner')
+            ->join('user_tbl as u', 'student_registration.lrn = u.lrn', 'inner')
+            ->where('user_tbl.email', session()->get('email'))
             ->where('student_registration.state', 'Enrolled')
+            ->groupBy('student_registration.lrn')
             ->get()->getResultArray(),
             'userName' => $user_model->where('email', session()->get('email'))->first(),
         ];
         return view('teacher/t_dashboard', $data);
-        // var_dump($data['userInfo']);
+        // var_dump($data);
     }
     public function newteacher()
     {
@@ -50,13 +56,20 @@ class Teacher extends BaseController
             ->select('*, student_grading.id')
             ->join('user_tbl', 'student_registration.lrn=user_tbl.lrn', 'right')
             ->join('student_grading', 'student_registration.lrn=student_grading.lrn', 'right')
+            ->join('prospectrus_tbl', 'student_grading.subject_id = prospectrus_tbl.id', 'inner')
             ->where('student_registration.id', $id)
             ->get()->getResultArray(),
             'id' => $id,
             'userName' => $user_model->where('email', session()->get('email'))->first(),
+            'info' => $registration_model
+            ->select('*')
+            ->join('strand_tbl', 'student_registration.strand = strand_tbl.strand', 'inner')
+            ->join('prospectrus_tbl', 'strand_tbl.id = prospectrus_tbl.strand_id', 'inner')
+            ->where('student_registration.id', $id)
+            ->get()->getResultArray()
         ];
-
         return view('teacher/Grade', $data);
+        // var_dump($data['info']);
     }
     public function addteacher()
     {
@@ -66,14 +79,19 @@ class Teacher extends BaseController
         ];
         return view('teacher/addteacher', $data);
     }
-    public function grading()
+    public function grading($id)
     {
         $validated = $this->validate([
             'lrn' => [
-                'rules' => 'required|is_unique[student_grading.lrn]',
+                'rules' => 'required',
                 'errors' => [
                     'required' => 'LRN is required!',
-                    'is_unique' => 'LRN is Already Exist'
+                ]
+            ],
+            'subject' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'LRN is required!',
                 ]
             ],
             'midterm' => [
@@ -92,24 +110,38 @@ class Teacher extends BaseController
 
             if (!$validated) {
                 session()->setFlashdata('invalid', 'Welcome');
-                return redirect()->route('t_dashboard');
+                // return $this->viewGrade($id);
+                echo 1;
             }
             else
             {
             $registration_model = new RegistrationModel;
             $grade_model = new GradeModel;
-
+            
             $midterm = $this->request->getPost('midterm');
             $final = $this->request->getPost('finals');
             $lrn = $this->request->getPost('lrn');
+            $subject = $this->request->getPost('subject');
             $value = [
+                'subject_id' => $subject,
                 'midterm_grade' => $midterm,
                 'final_grade' => $final,
                 'lrn' => $lrn
             ];
-            $grade_model->insert($value);
-            session()->setFlashdata('addgrade', 'Welcome');
-            return redirect()->route('t_dashboard');
+            $grading = [
+                'lrn' => $lrn,
+                'subject_id' => $subject
+            ];
+            $count = count($grade_model->where($grading)->findAll());
+            if($count <= 1){
+                $grade_model->insert($value);
+            }
+            else{
+                session()->setFlashdata('addgrade', 'Welcome');
+                var_dump($count);
+            }
+       
+            return $this->viewGrade($id);
             // var_dump($data['userInfo']);
         }
     }
@@ -211,7 +243,7 @@ class Teacher extends BaseController
                     $lrn = 'TEACHER'.$myLrn.str_pad($admin_lrn, 3, "0", STR_PAD_LEFT);
                     $user_model->set('lrn', $lrn)->where('id', $admin_lrn)->update();
                     session()->setFlashdata('admin', 'Welcome');
-                    return redirect()->route('newadmin');
+                    return redirect()->route('newteacher');
                     // echo 2;
                 }
             }

@@ -8,8 +8,21 @@
               </button>
             </div>
             <div class="modal-body">
-            <form action="<?=site_url('grading')?>" method="post">
+            <form action="<?=site_url('grading/'. $id)?>" method="post">
                     <div class="form-horizontal" style = "margin-left:25%">
+                    <div class="form-row mt-9"> 
+                  <input type="hidden" class="id" name="id">
+                  </div>
+                  <div class="form-group col-md-9">
+                      <label >Subject</label>
+                      <select class="form-control" name="subject">
+                          <?php foreach($info as $newInfo): ?>
+                          <option type="text" value="<?= $newInfo['id']?>">
+                              <?= $newInfo['subject'] ?>
+                            </option>
+                          <?php endforeach; ?>
+                      </select>
+                    </div>
                     <div class="form-group col-md-9">
                       <label for="inputgrade">Midterm Grade</label>
                       <input type="hidden" name="lrn" class="lrnModal">

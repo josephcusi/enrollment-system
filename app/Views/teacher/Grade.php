@@ -56,6 +56,9 @@
 </aside>
 
 </div>
+<?php if(!empty(session()->getFlashdata('addgrade'))) : ?>
+  <script>swal("Grade Added!", "Registration successfully rejected.", "success");</script>
+  <?php endif ?>
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
 
@@ -77,17 +80,15 @@
       </div>
     </div><!-- /.container-fluid -->
   </section>
-
   <!-- Main content -->
   <div class="card card-primary card-outline mx-auto" style = "width:98%;">
 
     <!-- /.card-header -->
     <div class="card-body">
-
       <table id="example1" class="table table-bordered table" style = "font-family:poppins">
         <thead>
           <tr>
-            <th>LRN</th>
+            <th>Subject</th>
             <th>Midterm Grade</th>
             <th>Final Grade</th>
             <th>Remarks</th>
@@ -97,7 +98,7 @@
         <tbody>
           <?php foreach($userInfo as $userGrade):?>
           <tr>
-            <td><?=$userGrade['lrn']?></td>
+            <td><?=$userGrade['subject']?></td>
             <td><?=$userGrade['midterm_grade']?></td>
             <td><?=$userGrade['final_grade']?></td>
             <td><?=$userGrade['remark']?></td>
@@ -106,20 +107,21 @@
               data-id="<?=$userGrade['id']?>"
               data-midterm="<?=$userGrade['midterm_grade']?>"
               data-final="<?=$userGrade['final_grade']?>"
+              data-subjects="<?=$userGrade['subject']?>"
               >Update</button>
               <?php include 'include/grademodal/updategrademodal.php'?>
             </td>
           </tr>
           <?php endforeach;?>
         </tbody>
-
 </div>
-
-
+<?php foreach($info as $newInfo):?>
+<button type="button" class="btn btn-secondary btn-sm btn-add" style = "border-radius:15px" data-id="<?= $newInfo['id']?>" data-lrn="<?= $newInfo['lrn']?>">Add Grade</button>
+  <?php include 'include/grademodal/grademodal.php';?>
+  <?php endforeach;?>
       </table>
     <!-- /.card-body -->
   </div>
-
   <!-- /.content -->
 </div>
   <!-- /.content -->
@@ -135,13 +137,26 @@
             const id = $(this).data('id');
             const midterm = $(this).data('midterm');
             const finals = $(this).data('final');
+            const subjects = $(this).data('subjects');
             // const profile_picture = $(this).data('profile');
             // // sa modal
              $('.idModal').val(id);
              $('.midterm_modal').val(midterm);
+             $('.Modalsubject').val(subjects);
              $('.final_modal').val(finals).trigger('change');
             // Call Modal
             $('#updategrade').modal('show');
+        });
+        $('.btn-add').on('click',function(){
+            // data galing buton
+            const id = $(this).data('id');
+            const lrn = $(this).data('lrn');
+            // const profile_picture = $(this).data('profile');
+            // // sa modal
+             $('.id').val(id);
+             $('.lrnModal').val(lrn).trigger('change');
+            // Call Modal
+            $('#addgrade').modal('show');
         });
     });
 </script>

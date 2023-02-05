@@ -129,7 +129,7 @@
         <thead>
           <?php //foreach($section as $sect): ?>
           <tr>
-            <th>Section</th>
+            <th>Subject</th>
             <th>Monday</th>
             <th>Tuesday</th>
             <th>Wednesday</th>
@@ -141,7 +141,7 @@
         <tbody>
             <?php foreach($sched as $new):?>
           <tr>
-            <td><?=$new['section'];?></td>
+            <td><?=$new['subject'];?></td>
             <td><?=$new['monday'];?> <?= '-'?> <?=$new['mon_two'];?></td>
             <td><?=$new['tuesday'];?> <?= '-'?> <?=$new['tue_two'];?></td>
             <td><?=$new['wednesday'];?> <?= '-'?> <?=$new['wed_two'];?></td>
@@ -152,6 +152,7 @@
             data-id="<?=$new['id'];?>" data-teacher="<?=$new['teacher_id'];?>" data-mon_one="<?=$new['monday'];?>" data-mon_two="<?=$new['mon_two'];?>"
             data-tue_one="<?=$new['tuesday'];?>" data-tue_two="<?=$new['tue_two'];?>" data-wed_one="<?=$new['wednesday'];?>" data-wed_two="<?=$new['wed_two'];?>"
             data-thu_one="<?=$new['thursday'];?>" data-thu_two="<?=$new['thu_two'];?>" data-fri_one="<?=$new['friday'];?>" data-fri_two="<?=$new['fri_two'];?>"
+            data-subject="<?=$new['subject'];?>"
             >Update</button>
             <?= $this->include('admin/section/updateSchedule')?>
             </td>
@@ -193,6 +194,7 @@ $(document).ready(function(){
      $('.btn-update').on('click',function(){
          // data galing buton
          const id = $(this).data('id');
+         const subject = $(this).data('subject');
          const teacher = $(this).data('teacher');
          const mon_one = $(this).data('mon_one');
          const mon_two = $(this).data('mon_two');
@@ -206,6 +208,7 @@ $(document).ready(function(){
          const fri_two = $(this).data('fri_two');
          // // sa modal
           $('.id').val(id);
+          $('.subject').val(subject);
           $('.teacher').val(teacher);
           $('.mon_one').val(mon_one);
           $('.mon_two').val(mon_two);

@@ -58,7 +58,8 @@ $routes->match(['get', 'post'],'/verify/(:any)', 'AccountController::verify/$1')
 $routes->match(['get', 'post'],'/t_dashboard', 'Teacher::t_dashboard');
 $routes->match(['get', 'post'],'/newteacher', 'Teacher::newteacher');
 $routes->match(['get', 'post'],'/addteacher', 'Teacher::addteacher');
-$routes->match(['get', 'post'],'/grading', 'Teacher::grading');
+$routes->get('/grading', 'Teacher::grading');
+$routes->post('/grading/(:any)', 'Teacher::grading/$1');
 // $routes->get('/viewGrade', 'Teacher::viewGrade');
 // $routes->get('/viewGrades', 'Teacher::viewGrades');
 $routes->get('/viewGrade/(:any)', 'Teacher::viewGrade/$1');
