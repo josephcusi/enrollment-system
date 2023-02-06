@@ -121,7 +121,6 @@
       <table id="example1" class="table table-bordered table" style = "font-family:poppins">
         <thead>
           <tr>
-            <th>Teacher</th>
             <th>Section</th>
             <th>Strand</th>
             <th>Semester</th>
@@ -131,13 +130,6 @@
         </thead>
         <tbody>
           <tr>
-            <td>
-                    <?= isset($userSched['firstname']) ? $userSched['firstname'] : 'UNAVAILABLE';?>
-                    <?=" " ?>
-                    <?= isset($userSched['middlename']) ? $userSched['middlename'] :''; ?>
-                    <?php echo " " ?>
-                    <?= isset($userSched['lastname']) ? $userSched['lastname'] : ''; ?>
-            </td>
             <td><?=isset($userSched['section']) ? $userSched['section'] : 'UNAVAILABLE';?></td>
             <td><?=isset($userSched['strand']) ? $userSched['strand'] : 'UNAVAILABLE';?></td>
             <td><?=isset($userSched['semester']) ? $userSched['semester'] : 'UNAVAILABLE';?></td>

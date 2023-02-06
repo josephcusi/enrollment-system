@@ -49,8 +49,6 @@ class Profile extends BaseController
             ->select('*')
             ->join('student_registration', 'user_tbl.lrn = student_registration.lrn', 'inner')
             ->join('section_tbl', 'student_registration.user_section = section_tbl.id', 'inner')
-            ->join('schedule_tbl', 'section_tbl.id = schedule_tbl.section_id', 'inner')
-            ->join('user_tbl as u', 'schedule_tbl.teacher_id = u.id', 'inner')
             ->where('user_tbl.email', session()->get('email'))
             ->first(),
             'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
@@ -290,59 +288,67 @@ class Profile extends BaseController
             return redirect('retrieve_profile');
         }
         else {
-            $street = $this->request->getPost('street');
-            $gender = $this->request->getPost('gender');
-            $religion = $this->request->getPost('religion');
-            $birthday = $this->request->getPost('birthday');
-            $civil_status = $this->request->getPost('civil_status');
-            $nationality = $this->request->getPost('nationality');
-            $birthplace = $this->request->getPost('birthplace');
-            $baranggay = $this->request->getPost('baranggay');
-            $prov_add = $this->request->getPost('prov_add');
-            $contact = $this->request->getPost('contact');
-            $guardian_name = $this->request->getPost('guardian_name');
-            $guardian_contact = $this->request->getPost('guardian_contact');
-            $guardian_address = $this->request->getPost('guardian_address');
-            $elem_school = $this->request->getPost('elem_school');
-            $elem_address = $this->request->getPost('elem_address');
-            $elem_year = $this->request->getPost('elem_year');
-            $high_school = $this->request->getPost('high_school');
-            $high_address = $this->request->getPost('high_address');
-            $high_year = $this->request->getPost('high_year');
-
-            $values = [
-                'email' => $email = session()->get('loggedInUser'),
-                'street' => $street,
-                'gender' => $gender,
-                'religion' => $religion,
-                'birthday' => $birthday,
-                'civil_status' => $civil_status,
-                'nationality' => $nationality,
-                'birthplace' => $birthplace,
-                'baranggay' => $baranggay,
-                'prov_add' => $prov_add,
-                'contact' => $contact,
-                'guardian_name' => $guardian_name,
-                'guardian_contact' => $guardian_contact,
-                'guardian_address' => $guardian_address,
-                'elem_school' => $elem_school,
-                'elem_address' => $elem_address,
-                'elem_year' => $elem_year,
-                'high_school' => $high_school,
-                'high_address' => $high_address,
-                'high_year' => $high_year
-
-
-            ];
             $profile_model = new ProfileModel();
-            $query = $profile_model->insert($values);
-            if (!$query)
-            {
-                return redirect()->back()->with('fail', 'Something went wrong.');
+            $newData = count($profile_model->where('email', session()->get('loggedInUser'))->findAll());
+            if($newData < 1){
+                $street = $this->request->getPost('street');
+                $gender = $this->request->getPost('gender');
+                $religion = $this->request->getPost('religion');
+                $birthday = $this->request->getPost('birthday');
+                $civil_status = $this->request->getPost('civil_status');
+                $nationality = $this->request->getPost('nationality');
+                $birthplace = $this->request->getPost('birthplace');
+                $baranggay = $this->request->getPost('baranggay');
+                $prov_add = $this->request->getPost('prov_add');
+                $contact = $this->request->getPost('contact');
+                $guardian_name = $this->request->getPost('guardian_name');
+                $guardian_contact = $this->request->getPost('guardian_contact');
+                $guardian_address = $this->request->getPost('guardian_address');
+                $elem_school = $this->request->getPost('elem_school');
+                $elem_address = $this->request->getPost('elem_address');
+                $elem_year = $this->request->getPost('elem_year');
+                $high_school = $this->request->getPost('high_school');
+                $high_address = $this->request->getPost('high_address');
+                $high_year = $this->request->getPost('high_year');
+    
+                $values = [
+                    'email' => $email = session()->get('loggedInUser'),
+                    'street' => $street,
+                    'gender' => $gender,
+                    'religion' => $religion,
+                    'birthday' => $birthday,
+                    'civil_status' => $civil_status,
+                    'nationality' => $nationality,
+                    'birthplace' => $birthplace,
+                    'baranggay' => $baranggay,
+                    'prov_add' => $prov_add,
+                    'contact' => $contact,
+                    'guardian_name' => $guardian_name,
+                    'guardian_contact' => $guardian_contact,
+                    'guardian_address' => $guardian_address,
+                    'elem_school' => $elem_school,
+                    'elem_address' => $elem_address,
+                    'elem_year' => $elem_year,
+                    'high_school' => $high_school,
+                    'high_address' => $high_address,
+                    'high_year' => $high_year
+    
+    
+                ];
+                $profile_model = new ProfileModel();
+                $query = $profile_model->insert($values);
+                if (!$query)
+                {
+                    return redirect()->back()->with('fail', 'Something went wrong.');
+                }
+                else
+                {
+                    session()->setFlashdata('saveprofile', 'Incorrect Password Provided');
+                    return redirect('retrieve_profile');
+                }
             }
-            else
-            {
-                session()->setFlashdata('saveprofile', 'Incorrect Password Provided');
+            else{
+                session()->setFlashdata('profileDup', 'Please fill out your profile first');
                 return redirect('retrieve_profile');
             }
         }
@@ -528,8 +534,8 @@ class Profile extends BaseController
             $email->setMessage("Thank you for submitting your enrollment application. Our team is currently reviewing it and will get back to you as soon as possible with an update on your status. Please allow us some time to process your application and make a decision. In the meantime, if you have any questions or need additional information, please feel free to reach out to us.");
             $email->send();
             //var_dump($values['prospectus']);
-            // return view('user/regSubject', $values);
-            return redirect()->route('registration');
+            return view('user/regSubject', $values);
+            // return redirect()->route('registration');
 
         }
     }

@@ -116,7 +116,7 @@
         </tbody>
 </div>
 <?php foreach($info as $newInfo):?>
-<button type="button" class="btn btn-secondary btn-sm btn-add" style = "border-radius:15px" data-id="<?= $newInfo['id']?>" data-lrn="<?= $newInfo['lrn']?>">Add Grade</button>
+<button type="button" class="btn btn-secondary btn-sm btn-add" style = "border-radius:15px" data-lrn="<?= $newInfo['lrn']?>">Add Grade</button>
   <?php include 'include/grademodal/grademodal.php';?>
   <?php endforeach;?>
       </table>
@@ -149,11 +149,9 @@
         });
         $('.btn-add').on('click',function(){
             // data galing buton
-            const id = $(this).data('id');
             const lrn = $(this).data('lrn');
             // const profile_picture = $(this).data('profile');
             // // sa modal
-             $('.id').val(id);
              $('.lrnModal').val(lrn).trigger('change');
             // Call Modal
             $('#addgrade').modal('show');

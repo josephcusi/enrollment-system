@@ -11,7 +11,6 @@
             <form action="<?=site_url('grading/'. $id)?>" method="post">
                     <div class="form-horizontal" style = "margin-left:25%">
                     <div class="form-row mt-9"> 
-                  <input type="hidden" class="id" name="id">
                   </div>
                   <div class="form-group col-md-9">
                       <label >Subject</label>

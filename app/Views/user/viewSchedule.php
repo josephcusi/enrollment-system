@@ -118,7 +118,7 @@
         <thead>
           <?php //foreach($section as $sect): ?>
           <tr>
-
+            <th>Teacher</th>
             <th>Subject</th>
             <th>Monday</th>
             <th>Tuesday</th>
@@ -130,6 +130,14 @@
         <tbody>
             <?php foreach($userSched as $sched_value):?>
           <tr>
+            
+            <td>
+                  <?= isset($sched_value['firstname']) ? $sched_value['firstname'] : 'UNAVAILABLE';?>
+                  <?=" " ?>
+                  <?= isset($sched_value['middlename']) ? $sched_value['middlename'] :''; ?>
+                  <?php echo " " ?>
+                  <?= isset($sched_value['lastname']) ? $sched_value['lastname'] : ''; ?>
+            </td>
             <td><?=isset($sched_value['subject']) ? $sched_value['subject'] : 'UNAVAILABLE';?></td>
             <td><?=isset($sched_value['monday']) ? $sched_value['monday'] : 'UNAVAILABLE';?> <?= '-'?> <?=isset($sched_value['mon_two']) ? $sched_value['mon_two'] : 'UNAVAILABLE';?></td>
             <td><?=isset($sched_value['tuesday']) ? $sched_value['tuesday'] : 'UNAVAILABLE';?> <?= '-'?> <?=isset($sched_value['tue_two']) ? $sched_value['tue_two'] : 'UNAVAILABLE';?></td>

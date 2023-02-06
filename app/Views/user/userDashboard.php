@@ -98,6 +98,10 @@
       <?php if(!empty(session()->getFlashdata('missing'))) : ?>
       <script>swal("Missing Fields!", "Please fill out all missing fields.", "warning");</script>
       <?php endif ?>
+
+      <?php if(!empty(session()->getFlashdata('profileDup'))) : ?>
+      <script>swal("Opppsss!", "You already filled out this field.", "warning");</script>
+      <?php endif ?>
       <!-- Content Header (Page header) -->
       <section class="content-header">
 

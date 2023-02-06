@@ -49,27 +49,31 @@ class Teacher extends BaseController
     }
     public function viewGrade($id)
     {
-        $registration_model = new RegistrationModel;
         $user_model = new UserModel();
         $data =[
-            'userInfo' => $registration_model
-            ->select('*, student_grading.id')
-            ->join('user_tbl', 'student_registration.lrn=user_tbl.lrn', 'right')
-            ->join('student_grading', 'student_registration.lrn=student_grading.lrn', 'right')
-            ->join('prospectrus_tbl', 'student_grading.subject_id = prospectrus_tbl.id', 'inner')
+            'userInfo' => $user_model
+            ->select('*')
+            ->join('schedule_tbl', 'user_tbl.id = schedule_tbl.teacher_id', 'inner')
+            ->join('student_registration', 'schedule_tbl.section_id = student_registration.user_section', 'inner')
+            ->join('prospectrus_tbl', 'schedule_tbl.subject_id = prospectrus_tbl.id', 'inner')
+            ->join('student_grading', 'prospectrus_tbl.id = student_grading.subject_id', 'inner')
+            ->where('user_tbl.email', session()->get('email'))
             ->where('student_registration.id', $id)
             ->get()->getResultArray(),
             'id' => $id,
             'userName' => $user_model->where('email', session()->get('email'))->first(),
-            'info' => $registration_model
+            
+            'info' => $user_model
             ->select('*')
-            ->join('strand_tbl', 'student_registration.strand = strand_tbl.strand', 'inner')
-            ->join('prospectrus_tbl', 'strand_tbl.id = prospectrus_tbl.strand_id', 'inner')
-            ->where('student_registration.id', $id)
+            ->join('schedule_tbl', 'user_tbl.id = schedule_tbl.teacher_id', 'inner')
+            ->join('student_registration', 'schedule_tbl.section_id = student_registration.user_section', 'inner')
+            ->join('prospectrus_tbl', 'schedule_tbl.subject_id = prospectrus_tbl.id', 'inner')
+            ->where('user_tbl.email', session()->get('email'))
+            // ->where('student_registration.id', $id)
             ->get()->getResultArray()
         ];
         return view('teacher/Grade', $data);
-        // var_dump($data['info']);
+        // var_dump($data['userInfo
     }
     public function addteacher()
     {
