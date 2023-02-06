@@ -69,7 +69,7 @@ class Teacher extends BaseController
             ->join('student_registration', 'schedule_tbl.section_id = student_registration.user_section', 'inner')
             ->join('prospectrus_tbl', 'schedule_tbl.subject_id = prospectrus_tbl.id', 'inner')
             ->where('user_tbl.email', session()->get('email'))
-            // ->where('student_registration.id', $id)
+            ->where('student_registration.id', $id)
             ->get()->getResultArray()
         ];
         return view('teacher/Grade', $data);
