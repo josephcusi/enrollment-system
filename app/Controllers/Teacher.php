@@ -56,7 +56,7 @@ class Teacher extends BaseController
             ->join('schedule_tbl', 'user_tbl.id = schedule_tbl.teacher_id', 'inner')
             ->join('student_registration', 'schedule_tbl.section_id = student_registration.user_section', 'inner')
             ->join('prospectrus_tbl', 'schedule_tbl.subject_id = prospectrus_tbl.id', 'inner')
-            ->join('student_grading', 'prospectrus_tbl.id = student_grading.subject_id', 'inner')
+            ->join('student_grading', 'student_registration.lrn = student_grading.lrn', 'inner')
             ->where('user_tbl.email', session()->get('email'))
             ->where('student_registration.id', $id)
             ->get()->getResultArray(),
@@ -73,7 +73,7 @@ class Teacher extends BaseController
             ->get()->getResultArray()
         ];
         return view('teacher/Grade', $data);
-        // var_dump($data['userInfo
+        // var_dump($data['userInfo']);
     }
     public function addteacher()
     {
@@ -87,9 +87,10 @@ class Teacher extends BaseController
     {
         $validated = $this->validate([
             'lrn' => [
-                'rules' => 'required',
+                'rules' => 'required|is_unique[student_grading.lrn]',
                 'errors' => [
                     'required' => 'LRN is required!',
+                    'is_unique' => 'Your lrn is already Exist'
                 ]
             ],
             'subject' => [
@@ -114,8 +115,8 @@ class Teacher extends BaseController
 
             if (!$validated) {
                 session()->setFlashdata('invalid', 'Welcome');
-                // return $this->viewGrade($id);
-                echo 1;
+                return $this->viewGrade($id);
+                // echo 1;
             }
             else
             {
