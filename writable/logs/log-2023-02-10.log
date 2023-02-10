@@ -61,3 +61,740 @@ AND `school_year`.`status` = :school_year.status:', [...], false)
  9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
 11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-10 06:02:34 --> mysqli_sql_exception: Column 'status' in where clause is ambiguous in C:\laragon\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\laragon\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Dormehi-Enrollment-System\app\Controllers\Admin.php(60): CodeIgniter\Model->__call('get', Array)
+#6 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\Admin->admin()
+#7 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-02-10 06:02:34 --> Column 'status' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `user_profile`
+INNER JOIN `user_tbl` ON `user_profile`.`email` = `user_tbl`.`email`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `status` = \'active\'
+AND `gender` = \'male\'
+AND `state` = \'Enrolled\'
+AND `student_registration`.`state` = \'enrolled\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user_profile`
+INNER JOIN `user_tbl` ON `user_profile`.`email` = `user_tbl`.`email`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `status` = \'active\'
+AND `gender` = \'male\'
+AND `state` = \'Enrolled\'
+AND `student_registration`.`state` = \'enrolled\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user_profile`
+INNER JOIN `user_tbl` ON `user_profile`.`email` = `user_tbl`.`email`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `status` = \'active\'
+AND `gender` = \'male\'
+AND `state` = \'Enrolled\'
+AND `student_registration`.`state` = \'enrolled\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_profile`
+INNER JOIN `user_tbl` ON `user_profile`.`email` = `user_tbl`.`email`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `status` = :status:
+AND `gender` = :gender:
+AND `state` = :state:
+AND `student_registration`.`state` = :student_registration.state:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(60): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-10 06:04:13 --> mysqli_sql_exception: Column 'status' in where clause is ambiguous in C:\laragon\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\laragon\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Dormehi-Enrollment-System\app\Controllers\Admin.php(59): CodeIgniter\Model->__call('get', Array)
+#6 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\Admin->admin()
+#7 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-02-10 06:04:13 --> Column 'status' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `user_profile`
+INNER JOIN `user_tbl` ON `user_profile`.`email` = `user_tbl`.`email`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `status` = \'active\'
+AND `gender` = \'male\'
+AND `student_registration`.`state` = \'enrolled\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user_profile`
+INNER JOIN `user_tbl` ON `user_profile`.`email` = `user_tbl`.`email`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `status` = \'active\'
+AND `gender` = \'male\'
+AND `student_registration`.`state` = \'enrolled\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user_profile`
+INNER JOIN `user_tbl` ON `user_profile`.`email` = `user_tbl`.`email`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `status` = \'active\'
+AND `gender` = \'male\'
+AND `student_registration`.`state` = \'enrolled\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_profile`
+INNER JOIN `user_tbl` ON `user_profile`.`email` = `user_tbl`.`email`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `status` = :status:
+AND `gender` = :gender:
+AND `student_registration`.`state` = :student_registration.state:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(59): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-10 06:05:35 --> Undefined variable $student_registration
+in APPPATH\Controllers\Admin.php on line 53.
+ 1 APPPATH\Controllers\Admin.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $student_registration', 'APPPATH\\Controllers\\Admin.php', 53)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-10 06:06:07 --> mysqli_sql_exception: Not unique table/alias: 'student_registration' in C:\laragon\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\laragon\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Dormehi-Enrollment-System\app\Controllers\Admin.php(59): CodeIgniter\Model->__call('get', Array)
+#6 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\Admin->admin()
+#7 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-02-10 06:06:07 --> Not unique table/alias: 'student_registration'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `student_registration`
+INNER JOIN `user_tbl` ON `user_profile`.`email` = `user_tbl`.`email`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `status` = \'active\'
+AND `gender` = \'male\'
+AND `student_registration`.`state` = \'enrolled\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `student_registration`
+INNER JOIN `user_tbl` ON `user_profile`.`email` = `user_tbl`.`email`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `status` = \'active\'
+AND `gender` = \'male\'
+AND `student_registration`.`state` = \'enrolled\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `student_registration`
+INNER JOIN `user_tbl` ON `user_profile`.`email` = `user_tbl`.`email`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `status` = \'active\'
+AND `gender` = \'male\'
+AND `student_registration`.`state` = \'enrolled\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `student_registration`
+INNER JOIN `user_tbl` ON `user_profile`.`email` = `user_tbl`.`email`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `status` = :status:
+AND `gender` = :gender:
+AND `student_registration`.`state` = :student_registration.state:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(59): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-10 06:28:35 --> mysqli_sql_exception: Column 'status' in where clause is ambiguous in C:\laragon\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\laragon\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Dormehi-Enrollment-System\app\Controllers\Admin.php(59): CodeIgniter\Model->__call('get', Array)
+#6 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\Admin->admin()
+#7 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-02-10 06:28:35 --> Column 'status' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `user_profile`
+INNER JOIN `user_tbl` ON `user_profile`.`email` = `user_tbl`.`email`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `status` = \'active\'
+AND `gender` = \'male\'
+AND `student_registration`.`state` = \'enrolled\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user_profile`
+INNER JOIN `user_tbl` ON `user_profile`.`email` = `user_tbl`.`email`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `status` = \'active\'
+AND `gender` = \'male\'
+AND `student_registration`.`state` = \'enrolled\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user_profile`
+INNER JOIN `user_tbl` ON `user_profile`.`email` = `user_tbl`.`email`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `status` = \'active\'
+AND `gender` = \'male\'
+AND `student_registration`.`state` = \'enrolled\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_profile`
+INNER JOIN `user_tbl` ON `user_profile`.`email` = `user_tbl`.`email`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `status` = :status:
+AND `gender` = :gender:
+AND `student_registration`.`state` = :student_registration.state:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(59): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-10 06:32:37 --> mysqli_sql_exception: Column 'status' in where clause is ambiguous in C:\laragon\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\laragon\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Dormehi-Enrollment-System\app\Controllers\Admin.php(59): CodeIgniter\Model->__call('get', Array)
+#6 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\Admin->admin()
+#7 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-02-10 06:32:37 --> Column 'status' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `user_profile`
+INNER JOIN `user_tbl` ON `school_year`.`status` = `user_tbl`.`status`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `status` = \'active\'
+AND `gender` = \'male\'
+AND `student_registration`.`state` = \'Enrolled\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user_profile`
+INNER JOIN `user_tbl` ON `school_year`.`status` = `user_tbl`.`status`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `status` = \'active\'
+AND `gender` = \'male\'
+AND `student_registration`.`state` = \'Enrolled\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user_profile`
+INNER JOIN `user_tbl` ON `school_year`.`status` = `user_tbl`.`status`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `status` = \'active\'
+AND `gender` = \'male\'
+AND `student_registration`.`state` = \'Enrolled\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_profile`
+INNER JOIN `user_tbl` ON `school_year`.`status` = `user_tbl`.`status`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `status` = :status:
+AND `gender` = :gender:
+AND `student_registration`.`state` = :student_registration.state:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(59): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-10 06:33:10 --> mysqli_sql_exception: Unknown column 'user_tbl.lrn' in 'on clause' in C:\laragon\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\laragon\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Dormehi-Enrollment-System\app\Controllers\Admin.php(58): CodeIgniter\Model->__call('get', Array)
+#6 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\Admin->admin()
+#7 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-02-10 06:33:10 --> Unknown column 'user_tbl.lrn' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `user_profile`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `status` = \'active\'
+AND `gender` = \'male\'
+AND `student_registration`.`state` = \'Enrolled\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user_profile`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `status` = \'active\'
+AND `gender` = \'male\'
+AND `student_registration`.`state` = \'Enrolled\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user_profile`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `status` = \'active\'
+AND `gender` = \'male\'
+AND `student_registration`.`state` = \'Enrolled\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_profile`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `status` = :status:
+AND `gender` = :gender:
+AND `student_registration`.`state` = :student_registration.state:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(58): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-10 06:41:40 --> mysqli_sql_exception: Unknown database 'user' in C:\laragon\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\laragon\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Dormehi-Enrollment-System\app\Controllers\Admin.php(59): CodeIgniter\Model->__call('get', Array)
+#6 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\Admin->admin()
+#7 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-02-10 06:41:40 --> Unknown database 'user'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `user_profile`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+JOIN `user`.`tbl` ON `school_year`.`status` = `user_tbl`.`status`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `status` = \'active\'
+AND `gender` = \'male\'
+AND `student_registration`.`state` = \'Enrolled\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user_profile`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+JOIN `user`.`tbl` ON `school_year`.`status` = `user_tbl`.`status`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `status` = \'active\'
+AND `gender` = \'male\'
+AND `student_registration`.`state` = \'Enrolled\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user_profile`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+JOIN `user`.`tbl` ON `school_year`.`status` = `user_tbl`.`status`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `status` = \'active\'
+AND `gender` = \'male\'
+AND `student_registration`.`state` = \'Enrolled\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_profile`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+JOIN `user`.`tbl` ON `school_year`.`status` = `user_tbl`.`status`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `status` = :status:
+AND `gender` = :gender:
+AND `student_registration`.`state` = :student_registration.state:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(59): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-10 06:41:52 --> mysqli_sql_exception: Column 'status' in where clause is ambiguous in C:\laragon\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\laragon\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Dormehi-Enrollment-System\app\Controllers\Admin.php(59): CodeIgniter\Model->__call('get', Array)
+#6 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\Admin->admin()
+#7 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-02-10 06:41:52 --> Column 'status' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `user_profile`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+JOIN `user_tbl` ON `school_year`.`status` = `user_tbl`.`status`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `status` = \'active\'
+AND `gender` = \'male\'
+AND `student_registration`.`state` = \'Enrolled\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user_profile`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+JOIN `user_tbl` ON `school_year`.`status` = `user_tbl`.`status`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `status` = \'active\'
+AND `gender` = \'male\'
+AND `student_registration`.`state` = \'Enrolled\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user_profile`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+JOIN `user_tbl` ON `school_year`.`status` = `user_tbl`.`status`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `status` = \'active\'
+AND `gender` = \'male\'
+AND `student_registration`.`state` = \'Enrolled\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_profile`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+JOIN `user_tbl` ON `school_year`.`status` = `user_tbl`.`status`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `status` = :status:
+AND `gender` = :gender:
+AND `student_registration`.`state` = :student_registration.state:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(59): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-10 06:42:29 --> mysqli_sql_exception: Column 'status' in where clause is ambiguous in C:\laragon\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\laragon\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Dormehi-Enrollment-System\app\Controllers\Admin.php(59): CodeIgniter\Model->__call('get', Array)
+#6 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\Admin->admin()
+#7 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-02-10 06:42:29 --> Column 'status' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `user_profile`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+JOIN `user_tbl` ON `school_year`.`status` = `user_tbl`.`status`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `status` = \'active\'
+AND `gender` = \'male\'
+AND `student_registration`.`state` = \'Enrolled\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user_profile`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+JOIN `user_tbl` ON `school_year`.`status` = `user_tbl`.`status`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `status` = \'active\'
+AND `gender` = \'male\'
+AND `student_registration`.`state` = \'Enrolled\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user_profile`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+JOIN `user_tbl` ON `school_year`.`status` = `user_tbl`.`status`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `status` = \'active\'
+AND `gender` = \'male\'
+AND `student_registration`.`state` = \'Enrolled\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_profile`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+JOIN `user_tbl` ON `school_year`.`status` = `user_tbl`.`status`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `status` = :status:
+AND `gender` = :gender:
+AND `student_registration`.`state` = :student_registration.state:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(59): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-10 06:42:32 --> mysqli_sql_exception: Column 'status' in where clause is ambiguous in C:\laragon\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\laragon\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Dormehi-Enrollment-System\app\Controllers\Admin.php(59): CodeIgniter\Model->__call('get', Array)
+#6 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\Admin->admin()
+#7 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-02-10 06:42:32 --> Column 'status' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `user_profile`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+JOIN `user_tbl` ON `school_year`.`status` = `user_tbl`.`status`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `status` = \'active\'
+AND `gender` = \'male\'
+AND `student_registration`.`state` = \'Enrolled\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user_profile`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+JOIN `user_tbl` ON `school_year`.`status` = `user_tbl`.`status`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `status` = \'active\'
+AND `gender` = \'male\'
+AND `student_registration`.`state` = \'Enrolled\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user_profile`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+JOIN `user_tbl` ON `school_year`.`status` = `user_tbl`.`status`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `status` = \'active\'
+AND `gender` = \'male\'
+AND `student_registration`.`state` = \'Enrolled\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_profile`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+JOIN `user_tbl` ON `school_year`.`status` = `user_tbl`.`status`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `status` = :status:
+AND `gender` = :gender:
+AND `student_registration`.`state` = :student_registration.state:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(59): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-10 06:43:09 --> mysqli_sql_exception: Unknown column 'school_year.status' in 'on clause' in C:\laragon\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\laragon\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Dormehi-Enrollment-System\app\Controllers\Admin.php(59): CodeIgniter\Model->__call('get', Array)
+#6 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\Admin->admin()
+#7 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-02-10 06:43:09 --> Unknown column 'school_year.status' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `user_profile`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+JOIN `user_tbl` ON `school_year`.`status` = `user_tbl`.`status`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `gender` = \'male\'
+AND `student_registration`.`state` = \'Enrolled\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user_profile`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+JOIN `user_tbl` ON `school_year`.`status` = `user_tbl`.`status`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `gender` = \'male\'
+AND `student_registration`.`state` = \'Enrolled\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user_profile`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+JOIN `user_tbl` ON `school_year`.`status` = `user_tbl`.`status`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `gender` = \'male\'
+AND `student_registration`.`state` = \'Enrolled\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_profile`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+JOIN `user_tbl` ON `school_year`.`status` = `user_tbl`.`status`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `gender` = :gender:
+AND `student_registration`.`state` = :student_registration.state:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(59): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-10 06:44:28 --> syntax error, unexpected single-quoted string "inner", expecting ")"
+in APPPATH\Controllers\Admin.php on line 55.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Admin.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Admin', true)
+ 5 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-10 06:44:39 --> mysqli_sql_exception: Unknown column 'school_year.status' in 'on clause' in C:\laragon\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\laragon\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Dormehi-Enrollment-System\app\Controllers\Admin.php(59): CodeIgniter\Model->__call('get', Array)
+#6 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\Admin->admin()
+#7 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-02-10 06:44:39 --> Unknown column 'school_year.status' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `user_profile`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `user_tbl` ON `school_year`.`status` = `user_tbl`.`status`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `gender` = \'male\'
+AND `student_registration`.`state` = \'Enrolled\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user_profile`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `user_tbl` ON `school_year`.`status` = `user_tbl`.`status`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `gender` = \'male\'
+AND `student_registration`.`state` = \'Enrolled\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user_profile`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `user_tbl` ON `school_year`.`status` = `user_tbl`.`status`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `gender` = \'male\'
+AND `student_registration`.`state` = \'Enrolled\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_profile`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `user_tbl` ON `school_year`.`status` = `user_tbl`.`status`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `gender` = :gender:
+AND `student_registration`.`state` = :student_registration.state:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(59): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-10 06:47:04 --> mysqli_sql_exception: Column 'status' in where clause is ambiguous in C:\laragon\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\laragon\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Dormehi-Enrollment-System\app\Controllers\Admin.php(59): CodeIgniter\Model->__call('get', Array)
+#6 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\Admin->admin()
+#7 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-02-10 06:47:04 --> Column 'status' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `user_profile`
+INNER JOIN `user_tbl` ON `user_profile`.`email` = `user_tbl`.`email`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `status` = \'active\'
+AND `gender` = \'male\'
+AND `student_registration`.`state` = \'Enrolled\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user_profile`
+INNER JOIN `user_tbl` ON `user_profile`.`email` = `user_tbl`.`email`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `status` = \'active\'
+AND `gender` = \'male\'
+AND `student_registration`.`state` = \'Enrolled\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user_profile`
+INNER JOIN `user_tbl` ON `user_profile`.`email` = `user_tbl`.`email`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `status` = \'active\'
+AND `gender` = \'male\'
+AND `student_registration`.`state` = \'Enrolled\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_profile`
+INNER JOIN `user_tbl` ON `user_profile`.`email` = `user_tbl`.`email`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `school_year` ON `student_registration`.`year` = `school_year`.`year`
+WHERE `status` = :status:
+AND `gender` = :gender:
+AND `student_registration`.`state` = :student_registration.state:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(59): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-10 06:55:49 --> Undefined variable $female
+in APPPATH\Views\admin\adminDashboard.php on line 325.
+ 1 APPPATH\Views\admin\adminDashboard.php(325): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $female', 'APPPATH\\Views\\admin\\adminDashboard.php', 325)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\adminDashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/admindashboard', [], true)
+ 5 APPPATH\Controllers\Admin.php(103): view('admin/admindashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

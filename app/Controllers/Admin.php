@@ -51,20 +51,20 @@ class Admin extends BaseController
             'female_percentage' => $female_percentage,
             'male' => $profile_model
             ->select('*, ')
-            ->join('student_registration', 'user_profile.id = student_registration.id', 'inner')
+            ->join('user_tbl', 'user_profile.email = user_tbl.email', 'inner')
+            ->join('student_registration','user_tbl.lrn = student_registration.lrn', 'inner')
             ->join('school_year','student_registration.year = school_year.year', 'inner')
-            ->where('status', 'active')
-            ->where('gender', 'male')
             ->where('state', 'Enrolled')
-            ->where('student_registration.state', 'enrolled')->get()->getNumRows(),
+            ->where('gender', 'male')
+            ->where('school_year.status', 'active')->get()->getNumRows(),
             'female' => $profile_model
             ->select('*, ')
-            ->join('student_registration', 'user_profile.id = student_registration.id', 'inner')
+            ->join('user_tbl', 'user_profile.email = user_tbl.email', 'inner')
+            ->join('student_registration','user_tbl.lrn = student_registration.lrn', 'inner')
             ->join('school_year','student_registration.year = school_year.year', 'inner')
-            ->where('status', 'active')
-            ->where('gender', 'female')
             ->where('state', 'Enrolled')
-            ->where('student_registration.state', 'enrolled')->get()->getNumRows(),
+            ->where('gender', 'female')
+            ->where('school_year.status', 'active')->get()->getNumRows(),
             'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
             'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
             'usertypestudent' => $user_model->where('usertype', 'student')->get()->getNumRows(),
