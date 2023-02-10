@@ -1,0 +1,413 @@
+ERROR - 2023-02-06 10:35:10 --> mysqli_sql_exception: Expression #15 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'enrollment_system.schedule_tbl.id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in C:\laragon\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\laragon\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `stud...', 0)
+#1 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `stud...')
+#2 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `stud...')
+#3 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `stud...', Array, false)
+#4 C:\laragon\www\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Dormehi-Enrollment-System\app\Controllers\Teacher.php(35): CodeIgniter\Model->__call('get', Array)
+#6 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+#7 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+#8 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-02-06 10:35:10 --> Expression #15 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'enrollment_system.schedule_tbl.id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `student_registration`.`id`
+FROM `user_tbl`
+INNER JOIN `schedule_tbl` ON `user_tbl`.`id` = `schedule_tbl`.`teacher_id`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+INNER JOIN `student_registration` ON `section_tbl`.`id` = `student_registration`.`user_section`
+INNER JOIN `user_tbl` as `u` ON `student_registration`.`lrn` = `u`.`lrn`
+WHERE `user_tbl`.`email` = \'teacher2@gmail.com\'
+AND `student_registration`.`state` = \'Enrolled\'
+GROUP BY `student_registration`.`lrn`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `student_registration`.`id`
+FROM `user_tbl`
+INNER JOIN `schedule_tbl` ON `user_tbl`.`id` = `schedule_tbl`.`teacher_id`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+INNER JOIN `student_registration` ON `section_tbl`.`id` = `student_registration`.`user_section`
+INNER JOIN `user_tbl` as `u` ON `student_registration`.`lrn` = `u`.`lrn`
+WHERE `user_tbl`.`email` = \'teacher2@gmail.com\'
+AND `student_registration`.`state` = \'Enrolled\'
+GROUP BY `student_registration`.`lrn`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `student_registration`.`id`
+FROM `user_tbl`
+INNER JOIN `schedule_tbl` ON `user_tbl`.`id` = `schedule_tbl`.`teacher_id`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+INNER JOIN `student_registration` ON `section_tbl`.`id` = `student_registration`.`user_section`
+INNER JOIN `user_tbl` as `u` ON `student_registration`.`lrn` = `u`.`lrn`
+WHERE `user_tbl`.`email` = \'teacher2@gmail.com\'
+AND `student_registration`.`state` = \'Enrolled\'
+GROUP BY `student_registration`.`lrn`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `student_registration`.`id`
+FROM `user_tbl`
+INNER JOIN `schedule_tbl` ON `user_tbl`.`id` = `schedule_tbl`.`teacher_id`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+INNER JOIN `student_registration` ON `section_tbl`.`id` = `student_registration`.`user_section`
+INNER JOIN `user_tbl` as `u` ON `student_registration`.`lrn` = `u`.`lrn`
+WHERE `user_tbl`.`email` = :user_tbl.email:
+AND `student_registration`.`state` = :student_registration.state:
+GROUP BY `student_registration`.`lrn`', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Teacher.php(35): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-06 10:36:57 --> mysqli_sql_exception: Expression #15 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'enrollment_system.schedule_tbl.id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in C:\laragon\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\laragon\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `stud...', 0)
+#1 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `stud...')
+#2 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `stud...')
+#3 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `stud...', Array, false)
+#4 C:\laragon\www\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Dormehi-Enrollment-System\app\Controllers\Teacher.php(35): CodeIgniter\Model->__call('get', Array)
+#6 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+#7 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+#8 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-02-06 10:36:57 --> Expression #15 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'enrollment_system.schedule_tbl.id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `student_registration`.`id`
+FROM `user_tbl`
+INNER JOIN `schedule_tbl` ON `user_tbl`.`id` = `schedule_tbl`.`teacher_id`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+INNER JOIN `student_registration` ON `section_tbl`.`id` = `student_registration`.`user_section`
+INNER JOIN `user_tbl` as `u` ON `student_registration`.`lrn` = `u`.`lrn`
+WHERE `user_tbl`.`email` = \'teacher2@gmail.com\'
+AND `student_registration`.`state` = \'Enrolled\'
+GROUP BY `student_registration`.`lrn`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `student_registration`.`id`
+FROM `user_tbl`
+INNER JOIN `schedule_tbl` ON `user_tbl`.`id` = `schedule_tbl`.`teacher_id`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+INNER JOIN `student_registration` ON `section_tbl`.`id` = `student_registration`.`user_section`
+INNER JOIN `user_tbl` as `u` ON `student_registration`.`lrn` = `u`.`lrn`
+WHERE `user_tbl`.`email` = \'teacher2@gmail.com\'
+AND `student_registration`.`state` = \'Enrolled\'
+GROUP BY `student_registration`.`lrn`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `student_registration`.`id`
+FROM `user_tbl`
+INNER JOIN `schedule_tbl` ON `user_tbl`.`id` = `schedule_tbl`.`teacher_id`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+INNER JOIN `student_registration` ON `section_tbl`.`id` = `student_registration`.`user_section`
+INNER JOIN `user_tbl` as `u` ON `student_registration`.`lrn` = `u`.`lrn`
+WHERE `user_tbl`.`email` = \'teacher2@gmail.com\'
+AND `student_registration`.`state` = \'Enrolled\'
+GROUP BY `student_registration`.`lrn`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `student_registration`.`id`
+FROM `user_tbl`
+INNER JOIN `schedule_tbl` ON `user_tbl`.`id` = `schedule_tbl`.`teacher_id`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+INNER JOIN `student_registration` ON `section_tbl`.`id` = `student_registration`.`user_section`
+INNER JOIN `user_tbl` as `u` ON `student_registration`.`lrn` = `u`.`lrn`
+WHERE `user_tbl`.`email` = :user_tbl.email:
+AND `student_registration`.`state` = :student_registration.state:
+GROUP BY `student_registration`.`lrn`', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Teacher.php(35): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-06 10:39:11 --> mysqli_sql_exception: Expression #15 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'enrollment_system.schedule_tbl.id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in C:\laragon\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\laragon\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `stud...', 0)
+#1 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `stud...')
+#2 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `stud...')
+#3 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `stud...', Array, false)
+#4 C:\laragon\www\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Dormehi-Enrollment-System\app\Controllers\Teacher.php(35): CodeIgniter\Model->__call('get', Array)
+#6 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+#7 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+#8 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-02-06 10:39:11 --> Expression #15 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'enrollment_system.schedule_tbl.id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `student_registration`.`id`
+FROM `user_tbl`
+INNER JOIN `schedule_tbl` ON `user_tbl`.`id` = `schedule_tbl`.`teacher_id`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+INNER JOIN `student_registration` ON `section_tbl`.`id` = `student_registration`.`user_section`
+INNER JOIN `user_tbl` as `u` ON `student_registration`.`lrn` = `u`.`lrn`
+WHERE `user_tbl`.`email` = \'teacher2@gmail.com\'
+AND `student_registration`.`state` = \'Enrolled\'
+GROUP BY `student_registration`.`lrn`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `student_registration`.`id`
+FROM `user_tbl`
+INNER JOIN `schedule_tbl` ON `user_tbl`.`id` = `schedule_tbl`.`teacher_id`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+INNER JOIN `student_registration` ON `section_tbl`.`id` = `student_registration`.`user_section`
+INNER JOIN `user_tbl` as `u` ON `student_registration`.`lrn` = `u`.`lrn`
+WHERE `user_tbl`.`email` = \'teacher2@gmail.com\'
+AND `student_registration`.`state` = \'Enrolled\'
+GROUP BY `student_registration`.`lrn`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `student_registration`.`id`
+FROM `user_tbl`
+INNER JOIN `schedule_tbl` ON `user_tbl`.`id` = `schedule_tbl`.`teacher_id`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+INNER JOIN `student_registration` ON `section_tbl`.`id` = `student_registration`.`user_section`
+INNER JOIN `user_tbl` as `u` ON `student_registration`.`lrn` = `u`.`lrn`
+WHERE `user_tbl`.`email` = \'teacher2@gmail.com\'
+AND `student_registration`.`state` = \'Enrolled\'
+GROUP BY `student_registration`.`lrn`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `student_registration`.`id`
+FROM `user_tbl`
+INNER JOIN `schedule_tbl` ON `user_tbl`.`id` = `schedule_tbl`.`teacher_id`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+INNER JOIN `student_registration` ON `section_tbl`.`id` = `student_registration`.`user_section`
+INNER JOIN `user_tbl` as `u` ON `student_registration`.`lrn` = `u`.`lrn`
+WHERE `user_tbl`.`email` = :user_tbl.email:
+AND `student_registration`.`state` = :student_registration.state:
+GROUP BY `student_registration`.`lrn`', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Teacher.php(35): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-06 10:41:02 --> mysqli_sql_exception: Expression #15 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'enrollment_system.schedule_tbl.id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in C:\laragon\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\laragon\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `stud...', 0)
+#1 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `stud...')
+#2 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `stud...')
+#3 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `stud...', Array, false)
+#4 C:\laragon\www\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Dormehi-Enrollment-System\app\Controllers\Teacher.php(35): CodeIgniter\Model->__call('get', Array)
+#6 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+#7 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+#8 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-02-06 10:41:02 --> Expression #15 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'enrollment_system.schedule_tbl.id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `student_registration`.`id`
+FROM `user_tbl`
+INNER JOIN `schedule_tbl` ON `user_tbl`.`id` = `schedule_tbl`.`teacher_id`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+INNER JOIN `student_registration` ON `section_tbl`.`id` = `student_registration`.`user_section`
+INNER JOIN `user_tbl` as `u` ON `student_registration`.`lrn` = `u`.`lrn`
+WHERE `user_tbl`.`email` = \'teacher@gmail.com\'
+AND `student_registration`.`state` = \'Enrolled\'
+GROUP BY `student_registration`.`lrn`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `student_registration`.`id`
+FROM `user_tbl`
+INNER JOIN `schedule_tbl` ON `user_tbl`.`id` = `schedule_tbl`.`teacher_id`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+INNER JOIN `student_registration` ON `section_tbl`.`id` = `student_registration`.`user_section`
+INNER JOIN `user_tbl` as `u` ON `student_registration`.`lrn` = `u`.`lrn`
+WHERE `user_tbl`.`email` = \'teacher@gmail.com\'
+AND `student_registration`.`state` = \'Enrolled\'
+GROUP BY `student_registration`.`lrn`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `student_registration`.`id`
+FROM `user_tbl`
+INNER JOIN `schedule_tbl` ON `user_tbl`.`id` = `schedule_tbl`.`teacher_id`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+INNER JOIN `student_registration` ON `section_tbl`.`id` = `student_registration`.`user_section`
+INNER JOIN `user_tbl` as `u` ON `student_registration`.`lrn` = `u`.`lrn`
+WHERE `user_tbl`.`email` = \'teacher@gmail.com\'
+AND `student_registration`.`state` = \'Enrolled\'
+GROUP BY `student_registration`.`lrn`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `student_registration`.`id`
+FROM `user_tbl`
+INNER JOIN `schedule_tbl` ON `user_tbl`.`id` = `schedule_tbl`.`teacher_id`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+INNER JOIN `student_registration` ON `section_tbl`.`id` = `student_registration`.`user_section`
+INNER JOIN `user_tbl` as `u` ON `student_registration`.`lrn` = `u`.`lrn`
+WHERE `user_tbl`.`email` = :user_tbl.email:
+AND `student_registration`.`state` = :student_registration.state:
+GROUP BY `student_registration`.`lrn`', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Teacher.php(35): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-06 10:41:26 --> mysqli_sql_exception: Expression #15 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'enrollment_system.schedule_tbl.id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in C:\laragon\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\laragon\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `stud...', 0)
+#1 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `stud...')
+#2 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `stud...')
+#3 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `stud...', Array, false)
+#4 C:\laragon\www\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Dormehi-Enrollment-System\app\Controllers\Teacher.php(35): CodeIgniter\Model->__call('get', Array)
+#6 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+#7 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+#8 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-02-06 10:41:26 --> Expression #15 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'enrollment_system.schedule_tbl.id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `student_registration`.`id`
+FROM `user_tbl`
+INNER JOIN `schedule_tbl` ON `user_tbl`.`id` = `schedule_tbl`.`teacher_id`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+INNER JOIN `student_registration` ON `section_tbl`.`id` = `student_registration`.`user_section`
+INNER JOIN `user_tbl` as `u` ON `student_registration`.`lrn` = `u`.`lrn`
+WHERE `user_tbl`.`email` = \'teacher@gmail.com\'
+AND `student_registration`.`state` = \'Enrolled\'
+GROUP BY `student_registration`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `student_registration`.`id`
+FROM `user_tbl`
+INNER JOIN `schedule_tbl` ON `user_tbl`.`id` = `schedule_tbl`.`teacher_id`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+INNER JOIN `student_registration` ON `section_tbl`.`id` = `student_registration`.`user_section`
+INNER JOIN `user_tbl` as `u` ON `student_registration`.`lrn` = `u`.`lrn`
+WHERE `user_tbl`.`email` = \'teacher@gmail.com\'
+AND `student_registration`.`state` = \'Enrolled\'
+GROUP BY `student_registration`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `student_registration`.`id`
+FROM `user_tbl`
+INNER JOIN `schedule_tbl` ON `user_tbl`.`id` = `schedule_tbl`.`teacher_id`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+INNER JOIN `student_registration` ON `section_tbl`.`id` = `student_registration`.`user_section`
+INNER JOIN `user_tbl` as `u` ON `student_registration`.`lrn` = `u`.`lrn`
+WHERE `user_tbl`.`email` = \'teacher@gmail.com\'
+AND `student_registration`.`state` = \'Enrolled\'
+GROUP BY `student_registration`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `student_registration`.`id`
+FROM `user_tbl`
+INNER JOIN `schedule_tbl` ON `user_tbl`.`id` = `schedule_tbl`.`teacher_id`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+INNER JOIN `student_registration` ON `section_tbl`.`id` = `student_registration`.`user_section`
+INNER JOIN `user_tbl` as `u` ON `student_registration`.`lrn` = `u`.`lrn`
+WHERE `user_tbl`.`email` = :user_tbl.email:
+AND `student_registration`.`state` = :student_registration.state:
+GROUP BY `student_registration`.`id`', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Teacher.php(35): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-06 10:41:38 --> mysqli_sql_exception: Expression #15 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'enrollment_system.schedule_tbl.id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in C:\laragon\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\laragon\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `stud...', 0)
+#1 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `stud...')
+#2 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `stud...')
+#3 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `stud...', Array, false)
+#4 C:\laragon\www\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Dormehi-Enrollment-System\app\Controllers\Teacher.php(35): CodeIgniter\Model->__call('get', Array)
+#6 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+#7 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+#8 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-02-06 10:41:38 --> Expression #15 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'enrollment_system.schedule_tbl.id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `student_registration`.`lrn`
+FROM `user_tbl`
+INNER JOIN `schedule_tbl` ON `user_tbl`.`id` = `schedule_tbl`.`teacher_id`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+INNER JOIN `student_registration` ON `section_tbl`.`id` = `student_registration`.`user_section`
+INNER JOIN `user_tbl` as `u` ON `student_registration`.`lrn` = `u`.`lrn`
+WHERE `user_tbl`.`email` = \'teacher@gmail.com\'
+AND `student_registration`.`state` = \'Enrolled\'
+GROUP BY `student_registration`.`lrn`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `student_registration`.`lrn`
+FROM `user_tbl`
+INNER JOIN `schedule_tbl` ON `user_tbl`.`id` = `schedule_tbl`.`teacher_id`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+INNER JOIN `student_registration` ON `section_tbl`.`id` = `student_registration`.`user_section`
+INNER JOIN `user_tbl` as `u` ON `student_registration`.`lrn` = `u`.`lrn`
+WHERE `user_tbl`.`email` = \'teacher@gmail.com\'
+AND `student_registration`.`state` = \'Enrolled\'
+GROUP BY `student_registration`.`lrn`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `student_registration`.`lrn`
+FROM `user_tbl`
+INNER JOIN `schedule_tbl` ON `user_tbl`.`id` = `schedule_tbl`.`teacher_id`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+INNER JOIN `student_registration` ON `section_tbl`.`id` = `student_registration`.`user_section`
+INNER JOIN `user_tbl` as `u` ON `student_registration`.`lrn` = `u`.`lrn`
+WHERE `user_tbl`.`email` = \'teacher@gmail.com\'
+AND `student_registration`.`state` = \'Enrolled\'
+GROUP BY `student_registration`.`lrn`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `student_registration`.`lrn`
+FROM `user_tbl`
+INNER JOIN `schedule_tbl` ON `user_tbl`.`id` = `schedule_tbl`.`teacher_id`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+INNER JOIN `student_registration` ON `section_tbl`.`id` = `student_registration`.`user_section`
+INNER JOIN `user_tbl` as `u` ON `student_registration`.`lrn` = `u`.`lrn`
+WHERE `user_tbl`.`email` = :user_tbl.email:
+AND `student_registration`.`state` = :student_registration.state:
+GROUP BY `student_registration`.`lrn`', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Teacher.php(35): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-06 10:42:23 --> mysqli_sql_exception: Expression #15 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'enrollment_system.schedule_tbl.id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in C:\laragon\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\laragon\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Dormehi-Enrollment-System\app\Controllers\Teacher.php(35): CodeIgniter\Model->__call('get', Array)
+#6 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+#7 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+#8 C:\laragon\www\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-02-06 10:42:23 --> Expression #15 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'enrollment_system.schedule_tbl.id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `user_tbl`
+INNER JOIN `schedule_tbl` ON `user_tbl`.`id` = `schedule_tbl`.`teacher_id`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+INNER JOIN `student_registration` ON `section_tbl`.`id` = `student_registration`.`user_section`
+INNER JOIN `user_tbl` as `u` ON `student_registration`.`lrn` = `u`.`lrn`
+WHERE `user_tbl`.`email` = \'teacher@gmail.com\'
+AND `student_registration`.`state` = \'Enrolled\'
+GROUP BY `student_registration`.`lrn`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user_tbl`
+INNER JOIN `schedule_tbl` ON `user_tbl`.`id` = `schedule_tbl`.`teacher_id`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+INNER JOIN `student_registration` ON `section_tbl`.`id` = `student_registration`.`user_section`
+INNER JOIN `user_tbl` as `u` ON `student_registration`.`lrn` = `u`.`lrn`
+WHERE `user_tbl`.`email` = \'teacher@gmail.com\'
+AND `student_registration`.`state` = \'Enrolled\'
+GROUP BY `student_registration`.`lrn`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user_tbl`
+INNER JOIN `schedule_tbl` ON `user_tbl`.`id` = `schedule_tbl`.`teacher_id`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+INNER JOIN `student_registration` ON `section_tbl`.`id` = `student_registration`.`user_section`
+INNER JOIN `user_tbl` as `u` ON `student_registration`.`lrn` = `u`.`lrn`
+WHERE `user_tbl`.`email` = \'teacher@gmail.com\'
+AND `student_registration`.`state` = \'Enrolled\'
+GROUP BY `student_registration`.`lrn`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_tbl`
+INNER JOIN `schedule_tbl` ON `user_tbl`.`id` = `schedule_tbl`.`teacher_id`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+INNER JOIN `student_registration` ON `section_tbl`.`id` = `student_registration`.`user_section`
+INNER JOIN `user_tbl` as `u` ON `student_registration`.`lrn` = `u`.`lrn`
+WHERE `user_tbl`.`email` = :user_tbl.email:
+AND `student_registration`.`state` = :student_registration.state:
+GROUP BY `student_registration`.`lrn`', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Teacher.php(35): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

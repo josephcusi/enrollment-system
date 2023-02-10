@@ -175,7 +175,7 @@
           <!-- small box -->
           <div class="small-box bg-success">
             <div class="inner">
-              <h3><?=$enroll?><sup style="font-size: 20px"></sup></h3>
+              <h3><?=$enroll2022?><sup style="font-size: 20px"></sup></h3>
 
               <p>Total Enrolled</p>
             </div>
@@ -367,18 +367,18 @@
     var areaChartCanvas = $('#lodi').get(0).getContext('2d')
 
     var areaChartData = {
-      labels  : ['2023', '2024', '2025', '2026', '2027', '2028', '2029'],
+      labels  : ['2022', '2023', '2024', '2025'],
       datasets: [
         {
           label               : 'Yearly Enrolled Records',
-          backgroundColor     : '#212529',
+
           borderColor         : '#212529',
           pointRadius          : false,
           pointColor          : '#212529',
           pointStrokeColor    : '#212529',
-          pointHighlightFill  : '#212529',
-          pointHighlightStroke: '#212529',
-          data                : [<?=$enroll?>,0, 0, 0, 0, 0, 0]
+
+
+          data                : [<?=$enroll2022?>,<?=$enroll2023?>, <?=$enroll2024?>, <?=$enroll2025?>]
         },
 
       ]

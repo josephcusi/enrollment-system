@@ -49,31 +49,57 @@ class Admin extends BaseController
         $data = [
             'male_percentage' => $male_percentage,
             'female_percentage' => $female_percentage,
-            'male' => $profile_model->where('gender', 'male')->get()->getNumRows(),
-            'female' => $profile_model->where('gender', 'female')->get()->getNumRows(),
+            'male' => $profile_model
+            ->select('*, ')
+            ->join('student_registration', 'user_profile.id = student_registration.id', 'inner')
+            ->join('school_year','student_registration.year = school_year.year', 'inner')
+            ->where('status', 'active')
+            ->where('gender', 'male')
+            ->where('state', 'Enrolled')
+            ->where('student_registration.state', 'enrolled')->get()->getNumRows(),
+            'female' => $profile_model
+            ->select('*, ')
+            ->join('student_registration', 'user_profile.id = student_registration.id', 'inner')
+            ->join('school_year','student_registration.year = school_year.year', 'inner')
+            ->where('status', 'active')
+            ->where('gender', 'female')
+            ->where('state', 'Enrolled')
+            ->where('student_registration.state', 'enrolled')->get()->getNumRows(),
             'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
             'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
             'usertypestudent' => $user_model->where('usertype', 'student')->get()->getNumRows(),
             'usertypeteacher' => $user_model->where('usertype', 'teacher')->get()->getNumRows(),
             'usertypeadmin' => $user_model->where('usertype', 'admin')->get()->getNumRows(),
             'humss' => $registration_model->where('strand', 'HUMSS')->get()->getNumRows(),
-            'stem' => $registration_model->where('strand', 'STEM')->get()->getNumRows(),
+            'stem' => $year_level
+            ->select('*, ')
+            ->join('student_registration', 'school_year.year = student_registration.year', 'inner')
+            ->where('state', 'Enrolled')
+            ->where('school_year.status', 'active')->get()->getNumRows(),
             'abm' => $registration_model->where('strand', 'ABM')->get()->getNumRows(),
-            'grade11' => $registration_model->where('year_level', 'Grade 11')->get()->getNumRows(),
-            'grade12' => $registration_model->where('year_level', 'Grade 12')->get()->getNumRows(),
+            'grade11' => $year_level
+           ->select('*, ')
+           ->join('student_registration', 'school_year.year = student_registration.year', 'inner')
+           ->where('year_level', 'Grade 11')
+           ->where('state', 'Enrolled')
+           ->where('school_year.status', 'active')->get()->getNumRows(),
+           'grade12' => $year_level
+          ->select('*, ')
+          ->join('student_registration', 'school_year.year = student_registration.year', 'inner')
+          ->where('year_level', 'Grade 12')
+          ->where('state', 'Enrolled')
+          ->where('school_year.status', 'active')->get()->getNumRows(),
+            // 'grade12' => $registration_model->where('year_level', 'Grade 12')->where('year', '2022')->get()->getNumRows(),
             'status' => $registration_model->where('state', 'pending')->get()->getNumRows(),
-            'enroll' => $registration_model->where('state', 'Enrolled')->get()->getNumRows(),
+            'enroll2022' => $registration_model->where('state', 'Enrolled')->where('year', '2022')->get()->getNumRows(),
+            'enroll2023' => $registration_model->where('state', 'Enrolled')->where('year', '2023')->get()->getNumRows(),
+            'enroll2024' => $registration_model->where('state', 'Enrolled')->where('year', '2024')->get()->getNumRows(),
+            'enroll2025' => $registration_model->where('state', 'Enrolled')->where('year', '2025')->get()->getNumRows(),
             'reject' => $registration_model->where('state', 'Rejected')->get()->getNumRows(),
             'name' => $user_model->where('email', session()->get('email'))->first(),
-            // 'y2023' => $year_level->where('semester', '2023')->get()->find(),
-            // 'y2024' => $year_level->where('semester', '2024')->get()->find(),
-
-
-
-
 
         ];
-
+// var_dump($data['male']);
 		return view('admin/admindashboard', $data);
     }
     public function pre_enrolled()
@@ -241,7 +267,7 @@ class Admin extends BaseController
                 'errors' => [
                     'required' => 'Password is required!',
                     'min_length' => 'Password must have morethan 6 characters in length.',
-                    
+
                 ]
             ],
             'confnewPassword' => [
