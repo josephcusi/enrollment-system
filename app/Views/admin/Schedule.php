@@ -44,20 +44,47 @@
             </li>
         </li>
         <li class="nav-item"style = "font-family:poppins;">
-            <li class="nav-item"style = "font-family:poppins;">
-              <a href="<?=base_url('/section')?>" class="nav-link active">
-                <i class="fa-sharp fa-solid fa-section"></i>
-                <p>Section</p>
+
+              <a href="#" class="nav-link ">
+                <i class="fa-sharp fa-solid fa-envelopes-bulk"></i>
+                <p>Section<i class="right fas fa-angle-left"></i></p>
               </a>
-            </li>
+
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="/section11" class="nav-link ">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Grade 11</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/section12" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Grade 12</p>
+                </a>
+              </li>
+            </ul>
         </li>
         <li class="nav-item"style = "font-family:poppins;">
-            <li class="nav-item"style = "font-family:poppins;">
-              <a href="<?=base_url('/r_prospectus')?>" class="nav-link">
+
+              <a href="#" class="nav-link ">
                 <i class="fa-sharp fa-solid fa-atom"></i>
-                <p>Prospectus</p>
+                <p>Prospectus<i class="right fas fa-angle-left"></i></p>
               </a>
-            </li>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="/prospectus11" class="nav-link ">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Grade 11</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="/prospectus12" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Grade 12</p>
+                  </a>
+                </li>
+              </ul>
         </li>
         <li class="nav-item"style = "font-family:poppins;">
             <li class="nav-item"style = "font-family:poppins;">

@@ -43,26 +43,26 @@ class Section extends BaseController
         return view('admin/schedule', $data);
         // var_dump($data['sched']);
     }
-    public function section()
-    {
-
-        $section_model = new SectionModel();
-        $year_model = new YearModel();
-        $user_model = new UserModel();
-        $prospectus_model = new ProspectusModel();
-        session()->setFlashdata('strand', 'humss');
-        $strand_model = new StrandModel();
-        $strand_id = $strand_model->where('strand', 'HUMSS')->find();
-        $values = [
-            'section' => $section_model->select('*, section_tbl.id' )
-                ->join('strand_tbl', 'section_tbl.strand_id = strand_tbl.id', 'right')
-                ->where('section_tbl.strand_id', $strand_id[0]['id'])->get()->getResultArray(),
-            'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
-
-        ];
-    //   var_dump($values['count']);
-        return view('admin/section', $values);
-    }
+    // public function section()
+    // {
+    //
+    //     $section_model = new SectionModel();
+    //     $year_model = new YearModel();
+    //     $user_model = new UserModel();
+    //     $prospectus_model = new ProspectusModel();
+    //     session()->setFlashdata('strand', 'humss');
+    //     $strand_model = new StrandModel();
+    //     $strand_id = $strand_model->where('strand', 'HUMSS')->find();
+    //     $values = [
+    //         'section' => $section_model->select('*, section_tbl.id' )
+    //             ->join('strand_tbl', 'section_tbl.strand_id = strand_tbl.id', 'right')
+    //             ->where('section_tbl.strand_id', $strand_id[0]['id'])->get()->getResultArray(),
+    //         'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
+    //
+    //     ];
+    // //   var_dump($values['count']);
+    //     return view('admin/section', $values);
+    // }
     public function strandSec($strand)
     {
         $section_model = new SectionModel();
@@ -194,14 +194,14 @@ class Section extends BaseController
                 'section_id' => $section,
                 'monday' => $monOne,
                 'mon_two' => $monTwo,
-                'tuesday' => $tueOne,  
+                'tuesday' => $tueOne,
                 'tue_two' => $tueTwo,
                 'wednesday' => $wedOne,
                 'wed_two' => $wedTwo,
                 'thursday' => $thuOne,
                 'thu_two' => $thuTwo,
-                'friday' => $friOne, 
-                'fri_two' => $friTwo,  
+                'friday' => $friOne,
+                'fri_two' => $friTwo,
             ];
             $schedule_model->insert($value);
 
@@ -212,7 +212,7 @@ class Section extends BaseController
     public function updateSched($ids)
     {
             $schedule_model = new ScheduleModel();
-            
+
             $teacher = $this->request->getPost('teacher');
             $id = $this->request->getPost('id');
             $monOne = $this->request->getPost('monOne');
@@ -230,18 +230,57 @@ class Section extends BaseController
                 'teacher_id' => $teacher,
                 'monday' => $monOne,
                 'mon_two' => $monTwo,
-                'tuesday' => $tueOne,  
+                'tuesday' => $tueOne,
                 'tue_two' => $tueTwo,
                 'wednesday' => $wedOne,
                 'wed_two' => $wedTwo,
                 'thursday' => $thuOne,
                 'thu_two' => $thuTwo,
-                'friday' => $friOne, 
-                'fri_two' => $friTwo,  
+                'friday' => $friOne,
+                'fri_two' => $friTwo,
             ];
             $schedule_model->update($id, $value);
 
             return $this->schedule($ids);
             // echo 2;
+        }
+        public function section11()
+        {
+
+            $section_model = new SectionModel();
+            $year_model = new YearModel();
+            $user_model = new UserModel();
+            $prospectus_model = new ProspectusModel();
+            session()->setFlashdata('strand', 'humss');
+            $strand_model = new StrandModel();
+            $strand_id = $strand_model->where('strand', 'HUMSS')->find();
+            $values = [
+                'section' => $section_model->select('*, section_tbl.id' )
+                    ->join('strand_tbl', 'section_tbl.strand_id = strand_tbl.id', 'right')
+                    ->where('section_tbl.strand_id', $strand_id[0]['id'])->get()->getResultArray(),
+                'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
+
+            ];
+        //   var_dump($values['count']);
+            return view('admin/section/grade11', $values);
+        }
+        public function section12()
+        {
+          $section_model = new SectionModel();
+          $year_model = new YearModel();
+          $user_model = new UserModel();
+          $prospectus_model = new ProspectusModel();
+          session()->setFlashdata('strand', 'humss');
+          $strand_model = new StrandModel();
+          $strand_id = $strand_model->where('strand', 'HUMSS')->find();
+          $values = [
+              'section' => $section_model->select('*, section_tbl.id' )
+                  ->join('strand_tbl', 'section_tbl.strand_id = strand_tbl.id', 'right')
+                  ->where('section_tbl.strand_id', $strand_id[0]['id'])->get()->getResultArray(),
+              'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
+
+          ];
+      //   var_dump($values['count']);
+          return view('admin/section/grade12', $values);
         }
     }

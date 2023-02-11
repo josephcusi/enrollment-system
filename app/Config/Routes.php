@@ -122,11 +122,15 @@ $routes->put('/section_update', 'Section::section_update');
 $routes->get('/strandSec/(:any)', 'Section::strandSec/$1');
 $routes->post('/addsched/(:any)', 'Section::addsched/$1');
 $routes->post('/updateSched/(:any)', 'Section::updateSched/$1');
+$routes->match(['get', 'post'],'/section11', 'Section::section11');
+$routes->match(['get', 'post'],'/section12', 'Section::section12');
 //-----------ADMIN PROSPECTUS---------
 $routes->get('/r_prospectus', 'Prospectus::r_prospectus');
 $routes->post('/newprospectus', 'Prospectus::newprospectus');
 $routes->get('/edit_prospectus/(:any)', 'Prospectus::edit_prospectus/$1');
 $routes->put('/updateProspectus', 'Prospectus::updateProspectus');
+$routes->match(['get', 'post'],'/prospectus11', 'Prospectus::prospectus11');
+$routes->match(['get', 'post'],'/prospectus12', 'Prospectus::prospectus12');
 
 //-----------ADMIN PRE ENROLLED---------
 $routes->get('/viewPreEnroll', 'PreEnrolled::viewPreEnroll');

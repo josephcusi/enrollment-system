@@ -16,7 +16,7 @@
 
       <div class="form-row">
       <div class="form-group col-md-6">
-      <input type="hidden" name="strand" class="form-control" value="<?= $strand ?>">
+      <!-- <input type="hidden" name="strand" class="form-control" value="<$strand ?>"> -->
         <label for="inputSubject">Subject Code</label>
         <input type = "hidden" name = "id" class = "id">
         <input type="text" name="subject" class="form-control subjectModal" id="inputSubject" placeholder="Subject">

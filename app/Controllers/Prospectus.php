@@ -156,4 +156,40 @@ class Prospectus extends BaseController
         session()->setFlashdata('updateprospectus', 'Duplicate input');
         return redirect()->route('r_prospectus');
     }
+    public function prospectus11()
+    {
+      $prospectus_model = new ProspectusModel();
+      $year_model = new YearModel();
+      session()->setFlashdata('strand', 'humss');
+      $strand_model = new StrandModel();
+      $user_model = new UserModel();
+
+      $strand_id = $strand_model->where('strand', 'HUMSS')->find();
+      $values = [
+          'prospectus' => $prospectus_model->select('*, prospectrus_tbl.id' )
+              ->join('strand_tbl', 'prospectrus_tbl.strand_id = strand_tbl.id', 'right')
+              ->where('prospectrus_tbl.strand_id', $strand_id[0]['id'])->get()->getResultArray(),
+          'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
+      ];
+  //    var_dump($values['prospectus']);
+      return view('admin/prospectus/grade11', $values);
+    }
+    public function prospectus12()
+    {
+      $prospectus_model = new ProspectusModel();
+      $year_model = new YearModel();
+      session()->setFlashdata('strand', 'humss');
+      $strand_model = new StrandModel();
+      $user_model = new UserModel();
+
+      $strand_id = $strand_model->where('strand', 'HUMSS')->find();
+      $values = [
+          'prospectus' => $prospectus_model->select('*, prospectrus_tbl.id' )
+              ->join('strand_tbl', 'prospectrus_tbl.strand_id = strand_tbl.id', 'right')
+              ->where('prospectrus_tbl.strand_id', $strand_id[0]['id'])->get()->getResultArray(),
+          'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
+      ];
+  //    var_dump($values['prospectus']);
+      return view('admin/prospectus/grade12', $values);
+    }
 }

@@ -114,9 +114,9 @@
       <?php if(!empty(session()->getFlashdata('newSub'))) : ?>
       <script>swal("Can't Proceed!", "You must be enrolled first to access subject page.", "warning");</script>
       <?php endif ?>
-      
+
       <!-- Content Header (Page header) -->
-      
+
       <!-- Main content -->
       <section class="content-header">
         <div class="container-fluid">
