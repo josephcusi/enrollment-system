@@ -154,8 +154,8 @@ class Section extends BaseController
     public function addsched($ids)
     {
         $validated = $this->validate([
-            'subject' => [
-                'rules' => 'required|is_unique[schedule_tbl.subject_id]',
+            'id' => [
+                'rules' => 'required|is_unique[schedule_tbl.section_id]',
                 'errors' => [
                     'required' => 'Section is required!',
                     'is_unique' => 'Section is Already Exist'
