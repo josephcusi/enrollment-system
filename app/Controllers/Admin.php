@@ -279,37 +279,37 @@ class Admin extends BaseController
                 ]
             ]
         ]);
-        if (!$validated) {
-            $user_model = new UserModel();
-            $data['userName'] = $user_model->where('email', $email = session()->get('loggedInUser'))->find();
-                //session()->setFlashdata('sendapplication', 'Duplicate input');
-                session()->setFlashdata('validation', $this->validator);
-                return redirect ('newadmin', $data);
-        }
-        else
-        {
+            if (!$validated) {
+                $user_model = new UserModel();
+                $data['userName'] = $user_model->where('email', $email = session()->get('loggedInUser'))->find();
+                    //session()->setFlashdata('sendapplication', 'Duplicate input');
+                    session()->setFlashdata('validation', $this->validator);
+                    return redirect ('newadmin', $data);
+            }
+            else
+            {
 
-            $user_model = new UserModel();
-            $id = $this->request->getPost('id');
-            $lastname = $this->request->getPost('lastname');
-            $firstname = $this->request->getPost('firstname');
-            $middlename = $this->request->getPost('middlename');
-            $password = $this->request->getPost('newPassword');
-            $prof_pic = $this->request->getFile('profile_picture');
+                $user_model = new UserModel();
+                $id = $this->request->getPost('id');
+                $lastname = $this->request->getPost('lastname');
+                $firstname = $this->request->getPost('firstname');
+                $middlename = $this->request->getPost('middlename');
+                $password = $this->request->getPost('newPassword');
+                $prof_pic = $this->request->getFile('profile_picture');
 
-            if (!$prof_pic->hasMoved()) {
-                $prof_pic->move(FCPATH . 'profile');
+                if (!$prof_pic->hasMoved()) {
+                    $prof_pic->move(FCPATH . 'profile');
 
-            $data = [
-                'lastname' => $lastname,
-                'firstname' => $firstname,
-                'middlename' => $middlename,
-                'password' => Hash::make($password),
-                'profile_picture' => $prof_pic->getClientName()
-            ];
-            $user_model->update($id, $data);
-            return redirect()->route('newadmin');
-        }
+                $data = [
+                    'lastname' => $lastname,
+                    'firstname' => $firstname,
+                    'middlename' => $middlename,
+                    'password' => Hash::make($password),
+                    'profile_picture' => $prof_pic->getClientName()
+                ];
+                $user_model->update($id, $data);
+                return redirect()->route('newadmin');
+            }
         }
     }
 }

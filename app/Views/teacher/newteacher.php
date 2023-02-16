@@ -83,11 +83,6 @@
 
       <div class="card-body">
         <div class="card mx-auto" style = "width:100%;">
-          <div class="card-header">
-
-            <a href="<?=base_url('addteacher')?>"><button type="button" class="btn btn-secondary btn-sm" style = "border-color:maroon;border-radius:15px;float:right; font-family:poppins; margin-bottom:1%; background-color:maroon; color: white;">New Teacher</button></a>
-
-          </div>
           <!-- /.card-header -->
           <div class="card-body">
     <!-- /.card-header -->

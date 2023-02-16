@@ -108,6 +108,11 @@ $routes->get('/adminlogout', 'Admin::adminlogout');
 $routes->post('/insertAdmin', 'Admin::insertAdmin');
 $routes->put('/adminUpdate', 'Admin::adminUpdate');
 
+//------------TEACHER ADDING------------
+$routes->get('/listofteacher', 'TeacherAccount::listofteacher');
+$routes->post('/addNewTeacher', 'TeacherAccount::addNewTeacher');
+$routes->match(['get', 'post'],'/addteacher', 'TeacherAccount::addteacher');
+
 //------------ADMIN STRAND------------
 $routes->get('/retrieve_strand', 'Strand::retrieve_strand');
 $routes->post('/insert_strand', 'Strand::insert_strand');
@@ -116,7 +121,8 @@ $routes->put('/update_strand/(:any)', 'Strand::update_strand/$1');
 
 //-----------ADMIN SECTION---------
 $routes->get('/section', 'Section::section');
-$routes->post('/newsection', 'Section::newsection');
+$routes->post('/newsection11', 'Section::newsection11');
+$routes->post('/newsection12', 'Section::newsection12');
 $routes->get('/schedule/(:any)', 'Section::schedule/$1');
 $routes->put('/section_update', 'Section::section_update');
 $routes->get('/strandSec/(:any)', 'Section::strandSec/$1');
@@ -124,13 +130,18 @@ $routes->post('/addsched/(:any)', 'Section::addsched/$1');
 $routes->post('/updateSched/(:any)', 'Section::updateSched/$1');
 $routes->match(['get', 'post'],'/section11', 'Section::section11');
 $routes->match(['get', 'post'],'/section12', 'Section::section12');
+$routes->get('/strandSec11/(:any)', 'Section::strandSec11/$1');
+$routes->get('/strandSec12/(:any)', 'Section::strandSec12/$1');
+
 //-----------ADMIN PROSPECTUS---------
-$routes->get('/r_prospectus', 'Prospectus::r_prospectus');
-$routes->post('/newprospectus', 'Prospectus::newprospectus');
+$routes->post('/addprospectus11', 'Prospectus::addprospectus11');
+$routes->post('/addprospectus12', 'Prospectus::addprospectus12');
 $routes->get('/edit_prospectus/(:any)', 'Prospectus::edit_prospectus/$1');
 $routes->put('/updateProspectus', 'Prospectus::updateProspectus');
 $routes->match(['get', 'post'],'/prospectus11', 'Prospectus::prospectus11');
 $routes->match(['get', 'post'],'/prospectus12', 'Prospectus::prospectus12');
+$routes->get('/strandProspectus12/(:any)', 'Prospectus::strandProspectus12/$1');
+$routes->get('/strandProspectus11/(:any)', 'Prospectus::strandProspectus11/$1');
 
 //-----------ADMIN PRE ENROLLED---------
 $routes->get('/viewPreEnroll', 'PreEnrolled::viewPreEnroll');
@@ -148,7 +159,6 @@ $routes->get('/viewSchedule', 'UserSchedule::viewSchedule');
 //teacherr side
 $routes->match(['get', 'post'],'/t_dashboard', 'Teacher::t_dashboard');
 $routes->match(['get', 'post'],'/newteacher', 'Teacher::newteacher');
-$routes->match(['get', 'post'],'/addteacher', 'Teacher::addteacher');
 $routes->get('/grading', 'Teacher::grading');
 $routes->post('/grading/(:any)', 'Teacher::grading/$1');
 
@@ -156,7 +166,6 @@ $routes->post('/grading/(:any)', 'Teacher::grading/$1');
 // $routes->get('/viewGrades', 'Teacher::viewGrades');
 $routes->get('/viewGrade/(:any)', 'Teacher::viewGrade/$1');
 $routes->put('/updateGrade/(:any)', 'Teacher::updateGrade/$1');
-$routes->post('/addNewTeacher', 'Teacher::addNewTeacher');
 $routes->put('/TeacherUpdate', 'Teacher::TeacherUpdate');
 //-----------Grading
 });

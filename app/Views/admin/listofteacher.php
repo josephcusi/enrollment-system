@@ -88,14 +88,6 @@
         </li>
         <li class="nav-item"style = "font-family:poppins;">
             <li class="nav-item"style = "font-family:poppins;">
-              <a href="<?=base_url('/grading')?>" class="nav-link active">
-                <i class="fa-sharp fa-solid fa-barcode"></i>
-                <p>Grading</p>
-              </a>
-            </li>
-        </li>
-        <li class="nav-item"style = "font-family:poppins;">
-            <li class="nav-item"style = "font-family:poppins;">
               <a href="<?=base_url('/retrieve_strand')?>" class="nav-link">
                 <i class="fa-sharp fa-solid fa-envelopes-bulk"></i>
                 <p>Strand</p>
@@ -112,7 +104,7 @@
         </li>
         <li class="nav-item"style = "font-family:poppins;">
             <li class="nav-item"style = "font-family:poppins;">
-              <a href="<?=base_url('/listofteacher')?>" class="nav-link">
+              <a href="<?=base_url('/listofteacher')?>" class="nav-link active">
                 <i class="fa-sharp fa-solid fa-envelopes-bulk"></i>
                 <p>Teachers</p>
               </a>
@@ -133,69 +125,102 @@
 
 </div>
 <div class="content-wrapper">
+
   <!-- Content Header (Page header) -->
 
   <section class="content-header">
-
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
           <h1>
-            <class="a" style="color:maroon; font-family: 'Poppins';font-size: 22px"><strong>GRADE</strong>
+            <class="a" style="color:maroon; font-family: 'Poppins';font-size: 22px"><strong>TEACHER</strong>
           </h1>
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item active" style="color:maroon;font-family: 'Poppins';">Grading</li>
-            <li class="breadcrumb-item active"style="font-family: 'Poppins';">Grade</li>
+            <li class="breadcrumb-item active" style="color:maroon;font-family: 'Poppins';">Teacher</li>
+            <li class="breadcrumb-item active"style="font-family: 'Poppins';">Add</li>
           </ol>
         </div>
       </div>
     </div><!-- /.container-fluid -->
   </section>
-
   <!-- Main content -->
-  <div class="card card-primary card-outline mx-auto" style = "width:98%;">
 
+      <div class="card-body">
+        <div class="card mx-auto" style = "width:100%;">
+          <div class="card-header">
+
+            <a href="<?=base_url('addteacher')?>"><button type="button" class="btn btn-secondary btn-sm" style = "border-color:maroon;border-radius:15px;float:right; font-family:poppins; margin-bottom:1%; background-color:maroon; color: white;">New Teacher</button></a>
+
+          </div>
+          <!-- /.card-header -->
+          <div class="card-body">
     <!-- /.card-header -->
-    <div class="card-body">
 
       <table id="example1" class="table table-bordered table" style = "font-family:poppins">
+
         <thead>
           <tr>
-            <th>Subject</th>
-            <th>Title</th>
-            <th>Unit</th>
-            <th>Final Grade</th>
-            <th>Remark</th>
-            <th>Action</th>
+            <th>Teacher ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Actions</th>
           </tr>
         </thead>
         <tbody>
+          <?php foreach($view as $newView):?>
           <tr>
-            <td>Fil 101</td>
-            <td>Filipino</td>
-            <td>3</td>
-            <td>90</td>
-            <td>passed</td>
+          <td><?=$newView['lrn'];?></td>
+            <td><?=$newView['lastname'];?><?= " "?><?=$newView['firstname'];?><?= " "?><?=$newView['middlename'];?></td>
+            <td><?=$newView['email'];?></td>
             <td>
-              <button type="button" class="btn btn-default"style = "border-radius:20px;font-family:poppins; background-color:maroon; color: white;" data-toggle="modal" data-target="#addgrade">Add Grade</button>
-              <?= $this->include('admin/include/grademodal/grademodal')?>
+            <a href="#"> <button type="button" class="btn btn-secondary btn-sm btn-editTeacher" style = "border-radius:20px"
+            data-id="<?=$newView['id'];?>"
+            data-profile_picture="<?=$newView['profile_picture'];?>"data-lastname="<?=$newView['lastname'];?>"data-firstname="<?=$newView['firstname'];?>"data-middlename="<?=$newView['middlename'];?>"
+            data-email="<?=$newView['email'];?>" data-password="<?=$newView['password'];?>" >update</button></a>  
             </td>
           </tr>
+          <?php endforeach;?>
         </tbody>
-
-</div>
-
-
+        <tfoot>
+        </tfoot>
       </table>
+    </div>
     <!-- /.card-body -->
   </div>
-
-  <!-- /.content -->
+</div>
+<!-- /.card-body -->
+</div>
+</div>
 </div>
   <!-- /.content -->
-</div>
+</section>
 </body>
 <?= $this->include('admin/include/end')?>
 <?= $this->include('admin/include/footer')?>
+<script>
+   $(document).ready(function(){
+        // sa button
+        $('.btn-editTeacher').on('click',function(){
+            // data galing buton
+            const id = $(this).data('id');
+            const profile_picture = $(this).data('profile_picture');
+            const lastname = $(this).data('lastname');
+            const firstname = $(this).data('firstname');
+            const middlename = $(this).data('middlename');
+            const email = $(this).data('email');
+            const password = $(this).data('password');
+            // // sa modal
+            $('.id').val(id);
+            $('.Teacherprofile_pics').val(profile_picture);
+            $('.Teacherlastname').val(lastname);
+            $('.Teacherfirstname').val(firstname);
+            $('.Teachermiddlename').val(middlename);
+            $('.Teacheremail').val(email);
+            $('.Teacherpassword').val(password).trigger('change');
+            // Call Modal
+            $('#teacherUpdate').modal('show');
+        });
+      });
+</script>

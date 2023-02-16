@@ -102,6 +102,14 @@
             </a>
           </li>
       </li>
+      <li class="nav-item"style = "font-family:poppins;">
+            <li class="nav-item"style = "font-family:poppins;">
+              <a href="<?=base_url('/listofteacher')?>" class="nav-link">
+                <i class="fa-sharp fa-solid fa-envelopes-bulk"></i>
+                <p>Teachers</p>
+              </a>
+            </li>
+        </li>
       <br>
       <br>
 

@@ -105,7 +105,14 @@
                    </a>
                  </li>
              </li>
-
+             <li class="nav-item"style = "font-family:poppins;">
+            <li class="nav-item"style = "font-family:poppins;">
+              <a href="<?=base_url('/listofteacher')?>" class="nav-link">
+                <i class="fa-sharp fa-solid fa-envelopes-bulk"></i>
+                <p>Teachers</p>
+              </a>
+            </li>
+          </li>
              <br>
              <br>
 
@@ -171,9 +178,9 @@
                 <p class="text-muted text-left">Strand</p>
                 <ul class="list-group list-group-unbordered mb-3 nav nav-pills">
                 <?php $strand = session()->getFlashdata('strand');?>
-                <li class="nav-item"><a type="button" class="tablinks nav-link <?php if($strand == 'humss'){echo 'active' ;} ?>"style = "border-radius:20px" id="defaultOpen" href="<?= base_url('strandSec/'.'humss')?>">HUMSS</a></li>
-                    <li class="nav-item"><a type="button" class="tablinks nav-link <?php if($strand == 'abm'){echo 'active';} ?>"style = "border-radius:20px" id="defaultOpen "  href="<?= base_url('strandSec/'.'abm')?>">ABM</a></li>
-                    <li class="nav-item"><a type="button" class="tablinks nav-link <?php if($strand == 'stem'){echo 'active';} ?>"style = "border-radius:20px" id="defaultOpen "  href="<?= base_url('strandSec/'.'stem')?>">STEM</a></li>
+                <li class="nav-item"><a type="button" class="tablinks nav-link <?php if($strand == 'humss'){echo 'active' ;} ?>"style = "border-radius:20px" id="defaultOpen" href="<?= base_url('strandSec11/'.'humss')?>">HUMSS</a></li>
+                    <li class="nav-item"><a type="button" class="tablinks nav-link <?php if($strand == 'abm'){echo 'active';} ?>"style = "border-radius:20px" id="defaultOpen "  href="<?= base_url('strandSec11/'.'abm')?>">ABM</a></li>
+                    <li class="nav-item"><a type="button" class="tablinks nav-link <?php if($strand == 'stem'){echo 'active';} ?>"style = "border-radius:20px" id="defaultOpen "  href="<?= base_url('strandSec11/'.'stem')?>">STEM</a></li>
                   </ul>
                   </ul>
               </div>
@@ -235,7 +242,7 @@
               </button>
             </div>
             <div class="modal-body">
-            <form action="<?= base_url('newsection'); ?>" method="post">
+            <form action="<?= base_url('newsection11'); ?>" method="post">
             <?= csrf_field(); ?>
                     <div class="form-row">
                     <input type="hidden" name="strand_id" class="form-control" value="<?=$strand?>">
