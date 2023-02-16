@@ -45,14 +45,14 @@
       </li>
       <li class="nav-item"style = "font-family:poppins;">
 
-            <a href="#" class="nav-link active">
+            <a href="#" class="nav-link">
               <i class="fa-sharp fa-solid fa-envelopes-bulk"></i>
               <p>Section<i class="right fas fa-angle-left"></i></p>
             </a>
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="/section11" class="nav-link active">
+              <a href="/section11" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Grade 11</p>
               </a>
@@ -230,7 +230,7 @@
 
      </div>
      </form>
-     <?php include'modal/enroll.php';?>
+     <?php include 'modal/enroll.php';?>
     </div>
   </div>
     <!-- /.card-body -->

@@ -851,6 +851,7 @@ class Profile extends BaseController
                     ->join('student_registration', 'user_tbl.lrn = student_registration.lrn', 'inner')
                     ->join('strand_tbl', 'student_registration.strand = strand_tbl.strand', 'inner')
                     ->join('prospectrus_tbl', 'strand_tbl.id = prospectrus_tbl.strand_id', 'inner')
+                    ->join('student_registration as s', 'prospectrus_tbl.year_level = s.year_level', 'inner')
                     ->where('user_tbl.email', session()->get('email'))
                     ->get()->getResultArray()
                 ];

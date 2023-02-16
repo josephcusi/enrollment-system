@@ -32,6 +32,7 @@ class PreEnrolled extends BaseController
         ->join('user_profile', 'user_tbl.email=user_profile.email', 'right')
         ->join('strand_tbl', 'student_registration.strand = strand_tbl.strand', 'right')
         ->join('section_tbl', 'strand_tbl.id = section_tbl.strand_id', 'right')
+        ->join('student_registration as s', 'section_tbl.year_level = s.year_level', 'inner')
         ->where('student_registration.semester', session()->get('semester'))
         ->where('user_profile.id', $id)
         ->where('school_year.year', session()->get('year'))->get()->getResultArray(),

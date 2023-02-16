@@ -241,3 +241,1113 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
 11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
 13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-16 09:18:02 --> Undefined array key "subject"
+in APPPATH\Views\user\subject.php on line 132.
+ 1 APPPATH\Views\user\subject.php(132): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "subject"', 'APPPATH\\Views\\user\\subject.php', 132)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\subject.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/subject', [], true)
+ 5 APPPATH\Controllers\Profile.php(857): view('user/subject', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->subject()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-16 09:38:16 --> Undefined array key "subject"
+in APPPATH\Views\user\subject.php on line 132.
+ 1 APPPATH\Views\user\subject.php(132): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "subject"', 'APPPATH\\Views\\user\\subject.php', 132)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\subject.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/subject', [], true)
+ 5 APPPATH\Controllers\Profile.php(858): view('user/subject', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->subject()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-16 09:39:52 --> Undefined array key "subject"
+in APPPATH\Views\user\subject.php on line 132.
+ 1 APPPATH\Views\user\subject.php(132): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "subject"', 'APPPATH\\Views\\user\\subject.php', 132)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\subject.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/subject', [], true)
+ 5 APPPATH\Controllers\Profile.php(856): view('user/subject', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->subject()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-16 09:40:27 --> Undefined array key "subject"
+in APPPATH\Views\user\subject.php on line 132.
+ 1 APPPATH\Views\user\subject.php(132): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "subject"', 'APPPATH\\Views\\user\\subject.php', 132)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\subject.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/subject', [], true)
+ 5 APPPATH\Controllers\Profile.php(856): view('user/subject', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->subject()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-16 09:44:58 --> Undefined array key "subject"
+in APPPATH\Views\user\subject.php on line 132.
+ 1 APPPATH\Views\user\subject.php(132): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "subject"', 'APPPATH\\Views\\user\\subject.php', 132)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\subject.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/subject', [], true)
+ 5 APPPATH\Controllers\Profile.php(857): view('user/subject', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->subject()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-16 09:50:15 --> mysqli_sql_exception: Not unique table/alias: 'student_registration' in C:\wamp64\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\Dormehi-Enrollment-System\app\Controllers\Profile.php(856): CodeIgniter\Model->__call('get', Array)
+#6 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\Profile->subject()
+#7 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+#8 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\wamp64\\www\\D...')
+#11 {main}
+CRITICAL - 2023-02-16 09:50:15 --> Not unique table/alias: 'student_registration'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `user_tbl`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+INNER JOIN `prospectrus_tbl` ON `strand_tbl`.`id` = `prospectrus_tbl`.`strand_id`
+INNER JOIN `student_registration` ON `prospectrus_tbl`.`year_level` = `student_registration`.`year_level`
+WHERE `user_tbl`.`email` = \'joseph.salavaria.cusi06@gmail.com\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user_tbl`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+INNER JOIN `prospectrus_tbl` ON `strand_tbl`.`id` = `prospectrus_tbl`.`strand_id`
+INNER JOIN `student_registration` ON `prospectrus_tbl`.`year_level` = `student_registration`.`year_level`
+WHERE `user_tbl`.`email` = \'joseph.salavaria.cusi06@gmail.com\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user_tbl`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+INNER JOIN `prospectrus_tbl` ON `strand_tbl`.`id` = `prospectrus_tbl`.`strand_id`
+INNER JOIN `student_registration` ON `prospectrus_tbl`.`year_level` = `student_registration`.`year_level`
+WHERE `user_tbl`.`email` = \'joseph.salavaria.cusi06@gmail.com\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_tbl`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+INNER JOIN `prospectrus_tbl` ON `strand_tbl`.`id` = `prospectrus_tbl`.`strand_id`
+INNER JOIN `student_registration` ON `prospectrus_tbl`.`year_level` = `student_registration`.`year_level`
+WHERE `user_tbl`.`email` = :user_tbl.email:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Profile.php(856): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->subject()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-16 10:00:16 --> Email: sendWithSmtp throwed ErrorException: fsockopen(): php_network_getaddresses: getaddrinfo for smtp.googlemail.com failed: No such host is known.  in C:\wamp64\www\Dormehi-Enrollment-System\system\Email\Email.php:1863
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fsockopen(): ph...', 'C:\\wamp64\\www\\D...', 1863)
+#1 C:\wamp64\www\Dormehi-Enrollment-System\system\Email\Email.php(1863): fsockopen('tls://smtp.goog...', 465, NULL, NULL, 60)
+#2 C:\wamp64\www\Dormehi-Enrollment-System\system\Email\Email.php(1777): CodeIgniter\Email\Email->SMTPConnect()
+#3 C:\wamp64\www\Dormehi-Enrollment-System\system\Email\Email.php(1662): CodeIgniter\Email\Email->sendWithSmtp()
+#4 C:\wamp64\www\Dormehi-Enrollment-System\system\Email\Email.php(1560): CodeIgniter\Email\Email->spoolEmail()
+#5 C:\wamp64\www\Dormehi-Enrollment-System\app\Controllers\PreEnrolled.php(131): CodeIgniter\Email\Email->send()
+#6 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\PreEnrolled->enrolled('3')
+#7 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+#8 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\wamp64\\www\\D...')
+#11 {main}
+ERROR - 2023-02-16 10:00:16 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-02-16 10:00:16 --> 
+ERROR - 2023-02-16 10:04:55 --> mysqli_sql_exception: Unknown column 'student_registration.email' in 'where clause' in C:\wamp64\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\Dormehi-Enrollment-System\app\Controllers\Profile.php(855): CodeIgniter\Model->__call('get', Array)
+#6 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\Profile->subject()
+#7 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+#8 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\wamp64\\www\\D...')
+#11 {main}
+CRITICAL - 2023-02-16 10:04:55 --> Unknown column 'student_registration.email' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `user_tbl`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+INNER JOIN `prospectrus_tbl` ON `strand_tbl`.`id` = `prospectrus_tbl`.`strand_id`
+WHERE `student_registration`.`email` = \'joseph.salavaria.cusi06@gmail.com\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user_tbl`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+INNER JOIN `prospectrus_tbl` ON `strand_tbl`.`id` = `prospectrus_tbl`.`strand_id`
+WHERE `student_registration`.`email` = \'joseph.salavaria.cusi06@gmail.com\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user_tbl`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+INNER JOIN `prospectrus_tbl` ON `strand_tbl`.`id` = `prospectrus_tbl`.`strand_id`
+WHERE `student_registration`.`email` = \'joseph.salavaria.cusi06@gmail.com\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_tbl`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+INNER JOIN `prospectrus_tbl` ON `strand_tbl`.`id` = `prospectrus_tbl`.`strand_id`
+WHERE `student_registration`.`email` = :student_registration.email:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Profile.php(855): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->subject()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-16 10:07:50 --> mysqli_sql_exception: Not unique table/alias: 'student_registration' in C:\wamp64\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\Dormehi-Enrollment-System\app\Controllers\Profile.php(855): CodeIgniter\Model->__call('get', Array)
+#6 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\Profile->subject()
+#7 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+#8 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\wamp64\\www\\D...')
+#11 {main}
+CRITICAL - 2023-02-16 10:07:50 --> Not unique table/alias: 'student_registration'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `user_tbl`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+INNER JOIN `student_registration` ON `prospectrus_tbl`.`year_level` = `student_registration`.`year_level`
+WHERE `user_tbl`.`email` = \'joseph.salavaria.cusi06@gmail.com\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user_tbl`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+INNER JOIN `student_registration` ON `prospectrus_tbl`.`year_level` = `student_registration`.`year_level`
+WHERE `user_tbl`.`email` = \'joseph.salavaria.cusi06@gmail.com\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user_tbl`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+INNER JOIN `student_registration` ON `prospectrus_tbl`.`year_level` = `student_registration`.`year_level`
+WHERE `user_tbl`.`email` = \'joseph.salavaria.cusi06@gmail.com\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_tbl`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+INNER JOIN `student_registration` ON `prospectrus_tbl`.`year_level` = `student_registration`.`year_level`
+WHERE `user_tbl`.`email` = :user_tbl.email:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Profile.php(855): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->subject()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-16 10:12:31 --> mysqli_sql_exception: Table 'enrollment_system.user_registration' doesn't exist in C:\wamp64\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\Dormehi-Enrollment-System\app\Controllers\Profile.php(854): CodeIgniter\Model->__call('get', Array)
+#6 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\Profile->subject()
+#7 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+#8 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\wamp64\\www\\D...')
+#11 {main}
+CRITICAL - 2023-02-16 10:12:31 --> Table 'enrollment_system.user_registration' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `strand_tbl` ON `prospectrus_tbl`.`strand_id` = `strand_tbl`.`id`
+INNER JOIN `user_registration` ON `strand_tbl`.`id` = `user_registration`.`strand`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `strand_tbl` ON `prospectrus_tbl`.`strand_id` = `strand_tbl`.`id`
+INNER JOIN `user_registration` ON `strand_tbl`.`id` = `user_registration`.`strand`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `strand_tbl` ON `prospectrus_tbl`.`strand_id` = `strand_tbl`.`id`
+INNER JOIN `user_registration` ON `strand_tbl`.`id` = `user_registration`.`strand`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `strand_tbl` ON `prospectrus_tbl`.`strand_id` = `strand_tbl`.`id`
+INNER JOIN `user_registration` ON `strand_tbl`.`id` = `user_registration`.`strand`', [], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Profile.php(854): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->subject()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-16 10:16:47 --> mysqli_sql_exception: Not unique table/alias: 'prospectrus_tbl' in C:\wamp64\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\Dormehi-Enrollment-System\app\Controllers\Profile.php(856): CodeIgniter\Model->__call('get', Array)
+#6 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\Profile->subject()
+#7 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+#8 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\wamp64\\www\\D...')
+#11 {main}
+CRITICAL - 2023-02-16 10:16:47 --> Not unique table/alias: 'prospectrus_tbl'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `strand_tbl` ON `prospectrus_tbl`.`strand_id` = `strand_tbl`.`id`
+INNER JOIN `student_registration` ON `strand_tbl`.`strand` = `student_registration`.`strand`
+INNER JOIN `prospectrus_tbl` ON `student_registration`.`year_level` = `prospectrus_tbl`.`year_level`
+WHERE `student_registration`.`lrn` = \'110342070006\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `strand_tbl` ON `prospectrus_tbl`.`strand_id` = `strand_tbl`.`id`
+INNER JOIN `student_registration` ON `strand_tbl`.`strand` = `student_registration`.`strand`
+INNER JOIN `prospectrus_tbl` ON `student_registration`.`year_level` = `prospectrus_tbl`.`year_level`
+WHERE `student_registration`.`lrn` = \'110342070006\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `strand_tbl` ON `prospectrus_tbl`.`strand_id` = `strand_tbl`.`id`
+INNER JOIN `student_registration` ON `strand_tbl`.`strand` = `student_registration`.`strand`
+INNER JOIN `prospectrus_tbl` ON `student_registration`.`year_level` = `prospectrus_tbl`.`year_level`
+WHERE `student_registration`.`lrn` = \'110342070006\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `strand_tbl` ON `prospectrus_tbl`.`strand_id` = `strand_tbl`.`id`
+INNER JOIN `student_registration` ON `strand_tbl`.`strand` = `student_registration`.`strand`
+INNER JOIN `prospectrus_tbl` ON `student_registration`.`year_level` = `prospectrus_tbl`.`year_level`
+WHERE `student_registration`.`lrn` = :student_registration.lrn:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Profile.php(856): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->subject()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-16 10:17:43 --> mysqli_sql_exception: Unknown column 'student_registration.lrn' in 'where clause' in C:\wamp64\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\Dormehi-Enrollment-System\app\Controllers\Profile.php(854): CodeIgniter\Model->__call('get', Array)
+#6 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\Profile->subject()
+#7 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+#8 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\wamp64\\www\\D...')
+#11 {main}
+CRITICAL - 2023-02-16 10:17:43 --> Unknown column 'student_registration.lrn' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `strand_tbl` ON `prospectrus_tbl`.`strand_id` = `strand_tbl`.`id`
+WHERE `student_registration`.`lrn` = \'110342070006\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `strand_tbl` ON `prospectrus_tbl`.`strand_id` = `strand_tbl`.`id`
+WHERE `student_registration`.`lrn` = \'110342070006\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `strand_tbl` ON `prospectrus_tbl`.`strand_id` = `strand_tbl`.`id`
+WHERE `student_registration`.`lrn` = \'110342070006\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `strand_tbl` ON `prospectrus_tbl`.`strand_id` = `strand_tbl`.`id`
+WHERE `student_registration`.`lrn` = :student_registration.lrn:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Profile.php(854): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->subject()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-16 10:25:18 --> Email: sendWithSmtp throwed ErrorException: fsockopen(): php_network_getaddresses: getaddrinfo for smtp.googlemail.com failed: No such host is known.  in C:\wamp64\www\Dormehi-Enrollment-System\system\Email\Email.php:1863
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fsockopen(): ph...', 'C:\\wamp64\\www\\D...', 1863)
+#1 C:\wamp64\www\Dormehi-Enrollment-System\system\Email\Email.php(1863): fsockopen('tls://smtp.goog...', 465, NULL, NULL, 60)
+#2 C:\wamp64\www\Dormehi-Enrollment-System\system\Email\Email.php(1777): CodeIgniter\Email\Email->SMTPConnect()
+#3 C:\wamp64\www\Dormehi-Enrollment-System\system\Email\Email.php(1662): CodeIgniter\Email\Email->sendWithSmtp()
+#4 C:\wamp64\www\Dormehi-Enrollment-System\system\Email\Email.php(1560): CodeIgniter\Email\Email->spoolEmail()
+#5 C:\wamp64\www\Dormehi-Enrollment-System\app\Controllers\PreEnrolled.php(131): CodeIgniter\Email\Email->send()
+#6 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\PreEnrolled->enrolled('3')
+#7 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+#8 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\wamp64\\www\\D...')
+#11 {main}
+ERROR - 2023-02-16 10:25:18 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-02-16 10:25:18 --> 
+ERROR - 2023-02-16 10:35:49 --> mysqli_sql_exception: Unknown column 'user_profile.id' in 'where clause' in C:\wamp64\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `stud...', 0)
+#1 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `stud...')
+#2 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `stud...')
+#3 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `stud...', Array, false)
+#4 C:\wamp64\www\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\Dormehi-Enrollment-System\app\Controllers\PreEnrolled.php(34): CodeIgniter\Model->__call('get', Array)
+#6 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('1')
+#7 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+#8 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\wamp64\\www\\D...')
+#11 {main}
+CRITICAL - 2023-02-16 10:35:49 --> Unknown column 'user_profile.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `student_registration`.`id`
+FROM `student_registration`
+RIGHT JOIN `section_tbl` ON `student_registration`.`user_section` = `section_tbl`.`id`
+WHERE `student_registration`.`semester` = \'1st semester\'
+AND `user_profile`.`id` = \'1\'
+AND `school_year`.`year` = \'2022\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `student_registration`.`id`
+FROM `student_registration`
+RIGHT JOIN `section_tbl` ON `student_registration`.`user_section` = `section_tbl`.`id`
+WHERE `student_registration`.`semester` = \'1st semester\'
+AND `user_profile`.`id` = \'1\'
+AND `school_year`.`year` = \'2022\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `student_registration`.`id`
+FROM `student_registration`
+RIGHT JOIN `section_tbl` ON `student_registration`.`user_section` = `section_tbl`.`id`
+WHERE `student_registration`.`semester` = \'1st semester\'
+AND `user_profile`.`id` = \'1\'
+AND `school_year`.`year` = \'2022\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `student_registration`.`id`
+FROM `student_registration`
+RIGHT JOIN `section_tbl` ON `student_registration`.`user_section` = `section_tbl`.`id`
+WHERE `student_registration`.`semester` = :student_registration.semester:
+AND `user_profile`.`id` = :user_profile.id:
+AND `school_year`.`year` = :school_year.year:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\PreEnrolled.php(34): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('1')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-16 10:35:55 --> mysqli_sql_exception: Unknown column 'user_profile.id' in 'where clause' in C:\wamp64\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `stud...', 0)
+#1 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `stud...')
+#2 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `stud...')
+#3 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `stud...', Array, false)
+#4 C:\wamp64\www\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\Dormehi-Enrollment-System\app\Controllers\PreEnrolled.php(33): CodeIgniter\Model->__call('get', Array)
+#6 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('1')
+#7 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+#8 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\wamp64\\www\\D...')
+#11 {main}
+CRITICAL - 2023-02-16 10:35:55 --> Unknown column 'user_profile.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `student_registration`.`id`
+FROM `student_registration`
+RIGHT JOIN `section_tbl` ON `student_registration`.`user_section` = `section_tbl`.`id`
+WHERE `user_profile`.`id` = \'1\'
+AND `school_year`.`year` = \'2022\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `student_registration`.`id`
+FROM `student_registration`
+RIGHT JOIN `section_tbl` ON `student_registration`.`user_section` = `section_tbl`.`id`
+WHERE `user_profile`.`id` = \'1\'
+AND `school_year`.`year` = \'2022\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `student_registration`.`id`
+FROM `student_registration`
+RIGHT JOIN `section_tbl` ON `student_registration`.`user_section` = `section_tbl`.`id`
+WHERE `user_profile`.`id` = \'1\'
+AND `school_year`.`year` = \'2022\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `student_registration`.`id`
+FROM `student_registration`
+RIGHT JOIN `section_tbl` ON `student_registration`.`user_section` = `section_tbl`.`id`
+WHERE `user_profile`.`id` = :user_profile.id:
+AND `school_year`.`year` = :school_year.year:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\PreEnrolled.php(33): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('1')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-16 10:36:07 --> mysqli_sql_exception: Unknown column 'user_profile.id' in 'where clause' in C:\wamp64\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `stud...', 0)
+#1 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `stud...')
+#2 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `stud...')
+#3 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `stud...', Array, false)
+#4 C:\wamp64\www\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\Dormehi-Enrollment-System\app\Controllers\PreEnrolled.php(33): CodeIgniter\Model->__call('get', Array)
+#6 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('1')
+#7 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+#8 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\wamp64\\www\\D...')
+#11 {main}
+CRITICAL - 2023-02-16 10:36:07 --> Unknown column 'user_profile.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `student_registration`.`id`
+FROM `student_registration`
+RIGHT JOIN `section_tbl` ON `student_registration`.`user_section` = `section_tbl`.`id`
+WHERE `user_profile`.`id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `student_registration`.`id`
+FROM `student_registration`
+RIGHT JOIN `section_tbl` ON `student_registration`.`user_section` = `section_tbl`.`id`
+WHERE `user_profile`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `student_registration`.`id`
+FROM `student_registration`
+RIGHT JOIN `section_tbl` ON `student_registration`.`user_section` = `section_tbl`.`id`
+WHERE `user_profile`.`id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `student_registration`.`id`
+FROM `student_registration`
+RIGHT JOIN `section_tbl` ON `student_registration`.`user_section` = `section_tbl`.`id`
+WHERE `user_profile`.`id` = :user_profile.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\PreEnrolled.php(33): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('1')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-16 10:36:19 --> Undefined array key 0
+in APPPATH\Views\admin\viewPreEnroll.php on line 146.
+ 1 APPPATH\Views\admin\viewPreEnroll.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\admin\\viewPreEnroll.php', 146)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\viewPreEnroll.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/viewPreEnroll', [], true)
+ 5 APPPATH\Controllers\PreEnrolled.php(48): view('admin/viewPreEnroll', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-16 10:41:52 --> Email: sendWithSmtp throwed ErrorException: fsockopen(): php_network_getaddresses: getaddrinfo for smtp.googlemail.com failed: No such host is known.  in C:\wamp64\www\Dormehi-Enrollment-System\system\Email\Email.php:1863
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fsockopen(): ph...', 'C:\\wamp64\\www\\D...', 1863)
+#1 C:\wamp64\www\Dormehi-Enrollment-System\system\Email\Email.php(1863): fsockopen('tls://smtp.goog...', 465, NULL, NULL, 60)
+#2 C:\wamp64\www\Dormehi-Enrollment-System\system\Email\Email.php(1777): CodeIgniter\Email\Email->SMTPConnect()
+#3 C:\wamp64\www\Dormehi-Enrollment-System\system\Email\Email.php(1662): CodeIgniter\Email\Email->sendWithSmtp()
+#4 C:\wamp64\www\Dormehi-Enrollment-System\system\Email\Email.php(1560): CodeIgniter\Email\Email->spoolEmail()
+#5 C:\wamp64\www\Dormehi-Enrollment-System\app\Controllers\Profile.php(535): CodeIgniter\Email\Email->send()
+#6 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\Profile->insert_registration('5')
+#7 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+#8 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\wamp64\\www\\D...')
+#11 {main}
+ERROR - 2023-02-16 10:41:52 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-02-16 10:41:52 --> 
+ERROR - 2023-02-16 10:42:11 --> Email: sendWithSmtp throwed ErrorException: fsockopen(): php_network_getaddresses: getaddrinfo for smtp.googlemail.com failed: No such host is known.  in C:\wamp64\www\Dormehi-Enrollment-System\system\Email\Email.php:1863
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fsockopen(): ph...', 'C:\\wamp64\\www\\D...', 1863)
+#1 C:\wamp64\www\Dormehi-Enrollment-System\system\Email\Email.php(1863): fsockopen('tls://smtp.goog...', 465, NULL, NULL, 60)
+#2 C:\wamp64\www\Dormehi-Enrollment-System\system\Email\Email.php(1777): CodeIgniter\Email\Email->SMTPConnect()
+#3 C:\wamp64\www\Dormehi-Enrollment-System\system\Email\Email.php(1662): CodeIgniter\Email\Email->sendWithSmtp()
+#4 C:\wamp64\www\Dormehi-Enrollment-System\system\Email\Email.php(1560): CodeIgniter\Email\Email->spoolEmail()
+#5 C:\wamp64\www\Dormehi-Enrollment-System\app\Controllers\Profile.php(535): CodeIgniter\Email\Email->send()
+#6 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\Profile->insert_registration('5')
+#7 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+#8 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\wamp64\\www\\D...')
+#11 {main}
+ERROR - 2023-02-16 10:42:11 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-02-16 10:42:11 --> 
+ERROR - 2023-02-16 10:42:29 --> Email: sendWithSmtp throwed ErrorException: fsockopen(): php_network_getaddresses: getaddrinfo for smtp.googlemail.com failed: No such host is known.  in C:\wamp64\www\Dormehi-Enrollment-System\system\Email\Email.php:1863
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fsockopen(): ph...', 'C:\\wamp64\\www\\D...', 1863)
+#1 C:\wamp64\www\Dormehi-Enrollment-System\system\Email\Email.php(1863): fsockopen('tls://smtp.goog...', 465, NULL, NULL, 60)
+#2 C:\wamp64\www\Dormehi-Enrollment-System\system\Email\Email.php(1777): CodeIgniter\Email\Email->SMTPConnect()
+#3 C:\wamp64\www\Dormehi-Enrollment-System\system\Email\Email.php(1662): CodeIgniter\Email\Email->sendWithSmtp()
+#4 C:\wamp64\www\Dormehi-Enrollment-System\system\Email\Email.php(1560): CodeIgniter\Email\Email->spoolEmail()
+#5 C:\wamp64\www\Dormehi-Enrollment-System\app\Controllers\Profile.php(535): CodeIgniter\Email\Email->send()
+#6 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\Profile->insert_registration('5')
+#7 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+#8 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\wamp64\\www\\D...')
+#11 {main}
+ERROR - 2023-02-16 10:42:29 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-02-16 10:42:29 --> 
+CRITICAL - 2023-02-16 10:47:46 --> Undefined array key 0
+in APPPATH\Views\admin\viewPreEnroll.php on line 146.
+ 1 APPPATH\Views\admin\viewPreEnroll.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\admin\\viewPreEnroll.php', 146)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\viewPreEnroll.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/viewPreEnroll', [], true)
+ 5 APPPATH\Controllers\PreEnrolled.php(51): view('admin/viewPreEnroll', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-16 10:47:56 --> Undefined array key 0
+in APPPATH\Views\admin\viewPreEnroll.php on line 146.
+ 1 APPPATH\Views\admin\viewPreEnroll.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\admin\\viewPreEnroll.php', 146)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\viewPreEnroll.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/viewPreEnroll', [], true)
+ 5 APPPATH\Controllers\PreEnrolled.php(51): view('admin/viewPreEnroll', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-16 10:48:04 --> Undefined array key 0
+in APPPATH\Views\admin\viewPreEnroll.php on line 146.
+ 1 APPPATH\Views\admin\viewPreEnroll.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\admin\\viewPreEnroll.php', 146)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\viewPreEnroll.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/viewPreEnroll', [], true)
+ 5 APPPATH\Controllers\PreEnrolled.php(51): view('admin/viewPreEnroll', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-16 10:49:31 --> Undefined array key 0
+in APPPATH\Views\admin\viewPreEnroll.php on line 146.
+ 1 APPPATH\Views\admin\viewPreEnroll.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\admin\\viewPreEnroll.php', 146)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\viewPreEnroll.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/viewPreEnroll', [], true)
+ 5 APPPATH\Controllers\PreEnrolled.php(52): view('admin/viewPreEnroll', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-16 10:51:01 --> Undefined array key 0
+in APPPATH\Views\admin\viewPreEnroll.php on line 146.
+ 1 APPPATH\Views\admin\viewPreEnroll.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\admin\\viewPreEnroll.php', 146)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\viewPreEnroll.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/viewPreEnroll', [], true)
+ 5 APPPATH\Controllers\PreEnrolled.php(51): view('admin/viewPreEnroll', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-16 10:51:45 --> Undefined array key 0
+in APPPATH\Views\admin\viewPreEnroll.php on line 146.
+ 1 APPPATH\Views\admin\viewPreEnroll.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\admin\\viewPreEnroll.php', 146)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\viewPreEnroll.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/viewPreEnroll', [], true)
+ 5 APPPATH\Controllers\PreEnrolled.php(52): view('admin/viewPreEnroll', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-16 10:53:51 --> mysqli_sql_exception: Not unique table/alias: 'section_tbl' in C:\wamp64\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `stud...', 0)
+#1 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `stud...')
+#2 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `stud...')
+#3 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `stud...', Array, false)
+#4 C:\wamp64\www\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\Dormehi-Enrollment-System\app\Controllers\PreEnrolled.php(38): CodeIgniter\Model->__call('get', Array)
+#6 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('1')
+#7 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+#8 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\wamp64\\www\\D...')
+#11 {main}
+CRITICAL - 2023-02-16 10:53:51 --> Not unique table/alias: 'section_tbl'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `student_registration`.`id`
+FROM `student_registration`
+RIGHT JOIN `school_year` ON `student_registration`.`semester`=`school_year`.`semester`
+RIGHT JOIN `user_tbl` ON `student_registration`.`lrn`=`user_tbl`.`lrn`
+RIGHT JOIN `user_profile` ON `user_tbl`.`email`=`user_profile`.`email`
+RIGHT JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+RIGHT JOIN `section_tbl` ON `strand_tbl`.`id` = `section_tbl`.`strand_id`
+RIGHT JOIN `section_tbl` ON `student_registration`.`user_section` = `section_tbl`.`id`
+WHERE `student_registration`.`semester` = \'1st semester\'
+AND `user_profile`.`id` = \'1\'
+AND `school_year`.`year` = \'2022\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `student_registration`.`id`
+FROM `student_registration`
+RIGHT JOIN `school_year` ON `student_registration`.`semester`=`school_year`.`semester`
+RIGHT JOIN `user_tbl` ON `student_registration`.`lrn`=`user_tbl`.`lrn`
+RIGHT JOIN `user_profile` ON `user_tbl`.`email`=`user_profile`.`email`
+RIGHT JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+RIGHT JOIN `section_tbl` ON `strand_tbl`.`id` = `section_tbl`.`strand_id`
+RIGHT JOIN `section_tbl` ON `student_registration`.`user_section` = `section_tbl`.`id`
+WHERE `student_registration`.`semester` = \'1st semester\'
+AND `user_profile`.`id` = \'1\'
+AND `school_year`.`year` = \'2022\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `student_registration`.`id`
+FROM `student_registration`
+RIGHT JOIN `school_year` ON `student_registration`.`semester`=`school_year`.`semester`
+RIGHT JOIN `user_tbl` ON `student_registration`.`lrn`=`user_tbl`.`lrn`
+RIGHT JOIN `user_profile` ON `user_tbl`.`email`=`user_profile`.`email`
+RIGHT JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+RIGHT JOIN `section_tbl` ON `strand_tbl`.`id` = `section_tbl`.`strand_id`
+RIGHT JOIN `section_tbl` ON `student_registration`.`user_section` = `section_tbl`.`id`
+WHERE `student_registration`.`semester` = \'1st semester\'
+AND `user_profile`.`id` = \'1\'
+AND `school_year`.`year` = \'2022\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `student_registration`.`id`
+FROM `student_registration`
+RIGHT JOIN `school_year` ON `student_registration`.`semester`=`school_year`.`semester`
+RIGHT JOIN `user_tbl` ON `student_registration`.`lrn`=`user_tbl`.`lrn`
+RIGHT JOIN `user_profile` ON `user_tbl`.`email`=`user_profile`.`email`
+RIGHT JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+RIGHT JOIN `section_tbl` ON `strand_tbl`.`id` = `section_tbl`.`strand_id`
+RIGHT JOIN `section_tbl` ON `student_registration`.`user_section` = `section_tbl`.`id`
+WHERE `student_registration`.`semester` = :student_registration.semester:
+AND `user_profile`.`id` = :user_profile.id:
+AND `school_year`.`year` = :school_year.year:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\PreEnrolled.php(38): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('1')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-16 10:54:06 --> Undefined array key 0
+in APPPATH\Views\admin\viewPreEnroll.php on line 146.
+ 1 APPPATH\Views\admin\viewPreEnroll.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\admin\\viewPreEnroll.php', 146)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\viewPreEnroll.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/viewPreEnroll', [], true)
+ 5 APPPATH\Controllers\PreEnrolled.php(53): view('admin/viewPreEnroll', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-16 10:54:24 --> Undefined array key 0
+in APPPATH\Views\admin\viewPreEnroll.php on line 146.
+ 1 APPPATH\Views\admin\viewPreEnroll.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\admin\\viewPreEnroll.php', 146)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\viewPreEnroll.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/viewPreEnroll', [], true)
+ 5 APPPATH\Controllers\PreEnrolled.php(53): view('admin/viewPreEnroll', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-16 10:54:26 --> Undefined array key 0
+in APPPATH\Views\admin\viewPreEnroll.php on line 146.
+ 1 APPPATH\Views\admin\viewPreEnroll.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\admin\\viewPreEnroll.php', 146)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\viewPreEnroll.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/viewPreEnroll', [], true)
+ 5 APPPATH\Controllers\PreEnrolled.php(53): view('admin/viewPreEnroll', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-16 10:54:59 --> mysqli_sql_exception: Not unique table/alias: 'section_tbl' in C:\wamp64\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `stud...', 0)
+#1 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `stud...')
+#2 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `stud...')
+#3 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `stud...', Array, false)
+#4 C:\wamp64\www\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\Dormehi-Enrollment-System\app\Controllers\PreEnrolled.php(38): CodeIgniter\Model->__call('get', Array)
+#6 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('1')
+#7 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+#8 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\wamp64\\www\\D...')
+#11 {main}
+CRITICAL - 2023-02-16 10:54:59 --> Not unique table/alias: 'section_tbl'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `student_registration`.`id`
+FROM `student_registration`
+RIGHT JOIN `school_year` ON `student_registration`.`semester`=`school_year`.`semester`
+INNER JOIN `user_tbl` ON `student_registration`.`lrn`=`user_tbl`.`lrn`
+INNER JOIN `user_profile` ON `user_tbl`.`email`=`user_profile`.`email`
+INNER JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+INNER JOIN `section_tbl` ON `strand_tbl`.`id` = `section_tbl`.`strand_id`
+INNER JOIN `section_tbl` ON `student_registration`.`user_section` = `section_tbl`.`id`
+WHERE `student_registration`.`semester` = \'1st semester\'
+AND `user_profile`.`id` = \'1\'
+AND `school_year`.`year` = \'2022\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `student_registration`.`id`
+FROM `student_registration`
+RIGHT JOIN `school_year` ON `student_registration`.`semester`=`school_year`.`semester`
+INNER JOIN `user_tbl` ON `student_registration`.`lrn`=`user_tbl`.`lrn`
+INNER JOIN `user_profile` ON `user_tbl`.`email`=`user_profile`.`email`
+INNER JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+INNER JOIN `section_tbl` ON `strand_tbl`.`id` = `section_tbl`.`strand_id`
+INNER JOIN `section_tbl` ON `student_registration`.`user_section` = `section_tbl`.`id`
+WHERE `student_registration`.`semester` = \'1st semester\'
+AND `user_profile`.`id` = \'1\'
+AND `school_year`.`year` = \'2022\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `student_registration`.`id`
+FROM `student_registration`
+RIGHT JOIN `school_year` ON `student_registration`.`semester`=`school_year`.`semester`
+INNER JOIN `user_tbl` ON `student_registration`.`lrn`=`user_tbl`.`lrn`
+INNER JOIN `user_profile` ON `user_tbl`.`email`=`user_profile`.`email`
+INNER JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+INNER JOIN `section_tbl` ON `strand_tbl`.`id` = `section_tbl`.`strand_id`
+INNER JOIN `section_tbl` ON `student_registration`.`user_section` = `section_tbl`.`id`
+WHERE `student_registration`.`semester` = \'1st semester\'
+AND `user_profile`.`id` = \'1\'
+AND `school_year`.`year` = \'2022\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `student_registration`.`id`
+FROM `student_registration`
+RIGHT JOIN `school_year` ON `student_registration`.`semester`=`school_year`.`semester`
+INNER JOIN `user_tbl` ON `student_registration`.`lrn`=`user_tbl`.`lrn`
+INNER JOIN `user_profile` ON `user_tbl`.`email`=`user_profile`.`email`
+INNER JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+INNER JOIN `section_tbl` ON `strand_tbl`.`id` = `section_tbl`.`strand_id`
+INNER JOIN `section_tbl` ON `student_registration`.`user_section` = `section_tbl`.`id`
+WHERE `student_registration`.`semester` = :student_registration.semester:
+AND `user_profile`.`id` = :user_profile.id:
+AND `school_year`.`year` = :school_year.year:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\PreEnrolled.php(38): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('1')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-16 10:55:09 --> Undefined array key 0
+in APPPATH\Views\admin\viewPreEnroll.php on line 146.
+ 1 APPPATH\Views\admin\viewPreEnroll.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\admin\\viewPreEnroll.php', 146)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\viewPreEnroll.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/viewPreEnroll', [], true)
+ 5 APPPATH\Controllers\PreEnrolled.php(53): view('admin/viewPreEnroll', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-16 10:55:17 --> Undefined array key 0
+in APPPATH\Views\admin\viewPreEnroll.php on line 146.
+ 1 APPPATH\Views\admin\viewPreEnroll.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\admin\\viewPreEnroll.php', 146)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\viewPreEnroll.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/viewPreEnroll', [], true)
+ 5 APPPATH\Controllers\PreEnrolled.php(54): view('admin/viewPreEnroll', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-16 10:55:22 --> Undefined array key 0
+in APPPATH\Views\admin\viewPreEnroll.php on line 146.
+ 1 APPPATH\Views\admin\viewPreEnroll.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\admin\\viewPreEnroll.php', 146)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\viewPreEnroll.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/viewPreEnroll', [], true)
+ 5 APPPATH\Controllers\PreEnrolled.php(53): view('admin/viewPreEnroll', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-16 10:55:36 --> Undefined array key 0
+in APPPATH\Views\admin\viewPreEnroll.php on line 146.
+ 1 APPPATH\Views\admin\viewPreEnroll.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\admin\\viewPreEnroll.php', 146)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\viewPreEnroll.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/viewPreEnroll', [], true)
+ 5 APPPATH\Controllers\PreEnrolled.php(53): view('admin/viewPreEnroll', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-16 10:55:51 --> Undefined array key 0
+in APPPATH\Views\admin\viewPreEnroll.php on line 146.
+ 1 APPPATH\Views\admin\viewPreEnroll.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\admin\\viewPreEnroll.php', 146)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\viewPreEnroll.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/viewPreEnroll', [], true)
+ 5 APPPATH\Controllers\PreEnrolled.php(52): view('admin/viewPreEnroll', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-16 10:58:55 --> Email: sendWithSmtp throwed ErrorException: fsockopen(): php_network_getaddresses: getaddrinfo for smtp.googlemail.com failed: No such host is known.  in C:\wamp64\www\Dormehi-Enrollment-System\system\Email\Email.php:1863
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fsockopen(): ph...', 'C:\\wamp64\\www\\D...', 1863)
+#1 C:\wamp64\www\Dormehi-Enrollment-System\system\Email\Email.php(1863): fsockopen('tls://smtp.goog...', 465, NULL, NULL, 60)
+#2 C:\wamp64\www\Dormehi-Enrollment-System\system\Email\Email.php(1777): CodeIgniter\Email\Email->SMTPConnect()
+#3 C:\wamp64\www\Dormehi-Enrollment-System\system\Email\Email.php(1662): CodeIgniter\Email\Email->sendWithSmtp()
+#4 C:\wamp64\www\Dormehi-Enrollment-System\system\Email\Email.php(1560): CodeIgniter\Email\Email->spoolEmail()
+#5 C:\wamp64\www\Dormehi-Enrollment-System\app\Controllers\Profile.php(535): CodeIgniter\Email\Email->send()
+#6 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\Profile->insert_registration('5')
+#7 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+#8 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\wamp64\\www\\D...')
+#11 {main}
+ERROR - 2023-02-16 10:58:55 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-02-16 10:58:55 --> 
+ERROR - 2023-02-16 11:00:43 --> mysqli_sql_exception: Not unique table/alias: 'strand_tbl' in C:\wamp64\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `stud...', 0)
+#1 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `stud...')
+#2 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `stud...')
+#3 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `stud...', Array, false)
+#4 C:\wamp64\www\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\Dormehi-Enrollment-System\app\Controllers\PreEnrolled.php(38): CodeIgniter\Model->__call('get', Array)
+#6 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('1')
+#7 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+#8 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\wamp64\\www\\D...')
+#11 {main}
+CRITICAL - 2023-02-16 11:00:43 --> Not unique table/alias: 'strand_tbl'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `student_registration`.`id`
+FROM `student_registration`
+RIGHT JOIN `school_year` ON `student_registration`.`semester`=`school_year`.`semester`
+RIGHT JOIN `user_tbl` ON `student_registration`.`lrn`=`user_tbl`.`lrn`
+RIGHT JOIN `user_profile` ON `user_tbl`.`email`=`user_profile`.`email`
+RIGHT JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+RIGHT JOIN `section_tbl` ON `student_registration`.`user_section` = `section_tbl`.`id`
+RIGHT JOIN `strand_tbl` ON `strand_tbl`.`id` = `section_tbl`.`strand_id`
+WHERE `student_registration`.`semester` = \'1st semester\'
+AND `user_profile`.`id` = \'1\'
+AND `school_year`.`year` = \'2022\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `student_registration`.`id`
+FROM `student_registration`
+RIGHT JOIN `school_year` ON `student_registration`.`semester`=`school_year`.`semester`
+RIGHT JOIN `user_tbl` ON `student_registration`.`lrn`=`user_tbl`.`lrn`
+RIGHT JOIN `user_profile` ON `user_tbl`.`email`=`user_profile`.`email`
+RIGHT JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+RIGHT JOIN `section_tbl` ON `student_registration`.`user_section` = `section_tbl`.`id`
+RIGHT JOIN `strand_tbl` ON `strand_tbl`.`id` = `section_tbl`.`strand_id`
+WHERE `student_registration`.`semester` = \'1st semester\'
+AND `user_profile`.`id` = \'1\'
+AND `school_year`.`year` = \'2022\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `student_registration`.`id`
+FROM `student_registration`
+RIGHT JOIN `school_year` ON `student_registration`.`semester`=`school_year`.`semester`
+RIGHT JOIN `user_tbl` ON `student_registration`.`lrn`=`user_tbl`.`lrn`
+RIGHT JOIN `user_profile` ON `user_tbl`.`email`=`user_profile`.`email`
+RIGHT JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+RIGHT JOIN `section_tbl` ON `student_registration`.`user_section` = `section_tbl`.`id`
+RIGHT JOIN `strand_tbl` ON `strand_tbl`.`id` = `section_tbl`.`strand_id`
+WHERE `student_registration`.`semester` = \'1st semester\'
+AND `user_profile`.`id` = \'1\'
+AND `school_year`.`year` = \'2022\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `student_registration`.`id`
+FROM `student_registration`
+RIGHT JOIN `school_year` ON `student_registration`.`semester`=`school_year`.`semester`
+RIGHT JOIN `user_tbl` ON `student_registration`.`lrn`=`user_tbl`.`lrn`
+RIGHT JOIN `user_profile` ON `user_tbl`.`email`=`user_profile`.`email`
+RIGHT JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+RIGHT JOIN `section_tbl` ON `student_registration`.`user_section` = `section_tbl`.`id`
+RIGHT JOIN `strand_tbl` ON `strand_tbl`.`id` = `section_tbl`.`strand_id`
+WHERE `student_registration`.`semester` = :student_registration.semester:
+AND `user_profile`.`id` = :user_profile.id:
+AND `school_year`.`year` = :school_year.year:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\PreEnrolled.php(38): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('1')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-16 11:01:44 --> mysqli_sql_exception: Not unique table/alias: 'student_registration' in C:\wamp64\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `stud...', 0)
+#1 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `stud...')
+#2 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `stud...')
+#3 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `stud...', Array, false)
+#4 C:\wamp64\www\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\Dormehi-Enrollment-System\app\Controllers\PreEnrolled.php(38): CodeIgniter\Model->__call('get', Array)
+#6 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('1')
+#7 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+#8 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\wamp64\\www\\D...')
+#11 {main}
+CRITICAL - 2023-02-16 11:01:44 --> Not unique table/alias: 'student_registration'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `student_registration`.`id`
+FROM `student_registration`
+RIGHT JOIN `school_year` ON `student_registration`.`semester`=`school_year`.`semester`
+RIGHT JOIN `user_tbl` ON `student_registration`.`lrn`=`user_tbl`.`lrn`
+RIGHT JOIN `user_profile` ON `user_tbl`.`email`=`user_profile`.`email`
+RIGHT JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+RIGHT JOIN `section_tbl` ON `strand_tbl`.`id` = `section_tbl`.`strand_id`
+INNER JOIN `student_registration` ON `section_tbl`.`id` = `student_registration`.`user_section`
+WHERE `student_registration`.`semester` = \'1st semester\'
+AND `user_profile`.`id` = \'1\'
+AND `school_year`.`year` = \'2022\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `student_registration`.`id`
+FROM `student_registration`
+RIGHT JOIN `school_year` ON `student_registration`.`semester`=`school_year`.`semester`
+RIGHT JOIN `user_tbl` ON `student_registration`.`lrn`=`user_tbl`.`lrn`
+RIGHT JOIN `user_profile` ON `user_tbl`.`email`=`user_profile`.`email`
+RIGHT JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+RIGHT JOIN `section_tbl` ON `strand_tbl`.`id` = `section_tbl`.`strand_id`
+INNER JOIN `student_registration` ON `section_tbl`.`id` = `student_registration`.`user_section`
+WHERE `student_registration`.`semester` = \'1st semester\'
+AND `user_profile`.`id` = \'1\'
+AND `school_year`.`year` = \'2022\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `student_registration`.`id`
+FROM `student_registration`
+RIGHT JOIN `school_year` ON `student_registration`.`semester`=`school_year`.`semester`
+RIGHT JOIN `user_tbl` ON `student_registration`.`lrn`=`user_tbl`.`lrn`
+RIGHT JOIN `user_profile` ON `user_tbl`.`email`=`user_profile`.`email`
+RIGHT JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+RIGHT JOIN `section_tbl` ON `strand_tbl`.`id` = `section_tbl`.`strand_id`
+INNER JOIN `student_registration` ON `section_tbl`.`id` = `student_registration`.`user_section`
+WHERE `student_registration`.`semester` = \'1st semester\'
+AND `user_profile`.`id` = \'1\'
+AND `school_year`.`year` = \'2022\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `student_registration`.`id`
+FROM `student_registration`
+RIGHT JOIN `school_year` ON `student_registration`.`semester`=`school_year`.`semester`
+RIGHT JOIN `user_tbl` ON `student_registration`.`lrn`=`user_tbl`.`lrn`
+RIGHT JOIN `user_profile` ON `user_tbl`.`email`=`user_profile`.`email`
+RIGHT JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+RIGHT JOIN `section_tbl` ON `strand_tbl`.`id` = `section_tbl`.`strand_id`
+INNER JOIN `student_registration` ON `section_tbl`.`id` = `student_registration`.`user_section`
+WHERE `student_registration`.`semester` = :student_registration.semester:
+AND `user_profile`.`id` = :user_profile.id:
+AND `school_year`.`year` = :school_year.year:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\PreEnrolled.php(38): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('1')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-16 11:01:52 --> Undefined array key 0
+in APPPATH\Views\admin\viewPreEnroll.php on line 146.
+ 1 APPPATH\Views\admin\viewPreEnroll.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\admin\\viewPreEnroll.php', 146)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\viewPreEnroll.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/viewPreEnroll', [], true)
+ 5 APPPATH\Controllers\PreEnrolled.php(53): view('admin/viewPreEnroll', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-16 11:08:44 --> mysqli_sql_exception: Not unique table/alias: 'student_registration' in C:\wamp64\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `stud...', 0)
+#1 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `stud...')
+#2 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `stud...')
+#3 C:\wamp64\www\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `stud...', Array, false)
+#4 C:\wamp64\www\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\Dormehi-Enrollment-System\app\Controllers\PreEnrolled.php(38): CodeIgniter\Model->__call('get', Array)
+#6 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('1')
+#7 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+#8 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\wamp64\\www\\D...')
+#11 {main}
+CRITICAL - 2023-02-16 11:08:44 --> Not unique table/alias: 'student_registration'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `student_registration`.`id`
+FROM `student_registration`
+RIGHT JOIN `school_year` ON `student_registration`.`semester`=`school_year`.`semester`
+RIGHT JOIN `user_tbl` ON `student_registration`.`lrn`=`user_tbl`.`lrn`
+RIGHT JOIN `user_profile` ON `user_tbl`.`email`=`user_profile`.`email`
+RIGHT JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+RIGHT JOIN `section_tbl` ON `strand_tbl`.`id` = `section_tbl`.`strand_id`
+INNER JOIN `student_registration` ON `section_tbl`.`year_level` = `student_registration`.`year_level`
+WHERE `student_registration`.`semester` = \'1st semester\'
+AND `user_profile`.`id` = \'1\'
+AND `school_year`.`year` = \'2022\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `student_registration`.`id`
+FROM `student_registration`
+RIGHT JOIN `school_year` ON `student_registration`.`semester`=`school_year`.`semester`
+RIGHT JOIN `user_tbl` ON `student_registration`.`lrn`=`user_tbl`.`lrn`
+RIGHT JOIN `user_profile` ON `user_tbl`.`email`=`user_profile`.`email`
+RIGHT JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+RIGHT JOIN `section_tbl` ON `strand_tbl`.`id` = `section_tbl`.`strand_id`
+INNER JOIN `student_registration` ON `section_tbl`.`year_level` = `student_registration`.`year_level`
+WHERE `student_registration`.`semester` = \'1st semester\'
+AND `user_profile`.`id` = \'1\'
+AND `school_year`.`year` = \'2022\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `student_registration`.`id`
+FROM `student_registration`
+RIGHT JOIN `school_year` ON `student_registration`.`semester`=`school_year`.`semester`
+RIGHT JOIN `user_tbl` ON `student_registration`.`lrn`=`user_tbl`.`lrn`
+RIGHT JOIN `user_profile` ON `user_tbl`.`email`=`user_profile`.`email`
+RIGHT JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+RIGHT JOIN `section_tbl` ON `strand_tbl`.`id` = `section_tbl`.`strand_id`
+INNER JOIN `student_registration` ON `section_tbl`.`year_level` = `student_registration`.`year_level`
+WHERE `student_registration`.`semester` = \'1st semester\'
+AND `user_profile`.`id` = \'1\'
+AND `school_year`.`year` = \'2022\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `student_registration`.`id`
+FROM `student_registration`
+RIGHT JOIN `school_year` ON `student_registration`.`semester`=`school_year`.`semester`
+RIGHT JOIN `user_tbl` ON `student_registration`.`lrn`=`user_tbl`.`lrn`
+RIGHT JOIN `user_profile` ON `user_tbl`.`email`=`user_profile`.`email`
+RIGHT JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+RIGHT JOIN `section_tbl` ON `strand_tbl`.`id` = `section_tbl`.`strand_id`
+INNER JOIN `student_registration` ON `section_tbl`.`year_level` = `student_registration`.`year_level`
+WHERE `student_registration`.`semester` = :student_registration.semester:
+AND `user_profile`.`id` = :user_profile.id:
+AND `school_year`.`year` = :school_year.year:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\PreEnrolled.php(38): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('1')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-16 11:10:10 --> Email: sendWithSmtp throwed ErrorException: fsockopen(): php_network_getaddresses: getaddrinfo for smtp.googlemail.com failed: No such host is known.  in C:\wamp64\www\Dormehi-Enrollment-System\system\Email\Email.php:1863
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fsockopen(): ph...', 'C:\\wamp64\\www\\D...', 1863)
+#1 C:\wamp64\www\Dormehi-Enrollment-System\system\Email\Email.php(1863): fsockopen('tls://smtp.goog...', 465, NULL, NULL, 60)
+#2 C:\wamp64\www\Dormehi-Enrollment-System\system\Email\Email.php(1777): CodeIgniter\Email\Email->SMTPConnect()
+#3 C:\wamp64\www\Dormehi-Enrollment-System\system\Email\Email.php(1662): CodeIgniter\Email\Email->sendWithSmtp()
+#4 C:\wamp64\www\Dormehi-Enrollment-System\system\Email\Email.php(1560): CodeIgniter\Email\Email->spoolEmail()
+#5 C:\wamp64\www\Dormehi-Enrollment-System\app\Controllers\PreEnrolled.php(132): CodeIgniter\Email\Email->send()
+#6 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\PreEnrolled->enrolled('7')
+#7 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+#8 C:\wamp64\www\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\wamp64\\www\\D...')
+#11 {main}
+ERROR - 2023-02-16 11:10:10 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-02-16 11:10:10 --> 
+CRITICAL - 2023-02-16 11:11:05 --> Undefined array key "subject"
+in APPPATH\Views\user\subject.php on line 132.
+ 1 APPPATH\Views\user\subject.php(132): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "subject"', 'APPPATH\\Views\\user\\subject.php', 132)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\subject.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/subject', [], true)
+ 5 APPPATH\Controllers\Profile.php(856): view('user/subject', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->subject()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
