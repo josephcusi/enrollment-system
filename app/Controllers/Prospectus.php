@@ -136,7 +136,7 @@ class Prospectus extends BaseController
         }
     }
 
-    public function updateProspectus()
+    public function updateProspectus11()
     {
         $prospectus_model = new ProspectusModel();
         $id = $this->request->getPost('id');
@@ -157,7 +157,30 @@ class Prospectus extends BaseController
         ];
         $prospectus_model->update($id, $data);
         session()->setFlashdata('updateprospectus', 'Duplicate input');
-        return redirect()->route('r_prospectus');
+        return redirect()->route('prospectus11');
+    }
+    public function updateProspectus12()
+    {
+        $prospectus_model = new ProspectusModel();
+        $id = $this->request->getPost('id');
+        $subject = $this->request->getPost('subject');
+        $pre_requisit = $this->request->getPost('pre_requisit');
+        $title = $this->request->getPost('title');
+        $unit = $this->request->getPost('unit');
+        $year_level = $this->request->getPost('year_level');
+        $semester = $this->request->getPost('semester');
+
+        $data = [
+
+            'subject' => $subject,
+            'title' => $title,
+            'unit' => $unit,
+            'pre_requisit' => $pre_requisit,
+            'year_level' => $year_level,
+        ];
+        $prospectus_model->update($id, $data);
+        session()->setFlashdata('updateprospectus', 'Duplicate input');
+        return redirect()->route('prospectus12');
     }
     public function prospectus11()
     {

@@ -225,7 +225,7 @@
                       data-semester="<?=$prospect['semester']?>"
 
                       >update</button></a>
-                       <?= $this->include('admin/modal/updateprospectus')?>
+                       <?= $this->include('admin/modal/updateprospectus12')?>
                     </td>
                   </tr>
                   <?php endforeach;?>

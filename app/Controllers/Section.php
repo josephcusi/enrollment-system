@@ -16,7 +16,7 @@ class Section extends BaseController
     {
         helper(['url', 'form']);
     }
-    public function schedule($id){
+    public function schedule11($id){
       $user_model = new UserModel();
       $schedule_model = new ScheduleModel();
       $section_model = new SectionModel();
@@ -28,6 +28,7 @@ class Section extends BaseController
         ->join('section_tbl', 'schedule_tbl.section_id = section_tbl.id', 'inner')
         ->join('prospectrus_tbl', 'schedule_tbl.subject_id = prospectrus_tbl.id', 'inner')
         ->where('section_tbl.id', $id)
+        ->where('section_tbl.year_level', 'Grade 11')
         ->get()->getResultArray(),
         
         'teacher' => $user_model->where('usertype', 'teacher')->findAll(),
@@ -36,14 +37,45 @@ class Section extends BaseController
         ->join('strand_tbl', 'prospectrus_tbl.strand_id = strand_tbl.id', 'inner')
         ->join('section_tbl', 'strand_tbl.id = section_tbl.strand_id', 'inner')
         ->where('section_tbl.id', $id)
+        ->where('prospectrus_tbl.year_level', 'Grade 11')
         ->get()->getResultArray(),
         'section' => $section_model->where('id', $id)->findAll(),
         'id' => $id
 
     ];
-        return view('admin/schedule', $data);
-        // var_dump($data['sched']);
+        return view('admin/schedule11', $data);
+        // var_dump($data['subject']);
     }
+    public function schedule12($id){
+        $user_model = new UserModel();
+        $schedule_model = new ScheduleModel();
+        $section_model = new SectionModel();
+        $prospectus_model = new ProspectusModel();
+        $data = [
+          'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
+          'sched' => $schedule_model
+          ->select('*, schedule_tbl.id')
+          ->join('section_tbl', 'schedule_tbl.section_id = section_tbl.id', 'inner')
+          ->join('prospectrus_tbl', 'schedule_tbl.subject_id = prospectrus_tbl.id', 'inner')
+          ->where('section_tbl.id', $id)
+          ->where('section_tbl.year_level', 'Grade 12')
+          ->get()->getResultArray(),
+          
+          'teacher' => $user_model->where('usertype', 'teacher')->findAll(),
+          'subject' => $prospectus_model
+          ->select('*, prospectrus_tbl.id')
+          ->join('strand_tbl', 'prospectrus_tbl.strand_id = strand_tbl.id', 'inner')
+          ->join('section_tbl', 'strand_tbl.id = section_tbl.strand_id', 'inner')
+          ->where('section_tbl.id', $id)
+          ->where('prospectrus_tbl.year_level', 'Grade 12')
+          ->get()->getResultArray(),
+          'section' => $section_model->where('id', $id)->findAll(),
+          'id' => $id
+  
+      ];
+          return view('admin/schedule12', $data);
+          // var_dump($data['subject']);
+      }
     public function strandSec11($strand)
     {
         $section_model = new SectionModel();
@@ -194,7 +226,7 @@ class Section extends BaseController
             }
         }
     }
-    public function section_update()
+    public function section_update11()
     {
         $section_model = new SectionModel();
         $id = $this->request->getPost('id');
@@ -207,13 +239,28 @@ class Section extends BaseController
         ];
         $section_model->update($id, $data);
         session()->setFlashdata('updatesection', 'Duplicate input');
-        return redirect()->route('section');
+        return redirect()->route('section11');
     }
-    public function addsched($ids)
+    public function section_update12()
+    {
+        $section_model = new SectionModel();
+        $id = $this->request->getPost('id');
+        $section = $this->request->getPost('section');
+        $year_level = $this->request->getPost('year_level');
+
+        $data = [
+            'section' => $section,
+            'year_level' => $year_level
+        ];
+        $section_model->update($id, $data);
+        session()->setFlashdata('updatesection', 'Duplicate input');
+        return redirect()->route('section12');
+    }
+    public function addsched11($ids)
     {
         $validated = $this->validate([
-            'id' => [
-                'rules' => 'required|is_unique[schedule_tbl.section_id]',
+            'subject' => [
+                'rules' => 'required|is_unique[schedule_tbl.subject_id]',
                 'errors' => [
                     'required' => 'Section is required!',
                     'is_unique' => 'Section is Already Exist'
@@ -226,7 +273,7 @@ class Section extends BaseController
                 //session()->setFlashdata('updatesection', 'Duplicate input');
                 session()->setFlashdata('notupdatesection', 'Duplicate input');
                 session()->setFlashdata('validation', $this->validator);
-                return $this->schedule($ids);
+                return $this->schedule11($ids);
             }
             else
             {
@@ -263,11 +310,69 @@ class Section extends BaseController
             ];
             $schedule_model->insert($value);
 
-            return $this->schedule($ids);
+            return $this->schedule11($ids);
         }
 
     }
-    public function updateSched($ids)
+    public function addsched12($ids)
+    {
+        $validated = $this->validate([
+            'subject' => [
+                'rules' => 'required|is_unique[schedule_tbl.subject_id]',
+                'errors' => [
+                    'required' => 'Section is required!',
+                    'is_unique' => 'Section is Already Exist'
+                ]
+            ]
+
+        ]);
+
+            if (!$validated) {
+                //session()->setFlashdata('updatesection', 'Duplicate input');
+                session()->setFlashdata('notupdatesection', 'Duplicate input');
+                session()->setFlashdata('validation', $this->validator);
+                return $this->schedule12($ids);
+            }
+            else
+            {
+            $schedule_model = new ScheduleModel();
+
+            $teacher = $this->request->getPost('teacher');
+            $subject = $this->request->getPost('subject');
+            $section = $this->request->getPost('id');
+            $monOne = $this->request->getPost('monOne');
+            $monTwo = $this->request->getPost('monTwo');
+            $tueOne = $this->request->getPost('tueOne');
+            $tueTwo = $this->request->getPost('tueTwo');
+            $wedOne = $this->request->getPost('wedOne');
+            $wedTwo = $this->request->getPost('wedTwo');
+            $thuOne = $this->request->getPost('thuOne');
+            $thuTwo = $this->request->getPost('thuTwo');
+            $friOne = $this->request->getPost('friOne');
+            $friTwo = $this->request->getPost('friTwo');
+
+            $value = [
+                'subject_id' => $subject,
+                'teacher_id' => $teacher,
+                'section_id' => $section,
+                'monday' => $monOne,
+                'mon_two' => $monTwo,
+                'tuesday' => $tueOne,
+                'tue_two' => $tueTwo,
+                'wednesday' => $wedOne,
+                'wed_two' => $wedTwo,
+                'thursday' => $thuOne,
+                'thu_two' => $thuTwo,
+                'friday' => $friOne,
+                'fri_two' => $friTwo,
+            ];
+            $schedule_model->insert($value);
+
+            return $this->schedule12($ids);
+        }
+
+    }
+    public function updateSched11($ids)
     {
             $schedule_model = new ScheduleModel();
 
@@ -299,9 +404,44 @@ class Section extends BaseController
             ];
             $schedule_model->update($id, $value);
 
-            return $this->schedule($ids);
-            // echo 2;
+            return $this->schedule11($ids);
+            // echo 1;
         }
+        public function updateSched12($ids)
+        {
+                $schedule_model = new ScheduleModel();
+    
+                $teacher = $this->request->getPost('teacher');
+                $id = $this->request->getPost('id');
+                $monOne = $this->request->getPost('monOne');
+                $monTwo = $this->request->getPost('monTwo');
+                $tueOne = $this->request->getPost('tueOne');
+                $tueTwo = $this->request->getPost('tueTwo');
+                $wedOne = $this->request->getPost('wedOne');
+                $wedTwo = $this->request->getPost('wedTwo');
+                $thuOne = $this->request->getPost('thuOne');
+                $thuTwo = $this->request->getPost('thuTwo');
+                $friOne = $this->request->getPost('friOne');
+                $friTwo = $this->request->getPost('friTwo');
+    
+                $value = [
+                    'teacher_id' => $teacher,
+                    'monday' => $monOne,
+                    'mon_two' => $monTwo,
+                    'tuesday' => $tueOne,
+                    'tue_two' => $tueTwo,
+                    'wednesday' => $wedOne,
+                    'wed_two' => $wedTwo,
+                    'thursday' => $thuOne,
+                    'thu_two' => $thuTwo,
+                    'friday' => $friOne,
+                    'fri_two' => $friTwo,
+                ];
+                $schedule_model->update($id, $value);
+    
+                return $this->schedule12($ids);
+                // echo 2;
+            }
         public function section11()
         {
 
