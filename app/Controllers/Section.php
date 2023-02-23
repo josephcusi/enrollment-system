@@ -18,6 +18,7 @@ class Section extends BaseController
     }
     public function schedule11($id){
       $user_model = new UserModel();
+      $year_model = new YearModel();
       $schedule_model = new ScheduleModel();
       $section_model = new SectionModel();
       $prospectus_model = new ProspectusModel();
@@ -27,6 +28,7 @@ class Section extends BaseController
         ->select('*, schedule_tbl.id')
         ->join('section_tbl', 'schedule_tbl.section_id = section_tbl.id', 'inner')
         ->join('prospectrus_tbl', 'schedule_tbl.subject_id = prospectrus_tbl.id', 'inner')
+        ->join('school_year', 'prospectrus_tbl.semester = school_year.semester', 'inner')
         ->where('section_tbl.id', $id)
         ->where('section_tbl.year_level', 'Grade 11')
         ->get()->getResultArray(),
@@ -36,11 +38,14 @@ class Section extends BaseController
         ->select('*, prospectrus_tbl.id')
         ->join('strand_tbl', 'prospectrus_tbl.strand_id = strand_tbl.id', 'inner')
         ->join('section_tbl', 'strand_tbl.id = section_tbl.strand_id', 'inner')
+        ->join('school_year', 'prospectrus_tbl.semester = school_year.semester', 'inner')   
         ->where('section_tbl.id', $id)
         ->where('prospectrus_tbl.year_level', 'Grade 11')
         ->get()->getResultArray(),
         'section' => $section_model->where('id', $id)->findAll(),
-        'id' => $id
+        'id' => $id,
+
+        'sem_year' => $year_model->first()
 
     ];
         return view('admin/schedule11', $data);
@@ -48,6 +53,7 @@ class Section extends BaseController
     }
     public function schedule12($id){
         $user_model = new UserModel();
+        $year_model = new YearModel();
         $schedule_model = new ScheduleModel();
         $section_model = new SectionModel();
         $prospectus_model = new ProspectusModel();
@@ -57,6 +63,7 @@ class Section extends BaseController
           ->select('*, schedule_tbl.id')
           ->join('section_tbl', 'schedule_tbl.section_id = section_tbl.id', 'inner')
           ->join('prospectrus_tbl', 'schedule_tbl.subject_id = prospectrus_tbl.id', 'inner')
+          ->join('school_year', 'prospectrus_tbl.semester = school_year.semester', 'inner')
           ->where('section_tbl.id', $id)
           ->where('section_tbl.year_level', 'Grade 12')
           ->get()->getResultArray(),
@@ -66,11 +73,14 @@ class Section extends BaseController
           ->select('*, prospectrus_tbl.id')
           ->join('strand_tbl', 'prospectrus_tbl.strand_id = strand_tbl.id', 'inner')
           ->join('section_tbl', 'strand_tbl.id = section_tbl.strand_id', 'inner')
+          ->join('school_year', 'prospectrus_tbl.semester = school_year.semester', 'inner')
           ->where('section_tbl.id', $id)
           ->where('prospectrus_tbl.year_level', 'Grade 12')
           ->get()->getResultArray(),
           'section' => $section_model->where('id', $id)->findAll(),
-          'id' => $id
+          'id' => $id,
+
+          'sem_year' => $year_model->first()
   
       ];
           return view('admin/schedule12', $data);
@@ -81,6 +91,7 @@ class Section extends BaseController
         $section_model = new SectionModel();
         $strand_model = new StrandModel();
         $user_model = new UserModel();
+        $year_model = new YearModel();
 
         $strand_id = $strand_model->where('strand', $strand)->find();
         $data = [
@@ -90,6 +101,7 @@ class Section extends BaseController
                 ->where('section_tbl.year_level', 'Grade 11')
                 ->get()->getResultArray(),
             'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
+            'sem_year' => $year_model->first()
         ];
        // var_dump($data['count']);
          session()->setFlashdata('strand', $strand);
@@ -100,6 +112,7 @@ class Section extends BaseController
         $section_model = new SectionModel();
         $strand_model = new StrandModel();
         $user_model = new UserModel();
+        $year_model = new YearModel();
 
         $strand_id = $strand_model->where('strand', $strand)->find();
         $data = [
@@ -109,6 +122,7 @@ class Section extends BaseController
                 ->where('section_tbl.year_level', 'Grade 12')
                 ->get()->getResultArray(),
             'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
+            'sem_year' => $year_model->first()
         ];
        // var_dump($data['count']);
          session()->setFlashdata('strand', $strand);
@@ -260,10 +274,9 @@ class Section extends BaseController
     {
         $validated = $this->validate([
             'subject' => [
-                'rules' => 'required|is_unique[schedule_tbl.subject_id]',
+                'rules' => 'required',
                 'errors' => [
-                    'required' => 'Section is required!',
-                    'is_unique' => 'Section is Already Exist'
+                    'required' => 'Section is required!'
                 ]
             ]
 
@@ -308,9 +321,21 @@ class Section extends BaseController
                 'friday' => $friOne,
                 'fri_two' => $friTwo,
             ];
-            $schedule_model->insert($value);
 
-            return $this->schedule11($ids);
+            $sched = [
+                'subject_id' => $subject,
+                'teacher_id' => $teacher,
+                'section_id' => $section
+            ];
+            $count = count($schedule_model->where($sched)->findAll());
+            if($count < 1){
+                $schedule_model->insert($value);
+                return $this->schedule11($ids);
+            }
+            else{
+                session()->setFlashdata('duplicate', 'Duplicate input');
+                return $this->schedule11($ids);
+            }
         }
 
     }
@@ -318,10 +343,9 @@ class Section extends BaseController
     {
         $validated = $this->validate([
             'subject' => [
-                'rules' => 'required|is_unique[schedule_tbl.subject_id]',
+                'rules' => 'required',
                 'errors' => [
-                    'required' => 'Section is required!',
-                    'is_unique' => 'Section is Already Exist'
+                    'required' => 'Section is required!'
                 ]
             ]
 
@@ -366,9 +390,20 @@ class Section extends BaseController
                 'friday' => $friOne,
                 'fri_two' => $friTwo,
             ];
-            $schedule_model->insert($value);
-
-            return $this->schedule12($ids);
+            $sched = [
+                'subject_id' => $subject,
+                'teacher_id' => $teacher,
+                'section_id' => $section
+            ];
+            $count = count($schedule_model->where($sched)->findAll());
+            if($count < 1){
+                $schedule_model->insert($value);
+                return $this->schedule12($ids);
+            }
+            else{
+                session()->setFlashdata('duplicate', 'Duplicate input');
+                return $this->schedule12($ids);
+            }
         }
 
     }
@@ -460,6 +495,7 @@ class Section extends BaseController
                     ->get()->getResultArray(),
                 'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
 
+                'sem_year' => $year_model->first()
             ];
         //   var_dump($values['count']);
             return view('admin/section/grade11', $values);
@@ -481,6 +517,7 @@ class Section extends BaseController
                   ->get()->getResultArray(),
               'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
 
+              'sem_year' => $year_model->first()
           ];
       //   var_dump($values['count']);
           return view('admin/section/grade12', $values);

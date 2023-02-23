@@ -20,15 +20,19 @@ class Prospectus extends BaseController
         $prospectus_model = new ProspectusModel();
         $strand_model = new StrandModel();
         $user_model = new UserModel();
+        $year_model = new YearModel();
 
         $strand_id = $strand_model->where('strand', $strand)->find();
         $data = [
             'prospectus' => $prospectus_model->select('*, prospectrus_tbl.id')
                 ->join('strand_tbl', 'prospectrus_tbl.strand_id = strand_tbl.id', 'right')
+                ->join('school_year', 'prospectrus_tbl.semester = school_year.semester', 'inner')
                 ->where('strand_id', $strand_id[0]['id'])
                 ->where('prospectrus_tbl.year_level', 'Grade 11')
                 ->get()->getResultArray(),
             'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
+
+            'sem_year' => $year_model->first()
         ];
 
         session()->setFlashdata('strand', $strand);
@@ -39,15 +43,19 @@ class Prospectus extends BaseController
         $prospectus_model = new ProspectusModel();
         $strand_model = new StrandModel();
         $user_model = new UserModel();
+        $year_model = new YearModel();
 
         $strand_id = $strand_model->where('strand', $strand)->find();
         $data = [
             'prospectus' => $prospectus_model->select('*, prospectrus_tbl.id')
                 ->join('strand_tbl', 'prospectrus_tbl.strand_id = strand_tbl.id', 'right')
+                ->join('school_year', 'prospectrus_tbl.semester = school_year.semester', 'inner')
                 ->where('strand_id', $strand_id[0]['id'])
                 ->where('prospectrus_tbl.year_level', 'Grade 12')
                 ->get()->getResultArray(),
             'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
+
+            'sem_year' => $year_model->first()
         ];
 
         session()->setFlashdata('strand', $strand);
@@ -150,7 +158,7 @@ class Prospectus extends BaseController
         $data = [
 
             'subject' => $subject,
-            'title' => $title,
+            'subject_title' => $title,
             'unit' => $unit,
             'pre_requisit' => $pre_requisit,
             'year_level' => $year_level,
@@ -173,7 +181,7 @@ class Prospectus extends BaseController
         $data = [
 
             'subject' => $subject,
-            'title' => $title,
+            'subject_title' => $title,
             'unit' => $unit,
             'pre_requisit' => $pre_requisit,
             'year_level' => $year_level,
@@ -194,12 +202,14 @@ class Prospectus extends BaseController
       $values = [
           'prospectus' => $prospectus_model->select('*, prospectrus_tbl.id' )
               ->join('strand_tbl', 'prospectrus_tbl.strand_id = strand_tbl.id', 'right')
+              ->join('school_year', 'prospectrus_tbl.semester = school_year.semester', 'inner')
               ->where('prospectrus_tbl.strand_id', $strand_id[0]['id'])
               ->where('prospectrus_tbl.year_level', 'Grade 11')
               ->get()->getResultArray(),
           'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
+          'sem_year' => $year_model->first()
       ];
-  //    var_dump($values['prospectus']);
+    //  var_dump($values['prospectus']);
       return view('admin/prospectus/grade11', $values);
     }
     public function prospectus12()
@@ -214,10 +224,13 @@ class Prospectus extends BaseController
       $values = [
           'prospectus' => $prospectus_model->select('*, prospectrus_tbl.id' )
               ->join('strand_tbl', 'prospectrus_tbl.strand_id = strand_tbl.id', 'right')
+              ->join('school_year', 'prospectrus_tbl.semester = school_year.semester', 'inner')
               ->where('prospectrus_tbl.strand_id', $strand_id[0]['id'])
               ->where('prospectrus_tbl.year_level', 'Grade 12')
               ->get()->getResultArray(),
           'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
+
+          'sem_year' => $year_model->first()
       ];
   //    var_dump($values['prospectus']);
     //   return redirect()->route('prospectus12', $values);

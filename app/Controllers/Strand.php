@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Controllers\BaseController;
 use App\Models\StrandModel;
 use App\Models\UserModel;
+use App\Models\YearModel;
 
 class Strand extends BaseController
 {
@@ -16,10 +17,12 @@ class Strand extends BaseController
     {
         $strand_model = new StrandModel();
         $user_model = new UserModel();
+        $year_model = new YearModel();
         $data = [
             'strand'=> $strand_model->findAll(),
             'userName'=> $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
-            'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->find()
+            'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
+            'sem_year' => $year_model->first()
         ];
 
         $data['validation'] = $this->validator;
@@ -87,8 +90,10 @@ class Strand extends BaseController
     {
         $strand_model = new StrandModel();
         $user_model = new UserModel();
+        $year_model = new YearModel();
         $data['userName'] = $user_model->where('email', $email = session()->get('loggedInUser'))->find();
         $data['strand'] = $strand_model->find($id);
+        $data['sem_year'] = $year_model->first();
         //var_dump($data);
         return view('admin/strand/updateStrand', $data);
     }
@@ -120,6 +125,7 @@ class Strand extends BaseController
         if (!$validated)
         {
             $data['userName'] = $user_model->where('email', $email = session()->get('loggedInUser'))->find();
+            $data['sem_year'] = $year_model->first();
             return redirect()->route('insert_strand', $data);
         }
         else

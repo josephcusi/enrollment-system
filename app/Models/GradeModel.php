@@ -14,7 +14,7 @@ class GradeModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['subject_id', 'lrn', 'midterm_grade', 'final_grade', 'remark'];
+    protected $allowedFields    = ['subject_id', 'lrn', 'semester', 'midterm_grade', 'final_grade', 'remark'];
 
     // Dates
     protected $useTimestamps = false;

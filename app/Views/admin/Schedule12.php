@@ -127,6 +127,11 @@
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
 
+    <script src="<?= base_url()?>/dist/js/sweetalert.js"></script>
+     <?php if(!empty(session()->getFlashdata('duplicate'))) : ?>
+      <script>swal("Duplicate Input!", "You already set the schedule of this section.", "warning");</script>
+      <?php endif ?>
+
   <section class="content-header">
     <div class="container-fluid">
       <div class="row mb-2">

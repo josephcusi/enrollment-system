@@ -34,7 +34,9 @@ class Profile extends BaseController
         $profile_model = new ProfileModel();
         $user_model = new UserModel();
         $registration_model = new RegistrationModel();
-        $subject = $registration_model->where('state', 'Enrolled')->where('lrn', session()->get('lrn'))->first();
+        $subject = $registration_model
+        ->join('school_year', 'student_registration.semester = school_year.semester', 'inner')
+        ->where('state', 'Enrolled')->where('lrn', session()->get('lrn'))->first();
         
         if(!$subject){
             // var_dump($user['subject']);
@@ -49,6 +51,7 @@ class Profile extends BaseController
             ->select('*')
             ->join('student_registration', 'user_tbl.lrn = student_registration.lrn', 'inner')
             ->join('section_tbl', 'student_registration.user_section = section_tbl.id', 'inner')
+            ->join('school_year', 'student_registration.semester = school_year.semester', 'inner')
             ->where('user_tbl.email', session()->get('email'))
             ->first(),
             'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
@@ -64,7 +67,8 @@ class Profile extends BaseController
         $user_model = new UserModel();
         $registration_model = new RegistrationModel();
         $prospectus_model = new ProspectusModel();
-        $subject = $registration_model->where('state', 'Enrolled') ->where('lrn', session()->get('lrn'))->first();
+        $subject = $registration_model ->join('school_year', 'student_registration.semester = school_year.semester', 'inner')
+        ->where('state', 'Enrolled') ->where('lrn', session()->get('lrn'))->first();
         
         if(!$subject){
             // var_dump($user['subject']);
@@ -93,7 +97,9 @@ class Profile extends BaseController
                 ->join('strand_tbl', 'student_registration.strand = strand_tbl.strand', 'inner')
                 ->join('student_grading', 'student_registration.lrn = student_grading.lrn', 'inner')
                 ->join('prospectrus_tbl', 'student_grading.subject_id = prospectrus_tbl.id', 'inner')
+                ->join('school_year', 'student_grading.semester = school_year.semester', 'inner')
                 ->where('user_tbl.email', session()->get('email'))
+                ->groupBy('prospectrus_tbl.subject')
                 ->get()->getResultArray(),
                 'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
                 'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->findAll()
@@ -131,6 +137,7 @@ class Profile extends BaseController
             'student_registration' => $registration_model->select('*')
             ->join('user_tbl', 'student_registration.lrn = user_tbl.lrn', 'inner')
             ->join('section_tbl', 'student_registration.user_section = section_tbl.id', 'inner')
+            ->join('school_year', 'student_registration.semester = school_year.semester', 'inner')
             ->where('student_registration.lrn', session()->get('lrn'))
             ->first(),
             'name' => $user_model->where('email', session()->get('email'))->first(),
@@ -433,10 +440,9 @@ class Profile extends BaseController
     {
         $validated = $this->validate([
             'lrn' => [
-                'rules' => 'required|is_unique[student_registration.lrn]',
+                'rules' => 'required',
                 'errors' => [
-                    'required' => 'Your Last name is required.',
-                    'is_unique' => 'Your LRN is already Exist'
+                    'required' => 'Your Last name is required.'
                 ]
             ],
             'strand' => [
@@ -833,7 +839,8 @@ class Profile extends BaseController
         {
             $user_model = new UserModel();
             $registration_model = new RegistrationModel();
-            $subject = $registration_model->where('state', 'Enrolled')->where('lrn', session()->get('lrn'))->first();
+            $subject = $registration_model ->join('school_year', 'student_registration.semester = school_year.semester', 'inner')
+            ->where('state', 'Enrolled')->where('lrn', session()->get('lrn'))->first();
         
             if(!$subject){
                 // var_dump($user['subject']);
@@ -852,6 +859,9 @@ class Profile extends BaseController
                     ->join('strand_tbl', 'student_registration.strand = strand_tbl.strand', 'inner')
                     ->join('prospectrus_tbl', 'strand_tbl.id = prospectrus_tbl.strand_id', 'inner')
                     ->join('student_registration as s', 'prospectrus_tbl.year_level = s.year_level', 'inner')
+                    ->join('school_year', 'prospectrus_tbl.semester = school_year.semester', 'inner')
+                    ->join('school_year as sy', 'student_registration.semester = sy.semester', 'inner')
+                    ->groupBy('prospectrus_tbl.subject')
                     ->where('user_tbl.email', session()->get('email'))
                     ->get()->getResultArray()
                 ];

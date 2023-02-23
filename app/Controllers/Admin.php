@@ -97,9 +97,9 @@ class Admin extends BaseController
             'enroll2025' => $registration_model->where('state', 'Enrolled')->where('year', '2025')->get()->getNumRows(),
             'reject' => $registration_model->where('state', 'Rejected')->get()->getNumRows(),
             'name' => $user_model->where('email', session()->get('email'))->first(),
-
+            'sem_year' => $year_level->first()
         ];
-// var_dump($data['male']);
+// var_dump($data['sem_year']);
 		return view('admin/admindashboard', $data);
     }
     public function pre_enrolled()
@@ -109,10 +109,12 @@ class Admin extends BaseController
     public function newadmin()
     {
       $user_model = new UserModel();
+      $year_model = new YearModel();
       $data = [
         'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
         'retrieveAdmin' => $user_model->where('usertype', 'admin')->findAll(),
-        'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->find()
+        'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
+        'sem_year' => $year_model->first()
     ];
 
         return view('admin/newadmin', $data);
@@ -120,9 +122,11 @@ class Admin extends BaseController
     public function addadmin()
     {
       $user_model = new UserModel();
+      $year_model = new YearModel();
       $data = [
         'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
-        'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->find()
+        'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
+        'sem_year' => $year_model->first()
       ];
         return view('admin/addadmin', $data);
     }
@@ -137,7 +141,10 @@ class Admin extends BaseController
     public function grading()
     {
       $user_model = new UserModel();
-      $data['userName'] = $user_model->where('email', $email = session()->get('loggedInUser'))->findAll();
+      $data = [
+        'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->findAll(),
+        'sem_year' => $year_level->first()
+    ];
         return view('admin/grading', $data);
     }
     public function strand()
@@ -311,5 +318,21 @@ class Admin extends BaseController
                 return redirect()->route('newadmin');
             }
         }
+    }
+    public function updateYear()
+    {
+        $year_model = new YearModel();
+        $id = $this->request->getPost('id');
+        $year = $this->request->getPost('year');
+        $semester = $this->request->getPost('semester');
+
+        $data = [
+            'year' => $year,
+            'semester' => $semester,
+            'status' => 'active'
+        ];
+        $year_model->update($id, $data);
+        return redirect()->route('admin');
+        // var_dump($data);
     }
 }

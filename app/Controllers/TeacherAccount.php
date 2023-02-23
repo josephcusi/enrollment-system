@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Controllers\BaseController;
 use App\Models\UserModel;
 use App\Libraries\Hash;
+use App\Models\YearModel;
 
 class TeacherAccount extends BaseController
 {
@@ -15,17 +16,21 @@ class TeacherAccount extends BaseController
     public function listofteacher()
     {
         $user_model = new UserModel();
+        $year_model = new YearModel();
         $teacher = [
             'view' => $user_model->where('usertype', 'teacher')->findAll(),
             'userName' => $user_model->where('email', session()->get('email'))->findAll(),
+            'sem_year' => $year_model->first()
         ];
         return view('admin/listofteacher', $teacher);
     }
     public function addteacher()
     {
         $user_model = new UserModel();
+        $year_model = new YearModel();
         $data =[
             'userName' => $user_model->where('email', session()->get('email'))->findAll(),
+            'sem_year' => $year_model->first()
         ];
         return view('admin/addteacher', $data);
     }

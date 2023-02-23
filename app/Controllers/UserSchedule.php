@@ -25,6 +25,8 @@ class UserSchedule extends BaseController
             ->join('schedule_tbl', 'section_tbl.id = schedule_tbl.section_id', 'inner')
             ->join('user_tbl as u', 'schedule_tbl.teacher_id = u.id')
             ->join('prospectrus_tbl', 'schedule_tbl.subject_id = prospectrus_tbl.id', 'inner')
+            ->join('school_year', 'prospectrus_tbl.semester = school_year.semester', 'inner')
+            ->groupBy('prospectrus_tbl.subject')
             ->where('user_tbl.email', session()->get('email'))
             ->get()->getResultArray(),
             'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),

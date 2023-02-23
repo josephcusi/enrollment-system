@@ -107,6 +107,7 @@ $routes->get('/addadmin', 'Admin::addadmin');
 $routes->get('/adminlogout', 'Admin::adminlogout');
 $routes->post('/insertAdmin', 'Admin::insertAdmin');
 $routes->put('/adminUpdate', 'Admin::adminUpdate');
+$routes->post('/updateYear', 'Admin::updateYear');
 
 //------------TEACHER ADDING------------
 $routes->get('/listofteacher', 'TeacherAccount::listofteacher');

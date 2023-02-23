@@ -8,11 +8,11 @@
     </li>
     <li class="nav-item d-none d-sm-inline-block">
       <a href="<?=base_url()?>/admin" class="nav-link" style = "color:white;font-family:poppins;"><strong>Home</strong></a>
-
     </li>
-
+    <li class="nav-item d-none d-sm-inline-block">
+      <a> <button class="nav-link btn-year" style = "color:white;font-family:poppins; background-color:transparent; border:none;" data-id="<?= $sem_year['id']?>" data-year="<?= $sem_year['year']?>"><strong><?= $sem_year['year']?></strong></button></a>
+    </li>
   </ul>
-
   <!-- Right navbar links -->
   <ul class="navbar-nav ml-auto">
     <!-- Navbar Search -->
@@ -56,3 +56,23 @@
   </ul>
 
 </nav>
+<?= $this->include('admin/modal/yearModal')?>
+
+<script src="<?=base_url()?>/cssjs/js/jquery.min.js"></script>
+<script src="<?=base_url()?>/cssjs/js/bundle.min.js"></script>
+
+<script>
+$(document).ready(function(){
+     // sa button
+     $('.btn-year').on('click',function(){
+         // data galing buton
+         const id = $(this).data('id');
+        const year = $(this).data('year');
+         // // sa modal
+          $('.id').val(id);
+         $('.yearModal').val(year).trigger('change');
+         // Call Modal
+         $('#year').modal('show');
+     });
+   });
+</script>

@@ -25,6 +25,7 @@
                     <div class="form-group col-md-9">
                       <label for="inputgrade">Midterm Grade</label>
                       <input type="hidden" name="lrn" class="lrnModal">
+                      <input type="hidden" name="semester" value="<?= $year_sem[0]['semester']; ?>">
                       <input type="number" name="midterm" class="form-control" id="inputgrade" min = "75" max = "100">
                     </div>
                     <div class="form-group col-md-9">
@@ -33,6 +34,7 @@
                     </div>
                   <!-- Submit button -->
                   <div class="modal-footer justify-content-between">
+           
                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                   <button type="submit" class="btn btn-primary">Save changes</button>
           </div>

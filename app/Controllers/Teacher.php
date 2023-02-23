@@ -8,6 +8,7 @@ use App\Models\GradeModel;
 use App\Models\StrandModel;
 use App\Models\UserModel;
 use App\Models\ScheduleModel;
+use App\Models\YearModel;
 use App\Libraries\Hash;
 
 class Teacher extends BaseController
@@ -20,8 +21,8 @@ class Teacher extends BaseController
     {
         $strand_model = new StrandModel();
         $user_model = new UserModel();
-        $registration_model = new RegistrationModel;
-        $schedule_model = new ScheduleModel;
+        $year_model = new YearModel();
+
         $data =[
             'userInfo' => $user_model
             ->select('*, student_registration.id')
@@ -29,11 +30,14 @@ class Teacher extends BaseController
             ->join('section_tbl', 'schedule_tbl.section_id = section_tbl.id', 'inner')
             ->join('student_registration', 'section_tbl.id = student_registration.user_section', 'inner')
             ->join('user_tbl as u', 'student_registration.lrn = u.lrn', 'inner')
+            ->join('school_year', 'student_registration.semester = school_year.semester', 'inner')
             ->where('user_tbl.email', session()->get('email'))
             ->where('student_registration.state', 'Enrolled')
             ->groupBy('student_registration.lrn')
+            // ->distinct('student_registration.lrn')
             ->get()->getResultArray(),
             'userName' => $user_model->where('email', session()->get('email'))->first(),
+            'year_sem' => $year_model->findAll()
         ];
         return view('teacher/t_dashboard', $data);
         // var_dump($data);
@@ -50,24 +54,35 @@ class Teacher extends BaseController
     public function viewGrade($id)
     {
         $user_model = new UserModel();
+        $year_model = new YearModel();
+        
         $data =[
             'userInfo' => $user_model
-            ->select('*')
+            ->select('*, student_grading.id')
             ->join('schedule_tbl', 'user_tbl.id = schedule_tbl.teacher_id', 'inner')
             ->join('student_registration', 'schedule_tbl.section_id = student_registration.user_section', 'inner')
             ->join('prospectrus_tbl', 'schedule_tbl.subject_id = prospectrus_tbl.id', 'inner')
-            ->join('student_grading', 'student_registration.lrn = student_grading.lrn', 'inner')
+            ->join('school_year', 'student_registration.semester = school_year.semester', 'inner')
+            ->join('school_year as sy', 'prospectrus_tbl.semester = sy.semester', 'inner')
+            ->join('student_grading', 'prospectrus_tbl.id = student_grading.subject_id', 'inner')
             ->where('user_tbl.email', session()->get('email'))
+            ->where('student_grading.remark', 'Pending')
+            ->orWhere('student_grading.remark', 'Passed')
+            ->orWhere('student_grading.remark', 'Failed')
             ->where('student_registration.id', $id)
+            // ->groupBy('student_registration.lrn')
             ->get()->getResultArray(),
             'id' => $id,
             'userName' => $user_model->where('email', session()->get('email'))->first(),
+            'year_sem' => $year_model->findAll(),
             
             'info' => $user_model
-            ->select('*')
+            ->select('*, prospectrus_tbl.id')
             ->join('schedule_tbl', 'user_tbl.id = schedule_tbl.teacher_id', 'inner')
             ->join('student_registration', 'schedule_tbl.section_id = student_registration.user_section', 'inner')
             ->join('prospectrus_tbl', 'schedule_tbl.subject_id = prospectrus_tbl.id', 'inner')
+            ->join('school_year', 'student_registration.semester = school_year.semester', 'inner')
+            ->join('school_year as sy', 'prospectrus_tbl.semester = sy.semester', 'inner')
             ->where('user_tbl.email', session()->get('email'))
             ->where('student_registration.id', $id)
             ->get()->getResultArray()
@@ -79,10 +94,9 @@ class Teacher extends BaseController
     {
         $validated = $this->validate([
             'lrn' => [
-                'rules' => 'required|is_unique[student_grading.lrn]',
+                'rules' => 'required',
                 'errors' => [
-                    'required' => 'LRN is required!',
-                    'is_unique' => 'Your lrn is already Exist'
+                    'required' => 'LRN is required!'
                 ]
             ],
             'subject' => [
@@ -119,11 +133,15 @@ class Teacher extends BaseController
             $final = $this->request->getPost('finals');
             $lrn = $this->request->getPost('lrn');
             $subject = $this->request->getPost('subject');
+            $semester = $this->request->getPost('semester');
+
             $value = [
+                'semester' => $semester,
                 'subject_id' => $subject,
                 'midterm_grade' => $midterm,
                 'final_grade' => $final,
-                'lrn' => $lrn
+                'lrn' => $lrn,
+                'remark' => 'Pending'
             ];
             $grading = [
                 'lrn' => $lrn,
@@ -147,14 +165,17 @@ class Teacher extends BaseController
         $registration_model = new RegistrationModel;
         $grade_model = new GradeModel;
 
+        $semester = $this->request->getPost('semester');
         $midterm = $this->request->getPost('midterm');
         $final = $this->request->getPost('finals');
-        $id = $this->request->getPost('id');
+        $id = $this->request->getPost('idmod');
         $remark = $this->request->getPost('remark');
+
         $value = [
             'final_grade' => $final,
             'midterm_grade' => $midterm,
-            'remark' => $remark
+            'remark' => $remark,
+            'semester' => $semester,
         ];
         $grade_model->update($id, $value);
 

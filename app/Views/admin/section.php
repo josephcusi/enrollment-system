@@ -213,10 +213,10 @@
                   <td><?=$section_value['year_level']?></td>
                   <td>
                     <a href="<?=base_url('schedule/'. $section_value['id'])?>"><button type="button" class="btn btn-secondary btn-sm" style = "border-radius:15px">schedule</button>
-                    <a <button type="button"  class="btn btn-secondary btn-sm btn-updateSection" style = "border-radius:15px;"
+                    <a> <button type="button"  class="btn btn-secondary btn-sm btn-updateSection" style = "border-radius:15px;"
                     data-id="<?=$section_value['id'];?>" data-section="<?=$section_value['section'];?>" data-year_level="<?=$section_value['year_level'];?>"
                     >update</button></a>
-                     <?php include'modal/updatesection.php';?>
+                     <?php include 'modal/updatesection.php';?>
                   </td>
                   </tr>
                   </tbody>

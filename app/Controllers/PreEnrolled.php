@@ -10,6 +10,7 @@ use App\Models\UserModel;
 use App\Models\RegistrationModel;
 use App\Models\SectionModel;
 use App\Models\ProfileModel;
+use App\Models\YearModel;
 
 class PreEnrolled extends BaseController
 {
@@ -24,7 +25,8 @@ class PreEnrolled extends BaseController
         $user_profile = new ProfileModel();
         $user_model = new UserModel();
         $registration_model = new RegistrationModel();
-
+        $year_model = new YearModel();
+        
         $data = [
             'enrolled' => $registration_model
         ->select('*, student_registration.id')->join('school_year', 'student_registration.semester=school_year.semester', 'right')
@@ -33,6 +35,8 @@ class PreEnrolled extends BaseController
         ->join('strand_tbl', 'student_registration.strand = strand_tbl.strand', 'right')
         ->join('section_tbl', 'strand_tbl.id = section_tbl.strand_id', 'right')
         ->join('student_registration as s', 'section_tbl.year_level = s.year_level', 'inner')
+        ->join('student_registration as sr', 'school_year.semester = sr.semester', 'inner')
+        ->groupBy('section_tbl.section')
         ->where('student_registration.semester', session()->get('semester'))
         ->where('user_profile.id', $id)
         ->where('school_year.year', session()->get('year'))->get()->getResultArray(),
@@ -47,6 +51,7 @@ class PreEnrolled extends BaseController
         ->where('user_profile.id', $id)
         ->where('school_year.year', session()->get('year'))->first(),
 
+        'sem_year' => $year_model->first()
         ];
 
         // var_dump($data['enrolled']);
@@ -81,14 +86,17 @@ class PreEnrolled extends BaseController
     {
         $registration_model = new RegistrationModel();
         $user_model = new UserModel();
-        $data ['pre_enrolled'] = $registration_model
+        $year_model = new YearModel();
+        $data = ['pre_enrolled' => $registration_model
         ->select('*')
         ->join('school_year', 'student_registration.semester=school_year.semester', 'right')
         ->join('user_tbl', 'student_registration.lrn=user_tbl.lrn', 'right')
         ->join('user_profile', 'user_tbl.email=user_profile.email', 'right')
         ->where('student_registration.semester', session()->get('semester'))
         ->where('school_year.year', session()->get('year'))
-        ->get()->getResultArray();
+        ->get()->getResultArray(),
+        'sem_year' => $year_model->first()
+    ];
 
 
         $data['userName'] = $user_model->where('email', $email = session()->get('loggedInUser'))->find();

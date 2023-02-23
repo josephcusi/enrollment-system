@@ -232,7 +232,7 @@
       "info": true,
       "autoWidth": false,
       "responsive": true,
-    });
+    }).fnDestroy();
   });
 </script>
   </body>

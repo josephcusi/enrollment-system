@@ -285,10 +285,7 @@
                     <div class="form-group col-md-6">
                       <label for="year_level">Year Level</label>
                       <select class="form-control"id="studentStrand" name = "year_level">
-
-                      <option type="text" class="form-control" id="year_level" placeholder="Year Level" value="Grade 11">Grade 11</option>
                       <option type="text" class="form-control" id="year_level" placeholder="Year Level" value="Grade 12">Grade 12</option>
-
                      </select>
 
                       <span class="text-danger">
@@ -298,10 +295,7 @@
                     <div class="form-group col-md-6">
                       <label for="semester">Semester</label>
                       <select class="form-control"id="studentStrand" name = "semester">
-
-                      <option type="text" class="form-control" id="semester" placeholder="1st Semester" value="1st Semester">1st Semester</option>
-                      <option type="text" class="form-control" id="semester" placeholder="1st Semester" value="1st Semester">2nd Semester</option>
-
+                      <option type="text" class="form-control" id="semester" placeholder="1st Semester" value="<?= $sem_year['semester']?>"><?= $sem_year['semester']?></option>
                      </select>
                       <span class="text-danger">
                             <?= isset($validation) ? display_error($validation, 'semester') : '' ?>
