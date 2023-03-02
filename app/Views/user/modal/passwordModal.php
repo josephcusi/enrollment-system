@@ -17,6 +17,14 @@
                                                     <div class="form-row"
                                                         style="text-align:center; justify-content:center;">
                                                         <div class="form-group col-md-10 password">
+                                                            <label for="password">Old Password</label>
+                                                            <input type="password" name="oldpass"
+                                                                class="form-control password" placeholder="Old Password" required>
+                                                            <span class="text-danger">
+                                                                <?= isset($errorFlash) ? display_error($errorFlash, 'Old Password') : '' ?>
+                                                            </span>
+                                                        </div>
+                                                        <div class="form-group col-md-10 password">
                                                             <label for="password">New Password</label>
                                                             <input type="password" name="password"
                                                                 class="form-control password" placeholder="New Password" required>

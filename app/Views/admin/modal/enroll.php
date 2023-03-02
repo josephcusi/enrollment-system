@@ -20,7 +20,7 @@
                          <input type="hidden" value="Enrolled" name="state">
                           <label for="section">Section</label>
                           <select class="form-control" id="section" name = "section">
-                          <?php foreach($enrolled as $en):?>
+                          <?php foreach($enroll as $en):?>
                           <option type="text" class="form-control" id="section"><?=$en['section'];?></option>
                           <?php endforeach;?>
                           </select>

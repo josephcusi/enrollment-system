@@ -36,6 +36,7 @@ class Profile extends BaseController
         $registration_model = new RegistrationModel();
         $subject = $registration_model
         ->join('school_year', 'student_registration.semester = school_year.semester', 'inner')
+        ->join('school_year as sy', 'student_registration.year = sy.year', 'inner')
         ->where('state', 'Enrolled')->where('lrn', session()->get('lrn'))->first();
         
         if(!$subject){
@@ -52,6 +53,7 @@ class Profile extends BaseController
             ->join('student_registration', 'user_tbl.lrn = student_registration.lrn', 'inner')
             ->join('section_tbl', 'student_registration.user_section = section_tbl.id', 'inner')
             ->join('school_year', 'student_registration.semester = school_year.semester', 'inner')
+            ->join('school_year as sy', 'student_registration.year = sy.year', 'inner')
             ->where('user_tbl.email', session()->get('email'))
             ->first(),
             'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
@@ -67,7 +69,11 @@ class Profile extends BaseController
         $user_model = new UserModel();
         $registration_model = new RegistrationModel();
         $prospectus_model = new ProspectusModel();
-        $subject = $registration_model ->join('school_year', 'student_registration.semester = school_year.semester', 'inner')
+        $grade_model = new GradeModel();
+
+        $subject = $registration_model 
+        ->join('school_year', 'student_registration.semester = school_year.semester', 'inner')
+        ->join('school_year as sy', 'student_registration.year = sy.year', 'inner')
         ->where('state', 'Enrolled') ->where('lrn', session()->get('lrn'))->first();
         
         if(!$subject){
@@ -82,6 +88,8 @@ class Profile extends BaseController
             $count = count($grade_model
             ->select('*')
             ->join('user_tbl', 'student_grading.lrn = user_tbl.lrn', 'inner')
+            ->join('school_year', 'student_grading.year = school_year.year', 'inner')
+            ->join('school_year as sy', 'student_grading.semester = sy.semester', 'inner')
             ->where('user_tbl.email', $email)
             ->get()->getResultArray());
 
@@ -92,14 +100,16 @@ class Profile extends BaseController
             }
             else{
             $user = [
-                'subject' => $registration_model->select('*, student_registration.id')
-                ->join('user_tbl', 'student_registration.lrn = user_tbl.lrn', 'inner')
-                ->join('strand_tbl', 'student_registration.strand = strand_tbl.strand', 'inner')
-                ->join('student_grading', 'student_registration.lrn = student_grading.lrn', 'inner')
+                'subject' => $grade_model->select('*')
+                ->join('user_tbl', 'student_grading.lrn = user_tbl.lrn', 'inner')
                 ->join('prospectrus_tbl', 'student_grading.subject_id = prospectrus_tbl.id', 'inner')
-                ->join('school_year', 'student_grading.semester = school_year.semester', 'inner')
-                ->where('user_tbl.email', session()->get('email'))
+                ->join('student_registration', 'student_grading.semester = student_registration.semester', 'inner')
+                ->join('school_year', 'student_registration.semester = school_year.semester', 'inner')
+                ->join('school_year as sy', 'student_grading.year = sy.year', 'inner')
                 ->groupBy('prospectrus_tbl.subject')
+                ->where('school_year.year', session()->get('year'))
+                ->where('school_year.semester', session()->get('semester'))
+                ->where('user_tbl.email', session()->get('email'))
                 ->get()->getResultArray(),
                 'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
                 'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->findAll()
@@ -138,6 +148,7 @@ class Profile extends BaseController
             ->join('user_tbl', 'student_registration.lrn = user_tbl.lrn', 'inner')
             ->join('section_tbl', 'student_registration.user_section = section_tbl.id', 'inner')
             ->join('school_year', 'student_registration.semester = school_year.semester', 'inner')
+            ->join('school_year as sy', 'student_registration.year = sy.year', 'inner')
             ->where('student_registration.lrn', session()->get('lrn'))
             ->first(),
             'name' => $user_model->where('email', session()->get('email'))->first(),
@@ -381,13 +392,17 @@ class Profile extends BaseController
             $data = [
                 'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
                 'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->findAll(),
-                'strands' => $strand_model->findAll(),
+                'strands' => $strand_model
+                ->select('*')
+                ->join('user_tbl', 'strand_tbl.type = user_tbl.usertype', 'inner')
+                ->where('user_tbl.email', session()->get('loggedInUser'))
+                ->get()->getResultArray(),
                 'user' => $user_model->where('email', session()->get('loggedInUser'))->first(),
                 'year' =>  $year_model->where('status', 'active')->first()
             ];
             session()->setFlashdata('enroll', 'Please fill out your profile first');
             return view('user/newregistration', $data);
-            // var_dump($data['year']);
+            // var_dump($data['strands']);
         }
 
 
@@ -621,40 +636,55 @@ class Profile extends BaseController
     }
     public function updatePassword($id)
     {
-        $validated = $this->validate([
-            'password' => [
-                'rules' => 'required|min_length[6]|max_length[15]',
-                'errors' => [
-                    'required' => 'Password is required!',
-                    'min_length' => 'Password must have morethan 6 characters in length.',
-                    'max_length' => 'Passwords must not have characters more than 15 in length.'
+            
+            $validated = $this->validate([
+                'password' => [
+                    'rules' => 'required|min_length[6]',
+                    'errors' => [
+                        'required' => 'Password is required!',
+                        'min_length' => 'Password must have morethan 6 characters in length.'
+                    ]
+                ],
+                'confPassword' => [
+                    'rules' => 'required|min_length[6]|matches[password]',
+                    'errors' => [
+                        'required' => 'Confirm password is required!',
+                        'matches' => 'Password do not match.'
+                    ]
                 ]
-            ],
-            'confPassword' => [
-                'rules' => 'required|min_length[6]|max_length[15]|matches[password]',
-                'errors' => [
-                    'required' => 'Confirm password is required!',
-                    'min_length' => 'Confirm Password must have atleast 6 characters in length.',
-                    'max_length' => 'Confirm Password must not have characters more than 15 in length.',
-                    'matches' => 'Password do not match.'
-                ]
-            ]
-        ]);
-        $email = session()->get('loggedInUser');
-        if (!$validated)
-        {
-            session()->setFlashdata('validation', $this->validator);
-            return redirect('retrieve_profile',$email);
-        }
-        else{
-            $user_model = new UserModel();
-            $password = $this->request->getPost('password');
+            ]);
+            $email = session()->get('loggedInUser');
+            if (!$validated)
+            {
+                session()->setFlashdata('validation', $this->validator);
+                session()->setFlashdata('match', 'Incorrect Password Provided');
+                return redirect('retrieve_profile',$email);
+                // echo 1;
+            }
+            else{
+                $user_model = new UserModel();
+                $oldpass = $this->request->getPost('oldpass');
+        
+                $user_info = $user_model->where('email', session()->get('loggedInUser'))->first();
+                if ($user_info) {
+                    $checkPass = Hash::Check($oldpass, $user_info['password']);
+                    if (!$checkPass)
+                    {
+                    session()->setFlashdata('old', 'Incorrect Password Provided');
+                    return redirect()->route('retrieve_profile');
+                    // echo 1;
+                    }
+                    else
+                $user_model = new UserModel();
+                $password = $this->request->getPost('password');
 
-            $data = [
-                'password' => Hash::make($password)
-            ];
-            $user_model->update($id, $data);
-            return redirect('retrieve_profile');
+                $data = [
+                    'password' => Hash::make($password)
+                ];
+                $user_model->update($id, $data);
+                return redirect()->route('login');
+                // echo 2;
+            }
         }
     }
     public function updateUserProfile($id)
@@ -839,7 +869,10 @@ class Profile extends BaseController
         {
             $user_model = new UserModel();
             $registration_model = new RegistrationModel();
-            $subject = $registration_model ->join('school_year', 'student_registration.semester = school_year.semester', 'inner')
+            $prospectus_model = new ProspectusModel();
+            $subject = $registration_model
+            ->join('school_year', 'student_registration.semester = school_year.semester', 'inner')
+            ->join('school_year as sy', 'student_registration.year = sy.year', 'inner')
             ->where('state', 'Enrolled')->where('lrn', session()->get('lrn'))->first();
         
             if(!$subject){
@@ -854,15 +887,16 @@ class Profile extends BaseController
                     'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
                     'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->findAll(),
                     'userSub' => $user_model
-                    ->select('*, ')
+                    ->select('*')
                     ->join('student_registration', 'user_tbl.lrn = student_registration.lrn', 'inner')
-                    ->join('strand_tbl', 'student_registration.strand = strand_tbl.strand', 'inner')
+                    ->join('section_tbl', 'student_registration.user_section = section_tbl.id', 'inner')
+                    ->join('strand_tbl', 'student_registration.strand = strand_tbl.strand', ' inner')
                     ->join('prospectrus_tbl', 'strand_tbl.id = prospectrus_tbl.strand_id', 'inner')
-                    ->join('student_registration as s', 'prospectrus_tbl.year_level = s.year_level', 'inner')
+                    ->join('student_registration as st', 'prospectrus_tbl.year_level = st.year_level', 'inner')
                     ->join('school_year', 'prospectrus_tbl.semester = school_year.semester', 'inner')
-                    ->join('school_year as sy', 'student_registration.semester = sy.semester', 'inner')
+                    ->join('school_year as sy', 'st.year = sy.year', 'inner')
                     ->groupBy('prospectrus_tbl.subject')
-                    ->where('user_tbl.email', session()->get('email'))
+                    ->where('user_tbl.email', session()->get('loggedInUser'))
                     ->get()->getResultArray()
                 ];
                 return view('user/subject', $data);

@@ -19,6 +19,7 @@
       <!-- <input type="hidden" name="strand" class="form-control" value="<$strand ?>"> -->
         <label for="inputSubject">Subject Code</label>
         <input type = "hidden" name = "id" class = "id">
+        <input type="hidden" name="year" class="form-control" value="<?= $sem_year['year']?>">
         <input type="text" name="subject" class="form-control subjectModal" id="inputSubject" placeholder="Subject">
         <span class="text-danger">
               <?= isset($validation) ? display_error($validation, 'subject') : '' ?>

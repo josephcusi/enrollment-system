@@ -31,6 +31,7 @@ class Teacher extends BaseController
             ->join('student_registration', 'section_tbl.id = student_registration.user_section', 'inner')
             ->join('user_tbl as u', 'student_registration.lrn = u.lrn', 'inner')
             ->join('school_year', 'student_registration.semester = school_year.semester', 'inner')
+            ->join('school_year as sy', 'student_registration.year = sy.year', 'inner')
             ->where('user_tbl.email', session()->get('email'))
             ->where('student_registration.state', 'Enrolled')
             ->groupBy('student_registration.lrn')
@@ -55,22 +56,21 @@ class Teacher extends BaseController
     {
         $user_model = new UserModel();
         $year_model = new YearModel();
+        $grade_model = new GradeModel();
         
         $data =[
-            'userInfo' => $user_model
+            'userInfo' => $grade_model
             ->select('*, student_grading.id')
-            ->join('schedule_tbl', 'user_tbl.id = schedule_tbl.teacher_id', 'inner')
-            ->join('student_registration', 'schedule_tbl.section_id = student_registration.user_section', 'inner')
+            ->join('student_registration', 'student_grading.lrn = student_registration.lrn', 'inner')
+            ->join('schedule_tbl', 'student_grading.subject_id = schedule_tbl.subject_id', 'inner')
             ->join('prospectrus_tbl', 'schedule_tbl.subject_id = prospectrus_tbl.id', 'inner')
-            ->join('school_year', 'student_registration.semester = school_year.semester', 'inner')
-            ->join('school_year as sy', 'prospectrus_tbl.semester = sy.semester', 'inner')
-            ->join('student_grading', 'prospectrus_tbl.id = student_grading.subject_id', 'inner')
+            ->join('user_tbl', 'schedule_tbl.teacher_id = user_tbl.id', 'inner')
+            ->join('student_registration as st', 'prospectrus_tbl.year_level = st.year_level', 'inner')
+            ->join('school_year', 'prospectrus_tbl.semester = school_year.semester', 'inner')
+            ->join('school_year as sy', 'st.year = sy.year', 'inner')
             ->where('user_tbl.email', session()->get('email'))
-            ->where('student_grading.remark', 'Pending')
-            ->orWhere('student_grading.remark', 'Passed')
-            ->orWhere('student_grading.remark', 'Failed')
             ->where('student_registration.id', $id)
-            // ->groupBy('student_registration.lrn')
+            ->groupBy('prospectrus_tbl.subject')
             ->get()->getResultArray(),
             'id' => $id,
             'userName' => $user_model->where('email', session()->get('email'))->first(),
@@ -134,8 +134,10 @@ class Teacher extends BaseController
             $lrn = $this->request->getPost('lrn');
             $subject = $this->request->getPost('subject');
             $semester = $this->request->getPost('semester');
+            $year = $this->request->getPost('year');
 
             $value = [
+                'year' => $year,
                 'semester' => $semester,
                 'subject_id' => $subject,
                 'midterm_grade' => $midterm,
@@ -170,8 +172,10 @@ class Teacher extends BaseController
         $final = $this->request->getPost('finals');
         $id = $this->request->getPost('idmod');
         $remark = $this->request->getPost('remark');
+        $year = $this->request->getPost('year');
 
         $value = [
+            'year' => $year,
             'final_grade' => $final,
             'midterm_grade' => $midterm,
             'remark' => $remark,

@@ -226,7 +226,7 @@
       </div>
       <div class="modal-footer justify-content-between">
         <span><button type="button"  class="btn btn-default" style = "border-radius:15px; font-family:poppins; margin-bottom:; background-color:Green; color: white;" data-toggle="modal" data-target="#enroll">Enroll</button>
-        <a href="<?=base_url('rejected/'.$rejected['id'])?>"><button type="button"  class="btn btn-default" style = "border-radius:15px; font-family:poppins; margin-bottom:; background-color:red; color: white;">Reject</button></span></a>
+        <a href="<?=base_url('rejected/'.$enrolled[0]['id'])?>"><button type="button"  class="btn btn-default" style = "border-radius:15px; font-family:poppins; margin-bottom:; background-color:red; color: white;">Reject</button></span></a>
 
      </div>
      </form>

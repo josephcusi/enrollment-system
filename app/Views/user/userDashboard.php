@@ -102,6 +102,16 @@
       <?php if(!empty(session()->getFlashdata('profileDup'))) : ?>
       <script>swal("Opppsss!", "You already filled out this field.", "warning");</script>
       <?php endif ?>
+
+      <?php if(!empty(session()->getFlashdata('old'))) : ?>
+      <script>swal("Opppsss!", "Your old password is incorrect.", "warning");</script>
+      <?php endif ?>
+
+      <?php if(!empty(session()->getFlashdata('match'))) : ?>
+      <script>swal("Opppsss!", "Your password do not match.", "warning");</script>
+      <?php endif ?>
+
+      
       <!-- Content Header (Page header) -->
       <section class="content-header">
 

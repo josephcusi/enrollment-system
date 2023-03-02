@@ -154,9 +154,10 @@ class Prospectus extends BaseController
         $unit = $this->request->getPost('unit');
         $year_level = $this->request->getPost('year_level');
         $semester = $this->request->getPost('semester');
+        $year = $this->request->getPost('year');
 
         $data = [
-
+            'year' => $year,
             'subject' => $subject,
             'subject_title' => $title,
             'unit' => $unit,
@@ -177,9 +178,10 @@ class Prospectus extends BaseController
         $unit = $this->request->getPost('unit');
         $year_level = $this->request->getPost('year_level');
         $semester = $this->request->getPost('semester');
+        $year = $this->request->getPost('year');
 
         $data = [
-
+            'year' => $year,
             'subject' => $subject,
             'subject_title' => $title,
             'unit' => $unit,
@@ -293,12 +295,16 @@ class Prospectus extends BaseController
             $year_level = $this->request->getPost('year_level');
             $semester = $this->request->getPost('semester');
             $strand = $this->request->getPost('strand');
+            $year = $this->request->getPost('year');
+
             $strand_model = new StrandModel();
 
             $strand_id = $strand_model->where('strand', $strand)->find();
+            
 
 
             $values = [
+                'year' => $year,
                 'strand_id' => $strand_id[0]['id'],
                 'subject' => $subject,
                 'subject_title' => $title,
@@ -375,12 +381,15 @@ class Prospectus extends BaseController
             $year_level = $this->request->getPost('year_level');
             $semester = $this->request->getPost('semester');
             $strand = $this->request->getPost('strand');
+            $year = $this->request->getPost('year');
+
             $strand_model = new StrandModel();
 
             $strand_id = $strand_model->where('strand', $strand)->find();
 
 
             $values = [
+                'year' => $year,
                 'strand_id' => $strand_id[0]['id'],
                 'subject' => $subject,
                 'subject_title' => $title,

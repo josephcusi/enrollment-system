@@ -26,35 +26,36 @@ class PreEnrolled extends BaseController
         $user_model = new UserModel();
         $registration_model = new RegistrationModel();
         $year_model = new YearModel();
+        $section_model = new SectionModel();
         
         $data = [
-            'enrolled' => $registration_model
-        ->select('*, student_registration.id')->join('school_year', 'student_registration.semester=school_year.semester', 'right')
-        ->join('user_tbl', 'student_registration.lrn=user_tbl.lrn', 'right')
-        ->join('user_profile', 'user_tbl.email=user_profile.email', 'right')
-        ->join('strand_tbl', 'student_registration.strand = strand_tbl.strand', 'right')
-        ->join('section_tbl', 'strand_tbl.id = section_tbl.strand_id', 'right')
-        ->join('student_registration as s', 'section_tbl.year_level = s.year_level', 'inner')
-        ->join('student_registration as sr', 'school_year.semester = sr.semester', 'inner')
+        'enrolled' => $registration_model
+        ->select('*, student_registration.id')
+        ->join('school_year', 'student_registration.semester=school_year.semester', 'inner')
+        ->join('user_tbl', 'student_registration.lrn=user_tbl.lrn', 'inner')
+        ->join('user_profile', 'user_tbl.email=user_profile.email', 'inner')
+        ->where('student_registration.semester', session()->get('semester'))
+        ->where('student_registration.id', $id)
+        ->where('school_year.year', session()->get('year'))
+        ->get()->getResultArray(),
+
+        'enroll' => $section_model
+        ->select('*, student_registration.id')
+        ->join('strand_tbl', 'section_tbl.strand_id = strand_tbl.id', 'inner')
+        ->join('student_registration', 'strand_tbl.strand=student_registration.strand', 'inner')
+        ->join('student_registration as sr', 'section_tbl.year_level = sr.year_level', 'inner')
+        ->join('school_year', 'sr.year = school_year.year', 'inner')
         ->groupBy('section_tbl.section')
         ->where('student_registration.semester', session()->get('semester'))
-        ->where('user_profile.id', $id)
-        ->where('school_year.year', session()->get('year'))->get()->getResultArray(),
+        ->where('student_registration.id', $id)
+        ->where('school_year.year', session()->get('year'))
+        ->get()->getResultArray(),
         
         'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
-            'rejected' => $registration_model
-        ->select('*')->join('school_year', 'student_registration.semester=school_year.semester', 'right')
-        ->join('user_tbl', 'student_registration.lrn=user_tbl.lrn', 'right')
-        ->join('user_profile', 'user_tbl.email=user_profile.email', 'right')
-        ->join('student_registration as s', 'user_tbl.lrn=s.lrn', 'right')
-        ->where('student_registration.semester', session()->get('semester'))
-        ->where('user_profile.id', $id)
-        ->where('school_year.year', session()->get('year'))->first(),
-
         'sem_year' => $year_model->first()
         ];
 
-        // var_dump($data['enrolled']);
+        // var_dump($data['enroll']);
         return view('admin/viewPreEnroll', $data);
     }
     public function enroll($id)
@@ -88,12 +89,13 @@ class PreEnrolled extends BaseController
         $user_model = new UserModel();
         $year_model = new YearModel();
         $data = ['pre_enrolled' => $registration_model
-        ->select('*')
+        ->select('*, student_registration.id')
         ->join('school_year', 'student_registration.semester=school_year.semester', 'right')
         ->join('user_tbl', 'student_registration.lrn=user_tbl.lrn', 'right')
         ->join('user_profile', 'user_tbl.email=user_profile.email', 'right')
-        ->where('student_registration.semester', session()->get('semester'))
+        ->where('student_registration.year', session()->get('year'))
         ->where('school_year.year', session()->get('year'))
+        ->where('school_year.semester', session()->get('semester'))
         ->get()->getResultArray(),
         'sem_year' => $year_model->first()
     ];

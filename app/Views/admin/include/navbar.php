@@ -10,7 +10,7 @@
       <a href="<?=base_url()?>/admin" class="nav-link" style = "color:white;font-family:poppins;"><strong>Home</strong></a>
     </li>
     <li class="nav-item d-none d-sm-inline-block">
-      <a> <button class="nav-link btn-year" style = "color:white;font-family:poppins; background-color:transparent; border:none;" data-id="<?= $sem_year['id']?>" data-year="<?= $sem_year['year']?>"><strong><?= $sem_year['year']?></strong></button></a>
+      <a> <button class="nav-link btn-year" style = "color:white;font-family:poppins; background-color:transparent; border:none;" data-id="<?= $sem_year['id']?>" data-year="<?= $sem_year['year']?>" data-sem="<?= $sem_year['semester']?>"><strong><?= $sem_year['year']?></strong></button></a>
     </li>
   </ul>
   <!-- Right navbar links -->
@@ -67,12 +67,14 @@ $(document).ready(function(){
      $('.btn-year').on('click',function(){
          // data galing buton
          const id = $(this).data('id');
-        const year = $(this).data('year');
+         const year = $(this).data('year');
+         const sem = $(this).data('sem');
          // // sa modal
           $('.id').val(id);
-         $('.yearModal').val(year).trigger('change');
+          $('.yearModal').val(year);
+          $('.semester').val(sem).trigger('change');
          // Call Modal
-         $('#year').modal('show');
+          $('#year').modal('show');
      });
    });
 </script>

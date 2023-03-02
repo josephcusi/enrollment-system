@@ -254,6 +254,7 @@
                     <div class="form-row">
                     <div class="form-group col-md-6">
                     <input type="hidden" name="strand" class="form-control" value="<?= $strand ?>">
+                    <input type="hidden" name="year" class="form-control" value="<?= $sem_year['year']?>">
                       <label for="inputSubject">Subject Code</label>
 
                       <input type="text" name="subject" class="form-control" id="inputSubject" placeholder="Subject">

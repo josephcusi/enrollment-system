@@ -148,9 +148,10 @@
 
             <thead>
               <tr>
-                <th>Student LRN</th>
+                <th>Semester</th>
                 <th>Name</th>
                 <th>Strand</th>
+                <th>Grade Level</th>
                 <th>Status</th>
                 <th>Actions</th>
               </tr>
@@ -158,9 +159,10 @@
             <tbody>
               <?php foreach($registration as $reg): ?>
               <tr>
-                <td><?=$user['lrn']; ?></td>
+                <td><?=$reg['semester']; ?></td>
                 <td><?=$user['firstname'] .' ' . $user['middlename'] . ' ' . $user['lastname']; ?></td>
                 <td><?=isset($reg['strand']) ? $reg['strand'] : 'N/A'; ?></td>
+                <td><?=isset($reg['year_level']) ? $reg['year_level'] : 'N/A'; ?></td>
                 <td><?=isset($reg['state']) ? $reg['state'] : 'N/A'; ?></td>
                 <td>
                 <a href="<?=site_url('edit_reg/'.$reg['id'])?>"><button type="button" class="btn btn-secondary btn-sm" style = "border-radius:15px">update</button></a>

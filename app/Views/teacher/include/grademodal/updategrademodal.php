@@ -18,6 +18,7 @@
                     </div>
                     <div class="form-group col-md-9">
                       <input type="hidden" name="idmod" class="idModal">
+                      <input type="hidden" name="year" value="<?= $info[0]['year']?>">
                       <input type="hidden" name="semester" value="<?= $year_sem[0]['semester']; ?>">
                       <label for="inputgrade">Midterm Grade</label>
                       <input type="number" name="midterm" class="form-control midterm_modal" id="inputgrade" min = "75" max = "100">

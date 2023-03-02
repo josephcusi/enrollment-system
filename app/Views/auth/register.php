@@ -37,39 +37,39 @@
                 <form action="<?= base_url('/store'); ?>" method="post">
                     <?= csrf_field(); ?>
                     <div class="input-field">
-                            <input type="text" name="lrn" placeholder="Student LRN">
+                            <input type="text" name="lrn" placeholder="Student LRN" required>
                             <i class="uil uil-user icon"></i>
                     </div>
                     <span class="text-danger"><?= isset($validation) ? display_error($validation, 'lrn') : '' ?></span>
                         <div class="input-field">
-                            <input type="text" name="lastname" placeholder="Last Name"
+                            <input type="text" name="lastname" placeholder="Last Name" required
                                 >
                             <i class="uil uil-user icon"></i>
                         </div>
                         <span class="text-danger"><?= isset($validation) ? display_error($validation, 'lastname') : '' ?></span>
                         <div class="input-field">
-                            <input type="text" name="firstname" placeholder="First Name">
+                            <input type="text" name="firstname" placeholder="First Name" required>
                             <i class="uil uil-user icon"></i>
                         </div>
                         <span class="text-danger"><?= isset($validation) ? display_error($validation, 'firstname') : '' ?></span>
                         <div class="input-field">
-                            <input type="text" name="middlename" placeholder="Middle Name">
+                            <input type="text" name="middlename" placeholder="Middle Name" required>
                             <i class="uil uil-user icon"></i>
                         </div>
                         <span class="text-danger"><?= isset($validation) ? display_error($validation, 'middlename') : '' ?></span>
                         <div class="input-field">
-                            <input type="text" name="email" placeholder="Email" >
+                            <input type="text" name="email" placeholder="Email" required >
                             <i class="uil uil-envelope icon"></i>
                         </div>
                         <span class="text-danger"><?= isset($validation) ? display_error($validation, 'email') : '' ?></span>
                         <div class="input-field">
-                            <input type="password" name="password" class="password" placeholder="Password"
+                            <input type="password" name="password" class="password" placeholder="Password" required
                               >
                             <i class="uil uil-lock icon"></i>
                         </div>
                         <span class="text-danger"><?= isset($validation) ? display_error($validation, 'password') : '' ?></span>
                         <div class="input-field">
-                            <input type="password" name="passwordConf" class="password" placeholder="Confirm a password"
+                            <input type="password" name="passwordConf" class="password" placeholder="Confirm a password" required
                                >
                             <i class="uil uil-lock icon"></i>
                         </div>
@@ -77,7 +77,7 @@
 
                         <div class="checkbox-text">
                             <div class="checkbox-content">
-                                <input type="checkbox" id="termCon">
+                                <input type="checkbox" id="termCon" name="agree" value="yes" required>
                                 <label for="termCon" class="text">I accepted all terms and conditions</label>
                             </div>
                         </div>

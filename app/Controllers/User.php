@@ -82,14 +82,16 @@ class User extends BaseController
                         session()->set($data);
                          session()->set('loggedInUser', $userEmail);
                         $profile = new Profile();
-                        if($user_info['usertype'] == "student" and $user_info['status'] == "active")
+                        $user_model = new UserModel();
+
+                        if($user_info['usertype'] == "COLLEGE" or $user_info['usertype'] == "SHS" and $user_info['status'] == "active")
                         {
 
                           session()->setFlashdata('dashboard', 'Welcome');
                           return $profile->retrieve_profile($userEmail);
 
                         }
-                        elseif($user_info['usertype'] == "student" and $user_info['status'] == "pending")
+                        elseif($user_info['usertype'] == "SHS" or $user_info['usertype'] == "COLLEGE" and $user_info['status'] == "pending")
                         {
                           session()->setFlashdata('notverify', 'Your email is not verified yet. Please check your email');
                           return redirect()->to('login');
@@ -174,6 +176,7 @@ class User extends BaseController
         if (!$validated) {
             return view('auth/register', ['validation' => $this->validator]);
         } else {
+            $agree = $this->request->getPost('agree');
             $lrn = $this->request->getPost('lrn');
             $lastname = $this->request->getPost('lastname');
             $firstname = $this->request->getPost('firstname');
@@ -182,6 +185,7 @@ class User extends BaseController
             $password = $this->request->getPost('password');
 
             $values = [
+                'agree' => $agree,
                 'lrn' => $lrn,
                 'lastname' => $lastname,
                 'firstname' => $firstname,
@@ -195,6 +199,8 @@ class User extends BaseController
             $user_model = new UserModel();
             $query = $user_model->insert($values);
 
+
+            var_dump($values);
             if (!$query) {
                 return redirect()->back()->with('fail', 'Something went wrong.');
             } else {

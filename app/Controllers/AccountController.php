@@ -72,6 +72,7 @@ class AccountController extends BaseController
       $token = $this->token(100);
       $to = $this->request->getPost('email');
       $data = [
+        'agree' => $this->request->getPost('agree'),
         'lrn' => $this->request->getPost('lrn'),
         'lastname' => $this->request->getPost('lastname'),
         'firstname' => $this->request->getPost('firstname'),
