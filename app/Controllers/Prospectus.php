@@ -154,10 +154,8 @@ class Prospectus extends BaseController
         $unit = $this->request->getPost('unit');
         $year_level = $this->request->getPost('year_level');
         $semester = $this->request->getPost('semester');
-        $year = $this->request->getPost('year');
 
         $data = [
-            'year' => $year,
             'subject' => $subject,
             'subject_title' => $title,
             'unit' => $unit,
@@ -178,10 +176,9 @@ class Prospectus extends BaseController
         $unit = $this->request->getPost('unit');
         $year_level = $this->request->getPost('year_level');
         $semester = $this->request->getPost('semester');
-        $year = $this->request->getPost('year');
 
         $data = [
-            'year' => $year,
+         
             'subject' => $subject,
             'subject_title' => $title,
             'unit' => $unit,
@@ -294,8 +291,7 @@ class Prospectus extends BaseController
             $pre_requisit = $this->request->getPost('pre_requisit');
             $year_level = $this->request->getPost('year_level');
             $semester = $this->request->getPost('semester');
-            $strand = $this->request->getPost('strand');
-            $year = $this->request->getPost('year');
+            $strand = $this->request->getPost('strand');;
 
             $strand_model = new StrandModel();
 
@@ -304,7 +300,7 @@ class Prospectus extends BaseController
 
 
             $values = [
-                'year' => $year,
+             
                 'strand_id' => $strand_id[0]['id'],
                 'subject' => $subject,
                 'subject_title' => $title,
@@ -380,8 +376,7 @@ class Prospectus extends BaseController
             $pre_requisit = $this->request->getPost('pre_requisit');
             $year_level = $this->request->getPost('year_level');
             $semester = $this->request->getPost('semester');
-            $strand = $this->request->getPost('strand');
-            $year = $this->request->getPost('year');
+            $strand = $this->request->getPost('strand');;
 
             $strand_model = new StrandModel();
 
@@ -389,7 +384,7 @@ class Prospectus extends BaseController
 
 
             $values = [
-                'year' => $year,
+             
                 'strand_id' => $strand_id[0]['id'],
                 'subject' => $subject,
                 'subject_title' => $title,
