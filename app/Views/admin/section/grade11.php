@@ -178,9 +178,8 @@
                 <p class="text-muted text-left">Strand</p>
                 <ul class="list-group list-group-unbordered mb-3 nav nav-pills">
                 <?php $strand = session()->getFlashdata('strand');?>
-                <li class="nav-item"><a type="button" class="tablinks nav-link <?php if($strand == 'humss'){echo 'active' ;} ?>"style = "border-radius:20px" id="defaultOpen" href="<?= base_url('strandSec11/'.'humss')?>">HUMSS</a></li>
-                    <li class="nav-item"><a type="button" class="tablinks nav-link <?php if($strand == 'abm'){echo 'active';} ?>"style = "border-radius:20px" id="defaultOpen "  href="<?= base_url('strandSec11/'.'abm')?>">ABM</a></li>
-                    <li class="nav-item"><a type="button" class="tablinks nav-link <?php if($strand == 'stem'){echo 'active';} ?>"style = "border-radius:20px" id="defaultOpen "  href="<?= base_url('strandSec11/'.'stem')?>">STEM</a></li>
+                <li class="nav-item"><a type="button" class="tablinks nav-link <?php if($strand == 'gas'){echo 'active' ;} ?>"style = "border-radius:20px" id="defaultOpen" href="<?= base_url('strandSec11/'.'gas')?>">GAS</a></li>
+                    <li class="nav-item"><a type="button" class="tablinks nav-link <?php if($strand == 'smaw'){echo 'active';} ?>"style = "border-radius:20px" id="defaultOpen "  href="<?= base_url('strandSec11/'.'smaw')?>">SMAW</a></li>
                   </ul>
                   </ul>
               </div>
@@ -200,7 +199,7 @@
 
               <div class="card-body">
 
-              <div id="humss" class="tabcontent">
+              <div id="smaw" class="tabcontent">
                 <table id="example1" class="table table-bordered table" style = "font-family:poppins">
                 <thead>
                 <tr>
@@ -258,7 +257,6 @@
                       <select class="form-control"id="studentStrand" name = "year_level">
 
                       <option type="text" class="form-control" id="year_level" placeholder="Year Level" value="Grade 11">Grade 11</option>
-                      <option type="text" class="form-control" id="year_level" placeholder="Year Level" value="Grade 12">Grade 12</option>
 
                       </select>
                       <span class="text-danger">

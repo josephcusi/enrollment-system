@@ -33,9 +33,15 @@
             <div class="form signup">
                 <div class="logo" style="background-image: url('<?=base_url()?>/cssjs/img/dormehiLogo.png');"></div>
                 <span class="title">DORMEHI</span>
-
                 <form action="<?= base_url('/store'); ?>" method="post">
                     <?= csrf_field(); ?>
+                    <div class="select-field">
+                            <select type="text" name="usertype" placeholder="Student LRN" required>
+                            <option type="text" class="form-control" value="SHS">SHS</option>
+                            <option type="text" class="form-control" value="COLLEGE">COLLEGE</option>
+                            </select>
+                            <i class="uil uil-user icon"></i>
+                    </div>     
                     <div class="input-field">
                             <input type="text" name="lrn" placeholder="Student LRN" required>
                             <i class="uil uil-user icon"></i>
@@ -52,11 +58,13 @@
                             <i class="uil uil-user icon"></i>
                         </div>
                         <span class="text-danger"><?= isset($validation) ? display_error($validation, 'firstname') : '' ?></span>
+                        
                         <div class="input-field">
                             <input type="text" name="middlename" placeholder="Middle Name" required>
                             <i class="uil uil-user icon"></i>
                         </div>
                         <span class="text-danger"><?= isset($validation) ? display_error($validation, 'middlename') : '' ?></span>
+
                         <div class="input-field">
                             <input type="text" name="email" placeholder="Email" required >
                             <i class="uil uil-envelope icon"></i>
@@ -81,7 +89,6 @@
                                 <label for="termCon" class="text">I accepted all terms and conditions</label>
                             </div>
                         </div>
-
                         <div class="input-field button">
                             <button value="Signup">Signup</button>
                         </div>

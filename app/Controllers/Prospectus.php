@@ -193,11 +193,11 @@ class Prospectus extends BaseController
     {
       $prospectus_model = new ProspectusModel();
       $year_model = new YearModel();
-      session()->setFlashdata('strand', 'humss');
+      session()->setFlashdata('strand', 'gas');
       $strand_model = new StrandModel();
       $user_model = new UserModel();
 
-      $strand_id = $strand_model->where('strand', 'HUMSS')->find();
+      $strand_id = $strand_model->where('strand', 'GAS')->find();
       $values = [
           'prospectus' => $prospectus_model->select('*, prospectrus_tbl.id' )
               ->join('strand_tbl', 'prospectrus_tbl.strand_id = strand_tbl.id', 'right')
@@ -215,11 +215,11 @@ class Prospectus extends BaseController
     {
       $prospectus_model = new ProspectusModel();
       $year_model = new YearModel();
-      session()->setFlashdata('strand', 'humss');
+      session()->setFlashdata('strand', 'gas');
       $strand_model = new StrandModel();
       $user_model = new UserModel();
 
-      $strand_id = $strand_model->where('strand', 'HUMSS')->find();
+      $strand_id = $strand_model->where('strand', 'GAS')->find();
       $values = [
           'prospectus' => $prospectus_model->select('*, prospectrus_tbl.id' )
               ->join('strand_tbl', 'prospectrus_tbl.strand_id = strand_tbl.id', 'right')

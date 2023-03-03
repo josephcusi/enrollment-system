@@ -69,12 +69,12 @@
                   <form action="<?= base_url('retrieve_profile'); ?>" method="post">
                   <?= csrf_field(); ?>
                     <div class="input-field">
-                        <input type="text" placeholder="Email" name="email">
+                        <input type="text" placeholder="Email/LRN/School ID" name="email">
                         <i class="uil uil-envelope icon"></i>
                     </div>
                     <span class="text-danger"><?= isset($validation) ? display_error($validation, 'email') : '' ?></span>
                     <div class="input-field">
-                        <input type="password" class="password" placeholder="Password" name="password">
+                        <input type="password" class="password" placeholder="Password" name="password" required>
                         <i class="uil uil-lock icon"></i>
                     </div>
                     <span class="text-danger"><?= isset($validation) ? display_error($validation, 'password') : '' ?></span>

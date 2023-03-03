@@ -26,8 +26,6 @@
 
                                 <option type="text" class="form-control" id="year_level" placeholder="Year Level"
                                     value="Grade 11">Grade 11</option>
-                                <option type="text" class="form-control" id="year_level" placeholder="Year Level"
-                                    value="Grade 12">Grade 12</option>
 
                             </select>
                             <span class="text-danger">

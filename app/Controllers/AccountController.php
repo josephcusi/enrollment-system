@@ -81,7 +81,7 @@ class AccountController extends BaseController
         'password' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT),
         'token' => $token,
         'status' => 'pending',
-        'usertype' => 'student'
+        'usertype' => $this->request->getPost('usertype'),
       ];
       $user_model->save($data);
       $subject = 'CONFIRM YOUR REGISTRATION';

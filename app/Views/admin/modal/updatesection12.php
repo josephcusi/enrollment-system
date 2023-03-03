@@ -22,8 +22,6 @@
   <div class="form-group col-sm-6 mx-auto">
     <label for="inputYearLevel">Year Level</label>
     <select class="form-control year_levelModal"id="studentStrand" name = "year_level">
-
-    <option type="text" class="form-control" id="year_level" placeholder="Year Level" value="Grade 11">Grade 11</option>
     <option type="text" class="form-control" id="year_level" placeholder="Year Level" value="Grade 12">Grade 12</option>
 
     </select>

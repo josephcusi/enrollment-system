@@ -35,10 +35,9 @@ class User extends BaseController
     {
             $validated = $this->validate([
                 'email' => [
-                    'rules' => 'required|valid_email',
+                    'rules' => 'required',
                     'errors' => [
-                        'required' => 'Email is required!',
-                        'valid_email' => 'You must enter a valid email.'
+                        'required' => 'Email is required!'
                     ]
                 ],
                 'password' => [
@@ -59,7 +58,7 @@ class User extends BaseController
                 $user_model = new UserModel();
                 $year_level = new YearModel();
                 $year = $year_level->where('status', 'active')->first();
-                $user_info = $user_model->where('email', $email)->first();
+                $user_info = $user_model->where('email', $email)->orWhere('lrn', $email)->first();
 
                 if ($user_info) {
                     $checkPass = Hash::Check($password, $user_info['password']);
@@ -183,6 +182,7 @@ class User extends BaseController
             $middlename = $this->request->getPost('middlename');
             $email = $this->request->getPost('email');
             $password = $this->request->getPost('password');
+            $usertype = $this->request->getPost('usertype');
 
             $values = [
                 'agree' => $agree,
@@ -193,7 +193,7 @@ class User extends BaseController
                 'email' => $email,
                 'password' => Hash::make($password),
                 'status' => 'pending',
-                'usertype' => 'student'
+                'usertype' => $usertype
             ];
 
             $user_model = new UserModel();

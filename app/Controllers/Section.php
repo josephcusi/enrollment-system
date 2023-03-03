@@ -484,9 +484,9 @@ class Section extends BaseController
             $year_model = new YearModel();
             $user_model = new UserModel();
             $prospectus_model = new ProspectusModel();
-            session()->setFlashdata('strand', 'humss');
+            session()->setFlashdata('strand', 'gas');
             $strand_model = new StrandModel();
-            $strand_id = $strand_model->where('strand', 'HUMSS')->find();
+            $strand_id = $strand_model->where('strand', 'GAS')->find();
             $values = [
                 'section' => $section_model->select('*, section_tbl.id' )
                     ->join('strand_tbl', 'section_tbl.strand_id = strand_tbl.id', 'right')
@@ -506,9 +506,9 @@ class Section extends BaseController
           $year_model = new YearModel();
           $user_model = new UserModel();
           $prospectus_model = new ProspectusModel();
-          session()->setFlashdata('strand', 'humss');
+          session()->setFlashdata('strand', 'gas');
           $strand_model = new StrandModel();
-          $strand_id = $strand_model->where('strand', 'HUMSS')->find();
+          $strand_id = $strand_model->where('strand', 'GAS')->find();
           $values = [
               'section' => $section_model->select('*, section_tbl.id' )
                   ->join('strand_tbl', 'section_tbl.strand_id = strand_tbl.id', 'right')
