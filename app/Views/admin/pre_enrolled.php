@@ -180,7 +180,7 @@
               <td><?= $pre_enrolled_value['strand'];?></td>
               <td><?= $pre_enrolled_value['state'];?></td>
               <td>
-                <a href="<?=base_url('viewPreEnroll/'.$pre_enrolled_value['id'])?>"><button type="button" class="btn btn-secondary btn-sm" style = "border-radius:15px">view</button>
+                <a href="<?=base_url('viewPreEnroll/'. $pre_enrolled_value['id'] .'/'. $test[0]['id'])?>"><button type="button" class="btn btn-secondary btn-sm" style = "border-radius:15px">view</button>
 
               </td>
             </tr>

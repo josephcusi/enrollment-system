@@ -220,6 +220,10 @@ class Admin extends BaseController
                 if (!$prof_pic->hasMoved()) {
                     $prof_pic->move(FCPATH . 'profile');
 
+                    $str_result = '1234567890';
+                    $bccid =  substr(str_shuffle($str_result),0, '4');
+                    $myLrn = '';
+
                 $values = [
                     'lastname' => $lastname,
                     'firstname' => $firstname,
@@ -227,16 +231,15 @@ class Admin extends BaseController
                     'email' => $adminEmail,
                     'password' => Hash::make($adminPassword),
                     'usertype' => 'admin',
-                    'profile_picture' => $prof_pic->getClientName()
+                    'profile_picture' => $prof_pic->getClientName(),
+                    'lrn' =>'ADMINID-'.$myLrn.str_pad($bccid, 4, "0", STR_PAD_LEFT)
                 ];
 
                 $user_model = new UserModel();
                 $admin_lrn = $user_model->insert($values);
 
-                $myLrn = '';
+             
 
-                $lrn = 'ADMIN'.$myLrn.str_pad($admin_lrn, 3, "0", STR_PAD_LEFT);
-                $user_model->set('lrn', $lrn)->where('id', $admin_lrn)->update();
                 session()->setFlashdata('admin', 'Welcome');
                 return redirect()->route('newadmin');
             }

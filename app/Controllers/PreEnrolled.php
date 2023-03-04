@@ -20,7 +20,7 @@ class PreEnrolled extends BaseController
         $this->db = \Config\Database::connect();
         helper(['url', 'form']);
     }
-    public function viewPreEnroll($id)
+    public function viewPreEnroll($id, $ids)
     {
         $user_profile = new ProfileModel();
         $user_model = new UserModel();
@@ -36,7 +36,19 @@ class PreEnrolled extends BaseController
         ->join('user_profile', 'user_tbl.email=user_profile.email', 'inner')
         ->where('student_registration.semester', session()->get('semester'))
         ->where('student_registration.id', $id)
+        ->where('user_tbl.id', $ids)
         ->where('school_year.year', session()->get('year'))
+        ->get()->getResultArray(),
+
+        'enrolledNew' => $registration_model
+        ->select('*, user_tbl.id')
+        ->join('school_year', 'student_registration.semester=school_year.semester', 'right')
+        ->join('user_tbl', 'student_registration.lrn=user_tbl.lrn', 'right')
+        ->join('user_profile', 'user_tbl.email=user_profile.email', 'right')
+        ->where('student_registration.year', session()->get('year'))
+        ->where('user_tbl.id', $ids)
+        ->where('school_year.year', session()->get('year'))
+        ->where('school_year.semester', session()->get('semester'))
         ->get()->getResultArray(),
 
         'enroll' => $section_model
@@ -55,7 +67,7 @@ class PreEnrolled extends BaseController
         'sem_year' => $year_model->first()
         ];
 
-        // var_dump($data['enroll']);
+        // var_dump($data['test']);
         return view('admin/viewPreEnroll', $data);
     }
     public function enroll($id)
@@ -88,7 +100,8 @@ class PreEnrolled extends BaseController
         $registration_model = new RegistrationModel();
         $user_model = new UserModel();
         $year_model = new YearModel();
-        $data = ['pre_enrolled' => $registration_model
+        $data = [
+        'pre_enrolled' => $registration_model
         ->select('*, student_registration.id')
         ->join('school_year', 'student_registration.semester=school_year.semester', 'right')
         ->join('user_tbl', 'student_registration.lrn=user_tbl.lrn', 'right')
@@ -97,7 +110,17 @@ class PreEnrolled extends BaseController
         ->where('school_year.year', session()->get('year'))
         ->where('school_year.semester', session()->get('semester'))
         ->get()->getResultArray(),
-        'sem_year' => $year_model->first()
+        'sem_year' => $year_model->first(),
+
+        'test' => $registration_model
+        ->select('*, user_tbl.id')
+        ->join('school_year', 'student_registration.semester=school_year.semester', 'right')
+        ->join('user_tbl', 'student_registration.lrn=user_tbl.lrn', 'right')
+        ->join('user_profile', 'user_tbl.email=user_profile.email', 'right')
+        ->where('student_registration.year', session()->get('year'))
+        ->where('school_year.year', session()->get('year'))
+        ->where('school_year.semester', session()->get('semester'))
+        ->get()->getResultArray(),
     ];
 
 
@@ -106,28 +129,39 @@ class PreEnrolled extends BaseController
         // var_dump( $data ['pre_enrolled']);
         return view('admin/pre_enrolled', $data);
     }
-    public function enrolled($id)
+    public function enrolled($id, $ids)
     {
         $registration_model = new RegistrationModel();
         $section_model = new SectionModel();
+        $user_model = new UserModel();
 
         $state = $this->request->getPost('state');
         $section = $this->request->getPost('section');
         $section_id =  $section_model->where('section', $section)->first();
 
+        $str_result = '1234567890';
+        $bccid =  substr(str_shuffle($str_result),0, $id);
+        
+        $myLrn = '';
     $value = [
         'state' => $state,
-        'user_section' => $section_id['id']
+        'user_section' => $section_id['id'],
+        'lrn' =>'BCC2023-'.$myLrn.str_pad($bccid, 4, "0", STR_PAD_LEFT)
+    ];
+    $data = [
+        'lrn' =>'BCC2023-'.$myLrn.str_pad($bccid, 4, "0", STR_PAD_LEFT)
     ];
 
+    
     $registration_model->update($id, $value);
+    $user_model->update($ids, $data);
+
     $session = session();
 
     $email_data  = $registration_model
-    ->select('*')
+    ->select('*, user_tbl.id')
     ->join('school_year', 'student_registration.semester=school_year.semester', 'right')
     ->join('user_tbl', 'student_registration.lrn=user_tbl.lrn', 'right')
-    ->join('user_profile', 'user_tbl.email=user_profile.email', 'right')
     ->where('student_registration.id', $id)
     ->where('student_registration.semester', session()->get('semester'))
     ->where('school_year.year', session()->get('year'))
@@ -143,7 +177,7 @@ class PreEnrolled extends BaseController
 
     session()->setFlashdata('enrolled', 'Welcome');
     return redirect()->route('pre_enrolled_reg');
-    // var_dump($email_data);
+    // var_dump($value);
     }
     public function rejected($id)
     {
@@ -154,7 +188,6 @@ class PreEnrolled extends BaseController
     $value = [
         'state' => $state,
         'user_section' => $section
-
     ];
 
     $registration_model->update($id, $value);
