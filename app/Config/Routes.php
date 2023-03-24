@@ -25,7 +25,7 @@ $routes->set404Override();
 // where controller filters or CSRF protection are bypassed.
 // If you don't want to define all routes, please use the Auto Routing (Improved).
 // Set `$autoRoutesImproved` to true in `app/Config/Feature.php` and set the following to true.
-// $routes->setAutoRoute(false);
+$routes->setAutoRoute(true);
 
 /*
  * --------------------------------------------------------------------
@@ -174,9 +174,18 @@ $routes->get('/viewGrade/(:any)', 'Teacher::viewGrade/$1');
 $routes->put('/updateGrade/(:any)', 'Teacher::updateGrade/$1');
 $routes->put('/TeacherUpdate', 'Teacher::TeacherUpdate');
 //-----------Grading
+
+
+
+
+$routes->get('/tryteacher', 'Teacher::tryteacher');
+$routes->get('/tryadmin', 'Teacher::tryadmin');
+$routes->get('/tryuser', 'Teacher::tryuser');
 });
 
-
+// $routes->post('add_subject_g11', 'Prospectus::add_subject_g11');
+// $routes->post('add_subject_g12', 'Prospectus::add_subject_g12');
+// $routes->get('/pros11', 'Prospectus::pros11');
 
 
 /*

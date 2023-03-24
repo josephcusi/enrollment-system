@@ -6,8 +6,8 @@
       <aside class="main-sidebar sidebar-dark-secondary elevation-8">
   <!-- Brand Logo -->
   <a href="index3.html" class="brand-link">
-    <img src="<?=base_url()?>/dist/img/dormehiLogo.png" alt="dormehi Logo" class="brand-image img-circle elevation-3" style="opacity: 10;">
-    <span class="brand-text font-weight-light" style="margin-left:10%;"><strong>DORMEHI</strong></span>
+  <img src="<?=base_url()?>/cssjs/img/bccLogo.png" alt="dormehi Logo" class="brand-image img-circle elevation-3" style="opacity: 10;">
+    <span class="brand-text font-weight-light" style="margin-left:0%; font-size:85%;"><strong>Baco Community College</strong></span>
   </a>
 
   <!-- Sidebar -->
@@ -42,30 +42,6 @@
             <p>
               Registration
 
-            </p>
-          </a>
-        </li>
-        <li class="nav-item"style = "font-family:poppins;">
-          <a href="<?=base_url()?>/userSchedule" class="nav-link">
-            <i class="fa-sharp fa-solid fa-calendar"></i>
-            <p>
-              Schedule
-            </p>
-          </a>
-        </li>
-        <li class="nav-item"style = "font-family:poppins;">
-          <a href="<?=base_url()?>/userProspectus" class="nav-link">
-            <i class="fa-sharp fa-solid fa-book"></i>
-            <p>
-            Grade
-            </p>
-          </a>
-        </li>
-        <li class="nav-item"style = "font-family:poppins;">
-          <a href="<?=base_url()?>/subject" class="nav-link">
-            <i class="fa-sharp fa-solid fa-book"></i>
-            <p>
-            Subject
             </p>
           </a>
         </li>
@@ -219,14 +195,14 @@
                       <div class="form-group row"style="font-family: Poppins;">
                         <label for="inputEmail" class="col-sm-1 col-form-label"style="font-family: Poppins;">Email</label>
                         <div class="col-sm-5">
-                          <input type="email" name="email" class="form-control" id="email" placeholder="Email" value="<?= isset($profile['email']) ? $profile['email'] : $userInfo['email'] ; ?>" disabled>
+                          <input type="email" name="email" class="form-control" id="email" placeholder="e.g Email" value="<?= isset($profile['email']) ? $profile['email'] : $userInfo['email'] ; ?>" disabled>
                         </div>
                       </div>
                       <div class="form-group row"style="font-family: Poppins;">
                         <label for="inputName2" class="col-sm-1 col-form-label"style="font-family: Poppins;">Password</label>
                         <div class="col-sm-5">
                           <input type="password" name="password" class="form-control" id="password"
-                            placeholder="Password" value="<?= isset($profile['password']) ? $profile['password'] : $userInfo['password']; ?>" disabled>
+                            placeholder="e.g Password" value="<?= isset($profile['password']) ? $profile['password'] : $userInfo['password']; ?>" disabled>
                         </div>
                       </div>
                       <?php foreach($userName as $password):?>
@@ -239,7 +215,7 @@
                       <div class="form-group row"style="font-family: Poppins;">
                         <label for="lastname" class="col-sm-1 col-form-label"style="font-family: Poppins;">Last Name</label>
                         <div class="col-sm-5">
-                          <input type="text" class="form-control"style = "border-radius:20px" id="lastname" name="lastname" placeholder="LastName"
+                          <input type="text" class="form-control"style = "border-radius:20px" id="lastname" name="lastname" placeholder="e.g LastName"
                             value="<?=  isset($profile['lastname']) ? $profile['lastname'] : $userInfo['lastname'];  ?>">
                           <span class="text-danger">
                             <?= isset($errorFlash) ? display_error($errorFlash, 'lastname') : '' ?>
@@ -250,7 +226,7 @@
                         <label for="firstname" class="col-sm-1 col-form-label"style="font-family: Poppins;">First Name</label>
                         <div class="col-sm-5">
                           <input type="text" class="form-control"style = "border-radius:20px" name="firstname" id="firstname"
-                            placeholder="First Name" value="<?=isset($profile['firstname']) ? $profile['firstname'] : $userInfo['firstname'];  ?>">
+                            placeholder="e.g First Name" value="<?=isset($profile['firstname']) ? $profile['firstname'] : $userInfo['firstname'];  ?>">
                           <span class="text-danger">
                             <?= isset($errorFlash) ? display_error($errorFlash, 'firstname') : '' ?>
                           </span>
@@ -260,7 +236,7 @@
                         <label for="middlename" class="col-sm-1 col-form-label"style="font-family: Poppins;">Middle Name</label>
                         <div class="col-sm-5">
                           <input type="text" class="form-control"style = "border-radius:20px" id="middlename" name="middlename"
-                            placeholder="Middle Name" value="<?= isset($profile['middlename']) ? $profile['middlename'] : $userInfo['middlename'] ; ?>">
+                            placeholder="e.g Middle Name" value="<?= isset($profile['middlename']) ? $profile['middlename'] : $userInfo['middlename'] ; ?>">
                           <span class="text-danger">
                             <?= isset($errorFlash) ? display_error($errorFlash, 'middlename') : '' ?>
                           </span>
@@ -295,28 +271,28 @@
                       </div>
                       <div class="form-group col-md-6"style="font-family: Poppins;">
                         <label for="inputReligion">Religion</label>
-                        <input type="text" name="religion" class="form-control"style = "border-radius:20px;font-family:poppins;" id="religion" placeholder="Religion" value="<?= isset($profile['religion']) ? $profile['religion'] : '' ; ?>">
+                        <input type="text" name="religion" class="form-control"style = "border-radius:20px;font-family:poppins;" id="religion" placeholder="e.g Roman Catholic" value="<?= isset($profile['religion']) ? $profile['religion'] : '' ; ?>">
                         <span class="text-danger">
                               <?= isset($errorFlash) ? display_error($errorFlash, 'religion') : '' ?>
                             </span>
                       </div>
                       <div class="form-group col-md-6"style="font-family: Poppins;">
                         <label for="inputNationality">Nationality</label>
-                        <input type="text" name="nationality" class="form-control"style = "border-radius:20px;font-family:poppins;" id="nationality" placeholder="Nationality" value="<?= isset($profile['nationality']) ? $profile['nationality'] : '' ; ?>">
+                        <input type="text" name="nationality" class="form-control"style = "border-radius:20px;font-family:poppins;" id="nationality" placeholder="e.g Filipino" value="<?= isset($profile['nationality']) ? $profile['nationality'] : '' ; ?>">
                         <span class="text-danger">
                               <?= isset($errorFlash) ? display_error($errorFlash, 'nationality') : '' ?>
                             </span>
                       </div>
                       <div class="form-group col-md-6"style="font-family: Poppins;">
                         <label for="inputBirthday">Birthday</label>
-                        <input type="date" name="birthday" class="form-control"style = "border-radius:20px;font-family:poppins;" id="birthday" placeholder="Birthday" value="<?= isset($profile['birthday']) ? $profile['birthday'] : '' ; ?>">
+                        <input type="date" name="birthday" class="form-control"style = "border-radius:20px;font-family:poppins;" id="birthday" placeholder="e.g Birthday" value="<?= isset($profile['birthday']) ? $profile['birthday'] : '' ; ?>">
                         <span class="text-danger">
                               <?= isset($errorFlash) ? display_error($errorFlash, 'birthday') : '' ?>
                             </span>
                       </div>
                       <div class="form-group col-md-6"style="font-family: Poppins;">
                         <label for="birthplace">Birthplace</label>
-                        <input type="text" name="birthplace" class="form-control"style = "border-radius:20px;font-family:poppins;" id="birthplace" placeholder="Birthplace" value="<?= isset($profile['birthplace']) ? $profile['birthplace'] : '' ; ?>">
+                        <input type="text" name="birthplace" class="form-control"style = "border-radius:20px;font-family:poppins;" id="birthplace" placeholder="e.g Poblacion, Baco, Oriental Mindoro" value="<?= isset($profile['birthplace']) ? $profile['birthplace'] : '' ; ?>">
                         <span class="text-danger">
                               <?= isset($errorFlash) ? display_error($errorFlash, 'birthplace') : '' ?>
                             </span>
@@ -334,7 +310,7 @@
                           <label for="address" class="col-sm-1 col-form-label"style = "font-family:poppins;">Street</label>
                           <div class="col-sm-5">
                             <div>
-                              <input type="text" name="street" class="form-control"style = "border-radius:20px;font-family:poppins;" id="street" placeholder="Street"
+                              <input type="text" name="street" class="form-control"style = "border-radius:20px;font-family:poppins;" id="street" placeholder="e.g Bonifacio"
                                 value="<?= isset($profile['street']) ? $profile['street'] : '' ; ?>">
                             </div>
                             <span class="text-danger">
@@ -347,7 +323,7 @@
                           <label for="contact" class="col-sm-1 col-form-label"style="font-family: Poppins;">Baranggay</label>
                           <div class="col-sm-5">
                             <input type="text" name="baranggay" class="form-control"style = "border-radius:20px;font-family:poppins;" id="baranggay"
-                              placeholder="Baranggay" value="<?= isset($profile['baranggay']) ? $profile['baranggay'] : '' ; ?>">
+                              placeholder="e.g Poblacion" value="<?= isset($profile['baranggay']) ? $profile['baranggay'] : '' ; ?>">
                             <span class="text-danger">
                               <?= isset($errorFlash) ? display_error($errorFlash, 'baranggay') : '' ?>
                             </span>
@@ -359,7 +335,7 @@
                           <label for="contact" class="col-sm-1 col-form-label"style="font-family: Poppins;">Provincial Address</label>
                           <div class="col-sm-5">
                             <input type="text" class="form-control"style = "border-radius:20px;font-family:poppins;" name="prov_add" id="prov_add"
-                              placeholder="Provincial" value="<?= isset($profile['prov_add']) ? $profile['prov_add'] : '' ; ?>">
+                              placeholder="e.g Oriental Mindoro" value="<?= isset($profile['prov_add']) ? $profile['prov_add'] : '' ; ?>">
                             <span class="text-danger">
                               <?= isset($errorFlash) ? display_error($errorFlash, 'prov_add') : '' ?>
                             </span>
@@ -369,7 +345,7 @@
                         <div class="form-group row">
                           <label for="pcontact" class="col-sm-1 col-form-label"style="font-family: Poppins;">Contact</label>
                           <div class="col-sm-5">
-                            <input type="text" name="contact" class="form-control"style = "border-radius:20px;font-family:poppins;" id="contact" placeholder="Contact"
+                            <input type="text" name="contact" class="form-control"style = "border-radius:20px;font-family:poppins;" id="contact" placeholder="e.g 09123456789"
                               value="<?= isset($profile['contact']) ? $profile['contact'] : '' ; ?>">
                             <span class="text-danger">
                               <?= isset($errorFlash) ? display_error($errorFlash, 'contact') : '' ?>
@@ -384,7 +360,7 @@
                         <label for="guardian" class="col-sm-1 col-form-label"style="font-family: Poppins;">Guardian</label>
                         <div class="col-sm-5">
                           <input type="text" class="form-control"style = "border-radius:20px;font-family:poppins;" name="guardian_name" id="guardian_name"
-                            placeholder="Guardian Name" value="<?= isset($profile['guardian_name']) ? $profile['guardian_name'] : '' ; ?>">
+                            placeholder="e.g Juan E. Dela Cruz" value="<?= isset($profile['guardian_name']) ? $profile['guardian_name'] : '' ; ?>">
                           <span class="text-danger">
                             <?= isset($errorFlash) ? display_error($errorFlash, 'guardian_name') : '' ?>
                           </span>
@@ -394,7 +370,7 @@
                         <label for="contact" class="col-sm-1 col-form-label"style="font-family: Poppins;">Contact</label>
                         <div class="col-sm-5">
                           <input type="text" class="form-control"style = "border-radius:20px;font-family:poppins;" name="guardian_contact" id="guardian_contact"
-                            placeholder="Contact Number" value="<?= isset($profile['guardian_contact']) ? $profile['guardian_contact'] : '' ; ?>">
+                            placeholder="e.g 09123456789" value="<?= isset($profile['guardian_contact']) ? $profile['guardian_contact'] : '' ; ?>">
                           <span class="text-danger">
                             <?= isset($errorFlash) ? display_error($errorFlash, 'guardian_contact') : '' ?>
                           </span>
@@ -404,7 +380,7 @@
                         <label for="contact" class="col-sm-1 col-form-label"style="font-family: Poppins;">Address</label>
                         <div class="col-sm-5">
                           <input type="text" class="form-control"style = "border-radius:20px;font-family:poppins;" name="guardian_address" id="guardian_address"
-                            placeholder="Address" value="<?= isset($profile['guardian_address']) ? $profile['guardian_address'] : '' ; ?>">
+                            placeholder="e.g Poblacion, Baco, Oriental Mindoro" value="<?= isset($profile['guardian_address']) ? $profile['guardian_address'] : '' ; ?>">
                           <span class="text-danger">
                             <?= isset($errorFlash) ? display_error($errorFlash, 'guardian_address') : '' ?>
                           </span>
@@ -418,7 +394,7 @@
                         <label for="school" class="col-sm-1 col-form-label"style="font-family: Poppins;">School Name</label>
                         <div class="col-sm-5">
                           <input type="text" class="form-control"style = "border-radius:20px;font-family:poppins;" id="school" name="elem_school"
-                            placeholder="School Name" value="<?= isset($profile['elem_school']) ? $profile['elem_school'] : '' ; ?>">
+                            placeholder="e.g Benito A. Villar" value="<?= isset($profile['elem_school']) ? $profile['elem_school'] : '' ; ?>">
                           <span class="text-danger">
                             <?= isset($errorFlash) ? display_error($errorFlash, 'elem_school') : '' ?>
                           </span>
@@ -427,7 +403,7 @@
                       <div class="form-group row">
                         <label for="address" class="col-sm-1 col-form-label"style="font-family: Poppins;">Address</label>
                         <div class="col-sm-5">
-                          <input type="text" class="form-control"style = "border-radius:20px;font-family:poppins;" id="contact" name="elem_address" placeholder="Address"
+                          <input type="text" class="form-control"style = "border-radius:20px;font-family:poppins;" id="contact" name="elem_address" placeholder="e.g Poblacion, Baco, Oriental Mindoro"
                             value="<?= isset($profile['elem_address']) ? $profile['elem_address'] : '' ; ?>">
                           <span class="text-danger">
                             <?= isset($errorFlash) ? display_error($errorFlash, 'elem_address') : '' ?>
@@ -438,7 +414,7 @@
                         <label for="year" class="col-sm-1 col-form-label"style="font-family: Poppins;">Year Attendee</label>
                         <div class="col-sm-5">
                           <input type="text" class="form-control"style = "border-radius:20px;font-family:poppins;" id="address" name="elem_year"
-                            placeholder="Year attendee" value="<?= isset($profile['elem_year']) ? $profile['elem_year'] : '' ; ?>">
+                            placeholder="e.g 2013-2014" value="<?= isset($profile['elem_year']) ? $profile['elem_year'] : '' ; ?>">
                           <span class="text-danger">
                             <?= isset($errorFlash) ? display_error($errorFlash, 'elem_year') : '' ?>
                           </span>
@@ -449,7 +425,7 @@
                         <label for="school_name" class="col-sm-1 col-form-label"style="font-family: Poppins;">School Name</label>
                         <div class="col-sm-5">
                           <input type="text" class="form-control"style = "border-radius:20px;font-family:poppins;" id="school_name" name="high_school"
-                            placeholder="School Name" value="<?= isset($profile['high_school']) ? $profile['high_school'] : '' ; ?>">
+                            placeholder="e.g Baco National High School" value="<?= isset($profile['high_school']) ? $profile['high_school'] : '' ; ?>">
                           <span class="text-danger">
                             <?= isset($errorFlash) ? display_error($errorFlash, 'high_school') : '' ?>
                           </span>
@@ -458,7 +434,7 @@
                       <div class="form-group row">
                         <label for="address" class="col-sm-1 col-form-label"style="font-family: Poppins;">Address</label>
                         <div class="col-sm-5">
-                          <input type="text" class="form-control"style = "border-radius:20px;font-family:poppins;" id="address" name="high_address" placeholder="Address"
+                          <input type="text" class="form-control"style = "border-radius:20px;font-family:poppins;" id="address" name="high_address" placeholder="e.g Poblacion, Baco, Oriental Mindoro"
                             value="<?= isset($profile['high_address']) ? $profile['high_address'] : '' ; ?>">
                           <span class="text-danger">
                             <?= isset($errorFlash) ? display_error($errorFlash, 'high_address') : '' ?>
@@ -468,7 +444,7 @@
                       <div class="form-group row">
                         <label for="year" class="col-sm-1 col-form-label"style="font-family: Poppins;">Year Attendee</label>
                         <div class="col-sm-5">
-                          <input type="text" class="form-control"style = "border-radius:20px;font-family:poppins;" id="year" name="high_year" placeholder="Year attendee"
+                          <input type="text" class="form-control"style = "border-radius:20px;font-family:poppins;" id="year" name="high_year" placeholder="e.g 2017-2018"
                             value="<?= isset($profile['high_year']) ? $profile['high_year'] : '' ; ?>">
                           <span class="text-danger">
                             <?= isset($errorFlash) ? display_error($errorFlash, 'high_year') : '' ?>

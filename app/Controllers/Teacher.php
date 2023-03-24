@@ -264,4 +264,16 @@ class Teacher extends BaseController
         }
         }
     }
+    public function tryteacher()
+    {
+        echo 'teacher';
+    }
+    public function tryuser()
+    {
+        echo 'user';
+    }
+    public function tryadmin()
+    {
+        echo 'admin';
+    }
 }

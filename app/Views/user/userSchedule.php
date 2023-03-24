@@ -6,8 +6,8 @@
 <aside class="main-sidebar sidebar-dark-secondary elevation-8">
   <!-- Brand Logo -->
   <a href="index3.html" class="brand-link">
-    <img src="<?=base_url()?>/dist/img/dormehiLogo.png" alt="dormehi Logo" class="brand-image img-circle elevation-3" style="opacity: 10;">
-    <span class="brand-text font-weight-light" style="margin-left:10%;"><strong>DORMEHI</strong></span>
+  <img src="<?=base_url()?>/cssjs/img/bccLogo.png" alt="dormehi Logo" class="brand-image img-circle elevation-3" style="opacity: 10;">
+    <span class="brand-text font-weight-light" style="margin-left:0%; font-size:85%;"><strong>Baco Community College</strong></span>
   </a>
 
   <!-- Sidebar -->

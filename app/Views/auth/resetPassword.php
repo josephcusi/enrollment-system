@@ -38,7 +38,7 @@
         <div class="forms">
             <div class="form signup">
                 <div class="logo"style="background-image: url('<?=base_url()?>/cssjs/img/dormehiLogo.png');"></div>
-                <span class="title">DORMEHI</span>
+                <span class="title">BACO COMMUNITY COLLEGE</span>
 
                 <form action="<?= site_url('reset-password') ?>" method="post">
                     <?= csrf_field(); ?>

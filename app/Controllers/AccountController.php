@@ -85,7 +85,7 @@ class AccountController extends BaseController
       ];
       $user_model->save($data);
       $subject = 'CONFIRM YOUR REGISTRATION';
-      $subject = 'DOROTEO S. MENDOZA SR. MEMORIAL NATIONAL HIGH SCHOOL';
+      $subject = 'BACO COMMUNITY COLLEGE';
       $message = 'Good Day !'.'<br>'.'<br>'.'Hi, '. $this->request->getPost('firstname').' '.$this->request->getPost('lastname').'!'.
       ' We are almost done setting up your account! Just one more step: please verify your email address by clicking
         <a href="'.base_url().'/verify/'.$token.'">verify your account.</a>';

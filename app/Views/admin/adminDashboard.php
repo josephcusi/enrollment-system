@@ -86,30 +86,7 @@
                 </li>
               </ul>
         </li>
-        <li class="nav-item"style = "font-family:poppins;">
-            <li class="nav-item"style = "font-family:poppins;">
-              <a href="<?=base_url('/retrieve_strand')?>" class="nav-link">
-                <i class="fa-sharp fa-solid fa-envelopes-bulk"></i>
-                <p>Strand</p>
-              </a>
-            </li>
-        </li>
-        <li class="nav-item"style = "font-family:poppins;">
-            <li class="nav-item"style = "font-family:poppins;">
-              <a href="<?=base_url('/newadmin')?>" class="nav-link">
-                <i class="nav-icon fa-solid fa-user"></i>
-                <p>Admin</p>
-              </a>
-            </li>
-        </li>
-        <li class="nav-item"style = "font-family:poppins;">
-            <li class="nav-item"style = "font-family:poppins;">
-              <a href="<?=base_url('/listofteacher')?>" class="nav-link">
-                <i class="fa-sharp fa-solid fa-envelopes-bulk"></i>
-                <p>Teachers</p>
-              </a>
-            </li>
-        </li>
+        
         <br>
         <br>
 

@@ -9,7 +9,7 @@
             </div>
 
             <div class="modal-body">
-            <form action="<?= site_url('enrolled/'.$enrolled[0]['id'] .'/'. $enrolledNew[0]['id']);?>" method='post'  enctype="multipart/form-data">
+            <form action="<?= site_url('enrolled/'.$enrolled[0]['id']);?>" method='post'  enctype="multipart/form-data">
             <input type="hidden" name="_method" value="PUT" />
                   <div class="card-body p-0">
                     <div class="bs-stepper">

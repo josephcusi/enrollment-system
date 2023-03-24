@@ -20,7 +20,7 @@ class PreEnrolled extends BaseController
         $this->db = \Config\Database::connect();
         helper(['url', 'form']);
     }
-    public function viewPreEnroll($id, $ids)
+    public function viewPreEnroll($id)
     {
         $user_profile = new ProfileModel();
         $user_model = new UserModel();
@@ -36,19 +36,7 @@ class PreEnrolled extends BaseController
         ->join('user_profile', 'user_tbl.email=user_profile.email', 'inner')
         ->where('student_registration.semester', session()->get('semester'))
         ->where('student_registration.id', $id)
-        ->where('user_tbl.id', $ids)
         ->where('school_year.year', session()->get('year'))
-        ->get()->getResultArray(),
-
-        'enrolledNew' => $registration_model
-        ->select('*, user_tbl.id')
-        ->join('school_year', 'student_registration.semester=school_year.semester', 'right')
-        ->join('user_tbl', 'student_registration.lrn=user_tbl.lrn', 'right')
-        ->join('user_profile', 'user_tbl.email=user_profile.email', 'right')
-        ->where('student_registration.year', session()->get('year'))
-        ->where('user_tbl.id', $ids)
-        ->where('school_year.year', session()->get('year'))
-        ->where('school_year.semester', session()->get('semester'))
         ->get()->getResultArray(),
 
         'enroll' => $section_model
@@ -129,7 +117,7 @@ class PreEnrolled extends BaseController
         // var_dump( $data ['pre_enrolled']);
         return view('admin/pre_enrolled', $data);
     }
-    public function enrolled($id, $ids)
+    public function enrolled($id)
     {
         $registration_model = new RegistrationModel();
         $section_model = new SectionModel();
@@ -139,22 +127,11 @@ class PreEnrolled extends BaseController
         $section = $this->request->getPost('section');
         $section_id =  $section_model->where('section', $section)->first();
 
-        $str_result = '1234567890';
-        $bccid =  substr(str_shuffle($str_result),0, $id);
-        
-        $myLrn = '';
     $value = [
         'state' => $state,
         'user_section' => $section_id['id'],
-        'lrn' =>'BCC2023-'.$myLrn.str_pad($bccid, 4, "0", STR_PAD_LEFT)
-    ];
-    $data = [
-        'lrn' =>'BCC2023-'.$myLrn.str_pad($bccid, 4, "0", STR_PAD_LEFT)
-    ];
-
-    
+    ];    
     $registration_model->update($id, $value);
-    $user_model->update($ids, $data);
 
     $session = session();
 
@@ -171,7 +148,7 @@ class PreEnrolled extends BaseController
     $email->setTo($email_data['email']);
     $email->setMailType("html");
     $email->setSubject('Enrollment Status Updated');
-    $email->setFrom('zasuke277379597@gmail.com', 'DOROTEO S. MENDOZA SR. MEMORIAL NATIONAL HIGH SCHOOL');
+    $email->setFrom('zasuke277379597@gmail.com', 'BACO COMMUNITY COLLEGE');
     $email->setMessage("Congratulations on your enrollment, we're excited to welcome you to the program and support your academic journey!");
     $email->send();
 
@@ -207,11 +184,15 @@ class PreEnrolled extends BaseController
     $email->setTo($email_data['email']);
     $email->setMailType("html");
     $email->setSubject('Enrollment Status Updated');
-    $email->setFrom('zasuke277379597@gmail.com', 'DOROTEO S. MENDOZA SR. MEMORIAL NATIONAL HIGH SCHOOL');
+    $email->setFrom('zasuke277379597@gmail.com', 'BACO COMMUNITY COLLEGE');
     $email->setMessage("We regret to inform you that your enrollment request has been rejected. If you have any questions or concerns, please contact us for further assistance.");
     $email->send();
     session()->setFlashdata('rejected', 'Welcome');
     return redirect()->route('pre_enrolled_reg');
 
+    }
+    public function generateID()
+    {
+        
     }
 }

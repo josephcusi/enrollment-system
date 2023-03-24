@@ -74,6 +74,8 @@ class User extends BaseController
                             'id' => $user_info['id'],
                             'email' => $user_info['email'],
                             'lrn' => $user_info['lrn'],
+                            'usertype' => $user_info['usertype'],
+                            'status' => $user_info['status'],
                             'profile_picture' => $user_info['profile_picture'],
                             'semester' => $year['semester'],
                             'year' => $year['year'],
@@ -88,6 +90,7 @@ class User extends BaseController
 
                           session()->setFlashdata('dashboard', 'Welcome');
                           return $profile->retrieve_profile($userEmail);
+                        // return redirect()->route('tryuser');
 
                         }
                         elseif($user_info['usertype'] == "SHS" or $user_info['usertype'] == "COLLEGE" and $user_info['status'] == "pending")
@@ -99,15 +102,15 @@ class User extends BaseController
                         {
                           session()->setFlashdata('teacher', 'Your');
                           return redirect()->route('t_dashboard');
+                        // return redirect()->route('tryteacher');
                         }
-                        else{
+                        elseif($user_info['status'] == "COLLEGE" or $user_info['status'] == "SHS"){
 
                           session()->set('loggedInUser', $userEmail);
                           session()->setFlashdata('admindashboard', 'Welcome');
                           return redirect()->route('admin');
+                        // return redirect()->route('tryadmin');
                         }
-
-
                     }
                 } else {
                   session()->setFlashdata('incorrect_email', 'Incorrect Email');

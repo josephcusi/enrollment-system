@@ -15,6 +15,7 @@ class Prospectus extends BaseController
     {
         helper(['url', 'form']);
     }
+    
     public function strandProspectus11($strand = null)
     {
         $prospectus_model = new ProspectusModel();
@@ -37,7 +38,10 @@ class Prospectus extends BaseController
 
         session()->setFlashdata('strand', $strand);
         return view('admin/prospectus/grade11', $data);
+        // return $this->response->setJSON($data);
+               
     }
+   
     public function strandProspectus12($strand = null)
     {
         $prospectus_model = new ProspectusModel();
@@ -189,6 +193,10 @@ class Prospectus extends BaseController
         session()->setFlashdata('updateprospectus', 'Duplicate input');
         return redirect()->route('prospectus12');
     }
+    public function pros11()
+    {
+        # code...
+    }
     public function prospectus11()
     {
       $prospectus_model = new ProspectusModel();
@@ -235,173 +243,218 @@ class Prospectus extends BaseController
     //   return redirect()->route('prospectus12', $values);
       return view('admin/prospectus/grade12', $values);
     }
-    public function addprospectus11()
-    {
-        $validated = $this->validate([
-            'subject' => [
-                'rules' => 'required|is_unique[prospectrus_tbl.subject]',
-                'errors' => [
-                    'required' => 'Subject is required.',
-                    'is_unique'=> 'Subject is already exist'
-                ]
-            ],
-            'title' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Title is required.'
-                ]
-            ],
-            'unit' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Unit is required.'
-                ]
-            ],
-            'pre_requisit' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Pre-Requisit is required.'
-                ]
-                ],
-            'year_level' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Year Level is required.'
-                ]
-            ],
-            'semester' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Semester is required.'
-                ]
+
+//     public function add_subject_g11() {
+//         $tite = new ProspectusModel();
+
+//         $strand = $this->request->getPost('strand');
+
+//         $strand_model = new StrandModel();
+
+//         $strand_id = $strand_model->where('strand', $strand)->find();
+
+//         $data = [
+//             'subject' => $this->request->getPost('subject'),
+//             'subject_title' => $this->request->getPost('title'),
+//             'unit'=> $this->request->getPost('unit'),
+//             'pre_requisit' => $this->request->getPost('prere'),
+//             'strand_id' => $strand_id[0]['id'],
+//             'year_level' => $this->request->getPost('year_level'),
+//             'semester' => $this->request->getPost('semester')
+//         ];
+//         $tite->insert($data);
+//         return $this->response;
+//     }
+//     public function add_subject_g12() {
+//         $tite = new ProspectusModel();
+
+//         $strand = $this->request->getPost('strand');
+
+//         $strand_model = new StrandModel();
+
+//         $strand_id = $strand_model->where('strand', $strand)->find();
+
+//         $data = [
+//             'subject' => $this->request->getPost('subject'),
+//             'subject_title' => $this->request->getPost('title'),
+//             'unit'=> $this->request->getPost('unit'),
+//             'pre_requisit' => $this->request->getPost('prere'),
+//             'strand_id' => $strand_id[0]['id'],
+//             'year_level' => $this->request->getPost('year_level'),
+//             'semester' => $this->request->getPost('semester')
+//         ];
+//         $tite->insert($data);
+//         return $this->response;
+//     }
+// }
+public function addprospectus11()
+{
+    $validated = $this->validate([
+        'subject' => [
+            'rules' => 'required|is_unique[prospectrus_tbl.subject]',
+            'errors' => [
+                'required' => 'Subject is required.',
+                'is_unique'=> 'Subject is already exist'
             ]
-        ]);
+        ],
+        'title' => [
+            'rules' => 'required',
+            'errors' => [
+                'required' => 'Title is required.'
+            ]
+        ],
+        'unit' => [
+            'rules' => 'required',
+            'errors' => [
+                'required' => 'Unit is required.'
+            ]
+        ],
+        'pre_requisit' => [
+            'rules' => 'required',
+            'errors' => [
+                'required' => 'Pre-Requisit is required.'
+            ]
+            ],
+        'year_level' => [
+            'rules' => 'required',
+            'errors' => [
+                'required' => 'Year Level is required.'
+            ]
+        ],
+        'semester' => [
+            'rules' => 'required',
+            'errors' => [
+                'required' => 'Semester is required.'
+            ]
+        ]
+    ]);
 
-        if (!$validated) {
-            session()->setFlashdata('validation', $this->validator);
-            session()->setFlashdata('notupdatesection', 'Duplicate input');
-            return redirect()->route('prospectus11');
-        }
-        else
-        {
-
-            $subject = $this->request->getPost('subject');
-            $title = $this->request->getPost('title');
-            $unit = $this->request->getPost('unit');
-            $pre_requisit = $this->request->getPost('pre_requisit');
-            $year_level = $this->request->getPost('year_level');
-            $semester = $this->request->getPost('semester');
-            $strand = $this->request->getPost('strand');;
-
-            $strand_model = new StrandModel();
-
-            $strand_id = $strand_model->where('strand', $strand)->find();
-            
-
-
-            $values = [
-             
-                'strand_id' => $strand_id[0]['id'],
-                'subject' => $subject,
-                'subject_title' => $title,
-                'unit' => $unit,
-                'pre_requisit' => $pre_requisit,
-                'year_level' => $year_level,
-                'semester' => $semester
-            ];
-            $prospectus_model = new ProspectusModel();
-            $query = $prospectus_model->insert($values);
-
-            if (!$query) {
-                return redirect()->back()->with('fail', 'Something went wrong.');
-            } else {
-              session()->setFlashdata('subjectadded', 'added');
-              return redirect()->route('prospectus11');
-            }
-        }
+    if (!$validated) {
+        session()->setFlashdata('validation', $this->validator);
+        session()->setFlashdata('notupdatesection', 'Duplicate input');
+        return redirect()->route('prospectus11');
     }
-    public function addprospectus12()
+    else
     {
-        $validated = $this->validate([
-            'subject' => [
-                'rules' => 'required|is_unique[prospectrus_tbl.subject]',
-                'errors' => [
-                    'required' => 'Subject is required.',
-                    'is_unique'=> 'Subject is already exist'
-                ]
-            ],
-            'title' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Title is required.'
-                ]
-            ],
-            'unit' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Unit is required.'
-                ]
-            ],
-            'pre_requisit' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Pre-Requisit is required.'
-                ]
-                ],
-            'year_level' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Year Level is required.'
-                ]
-            ],
-            'semester' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Semester is required.'
-                ]
-            ]
-        ]);
 
-        if (!$validated) {
-            session()->setFlashdata('validation', $this->validator);
-            session()->setFlashdata('notupdatesection', 'Duplicate input');
-            return redirect()->route('prospectus12');
-        }
-        else
-        {
+        $subject = $this->request->getPost('subject');
+        $title = $this->request->getPost('title');
+        $unit = $this->request->getPost('unit');
+        $pre_requisit = $this->request->getPost('pre_requisit');
+        $year_level = $this->request->getPost('year_level');
+        $semester = $this->request->getPost('semester');
+        $strand = $this->request->getPost('strand');;
 
-            $subject = $this->request->getPost('subject');
-            $title = $this->request->getPost('title');
-            $unit = $this->request->getPost('unit');
-            $pre_requisit = $this->request->getPost('pre_requisit');
-            $year_level = $this->request->getPost('year_level');
-            $semester = $this->request->getPost('semester');
-            $strand = $this->request->getPost('strand');;
+        $strand_model = new StrandModel();
 
-            $strand_model = new StrandModel();
-
-            $strand_id = $strand_model->where('strand', $strand)->find();
+        $strand_id = $strand_model->where('strand', $strand)->find();
+        
 
 
-            $values = [
-             
-                'strand_id' => $strand_id[0]['id'],
-                'subject' => $subject,
-                'subject_title' => $title,
-                'unit' => $unit,
-                'pre_requisit' => $pre_requisit,
-                'year_level' => $year_level,
-                'semester' => $semester
-            ];
-            $prospectus_model = new ProspectusModel();
-            $query = $prospectus_model->insert($values);
+        $values = [
+         
+            'strand_id' => $strand_id[0]['id'],
+            'subject' => $subject,
+            'subject_title' => $title,
+            'unit' => $unit,
+            'pre_requisit' => $pre_requisit,
+            'year_level' => $year_level,
+            'semester' => $semester
+        ];
+        $prospectus_model = new ProspectusModel();
+        $query = $prospectus_model->insert($values);
 
-            if (!$query) {
-                return redirect()->back()->with('fail', 'Something went wrong.');
-            } else {
-              session()->setFlashdata('subjectadded', 'added');
-              return redirect()->route('prospectus12');
-            }
+        if (!$query) {
+            return redirect()->back()->with('fail', 'Something went wrong.');
+        } else {
+          session()->setFlashdata('subjectadded', 'added');
+          return redirect()->route('prospectus11');
         }
     }
 }
+public function addprospectus12()
+{
+    $validated = $this->validate([
+        'subject' => [
+            'rules' => 'required|is_unique[prospectrus_tbl.subject]',
+            'errors' => [
+                'required' => 'Subject is required.',
+                'is_unique'=> 'Subject is already exist'
+            ]
+        ],
+        'title' => [
+            'rules' => 'required',
+            'errors' => [
+                'required' => 'Title is required.'
+            ]
+        ],
+        'unit' => [
+            'rules' => 'required',
+            'errors' => [
+                'required' => 'Unit is required.'
+            ]
+        ],
+        'pre_requisit' => [
+            'rules' => 'required',
+            'errors' => [
+                'required' => 'Pre-Requisit is required.'
+            ]
+            ],
+        'year_level' => [
+            'rules' => 'required',
+            'errors' => [
+                'required' => 'Year Level is required.'
+            ]
+        ],
+        'semester' => [
+            'rules' => 'required',
+            'errors' => [
+                'required' => 'Semester is required.'
+            ]
+        ]
+    ]);
+
+    if (!$validated) {
+        session()->setFlashdata('validation', $this->validator);
+        session()->setFlashdata('notupdatesection', 'Duplicate input');
+        return redirect()->route('prospectus12');
+    }
+    else
+    {
+
+        $subject = $this->request->getPost('subject');
+        $title = $this->request->getPost('title');
+        $unit = $this->request->getPost('unit');
+        $pre_requisit = $this->request->getPost('pre_requisit');
+        $year_level = $this->request->getPost('year_level');
+        $semester = $this->request->getPost('semester');
+        $strand = $this->request->getPost('strand');;
+
+        $strand_model = new StrandModel();
+
+        $strand_id = $strand_model->where('strand', $strand)->find();
+
+
+        $values = [
+         
+            'strand_id' => $strand_id[0]['id'],
+            'subject' => $subject,
+            'subject_title' => $title,
+            'unit' => $unit,
+            'pre_requisit' => $pre_requisit,
+            'year_level' => $year_level,
+            'semester' => $semester
+        ];
+        $prospectus_model = new ProspectusModel();
+        $query = $prospectus_model->insert($values);
+
+        if (!$query) {
+            return redirect()->back()->with('fail', 'Something went wrong.');
+        } else {
+          session()->setFlashdata('subjectadded', 'added');
+          return redirect()->route('prospectus12');
+        }
+    }
+}
+}
+ 

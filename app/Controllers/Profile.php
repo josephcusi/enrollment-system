@@ -13,6 +13,7 @@ use App\Models\ProspectusModel;
 use App\Models\StrandModel;
 use App\Models\GradeModel;
 use App\Models\ScheduleModel;
+use App\Models\YearlevelModel;
 use App\Libraries\Hash;
 
 
@@ -380,29 +381,52 @@ class Profile extends BaseController
         $profile_model = new ProfileModel();
         $profile_model = new ProfileModel();
         $user_model = new UserModel();
+        $yearlevel_model = new YearlevelModel();
+        $registration_model = new RegistrationModel();
+
         $email = session()->get('loggedInUser');
 
         $count = count($profile_model->where('email', $email)->findAll());
+        $counts = count($registration_model
+            ->select('*')
+            ->join('user_tbl', 'student_registration.lrn = user_tbl.lrn', 'inner')
+            ->join('school_year', 'student_registration.year = school_year.year', 'inner')
+            ->join('school_year as sy', 'student_registration.semester = sy.semester', 'inner')
+            ->where('user_tbl.email', session()->get('loggedInUser'))
+            ->get()->getResultArray());
 
         if($count < 1) {
             session()->setFlashdata('notExist', 'Please fill out your profile first');
+            return redirect()->route('registration');
+        }
+        elseif($counts == 1){
+            session()->setFlashdata('sendApp', 'Please fill out your profile first');
             return redirect()->route('registration');
         }
         else{
             $data = [
                 'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
                 'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->findAll(),
+
                 'strands' => $strand_model
                 ->select('*')
                 ->join('user_tbl', 'strand_tbl.type = user_tbl.usertype', 'inner')
                 ->where('user_tbl.email', session()->get('loggedInUser'))
                 ->get()->getResultArray(),
+
+                'yearnew' => $strand_model
+                ->select('*')
+                ->join('yearlevel_tbl', 'strand_tbl.type = yearlevel_tbl.type', 'inner')
+                ->where('yearlevel_tbl.type', session()->get('usertype'))
+                ->groupBy('yearlevel_tbl.year_level')
+                ->get()->getResultArray(),
+
                 'user' => $user_model->where('email', session()->get('loggedInUser'))->first(),
                 'year' =>  $year_model->where('status', 'active')->first()
             ];
             session()->setFlashdata('enroll', 'Please fill out your profile first');
             return view('user/newregistration', $data);
-            // var_dump($data['strands']);
+            // var_dump($counts);
         }
 
 
@@ -427,7 +451,6 @@ class Profile extends BaseController
 
     public function registration()
     {
-
         $user_model = new UserModel();
         $user['userName'] = $user_model->where('email', $email = session()->get('loggedInUser'))->find();
         $email = session()->get('loggedInUser');
@@ -446,6 +469,7 @@ class Profile extends BaseController
         ];
         $user['user'] = $user_model->where('email', session()->get('loggedInUser'))->first();
         $user['registration'] = $registration->where('lrn', $lrn)->findAll();
+        
 
         //session()->setFlashdata('sendapplication', '');
         return view('User/registration', $user);
@@ -514,21 +538,21 @@ class Profile extends BaseController
                 'strand' => $strand,
                 'year_level'=> $yearlevel,
                 'semester' => $semester,
-                'state' => 'pending'
+                'state' => 'Pending'
             ];
             $yearSem = [
                 'lrn' => $lrn,
                 'year_level' => $yearlevel,
-                'semester' => $semester
+                'semester' => $semester,
             ];
-            $count = count($registration_model->where($yearSem)->findAll());
-            if($count <= 1){
+            $count = count($registration_model->where($yearSem, session()->get('loggedInUser'))->findAll());
+            if($count <= 1 ){
                 $registration_model->insert($data);
             }
-            else{
+            else
+            {
                 session()->setFlashdata('duplicate', 'Duplicate input');
             }
-
             $prospectus_model = new ProspectusModel();
             $user_model = new UserModel();
             $session = session();
@@ -551,7 +575,7 @@ class Profile extends BaseController
             $email->setTo($emz);
             $email->setMailType("html");
             $email->setSubject('Application Recieved');
-            $email->setFrom('zasuke277379597@gmail.com', 'DOROTEO S. MENDOZA SR. MEMORIAL NATIONAL HIGH SCHOOL');
+            $email->setFrom('zasuke277379597@gmail.com', 'BACO COMMUNITY COLLEGE');
             $email->setMessage("Thank you for submitting your enrollment application. Our team is currently reviewing it and will get back to you as soon as possible with an update on your status. Please allow us some time to process your application and make a decision. In the meantime, if you have any questions or need additional information, please feel free to reach out to us.");
             $email->send();
             //var_dump($values['prospectus']);
@@ -570,10 +594,27 @@ class Profile extends BaseController
         $user_model = new UserModel();
         $profile_model = new ProfileModel();
         $user_model = new UserModel();
+        $strand_model = new StrandModel();
+        $year_model = new YearModel();
+
         $user = [
             'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
             'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->findAll(),
-            'user' => $registration_model->find($id)
+            'user' => $registration_model->find($id),
+            'year' =>  $year_model->where('status', 'active')->first(),
+
+            'strands' => $strand_model
+            ->select('*')
+            ->join('user_tbl', 'strand_tbl.type = user_tbl.usertype', 'inner')
+            ->where('user_tbl.email', session()->get('loggedInUser'))
+            ->get()->getResultArray(),
+
+            'yearnew' => $strand_model
+            ->select('*')
+            ->join('yearlevel_tbl', 'strand_tbl.type = yearlevel_tbl.type', 'inner')
+            ->where('yearlevel_tbl.type', session()->get('usertype'))
+            ->groupBy('yearlevel_tbl.year_level')
+            ->get()->getResultArray(),
         ];
 
         return view('user/updateReg', $user);
@@ -905,3 +946,5 @@ class Profile extends BaseController
 
         }
     }
+    
+    ?>

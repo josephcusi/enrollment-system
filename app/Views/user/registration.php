@@ -6,8 +6,8 @@
 <aside class="main-sidebar sidebar-dark-secondary elevation-8">
   <!-- Brand Logo -->
   <a href="index3.html" class="brand-link">
-    <img src="<?=base_url()?>/dist/img/dormehiLogo.png" alt="dormehi Logo" class="brand-image img-circle elevation-3" style="opacity: 10;">
-    <span class="brand-text font-weight-light" style="margin-left:10%;"><strong>DORMEHI</strong></span>
+  <img src="<?=base_url()?>/cssjs/img/bccLogo.png" alt="dormehi Logo" class="brand-image img-circle elevation-3" style="opacity: 10;">
+    <span class="brand-text font-weight-light" style="margin-left:0%; font-size:85%;"><strong>Baco Community College</strong></span>
   </a>
 
   <!-- Sidebar -->
@@ -45,30 +45,6 @@
             </p>
           </a>
         </li>
-        <li class="nav-item"style = "font-family:poppins;">
-          <a href="<?=base_url()?>/userSchedule" class="nav-link">
-            <i class="fa-sharp fa-solid fa-calendar"></i>
-            <p>
-              Schedule
-            </p>
-          </a>
-        </li>
-        <li class="nav-item"style = "font-family:poppins;">
-          <a href="<?=base_url()?>/userProspectus" class="nav-link">
-          <i class="fa-sharp fa-solid fa-book"></i>
-            <p>
-            Grade
-            </p>
-          </a>
-        </li>
-        <li class="nav-item"style = "font-family:poppins;">
-          <a href="<?=base_url()?>/subject" class="nav-link">
-            <i class="fa-sharp fa-solid fa-book"></i>
-            <p>
-            Subject
-            </p>
-          </a>
-        </li>
         <br>
         <br>
 
@@ -89,6 +65,10 @@
       <script src="<?= base_url()?>/dist/js/sweetalert.js"></script>
       <?php if(!empty(session()->getFlashdata('notExist'))) : ?>
       <script>swal("Can't Proceed!", "Please fill out the profile first.", "warning");</script>
+      <?php endif ?>
+
+      <?php if(!empty(session()->getFlashdata('sendApp'))) : ?>
+      <script>swal("Can't Proceed!", "You Already Fill out this form.", "warning");</script>
       <?php endif ?>
 
       <?php if(!empty(session()->getFlashdata('sendapplication'))) : ?>

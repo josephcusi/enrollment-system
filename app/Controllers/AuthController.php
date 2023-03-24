@@ -42,7 +42,7 @@ class AuthController extends Controller
         // Send an email with a password reset link
         //$resetLink = 'Please click this link <a href ="'.site_url("reset_Password?token=$token").'">reset your password</a>';
         $resetLink = '<a href ="'.site_url("reset_Password?token=$token").'">reset your password</a>';
-        $subject = 'DOROTEO S. MENDOZA SR. MEMORIAL NATIONAL HIGH SCHOOL';
+        $subject = 'BACO COMMINITY COLLEGE';
         $headers = 'MIME-Version:1.0'."\r\n";
         $headers = 'Content-type: text/html; charset=iso8859-1'. "\r\n";
         $email = \Config\Services::email();
