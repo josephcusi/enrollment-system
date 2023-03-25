@@ -92,50 +92,42 @@
                                                 Application Form</p>
                                         </div><br><br>
                                         <form style="margin-left:30%"
-                                            action="<?=site_url('insert_registration')?>" method="post">
+                                            action="<?=site_url('insert_credeantials')?>" method="post" enctype="multipart/form-data">
                                             <div class="form-horizontal" style="font-family:poppins; color:maroon;">
                                                 <div class="form-group col-md-6">
-                                                    <input type="hidden" name="year" value="<?=$year['year']?>">
-                                                    <label for="studentLrn">Student LRN</label>
-                                                    <select class="form-control" name="lrn"
-                                                        placeholder="<?= $user['lrn'];?>">
-                                                        <option type="text" class="form-control"
-                                                            value="<?= $user['lrn'];?>"><?= $user['lrn'];?></option>
-                                                    </select>
+                                                    <label for="studentLrn">Birth Certificate</label>
+                                                    <input type="file" class="form-control" name="birth_cert"
+                                                        placeholder="">
                                                     <span
-                                                        class="text-danger"><?= isset($validation) ? display_error($validation, 'lrn') : '' ?></span>
+                                                        class="text-danger"><?= isset($validation) ? display_error($validation, 'birth_cert') : '' ?></span>
                                                 </div>
+                                            </div>
+                                            <div class="form-horizontal" style="font-family:poppins; color:maroon;">
                                                 <div class="form-group col-md-6">
-                                                    <label for="studentStrand">Strand</label>
-                                                    <select class="form-control" id="studentStrand" name="strand">
-                                                        <?php foreach($strands as $strand): ?>
-                                                        <option type="text" value="<?= $strand['strand']?>">
-                                                            <?= $strand['strand'] ?></option>
-                                                        <?php endforeach; ?>
-                                                    </select>
+                                                    <label for="studentLrn">Class Card</label>
+                                                    <input type="file" class="form-control" name="class_card"
+                                                        placeholder="">
                                                     <span
-                                                        class="text-danger"><?= isset($validation) ? display_error($validation, 'strand') : '' ?></span>
+                                                        class="text-danger"><?= isset($validation) ? display_error($validation, 'class_card') : '' ?></span>
                                                 </div>
+                                            </div>
+                                            <div class="form-horizontal" style="font-family:poppins; color:maroon;">
                                                 <div class="form-group col-md-6">
-                                                    <label for="yearLevel">Year Level</label>
-                                                    <select class="form-control" id="yearLevel" name="year_level">
-                                                        <?php foreach($yearnew as $yearLevel):?>
-                                                        <option type="text" value="<?= $yearLevel['year_level']?>"><?= $yearLevel['year_level']?></option>
-                                                        <?php endforeach;?>
-                                                    </select>
+                                                    <label for="studentLrn">Form 137</label>
+                                                    <input type="file" class="form-control" name="form_137"
+                                                        placeholder="">
                                                     <span
-                                                        class="text-danger"><?= isset($validation) ? display_error($validation, 'year_level') : '' ?></span>
+                                                        class="text-danger"><?= isset($validation) ? display_error($validation, 'form_137') : '' ?></span>
                                                 </div>
+                                            </div>
+                                            <div class="form-horizontal" style="font-family:poppins; color:maroon;">
                                                 <div class="form-group col-md-6">
-                                                    <label for="semester">Semester</label>
-                                                    <select class="form-control" name="semester"
-                                                        placeholder="<?= $year['semester'];?>">
-                                                        <option type="text" value="<?= $year['semester'];?>">
-                                                            <?= $year['semester'];?></option>
-                                                    </select>
+                                                    <label for="studentLrn">Good Moral</label>
+                                                    <input type="file" class="form-control" name="good_moral"
+                                                        placeholder="">
                                                     <span
-                                                        class="text-danger"><?= isset($validation) ? display_error($validation, 'semester') : '' ?></span>
-                                                    <button type="submit"
+                                                        class="text-danger"><?= isset($validation) ? display_error($validation, 'good_moral') : '' ?></span>
+                                                        <button type="submit"
                                                         style=" border-radius: 5px;margin-top:20px; float:right;  font-size:20px; font-family: Poppins;background-color:maroon; color:white;margin-left:45%">Submit</button>
                                                 </div>
                                             </div>

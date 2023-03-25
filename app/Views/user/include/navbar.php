@@ -23,7 +23,7 @@
     <?php  foreach($profile_picture as $prof):?>
 
       <div class="image" style = "margin-left:-15%">
-        <img style="background-image:url(../../dist/img/profile.jfif); border-color:maroon; background-size:cover; width:35px; height:35px;" src="<?= base_url().'/'.'profile/'.$prof['profile_picture'] ?>" class="img-fluid img-circle">
+        <img style="background-image:url(../../dist/img/profile.jfif); border-color:maroon; background-size:cover; width:35px; height:35px;" src="<?= base_url('student_credentials/' . session()->get('loggedInUser') . '/' . $prof['profile_picture']) ?>" class="img-fluid img-circle">
       </div>
       <?php endforeach;?>
 </div>

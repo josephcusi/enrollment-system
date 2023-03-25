@@ -30,7 +30,10 @@ class User extends BaseController
     {
         return view('Auth/register');
     }
-
+    public function credentials()
+    {
+        return view('Auth/credentials');
+    }
     public function retrieve_profile()
     {
             $validated = $this->validate([

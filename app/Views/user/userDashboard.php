@@ -123,8 +123,10 @@
                                     <?php foreach($profile_picture as $prof):?>
                                             <a href="#" class="btn btn-info btn-sm btn-edit" data-id="<?=$prof['id']?>" style="background:white;border:0; ">
 
-                                                <img class="profile-user-img img-fluid img-circle"
-                                                style="width:250px; height:240px; background-image:url(../../dist/img/profile.jfif); border-color:maroon; background-size:cover;" src="<?= base_url().'/'.'profile/'.$prof['profile_picture'] ?>">
+                                            <img class="profile-user-img img-fluid img-circle"
+     style="width:250px; height:240px; background-image:url(../../dist/img/profile.jfif); border-color:maroon; background-size:cover;"
+     src="<?= base_url('student_credentials/' . session()->get('loggedInUser') . '/' . $prof['profile_picture']) ?>">
+
 
                                             </a>
 

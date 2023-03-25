@@ -60,11 +60,12 @@ $routes->post('forgot-password', 'AuthController::forgot');
 $routes->get('reset_Password', 'AuthController::reset_Password');
 $routes->get('login', 'AuthController::login');
 $routes->post('reset-password', 'AuthController::resetPassword');
-
+$routes->get('/credential', 'Profile::credential');
 
 //------------USER PROFILE------------
 $routes->group('', ['filter' => 'AuthCheck'], function ($routes) {
 $routes->get('/auth', 'User::auth');
+
 $routes->get('/insert_reg', 'User::insert_reg');
 $routes->get('/get_profile', 'Profile::get_profile');
 $routes->get('/retrieve_profile', 'Profile::retrieve_profile');
@@ -81,7 +82,7 @@ $routes->get('/newRegistration', 'Profile::newRegistration');
 $routes->get('/retrieve_yearUser', 'Profile::retrieve_yearUser');
 $routes->get('/retrieve_User', 'Profile::retrieve_User');
 $routes->get('/myprofile', 'Profile::myprofile');
-$routes->post('/insert_registration/(:any)', 'Profile::insert_registration/$1');
+$routes->post('/insert_registration', 'Profile::insert_registration');
 $routes->get('/updateReg', 'Profile::updateReg');
 $routes->get('/edit_reg/(:any)', 'Profile::edit_reg/$1');
 $routes->put('/update/(:any)', 'Profile::update/$1');
@@ -89,8 +90,7 @@ $routes->put('/updateProfile/(:any)', 'Profile::updateProfile/$1');
 $routes->get('/strandProspectus/(:any)', 'Prospectus::strandProspectus/$1');
 $routes->put('/updatePassword/(:any)', 'Profile::updatePassword/$1');
 $routes->put('/updateUserProfile/(:any)', 'Profile::updateUserProfile/$1');
-
-
+$routes->post('/insert_credeantials', 'Profile::insert_credeantials');
 
 });
 
