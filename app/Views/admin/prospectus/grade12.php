@@ -6,8 +6,8 @@
 <aside class="main-sidebar sidebar-dark-secondary elevation-8">
   <!-- Brand Logo -->
   <a href="index3.html" class="brand-link">
-    <img src="<?=base_url()?>/dist/img/dormehiLogo.png" alt="dormehi Logo" class="brand-image img-circle elevation-3" style="opacity: 10;">
-    <span class="brand-text font-weight-light" style="margin-left:10%;"><strong>DORMEHI</strong></span>
+  <img src="<?=base_url()?>/cssjs/img/bccLogo.png" alt="dormehi Logo" class="brand-image img-circle elevation-3" style="opacity: 10;">
+    <span class="brand-text font-weight-light" style="margin-left:0%; font-size:85%;"><strong>Baco Community College</strong></span>
   </a>
 
   <!-- Sidebar -->
@@ -66,7 +66,6 @@
             </ul>
         </li>
         <li class="nav-item menu-open"style = "font-family:poppins;">
-
               <a href="#" class="nav-link active">
                 <i class="fa-sharp fa-solid fa-atom"></i>
                   <p>Prospectus<i class="right fas fa-angle-left"></i></p>
@@ -102,6 +101,7 @@
               </a>
             </li>
         </li>
+        
         <li class="nav-item"style = "font-family:poppins;">
             <li class="nav-item"style = "font-family:poppins;">
               <a href="<?=base_url('/listofteacher')?>" class="nav-link">
@@ -109,6 +109,7 @@
                 <p>Teachers</p>
               </a>
             </li>
+        </li>
         </li>
         <br>
         <br>
@@ -224,7 +225,7 @@
                       data-semester="<?=$prospect['semester']?>"
 
                       >update</button></a>
-                       <?= $this->include('admin/modal/updateprospectus12')?>
+                       <?= $this->include('admin/prospectus/updateprospectus12')?>
                     </td>
                   </tr>
                   <?php endforeach;?>

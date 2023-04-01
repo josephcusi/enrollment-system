@@ -19,14 +19,28 @@ class Strand extends BaseController
         $user_model = new UserModel();
         $year_model = new YearModel();
         $data = [
-            'strand'=> $strand_model->where('type', 'SHS')->findAll(),
+            'strand'=> $strand_model
+            ->select('*, strand_tbl.id')
+            ->join('user_tbl', 'strand_tbl.type = user_tbl.usertype', 'inner')
+            ->where('strand_tbl.type', session()->get('status'))
+            ->get()->getResultArray(),
             'userName'=> $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
             'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
-            'sem_year' => $year_model->first()
+            'sem_year' => $year_model->first(),
+            
+            'yearnew' => $strand_model
+            ->select('*')
+            ->join('yearlevel_tbl', 'strand_tbl.type = yearlevel_tbl.type', 'inner')
+            ->where('yearlevel_tbl.type', session()->get('status'))
+            ->groupBy('yearlevel_tbl.year_level')
+            ->first(),
+
+            'stat' => $user_model->where('status', session()->get('status'))->first()
         ];
 
         $data['validation'] = $this->validator;
-        return view('admin/strand', $data);
+        return view('admin/strand/strand', $data);
+        // var_dump($data['yearnew']);
     }
     public function insert_strand()
     {
@@ -86,18 +100,7 @@ class Strand extends BaseController
             }
         }
     }
-    public function edit_strand($id)
-    {
-        $strand_model = new StrandModel();
-        $user_model = new UserModel();
-        $year_model = new YearModel();
-        $data['userName'] = $user_model->where('email', $email = session()->get('loggedInUser'))->find();
-        $data['strand'] = $strand_model->find($id);
-        $data['sem_year'] = $year_model->first();
-        //var_dump($data);
-        return view('admin/strand/updateStrand', $data);
-    }
-    public function update_strand($id)
+    public function update_strand()
     {
         $validated = $this->validate([
             'strand' => [
@@ -124,24 +127,21 @@ class Strand extends BaseController
 
         if (!$validated)
         {
-            $data['userName'] = $user_model->where('email', $email = session()->get('loggedInUser'))->find();
-            $data['sem_year'] = $year_model->first();
-            return redirect()->route('insert_strand', $data);
+            return redirect()->route('retrieve_strand');
         }
         else
         {
             $strand_model = new StrandModel();
+            $id = $this->request->getPost('id');
             $strand = $this->request->getPost('strand');
             $title = $this->request->getPost('title');
-            $type = $this->request->getPost('type');
 
             $data = [
                 'strand' => $strand,
                 'title' => $title,
-                'type' => $type
             ];
             $strand_model->update($id, $data);
-            return $this->retrieve_strand();
+            return redirect()->route('retrieve_strand');
         }
     }
 }

@@ -60,7 +60,7 @@ $routes->post('forgot-password', 'AuthController::forgot');
 $routes->get('reset_Password', 'AuthController::reset_Password');
 $routes->get('login', 'AuthController::login');
 $routes->post('reset-password', 'AuthController::resetPassword');
-$routes->get('/credential', 'Profile::credential');
+$routes->get('/generatePdf', 'PdfGenerator::generatePdf');
 
 //------------USER PROFILE------------
 $routes->group('', ['filter' => 'AuthCheck'], function ($routes) {
@@ -90,8 +90,8 @@ $routes->put('/updateProfile/(:any)', 'Profile::updateProfile/$1');
 $routes->get('/strandProspectus/(:any)', 'Prospectus::strandProspectus/$1');
 $routes->put('/updatePassword/(:any)', 'Profile::updatePassword/$1');
 $routes->put('/updateUserProfile/(:any)', 'Profile::updateUserProfile/$1');
-$routes->post('/insert_credeantials', 'Profile::insert_credeantials');
-
+$routes->post('/insert_credeantials', 'User::insert_credeantials');
+$routes->get('/credentials', 'User::credentials');
 });
 
 
@@ -118,25 +118,29 @@ $routes->match(['get', 'post'],'/addteacher', 'TeacherAccount::addteacher');
 $routes->get('/retrieve_strand', 'Strand::retrieve_strand');
 $routes->post('/insert_strand', 'Strand::insert_strand');
 $routes->get('/edit_strand/(:any)', 'Strand::edit_strand/$1');
-$routes->put('/update_strand/(:any)', 'Strand::update_strand/$1');
+$routes->post('/update_strand', 'Strand::update_strand');
 
 //-----------ADMIN SECTION---------
 $routes->get('/section', 'Section::section');
 $routes->post('/newsection11', 'Section::newsection11');
-$routes->post('/newsection12', 'Section::newsection12');
 $routes->get('/schedule11/(:any)', 'Section::schedule11/$1');
 $routes->get('/schedule12/(:any)', 'Section::schedule12/$1');
+$routes->get('/schedule3rd/(:any)', 'Section::schedule3rd/$1');
+$routes->get('/schedule4th/(:any)', 'Section::schedule4th/$1');
 $routes->put('/section_update11', 'Section::section_update11');
 $routes->put('/section_update12', 'Section::section_update12');
 $routes->get('/strandSec/(:any)', 'Section::strandSec/$1');
 $routes->post('/addsched11/(:any)', 'Section::addsched11/$1');
 $routes->post('/addsched12/(:any)', 'Section::addsched12/$1');
 $routes->post('/updateSched11/(:any)', 'Section::updateSched11/$1');
-$routes->post('/updateSched12/(:any)', 'Section::updateSched12/$1');
 $routes->match(['get', 'post'],'/section11', 'Section::section11');
 $routes->match(['get', 'post'],'/section12', 'Section::section12');
+$routes->match(['get', 'post'],'/section3rd', 'Section::section3rd');
+$routes->match(['get', 'post'],'/section4th', 'Section::section4th');
 $routes->get('/strandSec11/(:any)', 'Section::strandSec11/$1');
 $routes->get('/strandSec12/(:any)', 'Section::strandSec12/$1');
+$routes->get('/courseThirdyear/(:any)', 'Section::courseThirdyear/$1');
+$routes->get('/courseFourthyear/(:any)', 'Section::courseFourthyear/$1');
 
 //-----------ADMIN PROSPECTUS---------
 $routes->post('/addprospectus11', 'Prospectus::addprospectus11');
@@ -146,6 +150,10 @@ $routes->put('/updateProspectus11', 'Prospectus::updateProspectus11');
 $routes->put('/updateProspectus12', 'Prospectus::updateProspectus12');
 $routes->match(['get', 'post'],'/prospectus11', 'Prospectus::prospectus11');
 $routes->match(['get', 'post'],'/prospectus12', 'Prospectus::prospectus12');
+$routes->match(['get', 'post'],'/prospectus3rd', 'Prospectus::prospectus3rd');
+$routes->match(['get', 'post'],'/prospectus4th', 'Prospectus::prospectus4th');
+$routes->get('/prospectusThirdyear/(:any)', 'Prospectus::prospectusThirdyear/$1');
+$routes->get('/prospectusFourthyear/(:any)', 'Prospectus::prospectusFourthyear/$1');
 $routes->get('/strandProspectus12/(:any)', 'Prospectus::strandProspectus12/$1');
 $routes->get('/strandProspectus11/(:any)', 'Prospectus::strandProspectus11/$1');
 

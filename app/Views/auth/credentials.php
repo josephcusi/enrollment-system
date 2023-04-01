@@ -83,12 +83,13 @@
             <div class="form login">
                 <div class="logo" style="background-image: url('<?=base_url()?>/cssjs/img/bccLogo.png');"></div>
                 <span class="title">Baco Community College</span>
-                <form action="<?= base_url('retrieve_profile'); ?>" method="post">
+                <form  action="<?=site_url('insert_credeantials')?>" method="post" enctype="multipart/form-data">
                     <?= csrf_field(); ?>
+                    <br>
                     <div class="form-group row" style="font-family: Poppins;">
                         <label class="col-sm-2 col-form-label" style="font-family: Poppins;">Birth Certificate
                             <div class="input-field">
-                                <input type="file" name="birth_cer" required>
+                                <input type="file" name="birth_cert" required>
                                 <i class="uil uil-file icon"></i>
                             </div>
                         </label>
@@ -99,7 +100,7 @@
                     <div class="form-group row" style="font-family: Poppins;">
                         <label class="col-sm-2 col-form-label" style="font-family: Poppins;">Form 137</label>
                         <div class="input-field">
-                            <input type="file" name="form137" required>
+                            <input type="file" name="form_137" required>
                             <i class="uil uil-file icon"></i>
                         </div>
                         <span
@@ -109,7 +110,7 @@
                     <div class="form-group row" style="font-family: Poppins;">
                         <label class="col-sm-2 col-form-label" style="font-family: Poppins;">Class Grade</label>
                         <div class="input-field">
-                            <input type="file" name="class_grade" required>
+                            <input type="file" name="class_card" required>
                             <i class="uil uil-file icon"></i>
                         </div>
                         <span

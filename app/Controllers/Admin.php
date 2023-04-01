@@ -97,7 +97,10 @@ class Admin extends BaseController
             'enroll2025' => $registration_model->where('state', 'Enrolled')->where('year', '2025')->get()->getNumRows(),
             'reject' => $registration_model->where('state', 'Rejected')->get()->getNumRows(),
             'name' => $user_model->where('email', session()->get('email'))->first(),
-            'sem_year' => $year_level->first()
+            'sem_year' => $year_level->first(),
+
+            'stat' => $user_model->where('status', session()->get('status'))->first()
+
         ];
 // var_dump($data['sem_year']);
 		return view('admin/admindashboard', $data);
@@ -110,14 +113,16 @@ class Admin extends BaseController
     {
       $user_model = new UserModel();
       $year_model = new YearModel();
-      $data = [
-        'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
-        'retrieveAdmin' => $user_model->where('usertype', 'admin')->findAll(),
-        'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
-        'sem_year' => $year_model->first()
-    ];
 
-        return view('admin/newadmin', $data);
+        $data = [
+            'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
+            'retrieveAdmin' => $user_model->where('status', session()->get('status'))->where('usertype', 'admin')->findAll(),
+            'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
+            'sem_year' => $year_model->first(),
+            'stat' => $user_model->where('status', session()->get('status'))->first()
+        ];
+    
+            return view('admin/newadmin', $data);
     }
     public function addadmin()
     {
@@ -126,7 +131,8 @@ class Admin extends BaseController
       $data = [
         'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
         'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
-        'sem_year' => $year_model->first()
+        'sem_year' => $year_model->first(),
+        'stat' => $user_model->where('status', session()->get('status'))->first()
       ];
         return view('admin/addadmin', $data);
     }
@@ -231,6 +237,7 @@ class Admin extends BaseController
                     'email' => $adminEmail,
                     'password' => Hash::make($adminPassword),
                     'usertype' => 'admin',
+                    'status' => 'COLLEGE',
                     'profile_picture' => $prof_pic->getClientName(),
                     'lrn' =>'ADMINID-'.$myLrn.str_pad($bccid, 4, "0", STR_PAD_LEFT)
                 ];

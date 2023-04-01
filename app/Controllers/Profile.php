@@ -548,7 +548,7 @@ class Profile extends BaseController
                 'strand' => $strand,
             ];
             $count = count($registration_model->where($yearSem, session()->get('loggedInUser'))->findAll());
-            if($count <= 1 ){
+            if($count < 1 ){
                 $registration_model->insert($data);
             }
             else
@@ -563,9 +563,6 @@ class Profile extends BaseController
             $profile_model = new ProfileModel();
             $registration_model = new RegistrationModel();
             $strand_id = $strand_model->where('strand', $strand)->find();
-
-            $credential_model = new CredentialModel();
-            $counts = count($credential_model->where('lrn', session()->get('lrn'))->find());
 
             $values = [
                 // 'prospectus'=> $prospectus_model->where('strand_id', $strand_id[0]['id'])->where('year_level', $yearlevel)->where('semester', $semester)->findAll(),
@@ -584,12 +581,8 @@ class Profile extends BaseController
             $email->setMessage("Thank you for submitting your enrollment application. Our team is currently reviewing it and will get back to you as soon as possible with an update on your status. Please allow us some time to process your application and make a decision. In the meantime, if you have any questions or need additional information, please feel free to reach out to us.");
             $email->send();
             // var_dump($counts);
-            if($counts == 1){
-                return redirect()->route('registration');
-            }
-            else{
-                return redirect()->route('credential');
-            }
+
+            return redirect()->route('registration');
      
 
         }
@@ -963,72 +956,6 @@ class Profile extends BaseController
                 'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->findAll(),
             ];
             return view('user/credentials', $data);
-        }
-        public function insert_credeantials()
-        {
-            $validated = $this->validate([
-                'class_card' => [
-                    'label' => 'Image File',
-                    'rules' => 'uploaded[class_card]'
-                        . '|is_image[class_card]'
-                        . '|mime_in[class_card,image/png,image/jpeg]'
-                ],
-                'birth_cert' => [
-                    'label' => 'Image File',
-                    'rules' => 'uploaded[birth_cert]'
-                        . '|is_image[birth_cert]'
-                        . '|mime_in[birth_cert,image/png,image/jpeg]'
-                ],
-                'form_137' => [
-                    'label' => 'Image File',
-                    'rules' => 'uploaded[form_137]'
-                        . '|is_image[form_137]'
-                        . '|mime_in[form_137,image/png,image/jpeg]'
-                ],
-                'good_moral' => [
-                    'label' => 'Image File',
-                    'rules' => 'uploaded[good_moral]'
-                        . '|is_image[good_moral]'
-                        . '|mime_in[good_moral,image/png,image/jpeg]'
-                ],
-            ]);
-            $email = session()->get('loggedInUser');
-            if (!$validated)
-            {
-                session()->setFlashdata('validation', $this->validator);
-                return redirect()->route('credential');
-            }
-             else
-            {
-                $user_model = new UserModel();
-                
-                $credential_model = new CredentialModel();
-                $files = ['birth_cert', 'class_card', 'form_137', 'good_moral'];
-                $data = [];
-                
-                foreach ($files as $file) {
-                    $uploadedFile = $this->request->getFile($file);
-                
-                    if ($uploadedFile->isValid() && !$uploadedFile->hasMoved()) {
-                        $uploadedFile->move(FCPATH . 'student_credentials' . '/' . $email = session()->get('loggedInUser'));
-                        $data[$file] = $uploadedFile->getClientName();
-                    }
-                }
-                
-                // add text input field value to the data array
-                $extra_info = session()->get('lrn');
-                if (!empty($extra_info)) {
-                    $data['lrn'] = $extra_info;
-                }
-                
-                if (!empty($data)) {
-                    $credential_model->insert($data);
-                    session()->setFlashdata('saveprofile', 'Incorrect Password Provided');
-                }
-                
-                return redirect()->route('registration');
-                               
-            }
         }
     }
     

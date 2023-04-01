@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="<?=base_url()?>/dist/img/dormehiLogo.png" type="image/icon">
+  <link rel="icon" href="<?=base_url()?>/cssjs/img/bccLogo.png" type="image/icon">
 
-  <title>DORMEHI | Enrollment</title>
+  <title>BCC | Enrollment</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">

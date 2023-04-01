@@ -52,7 +52,8 @@ class PreEnrolled extends BaseController
         ->get()->getResultArray(),
         
         'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
-        'sem_year' => $year_model->first()
+        'sem_year' => $year_model->first(),
+        'stat' => $user_model->where('status', session()->get('status'))->first()
         ];
 
         // var_dump($data['test']);
@@ -95,6 +96,7 @@ class PreEnrolled extends BaseController
         ->join('user_tbl', 'student_registration.lrn=user_tbl.lrn', 'right')
         ->join('user_profile', 'user_tbl.email=user_profile.email', 'right')
         ->where('student_registration.year', session()->get('year'))
+        ->where('user_tbl.usertype', session()->get('status'))
         ->where('school_year.year', session()->get('year'))
         ->where('school_year.semester', session()->get('semester'))
         ->get()->getResultArray(),
@@ -109,6 +111,8 @@ class PreEnrolled extends BaseController
         ->where('school_year.year', session()->get('year'))
         ->where('school_year.semester', session()->get('semester'))
         ->get()->getResultArray(),
+
+        'stat' => $user_model->where('status', session()->get('status'))->first()
     ];
 
 

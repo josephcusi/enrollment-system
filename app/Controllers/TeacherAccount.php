@@ -18,11 +18,12 @@ class TeacherAccount extends BaseController
         $user_model = new UserModel();
         $year_model = new YearModel();
         $teacher = [
-            'view' => $user_model->where('usertype', 'teacher')->findAll(),
+            'view' => $user_model->where('status', session()->get('status'))->where('usertype', 'teacher')->findAll(),
             'userName' => $user_model->where('email', session()->get('email'))->findAll(),
-            'sem_year' => $year_model->first()
+            'sem_year' => $year_model->first(),
+            'stat' => $user_model->where('status', session()->get('status'))->first()
         ];
-        return view('admin/listofteacher', $teacher);
+        return view('admin/teacher/listofteacher', $teacher);
     }
     public function addteacher()
     {
@@ -30,9 +31,10 @@ class TeacherAccount extends BaseController
         $year_model = new YearModel();
         $data =[
             'userName' => $user_model->where('email', session()->get('email'))->findAll(),
-            'sem_year' => $year_model->first()
+            'sem_year' => $year_model->first(),
+            'stat' => $user_model->where('status', session()->get('status'))->first()
         ];
-        return view('admin/addteacher', $data);
+        return view('admin/teacher/addteacher', $data);
     }
     public function addNewTeacher()
     {

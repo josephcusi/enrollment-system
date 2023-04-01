@@ -6,6 +6,7 @@ use App\Controllers\BaseController;
 use App\Models\UserModel;
 use App\Models\ProfileModel;
 use App\Models\YearModel;
+use App\Models\CredentialModel;
 use App\Libraries\Hash;
 
 class User extends BaseController
@@ -29,10 +30,6 @@ class User extends BaseController
     public function register()
     {
         return view('Auth/register');
-    }
-    public function credentials()
-    {
-        return view('Auth/credentials');
     }
     public function retrieve_profile()
     {
@@ -84,16 +81,21 @@ class User extends BaseController
                             'year' => $year['year'],
                         ];
                         session()->set($data);
-                         session()->set('loggedInUser', $userEmail);
+                        session()->set('loggedInUser', $userEmail);
                         $profile = new Profile();
                         $user_model = new UserModel();
 
                         if($user_info['usertype'] == "COLLEGE" or $user_info['usertype'] == "SHS" and $user_info['status'] == "active")
                         {
-
-                          session()->setFlashdata('dashboard', 'Welcome');
-                          return $profile->retrieve_profile($userEmail);
-                        // return redirect()->route('tryuser');
+                            $credential_model = new CredentialModel();
+                            $counts = count($credential_model->where('lrn', session()->get('lrn'))->find());
+                            if($counts == 1){
+                                session()->setFlashdata('dashboard', 'Welcome');
+                                return $profile->retrieve_profile($userEmail);
+                            }
+                            else{
+                                return redirect()->route('credentials');
+                            }
 
                         }
                         elseif($user_info['usertype'] == "SHS" or $user_info['usertype'] == "COLLEGE" and $user_info['status'] == "pending")
@@ -107,8 +109,7 @@ class User extends BaseController
                           return redirect()->route('t_dashboard');
                         // return redirect()->route('tryteacher');
                         }
-                        elseif($user_info['status'] == "COLLEGE" or $user_info['status'] == "SHS"){
-
+                        else{
                           session()->set('loggedInUser', $userEmail);
                           session()->setFlashdata('admindashboard', 'Welcome');
                           return redirect()->route('admin');
@@ -205,7 +206,6 @@ class User extends BaseController
             $user_model = new UserModel();
             $query = $user_model->insert($values);
 
-
             var_dump($values);
             if (!$query) {
                 return redirect()->back()->with('fail', 'Something went wrong.');
@@ -222,5 +222,75 @@ class User extends BaseController
             session()->remove('loggedInUser');
         }
         return redirect()->to('login?access=loggedout')->with('logoutz', 'Log Out');
+    }
+    public function credentials()
+    {
+        return view('Auth/credentials');
+    }
+    public function insert_credeantials()
+    {
+        $validated = $this->validate([
+            'class_card' => [
+                'label' => 'Image File',
+                'rules' => 'uploaded[class_card]'
+                    . '|is_image[class_card]'
+                    . '|mime_in[class_card,image/png,image/jpeg]'
+            ],
+            'birth_cert' => [
+                'label' => 'Image File',
+                'rules' => 'uploaded[birth_cert]'
+                    . '|is_image[birth_cert]'
+                    . '|mime_in[birth_cert,image/png,image/jpeg]'
+            ],
+            'form_137' => [
+                'label' => 'Image File',
+                'rules' => 'uploaded[form_137]'
+                    . '|is_image[form_137]'
+                    . '|mime_in[form_137,image/png,image/jpeg]'
+            ],
+            'good_moral' => [
+                'label' => 'Image File',
+                'rules' => 'uploaded[good_moral]'
+                    . '|is_image[good_moral]'
+                    . '|mime_in[good_moral,image/png,image/jpeg]'
+            ],
+        ]);
+        $email = session()->get('loggedInUser');
+        if (!$validated)
+        {
+            session()->setFlashdata('validation', $this->validator);
+            return redirect()->route('credentials');
+        }
+            else
+        {
+            $user_model = new UserModel();
+            
+            $credential_model = new CredentialModel();
+            $files = ['birth_cert', 'class_card', 'form_137', 'good_moral'];
+            $data = [];
+            
+            foreach ($files as $file) {
+                $uploadedFile = $this->request->getFile($file);
+            
+                if ($uploadedFile->isValid() && !$uploadedFile->hasMoved()) {
+                    $uploadedFile->move(FCPATH . 'student_credentials' . '/' . $email = session()->get('loggedInUser'));
+                    $data[$file] = $uploadedFile->getClientName();
+                }
+            }
+            
+            // add text input field value to the data array
+            $extra_info = session()->get('lrn');
+            if (!empty($extra_info)) {
+                $data['lrn'] = $extra_info;
+            }
+            
+            if (!empty($data)) {
+                $credential_model->insert($data);
+                session()->setFlashdata('saveprofile', 'Incorrect Password Provided');
+            }
+            
+            return redirect()->route('retrieve_profile');
+                            
+        }
     }
 }

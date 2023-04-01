@@ -6,8 +6,8 @@
   <aside class="main-sidebar sidebar-dark-secondary elevation-8">
   <!-- Brand Logo -->
   <a href="index3.html" class="brand-link">
-    <img src="<?=base_url()?>/dist/img/dormehiLogo.png" alt="dormehi Logo" class="brand-image img-circle elevation-3" style="opacity: 10;">
-    <span class="brand-text font-weight-light" style="margin-left:10%;"><strong>DORMEHI</strong></span>
+  <img src="<?=base_url()?>/cssjs/img/bccLogo.png" alt="dormehi Logo" class="brand-image img-circle elevation-3" style="opacity: 10;">
+    <span class="brand-text font-weight-light" style="margin-left:0%; font-size:85%;"><strong>Baco Community College</strong></span>
   </a>
 
   <!-- Sidebar -->
@@ -51,6 +51,7 @@
               </a>
 
             <ul class="nav nav-treeview">
+                 <?php if ($stat['status'] === "SHS"): ?>
               <li class="nav-item">
                 <a href="/section11" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
@@ -63,28 +64,106 @@
                   <p>Grade 12</p>
                 </a>
               </li>
+              <?php else: ?>
+                <li class="nav-item">
+                     <a href="/section11" class="nav-link">
+                       <i class="far fa-circle nav-icon"></i>
+                       <p>1st Year</p>
+                     </a>
+                   </li>
+                   <li class="nav-item">
+                     <a href="/section12" class="nav-link">
+                       <i class="far fa-circle nav-icon"></i>
+                       <p>2nd Year</p>
+                     </a>
+                   </li>
+                   <li class="nav-item">
+                     <a href="/section3rd" class="nav-link">
+                       <i class="far fa-circle nav-icon"></i>
+                       <p>3rd Year</p>
+                     </a>
+                   </li>
+                   <li class="nav-item">
+                     <a href="/section4th" class="nav-link">
+                       <i class="far fa-circle nav-icon"></i>
+                       <p>4th Year</p>
+                     </a>
+                   </li>
+                   <?php endif; ?>
             </ul>
         </li>
-        <li class="nav-item"style = "font-family:poppins;">
+        <li class="nav-item" style="font-family:poppins;">
+          <a href="#" class="nav-link ">
+            <i class="fa-sharp fa-solid fa-envelopes-bulk"></i>
+            <p>Prospectus<i class="right fas fa-angle-left"></i></p>
+          </a>
 
-              <a href="#" class="nav-link ">
-                <i class="fa-sharp fa-solid fa-atom"></i>
-                <p>Prospectus<i class="right fas fa-angle-left"></i></p>
+          <ul class="nav nav-treeview">
+            <?php if ($stat['status'] === "SHS"): ?>
+              <li class="nav-item">
+                <a href="/prospectus11" class="nav-link ">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Grade 11</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/prospectus12" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Grade 12</p>
+                </a>
+              </li>
+            <?php else: ?>
+              <li class="nav-item">
+                <a href="/prospectus11" class="nav-link ">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>1st Year</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/prospectus12" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>2nd Year</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/prospectus3rd" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>3rd Year</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/prospectus4th" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>4th Year</p>
+                </a>
+              </li>
+            <?php endif; ?>
+          </ul>
+        </li>
+              <li class="nav-item"style = "font-family:poppins;">
+            <li class="nav-item"style = "font-family:poppins;">
+              <a href="<?=base_url('/retrieve_strand')?>" class="nav-link">
+                <i class="fa-sharp fa-solid fa-envelopes-bulk"></i>
+                <p>Strand</p>
               </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="/prospectus11" class="nav-link ">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Grade 11</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="/prospectus12" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Grade 12</p>
-                  </a>
-                </li>
-              </ul>
+            </li>
+        </li>
+        <li class="nav-item"style = "font-family:poppins;">
+            <li class="nav-item"style = "font-family:poppins;">
+              <a href="<?=base_url('/newadmin')?>" class="nav-link">
+                <i class="fa-sharp fa-solid fa-envelopes-bulk"></i>
+                <p>Admin</p>
+              </a>
+            </li>
+        </li>
+        <li class="nav-item"style = "font-family:poppins;">
+            <li class="nav-item"style = "font-family:poppins;">
+              <a href="<?=base_url('/listofteacher')?>" class="nav-link">
+                <i class="fa-sharp fa-solid fa-envelopes-bulk"></i>
+                <p>Teachers</p>
+              </a>
+            </li>
+        </li>
         </li>
         <br>
         <br>
