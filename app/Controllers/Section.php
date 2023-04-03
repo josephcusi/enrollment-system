@@ -36,7 +36,9 @@ class Section extends BaseController
             ->where('section_tbl.id', $id)
             ->where('section_tbl.year_level', $year_level)
             ->get()->getResultArray(),
-          'teacher' => $user_model->where('usertype', 'teacher')->findAll(),
+
+          'teacher' => $user_model->where('usertype', 'teacher')->where('status', session()->get('status'))->findAll(),
+
           'subject' => $prospectus_model
             ->select('*, prospectrus_tbl.id')
             ->join('strand_tbl', 'prospectrus_tbl.strand_id = strand_tbl.id', 'inner')
@@ -50,7 +52,7 @@ class Section extends BaseController
           'sem_year' => $year_model->first(),
           'stat' => $user_model->where('status', session()->get('status'))->first()
         ];
-      
+
         return view('admin/section/schedule/schedule11', $data);
       }
     public function schedule12($id) {
@@ -75,7 +77,7 @@ class Section extends BaseController
                 ->where('section_tbl.year_level', $grade_level)
                 ->get()->getResultArray(),
 
-                'teacher' => $user_model->where('usertype', 'teacher')->findAll(),
+                 'teacher' => $user_model->where('usertype', 'teacher')->where('status', session()->get('status'))->findAll(),
                 'subject' => $prospectus_model
                 ->select('*, prospectrus_tbl.id')
                 ->join('strand_tbl', 'prospectrus_tbl.strand_id = strand_tbl.id', 'inner')
@@ -238,6 +240,50 @@ class Section extends BaseController
     
     public function section_update11()
     {
+        $validated = $this->validate([
+            'id' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Strand is required!'
+                ]
+            ],
+            'section' => [
+                'rules' => 'required|is_unique[section_tbl.section]',
+                'errors' => [
+                    'required' => 'Section is required!',
+                    'is_unique' => 'Section is Already Exist'
+                ]
+            ],
+            'year_level' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Year level is required!'
+                ]
+            ]
+        ]);
+
+        if (!$validated) {
+            //session()->setFlashdata('updatesection', 'Duplicate input');
+            session()->setFlashdata('notupdatesection', 'Duplicate input');
+
+            $year_level = $this->request->getPost('year_level');
+
+            if($year_level == "1st Year" or $year_level == "Grade 11"){
+                return redirect()->route('section11');
+            }
+            elseif($year_level == "2nd Year" or $year_level == "Grade 12"){
+                return redirect()->route('section12');
+            }
+            elseif($year_level == "3rd Year"){
+                return redirect()->route('section3rd');
+            }
+            elseif($year_level == "4th Year"){
+                return redirect()->route('section4th');
+            }
+        }
+        else
+        {
+
         $section_model = new SectionModel();
         $id = $this->request->getPost('id');
         $section = $this->request->getPost('section');
@@ -248,9 +294,9 @@ class Section extends BaseController
             'year_level' => $year_level
         ];
         $section_model->update($id, $data);
+
         session()->setFlashdata('updatesection', 'Duplicate input');
 
-        session()->setFlashdata('subjectadded', 'added');
         if($year_level == "1st Year" or $year_level == "Grade 11"){
             return redirect()->route('section11');
         }
@@ -264,6 +310,7 @@ class Section extends BaseController
             session()->setFlashdata('subjectadded', 'added');
             return redirect()->route('section4th');
         }
+    }
     }
     public function addsched11($ids)
     {
@@ -325,6 +372,7 @@ class Section extends BaseController
             $count = count($schedule_model->where($sched)->findAll());
             if($count < 1){
                 $schedule_model->insert($value);
+                session()->setFlashdata('added', 'Duplicate input');
                 return redirect()->back();
             }
             else{
@@ -565,7 +613,7 @@ class Section extends BaseController
                 ->where('section_tbl.year_level', '3rd Year')
                 ->get()->getResultArray(),
                 
-                'teacher' => $user_model->where('usertype', 'teacher')->findAll(),
+                 'teacher' => $user_model->where('usertype', 'teacher')->where('status', session()->get('status'))->findAll(),
                 'subject' => $prospectus_model
                 ->select('*, prospectrus_tbl.id')
                 ->join('strand_tbl', 'prospectrus_tbl.strand_id = strand_tbl.id', 'inner')
@@ -603,7 +651,7 @@ class Section extends BaseController
                     ->where('section_tbl.year_level', '4th Year')
                     ->get()->getResultArray(),
                     
-                    'teacher' => $user_model->where('usertype', 'teacher')->findAll(),
+                     'teacher' => $user_model->where('usertype', 'teacher')->where('status', session()->get('status'))->findAll(),
                     'subject' => $prospectus_model
                     ->select('*, prospectrus_tbl.id')
                     ->join('strand_tbl', 'prospectrus_tbl.strand_id = strand_tbl.id', 'inner')

@@ -29,14 +29,13 @@ class PreEnrolled extends BaseController
         $section_model = new SectionModel();
         
         $data = [
-        'enrolled' => $registration_model
+        'enrolled' => $user_profile
         ->select('*, student_registration.id')
-        ->join('school_year', 'student_registration.semester=school_year.semester', 'inner')
-        ->join('user_tbl', 'student_registration.lrn=user_tbl.lrn', 'inner')
-        ->join('user_profile', 'user_tbl.email=user_profile.email', 'inner')
-        ->where('student_registration.semester', session()->get('semester'))
+        ->join('user_tbl', 'user_profile.email = user_tbl.email', 'inner')
+        ->join('student_registration', 'user_tbl.lrn = student_registration.lrn', 'inner')
         ->where('student_registration.id', $id)
-        ->where('school_year.year', session()->get('year'))
+        ->where('student_registration.year', session()->get('year'))
+        ->where('student_registration.semester', session()->get('semester'))
         ->get()->getResultArray(),
 
         'enroll' => $section_model

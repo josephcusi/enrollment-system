@@ -3,9 +3,8 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
-use App\Models\SectionModel;
+use App\Models\ScheduleModel;
 use App\Models\UserModel;
-use App\Models\ProfileModel;
 
 class UserSchedule extends BaseController
 {
@@ -15,21 +14,21 @@ class UserSchedule extends BaseController
     }
     public function viewSchedule()
     {
-        $profile_model = new ProfileModel();
+
+        $schedule_model = new ScheduleModel();
         $user_model = new UserModel();
+
         $user = [
-            'userSched' => $user_model
+            'userSched' => $schedule_model
             ->select('*')
-            ->join('student_registration', 'user_tbl.lrn = student_registration.lrn', 'inner')
-            ->join('section_tbl', 'student_registration.user_section = section_tbl.id', 'inner')
-            ->join('schedule_tbl', 'section_tbl.id = schedule_tbl.section_id', 'inner')
-            ->join('user_tbl as u', 'schedule_tbl.teacher_id = u.id')
             ->join('prospectrus_tbl', 'schedule_tbl.subject_id = prospectrus_tbl.id', 'inner')
-            ->join('student_registration as sr', 'prospectrus_tbl.year_level = sr.year_level', 'inner')
+            ->join('section_tbl', 'schedule_tbl.section_id = section_tbl.id', 'inner')
+            ->join('student_registration', 'section_tbl.id = student_registration.user_section', 'inner')
+            ->join('user_tbl', 'schedule_tbl.teacher_id = user_tbl.id', 'inner')
             ->join('school_year', 'prospectrus_tbl.semester = school_year.semester', 'inner')
-            ->join('school_year as sy', 'student_registration.year = sy.year', 'inner')
-            ->groupBy('prospectrus_tbl.subject')
-            ->where('user_tbl.email', session()->get('email'))
+            ->where('student_registration.lrn', session()->get('lrn'))
+            ->where('student_registration.year', session()->get('year'))
+            ->where('student_registration.semester', session()->get('semester'))
             ->get()->getResultArray(),
             'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
             'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->findAll()

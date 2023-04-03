@@ -15,6 +15,7 @@ use App\Models\GradeModel;
 use App\Models\ScheduleModel;
 use App\Models\YearlevelModel;
 use App\Models\CredentialModel;
+use App\Models\StudentProspectusModel;
 use App\Libraries\Hash;
 
 
@@ -103,15 +104,11 @@ class Profile extends BaseController
             else{
             $user = [
                 'subject' => $grade_model->select('*')
-                ->join('user_tbl', 'student_grading.lrn = user_tbl.lrn', 'inner')
                 ->join('prospectrus_tbl', 'student_grading.subject_id = prospectrus_tbl.id', 'inner')
-                ->join('student_registration', 'student_grading.semester = student_registration.semester', 'inner')
-                ->join('school_year', 'student_registration.semester = school_year.semester', 'inner')
-                ->join('school_year as sy', 'student_grading.year = sy.year', 'inner')
-                ->groupBy('prospectrus_tbl.subject')
-                ->where('school_year.year', session()->get('year'))
-                ->where('school_year.semester', session()->get('semester'))
-                ->where('user_tbl.email', session()->get('email'))
+                ->join('strand_tbl', 'prospectrus_tbl.strand_id = strand_tbl.id', 'inner')
+                ->where('student_grading.year', session()->get('year'))
+                ->where('student_grading.semester', session()->get('semester'))
+                ->where('student_grading.lrn', session()->get('lrn'))
                 ->get()->getResultArray(),
                 'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
                 'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->findAll()
@@ -562,27 +559,33 @@ class Profile extends BaseController
             $strand_model = new StrandModel();
             $profile_model = new ProfileModel();
             $registration_model = new RegistrationModel();
+            $year_model = new YearModel();
             $strand_id = $strand_model->where('strand', $strand)->find();
 
             $values = [
-                // 'prospectus'=> $prospectus_model->where('strand_id', $strand_id[0]['id'])->where('year_level', $yearlevel)->where('semester', $semester)->findAll(),
+                'prospectus'=> $prospectus_model
+                ->where('strand_id', $strand_id[0]['id'])
+                ->where('year_level', $yearlevel)
+                ->where('semester', $semester)->findAll(),
+
                 'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
                 'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->findAll(),
+                'year' => $year_model->first()
                 // 'subId' => $registration_model->first(),
             ];
-            $session = session();
-            $email_data = $this->db->table('user_tbl')->where('lrn', $lrn)->get()->getRowArray();
-            $emz = $email_data['email'];
-            $email = \Config\Services::email();
-            $email->setTo($emz);
-            $email->setMailType("html");
-            $email->setSubject('Application Recieved');
-            $email->setFrom('zasuke277379597@gmail.com', 'BACO COMMUNITY COLLEGE');
-            $email->setMessage("Thank you for submitting your enrollment application. Our team is currently reviewing it and will get back to you as soon as possible with an update on your status. Please allow us some time to process your application and make a decision. In the meantime, if you have any questions or need additional information, please feel free to reach out to us.");
-            $email->send();
+            // $session = session();
+            // $email_data = $this->db->table('user_tbl')->where('lrn', $lrn)->get()->getRowArray();
+            // $emz = $email_data['email'];
+            // $email = \Config\Services::email();
+            // $email->setTo($emz);
+            // $email->setMailType("html");
+            // $email->setSubject('Application Recieved');
+            // $email->setFrom('zasuke277379597@gmail.com', 'BACO COMMUNITY COLLEGE');
+            // $email->setMessage("Thank you for submitting your enrollment application. Our team is currently reviewing it and will get back to you as soon as possible with an update on your status. Please allow us some time to process your application and make a decision. In the meantime, if you have any questions or need additional information, please feel free to reach out to us.");
+            // $email->send();
             // var_dump($counts);
 
-            return redirect()->route('registration');
+            return view('user/regSubject', $values);
      
 
         }
@@ -913,7 +916,7 @@ class Profile extends BaseController
         {
             $user_model = new UserModel();
             $registration_model = new RegistrationModel();
-            $prospectus_model = new ProspectusModel();
+            $prospectus_model = new StudentProspectusModel();
             $subject = $registration_model
             ->join('school_year', 'student_registration.semester = school_year.semester', 'inner')
             ->join('school_year as sy', 'student_registration.year = sy.year', 'inner')
@@ -930,17 +933,12 @@ class Profile extends BaseController
                 $data = [
                     'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
                     'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->findAll(),
-                    'userSub' => $user_model
+                    'userSub' => $prospectus_model
                     ->select('*')
-                    ->join('student_registration', 'user_tbl.lrn = student_registration.lrn', 'inner')
-                    ->join('section_tbl', 'student_registration.user_section = section_tbl.id', 'inner')
-                    ->join('strand_tbl', 'student_registration.strand = strand_tbl.strand', ' inner')
-                    ->join('prospectrus_tbl', 'strand_tbl.id = prospectrus_tbl.strand_id', 'inner')
-                    ->join('student_registration as st', 'prospectrus_tbl.year_level = st.year_level', 'inner')
-                    ->join('school_year', 'prospectrus_tbl.semester = school_year.semester', 'inner')
-                    ->join('school_year as sy', 'st.year = sy.year', 'inner')
-                    ->groupBy('prospectrus_tbl.subject')
-                    ->where('user_tbl.email', session()->get('loggedInUser'))
+                    ->join('prospectrus_tbl', 'prospectus_add_tbl.subject_id = prospectrus_tbl.id', 'inner')
+                    ->where('prospectus_add_tbl.lrn', session()->get('lrn'))
+                    ->where('prospectus_add_tbl.year', session()->get('year'))
+                    ->where('prospectus_add_tbl.semester', session()->get('semester'))
                     ->get()->getResultArray()
                 ];
                 return view('user/subject', $data);
@@ -956,6 +954,27 @@ class Profile extends BaseController
                 'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->findAll(),
             ];
             return view('user/credentials', $data);
+        }
+        public function insert_subject()
+        {
+            $prospectus_add_model = new StudentProspectusModel();
+            $lrn = $this->request->getPost('lrn');
+            $year = $this->request->getPost('year');
+            $semester = $this->request->getPost('semester');
+            $subject_id = $this->request->getPost('subject_id');
+        
+            foreach ($subject_id as $subject_ids) {
+                $value = [
+                    'lrn' => $lrn,
+                    'subject_id' => $subject_ids,
+                    'year' => $year,
+                    'semester' => $semester,
+                ];
+        
+                $prospectus_add_model->insert($value);
+        
+        }
+            return redirect()->route('registration');
         }
     }
     

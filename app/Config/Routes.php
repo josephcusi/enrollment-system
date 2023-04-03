@@ -92,6 +92,7 @@ $routes->put('/updatePassword/(:any)', 'Profile::updatePassword/$1');
 $routes->put('/updateUserProfile/(:any)', 'Profile::updateUserProfile/$1');
 $routes->post('/insert_credeantials', 'User::insert_credeantials');
 $routes->get('/credentials', 'User::credentials');
+$routes->post('/insert_subject', 'Profile::insert_subject');
 });
 
 

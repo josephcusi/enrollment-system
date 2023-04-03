@@ -266,7 +266,7 @@
                                                                 data-id="<?=$section_value['id'];?>"
                                                                 data-section="<?=$section_value['section'];?>"
                                                                 data-year_level="<?=$section_value['year_level'];?>">update</button></a>
-                                                            <?= $this->include('admin/section/updatesectionfirst')?>
+                                                                <?= $this->include('admin/section/updatesection11')?>
                                                     </td>
                                                 </tr>
                                             </tbody>

@@ -183,8 +183,16 @@
   <!-- Content Header (Page header) -->
 
     <script src="<?= base_url()?>/dist/js/sweetalert.js"></script>
-     <?php if(!empty(session()->getFlashdata('duplicate'))) : ?>
+    <?php if(!empty(session()->getFlashdata('duplicate'))) : ?>
       <script>swal("Duplicate Input!", "You already set the schedule of this section.", "warning");</script>
+      <?php endif ?>
+
+      <?php if(!empty(session()->getFlashdata('updatesection'))) : ?>
+      <script>swal("Updated Successfully!", "Chaged has made.", "success");</script>
+      <?php endif ?>
+
+      <?php if(!empty(session()->getFlashdata('added'))) : ?>
+      <script>swal("Added Successfully!", "You successfully added schedule.", "success");</script>
       <?php endif ?>
 
   <section class="content-header">

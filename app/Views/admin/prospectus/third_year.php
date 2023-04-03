@@ -269,7 +269,7 @@
                                                         data-pre_requisit="<?=$prospect['pre_requisit']?>"
                                                         data-year_level="<?=$prospect['year_level']?>"
                                                         data-semester="<?=$prospect['semester']?>">update</button></a>
-                                                    <?= $this->include('admin/modal/updateprospectusthird')?>
+                                                        <?= $this->include('admin/prospectus/updateprospectus11')?>
                                                 </td>
                                             </tr>
                                             <?php endforeach;?>

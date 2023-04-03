@@ -53,8 +53,8 @@
                                     <label for="year_level">Year Level</label>
                                     <select class="form-control year_levelModal" id="studentStrand" name="year_level">
 
-                                        <option type="text" class="form-control" id="year_level"
-                                            placeholder="Year Level" value="Grade 11">Grade 11</option>
+                                        <option type="text" class="form-control year_levelModal" id="year_level"
+                                            placeholder="Year Level" value="<?=$prospectus[0]['year_level']?>"><?=$prospectus[0]['year_level']?></option>
 
                                     </select>
 

@@ -27,11 +27,11 @@
                       <input type="hidden" name="year" value="<?= $info[0]['year']?>">
                       <input type="hidden" name="lrn" class="lrnModal">
                       <input type="hidden" name="semester" value="<?= $year_sem[0]['semester']; ?>">
-                      <input type="number" name="midterm" class="form-control" id="inputgrade" min = "75" max = "100">
+                      <input type="number" name="midterm" class="form-control" id="inputgrade" min = "0" max = "100">
                     </div>
                     <div class="form-group col-md-9">
                       <label for="inputgrade">Final Grade</label>
-                      <input type="number" name="finals" class="form-control" id="inputgrade" min = "75" max = "100">
+                      <input type="number" name="finals" class="form-control" id="inputgrade" min = "0" max = "100">
                     </div>
                   <!-- Submit button -->
                   <div class="modal-footer justify-content-between">

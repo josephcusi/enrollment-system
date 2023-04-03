@@ -190,6 +190,9 @@
       <script>swal("Updated Successfully!", "Chaged has made.", "success");</script>
       <?php endif ?>
 
+      <?php if(!empty(session()->getFlashdata('added'))) : ?>
+      <script>swal("Added Successfully!", "You successfully added schedule.", "success");</script>
+      <?php endif ?>
 
   <section class="content-header">
     <div class="container-fluid">

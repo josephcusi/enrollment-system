@@ -25,7 +25,7 @@
                             <select class="form-control year_levelModal" id="studentStrand" name="year_level">
 
                                 <option type="text" class="form-control" id="year_level" placeholder="Year Level"
-                                    value="Grade 11">Grade 11</option>
+                                    value="<?=$section[0]['year_level']?>"><?=$section[0]['year_level']?></option>
 
                             </select>
                             <span class="text-danger">

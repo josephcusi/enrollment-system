@@ -19,29 +19,27 @@ class Teacher extends BaseController
     }
     public function t_dashboard()
     {
-        $strand_model = new StrandModel();
+        $schedule_model = new ScheduleModel();
         $user_model = new UserModel();
         $year_model = new YearModel();
 
         $data =[
-            'userInfo' => $user_model
+            'userInfo' => $schedule_model
             ->select('*, student_registration.id')
-            ->join('schedule_tbl', 'user_tbl.id = schedule_tbl.teacher_id', 'inner')
+            ->join('prospectrus_tbl', 'schedule_tbl.subject_id = prospectrus_tbl.id', 'inner')
             ->join('section_tbl', 'schedule_tbl.section_id = section_tbl.id', 'inner')
             ->join('student_registration', 'section_tbl.id = student_registration.user_section', 'inner')
-            ->join('user_tbl as u', 'student_registration.lrn = u.lrn', 'inner')
-            ->join('school_year', 'student_registration.semester = school_year.semester', 'inner')
-            ->join('school_year as sy', 'student_registration.year = sy.year', 'inner')
-            ->where('user_tbl.email', session()->get('email'))
-            ->where('student_registration.state', 'Enrolled')
-            ->groupBy('student_registration.lrn')
-            // ->distinct('student_registration.lrn')
+            ->join('user_tbl', 'student_registration.lrn = user_tbl.lrn', 'inner')
+            ->join('school_year', 'prospectrus_tbl.semester = school_year.semester', 'inner')
+            ->where('schedule_tbl.teacher_id', session()->get('id'))
+            ->where('student_registration.year', session()->get('year'))
+            ->where('student_registration.semester', session()->get('semester'))
             ->get()->getResultArray(),
             'userName' => $user_model->where('email', session()->get('email'))->first(),
             'year_sem' => $year_model->findAll()
         ];
         return view('teacher/t_dashboard', $data);
-        // var_dump($data);
+        // var_dump($data['userInfo']);
     }
     public function newteacher()
     {

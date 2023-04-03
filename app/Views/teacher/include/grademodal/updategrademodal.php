@@ -21,18 +21,11 @@
                       <input type="hidden" name="year" value="<?= $info[0]['year']?>">
                       <input type="hidden" name="semester" value="<?= $year_sem[0]['semester']; ?>">
                       <label for="inputgrade">Midterm Grade</label>
-                      <input type="number" name="midterm" class="form-control midterm_modal" id="inputgrade" min = "75" max = "100">
+                      <input type="number" name="midterm" class="form-control midterm_modal" id="inputgrade" min = "0" max = "100">
                     </div>
                     <div class="form-group col-md-9">
                       <label for="inputgrade">Final Grade</label>
-                      <input type="number" name="finals" class="form-control final_modal" id="inputgrade" min = "75" max = "100">
-                    </div>
-                    <div class="form-group col-md-9">
-                      <label for="inputgrade">Remarks</label>
-                      <select class="form-control"style = "border-radius:20px" id="inputGender" name = "remark">
-                        <option type="text" class="form-control"style="font-family: Poppins;" id="inputGender">Passed</option>
-                        <option type="text" class="form-control"style="font-family: Poppins;" id="inputGender">Failed</option>
-                        </select>
+                      <input type="number" name="finals" class="form-control final_modal" id="inputgrade" min = "0" max = "100">
                     </div>
                   <!-- Submit button -->
                   <div class="modal-footer justify-content-between">

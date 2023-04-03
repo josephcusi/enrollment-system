@@ -217,7 +217,7 @@
                     <a <button type="button"  class="btn btn-secondary btn-sm btn-updateSection" style = "border-radius:15px;"
                     data-id="<?=$section_value['id'];?>" data-section="<?=$section_value['section'];?>" data-year_level="<?=$section_value['year_level'];?>"
                     >update</button></a>
-                     <?= $this->include('admin/section/updatesection11')?>
+                    <?= $this->include('admin/section/updatesection11')?>
                   </td>
                   </tr>
                   </tbody>

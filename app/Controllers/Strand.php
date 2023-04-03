@@ -19,11 +19,7 @@ class Strand extends BaseController
         $user_model = new UserModel();
         $year_model = new YearModel();
         $data = [
-            'strand'=> $strand_model
-            ->select('*, strand_tbl.id')
-            ->join('user_tbl', 'strand_tbl.type = user_tbl.usertype', 'inner')
-            ->where('strand_tbl.type', session()->get('status'))
-            ->get()->getResultArray(),
+            'strand'=> $strand_model->where('type', session()->get('status'))->findAll(),
             'userName'=> $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
             'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
             'sem_year' => $year_model->first(),
