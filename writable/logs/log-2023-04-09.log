@@ -1,0 +1,20 @@
+CRITICAL - 2023-04-09 05:14:51 --> syntax error, unexpected end of file, expecting "elseif" or "else" or "endif"
+in APPPATH\Views\admin\viewPreEnroll.php on line 247.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/viewPreEnroll', [], true)
+ 3 APPPATH\Controllers\PreEnrolled.php(59): view('admin/viewPreEnroll', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('99')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-09 05:15:10 --> syntax error, unexpected end of file, expecting "elseif" or "else" or "endif"
+in APPPATH\Views\admin\viewPreEnroll.php on line 247.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/viewPreEnroll', [], true)
+ 3 APPPATH\Controllers\PreEnrolled.php(59): view('admin/viewPreEnroll', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('99')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
