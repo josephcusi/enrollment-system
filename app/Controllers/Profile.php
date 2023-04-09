@@ -602,6 +602,7 @@ class Profile extends BaseController
         $user_model = new UserModel();
         $strand_model = new StrandModel();
         $year_model = new YearModel();
+        $prospectus_add_model = new StudentProspectusModel();
 
         $user = [
             'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
@@ -625,10 +626,11 @@ class Profile extends BaseController
 
         return view('user/updateReg', $user);
     }
-    public function update($id)
+    public function update()
     {
         $registration_model = new RegistrationModel();
         $lrn = $this->request->getPost('lrn');
+        $id = $this->request->getPost('id');
         $strand = $this->request->getPost('strand');
         $year_level = $this->request->getPost('year_level');
         $semester = $this->request->getPost('semester');
@@ -637,10 +639,49 @@ class Profile extends BaseController
             'lrn' => $lrn,
             'strand' => $strand,
             'year_level' => $year_level,
-            'semester' => $semester
+            'semester' => $semester, 
+            'state' => 'Pending',
+            'user_section' => ''
         ];
         $registration_model->update($id, $data);
-        return $this->registration();
+
+        $prospectus_model = new ProspectusModel();
+        $user_model = new UserModel();
+        $session = session();
+        $lrn = $this->request->getPost('lrn');
+        $strand_model = new StrandModel();
+        $profile_model = new ProfileModel();
+        $registration_model = new RegistrationModel();
+        $year_model = new YearModel();
+        $prospectus_add_model = new StudentProspectusModel();
+        $strand_id = $strand_model->where('strand', $strand)->find();
+
+        $values = [
+            'prospectus'=> $prospectus_model
+            ->where('strand_id', $strand_id[0]['id'])
+            ->where('year_level', $year_level)
+            ->where('semester', $semester)->findAll(),
+            'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
+            'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->findAll(),
+            'year' => $year_model->first(),
+            
+            'user' => $prospectus_add_model->where('lrn', session()->get('lrn'))->findAll()
+            // 'subId' => $registration_model->first(),
+        ];
+        // $session = session();
+        // $email_data = $this->db->table('user_tbl')->where('lrn', $lrn)->get()->getRowArray();
+        // $emz = $email_data['email'];
+        // $email = \Config\Services::email();
+        // $email->setTo($emz);
+        // $email->setMailType("html");
+        // $email->setSubject('Application Recieved');
+        // $email->setFrom('zasuke277379597@gmail.com', 'BACO COMMUNITY COLLEGE');
+        // $email->setMessage("Thank you for submitting your enrollment application. Our team is currently reviewing it and will get back to you as soon as possible with an update on your status. Please allow us some time to process your application and make a decision. In the meantime, if you have any questions or need additional information, please feel free to reach out to us.");
+        // $email->send();
+        // var_dump($counts);
+
+        return view('user/updateregSubject', $values);
+
     }
     public function registration_subject()
     {
@@ -976,6 +1017,36 @@ class Profile extends BaseController
         }
             return redirect()->route('registration');
         }
-    }
+        public function test()
+        {
+            $prospectus_add_model = new StudentProspectusModel();
+
+            $counts = count($prospectus_add_model->where('lrn', session()->get('lrn'))->find());
+
+            $id = $this->request->getPost('id');
+            $year = $this->request->getPost('year');
+            $lrn = $this->request->getPost('lrn');
+            $semester = $this->request->getPost('semester');
+            $subject_id = $this->request->getPost('subject_id');
+
+            foreach ($subject_id as $subject_ids) {
+                $value = [
+                    'lrn' => $lrn,
+                    'subject_id' => $subject_ids,
+                    'year' => $year,
+                    'semester' => $semester,
+                ];
     
-    ?>
+            if($counts <= 0){
+                $prospectus_add_model->insert($value);
+            }
+            else{
+                $prospectus_add_model->delete($id);
+                $prospectus_add_model->insert($value);
+            }
+        }
+            return redirect()->route('registration');
+    }
+}
+
+?>

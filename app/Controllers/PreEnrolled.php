@@ -43,11 +43,10 @@ class PreEnrolled extends BaseController
         ->join('strand_tbl', 'section_tbl.strand_id = strand_tbl.id', 'inner')
         ->join('student_registration', 'strand_tbl.strand=student_registration.strand', 'inner')
         ->join('student_registration as sr', 'section_tbl.year_level = sr.year_level', 'inner')
-        ->join('school_year', 'sr.year = school_year.year', 'inner')
         ->groupBy('section_tbl.section')
         ->where('student_registration.semester', session()->get('semester'))
         ->where('student_registration.id', $id)
-        ->where('school_year.year', session()->get('year'))
+        ->where('student_registration.year', session()->get('year'))
         ->get()->getResultArray(),
         
         'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
@@ -150,12 +149,21 @@ class PreEnrolled extends BaseController
     ->where('school_year.year', session()->get('year'))
     ->first();
 
+    $data = []; // Add any data that you want to pass to the view here
+    $html = view('user/registrationpdf/test', $data);
+    $dompdf = new \Dompdf\Dompdf();
+    $dompdf->loadHtml($html);
+    $dompdf->setPaper('A4', 'portrait');
+    $dompdf->render();
+    $pdf_data = $dompdf->output(); // Save the PDF file to a variable
+
     $email = \Config\Services::email();
     $email->setTo($email_data['email']);
     $email->setMailType("html");
     $email->setSubject('Enrollment Status Updated');
     $email->setFrom('zasuke277379597@gmail.com', 'BACO COMMUNITY COLLEGE');
     $email->setMessage("Congratulations on your enrollment, we're excited to welcome you to the program and support your academic journey!");
+    $email->attach($pdf_data, '', 'Enrollment Status.pdf', false); // Attach the PDF file
     $email->send();
 
     session()->setFlashdata('enrolled', 'Welcome');

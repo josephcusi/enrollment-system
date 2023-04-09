@@ -106,13 +106,14 @@
                                                 style="font-size:20px; font-family: Poppins;color:maroon; margin-left:40%">
                                                 Update Application Form</p>
                                         </div><br><br>
-                                        <form style="margin-left:30%" action="<?= site_url('update/'.$user['id']) ?>"
+                                        <form style="margin-left:30%" action="<?= site_url('update') ?>"
                                             method="post">
                                             <input type="hidden" name="_method" value="PUT" />
                                             <?= csrf_field(); ?>
                                             <div class="form-horizontal" style="font-family:poppins; color:maroon;">
                                                 <div class="form-group col-md-6">
                                                     <input type="hidden" name="year" value="<?=$year['year']?>">
+                                                    <input type="hidden" name="id" value="<?=$user['id']?>">
                                                     <label for="studentLrn">Student LRN</label>
                                                     <select class="form-control" name="lrn"
                                                         placeholder="<?= $user['lrn'];?>">

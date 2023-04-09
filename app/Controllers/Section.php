@@ -200,7 +200,7 @@ class Section extends BaseController
         if (!$validated) {
             //session()->setFlashdata('updatesection', 'Duplicate input');
             session()->setFlashdata('notupdatesection', 'Duplicate input');
-            return $this->section11();
+            return redirect()->back();
         }
         else
         {
@@ -221,19 +221,7 @@ class Section extends BaseController
             $query = $section_model->insert($values);
             
             session()->setFlashdata('subjectadded', 'added');
-            if($year_level == "1st Year" or $year_level == "Grade 11"){
-                return redirect()->route('section11');
-            }
-            elseif($year_level == "2nd Year" or $year_level == "Grade 12"){
-                return redirect()->route('section12');
-            }
-            elseif($year_level == "3rd Year"){
-                return redirect()->route('section3rd');
-            }
-            elseif($year_level == "4th Year"){
-                session()->setFlashdata('subjectadded', 'added');
-                return redirect()->route('section4th');
-            }
+            return redirect()->back();
             
         }
     }
@@ -266,20 +254,8 @@ class Section extends BaseController
             //session()->setFlashdata('updatesection', 'Duplicate input');
             session()->setFlashdata('notupdatesection', 'Duplicate input');
 
-            $year_level = $this->request->getPost('year_level');
-
-            if($year_level == "1st Year" or $year_level == "Grade 11"){
-                return redirect()->route('section11');
-            }
-            elseif($year_level == "2nd Year" or $year_level == "Grade 12"){
-                return redirect()->route('section12');
-            }
-            elseif($year_level == "3rd Year"){
-                return redirect()->route('section3rd');
-            }
-            elseif($year_level == "4th Year"){
-                return redirect()->route('section4th');
-            }
+            return redirect()->back();
+            
         }
         else
         {
@@ -296,21 +272,8 @@ class Section extends BaseController
         $section_model->update($id, $data);
 
         session()->setFlashdata('updatesection', 'Duplicate input');
-
-        if($year_level == "1st Year" or $year_level == "Grade 11"){
-            return redirect()->route('section11');
+        return redirect()->back();
         }
-        elseif($year_level == "2nd Year" or $year_level == "Grade 12"){
-            return redirect()->route('section12');
-        }
-        elseif($year_level == "3rd Year"){
-            return redirect()->route('section3rd');
-        }
-        elseif($year_level == "4th Year"){
-            session()->setFlashdata('subjectadded', 'added');
-            return redirect()->route('section4th');
-        }
-    }
     }
     public function addsched11($ids)
     {

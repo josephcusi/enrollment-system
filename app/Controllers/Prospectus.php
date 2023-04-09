@@ -130,19 +130,7 @@ class Prospectus extends BaseController
         $prospectus_model->update($id, $data);
         session()->setFlashdata('updateprospectus', 'Duplicate input');
 
-        if($year_level == "1st Year" or $year_level == "Grade 11"){
-            return redirect()->route('prospectus11');
-        }
-        elseif($year_level == "2nd Year" or $year_level == "Grade 12"){
-            return redirect()->route('prospectus12');
-        }
-        elseif($year_level == "3rd Year"){
-            return redirect()->route('prospectus3rd');
-        }
-        elseif($year_level == "4th Year"){
-            session()->setFlashdata('subjectadded', 'added');
-            return redirect()->route('prospectus4th');
-        }
+        return redirect()->back();
     }
     public function prospectus11()
     {
@@ -326,19 +314,7 @@ public function addprospectus11()
         $query = $prospectus_model->insert($values);
 
           session()->setFlashdata('subjectadded', 'added');
-        if($year_level == "1st Year" or $year_level == "Grade 11"){
-            return redirect()->route('prospectus11');
-        }
-        elseif($year_level == "2nd Year" or $year_level == "Grade 12"){
-            return redirect()->route('prospectus12');
-        }
-        elseif($year_level == "3rd Year"){
-            return redirect()->route('prospectus3rd');
-        }
-        elseif($year_level == "4th Year"){
-            session()->setFlashdata('subjectadded', 'added');
-            return redirect()->route('prospectus4th');
-        }
+          return redirect()->back();
         
     }
 }

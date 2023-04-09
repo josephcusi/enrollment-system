@@ -85,7 +85,7 @@ $routes->get('/myprofile', 'Profile::myprofile');
 $routes->post('/insert_registration', 'Profile::insert_registration');
 $routes->get('/updateReg', 'Profile::updateReg');
 $routes->get('/edit_reg/(:any)', 'Profile::edit_reg/$1');
-$routes->put('/update/(:any)', 'Profile::update/$1');
+$routes->put('/update', 'Profile::update');
 $routes->put('/updateProfile/(:any)', 'Profile::updateProfile/$1');
 $routes->get('/strandProspectus/(:any)', 'Prospectus::strandProspectus/$1');
 $routes->put('/updatePassword/(:any)', 'Profile::updatePassword/$1');
@@ -93,6 +93,7 @@ $routes->put('/updateUserProfile/(:any)', 'Profile::updateUserProfile/$1');
 $routes->post('/insert_credeantials', 'User::insert_credeantials');
 $routes->get('/credentials', 'User::credentials');
 $routes->post('/insert_subject', 'Profile::insert_subject');
+$routes->post('/test', 'Profile::test');
 });
 
 
