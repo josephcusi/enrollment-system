@@ -18,3 +18,1143 @@ in APPPATH\Views\admin\viewPreEnroll.php on line 247.
  6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-09 08:12:12 --> mysqli_sql_exception: Not unique table/alias: 'prospectrus_tbl' in C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System\app\Controllers\PreEnrolled.php(59): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('102')
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-04-09 08:12:12 --> Not unique table/alias: 'prospectrus_tbl'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` ON `prospectus_add_tbl`.`subject_id` = `prospectrus_tbl`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` ON `prospectus_add_tbl`.`subject_id` = `prospectrus_tbl`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` ON `prospectus_add_tbl`.`subject_id` = `prospectrus_tbl`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` ON `prospectus_add_tbl`.`subject_id` = `prospectrus_tbl`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = :prospectus_add_tbl.lrn:
+AND `prospectus_add_tbl`.`year` = :prospectus_add_tbl.year:
+AND `prospectus_add_tbl`.`semester` = :prospectus_add_tbl.semester:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\PreEnrolled.php(59): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('102')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-09 08:13:04 --> mysqli_sql_exception: Unknown column 'prospectus_add_tbl.lrn' in 'where clause' in C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System\app\Controllers\PreEnrolled.php(59): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('102')
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-04-09 08:13:04 --> Unknown column 'prospectus_add_tbl.lrn' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`prospectrus_tbl`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`prospectrus_tbl`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`prospectrus_tbl`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`prospectrus_tbl`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = :prospectus_add_tbl.lrn:
+AND `prospectus_add_tbl`.`year` = :prospectus_add_tbl.year:
+AND `prospectus_add_tbl`.`semester` = :prospectus_add_tbl.semester:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\PreEnrolled.php(59): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('102')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-09 08:13:47 --> mysqli_sql_exception: Unknown column 'pt.prospectus_add_tbl.lrn' in 'where clause' in C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System\app\Controllers\PreEnrolled.php(59): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('102')
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-04-09 08:13:47 --> Unknown column 'pt.prospectus_add_tbl.lrn' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`prospectrus_tbl`.`id`
+WHERE `pt`.`prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`prospectrus_tbl`.`id`
+WHERE `pt`.`prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`prospectrus_tbl`.`id`
+WHERE `pt`.`prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`prospectrus_tbl`.`id`
+WHERE `pt`.`prospectus_add_tbl`.`lrn` = :pt.prospectus_add_tbl.lrn:
+AND `prospectus_add_tbl`.`year` = :prospectus_add_tbl.year:
+AND `prospectus_add_tbl`.`semester` = :prospectus_add_tbl.semester:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\PreEnrolled.php(59): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('102')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-09 08:15:12 --> mysqli_sql_exception: Unknown column 'prospectus_add_tbl.lrn' in 'where clause' in C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System\app\Controllers\PreEnrolled.php(61): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('102')
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-04-09 08:15:12 --> Unknown column 'prospectus_add_tbl.lrn' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`prospectrus_tbl`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`prospectrus_tbl`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`prospectrus_tbl`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`prospectrus_tbl`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = :prospectus_add_tbl.lrn:
+AND `prospectus_add_tbl`.`year` = :prospectus_add_tbl.year:
+AND `prospectus_add_tbl`.`semester` = :prospectus_add_tbl.semester:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\PreEnrolled.php(61): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('102')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-09 08:17:20 --> mysqli_sql_exception: Unknown column 'prospectus_add_tbl.lrn.pt' in 'where clause' in C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System\app\Controllers\PreEnrolled.php(61): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('102')
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-04-09 08:17:20 --> Unknown column 'prospectus_add_tbl.lrn.pt' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`prospectrus_tbl`.`id`
+WHERE `prospectus_add_tbl`.`lrn`.`pt` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`prospectrus_tbl`.`id`
+WHERE `prospectus_add_tbl`.`lrn`.`pt` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`prospectrus_tbl`.`id`
+WHERE `prospectus_add_tbl`.`lrn`.`pt` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`prospectrus_tbl`.`id`
+WHERE `prospectus_add_tbl`.`lrn`.`pt` = :prospectus_add_tbl.lrn.pt:
+AND `prospectus_add_tbl`.`year` = :prospectus_add_tbl.year:
+AND `prospectus_add_tbl`.`semester` = :prospectus_add_tbl.semester:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\PreEnrolled.php(61): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('102')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-09 08:18:16 --> mysqli_sql_exception: Unknown column 'prospectus_add_tbl.lrn' in 'where clause' in C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System\app\Controllers\PreEnrolled.php(61): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('102')
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-04-09 08:18:16 --> Unknown column 'prospectus_add_tbl.lrn' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = :prospectus_add_tbl.lrn:
+AND `prospectus_add_tbl`.`year` = :prospectus_add_tbl.year:
+AND `prospectus_add_tbl`.`semester` = :prospectus_add_tbl.semester:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\PreEnrolled.php(61): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('102')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-09 08:18:18 --> mysqli_sql_exception: Unknown column 'prospectus_add_tbl.lrn' in 'where clause' in C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System\app\Controllers\PreEnrolled.php(61): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('102')
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-04-09 08:18:18 --> Unknown column 'prospectus_add_tbl.lrn' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = :prospectus_add_tbl.lrn:
+AND `prospectus_add_tbl`.`year` = :prospectus_add_tbl.year:
+AND `prospectus_add_tbl`.`semester` = :prospectus_add_tbl.semester:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\PreEnrolled.php(61): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('102')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-09 08:18:43 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'as `tt` = 'ADMINID-4018'
+AND `prospectus_add_tbl`.`year` = '2024-2025'
+AND `p...' at line 4 in C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System\app\Controllers\PreEnrolled.php(61): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('102')
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-04-09 08:18:43 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'as `tt` = 'ADMINID-4018'
+AND `prospectus_add_tbl`.`year` = '2024-2025'
+AND `p...' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` as `tt` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` as `tt` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` as `tt` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` as `tt` = :prospectus_add_tbl.lrn as tt:
+AND `prospectus_add_tbl`.`year` = :prospectus_add_tbl.year:
+AND `prospectus_add_tbl`.`semester` = :prospectus_add_tbl.semester:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\PreEnrolled.php(61): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('102')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-09 08:19:29 --> mysqli_sql_exception: Unknown column 'prospectus_add_tbl.lrn' in 'where clause' in C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System\app\Controllers\PreEnrolled.php(61): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('102')
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-04-09 08:19:29 --> Unknown column 'prospectus_add_tbl.lrn' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = :prospectus_add_tbl.lrn:
+AND `prospectus_add_tbl`.`year` = :prospectus_add_tbl.year:
+AND `prospectus_add_tbl`.`semester` = :prospectus_add_tbl.semester:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\PreEnrolled.php(61): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('102')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-09 08:19:36 --> mysqli_sql_exception: Unknown column 'prospectus_add_tbl.lrn' in 'where clause' in C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System\app\Controllers\PreEnrolled.php(61): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('102')
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-04-09 08:19:36 --> Unknown column 'prospectus_add_tbl.lrn' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = :prospectus_add_tbl.lrn:
+AND `prospectus_add_tbl`.`year` = :prospectus_add_tbl.year:
+AND `prospectus_add_tbl`.`semester` = :prospectus_add_tbl.semester:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\PreEnrolled.php(61): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('102')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-09 08:21:54 --> mysqli_sql_exception: Unknown column '$prospectus_add_tbl.id' in 'field list' in C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `$pro...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `$pro...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `$pro...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `$pro...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System\app\Controllers\PreEnrolled.php(61): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('102')
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-04-09 08:21:54 --> Unknown column '$prospectus_add_tbl.id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `$prospectus_add_tbl`.`id`
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `$prospectus_add_tbl`.`id`
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `$prospectus_add_tbl`.`id`
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `$prospectus_add_tbl`.`id`
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = :prospectus_add_tbl.lrn:
+AND `prospectus_add_tbl`.`year` = :prospectus_add_tbl.year:
+AND `prospectus_add_tbl`.`semester` = :prospectus_add_tbl.semester:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\PreEnrolled.php(61): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('102')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-09 08:22:17 --> mysqli_sql_exception: Unknown column 'prospectus_add_tbl.lrn' in 'where clause' in C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System\app\Controllers\PreEnrolled.php(61): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('102')
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-04-09 08:22:17 --> Unknown column 'prospectus_add_tbl.lrn' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = :prospectus_add_tbl.lrn:
+AND `prospectus_add_tbl`.`year` = :prospectus_add_tbl.year:
+AND `prospectus_add_tbl`.`semester` = :prospectus_add_tbl.semester:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\PreEnrolled.php(61): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('102')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-09 08:23:45 --> mysqli_sql_exception: Unknown column 'prospectus_add_tbl.lrn' in 'where clause' in C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System\app\Controllers\PreEnrolled.php(61): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('102')
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-04-09 08:23:45 --> Unknown column 'prospectus_add_tbl.lrn' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = :prospectus_add_tbl.lrn:
+AND `prospectus_add_tbl`.`year` = :prospectus_add_tbl.year:
+AND `prospectus_add_tbl`.`semester` = :prospectus_add_tbl.semester:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\PreEnrolled.php(61): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('102')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-09 08:27:58 --> mysqli_sql_exception: Unknown column 'prospectus_add_tbl.lrn' in 'where clause' in C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System\app\Controllers\PreEnrolled.php(61): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('102')
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-04-09 08:27:58 --> Unknown column 'prospectus_add_tbl.lrn' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = :prospectus_add_tbl.lrn:
+AND `prospectus_add_tbl`.`year` = :prospectus_add_tbl.year:
+AND `prospectus_add_tbl`.`semester` = :prospectus_add_tbl.semester:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\PreEnrolled.php(61): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('102')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-09 08:31:02 --> mysqli_sql_exception: Unknown column 'prospectus_add_tbl.lrn' in 'where clause' in C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System\app\Controllers\PreEnrolled.php(61): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('102')
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-04-09 08:31:02 --> Unknown column 'prospectus_add_tbl.lrn' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = :prospectus_add_tbl.lrn:
+AND `prospectus_add_tbl`.`year` = :prospectus_add_tbl.year:
+AND `prospectus_add_tbl`.`semester` = :prospectus_add_tbl.semester:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\PreEnrolled.php(61): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('102')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-09 08:32:08 --> mysqli_sql_exception: Unknown column 'prospectus_add_tbl.lrn' in 'where clause' in C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System\app\Controllers\PreEnrolled.php(62): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('102')
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-04-09 08:32:08 --> Unknown column 'prospectus_add_tbl.lrn' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = :prospectus_add_tbl.lrn:
+AND `prospectus_add_tbl`.`year` = :prospectus_add_tbl.year:
+AND `prospectus_add_tbl`.`semester` = :prospectus_add_tbl.semester:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\PreEnrolled.php(62): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('102')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-09 08:32:11 --> mysqli_sql_exception: Unknown column 'prospectus_add_tbl.lrn' in 'where clause' in C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System\app\Controllers\PreEnrolled.php(62): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('102')
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-04-09 08:32:11 --> Unknown column 'prospectus_add_tbl.lrn' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = :prospectus_add_tbl.lrn:
+AND `prospectus_add_tbl`.`year` = :prospectus_add_tbl.year:
+AND `prospectus_add_tbl`.`semester` = :prospectus_add_tbl.semester:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\PreEnrolled.php(62): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('102')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-09 08:36:16 --> mysqli_sql_exception: Unknown column 'prospectus_tbl.id' in 'field list' in C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `pros...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `pros...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `pros...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `pros...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System\app\Controllers\PreEnrolled.php(62): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('102')
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-04-09 08:36:16 --> Unknown column 'prospectus_tbl.id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `prospectus_tbl`.`id`
+FROM `prospectus_add_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `prospectus_tbl`.`id`
+FROM `prospectus_add_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `prospectus_tbl`.`id`
+FROM `prospectus_add_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `prospectus_tbl`.`id`
+FROM `prospectus_add_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = :prospectus_add_tbl.lrn:
+AND `prospectus_add_tbl`.`year` = :prospectus_add_tbl.year:
+AND `prospectus_add_tbl`.`semester` = :prospectus_add_tbl.semester:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\PreEnrolled.php(62): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('102')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-09 08:36:26 --> mysqli_sql_exception: Unknown column 'prospectrus_tbl.id' in 'field list' in C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `pros...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `pros...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `pros...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `pros...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System\app\Controllers\PreEnrolled.php(62): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('102')
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-04-09 08:36:26 --> Unknown column 'prospectrus_tbl.id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `prospectrus_tbl`.`id`
+FROM `prospectus_add_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `prospectrus_tbl`.`id`
+FROM `prospectus_add_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `prospectrus_tbl`.`id`
+FROM `prospectus_add_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `prospectrus_tbl`.`id`
+FROM `prospectus_add_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = :prospectus_add_tbl.lrn:
+AND `prospectus_add_tbl`.`year` = :prospectus_add_tbl.year:
+AND `prospectus_add_tbl`.`semester` = :prospectus_add_tbl.semester:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\PreEnrolled.php(62): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('102')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-09 08:36:47 --> mysqli_sql_exception: Unknown column 'prospectus_add_tbl.lrn' in 'where clause' in C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `pros...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `pros...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `pros...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `pros...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System\app\Controllers\PreEnrolled.php(62): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('102')
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-04-09 08:36:47 --> Unknown column 'prospectus_add_tbl.lrn' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `prospectrus_tbl`.`id`
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `prospectrus_tbl`.`id`
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `prospectrus_tbl`.`id`
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `prospectrus_tbl`.`id`
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = :prospectus_add_tbl.lrn:
+AND `prospectus_add_tbl`.`year` = :prospectus_add_tbl.year:
+AND `prospectus_add_tbl`.`semester` = :prospectus_add_tbl.semester:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\PreEnrolled.php(62): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('102')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-09 08:37:26 --> mysqli_sql_exception: Unknown column 'prospectus_add_tbl.lrn' in 'where clause' in C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `pros...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `pros...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `pros...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `pros...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System\app\Controllers\PreEnrolled.php(62): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('102')
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-04-09 08:37:26 --> Unknown column 'prospectus_add_tbl.lrn' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `prospectrus_tbl`.`id`
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`lrn` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `prospectrus_tbl`.`id`
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`lrn` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `prospectrus_tbl`.`id`
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`lrn` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `prospectrus_tbl`.`id`
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`lrn` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = :prospectus_add_tbl.lrn:
+AND `prospectus_add_tbl`.`year` = :prospectus_add_tbl.year:
+AND `prospectus_add_tbl`.`semester` = :prospectus_add_tbl.semester:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\PreEnrolled.php(62): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('102')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-09 08:37:29 --> mysqli_sql_exception: Unknown column 'prospectus_add_tbl.lrn' in 'where clause' in C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `pros...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `pros...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `pros...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `pros...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System\app\Controllers\PreEnrolled.php(62): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('102')
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-04-09 08:37:29 --> Unknown column 'prospectus_add_tbl.lrn' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `prospectrus_tbl`.`id`
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`lrn` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `prospectrus_tbl`.`id`
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`lrn` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `prospectrus_tbl`.`id`
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`lrn` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `prospectrus_tbl`.`id`
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`lrn` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = :prospectus_add_tbl.lrn:
+AND `prospectus_add_tbl`.`year` = :prospectus_add_tbl.year:
+AND `prospectus_add_tbl`.`semester` = :prospectus_add_tbl.semester:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\PreEnrolled.php(62): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('102')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-09 08:37:58 --> mysqli_sql_exception: Unknown column 'prospectus_add_tbl.lrn' in 'where clause' in C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System\app\Controllers\PreEnrolled.php(62): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('102')
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-04-09 08:37:58 --> Unknown column 'prospectus_add_tbl.lrn' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = \'ADMINID-4018\'
+AND `prospectus_add_tbl`.`year` = \'2024-2025\'
+AND `prospectus_add_tbl`.`semester` = \'1st Semester\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `prospectrus_tbl` as `pt` ON `prospectus_add_tbl`.`subject_id` = `pt`.`id`
+WHERE `prospectus_add_tbl`.`lrn` = :prospectus_add_tbl.lrn:
+AND `prospectus_add_tbl`.`year` = :prospectus_add_tbl.year:
+AND `prospectus_add_tbl`.`semester` = :prospectus_add_tbl.semester:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\PreEnrolled.php(62): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('102')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-09 08:38:11 --> Undefined variable $prospectus__add_model
+in APPPATH\Controllers\PreEnrolled.php on line 57.
+ 1 APPPATH\Controllers\PreEnrolled.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $prospectus__add_model', 'APPPATH\\Controllers\\PreEnrolled.php', 57)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('102')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-09 08:50:43 --> Undefined variable $prospectus
+in APPPATH\Views\admin\viewPreEnroll.php on line 339.
+ 1 APPPATH\Views\admin\viewPreEnroll.php(339): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $prospectus', 'APPPATH\\Views\\admin\\viewPreEnroll.php', 339)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\viewPreEnroll.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/viewPreEnroll', [], true)
+ 5 APPPATH\Controllers\PreEnrolled.php(69): view('admin/viewPreEnroll', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('99')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-09 08:51:44 --> Undefined variable $strand_id
+in APPPATH\Controllers\PreEnrolled.php on line 57.
+ 1 APPPATH\Controllers\PreEnrolled.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $strand_id', 'APPPATH\\Controllers\\PreEnrolled.php', 57)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('99')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-09 08:52:20 --> Class "App\Controllers\StrandModel" not found
+in APPPATH\Controllers\PreEnrolled.php on line 34.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('99')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-09 08:52:35 --> Undefined variable $strand_id
+in APPPATH\Controllers\PreEnrolled.php on line 59.
+ 1 APPPATH\Controllers\PreEnrolled.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $strand_id', 'APPPATH\\Controllers\\PreEnrolled.php', 59)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('99')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-09 08:55:06 --> Undefined variable $prospectus
+in APPPATH\Views\admin\viewPreEnroll.php on line 339.
+ 1 APPPATH\Views\admin\viewPreEnroll.php(339): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $prospectus', 'APPPATH\\Views\\admin\\viewPreEnroll.php', 339)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\viewPreEnroll.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/viewPreEnroll', [], true)
+ 5 APPPATH\Controllers\PreEnrolled.php(65): view('admin/viewPreEnroll', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll('99')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

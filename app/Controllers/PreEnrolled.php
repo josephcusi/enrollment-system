@@ -11,6 +11,9 @@ use App\Models\RegistrationModel;
 use App\Models\SectionModel;
 use App\Models\ProfileModel;
 use App\Models\YearModel;
+use App\Models\ProspectusModel;
+use App\Models\StudentProspectusModel;
+use App\Models\StrandModel;
 
 class PreEnrolled extends BaseController
 {
@@ -27,6 +30,10 @@ class PreEnrolled extends BaseController
         $registration_model = new RegistrationModel();
         $year_model = new YearModel();
         $section_model = new SectionModel();
+        $prospectus_model = new ProspectusModel();
+        $prospectus_add_model = new StudentProspectusModel();
+        $strand_model = new StrandModel();
+        
         
         $data = [
         'enrolled' => $user_profile
@@ -54,7 +61,7 @@ class PreEnrolled extends BaseController
         'stat' => $user_model->where('status', session()->get('status'))->first()
         ];
 
-        // var_dump($data['test']);
+        // var_dump($data['userSub']);
         return view('admin/viewPreEnroll', $data);
     }
     public function enroll($id)

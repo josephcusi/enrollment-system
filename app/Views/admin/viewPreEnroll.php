@@ -179,10 +179,8 @@
         <br>
         <!-- Main content -->
         <section class="content-header">
-            <div class="card card-primary card-outline mx-auto" style="width:98%; border-radius:15px;">
-                <div class="card-header">
-                    <h3 class="card-title" style="font-family:poppins">Pre-Enrolled Table</h3>
-                </div>
+            <div class="card card-primary card-outline mx-auto" style="width:98%;">
+               
                 <!-- /.card-header -->
                 <div class="card-body">
                     <div class="tab-pane" id="address">
@@ -288,13 +286,72 @@
                                 value="<?=$enrolled[0]['nationality'];?>" disabled>
                         </div>
                     </div>
+                    <style>
+                        table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    table td,
+    table th {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+    }
+
+    table th {
+        background-color: #f2f2f2;
+        
+        color:black;
+        
+    }
+
+    @media screen and (max-width: 768px) {
+        .container {
+            padding: 10px;
+        }
+
+        header {
+            padding: 10px;
+        }
+
+        table td,
+        table th {
+            font-size: 14px;
+        }
+    }
+                    </style>
+                    <p class="a" style="font-size:1.5em; font-family: Poppins;color:maroon;">Subjects</p>
+                    <table>
+            <thead >
+                <tr>
+                    <th>Course</th>
+                    <th>Course Description</th>
+                    <th>Unit</th>
+                    <th>Pre-Requisite</th>
+                </tr>
+            </thead>
+            <tbody>
+            
+              <tr>
+                <td>tset</td>
+                <td>tset</td>
+                <td>tset</td>
+                <td>tset</td>
+              </tr>
+           
+            </tbody>
+        </table>
                     <div class="modal-footer justify-content-between">
                         <span><button type="button" class="btn btn-default"
-                                style="border-radius:15px; font-family:poppins; margin-bottom:; background-color:Green; color: white;"
+                                style=" font-family:poppins; margin-bottom:; background-color:Green; color: white;"
                                 data-toggle="modal" data-target="#enroll">Enroll</button>
                             <a href="<?=base_url('rejected/'.$enrolled[0]['id'])?>"><button type="button"
                                     class="btn btn-default"
-                                    style="border-radius:15px; font-family:poppins; margin-bottom:; background-color:red; color: white;">Reject</button></span></a>
+                                    style="font-family:poppins; margin-bottom:; background-color:red; color: white;">Reject</button></span></a>
 
                     </div>
                     </form>
