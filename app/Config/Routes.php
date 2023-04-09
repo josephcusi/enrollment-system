@@ -60,7 +60,7 @@ $routes->post('forgot-password', 'AuthController::forgot');
 $routes->get('reset_Password', 'AuthController::reset_Password');
 $routes->get('login', 'AuthController::login');
 $routes->post('reset-password', 'AuthController::resetPassword');
-$routes->get('/generatePdf', 'PdfGenerator::generatePdf');
+$routes->get('/generate-pdf', 'PdfGenerator::generatePdf');
 
 //------------USER PROFILE------------
 $routes->group('', ['filter' => 'AuthCheck'], function ($routes) {
@@ -164,6 +164,7 @@ $routes->get('/enroll', 'PreEnrolled::enroll');
 $routes->get('/pre_enrolled_reg', 'PreEnrolled::pre_enrolled_reg');
 $routes->get('/viewPreEnroll/(:any)', 'PreEnrolled::viewPreEnroll/$1');
 $routes->get('/enroll/(:any)', 'PreEnrolled::enroll/$1');
+$routes->post('/generate', 'PreEnrolled::generate');
 $routes->put('/enrolled/(:any)', 'PreEnrolled::enrolled/$1');
 $routes->get('/rejected/(:any)', 'PreEnrolled::rejected/$1');
 

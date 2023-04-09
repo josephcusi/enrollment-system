@@ -27,7 +27,7 @@
 
                         <li class="nav-header" style="font-family:poppins;">Admin</li>
                         <li class="nav-item" style="font-family:poppins;">
-                            <a href="<?=base_url()?>/admin" class="nav-link active">
+                            <a href="<?=base_url()?>/admin" class="nav-link">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     <strong>Dashboard<strong>
@@ -39,7 +39,7 @@
                         <br>
                         <li class="nav-item" style="font-family:poppins;">
                         <li class="nav-item" style="font-family:poppins;">
-                            <a href="<?=base_url('/pre_enrolled_reg')?>" class="nav-link">
+                            <a href="<?=base_url('/pre_enrolled_reg')?>" class="nav-link active">
                                 <i class="far fa-thin fa-newspaper"></i>
                                 <p>Pre-Enrolled</p>
                             </a>

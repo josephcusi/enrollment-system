@@ -96,24 +96,25 @@ class TeacherAccount extends BaseController
     
                     if (!$prof_pic->hasMoved()) {
                         $prof_pic->move(FCPATH . 'profile');
+
+                         $str_result = '1234567890';
+                    $bccid =  substr(str_shuffle($str_result),0, '4');
+                    $myLrn = '';
     
                     $values = [
+                        'lrn' =>'TEACHERID-'.$myLrn.str_pad($bccid, 4, "0", STR_PAD_LEFT),
                         'lastname' => $lastname,
                         'firstname' => $firstname,
                         'middlename' => $middlename,
                         'email' => $teacherEmail,
                         'password' => Hash::make($teacherPassword),
                         'usertype' => 'teacher',
-                        'profile_picture' => $prof_pic->getClientName()
+                        'profile_picture' => $prof_pic->getClientName(), 
+                        'status' => session()->get('status')
                     ];
     
                     $user_model = new UserModel();
                     $teacher_lrn = $user_model->insert($values);
-    
-                    $myLrn = '';
-    
-                    $lrn = 'TEACHER'.$myLrn.str_pad($teacher_lrn, 3, "0", STR_PAD_LEFT);
-                    $user_model->set('lrn', $lrn)->where('id', $teacher_lrn)->update();
                     session()->setFlashdata('admin', 'Welcome');
                     return redirect()->route('listofteacher');
                     // echo 2;

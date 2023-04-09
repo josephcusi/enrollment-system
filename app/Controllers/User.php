@@ -85,20 +85,22 @@ class User extends BaseController
                         $profile = new Profile();
                         $user_model = new UserModel();
 
-                        if($user_info['usertype'] == "COLLEGE" or $user_info['usertype'] == "SHS" and $user_info['status'] == "active")
+                        if($user_info['usertype'] == "SHS" || $user_info['usertype'] == "COLLEGE" and $user_info['status'] == "active")
                         {
                             $credential_model = new CredentialModel();
                             $counts = count($credential_model->where('lrn', session()->get('lrn'))->find());
-                            if($counts == 1){
+                            if($counts == 1)
+                            {
                                 session()->setFlashdata('dashboard', 'Welcome');
                                 return $profile->retrieve_profile($userEmail);
                             }
                             else{
                                 return redirect()->route('credentials');
                             }
+                            // echo 1;
 
                         }
-                        elseif($user_info['usertype'] == "SHS" or $user_info['usertype'] == "COLLEGE" and $user_info['status'] == "pending")
+                        elseif($user_info['usertype'] == "SHS" || $user_info['usertype'] == "COLLEGE" and $user_info['status'] == "pending")
                         {
                           session()->setFlashdata('notverify', 'Your email is not verified yet. Please check your email');
                           return redirect()->to('login');

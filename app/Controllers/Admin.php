@@ -237,7 +237,7 @@ class Admin extends BaseController
                     'email' => $adminEmail,
                     'password' => Hash::make($adminPassword),
                     'usertype' => 'admin',
-                    'status' => 'COLLEGE',
+                    'status' => session()->get('status'),
                     'profile_picture' => $prof_pic->getClientName(),
                     'lrn' =>'ADMINID-'.$myLrn.str_pad($bccid, 4, "0", STR_PAD_LEFT)
                 ];
@@ -342,7 +342,7 @@ class Admin extends BaseController
             'status' => 'active'
         ];
         $year_model->update($id, $data);
-        return redirect()->route('admin');
+        return redirect()->back();
         // var_dump($data);
     }
 }

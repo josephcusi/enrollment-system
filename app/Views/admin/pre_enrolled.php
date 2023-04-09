@@ -235,7 +235,13 @@
               <td><?= $pre_enrolled_value['strand'];?></td>
               <td><?= $pre_enrolled_value['state'];?></td>
               <td>
-                <a href="<?=base_url('viewPreEnroll/'. $pre_enrolled_value['id'] . '/' . $test[0]['id'] )?>"><button type="button" class="btn btn-secondary btn-sm" style = "border-radius:15px">view</button>
+                <a href="<?=base_url('viewPreEnroll/'. $pre_enrolled_value['id'] )?>"><button type="button" class="btn btn-secondary btn-sm" style = "border-radius:15px">view</button></a>
+                <?php if($stat['status'] == 'COLLEGE' or $stat['state'] == "Enrolled"):?>
+                  <button type="button" class="btn btn-secondary btn-sm btn-generate" style = "border-radius:15px" data-id="<?=$pre_enrolled_value['user_tbl_id']?>" data-lrn="<?=$pre_enrolled_value['lrn']?>">Generate ID</button>
+                <?php include ('modal/generateModal.php')?>
+                <?php else: ?>
+                  <?php echo ''?>
+                <?php endif; ?>
               </td>
             </tr>
             <?php endforeach;?>
@@ -274,21 +280,18 @@
 
 <!-- Page specific script -->
 <script>
-  $(function () {
-    $("#example1").DataTable({
-      "responsive": true, "lengthChange": false, "autoWidth": false,
-
-    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-    $('#example2').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false,
-      "responsive": true,
-    }).fnDestroy();
-  });
+  $(document).ready(function(){
+     // sa button
+     $('.btn-generate').on('click',function(){
+         // data galing buton
+        const id = $(this).data('id');
+        const lrn = $(this).data('lrn');
+         // // sa modal
+          $('.idModal').val(id).trigger('change');
+         // Call Modal
+         $('#generateID').modal('show');
+     });
+   });
 </script>
   </body>
 
