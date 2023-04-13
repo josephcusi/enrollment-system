@@ -236,7 +236,7 @@
               <td><?= $pre_enrolled_value['state'];?></td>
               <td>
                 <a href="<?=base_url('viewPreEnroll/'. $pre_enrolled_value['id'] )?>"><button type="button" class="btn btn-secondary btn-sm" style = "border-radius:15px">view</button></a>
-                <?php if($stat['status'] == 'COLLEGE' or $stat['state'] == "Enrolled"):?>
+                <?php if($pre_enrolled_value['status'] == 'COLLEGE' or $pre_enrolled_value['state'] == "Enrolled"):?>
                   <button type="button" class="btn btn-secondary btn-sm btn-generate" style = "border-radius:15px" data-id="<?=$pre_enrolled_value['user_tbl_id']?>" data-lrn="<?=$pre_enrolled_value['lrn']?>">Generate ID</button>
                 <?php include ('modal/generateModal.php')?>
                 <?php else: ?>

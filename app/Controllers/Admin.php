@@ -54,8 +54,11 @@ class Admin extends BaseController
             ->join('user_tbl', 'user_profile.email = user_tbl.email', 'inner')
             ->join('student_registration','user_tbl.lrn = student_registration.lrn', 'inner')
             ->join('school_year','student_registration.year = school_year.year', 'inner')
+            ->join('yearlevel_tbl', 'student_registration.year_level = yearlevel_tbl.year_level', 'inner')
+            ->where('type', 'COLLEGE')
+            
             ->where('state', 'Enrolled')
-            ->where('gender', 'male')
+            ->where('gender', 'Male')
             ->where('school_year.status', 'active')->get()->getNumRows(),
             'female' => $profile_model
             ->select('*, ')
@@ -63,11 +66,11 @@ class Admin extends BaseController
             ->join('student_registration','user_tbl.lrn = student_registration.lrn', 'inner')
             ->join('school_year','student_registration.year = school_year.year', 'inner')
             ->where('state', 'Enrolled')
-            ->where('gender', 'female')
+            ->where('gender', 'Female')
             ->where('school_year.status', 'active')->get()->getNumRows(),
             'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
             'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
-            'usertypestudent' => $user_model->where('usertype', 'student')->get()->getNumRows(),
+            'usertypestudent' => $user_model->where('usertype', 'COLLEGE')->get()->getNumRows(),
             'usertypeteacher' => $user_model->where('usertype', 'teacher')->get()->getNumRows(),
             'usertypeadmin' => $user_model->where('usertype', 'admin')->get()->getNumRows(),
             'humss' => $registration_model->where('strand', 'HUMSS')->get()->getNumRows(),
@@ -91,10 +94,10 @@ class Admin extends BaseController
           ->where('school_year.status', 'active')->get()->getNumRows(),
             // 'grade12' => $registration_model->where('year_level', 'Grade 12')->where('year', '2022')->get()->getNumRows(),
             'status' => $registration_model->where('state', 'pending')->get()->getNumRows(),
-            'enroll2022' => $registration_model->where('state', 'Enrolled')->where('year', '2022')->get()->getNumRows(),
-            'enroll2023' => $registration_model->where('state', 'Enrolled')->where('year', '2023')->get()->getNumRows(),
-            'enroll2024' => $registration_model->where('state', 'Enrolled')->where('year', '2024')->get()->getNumRows(),
-            'enroll2025' => $registration_model->where('state', 'Enrolled')->where('year', '2025')->get()->getNumRows(),
+            'enroll2022' => $registration_model->where('state', 'Enrolled')->where('year', '2022-2023')->get()->getNumRows(),
+            'enroll2023' => $registration_model->where('state', 'Enrolled')->where('year', '2023-2024')->get()->getNumRows(),
+            'enroll2024' => $registration_model->where('state', 'Enrolled')->where('year', '2024-2025')->get()->getNumRows(),
+            'enroll2025' => $registration_model->where('state', 'Enrolled')->where('year', '2025-2026')->get()->getNumRows(),
             'reject' => $registration_model->where('state', 'Rejected')->get()->getNumRows(),
             'name' => $user_model->where('email', session()->get('email'))->first(),
             'sem_year' => $year_level->first(),

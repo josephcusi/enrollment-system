@@ -9,6 +9,7 @@ use App\Models\StrandModel;
 use App\Models\UserModel;
 use App\Models\ScheduleModel;
 use App\Models\YearModel;
+use App\Models\StudentProspectusModel;
 use App\Libraries\Hash;
 
 class Teacher extends BaseController
@@ -31,6 +32,7 @@ class Teacher extends BaseController
             ->join('student_registration', 'section_tbl.id = student_registration.user_section', 'inner')
             ->join('user_tbl', 'student_registration.lrn = user_tbl.lrn', 'inner')
             ->join('school_year', 'prospectrus_tbl.semester = school_year.semester', 'inner')
+            ->groupBy('student_registration.lrn')
             ->where('schedule_tbl.teacher_id', session()->get('id'))
             ->where('student_registration.year', session()->get('year'))
             ->where('student_registration.semester', session()->get('semester'))
@@ -55,6 +57,7 @@ class Teacher extends BaseController
         $user_model = new UserModel();
         $year_model = new YearModel();
         $grade_model = new GradeModel();
+        $prospectus_add_model = new StudentProspectusModel();
         
         $data =[
             'userInfo' => $grade_model
@@ -74,15 +77,13 @@ class Teacher extends BaseController
             'userName' => $user_model->where('email', session()->get('email'))->first(),
             'year_sem' => $year_model->findAll(),
             
-            'info' => $user_model
+            'info' => $prospectus_add_model
             ->select('*, prospectrus_tbl.id')
-            ->join('schedule_tbl', 'user_tbl.id = schedule_tbl.teacher_id', 'inner')
-            ->join('student_registration', 'schedule_tbl.section_id = student_registration.user_section', 'inner')
-            ->join('prospectrus_tbl', 'schedule_tbl.subject_id = prospectrus_tbl.id', 'inner')
-            ->join('school_year', 'student_registration.semester = school_year.semester', 'inner')
-            ->join('school_year as sy', 'prospectrus_tbl.semester = sy.semester', 'inner')
-            ->where('user_tbl.email', session()->get('email'))
+            ->join('student_registration', 'prospectus_add_tbl.lrn = student_registration.lrn', 'inner')
+            ->join('prospectrus_tbl', 'prospectus_add_tbl.subject_id = prospectrus_tbl.id', 'inner')
             ->where('student_registration.id', $id)
+            ->where('prospectus_add_tbl.year', session()->get('year'))
+            ->where('prospectus_add_tbl.semester', session()->get('semester'))
             ->get()->getResultArray()
         ];
         return view('teacher/Grade', $data);

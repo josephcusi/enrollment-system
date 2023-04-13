@@ -40,9 +40,11 @@ class PreEnrolled extends BaseController
         ->select('*, student_registration.id')
         ->join('user_tbl', 'user_profile.email = user_tbl.email', 'inner')
         ->join('student_registration', 'user_tbl.lrn = student_registration.lrn', 'inner')
+        ->join('prospectus_add_tbl', 'student_registration.lrn = prospectus_add_tbl.lrn', 'inner')
+        ->join('prospectrus_tbl', 'prospectus_add_tbl.subject_id = prospectrus_tbl.id', 'inner')
         ->where('student_registration.id', $id)
-        ->where('student_registration.year', session()->get('year'))
-        ->where('student_registration.semester', session()->get('semester'))
+        ->where('prospectus_add_tbl.year', session()->get('year'))
+        ->where('prospectus_add_tbl.semester', session()->get('semester'))
         ->get()->getResultArray(),
 
         'enroll' => $section_model
@@ -61,7 +63,7 @@ class PreEnrolled extends BaseController
         'stat' => $user_model->where('status', session()->get('status'))->first()
         ];
 
-        // var_dump($data['userSub']);
+        // var_dump($data['enrolled']);
         return view('admin/viewPreEnroll', $data);
     }
     public function enroll($id)
@@ -97,9 +99,9 @@ class PreEnrolled extends BaseController
         $data = [
             'pre_enrolled' => $registration_model
             ->select('*, student_registration.id, user_tbl.id as user_tbl_id')
-            ->join('school_year', 'student_registration.semester=school_year.semester', 'right')
-            ->join('user_tbl', 'student_registration.lrn=user_tbl.lrn', 'right')
-            ->join('user_profile', 'user_tbl.email=user_profile.email', 'right')
+            ->join('school_year', 'student_registration.semester = school_year.semester', 'inner')
+            ->join('user_tbl', 'student_registration.lrn=user_tbl.lrn', 'inner')
+            ->join('user_profile', 'user_tbl.email=user_profile.email', 'inner')
             ->where('student_registration.year', session()->get('year'))
             ->where('user_tbl.usertype', session()->get('status'))
             ->where('school_year.year', session()->get('year'))
@@ -116,24 +118,21 @@ class PreEnrolled extends BaseController
         ->where('school_year.semester', session()->get('semester'))
         ->get()->getResultArray(),
 
-        'stat' => $user_model
-        ->select('*')
-        ->join('student_registration', 'user_tbl.lrn = student_registration.lrn', 'inner')
-        ->where('user_tbl.usertype', session()->get('status'))
-        ->first(),
+        'stat' => $user_model->where('status', session()->get('status'))->first(),
+        
         'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
         'sem_year' => $year_model->first(),
 
     ];
 
-        // var_dump( $data ['stat']);
+        // var_dump( $data ['pre_enrolled']);
         return view('admin/pre_enrolled', $data);
     }
     public function enrolled($id)
     {
         $registration_model = new RegistrationModel();
         $section_model = new SectionModel();
-        $user_model = new UserModel();
+        $user_profile = new ProfileModel();
 
         $state = $this->request->getPost('state');
         $section = $this->request->getPost('section');
@@ -147,31 +146,41 @@ class PreEnrolled extends BaseController
 
     $session = session();
 
-    $email_data  = $registration_model
-    ->select('*, user_tbl.id')
-    ->join('school_year', 'student_registration.semester=school_year.semester', 'right')
-    ->join('user_tbl', 'student_registration.lrn=user_tbl.lrn', 'right')
-    ->where('student_registration.id', $id)
-    ->where('student_registration.semester', session()->get('semester'))
-    ->where('school_year.year', session()->get('year'))
-    ->first();
+    $email_data  = [
+        'user_data' => $user_profile
+        ->select('*, student_registration.id')
+        ->join('user_tbl', 'user_profile.email = user_tbl.email', 'inner')
+        ->join('student_registration', 'user_tbl.lrn = student_registration.lrn', 'inner')
+        ->join('prospectus_add_tbl', 'student_registration.lrn = prospectus_add_tbl.lrn', 'inner')
+        ->join('prospectrus_tbl', 'prospectus_add_tbl.subject_id = prospectrus_tbl.id', 'inner')
+        ->where('student_registration.id', $id)
+        ->where('prospectus_add_tbl.year', session()->get('year'))
+        ->where('prospectus_add_tbl.semester', session()->get('semester'))
+        ->get()->getResultArray(),
+    ];
 
-    $data = []; // Add any data that you want to pass to the view here
-    $html = view('user/registrationpdf/test', $data);
+    $html = view('user/registrationpdf/corPDF', $email_data);
     $dompdf = new \Dompdf\Dompdf();
+    $dompdf->set_option('isRemoteEnabled',TRUE);
     $dompdf->loadHtml($html);
     $dompdf->setPaper('A4', 'portrait');
     $dompdf->render();
-    $pdf_data = $dompdf->output(); // Save the PDF file to a variable
+    $pdf_data = $dompdf->output();
 
-    $email = \Config\Services::email();
-    $email->setTo($email_data['email']);
-    $email->setMailType("html");
-    $email->setSubject('Enrollment Status Updated');
-    $email->setFrom('zasuke277379597@gmail.com', 'BACO COMMUNITY COLLEGE');
-    $email->setMessage("Congratulations on your enrollment, we're excited to welcome you to the program and support your academic journey!");
-    $email->attach($pdf_data, '', 'Enrollment Status.pdf', false); // Attach the PDF file
-    $email->send();
+    $folder_path = FCPATH . 'student_credentials' . '/' . $email_data['user_data'][0]['email'];
+    if (!file_exists($folder_path)) {
+        mkdir($folder_path, 0777, true);
+    }
+    file_put_contents($folder_path . '/Certificate of Registration.pdf', $pdf_data);
+
+        $email = \Config\Services::email();
+        $email->setTo($email_data['user_data'][0]['email']);
+        $email->setMailType("html");
+        $email->setSubject('Enrollment Status Updated');
+        $email->setFrom('zasuke277379597@gmail.com', 'BACO COMMUNITY COLLEGE');
+        $email->setMessage("Congratulations on your enrollment, we're excited to welcome you to the program and support your academic journey!");
+        $email->attach($pdf_data, '', 'Certificate of Registration.pdf', false); // Attach the PDF file
+        $email->send();
 
     session()->setFlashdata('enrolled', 'Welcome');
     return redirect()->route('pre_enrolled_reg');

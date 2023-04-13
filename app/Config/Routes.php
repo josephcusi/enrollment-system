@@ -60,7 +60,8 @@ $routes->post('forgot-password', 'AuthController::forgot');
 $routes->get('reset_Password', 'AuthController::reset_Password');
 $routes->get('login', 'AuthController::login');
 $routes->post('reset-password', 'AuthController::resetPassword');
-$routes->get('/generate-pdf', 'PdfGenerator::generatePdf');
+// $routes->get('/generate-pdf', 'PdfGenerator::generatePdf');
+// $routes->get('/test123', 'PdfGenerator::test123');
 
 //------------USER PROFILE------------
 $routes->group('', ['filter' => 'AuthCheck'], function ($routes) {
@@ -186,12 +187,12 @@ $routes->put('/updateGrade/(:any)', 'Teacher::updateGrade/$1');
 $routes->put('/TeacherUpdate', 'Teacher::TeacherUpdate');
 //-----------Grading
 
-
-
-
 $routes->get('/tryteacher', 'Teacher::tryteacher');
 $routes->get('/tryadmin', 'Teacher::tryadmin');
 $routes->get('/tryuser', 'Teacher::tryuser');
+$routes->get('/StudentGrading1st', 'Grading::StudentGrading1st');
+$routes->post('/StudentGrade', 'Grading::StudentGrade');
+$routes->get('/Grade1stYear/(:any)', 'Grading::Grade1stYear/$1');
 });
 
 // $routes->post('add_subject_g11', 'Prospectus::add_subject_g11');

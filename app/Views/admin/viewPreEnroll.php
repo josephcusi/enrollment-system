@@ -335,14 +335,14 @@
                 </tr>
             </thead>
             <tbody>
-            
+            <?php foreach($enrolled as $subenroll):?>
               <tr>
-                <td>tset</td>
-                <td>tset</td>
-                <td>tset</td>
-                <td>tset</td>
+                <td><?= $subenroll['subject'];?></td>
+                <td><?= $subenroll['subject_title'];?></td>
+                <td><?= $subenroll['unit'];?></td>
+                <td><?= $subenroll['pre_requisit'];?></td>
               </tr>
-           
+           <?php endforeach;?>
             </tbody>
         </table>
                     <div class="modal-footer justify-content-between">

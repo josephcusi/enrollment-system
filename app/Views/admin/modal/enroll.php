@@ -18,6 +18,7 @@
                         <div class="form-horizontal" style = "font-family:poppins; color:maroon;">
                         <div class="form-group col-md-12">
                          <input type="hidden" value="Enrolled" name="state">
+                        
                           <label for="section">Section</label>
                           <select class="form-control" id="section" name = "section">
                           <?php foreach($enroll as $en):?>
