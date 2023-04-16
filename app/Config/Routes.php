@@ -136,7 +136,7 @@ $routes->get('/strandSec/(:any)', 'Section::strandSec/$1');
 $routes->post('/addsched11/(:any)', 'Section::addsched11/$1');
 $routes->post('/addsched12/(:any)', 'Section::addsched12/$1');
 $routes->post('/updateSched11/(:any)', 'Section::updateSched11/$1');
-$routes->match(['get', 'post'],'/section11', 'Section::section11');
+$routes->match(['get', 'post'],'/section11/(:any)', 'Section::section11/$1');
 $routes->match(['get', 'post'],'/section12', 'Section::section12');
 $routes->match(['get', 'post'],'/section3rd', 'Section::section3rd');
 $routes->match(['get', 'post'],'/section4th', 'Section::section4th');
@@ -151,10 +151,7 @@ $routes->post('/addprospectus12', 'Prospectus::addprospectus12');
 $routes->get('/edit_prospectus/(:any)', 'Prospectus::edit_prospectus/$1');
 $routes->put('/updateProspectus11', 'Prospectus::updateProspectus11');
 $routes->put('/updateProspectus12', 'Prospectus::updateProspectus12');
-$routes->match(['get', 'post'],'/prospectus11', 'Prospectus::prospectus11');
-$routes->match(['get', 'post'],'/prospectus12', 'Prospectus::prospectus12');
-$routes->match(['get', 'post'],'/prospectus3rd', 'Prospectus::prospectus3rd');
-$routes->match(['get', 'post'],'/prospectus4th', 'Prospectus::prospectus4th');
+$routes->match(['get', 'post'],'/prospectus11/(:any)', 'Prospectus::prospectus11/$1');
 $routes->get('/prospectusThirdyear/(:any)', 'Prospectus::prospectusThirdyear/$1');
 $routes->get('/prospectusFourthyear/(:any)', 'Prospectus::prospectusFourthyear/$1');
 $routes->get('/strandProspectus12/(:any)', 'Prospectus::strandProspectus12/$1');
@@ -187,12 +184,9 @@ $routes->put('/updateGrade/(:any)', 'Teacher::updateGrade/$1');
 $routes->put('/TeacherUpdate', 'Teacher::TeacherUpdate');
 //-----------Grading
 
-$routes->get('/tryteacher', 'Teacher::tryteacher');
-$routes->get('/tryadmin', 'Teacher::tryadmin');
-$routes->get('/tryuser', 'Teacher::tryuser');
-$routes->get('/StudentGrading1st', 'Grading::StudentGrading1st');
+$routes->get('/GradeSection/(:any)', 'Grading::GradeSection/$1');
 $routes->post('/StudentGrade', 'Grading::StudentGrade');
-$routes->get('/Grade1stYear/(:any)', 'Grading::Grade1stYear/$1');
+$routes->get('/StudentGrading/(:any)', 'Grading::StudentGrading/$1');
 });
 
 // $routes->post('add_subject_g11', 'Prospectus::add_subject_g11');

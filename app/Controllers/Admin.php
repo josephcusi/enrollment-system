@@ -7,6 +7,7 @@ use App\Models\UserModel;
 use App\Models\RegistrationModel;
 use App\Models\ProfileModel;
 use App\Models\YearModel;
+use App\Models\YearlevelModel;
 use App\Libraries\Hash;
 
 use App\Controllers\BaseController;
@@ -33,6 +34,8 @@ class Admin extends BaseController
         $year_level = new YearModel();
         $profile_model = new ProfileModel();
         $registration_model = new RegistrationModel();
+        $year_level_model = new YearlevelModel();
+        
         $male = $this->db->table('user_profile')->where('gender', 'male')->countAllResults();
         $female = $this->db->table('user_profile')->where('gender', 'female')->countAllResults();
 
@@ -102,10 +105,14 @@ class Admin extends BaseController
             'name' => $user_model->where('email', session()->get('email'))->first(),
             'sem_year' => $year_level->first(),
 
+            'year_levelOne' => $year_level_model->where('type', session()->get('status'))->where('year_level', 'Grade 11')->orWhere('year_level', '1st Year')->first(),
+            'year_levelTwo' => $year_level_model->where('type', session()->get('status'))->where('year_level', 'Grade 12')->orWhere('year_level', '2nd Year')->first(),
+            'year_levelThird' => $year_level_model->where('type', session()->get('status'))->where('year_level', '3rd Year')->first(),
+            'year_levelFourth' => $year_level_model->where('type', session()->get('status'))->where('year_level', '4th Year')->first(),
             'stat' => $user_model->where('status', session()->get('status'))->first()
 
         ];
-// var_dump($data['sem_year']);
+// var_dump($data['year_levelTwo']);
 		return view('admin/admindashboard', $data);
     }
     public function pre_enrolled()
@@ -116,13 +123,18 @@ class Admin extends BaseController
     {
       $user_model = new UserModel();
       $year_model = new YearModel();
+      $year_level_model = new YearlevelModel();
 
         $data = [
             'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
             'retrieveAdmin' => $user_model->where('status', session()->get('status'))->where('usertype', 'admin')->findAll(),
             'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
             'sem_year' => $year_model->first(),
-            'stat' => $user_model->where('status', session()->get('status'))->first()
+            'stat' => $user_model->where('status', session()->get('status'))->first(),
+            'year_levelOne' => $year_level_model->where('type', session()->get('status'))->where('year_level', 'Grade 11')->orWhere('year_level', '1st Year')->first(),
+            'year_levelTwo' => $year_level_model->where('type', session()->get('status'))->where('year_level', 'Grade 12')->orWhere('year_level', '2nd Year')->first(),
+            'year_levelThird' => $year_level_model->where('type', session()->get('status'))->where('year_level', '3rd Year')->first(),
+            'year_levelFourth' => $year_level_model->where('type', session()->get('status'))->where('year_level', '4th Year')->first(),
         ];
     
             return view('admin/newadmin', $data);
@@ -131,11 +143,16 @@ class Admin extends BaseController
     {
       $user_model = new UserModel();
       $year_model = new YearModel();
+      $year_level_model = new YearlevelModel();
       $data = [
         'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
         'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
         'sem_year' => $year_model->first(),
-        'stat' => $user_model->where('status', session()->get('status'))->first()
+        'stat' => $user_model->where('status', session()->get('status'))->first(),
+        'year_levelOne' => $year_level_model->where('type', session()->get('status'))->where('year_level', 'Grade 11')->orWhere('year_level', '1st Year')->first(),
+        'year_levelTwo' => $year_level_model->where('type', session()->get('status'))->where('year_level', 'Grade 12')->orWhere('year_level', '2nd Year')->first(),
+        'year_levelThird' => $year_level_model->where('type', session()->get('status'))->where('year_level', '3rd Year')->first(),
+        'year_levelFourth' => $year_level_model->where('type', session()->get('status'))->where('year_level', '4th Year')->first(),
       ];
         return view('admin/addadmin', $data);
     }

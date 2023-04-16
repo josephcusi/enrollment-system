@@ -14,6 +14,7 @@ use App\Models\YearModel;
 use App\Models\ProspectusModel;
 use App\Models\StudentProspectusModel;
 use App\Models\StrandModel;
+use App\Models\YearlevelModel;
 
 class PreEnrolled extends BaseController
 {
@@ -33,6 +34,7 @@ class PreEnrolled extends BaseController
         $prospectus_model = new ProspectusModel();
         $prospectus_add_model = new StudentProspectusModel();
         $strand_model = new StrandModel();
+        $year_level_model = new YearlevelModel();
         
         
         $data = [
@@ -60,7 +62,11 @@ class PreEnrolled extends BaseController
         
         'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
         'sem_year' => $year_model->first(),
-        'stat' => $user_model->where('status', session()->get('status'))->first()
+        'stat' => $user_model->where('status', session()->get('status'))->first(),
+        'year_levelOne' => $year_level_model->where('type', session()->get('status'))->where('year_level', 'Grade 11')->orWhere('year_level', '1st Year')->first(),
+        'year_levelTwo' => $year_level_model->where('type', session()->get('status'))->where('year_level', 'Grade 12')->orWhere('year_level', '2nd Year')->first(),
+        'year_levelThird' => $year_level_model->where('type', session()->get('status'))->where('year_level', '3rd Year')->first(),
+        'year_levelFourth' => $year_level_model->where('type', session()->get('status'))->where('year_level', '4th Year')->first(),
         ];
 
         // var_dump($data['enrolled']);
@@ -96,6 +102,7 @@ class PreEnrolled extends BaseController
         $registration_model = new RegistrationModel();
         $user_model = new UserModel();
         $year_model = new YearModel();
+        $year_level_model = new YearlevelModel();
         $data = [
             'pre_enrolled' => $registration_model
             ->select('*, student_registration.id, user_tbl.id as user_tbl_id')
@@ -122,6 +129,10 @@ class PreEnrolled extends BaseController
         
         'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
         'sem_year' => $year_model->first(),
+        'year_levelOne' => $year_level_model->where('type', session()->get('status'))->where('year_level', 'Grade 11')->orWhere('year_level', '1st Year')->first(),
+        'year_levelTwo' => $year_level_model->where('type', session()->get('status'))->where('year_level', 'Grade 12')->orWhere('year_level', '2nd Year')->first(),
+        'year_levelThird' => $year_level_model->where('type', session()->get('status'))->where('year_level', '3rd Year')->first(),
+        'year_levelFourth' => $year_level_model->where('type', session()->get('status'))->where('year_level', '4th Year')->first(),
 
     ];
 
@@ -144,47 +155,47 @@ class PreEnrolled extends BaseController
     ];    
     $registration_model->update($id, $value);
 
-    $session = session();
+    // $session = session();
 
-    $email_data  = [
-        'user_data' => $user_profile
-        ->select('*, student_registration.id')
-        ->join('user_tbl', 'user_profile.email = user_tbl.email', 'inner')
-        ->join('student_registration', 'user_tbl.lrn = student_registration.lrn', 'inner')
-        ->join('prospectus_add_tbl', 'student_registration.lrn = prospectus_add_tbl.lrn', 'inner')
-        ->join('prospectrus_tbl', 'prospectus_add_tbl.subject_id = prospectrus_tbl.id', 'inner')
-        ->where('student_registration.id', $id)
-        ->where('prospectus_add_tbl.year', session()->get('year'))
-        ->where('prospectus_add_tbl.semester', session()->get('semester'))
-        ->get()->getResultArray(),
-    ];
+    // $email_data  = [
+    //     'user_data' => $user_profile
+    //     ->select('*, student_registration.id')
+    //     ->join('user_tbl', 'user_profile.email = user_tbl.email', 'inner')
+    //     ->join('student_registration', 'user_tbl.lrn = student_registration.lrn', 'inner')
+    //     ->join('prospectus_add_tbl', 'student_registration.lrn = prospectus_add_tbl.lrn', 'inner')
+    //     ->join('prospectrus_tbl', 'prospectus_add_tbl.subject_id = prospectrus_tbl.id', 'inner')
+    //     ->where('student_registration.id', $id)
+    //     ->where('prospectus_add_tbl.year', session()->get('year'))
+    //     ->where('prospectus_add_tbl.semester', session()->get('semester'))
+    //     ->get()->getResultArray(),
+    // ];
 
-    $html = view('user/registrationpdf/corPDF', $email_data);
-    $dompdf = new \Dompdf\Dompdf();
-    $dompdf->set_option('isRemoteEnabled',TRUE);
-    $dompdf->loadHtml($html);
-    $dompdf->setPaper('A4', 'portrait');
-    $dompdf->render();
-    $pdf_data = $dompdf->output();
+    // $html = view('user/registrationpdf/corPDF', $email_data);
+    // $dompdf = new \Dompdf\Dompdf();
+    // $dompdf->set_option('isRemoteEnabled',TRUE);
+    // $dompdf->loadHtml($html);
+    // $dompdf->setPaper('A4', 'portrait');
+    // $dompdf->render();
+    // $pdf_data = $dompdf->output();
 
-    $folder_path = FCPATH . 'student_credentials' . '/' . $email_data['user_data'][0]['email'];
-    if (!file_exists($folder_path)) {
-        mkdir($folder_path, 0777, true);
-    }
-    file_put_contents($folder_path . '/Certificate of Registration.pdf', $pdf_data);
+    // $folder_path = FCPATH . 'student_credentials' . '/' . $email_data['user_data'][0]['email'];
+    // if (!file_exists($folder_path)) {
+    //     mkdir($folder_path, 0777, true);
+    // }
+    // file_put_contents($folder_path . '/Certificate of Registration.pdf', $pdf_data);
 
-        $email = \Config\Services::email();
-        $email->setTo($email_data['user_data'][0]['email']);
-        $email->setMailType("html");
-        $email->setSubject('Enrollment Status Updated');
-        $email->setFrom('zasuke277379597@gmail.com', 'BACO COMMUNITY COLLEGE');
-        $email->setMessage("Congratulations on your enrollment, we're excited to welcome you to the program and support your academic journey!");
-        $email->attach($pdf_data, '', 'Certificate of Registration.pdf', false); // Attach the PDF file
-        $email->send();
+    //     $email = \Config\Services::email();
+    //     $email->setTo($email_data['user_data'][0]['email']);
+    //     $email->setMailType("html");
+    //     $email->setSubject('Enrollment Status Updated');
+    //     $email->setFrom('zasuke277379597@gmail.com', 'BACO COMMUNITY COLLEGE');
+    //     $email->setMessage("Congratulations on your enrollment, we're excited to welcome you to the program and support your academic journey!");
+    //     $email->attach($pdf_data, '', 'Certificate of Registration.pdf', false); // Attach the PDF file
+    //     $email->send();
 
-    session()->setFlashdata('enrolled', 'Welcome');
+    // session()->setFlashdata('enrolled', 'Welcome');
     return redirect()->route('pre_enrolled_reg');
-    // var_dump($value);
+    // var_dump($count);
     }
     public function rejected($id)
     {
@@ -221,25 +232,21 @@ class PreEnrolled extends BaseController
     return redirect()->route('pre_enrolled_reg');
 
     }
-    public function generateID()
-    {
-        
-    }
-    public function generate()
-    {
-        $user_model = new UserModel();
-        $id = $this->request->getPost('id');
+    // public function generate()
+    // {
+    //     $user_model = new UserModel();
+    //     $id = $this->request->getPost('id');
 
-        $str_result = '1234567890';
-        $studID =  substr(str_shuffle($str_result),0, '4');
-        $ID = '';
+    //     $str_result = '1234567890';
+    //     $studID =  substr(str_shuffle($str_result),0, '4');
+    //     $ID = '';
 
-        $data = [
-            'lrn' => 'BCC2023-'.$ID.str_pad($studID, 4, "0", STR_PAD_LEFT)
-        ];
+    //     $data = [
+    //         'lrn' => 'BCC2023-'.$ID.str_pad($studID, 4, "0", STR_PAD_LEFT)
+    //     ];
 
-        $user_model->update($id, $data);
+    //     $user_model->update($id, $data);
 
-        return redirect()->back();
-    }
+    //     return redirect()->back();
+    // }
 }

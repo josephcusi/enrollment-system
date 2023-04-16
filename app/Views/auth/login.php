@@ -62,6 +62,17 @@
       <script>swal("Logout Successfully!", "You successfully logout your account.", "success");</script>
       <?php endif ?>
 
+      <?php if(!empty(session()->getFlashdata('saveprofile'))) : ?>
+      <script>swal("Credential Uploaded!", "Credential received. Account pending approval. Wait for email notification before logging in.", "success");</script>
+      <?php endif ?>
+      
+      <?php if(!empty(session()->getFlashdata('notApp'))) : ?>
+      <script>swal("Can't Proceed!", "Account under review. You'll be notified by email upon approval. Please wait before logging in.", "warning");</script>
+      <?php endif ?>
+
+
+      
+
         <div class="forms">
             <div class="form login">
               <div class="logo" style="background-image: url('<?=base_url()?>/cssjs/img/bccLogo.png');"></div>
@@ -69,7 +80,7 @@
                   <form action="<?= base_url('retrieve_profile'); ?>" method="post">
                   <?= csrf_field(); ?>
                     <div class="input-field">
-                        <input type="text" placeholder="Email/LRN/School ID" name="email">
+                        <input type="text" placeholder="Email/School ID" name="email">
                         <i class="uil uil-envelope icon"></i>
                     </div>
                     <span class="text-danger"><?= isset($validation) ? display_error($validation, 'email') : '' ?></span>

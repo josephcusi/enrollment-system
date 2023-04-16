@@ -55,63 +55,147 @@
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
+                                <?php if ($stat['status'] === "SHS"): ?>
                                 <li class="nav-item">
-                                    <a href="/section11" class="nav-link">
+                                    <a href="<?= site_url('section11/' . $year_levelOne['id']);?>"
+                                        class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Grade 11</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="<?= site_url('section11/' . $year_levelTwo['id']);?>" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Grade 12</p>
+                                    </a>
+                                </li>
+                                <?php else: ?>
+                                <li class="nav-item">
+                                    <a href="<?= site_url('section11/' . $year_levelOne['id']);?>"
+                                        class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>1st Year</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/section12" class="nav-link">
+                                    <a href="<?= site_url('section11/' . $year_levelTwo['id']);?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>2nd Year</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/section3rd" class="nav-link">
+                                    <a href="<?= site_url('section11/' . $year_levelThird['id']);?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>3rd Year</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/section4th" class="nav-link">
+                                    <a href="<?= site_url('section11/' . $year_levelFourth['id']);?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>4th Year</p>
                                     </a>
                                 </li>
+                                <?php endif; ?>
                             </ul>
                         </li>
 
                         <li class="nav-item menu-open" style="font-family:poppins;">
                             <a href="#" class="nav-link active">
-                                <i class="fa-sharp fa-solid fa-atom"></i>
+                                <i class="fa-sharp fa-solid fa-envelopes-bulk"></i>
                                 <p>Prospectus<i class="right fas fa-angle-left"></i></p>
                             </a>
+
                             <ul class="nav nav-treeview">
+                                <?php if ($stat['status'] === "SHS"): ?>
                                 <li class="nav-item">
-                                    <a href="/prospectus11" class="nav-link">
+                                    <a href="<?= base_url('prospectus11/' . $year_levelOne['id'])?>" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Grade 11</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                <a href="<?= base_url('prospectus11/' . $year_levelTwo['id'])?>" class="nav-link active">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Grade 12</p>
+                                    </a>
+                                </li>
+                                <?php else: ?>
+                                <li class="nav-item">
+                                <a href="<?= base_url('prospectus11/' . $year_levelOne['id'])?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>1st Year</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/prospectus12" class="nav-link">
+                                <a href="<?= base_url('prospectus11/' . $year_levelTwo['id'])?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>2nd Year</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/prospectus3rd" class="nav-link active">
+                                <a href="<?= base_url('prospectus11/' . $year_levelThird['id'])?>" class="nav-link active">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>3rd Year</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/prospectus4th" class="nav-link">
+                                <a href="<?= base_url('prospectus11/' . $year_levelFourth['id'])?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>4rt Year</p>
+                                        <p>4th Year</p>
                                     </a>
                                 </li>
+                                <?php endif; ?>
+                            </ul>
+                        </li>
+                        <li class="nav-item" style="font-family:poppins;">
+
+                            <a href="#" class="nav-link">
+                                <i class="fa-sharp fa-solid fa-envelopes-bulk"></i>
+                                <p>Grading<i class="right fas fa-angle-left"></i></p>
+                            </a>
+
+                            <ul class="nav nav-treeview">
+                                <?php if ($stat['status'] === "SHS"): ?>
+                                <li class="nav-item">
+                                    <a href="<?= site_url('StudentGrading/' . $year_levelOne['id'])?>" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Grade 11</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="<?= site_url('StudentGrading/' . $year_levelTwo['id'])?>" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Grade 12</p>
+                                    </a>
+                                </li>
+                                <?php else: ?>
+                                <li class="nav-item">
+                                    <a href="<?= site_url('StudentGrading/' . $year_levelOne['id'])?>" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>1st Year</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="<?= site_url('StudentGrading/' . $year_levelTwo['id'])?>" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>2nd Year</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="<?= site_url('StudentGrading/' . $year_levelThird['id'])?>"
+                                        class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>3rd Year</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="<?= site_url('StudentGrading/' . $year_levelFourth['id'])?>"
+                                        class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>4th Year</p>
+                                    </a>
+                                </li>
+                                <?php endif; ?>
                             </ul>
                         </li>
                         <li class="nav-item" style="font-family:poppins;">
@@ -203,26 +287,44 @@
                     <div class="col-md-3">
 
 
-                        <div class="card card-primary card-outline" style="">
+                    <div class="card card-primary card-outline" style="">
                             <div class="card-body box-profile">
                                 <div class="text-center">
 
                                 </div>
-                                <p class="text-muted text-left" style="font-family:poppins">Strand</p>
+                                <p class="text-muted text-left">Strand</p>
                                 <ul class="list-group list-group-unbordered mb-3 nav nav-pills">
+                                    <?php if ($stat['status'] === "SHS"): ?>
                                     <?php $strand = session()->getFlashdata('strand');?>
                                     <li class="nav-item"><a type="button"
-                                            class="tablinks nav-link <?php if($strand == 'abh'){echo 'active';} ?>"
+                                            class="tablinks nav-link <?php if($strand == 'GAS'){echo 'active' ;} ?>"
+                                            style="border-radius:20px" id="defaultOpen"
+                                            href="<?= base_url('strandProspectus11/'. $year_levelThird['id'] . '/' . 'GAS')?>">GAS</a>
+                                    </li>
+                                    <li class="nav-item"><a type="button"
+                                            class="tablinks nav-link <?php if($strand == 'SMAW'){echo 'active';} ?>"
                                             style="border-radius:20px" id="defaultOpen "
-                                            href="<?= base_url('prospectusThirdyear/'.'abh')?>">ABH</a></li>
+                                            href="<?= base_url('strandProspectus11/'. $year_levelThird['id'] . '/' . 'SMAW')?>">SMAW</a>
+                                    </li>
+                                    <?php else:?>
+                                    <?php $strand = session()->getFlashdata('strand');?>
                                     <li class="nav-item"><a type="button"
-                                            class="tablinks nav-link <?php if($strand == 'bpa'){echo 'active' ;} ?>"
+                                            class="tablinks nav-link <?php if($strand == 'ABH'){echo 'active' ;} ?>"
                                             style="border-radius:20px" id="defaultOpen"
-                                            href="<?= base_url('prospectusThirdyear/'.'bpa')?>">BPA</a></li>
+                                            href="<?= base_url('strandProspectus11/'.$year_levelThird['id'] . '/' .'ABH')?>">ABH</a>
+                                    </li>
                                     <li class="nav-item"><a type="button"
-                                            class="tablinks nav-link <?php if($strand == 'btvted'){echo 'active' ;} ?>"
+                                            class="tablinks nav-link <?php if($strand == 'BPA'){echo 'active' ;} ?>"
                                             style="border-radius:20px" id="defaultOpen"
-                                            href="<?= base_url('prospectusThirdyear/'.'btvted')?>">BTVTED</a></li>
+                                            href="<?= base_url('strandProspectus11/'.$year_levelThird['id'] . '/' .'BPA')?>">BPA</a>
+                                    </li>
+                                    <li class="nav-item"><a type="button"
+                                            class="tablinks nav-link <?php if($strand == 'BTVTED'){echo 'active' ;} ?>"
+                                            style="border-radius:20px" id="defaultOpen"
+                                            href="<?= base_url('strandProspectus11/'.$year_levelThird['id'] . '/' .'BTVTED')?>">BTVTED</a>
+                                    </li>
+                                    <?php endif;?>
+                                </ul>
                                 </ul>
                             </div>
                             <!-- /.card-body -->
@@ -269,7 +371,7 @@
                                                         data-pre_requisit="<?=$prospect['pre_requisit']?>"
                                                         data-year_level="<?=$prospect['year_level']?>"
                                                         data-semester="<?=$prospect['semester']?>">update</button></a>
-                                                        <?= $this->include('admin/prospectus/updateprospectus11')?>
+                                                    <?= $this->include('admin/prospectus/updateprospectus11')?>
                                                 </td>
                                             </tr>
                                             <?php endforeach;?>

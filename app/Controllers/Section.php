@@ -9,6 +9,7 @@ use App\Models\StrandModel;
 use App\Models\YearModel;
 use App\Models\UserModel;
 use App\Models\ScheduleModel;
+use App\Models\YearlevelModel;
 
 class Section extends BaseController
 {
@@ -16,16 +17,33 @@ class Section extends BaseController
     {
         helper(['url', 'form']);
     }
-    public function schedule11($id) {
+    public function schedule11($year_levels, $id) {
         $user_model = new UserModel();
         $year_model = new YearModel();
         $schedule_model = new ScheduleModel();
         $section_model = new SectionModel();
         $prospectus_model = new ProspectusModel();
+        $year_level_model = new YearlevelModel();
+
+        $year_levelOne = $year_level_model->where('type', session()->get('status'))->where('year_level', 'Grade 11')->orWhere('year_level', '1st Year')->first();
+        $year_levelTwo = $year_level_model->where('type', session()->get('status'))->where('year_level', 'Grade 12')->orWhere('year_level', '2nd Year')->first();
+        $year_levelThree = $year_level_model->where('type', session()->get('status'))->where('year_level', '3rd Year')->first();
+        $year_levelFour = $year_level_model->where('type', session()->get('status'))->where('year_level', '4th Year')->first();
       
-        $is_shs = $user_model->where('email', session()->get('loggedInUser'))->first()['status'] == "SHS";
-        $year_level = $is_shs ? "Grade 11" : "1st Year";
-      
+        $data = $user_model->where('email', session()->get('loggedInUser'))->first();
+        $year_level = $data['status'] == 'SHS' ?
+            ($year_levels ==  $year_levelOne['id'] ? 'Grade 11' :
+                ($year_levels ==  $year_levelTwo['id'] ? 'Grade 12' : 'Unknow Level'
+                )
+            ) :
+            ($year_levels ==  $year_levelOne['id'] ? '1st Year' :
+                ($year_levels ==  $year_levelTwo['id'] ? '2nd Year' :
+                    ($year_levels ==  $year_levelThree['id'] ? '3rd Year' :
+                        ($year_levels ==  $year_levelFour['id'] ? '4th Year' : 'Unknow Level'
+                    )
+                    )
+                )
+            );   
         $data = [
           'userName' => $user_model->where('email', session()->get('loggedInUser'))->find(),
           'sched' => $schedule_model
@@ -47,130 +65,99 @@ class Section extends BaseController
             ->where('section_tbl.id', $id)
             ->where('prospectrus_tbl.year_level', $year_level)
             ->get()->getResultArray(),
+            
           'section' => $section_model->where('id', $id)->findAll(),
           'id' => $id,
           'sem_year' => $year_model->first(),
-          'stat' => $user_model->where('status', session()->get('status'))->first()
+          'stat' => $user_model->where('status', session()->get('status'))->first(), 
+          'year_levelOne' => $year_level_model->where('type', session()->get('status'))->where('year_level', 'Grade 11')->orWhere('year_level', '1st Year')->first(),
+          'year_levelTwo' => $year_level_model->where('type', session()->get('status'))->where('year_level', 'Grade 12')->orWhere('year_level', '2nd Year')->first(),
+          'year_levelThird' => $year_level_model->where('type', session()->get('status'))->where('year_level', '3rd Year')->first(),
+          'year_levelFourth' => $year_level_model->where('type', session()->get('status'))->where('year_level', '4th Year')->first(),
         ];
-
-        return view('admin/section/schedule/schedule11', $data);
+        if ($year_levels == $year_levelOne['id']) {
+            $yearLevelText = 'Grade 11';
+            $view = 'Schedule11';
+            } elseif ($year_levels == $year_levelTwo['id']) {
+                $yearLevelText = 'Grade 12';
+                $view = 'Schedule12';
+            } elseif ($year_levels == $year_levelThree['id']) {
+                $yearLevelText = 'Grade 13';
+                $view = 'Schedulethird';
+            } elseif ($year_levels == $year_levelFour['id']) {
+                $yearLevelText = 'Grade 14';
+                $view = 'Schedulefourth';
+            } else {
+                // Handle invalid year level here
+            }
+            
+            return view('admin/section/schedule/' . $view, array_merge($data, [
+                'yearLevelText' => $yearLevelText,
+            ]));
+        // var_dump($year_levelThree);
       }
-    public function schedule12($id) {
-        $user_model = new UserModel();
-        $year_model = new YearModel();
-        $schedule_model = new ScheduleModel();
-        $section_model = new SectionModel();
-        $prospectus_model = new ProspectusModel();
-    
-        $data = $user_model->where('email', session()->get('loggedInUser'))->first();
-    
-        $grade_level = $data['status'] == "SHS" ? 'Grade 12' : '2nd Year';
-    
-        $data = [
-            'userName' => $user_model->where('email', session()->get('loggedInUser'))->find(),
-            'sched' => $schedule_model
-                ->select('*, schedule_tbl.id')
-                ->join('section_tbl', 'schedule_tbl.section_id = section_tbl.id', 'inner')
-                ->join('prospectrus_tbl', 'schedule_tbl.subject_id = prospectrus_tbl.id', 'inner')
-                ->join('school_year', 'prospectrus_tbl.semester = school_year.semester', 'inner')
-                ->where('section_tbl.id', $id)
-                ->where('section_tbl.year_level', $grade_level)
-                ->get()->getResultArray(),
-
-                 'teacher' => $user_model->where('usertype', 'teacher')->where('status', session()->get('status'))->findAll(),
-                'subject' => $prospectus_model
-                ->select('*, prospectrus_tbl.id')
-                ->join('strand_tbl', 'prospectrus_tbl.strand_id = strand_tbl.id', 'inner')
-                ->join('section_tbl', 'strand_tbl.id = section_tbl.strand_id', 'inner')
-                ->join('school_year', 'prospectrus_tbl.semester = school_year.semester', 'inner')
-                ->where('section_tbl.id', $id)
-                ->where('prospectrus_tbl.year_level', $grade_level)
-                ->get()->getResultArray(),
-            'section' => $section_model->where('id', $id)->findAll(),
-            'id' => $id,
-            'sem_year' => $year_model->first(),
-            'stat' => $user_model->where('status', session()->get('status'))->first()
-        ];
-        return view('admin/section/schedule/schedule12', $data);
-    }
-    public function strandSec11($strand)
+    public function strandSec11($year_levels, $strand)
     {
         $section_model = new SectionModel();
         $strand_model = new StrandModel();
         $user_model = new UserModel();
         $year_model = new YearModel();
+        $year_level_model = new YearlevelModel();
+
+        $year_levelOne = $year_level_model->where('type', session()->get('status'))->where('year_level', 'Grade 11')->orWhere('year_level', '1st Year')->first();
+        $year_levelTwo = $year_level_model->where('type', session()->get('status'))->where('year_level', 'Grade 12')->orWhere('year_level', '2nd Year')->first();
+        $year_levelThree = $year_level_model->where('type', session()->get('status'))->where('year_level', '3rd Year')->first();
+        $year_levelFour = $year_level_model->where('type', session()->get('status'))->where('year_level', '4th Year')->first();
 
         $data = $user_model->where('email', session()->get('loggedInUser'))->first();
-        if($data['status'] == "SHS"){
-            $strand_id = $strand_model->where('strand', $strand)->find();
-            $data = [
-                'section' => $section_model->select('*, section_tbl.id')
-                    ->join('strand_tbl', 'section_tbl.strand_id = strand_tbl.id', 'right')
-                    ->where('strand_id', $strand_id[0]['id'])
-                    ->where('section_tbl.year_level', 'Grade 11')
-                    ->get()->getResultArray(),
-                'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
-                'sem_year' => $year_model->first()
-            ];
-           // var_dump($data['count']);
-             session()->setFlashdata('strand', $strand);
-             return view('admin/section/grade11', $data);
-        }
-        else{
-            $strand_id = $strand_model->where('strand', $strand)->find();
-            $data = [
-                'section' => $section_model->select('*, section_tbl.id')
-                    ->join('strand_tbl', 'section_tbl.strand_id = strand_tbl.id', 'right')
-                    ->where('strand_id', $strand_id[0]['id'])
-                    ->where('section_tbl.year_level', '1st Year')
-                    ->get()->getResultArray(),
-                'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
-                'sem_year' => $year_model->first()
-            ];
-           // var_dump($data['count']);
-             session()->setFlashdata('strand', $strand);
-             return view('admin/section/first_year', $data);
-        }
-    }
-    public function strandSec12($strand)
-    {
-        $section_model = new SectionModel();
-        $strand_model = new StrandModel();
-        $user_model = new UserModel();
-        $year_model = new YearModel();
+        $year_level = $data['status'] == 'SHS' ? 
+            ($year_levels == $year_levelOne['id'] ? 'Grade 11' :
+                ($year_levels == $year_levelOne['id'] ? 'Grade 12' : 'Unknow Level')
+            ) :
+            ($year_levels == $year_levelOne['id'] ? '1st Year' :
+                ($year_levels == $year_levelTwo['id'] ? '2nd Year':
+                    ($year_levels == $year_levelThree['id'] ? '3rd Year' :
+                        ($year_levels == $year_levelFour['id'] ? '4th Year' : 'Unknow Level')
+                    )
+                )
+            );
 
-        $data = $user_model->where('email', session()->get('loggedInUser'))->first();
-
-        if($data['status'] == 'SHS'){
             $strand_id = $strand_model->where('strand', $strand)->find();
             $data = [
                 'section' => $section_model->select('*, section_tbl.id')
                     ->join('strand_tbl', 'section_tbl.strand_id = strand_tbl.id', 'right')
                     ->where('strand_id', $strand_id[0]['id'])
-                    ->where('section_tbl.year_level', 'Grade 12')
+                    ->where('section_tbl.year_level', $year_level)
                     ->get()->getResultArray(),
                 'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
-                'sem_year' => $year_model->first()
+                'sem_year' => $year_model->first(),
+                'stat' => $user_model->where('status', session()->get('status'))->first(),
+                'year_levelOne' => $year_level_model->where('type', session()->get('status'))->where('year_level', 'Grade 11')->orWhere('year_level', '1st Year')->first(),
+                'year_levelTwo' => $year_level_model->where('type', session()->get('status'))->where('year_level', 'Grade 12')->orWhere('year_level', '2nd Year')->first(),
+                'year_levelThird' => $year_level_model->where('type', session()->get('status'))->where('year_level', '3rd Year')->first(),
+                'year_levelFourth' => $year_level_model->where('type', session()->get('status'))->where('year_level', '4th Year')->first(),
             ];
            // var_dump($data['count']);
              session()->setFlashdata('strand', $strand);
-             return view('admin/section/grade12', $data);
-        }
-        else{
-            $strand_id = $strand_model->where('strand', $strand)->find();
-            $data = [
-                'section' => $section_model->select('*, section_tbl.id')
-                    ->join('strand_tbl', 'section_tbl.strand_id = strand_tbl.id', 'right')
-                    ->where('strand_id', $strand_id[0]['id'])
-                    ->where('section_tbl.year_level', '2nd Year')
-                    ->get()->getResultArray(),
-                'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
-                'sem_year' => $year_model->first()
-            ];
-           // var_dump($data['count']);
-             session()->setFlashdata('strand', $strand);
-             return view('admin/section/second_year', $data);
-        }
+             if ($year_levels == $year_levelOne['id']) {
+                $yearLevelText = 'Grade 11';
+                $view = 'first_year';
+                } elseif ($year_levels == $year_levelTwo['id']) {
+                    $yearLevelText = 'Grade 12';
+                    $view = 'second_year';
+                } elseif ($year_levels == $year_levelThree['id']) {
+                    $yearLevelText = 'Grade 13';
+                    $view = 'third_year';
+                } elseif ($year_levels == $year_levelFour['id']) {
+                    $yearLevelText = 'Grade 14';
+                    $view = 'fourth_year';
+                } else {
+                    // Handle invalid year level here
+                }
+                
+                return view('admin/section/' . $view, array_merge($data, [
+                    'yearLevelText' => $yearLevelText,
+                ]));
     }
     
     public function newsection11()
@@ -381,7 +368,7 @@ class Section extends BaseController
             return redirect()->back();
             // echo 1;
         }
-        public function section11()
+        public function section11($year_levels)
         {
 
             $section_model = new SectionModel();
@@ -389,250 +376,64 @@ class Section extends BaseController
             $user_model = new UserModel();
             $prospectus_model = new ProspectusModel();
             $strand_model = new StrandModel();
+            $year_level_model = new YearlevelModel();
+
+            $year_levelOne = $year_level_model->where('type', session()->get('status'))->where('year_level', 'Grade 11')->orWhere('year_level', '1st Year')->first();
+            $year_levelTwo = $year_level_model->where('type', session()->get('status'))->where('year_level', 'Grade 12')->orWhere('year_level', '2nd Year')->first();
+            $year_levelThree = $year_level_model->where('type', session()->get('status'))->where('year_level', '3rd Year')->first();
+            $year_levelFour = $year_level_model->where('type', session()->get('status'))->where('year_level', '4th Year')->first();
             
             $data = $user_model->where('email', session()->get('loggedInUser'))->first();
-            if($data['status'] == "SHS"){
-                session()->setFlashdata('strand', 'gas');
-            $strand_id = $strand_model->where('strand', 'GAS')->find();
+            $year_level = $data['status'] == 'SHS' ? 
+            ($year_levels == $year_levelOne['id'] ? 'Grade 11' :
+                ($year_levels == $year_levelTwo['id'] ? 'Grade 12' : 'Unknow Level')
+            ):
+            ($year_levels == $year_levelOne['id'] ? '1st Year':
+                ($year_levels == $year_levelTwo['id'] ? '2nd Year':
+                    ($year_levels == $year_levelThree['id'] ? '3rd Year':
+                        ($year_levels == $year_levelFour['id'] ? '4th Year': 'Unknow Level')
+                    )
+                )
+            );
+            $set_year_level = $data['status'] == "SHS" ? 'GAS' : 'ABH';
+            session()->setFlashdata('strand', $set_year_level);
+
+            $strand_id = $strand_model->where('strand', $set_year_level)->find();
+
             $values = [
                 'section' => $section_model->select('*, section_tbl.id' )
-                    ->join('strand_tbl', 'section_tbl.strand_id = strand_tbl.id', 'right')
+                    ->join('strand_tbl', 'section_tbl.strand_id = strand_tbl.id', 'inner')
                     ->where('section_tbl.strand_id', $strand_id[0]['id'])
-                    ->where('section_tbl.year_level', 'Grade 11')
+                    ->where('section_tbl.year_level', $year_level)
                     ->get()->getResultArray(),
                 'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
-
-                'sem_year' => $year_model->first()
-            ];
-        //   var_dump($values['count']);
-            return view('admin/section/grade11', $values);
-            // echo 1;
-            }
-            else{
-                session()->setFlashdata('strand', 'abh');
-            $strand_id = $strand_model->where('strand', 'ABH')->find();
-            $values = [
-                'section' => $section_model->select('*, section_tbl.id' )
-                    ->join('strand_tbl', 'section_tbl.strand_id = strand_tbl.id', 'right')
-                    ->where('section_tbl.strand_id', $strand_id[0]['id'])
-                    ->where('section_tbl.year_level', '1st Year')
-                    ->get()->getResultArray(),
-                'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
-
-                'sem_year' => $year_model->first()
-            ];
-        //   var_dump($values['count']);
-            return view('admin/section/first_year', $values);
-            // echo 2;
-            }
-        }
-        public function section12()
-        {
-          $section_model = new SectionModel();
-          $year_model = new YearModel();
-          $user_model = new UserModel();
-          $prospectus_model = new ProspectusModel();
-          $strand_model = new StrandModel();
-
-          $data = $user_model->where('email', session()->get('loggedInUser'))->first();
-          
-          if($data['status'] == "SHS"){
-            session()->setFlashdata('strand', 'gas');
-            $strand_id = $strand_model->where('strand', 'GAS')->find();
-            $values = [
-                'section' => $section_model->select('*, section_tbl.id' )
-                    ->join('strand_tbl', 'section_tbl.strand_id = strand_tbl.id', 'right')
-                    ->where('section_tbl.strand_id', $strand_id[0]['id'])
-                    ->where('section_tbl.year_level', 'Grade 12')
-                    ->get()->getResultArray(),
-                'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
-  
-                'sem_year' => $year_model->first()
-            ];
-        //   var_dump($values['count']);
-            return view('admin/section/grade12', $values);
-          }
-          else{
-            session()->setFlashdata('strand', 'abh');
-            $strand_id = $strand_model->where('strand', 'ABH')->find();
-            $values = [
-                'section' => $section_model->select('*, section_tbl.id' )
-                    ->join('strand_tbl', 'section_tbl.strand_id = strand_tbl.id', 'right')
-                    ->where('section_tbl.strand_id', $strand_id[0]['id'])
-                    ->where('section_tbl.year_level', '2nd Year')
-                    ->get()->getResultArray(),
-                'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
-  
-                'sem_year' => $year_model->first()
-            ];
-        //   var_dump($values['count']);
-            return view('admin/section/second_year', $values);
-          }
-        }
-
-    public function section3rd()
-    {
-        $section_model = new SectionModel();
-        $year_model = new YearModel();
-        $user_model = new UserModel();
-        $prospectus_model = new ProspectusModel();
-        $strand_model = new StrandModel();
-
-        session()->setFlashdata('strand', 'abh');
-        $strand_id = $strand_model->where('strand', 'ABH')->find();
-        $values = [
-            'section' => $section_model->select('*, section_tbl.id' )
-                ->join('strand_tbl', 'section_tbl.strand_id = strand_tbl.id', 'right')
-                ->where('section_tbl.strand_id', $strand_id[0]['id'])
-                ->where('section_tbl.year_level', '3rd Year')
-                ->get()->getResultArray(),
-            'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
-
-            'sem_year' => $year_model->first()
-        ];
-    //   var_dump($values['count']);
-        return view('admin/section/third_year', $values);
-        }
-    public function courseThirdyear($strand)
-    {
-        $section_model = new SectionModel();
-        $strand_model = new StrandModel();
-        $user_model = new UserModel();
-        $year_model = new YearModel();
-
-        $strand_id = $strand_model->where('strand', $strand)->find();
-        $data = [
-            'section' => $section_model->select('*, section_tbl.id')
-                ->join('strand_tbl', 'section_tbl.strand_id = strand_tbl.id', 'right')
-                ->where('strand_id', $strand_id[0]['id'])
-                ->where('section_tbl.year_level', '3rd Year')
-                ->get()->getResultArray(),
-            'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
-            'sem_year' => $year_model->first()
-        ];
-        // var_dump($data['count']);
-            session()->setFlashdata('strand', $strand);
-            return view('admin/section/third_year', $data);
-        }
-        public function section4th()
-        {
-            $section_model = new SectionModel();
-            $year_model = new YearModel();
-            $user_model = new UserModel();
-            $prospectus_model = new ProspectusModel();
-            $strand_model = new StrandModel();
-    
-            session()->setFlashdata('strand', 'abh');
-            $strand_id = $strand_model->where('strand', 'ABH')->find();
-            $values = [
-                'section' => $section_model->select('*, section_tbl.id' )
-                    ->join('strand_tbl', 'section_tbl.strand_id = strand_tbl.id', 'right')
-                    ->where('section_tbl.strand_id', $strand_id[0]['id'])
-                    ->where('section_tbl.year_level', '4th Year')
-                    ->get()->getResultArray(),
-                'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
-    
-                'sem_year' => $year_model->first()
-            ];
-        //   var_dump($values['count']);
-            return view('admin/section/fourth_year', $values);
-            }
-        public function courseFourthyear($strand)
-        {
-            $section_model = new SectionModel();
-            $strand_model = new StrandModel();
-            $user_model = new UserModel();
-            $year_model = new YearModel();
-    
-            $strand_id = $strand_model->where('strand', $strand)->find();
-            $data = [
-                'section' => $section_model->select('*, section_tbl.id')
-                    ->join('strand_tbl', 'section_tbl.strand_id = strand_tbl.id', 'right')
-                    ->where('strand_id', $strand_id[0]['id'])
-                    ->where('section_tbl.year_level', '4th Year')
-                    ->get()->getResultArray(),
-                'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
-                'sem_year' => $year_model->first()
-            ];
-            // var_dump($data['count']);
-                session()->setFlashdata('strand', $strand);
-                return view('admin/section/fourth_year', $data);
-            }
-    public function schedule3rd($id){
-        $user_model = new UserModel();
-        $year_model = new YearModel();
-        $schedule_model = new ScheduleModel();
-        $section_model = new SectionModel();
-        $prospectus_model = new ProspectusModel();
-
-            $data = [
-                'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
-                'sched' => $schedule_model
-                ->select('*, schedule_tbl.id')
-                ->join('section_tbl', 'schedule_tbl.section_id = section_tbl.id', 'inner')
-                ->join('prospectrus_tbl', 'schedule_tbl.subject_id = prospectrus_tbl.id', 'inner')
-                ->join('school_year', 'prospectrus_tbl.semester = school_year.semester', 'inner')
-                ->where('section_tbl.id', $id)
-                ->where('section_tbl.year_level', '3rd Year')
-                ->get()->getResultArray(),
-                
-                 'teacher' => $user_model->where('usertype', 'teacher')->where('status', session()->get('status'))->findAll(),
-                'subject' => $prospectus_model
-                ->select('*, prospectrus_tbl.id')
-                ->join('strand_tbl', 'prospectrus_tbl.strand_id = strand_tbl.id', 'inner')
-                ->join('section_tbl', 'strand_tbl.id = section_tbl.strand_id', 'inner')
-                ->join('school_year', 'prospectrus_tbl.semester = school_year.semester', 'inner')   
-                ->where('section_tbl.id', $id)
-                ->where('prospectrus_tbl.year_level', '3rd Year')
-                ->get()->getResultArray(),
-                'section' => $section_model->where('id', $id)->findAll(),
-                'id' => $id,
-        
                 'sem_year' => $year_model->first(),
-                'stat' => $user_model->where('status', session()->get('status'))->first()
-    
-        
+                'stat' => $user_model->where('status', session()->get('status'))->first(),
+                'year_levelOne' => $year_level_model->where('type', session()->get('status'))->where('year_level', 'Grade 11')->orWhere('year_level', '1st Year')->first(),
+                'year_levelTwo' => $year_level_model->where('type', session()->get('status'))->where('year_level', 'Grade 12')->orWhere('year_level', '2nd Year')->first(),
+                'year_levelThird' => $year_level_model->where('type', session()->get('status'))->where('year_level', '3rd Year')->first(),
+                'year_levelFourth' => $year_level_model->where('type', session()->get('status'))->where('year_level', '4th Year')->first(),
             ];
-                return view('admin/section/schedule/schedulethird', $data);
-                // var_dump($data['subject']);
+        //   var_dump($values['section']);
+        if ($year_levels == $year_levelOne['id']) {
+        $yearLevelText = 'Grade 11';
+        $view = 'first_year';
+        } elseif ($year_levels == $year_levelTwo['id']) {
+            $yearLevelText = 'Grade 12';
+            $view = 'second_year';
+        } elseif ($year_levels == $year_levelThree['id']) {
+            $yearLevelText = 'Grade 13';
+            $view = 'third_year';
+        } elseif ($year_levels == $year_levelFour['id']) {
+            $yearLevelText = 'Grade 14';
+            $view = 'fourth_year';
+        } else {
+            // Handle invalid year level here
         }
-        public function schedule4th($id){
-            $user_model = new UserModel();
-            $year_model = new YearModel();
-            $schedule_model = new ScheduleModel();
-            $section_model = new SectionModel();
-            $prospectus_model = new ProspectusModel();
-    
-                $data = [
-                    'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
-                    'sched' => $schedule_model
-                    ->select('*, schedule_tbl.id')
-                    ->join('section_tbl', 'schedule_tbl.section_id = section_tbl.id', 'inner')
-                    ->join('prospectrus_tbl', 'schedule_tbl.subject_id = prospectrus_tbl.id', 'inner')
-                    ->join('school_year', 'prospectrus_tbl.semester = school_year.semester', 'inner')
-                    ->where('section_tbl.id', $id)
-                    ->where('section_tbl.year_level', '4th Year')
-                    ->get()->getResultArray(),
-                    
-                     'teacher' => $user_model->where('usertype', 'teacher')->where('status', session()->get('status'))->findAll(),
-                    'subject' => $prospectus_model
-                    ->select('*, prospectrus_tbl.id')
-                    ->join('strand_tbl', 'prospectrus_tbl.strand_id = strand_tbl.id', 'inner')
-                    ->join('section_tbl', 'strand_tbl.id = section_tbl.strand_id', 'inner')
-                    ->join('school_year', 'prospectrus_tbl.semester = school_year.semester', 'inner')   
-                    ->where('section_tbl.id', $id)
-                    ->where('prospectrus_tbl.year_level', '4th Year')
-                    ->get()->getResultArray(),
-                    'section' => $section_model->where('id', $id)->findAll(),
-                    'id' => $id,
-            
-                    'sem_year' => $year_model->first(),
-                    'stat' => $user_model->where('status', session()->get('status'))->first()
         
-            
-                ];
-                    return view('admin/section/schedule/schedulefourth', $data);
-                    // var_dump($data['subject']);
-            }
-
+        return view('admin/section/' . $view, array_merge($values, [
+            'yearLevelText' => $yearLevelText,
+        ]));
+        //     echo 1;
         }
+    }

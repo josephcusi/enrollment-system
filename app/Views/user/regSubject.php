@@ -115,6 +115,7 @@
                                                     style="font-family:poppins">
                                                     <thead>
                                                         <tr>
+                                                            <th><input type="checkbox" id="checkAll"></th>
                                                             <th>Subject</th>
                                                             <th>Title</th>
                                                             <th>Unit</th>
@@ -124,9 +125,9 @@
                                                     <tbody>
                                                         <?php foreach($prospectus as $prospectus_value):?>
                                                         <tr>
-                                                        <td style="display: none;"><input type="text" name="subject_id[]"
+                                                        <td><input type="checkbox" name="subject_id[]"
                                                                     value="<?=$prospectus_value['id'];?>"
-                                                                    checked></td>
+                                                                    ></td>
                                                             <td><?= $prospectus_value['subject'];?></td>
                                                             <td><?= $prospectus_value['subject_title'];?></td>
                                                             <td><?= $prospectus_value['unit'];?></td>
@@ -173,3 +174,14 @@
 
 <?= $this->include('user/include/end')?>
 <?= $this->include('user/include/footer')?>
+
+<script>
+  const checkAll = document.querySelector('#checkAll');
+  const checkboxes = document.querySelectorAll('input[name="subject_id[]"]');
+
+  checkAll.addEventListener('click', () => {
+    checkboxes.forEach(checkbox => {
+      checkbox.checked = checkAll.checked;
+    });
+  });
+</script>

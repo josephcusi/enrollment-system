@@ -8,6 +8,8 @@ use App\Models\ProspectusModel;
 use App\Models\YearModel;
 use App\Models\StrandModel;
 use App\Models\UserModel;
+use App\Models\YearlevelModel;
+
 
 class Prospectus extends BaseController
 {
@@ -16,99 +18,72 @@ class Prospectus extends BaseController
         helper(['url', 'form']);
     }
     
-    public function strandProspectus11($strand = null)
+    public function strandProspectus11($year_levels, $strand)
     {
         $prospectus_model = new ProspectusModel();
         $strand_model = new StrandModel();
         $user_model = new UserModel();
         $year_model = new YearModel();
+        $year_level_model = new YearlevelModel();
+
+        $year_levelOne = $year_level_model->where('type', session()->get('status'))->where('year_level', 'Grade 11')->orWhere('year_level', '1st Year')->first();
+        $year_levelTwo = $year_level_model->where('type', session()->get('status'))->where('year_level', 'Grade 12')->orWhere('year_level', '2nd Year')->first();
+        $year_levelThree = $year_level_model->where('type', session()->get('status'))->where('year_level', '3rd Year')->first();
+        $year_levelFour = $year_level_model->where('type', session()->get('status'))->where('year_level', '4th Year')->first();
 
         $data = $user_model->where('email', session()->get('loggedInUser'))->first();
-          
-          if($data['status'] == "SHS"){
-            $strand_id = $strand_model->where('strand', $strand)->find();
-            $data = [
-                'prospectus' => $prospectus_model->select('*, prospectrus_tbl.id')
-                    ->join('strand_tbl', 'prospectrus_tbl.strand_id = strand_tbl.id', 'right')
-                    ->join('school_year', 'prospectrus_tbl.semester = school_year.semester', 'inner')
-                    ->where('strand_id', $strand_id[0]['id'])
-                    ->where('prospectrus_tbl.year_level', 'Grade 11')
-                    ->get()->getResultArray(),
-                'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
+        $year_level = $data['status'] == 'SHS' ? 
+        ($year_levels == $year_levelOne['id'] ? 'Grade 11' :
+            ($year_levels == $year_levelTwo['id'] ? 'Grade 12' : 'Unknown Level'
+            )
+        ):
+        ($year_levels == $year_levelOne['id'] ? '1st Year' :
+            ($year_levels == $year_levelTwo['id'] ? '2nd Year' : 
+                ($year_levels == $year_levelThree['id'] ? '3rd Year' : 
+                    ($year_levels == $year_levelFour['id'] ? '4th Year' : 'Unknown Level')
+                )
+            )
+        );
 
-                'sem_year' => $year_model->first()
-            ];
+        session()->setFlashdata('strand', $strand);
+        $strand_id = $strand_model->where('strand', $strand)->first();
+        
+        $data = [
+            'prospectus' => $prospectus_model->select('*, prospectrus_tbl.id')
+                ->join('strand_tbl', 'prospectrus_tbl.strand_id = strand_tbl.id', 'right')
+                ->join('school_year', 'prospectrus_tbl.semester = school_year.semester', 'inner')
+                ->where('strand_tbl.id', $strand_id['id'])
+                ->where('prospectrus_tbl.year_level', $year_level)
+                ->get()->getResultArray(),
 
-            session()->setFlashdata('strand', $strand);
-            return view('admin/prospectus/grade11', $data);
-            // return $this->response->setJSON($data);
-        }
-        else{
-            $strand_id = $strand_model->where('strand', $strand)->find();
-            $data = [
-                'prospectus' => $prospectus_model->select('*, prospectrus_tbl.id')
-                    ->join('strand_tbl', 'prospectrus_tbl.strand_id = strand_tbl.id', 'right')
-                    ->join('school_year', 'prospectrus_tbl.semester = school_year.semester', 'inner')
-                    ->where('strand_id', $strand_id[0]['id'])
-                    ->where('prospectrus_tbl.year_level', '1st Year')
-                    ->get()->getResultArray(),
-                'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
+            'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
+            'stat' => $user_model->where('status', session()->get('status'))->first(),
+            'sem_year' => $year_model->first(),
+            'year_levelOne' => $year_level_model->where('type', session()->get('status'))->where('year_level', 'Grade 11')->orWhere('year_level', '1st Year')->first(),
+            'year_levelTwo' => $year_level_model->where('type', session()->get('status'))->where('year_level', 'Grade 12')->orWhere('year_level', '2nd Year')->first(),
+            'year_levelThird' => $year_level_model->where('type', session()->get('status'))->where('year_level', '3rd Year')->first(),
+            'year_levelFourth' => $year_level_model->where('type', session()->get('status'))->where('year_level', '4th Year')->first(),
+        ];
 
-                'sem_year' => $year_model->first()
-            ];
-
-            session()->setFlashdata('strand', $strand);
-            return view('admin/prospectus/first_year', $data);
-            // return $this->response->setJSON($data);
-        }               
+        if ($year_levels == $year_levelOne['id']) {
+            $yearLevelText = 'Grade 11';
+            $view = 'first_year';
+            } elseif ($year_levels == $year_levelTwo['id']) {
+                $yearLevelText = 'Grade 12';
+                $view = 'second_year';
+            } elseif ($year_levels == $year_levelThree['id']) {
+                $yearLevelText = 'Grade 13';
+                $view = 'third_year';
+            } elseif ($year_levels == $year_levelFour['id']) {
+                $yearLevelText = 'Grade 14';
+                $view = 'fourth_year';
+            } else {
+                // Handle invalid year level here
+            }
+            
+            return view('admin/prospectus/' . $view, $data);
+    //    var_dump($data['prospectus']);  
     }
-   
-    public function strandProspectus12($strand = null)
-    {
-        $prospectus_model = new ProspectusModel();
-        $strand_model = new StrandModel();
-        $user_model = new UserModel();
-        $year_model = new YearModel();
-
-        $data = $user_model->where('email', session()->get('loggedInUser'))->first();
-          
-          if($data['status'] == "SHS"){
-
-            $strand_id = $strand_model->where('strand', $strand)->find();
-            $data = [
-                'prospectus' => $prospectus_model->select('*, prospectrus_tbl.id')
-                    ->join('strand_tbl', 'prospectrus_tbl.strand_id = strand_tbl.id', 'right')
-                    ->join('school_year', 'prospectrus_tbl.semester = school_year.semester', 'inner')
-                    ->where('strand_id', $strand_id[0]['id'])
-                    ->where('prospectrus_tbl.year_level', 'Grade 12')
-                    ->get()->getResultArray(),
-                'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
-
-                'sem_year' => $year_model->first()
-            ];
-
-            session()->setFlashdata('strand', $strand);
-            return view('admin/prospectus/grade12', $data);
-        }
-        else{
-            $strand_id = $strand_model->where('strand', $strand)->find();
-            $data = [
-                'prospectus' => $prospectus_model->select('*, prospectrus_tbl.id')
-                    ->join('strand_tbl', 'prospectrus_tbl.strand_id = strand_tbl.id', 'right')
-                    ->join('school_year', 'prospectrus_tbl.semester = school_year.semester', 'inner')
-                    ->where('strand_id', $strand_id[0]['id'])
-                    ->where('prospectrus_tbl.year_level', '2nd Year')
-                    ->get()->getResultArray(),
-                'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
-
-                'sem_year' => $year_model->first()
-            ];
-
-            session()->setFlashdata('strand', $strand);
-            return view('admin/prospectus/second_year', $data);
-        }
-    }
-
     public function updateProspectus11()
     {
         $prospectus_model = new ProspectusModel();
@@ -132,28 +107,55 @@ class Prospectus extends BaseController
 
         return redirect()->back();
     }
-    public function prospectus11()
+    public function prospectus11($year_levels)
     {
       $prospectus_model = new ProspectusModel();
       $year_model = new YearModel();
       $strand_model = new StrandModel();
       $user_model = new UserModel();
+      $year_level_model = new YearlevelModel();
+
+      $year_levelOne = $year_level_model->where('type', session()->get('status'))->where('year_level', 'Grade 11')->orWhere('year_level', '1st Year')->first();
+      $year_levelTwo = $year_level_model->where('type', session()->get('status'))->where('year_level', 'Grade 12')->orWhere('year_level', '2nd Year')->first();
+      $year_levelThree = $year_level_model->where('type', session()->get('status'))->where('year_level', '3rd Year')->first();
+      $year_levelFour = $year_level_model->where('type', session()->get('status'))->where('year_level', '4th Year')->first();
 
       $data = $user_model->where('email', session()->get('loggedInUser'))->first();
-      
-      
-      if($data['status'] == "SHS"){
-        session()->setFlashdata('strand', 'gas');
-        $strand_id = $strand_model->where('strand', 'GAS')->find();
+      $year_level = $data['status'] == 'SHS' ? 
+        ($year_levels == $year_levelOne['id'] ? 'Grade 11' :
+            ($year_levels == $year_levelTwo['id'] ? 'Grade 12' : 'Unknown Level'
+
+            )
+        ):
+        ($year_levels == $year_levelOne['id'] ? '1st Year' :
+            ($year_levels == $year_levelTwo['id'] ? '2nd Year' :
+                ($year_levels == $year_levelThree['id'] ? '3rd Year' :
+                    ($year_levels == $year_levelFour['id'] ? '4th Year' : 'Unknown Level'
+                    )
+                )
+            )
+        );
+
+        $set_year_level = $data['status'] == "SHS" ? 'GAS' : 'ABH'; 
+        session()->setFlashdata('strand', $set_year_level);
+
+        $strand_id = $strand_model->where('strand', $set_year_level)->find();
+
         $values = [
             'prospectus' => $prospectus_model->select('*, prospectrus_tbl.id' )
                 ->join('strand_tbl', 'prospectrus_tbl.strand_id = strand_tbl.id', 'right')
                 ->join('school_year', 'prospectrus_tbl.semester = school_year.semester', 'inner')
                 ->where('prospectrus_tbl.strand_id', $strand_id[0]['id'])
-                ->where('prospectrus_tbl.year_level', 'Grade 11')
+                ->where('prospectrus_tbl.year_level', $year_level)
                 ->get()->getResultArray(),
+
             'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
             'sem_year' => $year_model->first(),
+            'stat' => $user_model->where('status', session()->get('status'))->first(),
+            'year_levelOne' => $year_level_model->where('type', session()->get('status'))->where('year_level', 'Grade 11')->orWhere('year_level', '1st Year')->first(),
+            'year_levelTwo' => $year_level_model->where('type', session()->get('status'))->where('year_level', 'Grade 12')->orWhere('year_level', '2nd Year')->first(),
+            'year_levelThird' => $year_level_model->where('type', session()->get('status'))->where('year_level', '3rd Year')->first(),
+            'year_levelFourth' => $year_level_model->where('type', session()->get('status'))->where('year_level', '4th Year')->first(),
 
             'yearnew' => $strand_model
             ->select('*')
@@ -162,79 +164,27 @@ class Prospectus extends BaseController
             ->groupBy('yearlevel_tbl.year_level')
             ->get()->getResultArray(),
         ];
-    //  var_dump($values['prospectus']);
-        return view('admin/prospectus/grade11', $values);
-        // echo 1;
-      }
-      else{
-        session()->setFlashdata('strand', 'abh');
-          $strand_id = $strand_model->where('strand', 'ABH')->find();
-          $values = [
-              'prospectus' => $prospectus_model->select('*, prospectrus_tbl.id' )
-                  ->join('strand_tbl', 'prospectrus_tbl.strand_id = strand_tbl.id', 'right')
-                  ->join('school_year', 'prospectrus_tbl.semester = school_year.semester', 'inner')
-                  ->where('prospectrus_tbl.strand_id', $strand_id[0]['id'])
-                  ->where('prospectrus_tbl.year_level', '1st Year')
-                  ->get()->getResultArray(),
-              'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
-              'sem_year' => $year_model->first(),
-
-              'yearnew' => $strand_model
-              ->select('*')
-              ->join('yearlevel_tbl', 'strand_tbl.type = yearlevel_tbl.type', 'inner')
-              ->where('yearlevel_tbl.type', session()->get('usertype'))
-              ->groupBy('yearlevel_tbl.year_level')
-              ->get()->getResultArray(),
-          ];
-    //    var_dump($values['prospectus']);
-          return view('admin/prospectus/first_year', $values);
-        // echo 2;
+    //  var_dump($year_level);
+    if ($year_levels == $year_levelOne['id']) {
+        $yearLevelText = 'Grade 11';
+        $view = 'first_year';
+        } elseif ($year_levels == $year_levelTwo['id']) {
+            $yearLevelText = 'Grade 12';
+            $view = 'second_year';
+        } elseif ($year_levels == $year_levelThree['id']) {
+            $yearLevelText = 'Grade 13';
+            $view = 'third_year';
+        } elseif ($year_levels == $year_levelFour['id']) {
+            $yearLevelText = 'Grade 14';
+            $view = 'fourth_year';
+        } else {
+            // Handle invalid year level here
         }
-    }
-    public function prospectus12()
-    {
-      $prospectus_model = new ProspectusModel();
-      $year_model = new YearModel();
-      $strand_model = new StrandModel();
-      $user_model = new UserModel();
-
-      $data = $user_model->where('email', session()->get('loggedInUser'))->first();
-      session()->setFlashdata('strand', 'gas');
-
-      if($data['status'] == "SHS"){
-      $strand_id = $strand_model->where('strand', 'GAS')->find();
-      $values = [
-          'prospectus' => $prospectus_model->select('*, prospectrus_tbl.id' )
-              ->join('strand_tbl', 'prospectrus_tbl.strand_id = strand_tbl.id', 'right')
-              ->join('school_year', 'prospectrus_tbl.semester = school_year.semester', 'inner')
-              ->where('prospectrus_tbl.strand_id', $strand_id[0]['id'])
-              ->where('prospectrus_tbl.year_level', 'Grade 12')
-              ->get()->getResultArray(),
-          'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
-
-          'sem_year' => $year_model->first()
-      ];
-  //    var_dump($values['prospectus']);
-    //   return redirect()->route('prospectus12', $values);
-      return view('admin/prospectus/grade12', $values);
-    }
-    else{
-        session()->setFlashdata('strand', 'abh');
-        $strand_id = $strand_model->where('strand', 'ABH')->find();
-        $values = [
-            'prospectus' => $prospectus_model->select('*, prospectrus_tbl.id' )
-                ->join('strand_tbl', 'prospectrus_tbl.strand_id = strand_tbl.id', 'right')
-                ->join('school_year', 'prospectrus_tbl.semester = school_year.semester', 'inner')
-                ->where('prospectrus_tbl.strand_id', $strand_id[0]['id'])
-                ->where('prospectrus_tbl.year_level', '2nd Year')
-                ->get()->getResultArray(),
-            'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
-  
-            'sem_year' => $year_model->first()
-        ];
-    //    var_dump($values['prospectus']);
-        return view('admin/prospectus/second_year', $values);
-    }
+        
+        return view('admin/prospectus/' . $view, array_merge($values, [
+            'yearLevelText' => $yearLevelText,
+        ]));
+        // echo 1;
     }
 public function addprospectus11()
 {
@@ -315,99 +265,6 @@ public function addprospectus11()
 
           session()->setFlashdata('subjectadded', 'added');
           return redirect()->back();
-        
+    }
     }
 }
-    public function prospectus3rd()
-    {
-      $prospectus_model = new ProspectusModel();
-      $year_model = new YearModel();
-      $strand_model = new StrandModel();
-      $user_model = new UserModel();
-
-     session()->setFlashdata('strand', 'abh');
-        $strand_id = $strand_model->where('strand', 'ABH')->find();
-        $values = [
-            'prospectus' => $prospectus_model->select('*, prospectrus_tbl.id' )
-                ->join('strand_tbl', 'prospectrus_tbl.strand_id = strand_tbl.id', 'right')
-                ->join('school_year', 'prospectrus_tbl.semester = school_year.semester', 'inner')
-                ->where('prospectrus_tbl.strand_id', $strand_id[0]['id'])
-                ->where('prospectrus_tbl.year_level', '3rd Year')
-                ->get()->getResultArray(),
-            'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
-            'sem_year' => $year_model->first()
-        ];
-//    var_dump($values['prospectus']);
-        return view('admin/prospectus/third_year', $values);
-    }
-
-    public function prospectusThirdyear($strand = null)
-    {
-        $prospectus_model = new ProspectusModel();
-        $strand_model = new StrandModel();
-        $user_model = new UserModel();
-        $year_model = new YearModel();
-
-            $strand_id = $strand_model->where('strand', $strand)->find();
-            $data = [
-                'prospectus' => $prospectus_model->select('*, prospectrus_tbl.id')
-                    ->join('strand_tbl', 'prospectrus_tbl.strand_id = strand_tbl.id', 'right')
-                    ->join('school_year', 'prospectrus_tbl.semester = school_year.semester', 'inner')
-                    ->where('strand_id', $strand_id[0]['id'])
-                    ->where('prospectrus_tbl.year_level', '3rd Year')
-                    ->get()->getResultArray(),
-                'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
-
-                'sem_year' => $year_model->first()
-            ];
-
-            session()->setFlashdata('strand', $strand);
-            return view('admin/prospectus/third_year', $data);
-        }
-    public function prospectus4th()
-    {
-      $prospectus_model = new ProspectusModel();
-      $year_model = new YearModel();
-      $strand_model = new StrandModel();
-      $user_model = new UserModel();
-
-     session()->setFlashdata('strand', 'abh');
-        $strand_id = $strand_model->where('strand', 'ABH')->find();
-        $values = [
-            'prospectus' => $prospectus_model->select('*, prospectrus_tbl.id' )
-                ->join('strand_tbl', 'prospectrus_tbl.strand_id = strand_tbl.id', 'right')
-                ->join('school_year', 'prospectrus_tbl.semester = school_year.semester', 'inner')
-                ->where('prospectrus_tbl.strand_id', $strand_id[0]['id'])
-                ->where('prospectrus_tbl.year_level', '4th Year')
-                ->get()->getResultArray(),
-            'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
-            'sem_year' => $year_model->first()
-        ];
-//    var_dump($values['prospectus']);
-        return view('admin/prospectus/fourth_year', $values);
-    }
-
-    public function prospectusFourthyear($strand = null)
-    {
-        $prospectus_model = new ProspectusModel();
-        $strand_model = new StrandModel();
-        $user_model = new UserModel();
-        $year_model = new YearModel();
-
-            $strand_id = $strand_model->where('strand', $strand)->find();
-            $data = [
-                'prospectus' => $prospectus_model->select('*, prospectrus_tbl.id')
-                    ->join('strand_tbl', 'prospectrus_tbl.strand_id = strand_tbl.id', 'right')
-                    ->join('school_year', 'prospectrus_tbl.semester = school_year.semester', 'inner')
-                    ->where('strand_id', $strand_id[0]['id'])
-                    ->where('prospectrus_tbl.year_level', '4th Year')
-                    ->get()->getResultArray(),
-                'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
-
-                'sem_year' => $year_model->first()
-            ];
-
-            session()->setFlashdata('strand', $strand);
-            return view('admin/prospectus/fourth_year', $data);
-        }
-    }

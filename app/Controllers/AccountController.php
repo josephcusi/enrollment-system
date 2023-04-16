@@ -18,13 +18,6 @@ class AccountController extends BaseController
   {
     helper(['form']);
     $rules = [
-      'lrn' => [
-          'rules' => 'required|is_unique[user_tbl.lrn]',
-          'errors' => [
-              'required' => 'Your Last name is required.',
-              'is_unique' => 'Your LRN is already Exist'
-          ]
-      ],
       'lastname' => [
           'rules' => 'required',
           'errors' => [
@@ -71,9 +64,21 @@ class AccountController extends BaseController
       $user_model = new UserModel();
       $token = $this->token(100);
       $to = $this->request->getPost('email');
+
+      $str_result = '1234567890';
+      $studID =  substr(str_shuffle($str_result),0, '4');
+      $ID = '';
+
+      if ($this->request->getPost('usertype') === 'college') {
+        $lrn_prefix = 'B23-';
+      } else {
+        $lrn_prefix = 'B23-SHS';
+      }
+      
+      
       $data = [
         'agree' => $this->request->getPost('agree'),
-        'lrn' => $this->request->getPost('lrn'),
+        'lrn' => $lrn_prefix . $ID . str_pad($studID, 4, "0", STR_PAD_LEFT),
         'lastname' => $this->request->getPost('lastname'),
         'firstname' => $this->request->getPost('firstname'),
         'middlename' => $this->request->getPost('middlename'),
@@ -82,6 +87,7 @@ class AccountController extends BaseController
         'token' => $token,
         'status' => 'pending',
         'usertype' => $this->request->getPost('usertype'),
+        'log_status' => 'Pending'
       ];
       $user_model->save($data);
       $subject = 'CONFIRM YOUR REGISTRATION';

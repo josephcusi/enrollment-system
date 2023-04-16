@@ -41,12 +41,7 @@
                             <option type="text" class="form-control" value="COLLEGE">COLLEGE</option>
                             </select>
                             <i class="uil uil-user icon"></i>
-                    </div>     
-                    <div class="input-field">
-                            <input type="text" name="lrn" placeholder="Student LRN" required>
-                            <i class="uil uil-user icon"></i>
-                    </div>
-                    <span class="text-danger"><?= isset($validation) ? display_error($validation, 'lrn') : '' ?></span>
+                    </div> 
                         <div class="input-field">
                             <input type="text" name="lastname" placeholder="Last Name" required
                                 >

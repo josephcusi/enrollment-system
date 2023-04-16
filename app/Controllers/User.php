@@ -91,14 +91,19 @@ class User extends BaseController
                             $counts = count($credential_model->where('lrn', session()->get('lrn'))->find());
                             if($counts == 1)
                             {
+                                if($user_info['log_status'] == "Approved")
+                                {
                                 session()->setFlashdata('dashboard', 'Welcome');
                                 return $profile->retrieve_profile($userEmail);
+                                }
+                                else{
+                                    session()->setFlashdata('notApp', 'Your email is not verified yet. Please check your email');
+                                    return redirect()->to('login');
+                                }
                             }
                             else{
                                 return redirect()->route('credentials');
                             }
-                            // echo 1;
-
                         }
                         elseif($user_info['usertype'] == "SHS" || $user_info['usertype'] == "COLLEGE" and $user_info['status'] == "pending")
                         {
@@ -123,99 +128,8 @@ class User extends BaseController
                   return redirect()->to('login');
                 }
             }
-
-
-
     }
 
-    public function insert_reg()
-    {
-
-        $validated = $this->validate([
-            'lrn' => [
-                'rules' => 'required|is_unique[user_tbl.lrn]',
-                'errors' => [
-                    'required' => 'Your Last name is required.',
-                    'is_unique' => 'Your LRN is already Exist'
-                ]
-            ],
-            'lastname' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Your Last name is required.'
-                ]
-            ],
-            'firstname' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Your First name is required.'
-                ]
-            ],
-            'middlename' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Your Middle name is required.'
-                ]
-            ],
-            'email' => [
-                'rules' => 'required|valid_email|is_unique[user_tbl.email]',
-                'errors' => [
-                    'required' => 'Email is required!',
-                    'valid_email' => 'You must enter a valid email.',
-                    'is_unique' => 'Your Email is already Exist'
-                ]
-            ],
-            'password' => [
-                'rules' => 'required|min_length[6]',
-                'errors' => [
-                    'required' => 'Password is required!',
-                    'min_length' => 'Password must have morethan 6 characters in length.',
-                ]
-            ],
-            'passwordConf' => [
-                'rules' => 'required|min_length[6]|matches[password]',
-                'errors' => [
-                    'required' => 'Confirm password is required!',
-                    'min_length' => 'Confirm Password must have atleast 6 characters in length.',
-                    'matches' => 'Password do not match.'
-                ]
-            ]
-        ]);
-        if (!$validated) {
-            return view('auth/register', ['validation' => $this->validator]);
-        } else {
-            $agree = $this->request->getPost('agree');
-            $lrn = $this->request->getPost('lrn');
-            $lastname = $this->request->getPost('lastname');
-            $firstname = $this->request->getPost('firstname');
-            $middlename = $this->request->getPost('middlename');
-            $email = $this->request->getPost('email');
-            $password = $this->request->getPost('password');
-            $usertype = $this->request->getPost('usertype');
-
-            $values = [
-                'agree' => $agree,
-                'lrn' => $lrn,
-                'lastname' => $lastname,
-                'firstname' => $firstname,
-                'middlename' => $middlename,
-                'email' => $email,
-                'password' => Hash::make($password),
-                'status' => 'pending',
-                'usertype' => $usertype
-            ];
-
-            $user_model = new UserModel();
-            $query = $user_model->insert($values);
-
-            var_dump($values);
-            if (!$query) {
-                return redirect()->back()->with('fail', 'Something went wrong.');
-            } else {
-                return redirect()->to('emailVerification')->with('success', 'Register Successfully!');
-            }
-        }
-    }
 
     public function logout()
     {
@@ -280,7 +194,6 @@ class User extends BaseController
                 }
             }
             
-            // add text input field value to the data array
             $extra_info = session()->get('lrn');
             if (!empty($extra_info)) {
                 $data['lrn'] = $extra_info;
@@ -291,7 +204,7 @@ class User extends BaseController
                 session()->setFlashdata('saveprofile', 'Incorrect Password Provided');
             }
             
-            return redirect()->route('retrieve_profile');
+            return redirect()->route('login');
                             
         }
     }
