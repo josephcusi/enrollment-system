@@ -1,0 +1,16 @@
+CRITICAL - 2023-04-28 05:24:20 --> Undefined variable $sem_year
+in APPPATH\Views\admin\include\navbar.php on line 13.
+ 1 APPPATH\Views\admin\include\navbar.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sem_year', 'APPPATH\\Views\\admin\\include\\navbar.php', 13)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\include\\navbar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('admin/include/navbar', null, true)
+ 5 APPPATH\Views\admin\student_credentials\view_cred.php(5): CodeIgniter\View\View->include('admin/include/navbar')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_credentials\\view_cred.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_credentials/view_cred', [], true)
+ 9 APPPATH\Controllers\Credentials.php(73): view('admin/student_credentials/view_cred')
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->view_credential()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

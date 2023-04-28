@@ -255,139 +255,57 @@
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item active" style="color:maroon;font-family: 'Poppins';">Admin</li>
-                            <li class="breadcrumb-item active" style="font-family: 'Poppins';">Student Approval</li>
+                            <li class="breadcrumb-item active" style="color:maroon;font-family: 'Poppins';">Student Approval</li>
+                            <li class="breadcrumb-item active" style="font-family: 'Poppins';">View Credential</li>
                         </ol>
                     </div>
                 </div>
             </div><!-- /.container-fluid -->
         </section>
         <!-- Main content -->
+        <div class="col-12">
+          <div class="card card-primary card-outline mx-auto">
 
-        <!-- /.card-header -->
-        <div class="card-body">
-            <div class="card card-primary card-outline mx-auto" style="">
-                <div class="card-header">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-2">
+
+
+                    <img src="https://via.placeholder.com/300/FFFFFF?text=" class="img-fluid mb-2"/>
+
                 </div>
-                <!-- /.card-header -->
-                <div class="card-body">
-
-                    <table id="example1" class="table table-bordered table" style="font-family:poppins">
-
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Status</th>
-                                <th>Actions</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <?php foreach($credentials as $stud_cred):?>
-                            <tr>
-                                <td><?= $stud_cred['firstname'] . ' ' . $stud_cred['middlename'] . ' ' . $stud_cred['lastname']?></td>
-                                <td><?= $stud_cred['email']?></td>
-                                <td>
-                                <?php if($stud_cred['log_status'] == 'Approved'):?>
-                                    <a href="#"><button type="button" class="btn btn-primary btn-sm btn-status"
-                                            style="border-radius:15px" data-status="Pending" data-id="<?=$stud_cred['id']?>">Approved</button></a>
-                                <?php else:?>
-                                      <a href="#"><button type="button" class="btn btn-secondary btn-sm btn-status"
-                                            style="border-radius:15px" data-status="Approved" data-id="<?=$stud_cred['id']?>">Pending</button></a>
-                                </td>
-                                <?php endif;?>
-                                <td>
-                                    <a href="<?=base_url()?>/view_credential"><button type="button" class="btn btn-secondary btn-sm btn-updateStrand"
-                                            style="border-radius:15px">View</button></a>
-
-                                </td>
-                            </tr>
-                            <?php endforeach; ?>
-                        </tbody>
-
-                        <tfoot>
-                        </tfoot>
-
-                    </table>
+                <div class="col-sm-2">
+                <p class="a" style="font-size:1.5em; font-family: Poppins;color:maroon;">Birth Certificate</p>
+                  <a href="<?=base_url()?>/student_credentials/reyondarandell842@gmail.com/received_258625515707793.jpeg" data-toggle="lightbox" data-title="Birth Certificate" data-gallery="gallery">
+                    <img src="<?=base_url()?>/student_credentials/reyondarandell842@gmail.com/received_258625515707793.jpeg" class="img-fluid mb-2" alt="black sample"/>
+                  </a>
                 </div>
-                <!-- /.card-body -->
+                <div class="col-sm-2">
+                  <p class="a" style="font-size:1.5em; font-family: Poppins;color:maroon;">Form 137</p>
+                  <a href="<?=base_url()?>/student_credentials/reyondarandell842@gmail.com/received_258625515707793.jpeg" data-toggle="lightbox" data-title="Form 137" data-gallery="gallery">
+                    <img src="<?=base_url()?>/student_credentials/reyondarandell842@gmail.com/received_258625515707793.jpeg" class="img-fluid mb-2" alt="black sample"/>
+                  </a>
+                </div>
+                <div class="col-sm-2">
+                    <p class="a" style="font-size:1.5em; font-family: Poppins;color:maroon;">Class Grade</p>
+                  <a href="<?=base_url()?>/student_credentials/reyondarandell842@gmail.com/received_258625515707793.jpeg" data-toggle="lightbox" data-title="Class Grade" data-gallery="gallery">
+                    <img src="<?=base_url()?>/student_credentials/reyondarandell842@gmail.com/received_258625515707793.jpeg" class="img-fluid mb-2" alt="red sample"/>
+                  </a>
+                </div>
+                <div class="col-sm-2">
+                  <p class="a" style="font-size:1.5em; font-family: Poppins;color:maroon;">Good Moral</p>
+                  <a href="<?=base_url()?>/student_credentials/reyondarandell842@gmail.com/received_258625515707793.jpeg" data-toggle="lightbox" data-title="Good Moral" data-gallery="gallery">
+                    <img src="<?=base_url()?>/student_credentials/reyondarandell842@gmail.com/received_258625515707793.jpeg" class="img-fluid mb-2" alt="white sample"/>
+                  </a>
+                </div>
+              </div>
             </div>
-
-            <!-- /.content -->
+          </div>
         </div>
+        <!-- /.card-header -->
+
 
     </div>
 </body>
 <?= $this->include('admin/include/end')?>
 <?= $this->include('admin/include/footer')?>
-
-<script>
-$(document).ready(function() {
-    // sa button
-    $('.btn-updateStrand').on('click', function() {
-        // data galing buton
-        const id = $(this).data('id');
-        const strand = $(this).data('strand');
-        const title = $(this).data('title');
-        // // sa modal
-        $('.id').val(id);
-        $('.title').val(title);
-        $('.strand').val(strand).trigger('change');
-        // Call Modal
-        $('#updateStrand').modal('show');
-    });
-});
-</script>
-<script>
-function updateTable(status, id) {
-  $.ajax({
-    method: 'post',
-    url: '/student_status',
-    data: {
-      status: status,
-      id: id
-    },
-    success: function(response) {
-      $("#example1 tbody").empty();
-      console.log(response.credentials);
-      $.each(response.credentials, function(key, i) {
-        var logStatus = i['log_status'];
-        var url = "<?=site_url('credentials/')?>/" + i['lrn']
-        var buttonHtml = '';
-        if (logStatus == 'Approved') {
-          buttonHtml = '<a href="#"><button type="button" class="btn btn-primary btn-sm btn-status" style="border-radius:15px" data-status="Pending" data-id="' + i['id'] + '">Approved</button></a>';
-        } else {
-          buttonHtml = '<a href="#"><button type="button" class="btn btn-secondary btn-sm btn-status" style="border-radius:15px" data-status="Approved" data-id="' + i['id'] + '">Pending</button></a>';
-        }
-        $("#example1 tbody").append(`
-          <tr>
-            <td style="display: none;"><input type="hidden" name="id" value="${i['id']}"></td>
-            <td>${i['firstname']} ${i['middlename']} ${i['lastname']}</td>
-            <td>${i['email']}</td>
-            <td>${buttonHtml}</td>
-            <td>
-              <a href="${url}"><button type="button" class="btn btn-secondary btn-sm btn-updateStrand" style="border-radius:15px">View</button></a>
-            </td>
-          </tr>
-        `);
-      });
-      // Rebind the click event to the new buttons
-      bindButtonClickEvent(".btn-status");
-    }
-  });
-}
-
-function bindButtonClickEvent(buttonClass) {
-  $(buttonClass).off('click').on('click', function() {
-    var status = $(this).data('status');
-    var id = $(this).data('id');
-    console.log(id, status);
-    updateTable(status, id);
-  });
-}
-
-$(document).ready(function() {
-  bindButtonClickEvent(".btn-status");
-});
-</script>

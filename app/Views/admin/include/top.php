@@ -27,7 +27,9 @@
   <link rel="stylesheet" href="<?=base_url()?>/plugins/jqvmap/jqvmap.min.css">
   <!-- Theme style -->
 
-
+  <link rel="stylesheet" href="<?=base_url()?>/plugins/ekko-lightbox/ekko-lightbox.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="<?=base_url()?>/dist/css/adminlte.min.css">
   <link rel="stylesheet" href="<?=base_url()?>/dist/css/adminlte.css.map">
   <link rel="stylesheet" href="<?=base_url()?>/dist/css/adminlte.min.css.map">
   <!-- overlayScrollbars -->

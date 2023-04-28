@@ -100,6 +100,7 @@ $routes->post('/test', 'Profile::test');
 
 //------------ADMIN PROFILE------------
 $routes->match(['get', 'post'],'/student_approve', 'Credentials::student_approve');
+$routes->match(['get', 'post'],'/view_credential', 'Credentials::view_credential');
 $routes->match(['get', 'post'],'/student_status', 'Credentials::student_status');
 $routes->match(['get', 'post'],'/credentials/(:any)', 'Credentials::credentials/$1');
 //------------ADMIN PROFILE------------

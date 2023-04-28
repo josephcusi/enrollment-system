@@ -230,7 +230,7 @@
         <!-- Main content -->
         <section class="content-header">
             <div class="card card-primary card-outline mx-auto" style="width:98%;">
-               
+
                 <!-- /.card-header -->
                 <div class="card-body">
                     <div class="tab-pane" id="address">
@@ -354,9 +354,9 @@
 
     table th {
         background-color: #f2f2f2;
-        
+
         color:black;
-        
+
     }
 
     @media screen and (max-width: 768px) {
@@ -390,7 +390,7 @@
                     foreach($ids as $id) :
                         if($id == $sub['id']):
                 ?>
-              <tr>         
+              <tr>
                 <td><?= $sub['subject'];?></td>
                 <td><?= $sub['subject_title'];?></td>
                 <td><?= $sub['unit'];?></td>
