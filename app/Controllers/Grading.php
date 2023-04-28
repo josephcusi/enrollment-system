@@ -14,8 +14,12 @@ use App\Models\YearlevelModel;
 class Grading extends BaseController
 {
 
-    public function GradeSection($year_levels, $strand)
+    public function GradeSection()
     {
+
+        $strand = $this->request->getPost('course');
+        $year_levels = $this->request->getPost('year');
+
         $student_grading = new GradeModel();
         $strand_model = new StrandModel();
         $user_model = new UserModel();
@@ -62,29 +66,11 @@ class Grading extends BaseController
             'year_levelTwo' => $year_level_model->where('type', session()->get('status'))->where('year_level', 'Grade 12')->orWhere('year_level', '2nd Year')->first(),
             'year_levelThird' => $year_level_model->where('type', session()->get('status'))->where('year_level', '3rd Year')->first(),
             'year_levelFourth' => $year_level_model->where('type', session()->get('status'))->where('year_level', '4th Year')->first(),
+            'stud_id' => $year_level_model->where('id', $year_levels)->first()
         ];
-
-        if ($year_levels == $year_levelOne['id']) {
-            $year_levelsText = 'Grade 11';
-            $view = 'first_year';
-        } elseif ($year_levels == $year_levelTwo['id']) {
-            $year_levelsText = 'Grade 12';
-            $view = 'second_year';
-        } elseif ($year_levels == $year_levelThree['id']) {
-            $year_levelsText = 'Grade 13';
-            $view = 'third_year';
-        } elseif ($year_levels == $year_levelFour['id']) {
-            $year_levelsText = 'Grade 14';
-            $view = 'fourth_year';
-        } else {
-            // Handle invalid year level here
-        }
-        
-        return view('admin/grading/' . $view, array_merge($data, [
-            'yearLevelText' => $year_levelsText,
-        ]));
+        return $this->response->setJSON($data);
     }
-    public function StudentGrade()
+    public function StudentGrade($year_levels, $lrn, $strand)
     {
         $year_level_model = new YearlevelModel();
         $year_model = new YearModel();
@@ -99,9 +85,6 @@ class Grading extends BaseController
         $year_levelThree = $year_level_model->where('type', session()->get('status'))->where('year_level', '3rd Year')->first();
         $year_levelFour = $year_level_model->where('type', session()->get('status'))->where('year_level', '4th Year')->first();
 
-        $id = $this->request->getPost('id');
-        $strand = $this->request->getPost('strand');
-        $year_levels = $this->request->getPost('year_levels');
 
         $data = $user_model->where('email', session()->get('loggedInUser'))->first();
         $year_level = $data['status'] == "SHS" ?
@@ -125,10 +108,11 @@ class Grading extends BaseController
                 ->join('student_registration', 'student_grading.lrn = student_registration.lrn', 'inner')
                 ->join('user_tbl', 'student_registration.lrn = user_tbl.lrn', 'inner')
                 ->join('prospectrus_tbl', 'student_grading.subject_id = prospectrus_tbl.id', 'inner')
-                ->where('student_registration.id', $id)
+                ->where('student_registration.lrn', $lrn)
                 ->where('student_grading.year', session()->get('year'))
                 ->where('student_grading.semester', session()->get('semester'))
-                ->get()->getResultArray(),
+                ->first(),
+            'subject' => $prospectus_model->find(),
 
             'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
             'stat' => $user_model->where('status', session()->get('status'))->first(),
@@ -137,26 +121,10 @@ class Grading extends BaseController
             'year_levelTwo' => $year_level_model->where('type', session()->get('status'))->where('year_level', 'Grade 12')->orWhere('year_level', '2nd Year')->first(),
             'year_levelThird' => $year_level_model->where('type', session()->get('status'))->where('year_level', '3rd Year')->first(),
             'year_levelFourth' => $year_level_model->where('type', session()->get('status'))->where('year_level', '4th Year')->first(),
+            'stud_id' => $year_level_model->where('id', $year_levels)->first()
         ];
-
-    //   var_dump($values['stud_sub']);
-    if ($year_levels == $year_levelOne['id']) {
-        $year_levelsText = 'Grade 11';
-        $view = 'first_yearGrade';
-    } elseif ($year_levels == $year_levelTwo['id']) {
-        $year_levelsText = 'Grade 12';
-        $view = 'second_yearGrade';
-    } elseif ($year_levels == $year_levelThree['id']) {
-        $year_levelsText = 'Grade 13';
-        $view = 'third_yearGrade';
-    } elseif ($year_levels == $year_levelFour['id']) {
-        $yearLevelText = 'Grade 14';
-        $view = 'fourth_yearGrade';
-    } else {
-        // Handle invalid year level here
-    }
         
-        return view('admin/grading/' . $view, $values);
+        return view('admin/grading/first_yearGrade', $values);
         // echo 1;
     }
         public function StudentGrading($yearLevel)
@@ -213,28 +181,11 @@ class Grading extends BaseController
             'year_levelTwo' => $year_level_model->where('type', session()->get('status'))->where('year_level', 'Grade 12')->orWhere('year_level', '2nd Year')->first(),
             'year_levelThird' => $year_level_model->where('type', session()->get('status'))->where('year_level', '3rd Year')->first(),
             'year_levelFourth' => $year_level_model->where('type', session()->get('status'))->where('year_level', '4th Year')->first(),
+            'stud_id' => $year_level_model->where('id', $yearLevel)->first()
         ];
     //   var_dump($values['grade']);
-         
-    if ($yearLevel == $year_levelOne['id']) {
-        $yearLevelText = 'Grade 11';
-        $view = 'first_year';
-    } elseif ($yearLevel == $year_levelTwo['id']) {
-        $yearLevelText = 'Grade 12';
-        $view = 'second_year';
-    } elseif ($yearLevel == $year_levelThree['id']) {
-        $yearLevelText = 'Grade 13';
-        $view = 'third_year';
-    } elseif ($yearLevel == $year_levelFour['id']) {
-        $yearLevelText = 'Grade 14';
-        $view = 'fourth_year';
-    } else {
-        // Handle invalid year level here
-    }
-    
-    return view('admin/grading/' . $view, array_merge($values, [
-        'yearLevelText' => $yearLevelText,
-    ]));
+
+    return view('admin/grading/first_year', $values);
     
     }
 }

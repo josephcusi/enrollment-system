@@ -126,14 +126,18 @@
               </tr>
             </thead>
             <tbody>
-              <?php foreach($userSub as $newSub):?>
+            <?php $ids = explode(",", $id['subject_id']);
+                foreach($subject as $sub):
+                    foreach($ids as $id) :
+                        if($id == $sub['id']):
+                ?>
               <tr>
-                <td><?=$newSub['subject']?></td>
-                <td><?=$newSub['subject_title']?></td>
-                <td><?=$newSub['unit']?></td>
-                <td><?=$newSub['pre_requisit']?></td>
+                <td><?=$sub['subject']?></td>
+                <td><?=$sub['subject_title']?></td>
+                <td><?=$sub['unit']?></td>
+                <td><?=$sub['pre_requisit']?></td>
               </tr>
-           <?php endforeach;?>
+           <?php endif; endforeach; endforeach; ?>
             </tbody>
             <tfoot>
             </tfoot>

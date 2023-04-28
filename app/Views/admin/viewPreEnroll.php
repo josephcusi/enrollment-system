@@ -385,14 +385,18 @@
                 </tr>
             </thead>
             <tbody>
-            <?php foreach($enrolled as $subenroll):?>
-              <tr>
-                <td><?= $subenroll['subject'];?></td>
-                <td><?= $subenroll['subject_title'];?></td>
-                <td><?= $subenroll['unit'];?></td>
-                <td><?= $subenroll['pre_requisit'];?></td>
+            <?php $ids = explode(",", $id['subject_id']);
+                foreach($subject as $sub):
+                    foreach($ids as $id) :
+                        if($id == $sub['id']):
+                ?>
+              <tr>         
+                <td><?= $sub['subject'];?></td>
+                <td><?= $sub['subject_title'];?></td>
+                <td><?= $sub['unit'];?></td>
+                <td><?= $sub['pre_requisit'];?></td>
               </tr>
-           <?php endforeach;?>
+           <?php endif; endforeach; endforeach;?>
             </tbody>
         </table>
                     <div class="modal-footer justify-content-between">

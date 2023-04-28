@@ -125,7 +125,7 @@
                 <ul class="list-group list-group-unbordered mb-3">
                   <li class="list-group-item">
                        <b>
-                        <?=isset($subject[0]['strand']) ? $subject[0]['strand'] : '' ;?>
+                        <?=isset($subject['strand']) ? $subject['strand'] : '' ;?>
                       </b>
                   </li>
                 </ul>
@@ -151,20 +151,20 @@
                     <thead>
                       <tr>
                       <th>Subject</th>
-                        <th>Midterm Grade</th>
-                        <th>Final Grade</th>
+                        <th>Subject Grade</th>
                         <th>Remark</th>
                       </tr>
                     </thead>
                     <tbody>
-                        <?php foreach($subject as $sub):?>
+                      <?php $ids = array_combine(explode(',', $subject['subject_id']), explode(',', $subject['subject_grade']))?>
+                          <?php foreach($stud_sub as $stdnt_sjct):?>
+                            <?php if(isset($ids[$stdnt_sjct['id']])):?>
                       <tr>
-                        <td><?=$sub['subject'];?></td>
-                        <td><?=$sub['midterm_grade'];?></td>
-                        <td><?=$sub['final_grade'];?></td>
-                        <td><?=$sub['remark'];?></td>
+                        <td><?=$stdnt_sjct['subject'];?></td>
+                        <td><?=$ids[$stdnt_sjct['id']]?></td>
+                        <td><?=$subject['remark']?></td>
                       </tr>
-                       <?php endforeach?>
+                       <?php endif; endforeach?>
                     </tbody>
                     <tfoot>
                     </tfoot>

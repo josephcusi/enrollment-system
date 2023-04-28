@@ -35,28 +35,42 @@ class PreEnrolled extends BaseController
         $prospectus_add_model = new StudentProspectusModel();
         $strand_model = new StrandModel();
         $year_level_model = new YearlevelModel();
-        
-        
+
+        $test = $registration_model
+        ->select('*, strand_tbl.id')
+        ->join('strand_tbl', 'student_registration.strand = strand_tbl.strand', 'inner')
+        ->where('student_registration.id', $id)
+        ->where('student_registration.year', session()->get('year'))
+        ->where('student_registration.semester', session()->get('semester'))
+        ->get()->getResultArray();
+
         $data = [
         'enrolled' => $user_profile
         ->select('*, student_registration.id')
         ->join('user_tbl', 'user_profile.email = user_tbl.email', 'inner')
         ->join('student_registration', 'user_tbl.lrn = student_registration.lrn', 'inner')
         ->join('prospectus_add_tbl', 'student_registration.lrn = prospectus_add_tbl.lrn', 'inner')
-        ->join('prospectrus_tbl', 'prospectus_add_tbl.subject_id = prospectrus_tbl.id', 'inner')
         ->where('student_registration.id', $id)
         ->where('prospectus_add_tbl.year', session()->get('year'))
         ->where('prospectus_add_tbl.semester', session()->get('semester'))
         ->get()->getResultArray(),
 
+        'id' => $prospectus_add_model
+        ->select('*')
+        ->join('student_registration', 'prospectus_add_tbl.lrn = student_registration.lrn', 'inner')
+        ->where('student_registration.id', $id)
+        ->where('prospectus_add_tbl.year', session()->get('year'))
+        ->first(),
+
+        'subject' => $prospectus_model->findAll(),
+        
+
         'enroll' => $section_model
         ->select('*, student_registration.id')
-        ->join('strand_tbl', 'section_tbl.strand_id = strand_tbl.id', 'inner')
-        ->join('student_registration', 'strand_tbl.strand=student_registration.strand', 'inner')
-        ->join('student_registration as sr', 'section_tbl.year_level = sr.year_level', 'inner')
-        ->groupBy('section_tbl.section')
+        ->join('student_registration', 'section_tbl.year_level = student_registration.year_level', 'inner')
         ->where('student_registration.semester', session()->get('semester'))
         ->where('student_registration.id', $id)
+        ->where('section_tbl.strand_id', $test[0]['id'])
         ->where('student_registration.year', session()->get('year'))
         ->get()->getResultArray(),
         
@@ -69,7 +83,7 @@ class PreEnrolled extends BaseController
         'year_levelFourth' => $year_level_model->where('type', session()->get('status'))->where('year_level', '4th Year')->first(),
         ];
 
-        // var_dump($data['enrolled']);
+        // var_dump($test);
         return view('admin/viewPreEnroll', $data);
     }
     public function enroll($id)

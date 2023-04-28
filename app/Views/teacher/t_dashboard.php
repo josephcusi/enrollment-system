@@ -150,3 +150,25 @@
         });
     });
 </script>
+<script>
+  $(function () {
+  if ($.fn.DataTable.isDataTable('#example1')) {
+    $('#example1').DataTable().destroy();
+  }
+
+  $("#example1").DataTable({
+    "responsive": true,
+    "lengthChange": false,
+    "autoWidth": false,
+    "buttons": [
+      {
+        extend: 'excelHtml5',
+        text: 'Export to Grade Layout',
+        className: 'btn btn-success',
+        title: 'Pre-Enrolled Students List'
+      }
+    ]
+  }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+});
+
+  </script>

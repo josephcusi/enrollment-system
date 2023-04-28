@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="<?=base_url()?>/dist/img/dormehiLogo.png" type="image/icon">
+  <link rel="icon" href="<?=base_url()?>/cssjs/img/bccLogo.png" type="image/icon">
 
-  <title>DORMEHI | Enrollment</title>
+  <title>BCC | Enrollment</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -14,11 +14,11 @@
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+
   <!-- Font Awesome -->
   <link rel="stylesheet" href="<?=base_url()?>/plugins/fontawesome-free/css/all.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="<?=base_url()?>/dist/css/adminlte.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <!-- Tempusdominus Bootstrap 4 -->
   <link rel="stylesheet" href="<?=base_url()?>/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
   <!-- iCheck -->
@@ -26,8 +26,8 @@
   <!-- JQVMap -->
   <link rel="stylesheet" href="<?=base_url()?>/plugins/jqvmap/jqvmap.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="<?=base_url()?>/dist/css/adminlte.min.css">
-  <link rel="stylesheet" href="<?=base_url()?>/dist/css/adminlte.css">
+
+
   <link rel="stylesheet" href="<?=base_url()?>/dist/css/adminlte.css.map">
   <link rel="stylesheet" href="<?=base_url()?>/dist/css/adminlte.min.css.map">
   <!-- overlayScrollbars -->
@@ -45,7 +45,7 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="<?=base_url()?>/dist/css/adminlte.min.css">
   <link rel="stylesheet" href="<?=base_url()?>/plugins/bs-stepper/css/bs-stepper.min.css">
-  
+
 
   <!-- Custom Css -->
 

@@ -109,7 +109,9 @@ class Profile extends BaseController
                 ->where('student_grading.year', session()->get('year'))
                 ->where('student_grading.semester', session()->get('semester'))
                 ->where('student_grading.lrn', session()->get('lrn'))
-                ->get()->getResultArray(),
+                ->first(),
+
+                'stud_sub' =>$prospectus_model->find(),
                 'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
                 'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->findAll()
             ];
@@ -957,7 +959,9 @@ class Profile extends BaseController
         {
             $user_model = new UserModel();
             $registration_model = new RegistrationModel();
-            $prospectus_model = new StudentProspectusModel();
+            $prospectus_add_model = new StudentProspectusModel();
+            $prospectus_model = new ProspectusModel();
+
             $subject = $registration_model
             ->join('school_year', 'student_registration.semester = school_year.semester', 'inner')
             ->join('school_year as sy', 'student_registration.year = sy.year', 'inner')
@@ -974,16 +978,16 @@ class Profile extends BaseController
                 $data = [
                     'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
                     'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->findAll(),
-                    'userSub' => $prospectus_model
-                    ->select('*')
-                    ->join('prospectrus_tbl', 'prospectus_add_tbl.subject_id = prospectrus_tbl.id', 'inner')
+                    'subject' => $prospectus_model->findAll(),
+                    'id' => $prospectus_add_model
                     ->where('prospectus_add_tbl.lrn', session()->get('lrn'))
                     ->where('prospectus_add_tbl.year', session()->get('year'))
                     ->where('prospectus_add_tbl.semester', session()->get('semester'))
-                    ->get()->getResultArray()
+                    ->first()
                 ];
+
                 return view('user/subject', $data);
-                // var_dump($data['userSub']);
+                // var_dump($ids);
             }
 
         }
@@ -1003,18 +1007,17 @@ class Profile extends BaseController
             $year = $this->request->getPost('year');
             $semester = $this->request->getPost('semester');
             $subject_id = $this->request->getPost('subject_id');
-        
-            foreach ($subject_id as $subject_ids) {
-                $value = [
-                    'lrn' => $lrn,
-                    'subject_id' => $subject_ids,
-                    'year' => $year,
-                    'semester' => $semester,
-                ];
-        
-                $prospectus_add_model->insert($value);
-        
-        }
+           
+            $holder = join(",", $subject_id);
+       
+            $value = [
+                'lrn' => $lrn,
+                'subject_id' => $holder,
+                'year' => $year,
+                'semester' => $semester,
+            ];
+
+            $prospectus_add_model->insert($value);
             return redirect()->route('registration');
         }
         public function test()
@@ -1029,10 +1032,11 @@ class Profile extends BaseController
             $semester = $this->request->getPost('semester');
             $subject_id = $this->request->getPost('subject_id');
 
-            foreach ($subject_id as $subject_ids) {
+            $holder = join(",", $subject_id);
+
                 $value = [
                     'lrn' => $lrn,
-                    'subject_id' => $subject_ids,
+                    'subject_id' => $holder,
                     'year' => $year,
                     'semester' => $semester,
                 ];
@@ -1043,7 +1047,7 @@ class Profile extends BaseController
             else{
                 $prospectus_add_model->delete($id);
                 $prospectus_add_model->insert($value);
-            }
+            
         }
             return redirect()->route('registration');
     }

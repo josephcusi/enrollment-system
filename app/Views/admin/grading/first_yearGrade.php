@@ -281,37 +281,41 @@
                     <div class="col-md-3">
 
 
-                        <div class="card card-primary card-outline" style="">
+                    <div class="card card-primary card-outline" style="">
                             <div class="card-body box-profile">
                                 <div class="text-center">
-
                                 </div>
                                 <p class="text-muted text-left">Strand</p>
                                 <ul class="list-group list-group-unbordered mb-3 nav nav-pills">
-                                <?php if ($stat['status'] === "SHS"): ?>
+                                    <?php if ($stat['status'] === "SHS"): ?>
                                     <?php $strand = session()->getFlashdata('strand');?>
-                                    <li class="nav-item"><a type="button"
+                                    <li class="nav-item-active"><a id="gas-btn" type="button"
                                             class="tablinks nav-link <?php if($strand == 'GAS'){echo 'active' ;} ?>"
-                                            style="border-radius:20px" id="defaultOpen"
-                                            href="<?= base_url('GradeSection/'. $year_levelOne['id'] . '/' . 'GAS')?>">GAS</a></li>
-                                    <li class="nav-item"><a type="button"
+                                            style="border-radius:20px" id="defaultOpen" data-year="<?=$stud_id['id']?>"
+                                            data-course="GAS">GAS</a>
+                                    </li>
+                                    <li class="nav-item-active"><a id="smaw-btn" type="button"
                                             class="tablinks nav-link <?php if($strand == 'SMAW'){echo 'active';} ?>"
-                                            style="border-radius:20px" id="defaultOpen "
-                                            href="<?= base_url('GradeSection/'. $year_levelOne['id'] . '/' . 'SMAW')?>">SMAW</a></li>
+                                            style="border-radius:20px" id="defaultOpen " data-year="<?=$stud_id['id']?>"
+                                            data-course="SMAW">SMAW</a>
+                                    </li>
                                     <?php else:?>
                                     <?php $strand = session()->getFlashdata('strand');?>
-                                    <li class="nav-item"><a type="button"
-                                            class="tablinks nav-link <?php if($strand == 'ABH'){echo 'active' ;} ?>"
-                                            style="border-radius:20px" id="defaultOpen"
-                                            href="<?= base_url('GradeSection/'.$year_levelOne['id'] . '/' . 'ABH')?>">ABH</a></li>
-                                    <li class="nav-item"><a type="button"
+                                    <li class="nav-item-active"><a id="abh-btn" type="button"
+                                            class="tablinks nav-link  <?php if($strand == 'ABH'){echo 'active' ;} ?>"
+                                            style="border-radius:20px" id="defaultOpen" data-year="<?=$stud_id['id']?>"
+                                            data-course="ABH">ABH</a>
+                                    </li>
+                                    <li class="nav-item-active"><a id="bpa-btn" type="button"
                                             class="tablinks nav-link <?php if($strand == 'BPA'){echo 'active' ;} ?>"
-                                            style="border-radius:20px" id="defaultOpen"
-                                            href="<?= base_url('GradeSection/'.$year_levelOne['id'] . '/' . 'BPA')?>">BPA</a></li>
-                                    <li class="nav-item"><a type="button"
+                                            style="border-radius:20px" id="defaultOpen" data-year="<?=$stud_id['id']?>"
+                                            data-course="BPA">BPA</a>
+                                    </li>
+                                    <li class="nav-item-active"><a id="btvted-btn" type="button"
                                             class="tablinks nav-link <?php if($strand == 'BTVTED'){echo 'active' ;} ?>"
-                                            style="border-radius:20px" id="defaultOpen"
-                                            href="<?= base_url('GradeSection/'.$year_levelOne['id'] . '/' . 'BTVTED')?>">BTVTED</a></li>
+                                            style="border-radius:20px" id="defaultOpen" data-year="<?=$stud_id['id']?>"
+                                            data-course="BTVTED">BTVTED</a>
+                                    </li>
                                     <?php endif;?>
                                 </ul>
                                 </ul>
@@ -335,7 +339,7 @@
                                 <div id="bpa" class="tabcontent">
                                     <table id="example1" class="table table-bordered table" style="font-family:poppins">
                                         <thead>
-                                            <th><?=$stud_sub[0]['firstname'] . ' ' . $stud_sub[0]['middlename'] . ' ' . $stud_sub[0]['lastname'] ?>
+                                            <th id="name"><?=$stud_sub['firstname'] . ' ' . $stud_sub['middlename'] . ' ' . $stud_sub['lastname'] ?>
                                             </th>
                                             <tr>
                                                 <th>Subject</th>
@@ -344,14 +348,17 @@
                                             </tr>
                                             <thead>
                                             <tbody>
-                                                <?php foreach($stud_sub as $stud_grade):?>
+                                                <?php $ids = array_combine(explode(',', $stud_sub['subject_id']), explode(',', $stud_sub['subject_grade']));
+                                                    foreach($subject as $sub):
+                                                        if(isset($ids[$sub['id']])):
+                                                ?>
                                                 <tr>
-                                                    <td><?= $stud_grade['subject']?></td>
-                                                    <td><?= $stud_grade['subject_title']?></td>
-                                                    <td><?= $stud_grade['midterm_grade']?></td>
+                                                    <td><?= $sub['subject']?></td>
+                                                    <td><?=$sub['subject_title']?></td>
+                                                    <td><?=$ids[$sub['id']]?></td>
                                                 </tr>
                                             </tbody>
-                                            <?php endforeach;?>
+                                            <?php endif; endforeach;?>
                                     </table>
                                 </div>
                             </div>
@@ -383,5 +390,100 @@ $(document).ready(function() {
         // Call Modal
         $('#updategrade').modal('show');
     });
+});
+</script>
+
+<script>
+$('.nav-item-active a').filter(function() {}).addClass('active');
+
+// Add active class to clicked link
+$('.nav-item-active a').on('click', function() {
+    $('.nav-item-active a').removeClass('active');
+    $(this).addClass('active');
+});
+
+
+function bindButtonClickEvent(buttonId) {
+    $(buttonId).click(function() {
+        const year = $(this).data('year');
+        const course = $(this).data('course');
+
+        console.log(year, course);
+        $.ajax({
+            method: 'post',
+            url: '/GradeSection',
+            data: {
+                year: year,
+                course: course
+            },
+            success: function(response) {
+
+                $("#example1").empty();
+
+
+                console.log(response.grade);
+
+                $.each(response.grade, function(key, i) {
+                    var stud_id = response.stud_id; // replace "stud_id" with the actual name of the property that contains the student ID
+                    var url = "<?=site_url('StudentGrade');?>/" + stud_id['id'] + "/" + i[
+                        'lrn'] + "/" + i['strand'];
+                    var total_grading = i['total_grading'] ? i['total_grading'] : 'NONE';
+                    var year = response.sem_year;
+                    $("#example1").append(`
+                    <tr>
+                                                <th>Name</th>
+                                                <th>${year['semester']}</th>
+                                                <th>Remarks</th>
+                                                <th>Actions</th>
+                                            </tr>
+                        <tr>
+                        <td style="display: none;"><input type="hidden" name="id" value="${i['id']}"></td>
+                        <td>${i['firstname']} ${i['middlename']} ${i['lastname']}</td>
+                        <td>${total_grading}</td>
+                        <td>${i['remark']}</td>
+                        <td>
+                            <a href="${url}">
+                            <button type="button" class="btn btn-secondary btn-sm" style="border-radius:15px">View</button>
+                            </a>
+                        </td>
+                        </tr>
+                    `);
+                });
+
+
+
+
+            }
+        })
+    });
+}
+
+bindButtonClickEvent("#gas-btn");
+bindButtonClickEvent("#smaw-btn");
+bindButtonClickEvent("#abh-btn");
+bindButtonClickEvent("#bpa-btn");
+bindButtonClickEvent("#btvted-btn");
+
+$(document).ready(function() {
+    // Get the current page URL
+    var url = window.location.href;
+    // Find the link that matches the current page URL and add the active class
+    $('.year-level-nav-item a').filter(function() {
+        return this.href == url;
+    }).addClass('active');
+
+    // Add active class to clicked link
+    $('.year-level-nav-item a').on('click', function() {
+        $('.year-level-nav-item a').removeClass('active');
+        $(this).addClass('active');
+        // Store the active button's state in localStorage
+        localStorage.setItem('activeButton', $(this).attr('id'));
+    });
+
+    // Retrieve the active button's state from localStorage and add the active class to it
+    var activeButton = localStorage.getItem('activeButton');
+    if (activeButton) {
+        $('#' + activeButton).addClass('active');
+    }
 });
 </script>

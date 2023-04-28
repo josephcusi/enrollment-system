@@ -8,16 +8,11 @@
     </li>
     <li class="nav-item d-none d-sm-inline-block">
       <a href="<?=base_url()?>/admin" class="nav-link" style = "color:white;font-family:poppins;"><strong>Home</strong></a>
-
     </li>
-
   </ul>
-
   <!-- Right navbar links -->
   <ul class="navbar-nav ml-auto">
     <!-- Navbar Search -->
-
-    <!-- Sidebar user panel (optional) -->
     <!-- Sidebar user panel (optional) -->
     <div class="user-panel mt-1 pb-1 mb-1 d-flex" >
 
@@ -39,8 +34,6 @@
       </div>
       </div>
 
-
-
     <!-- Messages Dropdown Menu -->
     <li class="nav-item">
       <a class="nav-link" data-widget="fullscreen" href="#" role="button">
@@ -56,3 +49,25 @@
   </ul>
 
 </nav>
+<?= $this->include('admin/modal/yearModal')?>
+
+<script src="<?=base_url()?>/cssjs/js/jquery.min.js"></script>
+<script src="<?=base_url()?>/cssjs/js/bundle.min.js"></script>
+
+<script>
+$(document).ready(function(){
+     // sa button
+     $('.btn-year').on('click',function(){
+         // data galing buton
+         const id = $(this).data('id');
+         const year = $(this).data('year');
+         const sem = $(this).data('sem');
+         // // sa modal
+          $('.id').val(id);
+          $('.yearModal').val(year);
+          $('.semester').val(sem).trigger('change');
+         // Call Modal
+          $('#year').modal('show');
+     });
+   });
+</script>

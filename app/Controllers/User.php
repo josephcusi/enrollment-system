@@ -113,7 +113,7 @@ class User extends BaseController
                         elseif($user_info['usertype'] == "teacher")
                         {
                           session()->setFlashdata('teacher', 'Your');
-                          return redirect()->route('t_dashboard');
+                          return redirect()->route('newteacher');
                         // return redirect()->route('tryteacher');
                         }
                         else{
