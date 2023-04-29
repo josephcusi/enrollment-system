@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <title>Sixteen Clothing Products</title>
+    <title>BCC | Offers</title>
 
     <!-- Bootstrap core CSS -->
     <link href="<?=base_url()?>/webpage/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -44,7 +44,7 @@ https://templatemo.com/tm-546-sixteen-clothing
     <header class="">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="index.html"><h2>Sixteen <em>Clothing</em></h2></a>
+          <a class="navbar-brand" href="index.html"><img src="<?=base_url()?>/cssjs/img/bccLogo.png" alt="dormehi Logo" class="brand-image img-circle elevation-3" style="opacity: 10;width:65px;">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -101,8 +101,7 @@ https://templatemo.com/tm-546-sixteen-clothing
               <a href="#"><img src="<?=base_url()?>/webpage/assets/images/product_01.jpg" alt=""></a>
               <div class="down-content">
                 <a href="#"><h4>Tittle goes here</h4></a>
-                <h6>$25.75</h6>
-                <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
+                    <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
 
               </div>
             </div>
@@ -112,8 +111,7 @@ https://templatemo.com/tm-546-sixteen-clothing
               <a href="#"><img src="<?=base_url()?>/webpage/assets/images/product_02.jpg" alt=""></a>
               <div class="down-content">
                 <a href="#"><h4>Tittle goes here</h4></a>
-                <h6>$30.25</h6>
-                <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
+                    <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
 
               </div>
             </div>
@@ -123,8 +121,7 @@ https://templatemo.com/tm-546-sixteen-clothing
               <a href="#"><img src="<?=base_url()?>/webpage/assets/images/product_03.jpg" alt=""></a>
               <div class="down-content">
                 <a href="#"><h4>Tittle goes here</h4></a>
-                <h6>$20.45</h6>
-                <p>Sixteen Clothing is free CSS template provided by TemplateMo.</p>
+                    <p>Sixteen Clothing is free CSS template provided by TemplateMo.</p>
 
               </div>
             </div>
@@ -148,8 +145,7 @@ https://templatemo.com/tm-546-sixteen-clothing
               <a href="#"><img src="<?=base_url()?>/webpage/assets/images/product_01.jpg" alt=""></a>
               <div class="down-content">
                 <a href="#"><h4>Tittle goes here</h4></a>
-                <h6>$25.75</h6>
-                <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
+                    <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
 
               </div>
             </div>
@@ -159,8 +155,7 @@ https://templatemo.com/tm-546-sixteen-clothing
               <a href="#"><img src="<?=base_url()?>/webpage/assets/images/product_02.jpg" alt=""></a>
               <div class="down-content">
                 <a href="#"><h4>Tittle goes here</h4></a>
-                <h6>$30.25</h6>
-                <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
+                    <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
 
               </div>
             </div>
@@ -170,8 +165,7 @@ https://templatemo.com/tm-546-sixteen-clothing
               <a href="#"><img src="<?=base_url()?>/webpage/assets/images/product_03.jpg" alt=""></a>
               <div class="down-content">
                 <a href="#"><h4>Tittle goes here</h4></a>
-                <h6>$20.45</h6>
-                <p>Sixteen Clothing is free CSS template provided by TemplateMo.</p>
+                    <p>Sixteen Clothing is free CSS template provided by TemplateMo.</p>
 
               </div>
             </div>
