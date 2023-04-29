@@ -48,6 +48,11 @@ $routes->post('/retrieve_profile', 'User::retrieve_profile');
 $routes->post('/insert_reg', 'User::insert_reg');
 $routes->get('/logout', 'User::logout');
 $routes->get('/mail', 'AccountController::mail');
+//webpage controller
+$routes->match(['get', 'post'],'/landing', 'Webpage::landing');
+$routes->match(['get', 'post'],'/contact', 'Webpage::contact');
+$routes->match(['get', 'post'],'/about', 'Webpage::about');
+$routes->match(['get', 'post'],'/offered', 'Webpage::offered');
 // $routes->get('/register', 'AccountController::register');
 $routes->match(['get', 'post'],'/store', 'AccountController::store');
 $routes->match(['get', 'post'],'/login', 'AccountController::login');
