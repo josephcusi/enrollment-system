@@ -56,6 +56,8 @@ class Grading extends BaseController
             ->join('prospectrus_tbl', 'student_grading.subject_id = prospectrus_tbl.id', 'inner')
             ->where('student_registration.strand', $strand_id[0]['strand'])
             ->where('student_registration.year_level', $year_level)
+            ->where('student_grading.semester', session()->get('semester'))
+            ->where('student_grading.year', session()->get('year'))
             ->groupBy('student_registration.lrn')
             ->get()->getResultArray(),
 
@@ -111,7 +113,7 @@ class Grading extends BaseController
                 ->where('student_registration.lrn', $lrn)
                 ->where('student_grading.year', session()->get('year'))
                 ->where('student_grading.semester', session()->get('semester'))
-                ->first(),
+                ->get()->getResultArray(),
             'subject' => $prospectus_model->find(),
 
             'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
@@ -124,7 +126,25 @@ class Grading extends BaseController
             'stud_id' => $year_level_model->where('id', $year_levels)->first()
         ];
         
-        return view('admin/grading/first_yearGrade', $values);
+        if ($year_levels == $year_levelOne['id']) {
+            $yearLevelText = 'Grade 11';
+            $view = 'first_yearGrade';
+            } elseif ($year_levels == $year_levelTwo['id']) {
+                $yearLevelText = 'Grade 12';
+                $view = 'second_yearGrade';
+            } elseif ($year_levels == $year_levelThree['id']) {
+                $yearLevelText = 'Grade 13';
+                $view = 'third_yearGrade';
+            } elseif ($year_levels == $year_levelFour['id']) {
+                $yearLevelText = 'Grade 14';
+                $view = 'fourth_yearGrade';
+            } else {
+                // Handle invalid year level here
+            }
+            
+            return view('admin/grading/' . $view, $values);
+        // return view('admin/grading/first_yearGrade', $values);
+        // var_dump($year_level);
         // echo 1;
     }
         public function StudentGrading($yearLevel)
@@ -166,11 +186,10 @@ class Grading extends BaseController
             ->select('*, student_registration.id')
             ->join('user_tbl', 'student_grading.lrn = user_tbl.lrn', 'inner')
             ->join('student_registration', 'user_tbl.lrn = student_registration.lrn', 'inner')
-            ->join('school_year', 'student_registration.semester = school_year.semester', 'inner')
             ->where('student_registration.strand', $strand_id[0]['strand'])
             ->where('student_registration.year_level', $year_level)
-            ->where('school_year.year', session()->get('year'))
-            ->where('school_year.semester', session()->get('semester'))
+            ->where('student_registration.year', session()->get('year'))
+            ->where('student_registration.semester', session()->get('semester'))
             ->groupBy('student_registration.lrn')
             ->get()->getResultArray(),
 
@@ -183,7 +202,7 @@ class Grading extends BaseController
             'year_levelFourth' => $year_level_model->where('type', session()->get('status'))->where('year_level', '4th Year')->first(),
             'stud_id' => $year_level_model->where('id', $yearLevel)->first()
         ];
-    //   var_dump($values['grade']);
+    //   var_dump($yearLevel);
 
     return view('admin/grading/first_year', $values);
     

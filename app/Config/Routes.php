@@ -48,17 +48,18 @@ $routes->post('/retrieve_profile', 'User::retrieve_profile');
 $routes->post('/insert_reg', 'User::insert_reg');
 $routes->get('/logout', 'User::logout');
 $routes->get('/mail', 'AccountController::mail');
-//webpage controller
-$routes->match(['get', 'post'],'/landing', 'Webpage::landing');
-$routes->match(['get', 'post'],'/contact', 'Webpage::contact');
-$routes->match(['get', 'post'],'/about', 'Webpage::about');
-$routes->match(['get', 'post'],'/offered', 'Webpage::offered');
 // $routes->get('/register', 'AccountController::register');
 $routes->match(['get', 'post'],'/store', 'AccountController::store');
 $routes->match(['get', 'post'],'/login', 'AccountController::login');
 $routes->match(['get', 'post'],'/register', 'AccountController::register');
 $routes->match(['get', 'post'],'/verify/(:any)', 'AccountController::verify/$1');
 $routes->match(['get', 'post'],'/exceltest', 'Excel::exceltest');
+
+//webpage controller
+$routes->match(['get', 'post'],'/landing', 'Webpage::landing');
+$routes->match(['get', 'post'],'/contact', 'Webpage::contact');
+$routes->match(['get', 'post'],'/about', 'Webpage::about');
+$routes->match(['get', 'post'],'/offered', 'Webpage::offered');
 
 //authcontroller/ forgot//
 $routes->get('forgot-password', 'AuthController::forgot');
@@ -189,8 +190,8 @@ $routes->post('/gradingStud', 'Teacher::gradingStud');
 
 // $routes->get('/viewGrade', 'Teacher::viewGrade');
 // $routes->get('/viewGrades', 'Teacher::viewGrades');
-$routes->post('/viewGrade', 'Teacher::viewGrade');
-$routes->get('/viewGrade', 'Teacher::viewGrade');
+// $routes->post('/viewGrade', 'Teacher::viewGrade');
+$routes->get('/viewGrade/(:any)', 'Teacher::viewGrade/$1');
 $routes->post('/updateGrade', 'Teacher::updateGrade');
 $routes->put('/TeacherUpdate', 'TeacherAccount::TeacherUpdate');
 $routes->post('/Teacher_StudentGrading', 'Teacher::Teacher_StudentGrading');

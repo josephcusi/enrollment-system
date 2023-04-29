@@ -164,7 +164,7 @@ class Teacher extends BaseController
         ];
         return view('teacher/newteacher', $teacher);
     }
-    public function viewGrade()
+    public function viewGrade($id)
     {
         $user_model = new UserModel();
         $year_model = new YearModel();
@@ -173,7 +173,6 @@ class Teacher extends BaseController
         $prospectus_model = new ProspectusModel();
         $year_level_model = new YearlevelModel();
 
-        $id = $this->request->getPost('studentId');
         
         $data =[
             'userInfo' => $grade_model
@@ -224,8 +223,8 @@ class Teacher extends BaseController
             'year_levelThird' => $year_level_model->where('type', session()->get('status'))->where('year_level', '3rd Year')->first(),
             'year_levelFourth' => $year_level_model->where('type', session()->get('status'))->where('year_level', '4th Year')->first(),
         ];
-        // return view('teacher/Grade', $data);
-        return $this->response->getJSON($data);
+        return view('teacher/Grade', $data);
+        // return $this->response->getJSON($data);
         // var_dump($data['count_grade']);
     }
     public function gradingStud()

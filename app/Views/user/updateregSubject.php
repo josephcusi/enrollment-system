@@ -127,7 +127,7 @@
                                                     <?php endforeach;?>
                                                         <?php foreach($prospectus as $prospectus_value):?>
                                                         <tr>
-                                                        <td style="display: none;"><input type="hidden" name="subject_id[]"
+                                                        <td><input type="checkbox" name="subject_id[]"
                                                                     value="<?=$prospectus_value['id'];?>"
                                                                     checked></td>
                                                             <td><?= $prospectus_value['subject'];?></td>

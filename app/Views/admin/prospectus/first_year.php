@@ -39,6 +39,12 @@
                         <br>
                         <br>
                         <li class="nav-item" style="font-family:poppins;">
+                            <a href="<?=base_url('student_approve')?>" class="nav-link">
+                                <i class="far fa-thin fa-newspaper"></i>
+                                <p>Student Approval</p>
+                            </a>
+                        </li>
+                        <li class="nav-item" style="font-family:poppins;">
                         <li class="nav-item" style="font-family:poppins;">
                             <a href="<?=base_url('/pre_enrolled_reg')?>" class="nav-link">
                                 <i class="far fa-thin fa-newspaper"></i>

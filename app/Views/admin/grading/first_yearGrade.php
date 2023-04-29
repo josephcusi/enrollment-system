@@ -39,6 +39,12 @@
                         <br>
                         <br>
                         <li class="nav-item" style="font-family:poppins;">
+                            <a href="<?=base_url('student_approve')?>" class="nav-link">
+                                <i class="far fa-thin fa-newspaper"></i>
+                                <p>Student Approval</p>
+                            </a>
+                        </li>
+                        <li class="nav-item" style="font-family:poppins;">
                         <li class="nav-item" style="font-family:poppins;">
                             <a href="<?=base_url('/pre_enrolled_reg')?>" class="nav-link">
                                 <i class="far fa-thin fa-newspaper"></i>
@@ -63,32 +69,32 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                <a href="<?= site_url('section11/' . $year_levelTwo['id']);?>" class="nav-link">
+                                    <a href="<?= site_url('section11/' . $year_levelTwo['id']);?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Grade 12</p>
                                     </a>
                                 </li>
                                 <?php else: ?>
                                 <li class="nav-item">
-                                <a href="<?= site_url('section11/' . $year_levelOne['id']);?>" class="nav-link">
+                                    <a href="<?= site_url('section11/' . $year_levelOne['id']);?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>1st Year</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                <a href="<?= site_url('section11/' . $year_levelTwo['id']);?>" class="nav-link">
+                                    <a href="<?= site_url('section11/' . $year_levelTwo['id']);?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>2nd Year</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                <a href="<?= site_url('section11/' . $year_levelThird['id']);?>" class="nav-link">
+                                    <a href="<?= site_url('section11/' . $year_levelThird['id']);?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>3rd Year</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                <a href="<?= site_url('section11/' . $year_levelFourth['id']);?>" class="nav-link">
+                                    <a href="<?= site_url('section11/' . $year_levelFourth['id']);?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>4th Year</p>
                                     </a>
@@ -106,37 +112,38 @@
                             <ul class="nav nav-treeview">
                                 <?php if ($stat['status'] === "SHS"): ?>
                                 <li class="nav-item">
-                                <a href="<?= base_url('prospectus11/' . $year_levelOne['id'])?>" class="nav-link active">
+                                    <a href="<?= base_url('prospectus11/' . $year_levelOne['id'])?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Grade 11</p>
                                     </a>
-                                    <li class="nav-item">
-                                <a href="<?= base_url('prospectus11/' . $year_levelTwo['id'])?>" class="nav-link">
+                                <li class="nav-item">
+                                    <a href="<?= base_url('prospectus11/' . $year_levelTwo['id'])?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Grade 12</p>
                                     </a>
                                 </li>
                                 <?php else: ?>
                                 <li class="nav-item">
-                                <a href="<?= base_url('prospectus11/' . $year_levelOne['id'])?>" class="nav-link active">
+                                    <a href="<?= base_url('prospectus11/' . $year_levelOne['id'])?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>1st Year</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                <a href="<?= base_url('prospectus11/' . $year_levelTwo['id'])?>" class="nav-link">
+                                    <a href="<?= base_url('prospectus11/' . $year_levelTwo['id'])?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>2nd Year</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                <a href="<?= base_url('prospectus11/' . $year_levelThird['id'])?>" class="nav-link">
+                                    <a href="<?= base_url('prospectus11/' . $year_levelThird['id'])?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>3rd Year</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                <a href="<?= base_url('prospectus11/' . $year_levelFourth['id'])?>" class="nav-link">
+                                    <a href="<?= base_url('prospectus11/' . $year_levelFourth['id'])?>"
+                                        class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>4th Year</p>
                                     </a>
@@ -154,8 +161,7 @@
                             <ul class="nav nav-treeview">
                                 <?php if ($stat['status'] === "SHS"): ?>
                                 <li class="nav-item">
-                                    <a href="<?= site_url('StudentGrading/' . $year_levelOne['id'])?>"
-                                        class="nav-link active">
+                                    <a href="<?= site_url('StudentGrading/' . $year_levelOne['id'])?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Grade 11</p>
                                     </a>
@@ -168,7 +174,7 @@
                                 </li>
                                 <?php else: ?>
                                 <li class="nav-item">
-                                    <a href="<?= site_url('StudentGrading/' . $year_levelOne['id'])?>" class="nav-link active">
+                                    <a href="<?= site_url('StudentGrading/' . $year_levelOne['id'])?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>1st Year</p>
                                     </a>
@@ -180,13 +186,15 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                <a href="<?= site_url('StudentGrading/' . $year_levelThird['id'])?>" class="nav-link">
+                                    <a href="<?= site_url('StudentGrading/' . $year_levelThird['id'])?>"
+                                        class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>3rd Year</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                <a href="<?= site_url('StudentGrading/' . $year_levelFourth['id'])?>" class="nav-link">
+                                    <a href="<?= site_url('StudentGrading/' . $year_levelFourth['id'])?>"
+                                        class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>4th Year</p>
                                     </a>
@@ -281,7 +289,7 @@
                     <div class="col-md-3">
 
 
-                    <div class="card card-primary card-outline" style="">
+                        <div class="card card-primary card-outline" style="">
                             <div class="card-body box-profile">
                                 <div class="text-center">
                                 </div>
@@ -339,7 +347,8 @@
                                 <div id="bpa" class="tabcontent">
                                     <table id="example1" class="table table-bordered table" style="font-family:poppins">
                                         <thead>
-                                            <th id="name"><?=$stud_sub['firstname'] . ' ' . $stud_sub['middlename'] . ' ' . $stud_sub['lastname'] ?>
+                                            <th id="name">
+                                                <?=$stud_sub['firstname'] . ' ' . $stud_sub['middlename'] . ' ' . $stud_sub['lastname'] ?>
                                             </th>
                                             <tr>
                                                 <th>Subject</th>
@@ -424,7 +433,8 @@ function bindButtonClickEvent(buttonId) {
                 console.log(response.grade);
 
                 $.each(response.grade, function(key, i) {
-                    var stud_id = response.stud_id; // replace "stud_id" with the actual name of the property that contains the student ID
+                    var stud_id = response
+                    .stud_id; // replace "stud_id" with the actual name of the property that contains the student ID
                     var url = "<?=site_url('StudentGrade');?>/" + stud_id['id'] + "/" + i[
                         'lrn'] + "/" + i['strand'];
                     var total_grading = i['total_grading'] ? i['total_grading'] : 'NONE';

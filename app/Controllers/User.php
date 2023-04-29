@@ -177,20 +177,20 @@ class User extends BaseController
             session()->setFlashdata('validation', $this->validator);
             return redirect()->route('credentials');
         }
-            else
+        else
         {
             $user_model = new UserModel();
-            
             $credential_model = new CredentialModel();
             $files = ['birth_cert', 'class_card', 'form_137', 'good_moral'];
             $data = [];
             
             foreach ($files as $file) {
                 $uploadedFile = $this->request->getFile($file);
-            
+                
                 if ($uploadedFile->isValid() && !$uploadedFile->hasMoved()) {
-                    $uploadedFile->move(FCPATH . 'student_credentials' . '/' . $email = session()->get('loggedInUser'));
-                    $data[$file] = $uploadedFile->getClientName();
+                    $newName = $uploadedFile->getRandomName(); // Generate a random name for the file
+                    $uploadedFile->move(FCPATH . 'student_credentials' . '/' . $email = session()->get('loggedInUser'), $newName);
+                    $data[$file] = $newName; // Save the new name to the database
                 }
             }
             
@@ -205,7 +205,6 @@ class User extends BaseController
             }
             
             return redirect()->route('login');
-                            
         }
     }
 }

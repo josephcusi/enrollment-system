@@ -124,7 +124,7 @@
                                 </li>
                                 <?php else: ?>
                                 <li class="nav-item">
-                                <a href="<?= base_url('prospectus11/' . $year_levelOne['id'])?>" class="nav-link active">
+                                <a href="<?= base_url('prospectus11/' . $year_levelOne['id'])?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>1st Year</p>
                                     </a>

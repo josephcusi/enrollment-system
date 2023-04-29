@@ -6,9 +6,10 @@
         <aside class="main-sidebar sidebar-dark-secondary elevation-8">
             <!-- Brand Logo -->
             <a href="index3.html" class="brand-link">
-                <img src="<?=base_url()?>/dist/img/dormehiLogo.png" alt="dormehi Logo"
+                <img src="<?=base_url()?>/cssjs/img/bccLogo.png" alt="dormehi Logo"
                     class="brand-image img-circle elevation-3" style="opacity: 10;">
-                <span class="brand-text font-weight-light" style="margin-left:10%;"><strong>DORMEHI</strong></span>
+                <span class="brand-text font-weight-light" style="margin-left:0%; font-size:85%;"><strong>Baco Community
+                        College</strong></span>
             </a>
 
             <!-- Sidebar -->
@@ -37,6 +38,12 @@
                         </li>
                         <br>
                         <br>
+                        <li class="nav-item" style="font-family:poppins;">
+                            <a href="<?=base_url('student_approve')?>" class="nav-link">
+                                <i class="far fa-thin fa-newspaper"></i>
+                                <p>Student Approval</p>
+                            </a>
+                        </li>
                         <li class="nav-item" style="font-family:poppins;">
                         <li class="nav-item" style="font-family:poppins;">
                             <a href="<?=base_url('/pre_enrolled_reg')?>" class="nav-link">
@@ -119,7 +126,7 @@
                                 <?php else: ?>
                                 <li class="nav-item">
                                     <a href="<?= base_url('prospectus11/' . $year_levelOne['id'])?>"
-                                        class="nav-link active">
+                                        class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>1st Year</p>
                                     </a>

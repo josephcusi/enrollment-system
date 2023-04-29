@@ -713,10 +713,11 @@ class Profile extends BaseController
             $user_model = new UserModel();
             $prof_pic = $this->request->getFile('profile_pic');
             if (!$prof_pic->hasMoved()) {
-                $prof_pic->move(FCPATH . 'student_credentials' . '/' . $email = session()->get('loggedInUser'));
+                $newName = $prof_pic->getRandomName();
+                $prof_pic->move(FCPATH . 'student_credentials' . '/' . session()->get('loggedInUser'), $newName);
 
                 $data = [
-                    'profile_picture' => $prof_pic->getClientName()
+                    'profile_picture' => $newName
                 ];
                 $user_model->update($id, $data);
                 session()->setFlashdata('saveprofile', 'Incorrect Password Provided');

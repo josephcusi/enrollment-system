@@ -108,7 +108,7 @@ class TeacherAccount extends BaseController
                     if (!$prof_pic->hasMoved()) {
                         $prof_pic->move(FCPATH . 'profile');
 
-                         $str_result = '1234567890';
+                    $str_result = '1234567890';
                     $bccid =  substr(str_shuffle($str_result),0, '4');
                     $myLrn = '';
     

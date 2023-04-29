@@ -66,19 +66,19 @@ class AccountController extends BaseController
       $to = $this->request->getPost('email');
 
       $str_result = '1234567890';
-      $studID =  substr(str_shuffle($str_result),0, '4');
-      $ID = '';
-
+      $studID = substr(str_shuffle($str_result), 0, '4');
+      
+      $year_prefix = date('y');
       if ($this->request->getPost('usertype') === 'college') {
-        $lrn_prefix = 'B23-';
+        $lrn_prefix = 'B'.$year_prefix.'-';
       } else {
-        $lrn_prefix = 'B23-SHS';
+        $lrn_prefix = 'B'.$year_prefix.'-SHS';
       }
       
       
       $data = [
         'agree' => $this->request->getPost('agree'),
-        'lrn' => $lrn_prefix . $ID . str_pad($studID, 4, "0", STR_PAD_LEFT),
+        'lrn' => $lrn_prefix . $year_prefix . str_pad($studID, 4, "0", STR_PAD_LEFT),
         'lastname' => $this->request->getPost('lastname'),
         'firstname' => $this->request->getPost('firstname'),
         'middlename' => $this->request->getPost('middlename'),

@@ -151,12 +151,12 @@
                                 <ul class="list-group list-group-unbordered mb-3 nav nav-pills">
                                     <?php if ($stat['status'] === "SHS"): ?>
                                     <?php $strand = session()->getFlashdata('strand');?>
-                                    <li class="nav-item-active""><a id=" gas-btn" type="button"
+                                    <li class="nav-item-active""><a id="gas-btn" type="button"
                                         class="tablinks nav-link <?php if($strand == 'GAS'){echo 'active' ;} ?>"
                                         style="border-radius:20px" id="defaultOpen" data-year="<?=$stud_id['id']?>"
                                         data-year_level="GAS">GAS</a>
                                     </li>
-                                    <li class="nav-item-active""><a id=" smaw-btn" type="button"
+                                    <li class="nav-item-active""><a id="smaw-btn" type="button"
                                         class="tablinks nav-link <?php if($strand == 'SMAW'){echo 'active';} ?>"
                                         style="border-radius:20px" id="defaultOpen " data-year="<?=$stud_id['id']?>"
                                         data-year_level="SMAW">SMAW</a>
@@ -263,6 +263,9 @@ function bindButtonClickEvent(buttonId) {
         const year = $(this).data('year');
         const year_level = $(this).data('year_level');
 
+
+        console.log(year, year_level);
+
         $.ajax({
             method: 'post',
             url: '/Teacher_StudentGrading',
@@ -276,45 +279,46 @@ function bindButtonClickEvent(buttonId) {
                 console.log(response.userInfo);
 
                 $.each(response.userInfo, function(key, i) {
+                    var url = "<?= site_url('viewGrade')?>/" + i['id']
                     $("#example1 tbody").append(`<tr>
             <td>${i['lrn']}</td>
             <td>${i['firstname']} ${i['middlename']} ${i['lastname']}</td>
             <td>${i['section']}</td>
             <td>${i['strand']}</td>
             <td>
+            <a href="${url}">
               <button type="button" class="btn btn-secondary btn-sm viewGrade" 
                 data-id="${i['id']}" style="border-radius:15px">Add Grade
-              </button>
+              </button> </a>
             </td>
           </tr>`);
                 });
 
                 // Bind click event to viewGrade button
-                $('.viewGrade').click(function() {
-                    const studentId = $(this).data('id');
+//                 $('.viewGrade').click(function() {
+//                     const studentId = $(this).data('id');
 
-                    $.ajax({
-                        type: "post",
-                        url: "/viewGrade",
-                        data: {
-                            studentId: studentId
-                        },
-                        success: function(response) {
-                            // alert('success');
-                            $("#example1").hide();
+//                     $.ajax({
+//                         type: "post",
+//                         url: "/viewGrade",
+//                         data: {
+//                             studentId: studentId
+//                         },
+//                         success: function(response) {
+//                             // alert('success');
 
-// Show new view with student grade
-                        $("#example1").load("<?=site_url('viewGrade')?>", function() {
-                        // Callback function that runs after the view is loaded
-                        // You can do any additional processing here
-                        $("#example1").show();
-                        });
+// // Show new view with student grade
+//                         $("#example1").load("<?=site_url('viewGrade')?>", function() {
+//                         // Callback function that runs after the view is loaded
+//                         // You can do any additional processing here
+//                         $("#example1").show();
+//                         });
 
-                        }
-                    });
+//                         }
+//                     });
 
-                    // TODO: implement logic to show student grade
-                });
+//                     // TODO: implement logic to show student grade
+//                 });
             }
         });
     });

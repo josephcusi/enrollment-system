@@ -244,7 +244,8 @@ class Admin extends BaseController
                 $prof_pic = $this->request->getFile('profile_picture');
 
                 if (!$prof_pic->hasMoved()) {
-                    $prof_pic->move(FCPATH . 'profile');
+                    $newName = $prof_pic->getRandomName();
+                    $prof_pic->move(FCPATH . 'profile', $newName);
 
                     $str_result = '1234567890';
                     $bccid =  substr(str_shuffle($str_result),0, '4');
@@ -258,7 +259,7 @@ class Admin extends BaseController
                     'password' => Hash::make($adminPassword),
                     'usertype' => 'admin',
                     'status' => session()->get('status'),
-                    'profile_picture' => $prof_pic->getClientName(),
+                    'profile_picture' => $newName,
                     'lrn' =>'ADMINID-'.$myLrn.str_pad($bccid, 4, "0", STR_PAD_LEFT)
                 ];
 
@@ -275,30 +276,6 @@ class Admin extends BaseController
     public function adminUpdate()
     {
         $validated = $this->validate([
-            'profile_picture' => [
-                'label' => 'Image File',
-                'rules' => 'uploaded[profile_picture]'
-                    . '|is_image[profile_picture]'
-                    . '|mime_in[profile_picture,image/png,image/jpeg]'
-            ],
-            'lastname' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Your Last name is required.'
-                ]
-            ],
-            'firstname' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Your First name is required.'
-                ]
-            ],
-            'middlename' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Your Middle name is required.'
-                ]
-            ],
             'newPassword' => [
                 'rules' => 'required|min_length[6]',
                 'errors' => [
@@ -335,14 +312,15 @@ class Admin extends BaseController
                 $prof_pic = $this->request->getFile('profile_picture');
 
                 if (!$prof_pic->hasMoved()) {
-                    $prof_pic->move(FCPATH . 'profile');
+                    $newName = $prof_pic->getRandomName();
+                    $prof_pic->move(FCPATH . 'profile', $newName);
 
                 $data = [
                     'lastname' => $lastname,
                     'firstname' => $firstname,
                     'middlename' => $middlename,
                     'password' => Hash::make($password),
-                    'profile_picture' => $prof_pic->getClientName()
+                    'profile_picture' => $newName
                 ];
                 $user_model->update($id, $data);
                 return redirect()->route('newadmin');
