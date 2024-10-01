@@ -2029,7 +2029,7 @@
 			// Backwards compatibility - if there is no sEmptyTable given, then use the same as
 			// sZeroRecords - assuming that is given.
 			if ( ! lang.sEmptyTable && zeroRecords &&
-				defaults.sEmptyTable === "No data available in table" )
+				defaults.sEmptyTable === '<img src="http://bccwebportal.com/cssjs/img/box (1).png" /><br>No Records Found' )
 			{
 				_fnMap( lang, lang, 'sZeroRecords', 'sEmptyTable' );
 			}
@@ -11621,12 +11621,12 @@
 			 *    $(document).ready( function() {
 			 *      $('#example').dataTable( {
 			 *        "language": {
-			 *          "emptyTable": "No data available in table"
+			 *          "emptyTable": '<img src="http://bccwebportal.com/cssjs/img/box (1).png" /><br>No Records Found'
 			 *        }
 			 *      } );
 			 *    } );
 			 */
-			"sEmptyTable": "No data available in table",
+			"sEmptyTable": '<img src="http://bccwebportal.com/cssjs/img/box (1).png" /><br>No Records Found',
 	
 	
 			/**
@@ -11952,12 +11952,12 @@
 			 *    $(document).ready( function() {
 			 *      $('#example').dataTable( {
 			 *        "language": {
-			 *          "zeroRecords": "No records to display"
+			 *          "zeroRecords": '<img src="http://bccwebportal.com/cssjs/img/box (1).png" /><br>No Matching Records'
 			 *        }
 			 *      } );
 			 *    } );
 			 */
-			"sZeroRecords": "No matching records found"
+			"sZeroRecords": '<img src="http://bccwebportal.com/cssjs/img/box (1).png" /><br>No Matching Records',
 		},
 	
 	

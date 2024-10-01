@@ -1,0 +1,1363 @@
+CRITICAL - 2023-09-24 01:02:47 --> Creation of dynamic property App\Controllers\Webpage::$announcement_model is deprecated
+in APPPATH/Controllers/Webpage.php on line 22.
+ 1 APPPATH/Controllers/Webpage.php(22): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(889): App\Controllers\Webpage->__construct()
+ 3 SYSTEMPATH/CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 01:02:53 --> Creation of dynamic property App\Controllers\User::$session is deprecated
+in APPPATH/Controllers/BaseController.php on line 50.
+ 1 APPPATH/Controllers/BaseController.php(50): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(890): App\Controllers\BaseController->initController()
+ 3 SYSTEMPATH/CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 02:20:24 --> Undefined array key 16
+in APPPATH/Views/user/curriculum-subjects.php on line 203.
+ 1 APPPATH/Views/user/curriculum-subjects.php(203): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/user/curriculum-subjects.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Profile.php(1370): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->curriculumSubject()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 02:20:30 --> Undefined array key 16
+in APPPATH/Views/user/curriculum-subjects.php on line 203.
+ 1 APPPATH/Views/user/curriculum-subjects.php(203): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/user/curriculum-subjects.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Profile.php(1370): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->curriculumSubject()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-24 02:23:03 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
+OR `pre_requisit` = 'N/A'
+AND `strand_id` = '4'
+AND `year_level` = '1st Yea...' at line 3 in /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+#4 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/BaseModel.php(585): CodeIgniter\Model->doFindAll()
+#6 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/app/Controllers/Profile.php(730): CodeIgniter\BaseModel->findAll()
+#7 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+#8 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+#9 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/u343516587/domains/bccwebportal.com/public_html/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-09-24 02:23:03 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
+OR `pre_requisit` = 'N/A'
+AND `strand_id` = '4'
+AND `year_level` = '1st Yea...' at line 3
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(585): CodeIgniter\Model->doFindAll()
+ 7 APPPATH/Controllers/Profile.php(730): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 9 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 02:45:32 --> Undefined array key "id"
+in APPPATH/Controllers/Profile.php on line 743.
+ 1 APPPATH/Controllers/Profile.php(743): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 02:45:44 --> Undefined variable $failedprospectus
+in APPPATH/Controllers/Profile.php on line 743.
+ 1 APPPATH/Controllers/Profile.php(743): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 02:48:34 --> Undefined variable $failedprospectus
+in APPPATH/Controllers/Profile.php on line 756.
+ 1 APPPATH/Controllers/Profile.php(756): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-24 02:48:48 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
+AND `strand_id` = '4'
+AND `semester` = '2nd Semester'' at line 3 in /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+#4 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/app/Controllers/Profile.php(761): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+#6 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+#7 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/u343516587/domains/bccwebportal.com/public_html/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-09-24 02:48:48 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
+AND `strand_id` = '4'
+AND `semester` = '2nd Semester'' at line 3
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Controllers/Profile.php(761): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 02:54:24 --> syntax error, unexpected token "else"
+in APPPATH/Controllers/Profile.php on line 790.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/CodeIgniter.php(877): class_exists()
+ 5 SYSTEMPATH/CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 02:54:56 --> Undefined variable $failedprospectus
+in APPPATH/Controllers/Profile.php on line 773.
+ 1 APPPATH/Controllers/Profile.php(773): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 02:56:05 --> Undefined array key "id"
+in APPPATH/Controllers/Profile.php on line 758.
+ 1 APPPATH/Controllers/Profile.php(758): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 02:56:39 --> Undefined array key "id"
+in APPPATH/Controllers/Profile.php on line 776.
+ 1 APPPATH/Controllers/Profile.php(776): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 02:59:24 --> Undefined array key "id"
+in APPPATH/Controllers/Profile.php on line 755.
+ 1 APPPATH/Controllers/Profile.php(755): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 02:59:34 --> join(): Argument #2 ($array) must be of type ?array, string given
+in APPPATH/Controllers/Profile.php on line 755.
+ 1 APPPATH/Controllers/Profile.php(755): join()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 02:59:46 --> Undefined array key "id"
+in APPPATH/Controllers/Profile.php on line 755.
+ 1 APPPATH/Controllers/Profile.php(755): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 02:59:59 --> join(): Argument #2 ($array) must be of type ?array, string given
+in APPPATH/Controllers/Profile.php on line 755.
+ 1 APPPATH/Controllers/Profile.php(755): join()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 03:00:28 --> Undefined variable $imp
+in APPPATH/Controllers/Profile.php on line 776.
+ 1 APPPATH/Controllers/Profile.php(776): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 03:01:35 --> Undefined array key "id"
+in APPPATH/Controllers/Profile.php on line 761.
+ 1 APPPATH/Controllers/Profile.php(761): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 03:01:49 --> Undefined array key "id"
+in APPPATH/Controllers/Profile.php on line 761.
+ 1 APPPATH/Controllers/Profile.php(761): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 03:02:07 --> Undefined array key "id"
+in APPPATH/Controllers/Profile.php on line 761.
+ 1 APPPATH/Controllers/Profile.php(761): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 03:02:17 --> Uninitialized string offset 30
+in APPPATH/Controllers/Profile.php on line 761.
+ 1 APPPATH/Controllers/Profile.php(761): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-24 03:02:57 --> mysqli_sql_exception: Table 'u343516587_bccwebportal.prospectus_tbl' doesn't exist in /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+#4 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/app/Controllers/Profile.php(765): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+#6 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+#7 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/u343516587/domains/bccwebportal.com/public_html/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-09-24 03:02:57 --> Table 'u343516587_bccwebportal.prospectus_tbl' doesn't exist
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Controllers/Profile.php(765): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 03:04:12 --> Undefined array key "id"
+in APPPATH/Controllers/Profile.php on line 775.
+ 1 APPPATH/Controllers/Profile.php(775): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 04:02:38 --> Undefined variable $queryy
+in APPPATH/Controllers/Profile.php on line 779.
+ 1 APPPATH/Controllers/Profile.php(779): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 04:04:01 --> Undefined variable $queryy
+in APPPATH/Controllers/Profile.php on line 776.
+ 1 APPPATH/Controllers/Profile.php(776): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 04:04:22 --> Undefined variable $queryy
+in APPPATH/Controllers/Profile.php on line 776.
+ 1 APPPATH/Controllers/Profile.php(776): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 04:05:24 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::findAll()
+in APPPATH/Controllers/Profile.php on line 761.
+ 1 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 2 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 04:05:57 --> Undefined variable $data
+in APPPATH/Controllers/Profile.php on line 769.
+ 1 APPPATH/Controllers/Profile.php(769): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 04:06:11 --> Undefined variable $prospectusIds
+in APPPATH/Controllers/Profile.php on line 769.
+ 1 APPPATH/Controllers/Profile.php(769): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 04:20:00 --> Undefined array key 0
+in APPPATH/Controllers/Profile.php on line 763.
+ 1 APPPATH/Controllers/Profile.php(763): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 04:22:06 --> Undefined array key "year_level"
+in APPPATH/Controllers/Profile.php on line 764.
+ 1 APPPATH/Controllers/Profile.php(764): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 04:28:01 --> Undefined variable $prospectusIds
+in APPPATH/Controllers/Profile.php on line 768.
+ 1 APPPATH/Controllers/Profile.php(768): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 04:28:15 --> Undefined array key "id"
+in APPPATH/Controllers/Profile.php on line 768.
+ 1 APPPATH/Controllers/Profile.php(768): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 04:28:22 --> array_diff(): Argument #1 ($array) must be of type array, string given
+in APPPATH/Controllers/Profile.php on line 768.
+ 1 APPPATH/Controllers/Profile.php(768): array_diff()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 04:28:49 --> array_diff(): Argument #1 ($array) must be of type array, string given
+in APPPATH/Controllers/Profile.php on line 766.
+ 1 APPPATH/Controllers/Profile.php(766): array_diff()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 04:29:16 --> array_diff(): Argument #1 ($array) must be of type array, string given
+in APPPATH/Controllers/Profile.php on line 767.
+ 1 APPPATH/Controllers/Profile.php(767): array_diff()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 04:29:55 --> array_diff(): Argument #1 ($array) must be of type array, string given
+in APPPATH/Controllers/Profile.php on line 767.
+ 1 APPPATH/Controllers/Profile.php(767): array_diff()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 04:30:11 --> array_diff(): Argument #1 ($array) must be of type array, string given
+in APPPATH/Controllers/Profile.php on line 768.
+ 1 APPPATH/Controllers/Profile.php(768): array_diff()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 04:31:14 --> array_diff(): Argument #1 ($array) must be of type array, string given
+in APPPATH/Controllers/Profile.php on line 769.
+ 1 APPPATH/Controllers/Profile.php(769): array_diff()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 04:31:49 --> Undefined array key "id"
+in APPPATH/Controllers/Profile.php on line 767.
+ 1 APPPATH/Controllers/Profile.php(767): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 04:31:55 --> array_diff(): Argument #1 ($array) must be of type array, string given
+in APPPATH/Controllers/Profile.php on line 767.
+ 1 APPPATH/Controllers/Profile.php(767): array_diff()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 04:32:36 --> array_diff(): Argument #1 ($array) must be of type array, string given
+in APPPATH/Controllers/Profile.php on line 769.
+ 1 APPPATH/Controllers/Profile.php(769): array_diff()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 04:33:28 --> array_diff(): Argument #1 ($array) must be of type array, string given
+in APPPATH/Controllers/Profile.php on line 769.
+ 1 APPPATH/Controllers/Profile.php(769): array_diff()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 04:35:11 --> array_diff(): Argument #1 ($array) must be of type array, string given
+in APPPATH/Controllers/Profile.php on line 770.
+ 1 APPPATH/Controllers/Profile.php(770): array_diff()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 04:36:11 --> array_diff(): Argument #1 ($array) must be of type array, string given
+in APPPATH/Controllers/Profile.php on line 770.
+ 1 APPPATH/Controllers/Profile.php(770): array_diff()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 04:37:55 --> Undefined variable $missingSubjectIds
+in APPPATH/Controllers/Profile.php on line 774.
+ 1 APPPATH/Controllers/Profile.php(774): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 04:46:54 --> Undefined array key "subject_id"
+in APPPATH/Controllers/Profile.php on line 767.
+ 1 APPPATH/Controllers/Profile.php(767): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 05:05:33 --> Undefined array key "year_level"
+in APPPATH/Controllers/Profile.php on line 768.
+ 1 APPPATH/Controllers/Profile.php(768): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 05:05:46 --> Undefined array key "year_level"
+in APPPATH/Controllers/Profile.php on line 785.
+ 1 APPPATH/Controllers/Profile.php(785): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 05:06:36 --> Undefined array key "year_level"
+in APPPATH/Controllers/Profile.php on line 785.
+ 1 APPPATH/Controllers/Profile.php(785): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 05:06:53 --> Undefined array key "year_level"
+in APPPATH/Controllers/Profile.php on line 786.
+ 1 APPPATH/Controllers/Profile.php(786): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 05:08:12 --> Cannot access offset of type string on string
+in APPPATH/Controllers/Profile.php on line 792.
+ 1 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 2 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 05:09:51 --> Array to string conversion
+in APPPATH/Controllers/Profile.php on line 774.
+ 1 APPPATH/Controllers/Profile.php(774): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 05:11:15 --> syntax error, unexpected token "return"
+in APPPATH/Controllers/Profile.php on line 791.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/CodeIgniter.php(877): class_exists()
+ 5 SYSTEMPATH/CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 05:13:44 --> Undefined array key "year_level"
+in APPPATH/Controllers/Profile.php on line 764.
+ 1 APPPATH/Controllers/Profile.php(764): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 05:13:51 --> whereIn() expects $values to be of type array or closure
+in SYSTEMPATH/Database/BaseBuilder.php on line 907.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(789): CodeIgniter\Database\BaseBuilder->_whereIn()
+ 2 SYSTEMPATH/Model.php(772): CodeIgniter\Database\BaseBuilder->whereIn()
+ 3 APPPATH/Controllers/Profile.php(764): CodeIgniter\Model->__call()
+ 4 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 5 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-24 05:27:50 --> mysqli_sql_exception: Illegal parameter data types int and row for operation '=' in /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+#4 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/app/Controllers/Profile.php(805): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+#6 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+#7 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/u343516587/domains/bccwebportal.com/public_html/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-09-24 05:27:50 --> Illegal parameter data types int and row for operation '='
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Controllers/Profile.php(805): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-24 05:28:04 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
+OR `pre_requisit` = 'N/A'
+AND `strand_id` = '4'
+AND `year_level` = '1st Yea...' at line 3 in /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+#4 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/BaseModel.php(585): CodeIgniter\Model->doFindAll()
+#6 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/app/Controllers/Profile.php(730): CodeIgniter\BaseModel->findAll()
+#7 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+#8 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+#9 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/u343516587/domains/bccwebportal.com/public_html/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-09-24 05:28:04 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
+OR `pre_requisit` = 'N/A'
+AND `strand_id` = '4'
+AND `year_level` = '1st Yea...' at line 3
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(585): CodeIgniter\Model->doFindAll()
+ 7 APPPATH/Controllers/Profile.php(730): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 9 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-24 05:28:15 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
+OR `pre_requisit` = 'N/A'
+AND `strand_id` = '4'
+AND `year_level` = '1st Yea...' at line 3 in /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+#4 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/BaseModel.php(585): CodeIgniter\Model->doFindAll()
+#6 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/app/Controllers/Profile.php(730): CodeIgniter\BaseModel->findAll()
+#7 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+#8 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+#9 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/u343516587/domains/bccwebportal.com/public_html/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-09-24 05:28:15 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
+OR `pre_requisit` = 'N/A'
+AND `strand_id` = '4'
+AND `year_level` = '1st Yea...' at line 3
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(585): CodeIgniter\Model->doFindAll()
+ 7 APPPATH/Controllers/Profile.php(730): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 9 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-24 05:28:51 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
+OR `pre_requisit` = 'N/A'
+AND `strand_id` = '4'
+AND `year_level` = '1st Yea...' at line 3 in /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+#4 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/BaseModel.php(585): CodeIgniter\Model->doFindAll()
+#6 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/app/Controllers/Profile.php(730): CodeIgniter\BaseModel->findAll()
+#7 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+#8 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+#9 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/u343516587/domains/bccwebportal.com/public_html/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-09-24 05:28:51 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
+OR `pre_requisit` = 'N/A'
+AND `strand_id` = '4'
+AND `year_level` = '1st Yea...' at line 3
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(585): CodeIgniter\Model->doFindAll()
+ 7 APPPATH/Controllers/Profile.php(730): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 9 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 05:29:28 --> Array to string conversion
+in SYSTEMPATH/Database/Query.php on line 329.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Database/Query.php(329): implode()
+ 3 SYSTEMPATH/Database/Query.php(310): CodeIgniter\Database\Query->matchNamedBinds()
+ 4 SYSTEMPATH/Database/Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 5 SYSTEMPATH/Debug/Toolbar/Collectors/Database.php(86): CodeIgniter\Database\Query->getQuery()
+ 6 SYSTEMPATH/Events/Events.php(149): CodeIgniter\Debug\Toolbar\Collectors\Database::collect()
+ 7 SYSTEMPATH/Database/BaseConnection.php(622): CodeIgniter\Events\Events::trigger()
+ 8 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+ 9 APPPATH/Controllers/Profile.php(804): CodeIgniter\Database\BaseBuilder->get()
+10 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+11 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+12 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+13 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 05:29:57 --> CodeIgniter\Database\BaseBuilder::whereIn(): Argument #3 ($escape) must be of type ?bool, array given, called in /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/app/Controllers/Profile.php on line 801
+in SYSTEMPATH/Database/BaseBuilder.php on line 787.
+ 1 APPPATH/Controllers/Profile.php(801): CodeIgniter\Database\BaseBuilder->whereIn()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-24 05:30:17 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 3 in /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+#4 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/app/Controllers/Profile.php(777): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+#6 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+#7 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/u343516587/domains/bccwebportal.com/public_html/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-09-24 05:30:17 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 3
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Controllers/Profile.php(777): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-24 05:31:45 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 3 in /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+#4 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/app/Controllers/Profile.php(777): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+#6 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+#7 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/u343516587/domains/bccwebportal.com/public_html/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-09-24 05:31:45 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 3
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Controllers/Profile.php(777): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-24 05:31:48 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 3 in /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+#4 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/app/Controllers/Profile.php(777): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+#6 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+#7 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/u343516587/domains/bccwebportal.com/public_html/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-09-24 05:31:48 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 3
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Controllers/Profile.php(777): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 06:38:47 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Profile.php on line 1407.
+ 1 APPPATH/Controllers/Profile.php(1407): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->curriculumSubject()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 06:38:54 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Profile.php on line 1407.
+ 1 APPPATH/Controllers/Profile.php(1407): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->curriculumSubject()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 06:38:58 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Profile.php on line 1407.
+ 1 APPPATH/Controllers/Profile.php(1407): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->curriculumSubject()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-24 06:42:09 --> mysqli_sql_exception: Foreign key constraint for table 'user_tbl', record '9' would lead to a duplicate entry in table 'prospectus_add_tbl', key 'subject_id' in /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query()
+#4 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/BaseModel.php(886): CodeIgniter\Model->doUpdate()
+#6 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Model.php(693): CodeIgniter\BaseModel->update()
+#7 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/app/Controllers/PreEnrolled.php(257): CodeIgniter\Model->update()
+#8 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(927): App\Controllers\PreEnrolled->enrolled()
+#9 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+#10 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/u343516587/domains/bccwebportal.com/public_html/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-09-24 06:42:09 --> Foreign key constraint for table 'user_tbl', record '9' would lead to a duplicate entry in table 'prospectus_add_tbl', key 'subject_id'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH/BaseModel.php(886): CodeIgniter\Model->doUpdate()
+ 7 SYSTEMPATH/Model.php(693): CodeIgniter\BaseModel->update()
+ 8 APPPATH/Controllers/PreEnrolled.php(257): CodeIgniter\Model->update()
+ 9 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\PreEnrolled->enrolled()
+10 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+12 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-24 06:42:30 --> mysqli_sql_exception: Foreign key constraint for table 'user_tbl', record '9' would lead to a duplicate entry in table 'prospectus_add_tbl', key 'subject_id' in /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query()
+#4 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/BaseModel.php(886): CodeIgniter\Model->doUpdate()
+#6 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Model.php(693): CodeIgniter\BaseModel->update()
+#7 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/app/Controllers/PreEnrolled.php(257): CodeIgniter\Model->update()
+#8 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(927): App\Controllers\PreEnrolled->enrolled()
+#9 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+#10 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/u343516587/domains/bccwebportal.com/public_html/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-09-24 06:42:30 --> Foreign key constraint for table 'user_tbl', record '9' would lead to a duplicate entry in table 'prospectus_add_tbl', key 'subject_id'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH/BaseModel.php(886): CodeIgniter\Model->doUpdate()
+ 7 SYSTEMPATH/Model.php(693): CodeIgniter\BaseModel->update()
+ 8 APPPATH/Controllers/PreEnrolled.php(257): CodeIgniter\Model->update()
+ 9 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\PreEnrolled->enrolled()
+10 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+12 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-24 06:43:18 --> mysqli_sql_exception: Foreign key constraint for table 'user_tbl', record '7' would lead to a duplicate entry in table 'prospectus_add_tbl', key 'subject_id' in /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query()
+#4 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/BaseModel.php(886): CodeIgniter\Model->doUpdate()
+#6 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Model.php(693): CodeIgniter\BaseModel->update()
+#7 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/app/Controllers/PreEnrolled.php(257): CodeIgniter\Model->update()
+#8 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(927): App\Controllers\PreEnrolled->enrolled()
+#9 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+#10 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/u343516587/domains/bccwebportal.com/public_html/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-09-24 06:43:18 --> Foreign key constraint for table 'user_tbl', record '7' would lead to a duplicate entry in table 'prospectus_add_tbl', key 'subject_id'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH/BaseModel.php(886): CodeIgniter\Model->doUpdate()
+ 7 SYSTEMPATH/Model.php(693): CodeIgniter\BaseModel->update()
+ 8 APPPATH/Controllers/PreEnrolled.php(257): CodeIgniter\Model->update()
+ 9 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\PreEnrolled->enrolled()
+10 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+12 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 07:28:22 --> Undefined variable $exp
+in APPPATH/Controllers/Profile.php on line 796.
+ 1 APPPATH/Controllers/Profile.php(796): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 07:32:02 --> Undefined array key "semester"
+in APPPATH/Controllers/Profile.php on line 792.
+ 1 APPPATH/Controllers/Profile.php(792): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 08:18:50 --> Undefined array key "subject_id"
+in APPPATH/Controllers/Profile.php on line 797.
+ 1 APPPATH/Controllers/Profile.php(797): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 08:19:20 --> Undefined array key 0
+in APPPATH/Controllers/Profile.php on line 792.
+ 1 APPPATH/Controllers/Profile.php(792): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 08:25:28 --> Undefined variable $ttt
+in APPPATH/Controllers/Profile.php on line 801.
+ 1 APPPATH/Controllers/Profile.php(801): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 19:09:20 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Profile.php on line 1409.
+ 1 APPPATH/Controllers/Profile.php(1409): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->curriculumSubject()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 19:09:26 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Profile.php on line 1409.
+ 1 APPPATH/Controllers/Profile.php(1409): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->curriculumSubject()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 19:12:31 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 408.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(408): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 19:12:35 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 408.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(408): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 20:14:16 --> Undefined array key 0
+in APPPATH/Controllers/Teacher.php on line 137.
+ 1 APPPATH/Controllers/Teacher.php(137): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 20:17:21 --> Undefined array key 0
+in APPPATH/Controllers/Teacher.php on line 137.
+ 1 APPPATH/Controllers/Teacher.php(137): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 20:20:51 --> Undefined variable $year_level
+in APPPATH/Controllers/Excel.php on line 279.
+ 1 APPPATH/Controllers/Excel.php(279): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 [internal function]: App\Controllers\Excel->App\Controllers\{closure}()
+ 3 APPPATH/Controllers/Excel.php(263): array_map()
+ 4 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Excel->convertExcelToHtml()
+ 5 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-24 20:21:20 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`u343516587_bccwebportal`.`student_grading`, CONSTRAINT `student_grading_ibfk_1` FOREIGN KEY (`lrn`) REFERENCES `user_tbl` (`lrn`) ON DELETE CASCADE ON UPDATE CASCADE) in /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query()
+#4 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/BaseModel.php(749): CodeIgniter\Model->doInsert()
+#6 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Model.php(667): CodeIgniter\BaseModel->insert()
+#7 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/app/Controllers/Excel.php(281): CodeIgniter\Model->insert()
+#8 [internal function]: App\Controllers\Excel->App\Controllers\{closure}()
+#9 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/app/Controllers/Excel.php(262): array_map()
+#10 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(927): App\Controllers\Excel->convertExcelToHtml()
+#11 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+#12 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+#13 /home/u343516587/domains/bccwebportal.com/public_html/index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2023-09-24 20:21:20 --> Cannot add or update a child row: a foreign key constraint fails (`u343516587_bccwebportal`.`student_grading`, CONSTRAINT `student_grading_ibfk_1` FOREIGN KEY (`lrn`) REFERENCES `user_tbl` (`lrn`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(749): CodeIgniter\Model->doInsert()
+ 7 SYSTEMPATH/Model.php(667): CodeIgniter\BaseModel->insert()
+ 8 APPPATH/Controllers/Excel.php(281): CodeIgniter\Model->insert()
+ 9 [internal function]: App\Controllers\Excel->App\Controllers\{closure}()
+10 APPPATH/Controllers/Excel.php(262): array_map()
+11 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Excel->convertExcelToHtml()
+12 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+13 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+14 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-24 20:21:29 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`u343516587_bccwebportal`.`student_grading`, CONSTRAINT `student_grading_ibfk_1` FOREIGN KEY (`lrn`) REFERENCES `user_tbl` (`lrn`) ON DELETE CASCADE ON UPDATE CASCADE) in /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query()
+#4 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/BaseModel.php(749): CodeIgniter\Model->doInsert()
+#6 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Model.php(667): CodeIgniter\BaseModel->insert()
+#7 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/app/Controllers/Excel.php(281): CodeIgniter\Model->insert()
+#8 [internal function]: App\Controllers\Excel->App\Controllers\{closure}()
+#9 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/app/Controllers/Excel.php(262): array_map()
+#10 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(927): App\Controllers\Excel->convertExcelToHtml()
+#11 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+#12 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+#13 /home/u343516587/domains/bccwebportal.com/public_html/index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2023-09-24 20:21:29 --> Cannot add or update a child row: a foreign key constraint fails (`u343516587_bccwebportal`.`student_grading`, CONSTRAINT `student_grading_ibfk_1` FOREIGN KEY (`lrn`) REFERENCES `user_tbl` (`lrn`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(749): CodeIgniter\Model->doInsert()
+ 7 SYSTEMPATH/Model.php(667): CodeIgniter\BaseModel->insert()
+ 8 APPPATH/Controllers/Excel.php(281): CodeIgniter\Model->insert()
+ 9 [internal function]: App\Controllers\Excel->App\Controllers\{closure}()
+10 APPPATH/Controllers/Excel.php(262): array_map()
+11 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Excel->convertExcelToHtml()
+12 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+13 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+14 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-24 20:21:45 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`u343516587_bccwebportal`.`student_grading`, CONSTRAINT `student_grading_ibfk_1` FOREIGN KEY (`lrn`) REFERENCES `user_tbl` (`lrn`) ON DELETE CASCADE ON UPDATE CASCADE) in /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query()
+#4 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/BaseModel.php(749): CodeIgniter\Model->doInsert()
+#6 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Model.php(667): CodeIgniter\BaseModel->insert()
+#7 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/app/Controllers/Excel.php(281): CodeIgniter\Model->insert()
+#8 [internal function]: App\Controllers\Excel->App\Controllers\{closure}()
+#9 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/app/Controllers/Excel.php(262): array_map()
+#10 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(927): App\Controllers\Excel->convertExcelToHtml()
+#11 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+#12 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+#13 /home/u343516587/domains/bccwebportal.com/public_html/index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2023-09-24 20:21:45 --> Cannot add or update a child row: a foreign key constraint fails (`u343516587_bccwebportal`.`student_grading`, CONSTRAINT `student_grading_ibfk_1` FOREIGN KEY (`lrn`) REFERENCES `user_tbl` (`lrn`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(749): CodeIgniter\Model->doInsert()
+ 7 SYSTEMPATH/Model.php(667): CodeIgniter\BaseModel->insert()
+ 8 APPPATH/Controllers/Excel.php(281): CodeIgniter\Model->insert()
+ 9 [internal function]: App\Controllers\Excel->App\Controllers\{closure}()
+10 APPPATH/Controllers/Excel.php(262): array_map()
+11 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Excel->convertExcelToHtml()
+12 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+13 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+14 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-24 20:22:54 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`u343516587_bccwebportal`.`student_grading`, CONSTRAINT `student_grading_ibfk_1` FOREIGN KEY (`lrn`) REFERENCES `user_tbl` (`lrn`) ON DELETE CASCADE ON UPDATE CASCADE) in /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query()
+#4 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/BaseModel.php(749): CodeIgniter\Model->doInsert()
+#6 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Model.php(667): CodeIgniter\BaseModel->insert()
+#7 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/app/Controllers/Excel.php(281): CodeIgniter\Model->insert()
+#8 [internal function]: App\Controllers\Excel->App\Controllers\{closure}()
+#9 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/app/Controllers/Excel.php(262): array_map()
+#10 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(927): App\Controllers\Excel->convertExcelToHtml()
+#11 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+#12 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+#13 /home/u343516587/domains/bccwebportal.com/public_html/index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2023-09-24 20:22:54 --> Cannot add or update a child row: a foreign key constraint fails (`u343516587_bccwebportal`.`student_grading`, CONSTRAINT `student_grading_ibfk_1` FOREIGN KEY (`lrn`) REFERENCES `user_tbl` (`lrn`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(749): CodeIgniter\Model->doInsert()
+ 7 SYSTEMPATH/Model.php(667): CodeIgniter\BaseModel->insert()
+ 8 APPPATH/Controllers/Excel.php(281): CodeIgniter\Model->insert()
+ 9 [internal function]: App\Controllers\Excel->App\Controllers\{closure}()
+10 APPPATH/Controllers/Excel.php(262): array_map()
+11 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Excel->convertExcelToHtml()
+12 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+13 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+14 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 20:24:19 --> Undefined variable $year_level
+in APPPATH/Controllers/Excel.php on line 279.
+ 1 APPPATH/Controllers/Excel.php(279): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 [internal function]: App\Controllers\Excel->App\Controllers\{closure}()
+ 3 APPPATH/Controllers/Excel.php(263): array_map()
+ 4 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Excel->convertExcelToHtml()
+ 5 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 20:26:01 --> array_map(): Argument #5 must be of type array, string given
+in APPPATH/Controllers/Excel.php on line 263.
+ 1 APPPATH/Controllers/Excel.php(263): array_map()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Excel->convertExcelToHtml()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 20:28:25 --> foreach() argument must be of type array|object, string given
+in APPPATH/Controllers/Excel.php on line 257.
+ 1 APPPATH/Controllers/Excel.php(257): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Excel->convertExcelToHtml()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 20:28:41 --> foreach() argument must be of type array|object, string given
+in APPPATH/Controllers/Excel.php on line 257.
+ 1 APPPATH/Controllers/Excel.php(257): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Excel->convertExcelToHtml()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 20:31:07 --> foreach() argument must be of type array|object, string given
+in APPPATH/Controllers/Excel.php on line 257.
+ 1 APPPATH/Controllers/Excel.php(257): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Excel->convertExcelToHtml()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 20:35:48 --> Undefined variable $year_levelss
+in APPPATH/Controllers/Excel.php on line 264.
+ 1 APPPATH/Controllers/Excel.php(264): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Excel->convertExcelToHtml()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-24 20:36:08 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`u343516587_bccwebportal`.`student_grading`, CONSTRAINT `student_grading_ibfk_1` FOREIGN KEY (`lrn`) REFERENCES `user_tbl` (`lrn`) ON DELETE CASCADE ON UPDATE CASCADE) in /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query()
+#4 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/BaseModel.php(749): CodeIgniter\Model->doInsert()
+#6 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Model.php(667): CodeIgniter\BaseModel->insert()
+#7 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/app/Controllers/Excel.php(283): CodeIgniter\Model->insert()
+#8 [internal function]: App\Controllers\Excel->App\Controllers\{closure}()
+#9 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/app/Controllers/Excel.php(264): array_map()
+#10 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(927): App\Controllers\Excel->convertExcelToHtml()
+#11 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+#12 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+#13 /home/u343516587/domains/bccwebportal.com/public_html/index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2023-09-24 20:36:08 --> Cannot add or update a child row: a foreign key constraint fails (`u343516587_bccwebportal`.`student_grading`, CONSTRAINT `student_grading_ibfk_1` FOREIGN KEY (`lrn`) REFERENCES `user_tbl` (`lrn`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(749): CodeIgniter\Model->doInsert()
+ 7 SYSTEMPATH/Model.php(667): CodeIgniter\BaseModel->insert()
+ 8 APPPATH/Controllers/Excel.php(283): CodeIgniter\Model->insert()
+ 9 [internal function]: App\Controllers\Excel->App\Controllers\{closure}()
+10 APPPATH/Controllers/Excel.php(264): array_map()
+11 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Excel->convertExcelToHtml()
+12 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+13 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+14 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 20:37:00 --> Undefined variable $data
+in APPPATH/Controllers/Excel.php on line 300.
+ 1 APPPATH/Controllers/Excel.php(300): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Excel->convertExcelToHtml()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 20:37:32 --> Undefined variable $data
+in APPPATH/Controllers/Excel.php on line 290.
+ 1 APPPATH/Controllers/Excel.php(290): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Excel->convertExcelToHtml()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 20:38:48 --> Undefined variable $data
+in APPPATH/Controllers/Excel.php on line 290.
+ 1 APPPATH/Controllers/Excel.php(290): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Excel->convertExcelToHtml()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 20:39:09 --> Undefined variable $year_lvl
+in APPPATH/Controllers/Excel.php on line 290.
+ 1 APPPATH/Controllers/Excel.php(290): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Excel->convertExcelToHtml()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-24 20:39:50 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`u343516587_bccwebportal`.`student_grading`, CONSTRAINT `student_grading_ibfk_1` FOREIGN KEY (`lrn`) REFERENCES `user_tbl` (`lrn`) ON DELETE CASCADE ON UPDATE CASCADE) in /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query()
+#4 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/BaseModel.php(749): CodeIgniter\Model->doInsert()
+#6 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Model.php(667): CodeIgniter\BaseModel->insert()
+#7 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/app/Controllers/Excel.php(283): CodeIgniter\Model->insert()
+#8 [internal function]: App\Controllers\Excel->App\Controllers\{closure}()
+#9 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/app/Controllers/Excel.php(264): array_map()
+#10 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(927): App\Controllers\Excel->convertExcelToHtml()
+#11 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+#12 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+#13 /home/u343516587/domains/bccwebportal.com/public_html/index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2023-09-24 20:39:50 --> Cannot add or update a child row: a foreign key constraint fails (`u343516587_bccwebportal`.`student_grading`, CONSTRAINT `student_grading_ibfk_1` FOREIGN KEY (`lrn`) REFERENCES `user_tbl` (`lrn`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(749): CodeIgniter\Model->doInsert()
+ 7 SYSTEMPATH/Model.php(667): CodeIgniter\BaseModel->insert()
+ 8 APPPATH/Controllers/Excel.php(283): CodeIgniter\Model->insert()
+ 9 [internal function]: App\Controllers\Excel->App\Controllers\{closure}()
+10 APPPATH/Controllers/Excel.php(264): array_map()
+11 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Excel->convertExcelToHtml()
+12 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+13 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+14 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-24 20:40:52 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`u343516587_bccwebportal`.`student_grading`, CONSTRAINT `student_grading_ibfk_1` FOREIGN KEY (`lrn`) REFERENCES `user_tbl` (`lrn`) ON DELETE CASCADE ON UPDATE CASCADE) in /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query()
+#4 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/BaseModel.php(749): CodeIgniter\Model->doInsert()
+#6 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Model.php(667): CodeIgniter\BaseModel->insert()
+#7 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/app/Controllers/Excel.php(283): CodeIgniter\Model->insert()
+#8 [internal function]: App\Controllers\Excel->App\Controllers\{closure}()
+#9 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/app/Controllers/Excel.php(264): array_map()
+#10 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(927): App\Controllers\Excel->convertExcelToHtml()
+#11 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+#12 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+#13 /home/u343516587/domains/bccwebportal.com/public_html/index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2023-09-24 20:40:52 --> Cannot add or update a child row: a foreign key constraint fails (`u343516587_bccwebportal`.`student_grading`, CONSTRAINT `student_grading_ibfk_1` FOREIGN KEY (`lrn`) REFERENCES `user_tbl` (`lrn`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(749): CodeIgniter\Model->doInsert()
+ 7 SYSTEMPATH/Model.php(667): CodeIgniter\BaseModel->insert()
+ 8 APPPATH/Controllers/Excel.php(283): CodeIgniter\Model->insert()
+ 9 [internal function]: App\Controllers\Excel->App\Controllers\{closure}()
+10 APPPATH/Controllers/Excel.php(264): array_map()
+11 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Excel->convertExcelToHtml()
+12 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+13 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+14 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 20:49:19 --> Undefined array key 0
+in APPPATH/Controllers/Teacher.php on line 137.
+ 1 APPPATH/Controllers/Teacher.php(137): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 20:52:08 --> Undefined array key 0
+in APPPATH/Controllers/Teacher.php on line 137.
+ 1 APPPATH/Controllers/Teacher.php(137): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 20:53:43 --> Undefined array key 0
+in APPPATH/Controllers/Teacher.php on line 137.
+ 1 APPPATH/Controllers/Teacher.php(137): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 20:54:04 --> Undefined array key 0
+in APPPATH/Controllers/Teacher.php on line 137.
+ 1 APPPATH/Controllers/Teacher.php(137): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 20:56:04 --> array_map(): Argument #5 must be of type array, string given
+in APPPATH/Controllers/Teacher.php on line 263.
+ 1 APPPATH/Controllers/Teacher.php(263): array_map()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->gradingStud()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 20:56:17 --> array_map(): Argument #5 must be of type array, string given
+in APPPATH/Controllers/Teacher.php on line 263.
+ 1 APPPATH/Controllers/Teacher.php(263): array_map()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->gradingStud()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-24 20:56:52 --> mysqli_sql_exception: Column 'year_level' cannot be null in /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query()
+#4 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/BaseModel.php(749): CodeIgniter\Model->doInsert()
+#6 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Model.php(667): CodeIgniter\BaseModel->insert()
+#7 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/app/Controllers/Teacher.php(284): CodeIgniter\Model->insert()
+#8 [internal function]: App\Controllers\Teacher->App\Controllers\{closure}()
+#9 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/app/Controllers/Teacher.php(263): array_map()
+#10 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(927): App\Controllers\Teacher->gradingStud()
+#11 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+#12 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+#13 /home/u343516587/domains/bccwebportal.com/public_html/index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2023-09-24 20:56:52 --> Column 'year_level' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(749): CodeIgniter\Model->doInsert()
+ 7 SYSTEMPATH/Model.php(667): CodeIgniter\BaseModel->insert()
+ 8 APPPATH/Controllers/Teacher.php(284): CodeIgniter\Model->insert()
+ 9 [internal function]: App\Controllers\Teacher->App\Controllers\{closure}()
+10 APPPATH/Controllers/Teacher.php(263): array_map()
+11 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->gradingStud()
+12 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+13 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+14 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 20:57:07 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 408.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(408): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-24 20:57:09 --> mysqli_sql_exception: Column 'year_level' cannot be null in /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query()
+#4 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/BaseModel.php(749): CodeIgniter\Model->doInsert()
+#6 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Model.php(667): CodeIgniter\BaseModel->insert()
+#7 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/app/Controllers/Teacher.php(284): CodeIgniter\Model->insert()
+#8 [internal function]: App\Controllers\Teacher->App\Controllers\{closure}()
+#9 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/app/Controllers/Teacher.php(263): array_map()
+#10 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(927): App\Controllers\Teacher->gradingStud()
+#11 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+#12 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+#13 /home/u343516587/domains/bccwebportal.com/public_html/index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2023-09-24 20:57:09 --> Column 'year_level' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(749): CodeIgniter\Model->doInsert()
+ 7 SYSTEMPATH/Model.php(667): CodeIgniter\BaseModel->insert()
+ 8 APPPATH/Controllers/Teacher.php(284): CodeIgniter\Model->insert()
+ 9 [internal function]: App\Controllers\Teacher->App\Controllers\{closure}()
+10 APPPATH/Controllers/Teacher.php(263): array_map()
+11 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->gradingStud()
+12 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+13 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+14 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 20:58:37 --> array_map(): Argument #5 must be of type array, string given
+in APPPATH/Controllers/Teacher.php on line 265.
+ 1 APPPATH/Controllers/Teacher.php(265): array_map()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->gradingStud()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 21:01:13 --> Undefined variable $value
+in APPPATH/Controllers/Teacher.php on line 294.
+ 1 APPPATH/Controllers/Teacher.php(294): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->gradingStud()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 21:02:29 --> array_map(): Argument #5 must be of type array, string given
+in APPPATH/Controllers/Teacher.php on line 264.
+ 1 APPPATH/Controllers/Teacher.php(264): array_map()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->gradingStud()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 21:07:29 --> count(): Argument #1 ($value) must be of type Countable|array, string given
+in APPPATH/Controllers/Teacher.php on line 261.
+ 1 APPPATH/Controllers/Teacher.php(261): count()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->gradingStud()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 21:10:27 --> count(): Argument #1 ($value) must be of type Countable|array, string given
+in APPPATH/Controllers/Teacher.php on line 263.
+ 1 APPPATH/Controllers/Teacher.php(263): count()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->gradingStud()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 21:10:54 --> count(): Argument #1 ($value) must be of type Countable|array, string given
+in APPPATH/Controllers/Teacher.php on line 263.
+ 1 APPPATH/Controllers/Teacher.php(263): count()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->gradingStud()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-24 22:53:26 --> Undefined variable $grade
+in APPPATH/Views/user/curriculum-subjects.php on line 197.
+ 1 APPPATH/Views/user/curriculum-subjects.php(197): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/user/curriculum-subjects.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Profile.php(1421): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->curriculumSubject()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()

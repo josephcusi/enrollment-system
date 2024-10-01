@@ -39,10 +39,128 @@
                         <br>
                         <br>
                         <li class="nav-item" style="font-family:poppins;">
+
+                            <a href="#" class="nav-link">
+                                <i class="fa-sharp fa-solid fa-envelopes-bulk"></i>
+                                <p>School Updates<i class="right fas fa-angle-left"></i></p>
+                            </a>
+
+                            <ul class="nav nav-treeview">
+
+                                <li class="nav-item">
+                                    <a href="<?= site_url('school_updates/' . 'announcement');?>" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Announcements</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="<?= site_url('school_updates/' . 'event')?>" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Events</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item" style="font-family:poppins;">
                             <a href="<?=base_url('student_approve')?>" class="nav-link">
                                 <i class="far fa-thin fa-newspaper"></i>
                                 <p>Student Approval</p>
                             </a>
+                        </li>
+                        <li class="nav-item" style="font-family:poppins;">
+                        <li class="nav-item" style="font-family:poppins;">
+                            <a href="#" class="nav-link ">
+                                <i class="fa-sharp fa-solid fa-envelopes-bulk"></i>
+                                <p>Students Request<i class="right fas fa-angle-left"></i></p>
+                            </a>
+
+                            <ul class="nav nav-treeview">
+                                <?php if ($stat['status'] === "SHS"): ?>
+                                <li class="nav-item">
+                                    <a href="<?= base_url('student-request/Grade-11')?>" class="nav-link ">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Grade 11</p>
+                                    </a>
+                                <li class="nav-item">
+                                    <a href="<?= base_url('student-request/Grade-12')?>" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Grade 12</p>
+                                    </a>
+                                </li>
+                                <?php else: ?>
+                                <li class="nav-item">
+                                    <a href="<?= base_url('student-request/1st-Year')?>" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>1st Year</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="<?= base_url('student-request/2nd-Year')?>" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>2nd Year</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="<?= base_url('student-request/3rd-Year')?>" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>3rd Year</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="<?= base_url('student-request/4th-Year')?>" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>4th Year</p>
+                                    </a>
+                                </li>
+                                <?php endif; ?>
+                            </ul>
+                        </li>
+                        <li class="nav-item" style="font-family:poppins;">
+                            <a href="#" class="nav-link ">
+                                <i class="fa-sharp fa-solid fa-envelopes-bulk"></i>
+                                <p>Students<i class="right fas fa-angle-left"></i></p>
+                            </a>
+
+                            <ul class="nav nav-treeview">
+                                <?php if ($stat['status'] === "SHS"): ?>
+                                <li class="nav-item">
+                                    <a href="<?= base_url('student-list/Grade-11')?>" class="nav-link ">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Grade 11</p>
+                                    </a>
+                                <li class="nav-item">
+                                    <a href="<?= base_url('student-list/Grade-12')?>" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Grade 12</p>
+                                    </a>
+                                </li>
+                                <?php else: ?>
+                                <li class="nav-item">
+                                    <a href="<?= base_url('student-list/1st-Year')?>" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>1st Year</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="<?= base_url('student-list/2nd-Year')?>" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>2nd Year</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="<?= base_url('student-list/3rd-Year')?>" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>3rd Year</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="<?= base_url('student-list/4th-Year')?>" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>4th Year</p>
+                                    </a>
+                                </li>
+                                <?php endif; ?>
+                            </ul>
                         </li>
                         <li class="nav-item" style="font-family:poppins;">
                         <li class="nav-item" style="font-family:poppins;">
@@ -125,8 +243,7 @@
                                 </li>
                                 <?php else: ?>
                                 <li class="nav-item">
-                                    <a href="<?= base_url('prospectus11/' . $year_levelOne['id'])?>"
-                                        class="nav-link">
+                                    <a href="<?= base_url('prospectus11/' . $year_levelOne['id'])?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>1st Year</p>
                                     </a>
@@ -176,6 +293,12 @@
                                 </li>
                                 <?php else: ?>
                                 <li class="nav-item">
+                                    <a href="<?= base_url('/deadline_form') ?>" class="nav-link ">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Submission of Grade </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
                                     <a href="<?= site_url('StudentGrading/' . $year_levelOne['id'])?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>1st Year</p>
@@ -208,7 +331,7 @@
                         <li class="nav-item" style="font-family:poppins;">
                             <a href="<?=base_url('/retrieve_strand')?>" class="nav-link">
                                 <i class="fa-sharp fa-solid fa-envelopes-bulk"></i>
-                                <p>Strand</p>
+                                <p>Program</p>
                             </a>
                         </li>
                         </li>
@@ -243,6 +366,18 @@
 
     </div>
     <div class="content-wrapper">
+        <script src="<?= base_url()?>/dist/js/sweetalert.js"></script>
+        <?php if(!empty(session()->getFlashdata('failedTeacher'))) : ?>
+        <script>
+        swal({
+            title: "Duplicate Id.",
+            text: "Teacher ID already exist.",
+            icon: "warning",
+            buttons: false,
+            timer: 1000,
+        });
+        </script>
+        <?php endif;?>
 
         <!-- Content Header (Page header) -->
 
@@ -293,6 +428,9 @@
                                         </button>
                                     </div>
                                 </div>
+                                <?php if(session()->has('validation')){
+                    $errorFlash = session()->getFlashdata('validation');
+                  } ?>
                                 <div class="bs-stepper-content mx-auto" style="width:70%">
 
 
@@ -304,11 +442,34 @@
                                         <br>
                                         <div class="form-group row" style="font-family: Poppins;">
                                             <img class="profile-user-img img-fluid img-circle"
-                                                style="width:50px; height:50px;margin-left:30px; background-image:url(../../dist/img/profile.jfif); border-color:maroon; background-size:cover;">
+                                                style="width:50px; height:50px;margin-left:30px; background-image:url(../../dist/img/profile.jpg); border-color:maroon; background-size:cover;">
                                             <div class="col-sm-10">
                                                 <input type="file" name="profile_picture" class="form-control">
                                                 <span
-                                                    class="text-danger"><?= isset($validation) ? display_error($validation, 'profile_picture') : '' ?></span>
+                                                    class="text-danger"><?= isset($errorFlash) ? display_error($errorFlash, 'profile_picture') : '' ?></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row" style="font-family: Poppins;">
+                                            <label class="col-sm-2 col-form-label"
+                                                style="font-family: Poppins;">Department</label>
+                                            <div class="col-sm-10">
+                                                <select class="form-control" id="inputCivil" name="department">
+                                                    <?php foreach($strand as $strands):?>
+                                                    <option type="text" class="form-control"
+                                                        style="font-family: Poppins;" id="inputCivil">
+                                                        <?= $strands['strand']?>
+                                                    </option>
+                                                    <?php endforeach;?>
+                                                    <option type="text" class="form-control"
+                                                        style="font-family: Poppins;" id="inputCivil">
+                                                        SHS
+                                                    </option>
+                                                    <option type="text" class="form-control"
+                                                        style="font-family: Poppins;" id="inputCivil">
+                                                        NONE
+                                                    </option>
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="form-group row" style="font-family: Poppins;">
@@ -351,6 +512,26 @@
 
                                     <div id="information-part" class="content" role="tabpanel"
                                         aria-labelledby="information-part-trigger">
+                                        <div class="form-group row" style="font-family: Poppins;">
+                                            <label class="col-sm-2 col-form-label"
+                                                style="font-family: Poppins;">Designation</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" name="designation" class="form-control"
+                                                    placeholder="E.g Instructor 1">
+                                                <span
+                                                    class="text-danger"><?= isset($validation) ? display_error($validation, 'teacher_id') : '' ?></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row" style="font-family: Poppins;">
+                                            <label class="col-sm-2 col-form-label" style="font-family: Poppins;">Teacher
+                                                ID</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" name="teacher_id" class="form-control"
+                                                    placeholder="Teacher ID">
+                                                <span
+                                                    class="text-danger"><?= isset($validation) ? display_error($validation, 'teacher_id') : '' ?></span>
+                                            </div>
+                                        </div>
                                         <div class="form-group row" style="font-family: Poppins;">
                                             <label class="col-sm-2 col-form-label"
                                                 style="font-family: Poppins;">Email</label>

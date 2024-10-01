@@ -1,0 +1,36 @@
+CRITICAL - 2023-08-14 04:17:22 --> Class "App\Models\YearLevelModel" not found
+in APPPATH/Controllers/Webpage.php on line 32.
+ 1 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Webpage->landing()
+ 2 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-14 04:18:31 --> Class "App\Models\YearLevelModel" not found
+in APPPATH/Controllers/Webpage.php on line 32.
+ 1 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Webpage->landing()
+ 2 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-14 04:19:01 --> Class "App\Models\YearLevelModel" not found
+in APPPATH/Controllers/Webpage.php on line 25.
+ 1 SYSTEMPATH/CodeIgniter.php(889): App\Controllers\Webpage->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-14 10:43:15 --> preg_match(): Passing null to parameter #2 ($subject) of type string is deprecated
+in SYSTEMPATH/Email/Email.php on line 474.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Email/Email.php(474): preg_match()
+ 3 APPPATH/Controllers/Webpage.php(86): CodeIgniter\Email\Email->setFrom()
+ 4 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Webpage->sendmail()
+ 5 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-14 10:44:05 --> preg_match(): Passing null to parameter #2 ($subject) of type string is deprecated
+in SYSTEMPATH/Email/Email.php on line 474.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Email/Email.php(474): preg_match()
+ 3 APPPATH/Controllers/Webpage.php(86): CodeIgniter\Email\Email->setFrom()
+ 4 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Webpage->sendmail()
+ 5 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()

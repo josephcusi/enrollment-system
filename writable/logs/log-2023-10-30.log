@@ -1,0 +1,40 @@
+ERROR - 2023-10-30 22:44:07 --> Error connecting to the database: mysqli_sql_exception: Host '156.67.222.1' is not allowed to connect to this MariaDB server in /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php(171): mysqli->real_connect()
+#1 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+#4 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/BaseModel.php(585): CodeIgniter\Model->doFindAll()
+#6 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/app/Controllers/Webpage.php(44): CodeIgniter\BaseModel->findAll()
+#7 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(927): App\Controllers\Webpage->landing()
+#8 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+#9 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/u343516587/domains/bccwebportal.com/public_html/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Host '156.67.222.1' is not allowed to connect to this MariaDB server in /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+#3 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/BaseModel.php(585): CodeIgniter\Model->doFindAll()
+#5 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/app/Controllers/Webpage.php(44): CodeIgniter\BaseModel->findAll()
+#6 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(927): App\Controllers\Webpage->landing()
+#7 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+#8 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/u343516587/domains/bccwebportal.com/public_html/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-10-30 22:44:07 --> Unable to connect to the database.
+Main connection [MySQLi]: Host '156.67.222.1' is not allowed to connect to this MariaDB server
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(585): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Controllers/Webpage.php(44): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Webpage->landing()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()

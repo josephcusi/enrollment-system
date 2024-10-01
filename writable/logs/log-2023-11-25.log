@@ -1,0 +1,139 @@
+ERROR - 2023-11-25 03:56:51 --> mysqli_sql_exception: Unknown column 'credential_tbl.Pending' in 'order clause' in /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+#4 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/app/Controllers/Credentials.php(39): CodeIgniter\Model->__call()
+#6 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(927): App\Controllers\Credentials->student_approve()
+#7 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+#8 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/u343516587/domains/bccwebportal.com/public_html/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-11-25 03:56:51 --> Call to a member function getResultArray() on bool
+in APPPATH/Controllers/Credentials.php on line 39.
+ 1 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Credentials->student_approve()
+ 2 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-25 03:56:55 --> mysqli_sql_exception: Unknown column 'credential_tbl.Pending' in 'order clause' in /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+#4 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/app/Controllers/Credentials.php(39): CodeIgniter\Model->__call()
+#6 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(927): App\Controllers\Credentials->student_approve()
+#7 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+#8 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/u343516587/domains/bccwebportal.com/public_html/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-11-25 03:56:55 --> Call to a member function getResultArray() on bool
+in APPPATH/Controllers/Credentials.php on line 39.
+ 1 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Credentials->student_approve()
+ 2 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-25 03:57:07 --> mysqli_sql_exception: Unknown column 'credential_tbl.Pending' in 'order clause' in /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+#4 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/app/Controllers/Credentials.php(39): CodeIgniter\Model->__call()
+#6 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(927): App\Controllers\Credentials->student_approve()
+#7 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+#8 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/u343516587/domains/bccwebportal.com/public_html/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-11-25 03:57:07 --> Call to a member function getResultArray() on bool
+in APPPATH/Controllers/Credentials.php on line 39.
+ 1 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Credentials->student_approve()
+ 2 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-25 03:57:21 --> mysqli_sql_exception: Unknown column 'credential_tbl.Pending' in 'order clause' in /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+#4 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/app/Controllers/Credentials.php(39): CodeIgniter\Model->__call()
+#6 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(927): App\Controllers\Credentials->student_approve()
+#7 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+#8 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/u343516587/domains/bccwebportal.com/public_html/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-11-25 03:57:21 --> Unknown column 'credential_tbl.Pending' in 'order clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Credentials.php(39): CodeIgniter\Model->__call()
+ 7 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Credentials->student_approve()
+ 8 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-25 04:02:50 --> mysqli_sql_exception: Unknown column 'user_tbl.credential_status' in 'order clause' in /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+#4 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/app/Controllers/Credentials.php(39): CodeIgniter\Model->__call()
+#6 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(927): App\Controllers\Credentials->student_approve()
+#7 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+#8 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/u343516587/domains/bccwebportal.com/public_html/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-11-25 04:02:50 --> Call to a member function getResultArray() on bool
+in APPPATH/Controllers/Credentials.php on line 39.
+ 1 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Credentials->student_approve()
+ 2 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-25 04:08:26 --> mysqli_sql_exception: Unknown column 'user_tbl.credential_status' in 'order clause' in /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+#4 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/app/Controllers/Credentials.php(39): CodeIgniter\Model->__call()
+#6 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(927): App\Controllers\Credentials->student_approve()
+#7 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+#8 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/u343516587/domains/bccwebportal.com/public_html/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-11-25 04:08:26 --> Call to a member function getResultArray() on bool
+in APPPATH/Controllers/Credentials.php on line 39.
+ 1 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Credentials->student_approve()
+ 2 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 05:30:26 --> Cannot access offset of type string on string
+in APPPATH/Views/admin/student_credentials/stud_cred.php on line 392.
+ 1 [internal function]: CodeIgniter\View\View->{closure}()
+ 2 APPPATH/Views/admin/student_credentials/stud_cred.php(393): usort()
+ 3 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/student_credentials/stud_cred.php')
+ 4 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 6 APPPATH/Controllers/Credentials.php(49): view()
+ 7 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Credentials->student_approve()
+ 8 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 12:01:54 --> Undefined variable $statuss
+in APPPATH/Controllers/Credentials.php on line 59.
+ 1 APPPATH/Controllers/Credentials.php(59): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Credentials->student_status()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()

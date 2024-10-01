@@ -1,0 +1,1595 @@
+CRITICAL - 2023-12-15 03:53:17 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/User_Controller.php on line 51.
+ 1 APPPATH/Controllers/User_Controller.php(51): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\User_Controller->old_student()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 04:04:11 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/User_Controller.php on line 51.
+ 1 APPPATH/Controllers/User_Controller.php(51): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\User_Controller->old_student()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 04:05:29 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/User_Controller.php on line 51.
+ 1 APPPATH/Controllers/User_Controller.php(51): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\User_Controller->old_student()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 04:05:35 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/User_Controller.php on line 51.
+ 1 APPPATH/Controllers/User_Controller.php(51): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\User_Controller->old_student()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 04:05:37 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/User_Controller.php on line 51.
+ 1 APPPATH/Controllers/User_Controller.php(51): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\User_Controller->old_student()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 04:05:41 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/User_Controller.php on line 51.
+ 1 APPPATH/Controllers/User_Controller.php(51): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\User_Controller->old_student()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 04:05:44 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/User_Controller.php on line 51.
+ 1 APPPATH/Controllers/User_Controller.php(51): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\User_Controller->old_student()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 04:06:56 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/User_Controller.php on line 51.
+ 1 APPPATH/Controllers/User_Controller.php(51): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\User_Controller->old_student()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 04:08:39 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/User_Controller.php on line 51.
+ 1 APPPATH/Controllers/User_Controller.php(51): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\User_Controller->old_student()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 04:08:44 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/User_Controller.php on line 51.
+ 1 APPPATH/Controllers/User_Controller.php(51): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\User_Controller->old_student()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 04:08:56 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/User_Controller.php on line 51.
+ 1 APPPATH/Controllers/User_Controller.php(51): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\User_Controller->old_student()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 04:14:55 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/User_Controller.php on line 51.
+ 1 APPPATH/Controllers/User_Controller.php(51): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\User_Controller->old_student()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 04:16:34 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/User_Controller.php on line 51.
+ 1 APPPATH/Controllers/User_Controller.php(51): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\User_Controller->old_student()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 04:20:42 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/User_Controller.php on line 51.
+ 1 APPPATH/Controllers/User_Controller.php(51): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\User_Controller->old_student()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 04:20:46 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/User_Controller.php on line 51.
+ 1 APPPATH/Controllers/User_Controller.php(51): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\User_Controller->old_student()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 04:30:18 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/PreEnrolled.php on line 249.
+ 1 APPPATH/Controllers/PreEnrolled.php(249): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\PreEnrolled->enrolled()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 04:30:47 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/PreEnrolled.php on line 249.
+ 1 APPPATH/Controllers/PreEnrolled.php(249): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\PreEnrolled->enrolled()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 04:30:54 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/PreEnrolled.php on line 249.
+ 1 APPPATH/Controllers/PreEnrolled.php(249): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\PreEnrolled->enrolled()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 04:35:23 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/User_Controller.php on line 51.
+ 1 APPPATH/Controllers/User_Controller.php(51): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\User_Controller->old_student()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 04:35:28 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/User_Controller.php on line 51.
+ 1 APPPATH/Controllers/User_Controller.php(51): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\User_Controller->old_student()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 04:35:33 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/User_Controller.php on line 51.
+ 1 APPPATH/Controllers/User_Controller.php(51): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\User_Controller->old_student()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 04:35:39 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/User_Controller.php on line 51.
+ 1 APPPATH/Controllers/User_Controller.php(51): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\User_Controller->old_student()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 04:35:45 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/User_Controller.php on line 51.
+ 1 APPPATH/Controllers/User_Controller.php(51): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\User_Controller->old_student()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 05:02:34 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/User_Controller.php on line 51.
+ 1 APPPATH/Controllers/User_Controller.php(51): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\User_Controller->old_student()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 05:02:38 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/User_Controller.php on line 51.
+ 1 APPPATH/Controllers/User_Controller.php(51): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\User_Controller->old_student()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 05:02:41 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/User_Controller.php on line 51.
+ 1 APPPATH/Controllers/User_Controller.php(51): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\User_Controller->old_student()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 05:08:28 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/User_Controller.php on line 50.
+ 1 APPPATH/Controllers/User_Controller.php(50): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\User_Controller->old_student()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 05:08:41 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/User_Controller.php on line 50.
+ 1 APPPATH/Controllers/User_Controller.php(50): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\User_Controller->old_student()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 05:08:48 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/User_Controller.php on line 50.
+ 1 APPPATH/Controllers/User_Controller.php(50): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\User_Controller->old_student()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 05:09:22 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/User_Controller.php on line 50.
+ 1 APPPATH/Controllers/User_Controller.php(50): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\User_Controller->old_student()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 05:09:34 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/User_Controller.php on line 50.
+ 1 APPPATH/Controllers/User_Controller.php(50): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\User_Controller->old_student()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 05:13:49 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/User_Controller.php on line 50.
+ 1 APPPATH/Controllers/User_Controller.php(50): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\User_Controller->old_student()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 05:14:40 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/User_Controller.php on line 50.
+ 1 APPPATH/Controllers/User_Controller.php(50): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\User_Controller->old_student()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 05:18:02 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/User_Controller.php on line 50.
+ 1 APPPATH/Controllers/User_Controller.php(50): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\User_Controller->old_student()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 05:19:59 --> str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated
+in APPPATH/Controllers/User_Controller.php on line 30.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/User_Controller.php(30): str_replace()
+ 3 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\User_Controller->old_student()
+ 4 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 05:21:23 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/User_Controller.php on line 50.
+ 1 APPPATH/Controllers/User_Controller.php(50): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\User_Controller->old_student()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 05:23:21 --> Undefined variable $year_level_replace
+in APPPATH/Controllers/User_Controller.php on line 240.
+ 1 APPPATH/Controllers/User_Controller.php(240): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\User_Controller->old_student()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 05:23:33 --> Undefined variable $set_year_level
+in APPPATH/Controllers/User_Controller.php on line 241.
+ 1 APPPATH/Controllers/User_Controller.php(241): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\User_Controller->old_student()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 05:23:38 --> Undefined variable $test
+in APPPATH/Controllers/User_Controller.php on line 242.
+ 1 APPPATH/Controllers/User_Controller.php(242): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\User_Controller->old_student()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 05:23:46 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/User_Controller.php on line 52.
+ 1 APPPATH/Controllers/User_Controller.php(52): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\User_Controller->old_student()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 05:23:53 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/User_Controller.php on line 52.
+ 1 APPPATH/Controllers/User_Controller.php(52): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\User_Controller->old_student()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 05:23:55 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/User_Controller.php on line 52.
+ 1 APPPATH/Controllers/User_Controller.php(52): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\User_Controller->old_student()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 05:24:03 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/User_Controller.php on line 52.
+ 1 APPPATH/Controllers/User_Controller.php(52): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\User_Controller->old_student()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 05:40:18 --> Undefined variable $lastGeneratedID
+in APPPATH/Controllers/Profile.php on line 635.
+ 1 APPPATH/Controllers/Profile.php(635): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 05:42:21 --> Array to string conversion
+in APPPATH/Controllers/Profile.php on line 645.
+ 1 APPPATH/Controllers/Profile.php(645): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 08:26:23 --> Undefined array key 0
+in APPPATH/Controllers/PreEnrolled.php on line 75.
+ 1 APPPATH/Controllers/PreEnrolled.php(75): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 08:26:42 --> Undefined array key 0
+in APPPATH/Controllers/PreEnrolled.php on line 75.
+ 1 APPPATH/Controllers/PreEnrolled.php(75): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 08:26:56 --> Undefined array key 0
+in APPPATH/Controllers/PreEnrolled.php on line 75.
+ 1 APPPATH/Controllers/PreEnrolled.php(75): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 08:26:58 --> Undefined array key 0
+in APPPATH/Controllers/PreEnrolled.php on line 75.
+ 1 APPPATH/Controllers/PreEnrolled.php(75): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 08:28:45 --> CodeIgniter\BaseModel::transformDataToArray(): Return value must be of type array, string returned
+in SYSTEMPATH/BaseModel.php on line 1624.
+ 1 SYSTEMPATH/BaseModel.php(853): CodeIgniter\BaseModel->transformDataToArray()
+ 2 SYSTEMPATH/Model.php(693): CodeIgniter\BaseModel->update()
+ 3 APPPATH/Controllers/PreEnrolled.php(253): CodeIgniter\Model->update()
+ 4 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\PreEnrolled->enrolled()
+ 5 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 08:29:04 --> CodeIgniter\BaseModel::transformDataToArray(): Return value must be of type array, string returned
+in SYSTEMPATH/BaseModel.php on line 1624.
+ 1 SYSTEMPATH/BaseModel.php(853): CodeIgniter\BaseModel->transformDataToArray()
+ 2 SYSTEMPATH/Model.php(693): CodeIgniter\BaseModel->update()
+ 3 APPPATH/Controllers/PreEnrolled.php(253): CodeIgniter\Model->update()
+ 4 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\PreEnrolled->enrolled()
+ 5 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 08:29:26 --> CodeIgniter\BaseModel::transformDataToArray(): Return value must be of type array, string returned
+in SYSTEMPATH/BaseModel.php on line 1624.
+ 1 SYSTEMPATH/BaseModel.php(853): CodeIgniter\BaseModel->transformDataToArray()
+ 2 SYSTEMPATH/Model.php(693): CodeIgniter\BaseModel->update()
+ 3 APPPATH/Controllers/PreEnrolled.php(253): CodeIgniter\Model->update()
+ 4 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\PreEnrolled->enrolled()
+ 5 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 08:30:48 --> CodeIgniter\BaseModel::transformDataToArray(): Return value must be of type array, string returned
+in SYSTEMPATH/BaseModel.php on line 1624.
+ 1 SYSTEMPATH/BaseModel.php(853): CodeIgniter\BaseModel->transformDataToArray()
+ 2 SYSTEMPATH/Model.php(693): CodeIgniter\BaseModel->update()
+ 3 APPPATH/Controllers/PreEnrolled.php(253): CodeIgniter\Model->update()
+ 4 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\PreEnrolled->enrolled()
+ 5 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 08:32:13 --> CodeIgniter\BaseModel::transformDataToArray(): Return value must be of type array, string returned
+in SYSTEMPATH/BaseModel.php on line 1624.
+ 1 SYSTEMPATH/BaseModel.php(853): CodeIgniter\BaseModel->transformDataToArray()
+ 2 SYSTEMPATH/Model.php(693): CodeIgniter\BaseModel->update()
+ 3 APPPATH/Controllers/PreEnrolled.php(253): CodeIgniter\Model->update()
+ 4 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\PreEnrolled->enrolled()
+ 5 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 08:32:25 --> CodeIgniter\BaseModel::transformDataToArray(): Return value must be of type array, string returned
+in SYSTEMPATH/BaseModel.php on line 1624.
+ 1 SYSTEMPATH/BaseModel.php(853): CodeIgniter\BaseModel->transformDataToArray()
+ 2 SYSTEMPATH/Model.php(693): CodeIgniter\BaseModel->update()
+ 3 APPPATH/Controllers/PreEnrolled.php(253): CodeIgniter\Model->update()
+ 4 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\PreEnrolled->enrolled()
+ 5 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 08:34:45 --> Array to string conversion
+in APPPATH/Controllers/PreEnrolled.php on line 257.
+ 1 APPPATH/Controllers/PreEnrolled.php(257): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\PreEnrolled->enrolled()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-15 08:35:20 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`u343516587_bccwebportal`.`student_grading`, CONSTRAINT `student_grading_ibfk_1` FOREIGN KEY (`lrn`) REFERENCES `user_tbl` (`lrn`) ON DELETE CASCADE ON UPDATE CASCADE) in /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query()
+#4 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/BaseModel.php(886): CodeIgniter\Model->doUpdate()
+#6 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Model.php(693): CodeIgniter\BaseModel->update()
+#7 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/app/Controllers/PreEnrolled.php(256): CodeIgniter\Model->update()
+#8 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(927): App\Controllers\PreEnrolled->enrolled()
+#9 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+#10 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/u343516587/domains/bccwebportal.com/public_html/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-12-15 08:35:20 --> Cannot delete or update a parent row: a foreign key constraint fails (`u343516587_bccwebportal`.`student_grading`, CONSTRAINT `student_grading_ibfk_1` FOREIGN KEY (`lrn`) REFERENCES `user_tbl` (`lrn`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH/BaseModel.php(886): CodeIgniter\Model->doUpdate()
+ 7 SYSTEMPATH/Model.php(693): CodeIgniter\BaseModel->update()
+ 8 APPPATH/Controllers/PreEnrolled.php(256): CodeIgniter\Model->update()
+ 9 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\PreEnrolled->enrolled()
+10 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+12 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 08:36:09 --> Undefined variable $str_replace
+in APPPATH/Controllers/PreEnrolled.php on line 293.
+ 1 APPPATH/Controllers/PreEnrolled.php(293): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\PreEnrolled->enrolled()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-15 08:36:30 --> mysqli_sql_exception: Foreign key constraint for table 'user_tbl', record '122' would lead to a duplicate entry in table 'prospectus_add_tbl', key 'subject_id' in /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query()
+#4 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/BaseModel.php(886): CodeIgniter\Model->doUpdate()
+#6 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Model.php(693): CodeIgniter\BaseModel->update()
+#7 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/app/Controllers/PreEnrolled.php(256): CodeIgniter\Model->update()
+#8 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(927): App\Controllers\PreEnrolled->enrolled()
+#9 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+#10 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/u343516587/domains/bccwebportal.com/public_html/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-12-15 08:36:30 --> Foreign key constraint for table 'user_tbl', record '122' would lead to a duplicate entry in table 'prospectus_add_tbl', key 'subject_id'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH/BaseModel.php(886): CodeIgniter\Model->doUpdate()
+ 7 SYSTEMPATH/Model.php(693): CodeIgniter\BaseModel->update()
+ 8 APPPATH/Controllers/PreEnrolled.php(256): CodeIgniter\Model->update()
+ 9 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\PreEnrolled->enrolled()
+10 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+12 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 08:46:45 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/grading/first_yearGrade.php on line 487.
+ 1 APPPATH/Views/admin/grading/first_yearGrade.php(487): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/grading/first_yearGrade.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Grading.php(46): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Grading->StudentGrade()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 09:03:03 --> Undefined variable $sub_grading
+in APPPATH/Controllers/Excel.php on line 370.
+ 1 APPPATH/Controllers/Excel.php(370): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Excel->update_student_grade_excel()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 09:03:41 --> Undefined variable $sub_grading
+in APPPATH/Controllers/Excel.php on line 370.
+ 1 APPPATH/Controllers/Excel.php(370): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Excel->update_student_grade_excel()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 09:04:04 --> Unsupported operand types: int / array
+in APPPATH/Controllers/Excel.php on line 370.
+ 1 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Excel->update_student_grade_excel()
+ 2 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 09:05:13 --> Undefined variable $gradeResult
+in APPPATH/Controllers/Excel.php on line 371.
+ 1 APPPATH/Controllers/Excel.php(371): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Excel->update_student_grade_excel()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 09:09:32 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 09:14:10 --> Undefined variable $index
+in APPPATH/Controllers/Excel.php on line 393.
+ 1 APPPATH/Controllers/Excel.php(393): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Excel->update_student_grade_excel()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-15 09:17:38 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`u343516587_bccwebportal`.`student_grading`, CONSTRAINT `student_grading_ibfk_1` FOREIGN KEY (`lrn`) REFERENCES `user_tbl` (`lrn`) ON DELETE CASCADE ON UPDATE CASCADE) in /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query()
+#4 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/BaseModel.php(749): CodeIgniter\Model->doInsert()
+#6 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Model.php(667): CodeIgniter\BaseModel->insert()
+#7 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/app/Controllers/Excel.php(281): CodeIgniter\Model->insert()
+#8 [internal function]: App\Controllers\Excel->App\Controllers\{closure}()
+#9 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/app/Controllers/Excel.php(262): array_map()
+#10 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(927): App\Controllers\Excel->convertExcelToHtml()
+#11 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+#12 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+#13 /home/u343516587/domains/bccwebportal.com/public_html/index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2023-12-15 09:17:38 --> Cannot add or update a child row: a foreign key constraint fails (`u343516587_bccwebportal`.`student_grading`, CONSTRAINT `student_grading_ibfk_1` FOREIGN KEY (`lrn`) REFERENCES `user_tbl` (`lrn`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(749): CodeIgniter\Model->doInsert()
+ 7 SYSTEMPATH/Model.php(667): CodeIgniter\BaseModel->insert()
+ 8 APPPATH/Controllers/Excel.php(281): CodeIgniter\Model->insert()
+ 9 [internal function]: App\Controllers\Excel->App\Controllers\{closure}()
+10 APPPATH/Controllers/Excel.php(262): array_map()
+11 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Excel->convertExcelToHtml()
+12 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+13 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+14 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-15 09:17:54 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`u343516587_bccwebportal`.`student_grading`, CONSTRAINT `student_grading_ibfk_1` FOREIGN KEY (`lrn`) REFERENCES `user_tbl` (`lrn`) ON DELETE CASCADE ON UPDATE CASCADE) in /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query()
+#4 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/BaseModel.php(749): CodeIgniter\Model->doInsert()
+#6 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Model.php(667): CodeIgniter\BaseModel->insert()
+#7 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/app/Controllers/Excel.php(281): CodeIgniter\Model->insert()
+#8 [internal function]: App\Controllers\Excel->App\Controllers\{closure}()
+#9 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/app/Controllers/Excel.php(262): array_map()
+#10 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(927): App\Controllers\Excel->convertExcelToHtml()
+#11 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+#12 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+#13 /home/u343516587/domains/bccwebportal.com/public_html/index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2023-12-15 09:17:54 --> Cannot add or update a child row: a foreign key constraint fails (`u343516587_bccwebportal`.`student_grading`, CONSTRAINT `student_grading_ibfk_1` FOREIGN KEY (`lrn`) REFERENCES `user_tbl` (`lrn`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(749): CodeIgniter\Model->doInsert()
+ 7 SYSTEMPATH/Model.php(667): CodeIgniter\BaseModel->insert()
+ 8 APPPATH/Controllers/Excel.php(281): CodeIgniter\Model->insert()
+ 9 [internal function]: App\Controllers\Excel->App\Controllers\{closure}()
+10 APPPATH/Controllers/Excel.php(262): array_map()
+11 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Excel->convertExcelToHtml()
+12 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+13 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+14 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 09:39:36 --> Undefined variable $value
+in APPPATH/Controllers/Excel.php on line 376.
+ 1 APPPATH/Controllers/Excel.php(376): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Excel->update_student_grade_excel()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 10:20:25 --> explode() expects at least 2 arguments, 1 given
+in APPPATH/Controllers/Excel.php on line 380.
+ 1 APPPATH/Controllers/Excel.php(380): explode()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Excel->update_student_grade_excel()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 10:21:30 --> Unsupported operand types: int / array
+in APPPATH/Controllers/Excel.php on line 382.
+ 1 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Excel->update_student_grade_excel()
+ 2 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 10:22:15 --> Unsupported operand types: int / array
+in APPPATH/Controllers/Excel.php on line 383.
+ 1 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Excel->update_student_grade_excel()
+ 2 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 10:26:45 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/grading/first_yearGrade.php on line 487.
+ 1 APPPATH/Views/admin/grading/first_yearGrade.php(487): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/grading/first_yearGrade.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Grading.php(46): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Grading->StudentGrade()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 10:28:57 --> count(): Argument #1 ($value) must be of type Countable|array, int given
+in APPPATH/Controllers/Excel.php on line 383.
+ 1 APPPATH/Controllers/Excel.php(383): count()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Excel->update_student_grade_excel()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 10:36:42 --> Uninitialized string offset 2
+in APPPATH/Controllers/Excel.php on line 384.
+ 1 APPPATH/Controllers/Excel.php(384): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Excel->update_student_grade_excel()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 10:44:56 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 10:46:52 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 10:49:30 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 10:50:19 --> Undefined array key 0
+in APPPATH/Controllers/Teacher.php on line 137.
+ 1 APPPATH/Controllers/Teacher.php(137): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 10:55:38 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 10:58:19 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 10:58:28 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 10:59:21 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 10:59:25 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 10:59:56 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 11:00:03 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 11:00:32 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 11:00:38 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 11:06:12 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 11:09:56 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+in APPPATH/Views/teacher/grading/first_year.php on line 340.
+ 1 SYSTEMPATH/View/View.php(213): include()
+ 2 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 4 APPPATH/Controllers/Teacher.php(223): view()
+ 5 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 6 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 11:10:16 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 11:14:14 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 17:04:45 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 17:07:36 --> Undefined array key 0
+in APPPATH/Controllers/Teacher.php on line 137.
+ 1 APPPATH/Controllers/Teacher.php(137): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 17:13:54 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 17:20:47 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 17:22:39 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 17:23:39 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 17:24:14 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 17:24:40 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 17:25:37 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 17:26:19 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 17:27:09 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 17:27:49 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 17:28:26 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 17:28:51 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 17:30:08 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 17:30:35 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 17:31:32 --> Undefined array key 0
+in APPPATH/Controllers/Teacher.php on line 138.
+ 1 APPPATH/Controllers/Teacher.php(138): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 17:31:33 --> Undefined array key 0
+in APPPATH/Controllers/Teacher.php on line 138.
+ 1 APPPATH/Controllers/Teacher.php(138): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 17:31:34 --> Undefined array key 0
+in APPPATH/Controllers/Teacher.php on line 138.
+ 1 APPPATH/Controllers/Teacher.php(138): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 17:31:35 --> Undefined array key 0
+in APPPATH/Controllers/Teacher.php on line 138.
+ 1 APPPATH/Controllers/Teacher.php(138): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 17:31:35 --> Undefined array key 0
+in APPPATH/Controllers/Teacher.php on line 138.
+ 1 APPPATH/Controllers/Teacher.php(138): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 19:26:31 --> Undefined array key 0
+in APPPATH/Controllers/Teacher.php on line 138.
+ 1 APPPATH/Controllers/Teacher.php(138): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 20:28:13 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 20:30:12 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 20:30:37 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 20:31:05 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 20:31:42 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 20:32:46 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 20:33:19 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 20:33:48 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 20:34:17 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 20:34:50 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 20:35:20 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 20:35:33 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 20:35:53 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 20:37:22 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 20:38:06 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 20:38:38 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 20:39:04 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 20:39:36 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 20:41:34 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 20:42:56 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 20:43:21 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 20:44:22 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 20:45:41 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 20:46:15 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 20:46:46 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 20:47:12 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 20:48:09 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Teacher.php on line 221.
+ 1 APPPATH/Controllers/Teacher.php(221): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 20:48:20 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Teacher.php on line 221.
+ 1 APPPATH/Controllers/Teacher.php(221): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 20:48:36 --> Undefined array key 0
+in APPPATH/Controllers/Teacher.php on line 138.
+ 1 APPPATH/Controllers/Teacher.php(138): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 20:48:44 --> Undefined array key 0
+in APPPATH/Controllers/Teacher.php on line 138.
+ 1 APPPATH/Controllers/Teacher.php(138): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 20:50:28 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Teacher.php on line 221.
+ 1 APPPATH/Controllers/Teacher.php(221): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 20:50:38 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Teacher.php on line 221.
+ 1 APPPATH/Controllers/Teacher.php(221): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 21:53:07 --> Undefined array key 2
+in APPPATH/Controllers/Teacher.php on line 95.
+ 1 APPPATH/Controllers/Teacher.php(95): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 21:53:45 --> Undefined array key 2
+in APPPATH/Controllers/Teacher.php on line 96.
+ 1 APPPATH/Controllers/Teacher.php(96): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 21:55:14 --> Uninitialized string offset 2
+in APPPATH/Controllers/Teacher.php on line 96.
+ 1 APPPATH/Controllers/Teacher.php(96): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 21:56:27 --> Uninitialized string offset 2
+in APPPATH/Controllers/Teacher.php on line 96.
+ 1 APPPATH/Controllers/Teacher.php(96): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 21:57:26 --> Undefined array key "section_id"
+in APPPATH/Controllers/Teacher.php on line 101.
+ 1 APPPATH/Controllers/Teacher.php(101): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-15 22:01:51 --> mysqli_sql_exception: Unknown column 'section_tbl.section_id' in 'where clause' in /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+#4 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/app/Controllers/Teacher.php(147): CodeIgniter\Model->__call()
+#6 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+#7 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+#8 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/u343516587/domains/bccwebportal.com/public_html/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-15 22:01:51 --> Unknown column 'section_tbl.section_id' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Teacher.php(147): CodeIgniter\Model->__call()
+ 7 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 8 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-15 22:02:11 --> mysqli_sql_exception: Unknown column 'section_tbl.section_id' in 'where clause' in /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+#4 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/app/Controllers/Teacher.php(147): CodeIgniter\Model->__call()
+#6 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+#7 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+#8 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/u343516587/domains/bccwebportal.com/public_html/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-15 22:02:11 --> Unknown column 'section_tbl.section_id' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Teacher.php(147): CodeIgniter\Model->__call()
+ 7 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 8 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 22:04:46 --> Uninitialized string offset 2
+in APPPATH/Controllers/Teacher.php on line 95.
+ 1 APPPATH/Controllers/Teacher.php(95): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 22:04:59 --> Uninitialized string offset 2
+in APPPATH/Controllers/Teacher.php on line 96.
+ 1 APPPATH/Controllers/Teacher.php(96): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 22:05:03 --> Uninitialized string offset 2
+in APPPATH/Controllers/Teacher.php on line 96.
+ 1 APPPATH/Controllers/Teacher.php(96): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 22:05:23 --> Cannot access offset of type string on string
+in APPPATH/Controllers/Teacher.php on line 96.
+ 1 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 2 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 22:10:10 --> Uninitialized string offset 2
+in APPPATH/Controllers/Teacher.php on line 96.
+ 1 APPPATH/Controllers/Teacher.php(96): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 22:11:10 --> Uninitialized string offset 2
+in APPPATH/Controllers/Teacher.php on line 96.
+ 1 APPPATH/Controllers/Teacher.php(96): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 22:16:56 --> Uninitialized string offset 1
+in APPPATH/Controllers/Teacher.php on line 101.
+ 1 APPPATH/Controllers/Teacher.php(101): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 22:17:15 --> Uninitialized string offset 9
+in APPPATH/Controllers/Teacher.php on line 103.
+ 1 APPPATH/Controllers/Teacher.php(103): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 22:29:19 --> Undefined array key 2
+in APPPATH/Controllers/Teacher.php on line 98.
+ 1 APPPATH/Controllers/Teacher.php(98): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 22:31:16 --> Uninitialized string offset 2
+in APPPATH/Controllers/Teacher.php on line 94.
+ 1 APPPATH/Controllers/Teacher.php(94): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 22:32:06 --> foreach() argument must be of type array|object, string given
+in APPPATH/Controllers/Teacher.php on line 93.
+ 1 APPPATH/Controllers/Teacher.php(93): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 22:32:33 --> Undefined variable $section_idd
+in APPPATH/Controllers/Teacher.php on line 100.
+ 1 APPPATH/Controllers/Teacher.php(100): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 22:34:05 --> Uninitialized string offset 2
+in APPPATH/Controllers/Teacher.php on line 96.
+ 1 APPPATH/Controllers/Teacher.php(96): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 22:34:42 --> Uninitialized string offset 2
+in APPPATH/Controllers/Teacher.php on line 100.
+ 1 APPPATH/Controllers/Teacher.php(100): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 22:34:48 --> Uninitialized string offset 1
+in APPPATH/Controllers/Teacher.php on line 100.
+ 1 APPPATH/Controllers/Teacher.php(100): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 22:37:19 --> Undefined array key 0
+in APPPATH/Controllers/Teacher.php on line 150.
+ 1 APPPATH/Controllers/Teacher.php(150): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 22:37:24 --> Undefined array key 0
+in APPPATH/Controllers/Teacher.php on line 150.
+ 1 APPPATH/Controllers/Teacher.php(150): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 22:37:41 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 449.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(449): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 22:37:58 --> Undefined array key 0
+in APPPATH/Controllers/Teacher.php on line 150.
+ 1 APPPATH/Controllers/Teacher.php(150): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 22:44:25 --> Undefined array key 16
+in APPPATH/Controllers/Teacher.php on line 96.
+ 1 APPPATH/Controllers/Teacher.php(96): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()

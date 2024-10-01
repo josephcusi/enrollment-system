@@ -1,0 +1,9 @@
+CRITICAL - 2024-03-22 15:34:39 --> preg_match(): Passing null to parameter #2 ($subject) of type string is deprecated
+in SYSTEMPATH/Email/Email.php on line 474.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Email/Email.php(474): preg_match()
+ 3 APPPATH/Controllers/Webpage.php(102): CodeIgniter\Email\Email->setFrom()
+ 4 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Webpage->sendmail()
+ 5 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()

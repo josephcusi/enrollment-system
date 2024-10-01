@@ -12,7 +12,7 @@ class Strand extends BaseController
 {
     public function __construct()
     {
-        helper(['url', 'form']);
+       helper(['url', 'Form_helper', 'form']);
     }
     public function retrieve_strand()
     {
@@ -23,7 +23,6 @@ class Strand extends BaseController
         $data = [
             'strand'=> $strand_model->where('type', session()->get('status'))->findAll(),
             'userName'=> $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
-            'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
             'sem_year' => $year_model->first(),
             
             'yearnew' => $strand_model
@@ -146,4 +145,26 @@ class Strand extends BaseController
             return redirect()->route('retrieve_strand');
         }
     }
+      public function update_program_status(){
+        $strand_model = new StrandModel();
+        
+        $status = $this->request->getPost('status');
+        $id = $this->request->getPost('id');
+        
+        
+        $data = [
+            'course_status' => $status
+        ];
+
+        $strand_model->update($id, $data);
+        
+             $data = [
+            'strand' => $strand_model
+            ->where('type', session()->get('status'))
+            ->orderBy('strand', 'ASC')
+            ->findAll()
+        ];
+        
+        return $this->response->setJSON($data);
+      }
 }

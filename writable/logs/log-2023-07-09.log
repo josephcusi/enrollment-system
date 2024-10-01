@@ -1,0 +1,800 @@
+CRITICAL - 2023-07-09 01:25:28 --> Uncaught ValueError: realpath(): Argument #1 ($path) must not contain any null bytes in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Common.php:90
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Common.php(90): realpath('%PDF-1.7\n1 0 ob...')
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Debug\Exceptions.php(516): clean_path('%PDF-1.7\n1 0 ob...')
+#2 [internal function]: CodeIgniter\Debug\Exceptions::CodeIgniter\Debug\{closure}('%PDF-1.7\n1 0 ob...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Debug\Exceptions.php(521): array_map(Object(Closure), Array)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions::renderBacktrace(Array)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+in SYSTEMPATH\Common.php on line 90.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-07-09 01:25:49 --> Call to undefined method CodeIgniter\Email\Email::clearAttachments()
+in APPPATH\Controllers\PreEnrolled.php on line 420.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->enroll_all()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 01:26:05 --> Call to undefined method CodeIgniter\Email\Email::clearAttachments()
+in APPPATH\Controllers\PreEnrolled.php on line 420.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->enroll_all()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 01:27:33 --> unlink() expects at least 1 argument, 0 given
+in APPPATH\Controllers\PreEnrolled.php on line 418.
+ 1 APPPATH\Controllers\PreEnrolled.php(418): unlink()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->enroll_all()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 01:28:13 --> unlink() expects at least 1 argument, 0 given
+in APPPATH\Controllers\PreEnrolled.php on line 418.
+ 1 APPPATH\Controllers\PreEnrolled.php(418): unlink()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->enroll_all()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 01:29:23 --> Class "App\Controllers\File" not found
+in APPPATH\Controllers\PreEnrolled.php on line 418.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->enroll_all()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 01:30:25 --> Undefined variable $file
+in APPPATH\Controllers\PreEnrolled.php on line 418.
+ 1 APPPATH\Controllers\PreEnrolled.php(418): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $file', 'APPPATH\\Controllers\\PreEnrolled.php', 418)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->enroll_all()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 01:30:40 --> Call to undefined method CodeIgniter\Email\Email::delete()
+in APPPATH\Controllers\PreEnrolled.php on line 418.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->enroll_all()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 01:31:20 --> Call to undefined method CodeIgniter\Email\Email::delete()
+in APPPATH\Controllers\PreEnrolled.php on line 418.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->enroll_all()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 01:33:19 --> whereIn() expects $values to be of type array or closure
+in SYSTEMPATH\Database\BaseBuilder.php on line 907.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(789): CodeIgniter\Database\BaseBuilder->_whereIn('id', null, false, 'AND ', null)
+ 2 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->whereIn('id', null)
+ 3 APPPATH\Controllers\PreEnrolled.php(339): CodeIgniter\Model->__call('whereIn', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->enroll_all()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 01:33:26 --> mkdir(): File exists
+in APPPATH\Controllers\PreEnrolled.php on line 405.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mkdir(): File exists', 'APPPATH\\Controllers\\PreEnrolled.php', 405)
+ 2 APPPATH\Controllers\PreEnrolled.php(405): mkdir('FCPATH\\student_credentials\\joseph.salavaria.cusi06@gmail.com', 511, true)
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->enroll_all()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 01:33:41 --> Call to undefined method CodeIgniter\Email\Email::clearAttachments()
+in APPPATH\Controllers\PreEnrolled.php on line 418.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->enroll_all()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 01:34:17 --> Call to undefined method CodeIgniter\Email\Email::clearAttachments()
+in APPPATH\Controllers\PreEnrolled.php on line 418.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->enroll_all()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 01:34:29 --> Call to undefined method CodeIgniter\Email\Email::clearAttachments()
+in APPPATH\Controllers\PreEnrolled.php on line 418.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->enroll_all()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 01:37:16 --> Undefined variable $file_path
+in APPPATH\Controllers\PreEnrolled.php on line 403.
+ 1 APPPATH\Controllers\PreEnrolled.php(403): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $file_path', 'APPPATH\\Controllers\\PreEnrolled.php', 403)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->enroll_all()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 01:51:42 --> Uncaught ValueError: realpath(): Argument #1 ($path) must not contain any null bytes in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Common.php:90
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Common.php(90): realpath('%PDF-1.7\n1 0 ob...')
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Debug\Exceptions.php(516): clean_path('%PDF-1.7\n1 0 ob...')
+#2 [internal function]: CodeIgniter\Debug\Exceptions::CodeIgniter\Debug\{closure}('%PDF-1.7\n1 0 ob...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Debug\Exceptions.php(521): array_map(Object(Closure), Array)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions::renderBacktrace(Array)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+in SYSTEMPATH\Common.php on line 90.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-07-09 01:52:15 --> Uncaught ValueError: realpath(): Argument #1 ($path) must not contain any null bytes in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Common.php:90
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Common.php(90): realpath('%PDF-1.7\n1 0 ob...')
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Debug\Exceptions.php(516): clean_path('%PDF-1.7\n1 0 ob...')
+#2 [internal function]: CodeIgniter\Debug\Exceptions::CodeIgniter\Debug\{closure}('%PDF-1.7\n1 0 ob...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Debug\Exceptions.php(521): array_map(Object(Closure), Array)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions::renderBacktrace(Array)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+in SYSTEMPATH\Common.php on line 90.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-07-09 02:09:42 --> whereIn() expects $values to be of type array or closure
+in SYSTEMPATH\Database\BaseBuilder.php on line 907.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(789): CodeIgniter\Database\BaseBuilder->_whereIn('id', null, false, 'AND ', null)
+ 2 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->whereIn('id', null)
+ 3 APPPATH\Controllers\PreEnrolled.php(337): CodeIgniter\Model->__call('whereIn', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->enroll_all()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 02:19:56 --> Undefined array key "lrn"
+in APPPATH\Views\user\registrationpdf\corPDF.php on line 95.
+ 1 APPPATH\Views\user\registrationpdf\corPDF.php(95): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "lrn"', 'APPPATH\\Views\\user\\registrationpdf\\corPDF.php', 95)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\registrationpdf\\corPDF.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/registrationpdf/corPDF', [], true)
+ 5 APPPATH\Controllers\PreEnrolled.php(227): view('user/registrationpdf/corPDF', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->enrolled()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 02:32:11 --> Undefined variable $stat
+in APPPATH\Views\admin\student_credentials\shs_form.php on line 1.
+ 1 APPPATH\Views\admin\student_credentials\shs_form.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $stat', 'APPPATH\\Views\\admin\\student_credentials\\shs_form.php', 1)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_credentials\\shs_form.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_credentials/shs_form', [], true)
+ 5 APPPATH\Controllers\PreEnrolled.php(305): view('admin/student_credentials/shs_form', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->download_form()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 02:33:41 --> Undefined array key "usertype"
+in APPPATH\Views\admin\student_credentials\shs_form.php on line 1.
+ 1 APPPATH\Views\admin\student_credentials\shs_form.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "usertype"', 'APPPATH\\Views\\admin\\student_credentials\\shs_form.php', 1)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_credentials\\shs_form.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_credentials/shs_form', [], true)
+ 5 APPPATH\Controllers\PreEnrolled.php(306): view('admin/student_credentials/shs_form', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->download_form()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 02:35:45 --> Undefined variable $user_data
+in APPPATH\Views\admin\student_credentials\shs_form.php on line 562.
+ 1 APPPATH\Views\admin\student_credentials\shs_form.php(562): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user_data', 'APPPATH\\Views\\admin\\student_credentials\\shs_form.php', 562)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_credentials\\shs_form.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_credentials/shs_form', [], true)
+ 5 APPPATH\Controllers\PreEnrolled.php(306): view('admin/student_credentials/shs_form', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->download_form()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 02:37:58 --> Undefined variable $user_model
+in APPPATH\Controllers\PreEnrolled.php on line 302.
+ 1 APPPATH\Controllers\PreEnrolled.php(302): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user_model', 'APPPATH\\Controllers\\PreEnrolled.php', 302)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->download_form()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 02:38:41 --> Undefined variable $user_data
+in APPPATH\Views\admin\student_credentials\shs_form.php on line 562.
+ 1 APPPATH\Views\admin\student_credentials\shs_form.php(562): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user_data', 'APPPATH\\Views\\admin\\student_credentials\\shs_form.php', 562)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_credentials\\shs_form.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_credentials/shs_form', [], true)
+ 5 APPPATH\Controllers\PreEnrolled.php(308): view('admin/student_credentials/shs_form', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->download_form()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 02:38:59 --> Undefined variable $user_data
+in APPPATH\Views\admin\student_credentials\shs_form.php on line 562.
+ 1 APPPATH\Views\admin\student_credentials\shs_form.php(562): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user_data', 'APPPATH\\Views\\admin\\student_credentials\\shs_form.php', 562)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_credentials\\shs_form.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_credentials/shs_form', [], true)
+ 5 APPPATH\Controllers\PreEnrolled.php(308): view('admin/student_credentials/shs_form', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->download_form()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 02:40:08 --> Undefined array key 0
+in APPPATH\Views\admin\student_credentials\shs_form.php on line 1.
+ 1 APPPATH\Views\admin\student_credentials\shs_form.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\admin\\student_credentials\\shs_form.php', 1)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_credentials\\shs_form.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_credentials/shs_form', [], true)
+ 5 APPPATH\Controllers\PreEnrolled.php(308): view('admin/student_credentials/shs_form', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->download_form()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 02:40:20 --> Cannot access offset of type string on string
+in APPPATH\Views\admin\student_credentials\shs_form.php on line 191.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_credentials/shs_form', [], true)
+ 4 APPPATH\Controllers\PreEnrolled.php(308): view('admin/student_credentials/shs_form', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->download_form()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 02:41:00 --> Undefined variable $student_form
+in APPPATH\Views\admin\student_credentials\shs_form.php on line 190.
+ 1 APPPATH\Views\admin\student_credentials\shs_form.php(190): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $student_form', 'APPPATH\\Views\\admin\\student_credentials\\shs_form.php', 190)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_credentials\\shs_form.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_credentials/shs_form', [], true)
+ 5 APPPATH\Controllers\PreEnrolled.php(308): view('admin/student_credentials/shs_form', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->download_form()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 02:41:15 --> Undefined array key 0
+in APPPATH\Views\admin\student_credentials\shs_form.php on line 190.
+ 1 APPPATH\Views\admin\student_credentials\shs_form.php(190): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\admin\\student_credentials\\shs_form.php', 190)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_credentials\\shs_form.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_credentials/shs_form', [], true)
+ 5 APPPATH\Controllers\PreEnrolled.php(308): view('admin/student_credentials/shs_form', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->download_form()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 02:41:29 --> Undefined variable $user_data
+in APPPATH\Views\admin\student_credentials\shs_form.php on line 560.
+ 1 APPPATH\Views\admin\student_credentials\shs_form.php(560): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user_data', 'APPPATH\\Views\\admin\\student_credentials\\shs_form.php', 560)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_credentials\\shs_form.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_credentials/shs_form', [], true)
+ 5 APPPATH\Controllers\PreEnrolled.php(308): view('admin/student_credentials/shs_form', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->download_form()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 02:41:48 --> Undefined variable $user_data
+in APPPATH\Views\admin\student_credentials\shs_form.php on line 560.
+ 1 APPPATH\Views\admin\student_credentials\shs_form.php(560): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user_data', 'APPPATH\\Views\\admin\\student_credentials\\shs_form.php', 560)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_credentials\\shs_form.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_credentials/shs_form', [], true)
+ 5 APPPATH\Controllers\PreEnrolled.php(308): view('admin/student_credentials/shs_form', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->download_form()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 02:41:58 --> Undefined array key "title"
+in APPPATH\Views\admin\student_credentials\shs_form.php on line 581.
+ 1 APPPATH\Views\admin\student_credentials\shs_form.php(581): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "title"', 'APPPATH\\Views\\admin\\student_credentials\\shs_form.php', 581)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_credentials\\shs_form.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_credentials/shs_form', [], true)
+ 5 APPPATH\Controllers\PreEnrolled.php(308): view('admin/student_credentials/shs_form', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->download_form()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 02:45:15 --> Undefined array key "usertype"
+in APPPATH\Controllers\PreEnrolled.php on line 308.
+ 1 APPPATH\Controllers\PreEnrolled.php(308): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "usertype"', 'APPPATH\\Controllers\\PreEnrolled.php', 308)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->download_form()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 02:47:46 --> Undefined array key "title"
+in APPPATH\Views\admin\student_credentials\college_form.php on line 116.
+ 1 APPPATH\Views\admin\student_credentials\college_form.php(116): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "title"', 'APPPATH\\Views\\admin\\student_credentials\\college_form.php', 116)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_credentials\\college_form.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_credentials/college_form', [], true)
+ 5 APPPATH\Controllers\PreEnrolled.php(306): view('admin/student_credentials/college_form', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->download_form()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 02:52:55 --> Undefined variable $user_data
+in APPPATH\Views\admin\student_credentials\college_form.php on line 148.
+ 1 APPPATH\Views\admin\student_credentials\college_form.php(148): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user_data', 'APPPATH\\Views\\admin\\student_credentials\\college_form.php', 148)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_credentials\\college_form.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_credentials/college_form', [], true)
+ 5 APPPATH\Controllers\PreEnrolled.php(307): view('admin/student_credentials/college_form', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->download_form()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 02:53:18 --> Undefined variable $userdatum
+in APPPATH\Views\admin\student_credentials\college_form.php on line 148.
+ 1 APPPATH\Views\admin\student_credentials\college_form.php(148): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userdatum', 'APPPATH\\Views\\admin\\student_credentials\\college_form.php', 148)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_credentials\\college_form.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_credentials/college_form', [], true)
+ 5 APPPATH\Controllers\PreEnrolled.php(307): view('admin/student_credentials/college_form', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->download_form()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 02:53:37 --> Undefined array key "subject_id"
+in APPPATH\Views\admin\student_credentials\college_form.php on line 148.
+ 1 APPPATH\Views\admin\student_credentials\college_form.php(148): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "subject_id"', 'APPPATH\\Views\\admin\\student_credentials\\college_form.php', 148)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_credentials\\college_form.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_credentials/college_form', [], true)
+ 5 APPPATH\Controllers\PreEnrolled.php(307): view('admin/student_credentials/college_form', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->download_form()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 02:54:18 --> Undefined variable $subject
+in APPPATH\Views\admin\student_credentials\college_form.php on line 149.
+ 1 APPPATH\Views\admin\student_credentials\college_form.php(149): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $subject', 'APPPATH\\Views\\admin\\student_credentials\\college_form.php', 149)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_credentials\\college_form.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_credentials/college_form', [], true)
+ 5 APPPATH\Controllers\PreEnrolled.php(308): view('admin/student_credentials/college_form', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->download_form()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 02:55:08 --> Undefined variable $registrar
+in APPPATH\Views\admin\student_credentials\college_form.php on line 182.
+ 1 APPPATH\Views\admin\student_credentials\college_form.php(182): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $registrar', 'APPPATH\\Views\\admin\\student_credentials\\college_form.php', 182)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_credentials\\college_form.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_credentials/college_form', [], true)
+ 5 APPPATH\Controllers\PreEnrolled.php(312): view('admin/student_credentials/college_form', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->download_form()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 03:00:36 --> Trying to access array offset on value of type null
+in APPPATH\Views\admin\section\schedule\Schedule11.php on line 408.
+ 1 APPPATH\Views\admin\section\schedule\Schedule11.php(408): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\admin\\section\\schedule\\Schedule11.php', 408)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\section\\schedule\\Schedule11.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/section/schedule/Schedule11', [], true)
+ 5 APPPATH\Controllers\Section.php(89): view('admin/section/schedule/Schedule11', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jpg')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 03:00:42 --> Trying to access array offset on value of type null
+in APPPATH\Views\admin\section\schedule\Schedule11.php on line 408.
+ 1 APPPATH\Views\admin\section\schedule\Schedule11.php(408): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\admin\\section\\schedule\\Schedule11.php', 408)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\section\\schedule\\Schedule11.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/section/schedule/Schedule11', [], true)
+ 5 APPPATH\Controllers\Section.php(89): view('admin/section/schedule/Schedule11', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jpg')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 03:00:49 --> Trying to access array offset on value of type null
+in APPPATH\Views\admin\section\schedule\Schedule11.php on line 408.
+ 1 APPPATH\Views\admin\section\schedule\Schedule11.php(408): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\admin\\section\\schedule\\Schedule11.php', 408)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\section\\schedule\\Schedule11.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/section/schedule/Schedule11', [], true)
+ 5 APPPATH\Controllers\Section.php(89): view('admin/section/schedule/Schedule11', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jpg')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 03:00:54 --> Trying to access array offset on value of type null
+in APPPATH\Views\admin\section\schedule\Schedule11.php on line 408.
+ 1 APPPATH\Views\admin\section\schedule\Schedule11.php(408): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\admin\\section\\schedule\\Schedule11.php', 408)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\section\\schedule\\Schedule11.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/section/schedule/Schedule11', [], true)
+ 5 APPPATH\Controllers\Section.php(89): view('admin/section/schedule/Schedule11', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jpg')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 03:00:59 --> Trying to access array offset on value of type null
+in APPPATH\Views\admin\section\schedule\Schedule11.php on line 408.
+ 1 APPPATH\Views\admin\section\schedule\Schedule11.php(408): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\admin\\section\\schedule\\Schedule11.php', 408)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\section\\schedule\\Schedule11.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/section/schedule/Schedule11', [], true)
+ 5 APPPATH\Controllers\Section.php(89): view('admin/section/schedule/Schedule11', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jpg')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 03:01:04 --> Trying to access array offset on value of type null
+in APPPATH\Views\admin\section\schedule\Schedule11.php on line 408.
+ 1 APPPATH\Views\admin\section\schedule\Schedule11.php(408): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\admin\\section\\schedule\\Schedule11.php', 408)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\section\\schedule\\Schedule11.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/section/schedule/Schedule11', [], true)
+ 5 APPPATH\Controllers\Section.php(89): view('admin/section/schedule/Schedule11', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jpg')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 03:01:12 --> Trying to access array offset on value of type null
+in APPPATH\Views\admin\section\schedule\Schedule11.php on line 408.
+ 1 APPPATH\Views\admin\section\schedule\Schedule11.php(408): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\admin\\section\\schedule\\Schedule11.php', 408)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\section\\schedule\\Schedule11.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/section/schedule/Schedule11', [], true)
+ 5 APPPATH\Controllers\Section.php(89): view('admin/section/schedule/Schedule11', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jpg')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 03:01:17 --> Trying to access array offset on value of type null
+in APPPATH\Views\admin\section\schedule\Schedule11.php on line 408.
+ 1 APPPATH\Views\admin\section\schedule\Schedule11.php(408): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\admin\\section\\schedule\\Schedule11.php', 408)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\section\\schedule\\Schedule11.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/section/schedule/Schedule11', [], true)
+ 5 APPPATH\Controllers\Section.php(89): view('admin/section/schedule/Schedule11', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jpg')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 03:01:22 --> Trying to access array offset on value of type null
+in APPPATH\Views\admin\section\schedule\Schedule11.php on line 408.
+ 1 APPPATH\Views\admin\section\schedule\Schedule11.php(408): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\admin\\section\\schedule\\Schedule11.php', 408)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\section\\schedule\\Schedule11.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/section/schedule/Schedule11', [], true)
+ 5 APPPATH\Controllers\Section.php(89): view('admin/section/schedule/Schedule11', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jpg')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 06:26:39 --> Trying to access array offset on value of type null
+in APPPATH\Views\admin\section\schedule\Schedule11.php on line 408.
+ 1 APPPATH\Views\admin\section\schedule\Schedule11.php(408): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\admin\\section\\schedule\\Schedule11.php', 408)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\section\\schedule\\Schedule11.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/section/schedule/Schedule11', [], true)
+ 5 APPPATH\Controllers\Section.php(89): view('admin/section/schedule/Schedule11', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jpg')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 06:26:44 --> Trying to access array offset on value of type null
+in APPPATH\Views\admin\section\schedule\Schedule11.php on line 408.
+ 1 APPPATH\Views\admin\section\schedule\Schedule11.php(408): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\admin\\section\\schedule\\Schedule11.php', 408)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\section\\schedule\\Schedule11.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/section/schedule/Schedule11', [], true)
+ 5 APPPATH\Controllers\Section.php(89): view('admin/section/schedule/Schedule11', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jpg')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 06:26:48 --> Trying to access array offset on value of type null
+in APPPATH\Views\admin\section\schedule\Schedule11.php on line 408.
+ 1 APPPATH\Views\admin\section\schedule\Schedule11.php(408): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\admin\\section\\schedule\\Schedule11.php', 408)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\section\\schedule\\Schedule11.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/section/schedule/Schedule11', [], true)
+ 5 APPPATH\Controllers\Section.php(89): view('admin/section/schedule/Schedule11', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jpg')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 06:26:54 --> Trying to access array offset on value of type null
+in APPPATH\Views\admin\section\schedule\Schedule11.php on line 408.
+ 1 APPPATH\Views\admin\section\schedule\Schedule11.php(408): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\admin\\section\\schedule\\Schedule11.php', 408)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\section\\schedule\\Schedule11.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/section/schedule/Schedule11', [], true)
+ 5 APPPATH\Controllers\Section.php(89): view('admin/section/schedule/Schedule11', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jpg')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 06:26:58 --> Trying to access array offset on value of type null
+in APPPATH\Views\admin\section\schedule\Schedule11.php on line 408.
+ 1 APPPATH\Views\admin\section\schedule\Schedule11.php(408): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\admin\\section\\schedule\\Schedule11.php', 408)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\section\\schedule\\Schedule11.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/section/schedule/Schedule11', [], true)
+ 5 APPPATH\Controllers\Section.php(89): view('admin/section/schedule/Schedule11', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jpg')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-09 06:28:43 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
+AND `student_registration`.`year` = '2023-2024'
+AND `student_registration`....' at line 12 in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `stud...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `stud...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `stud...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `stud...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\Teacher.php(142): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard('1st-Year')
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-07-09 06:28:43 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
+AND `student_registration`.`year` = '2023-2024'
+AND `student_registration`....' at line 12
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `student_registration`.`id`, `prospectrus_tbl`.`id` as `prospectus_id`, `student_registration`.`lrn` as `stud_lrn`, `student_grading`.`id` as `stud_id`, `student_grading`.`subject_id` as `sub_id`, `prospectrus_tbl`.`id` as `pros_id`, `schedule_tbl`.`subject_id` as `sched_id`
+FROM `student_registration`
+INNER JOIN `schedule_tbl` ON `student_registration`.`user_section` = `schedule_tbl`.`section_id`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+LEFT JOIN `student_grading` ON `student_registration`.`lrn` = `student_grading`.`lrn`
+INNER JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+INNER JOIN `prospectrus_tbl` ON `strand_tbl`.`id` = `prospectrus_tbl`.`strand_id`
+INNER JOIN `user_tbl` ON `student_registration`.`lrn` = `user_tbl`.`lrn`
+WHERE `section_tbl`.`year_level` = \'1st Year\'
+AND `student_registration`.`strand` = \'ABH\'
+AND `prospectrus_tbl`.`id` IN (NULL)
+AND `student_registration`.`lrn` IN ()
+AND `student_registration`.`year` = \'2023-2024\'
+AND `student_registration`.`semester` = \'1st Semester\'
+AND `student_registration`.`state` = \'Enrolled\'
+GROUP BY `student_registration`.`lrn`
+ORDER BY `user_tbl`.`lastname` ASC, `section_tbl`.`section` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `student_registration`.`id`, `prospectrus_tbl`.`id` as `prospectus_id`, `student_registration`.`lrn` as `stud_lrn`, `student_grading`.`id` as `stud_id`, `student_grading`.`subject_id` as `sub_id`, `prospectrus_tbl`.`id` as `pros_id`, `schedule_tbl`.`subject_id` as `sched_id`
+FROM `student_registration`
+INNER JOIN `schedule_tbl` ON `student_registration`.`user_section` = `schedule_tbl`.`section_id`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+LEFT JOIN `student_grading` ON `student_registration`.`lrn` = `student_grading`.`lrn`
+INNER JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+INNER JOIN `prospectrus_tbl` ON `strand_tbl`.`id` = `prospectrus_tbl`.`strand_id`
+INNER JOIN `user_tbl` ON `student_registration`.`lrn` = `user_tbl`.`lrn`
+WHERE `section_tbl`.`year_level` = \'1st Year\'
+AND `student_registration`.`strand` = \'ABH\'
+AND `prospectrus_tbl`.`id` IN (NULL)
+AND `student_registration`.`lrn` IN ()
+AND `student_registration`.`year` = \'2023-2024\'
+AND `student_registration`.`semester` = \'1st Semester\'
+AND `student_registration`.`state` = \'Enrolled\'
+GROUP BY `student_registration`.`lrn`
+ORDER BY `user_tbl`.`lastname` ASC, `section_tbl`.`section` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `student_registration`.`id`, `prospectrus_tbl`.`id` as `prospectus_id`, `student_registration`.`lrn` as `stud_lrn`, `student_grading`.`id` as `stud_id`, `student_grading`.`subject_id` as `sub_id`, `prospectrus_tbl`.`id` as `pros_id`, `schedule_tbl`.`subject_id` as `sched_id`
+FROM `student_registration`
+INNER JOIN `schedule_tbl` ON `student_registration`.`user_section` = `schedule_tbl`.`section_id`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+LEFT JOIN `student_grading` ON `student_registration`.`lrn` = `student_grading`.`lrn`
+INNER JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+INNER JOIN `prospectrus_tbl` ON `strand_tbl`.`id` = `prospectrus_tbl`.`strand_id`
+INNER JOIN `user_tbl` ON `student_registration`.`lrn` = `user_tbl`.`lrn`
+WHERE `section_tbl`.`year_level` = \'1st Year\'
+AND `student_registration`.`strand` = \'ABH\'
+AND `prospectrus_tbl`.`id` IN (NULL)
+AND `student_registration`.`lrn` IN ()
+AND `student_registration`.`year` = \'2023-2024\'
+AND `student_registration`.`semester` = \'1st Semester\'
+AND `student_registration`.`state` = \'Enrolled\'
+GROUP BY `student_registration`.`lrn`
+ORDER BY `user_tbl`.`lastname` ASC, `section_tbl`.`section` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `student_registration`.`id`, `prospectrus_tbl`.`id` as `prospectus_id`, `student_registration`.`lrn` as `stud_lrn`, `student_grading`.`id` as `stud_id`, `student_grading`.`subject_id` as `sub_id`, `prospectrus_tbl`.`id` as `pros_id`, `schedule_tbl`.`subject_id` as `sched_id`
+FROM `student_registration`
+INNER JOIN `schedule_tbl` ON `student_registration`.`user_section` = `schedule_tbl`.`section_id`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+LEFT JOIN `student_grading` ON `student_registration`.`lrn` = `student_grading`.`lrn`
+INNER JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+INNER JOIN `prospectrus_tbl` ON `strand_tbl`.`id` = `prospectrus_tbl`.`strand_id`
+INNER JOIN `user_tbl` ON `student_registration`.`lrn` = `user_tbl`.`lrn`
+WHERE `section_tbl`.`year_level` = :section_tbl.year_level:
+AND `student_registration`.`strand` = :student_registration.strand:
+AND `prospectrus_tbl`.`id` IN :prospectrus_tbl.id:
+AND `student_registration`.`lrn` IN :student_registration.lrn:
+AND `student_registration`.`year` = :student_registration.year:
+AND `student_registration`.`semester` = :student_registration.semester:
+AND `student_registration`.`state` = :student_registration.state:
+GROUP BY `student_registration`.`lrn`
+ORDER BY `user_tbl`.`lastname` ASC, `section_tbl`.`section` ASC', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Teacher.php(142): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard('1st-Year')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-09 06:29:12 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
+AND `student_registration`.`year` = '2023-2024'
+AND `student_registration`....' at line 12 in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `stud...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `stud...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `stud...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `stud...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\Teacher.php(142): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard('1st-Year')
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-07-09 06:29:12 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
+AND `student_registration`.`year` = '2023-2024'
+AND `student_registration`....' at line 12
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `student_registration`.`id`, `prospectrus_tbl`.`id` as `prospectus_id`, `student_registration`.`lrn` as `stud_lrn`, `student_grading`.`id` as `stud_id`, `student_grading`.`subject_id` as `sub_id`, `prospectrus_tbl`.`id` as `pros_id`, `schedule_tbl`.`subject_id` as `sched_id`
+FROM `student_registration`
+INNER JOIN `schedule_tbl` ON `student_registration`.`user_section` = `schedule_tbl`.`section_id`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+LEFT JOIN `student_grading` ON `student_registration`.`lrn` = `student_grading`.`lrn`
+INNER JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+INNER JOIN `prospectrus_tbl` ON `strand_tbl`.`id` = `prospectrus_tbl`.`strand_id`
+INNER JOIN `user_tbl` ON `student_registration`.`lrn` = `user_tbl`.`lrn`
+WHERE `section_tbl`.`year_level` = \'1st Year\'
+AND `student_registration`.`strand` = \'ABH\'
+AND `prospectrus_tbl`.`id` IN (0)
+AND `student_registration`.`lrn` IN ()
+AND `student_registration`.`year` = \'2023-2024\'
+AND `student_registration`.`semester` = \'1st Semester\'
+AND `student_registration`.`state` = \'Enrolled\'
+GROUP BY `student_registration`.`lrn`
+ORDER BY `user_tbl`.`lastname` ASC, `section_tbl`.`section` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `student_registration`.`id`, `prospectrus_tbl`.`id` as `prospectus_id`, `student_registration`.`lrn` as `stud_lrn`, `student_grading`.`id` as `stud_id`, `student_grading`.`subject_id` as `sub_id`, `prospectrus_tbl`.`id` as `pros_id`, `schedule_tbl`.`subject_id` as `sched_id`
+FROM `student_registration`
+INNER JOIN `schedule_tbl` ON `student_registration`.`user_section` = `schedule_tbl`.`section_id`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+LEFT JOIN `student_grading` ON `student_registration`.`lrn` = `student_grading`.`lrn`
+INNER JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+INNER JOIN `prospectrus_tbl` ON `strand_tbl`.`id` = `prospectrus_tbl`.`strand_id`
+INNER JOIN `user_tbl` ON `student_registration`.`lrn` = `user_tbl`.`lrn`
+WHERE `section_tbl`.`year_level` = \'1st Year\'
+AND `student_registration`.`strand` = \'ABH\'
+AND `prospectrus_tbl`.`id` IN (0)
+AND `student_registration`.`lrn` IN ()
+AND `student_registration`.`year` = \'2023-2024\'
+AND `student_registration`.`semester` = \'1st Semester\'
+AND `student_registration`.`state` = \'Enrolled\'
+GROUP BY `student_registration`.`lrn`
+ORDER BY `user_tbl`.`lastname` ASC, `section_tbl`.`section` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `student_registration`.`id`, `prospectrus_tbl`.`id` as `prospectus_id`, `student_registration`.`lrn` as `stud_lrn`, `student_grading`.`id` as `stud_id`, `student_grading`.`subject_id` as `sub_id`, `prospectrus_tbl`.`id` as `pros_id`, `schedule_tbl`.`subject_id` as `sched_id`
+FROM `student_registration`
+INNER JOIN `schedule_tbl` ON `student_registration`.`user_section` = `schedule_tbl`.`section_id`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+LEFT JOIN `student_grading` ON `student_registration`.`lrn` = `student_grading`.`lrn`
+INNER JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+INNER JOIN `prospectrus_tbl` ON `strand_tbl`.`id` = `prospectrus_tbl`.`strand_id`
+INNER JOIN `user_tbl` ON `student_registration`.`lrn` = `user_tbl`.`lrn`
+WHERE `section_tbl`.`year_level` = \'1st Year\'
+AND `student_registration`.`strand` = \'ABH\'
+AND `prospectrus_tbl`.`id` IN (0)
+AND `student_registration`.`lrn` IN ()
+AND `student_registration`.`year` = \'2023-2024\'
+AND `student_registration`.`semester` = \'1st Semester\'
+AND `student_registration`.`state` = \'Enrolled\'
+GROUP BY `student_registration`.`lrn`
+ORDER BY `user_tbl`.`lastname` ASC, `section_tbl`.`section` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `student_registration`.`id`, `prospectrus_tbl`.`id` as `prospectus_id`, `student_registration`.`lrn` as `stud_lrn`, `student_grading`.`id` as `stud_id`, `student_grading`.`subject_id` as `sub_id`, `prospectrus_tbl`.`id` as `pros_id`, `schedule_tbl`.`subject_id` as `sched_id`
+FROM `student_registration`
+INNER JOIN `schedule_tbl` ON `student_registration`.`user_section` = `schedule_tbl`.`section_id`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+LEFT JOIN `student_grading` ON `student_registration`.`lrn` = `student_grading`.`lrn`
+INNER JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+INNER JOIN `prospectrus_tbl` ON `strand_tbl`.`id` = `prospectrus_tbl`.`strand_id`
+INNER JOIN `user_tbl` ON `student_registration`.`lrn` = `user_tbl`.`lrn`
+WHERE `section_tbl`.`year_level` = :section_tbl.year_level:
+AND `student_registration`.`strand` = :student_registration.strand:
+AND `prospectrus_tbl`.`id` IN :prospectrus_tbl.id:
+AND `student_registration`.`lrn` IN :student_registration.lrn:
+AND `student_registration`.`year` = :student_registration.year:
+AND `student_registration`.`semester` = :student_registration.semester:
+AND `student_registration`.`state` = :student_registration.state:
+GROUP BY `student_registration`.`lrn`
+ORDER BY `user_tbl`.`lastname` ASC, `section_tbl`.`section` ASC', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Teacher.php(142): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard('1st-Year')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 07:18:53 --> whereIn() expects $values to be of type array or closure
+in SYSTEMPATH\Database\BaseBuilder.php on line 907.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(789): CodeIgniter\Database\BaseBuilder->_whereIn('id', null, false, 'AND ', null)
+ 2 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->whereIn('id', null)
+ 3 APPPATH\Controllers\PreEnrolled.php(348): CodeIgniter\Model->__call('whereIn', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->enroll_all()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 07:58:43 --> Trying to access array offset on value of type null
+in APPPATH\Views\user\makereq.php on line 137.
+ 1 APPPATH\Views\user\makereq.php(137): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\user\\makereq.php', 137)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\makereq.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/makereq', [], true)
+ 5 APPPATH\Controllers\Credentials.php(136): view('user/makereq', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->makereq()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 07:59:02 --> Undefined array key 0
+in APPPATH\Views\user\regSubject.php on line 138.
+ 1 APPPATH\Views\user\regSubject.php(138): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\user\\regSubject.php', 138)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\regSubject.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/regSubject', [], true)
+ 5 APPPATH\Controllers\Profile.php(668): view('user/regSubject', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-09 08:37:56 --> Trying to access array offset on value of type null
+in APPPATH\Views\admin\section\schedule\Schedule11.php on line 408.
+ 1 APPPATH\Views\admin\section\schedule\Schedule11.php(408): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\admin\\section\\schedule\\Schedule11.php', 408)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\section\\schedule\\Schedule11.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/section/schedule/Schedule11', [], true)
+ 5 APPPATH\Controllers\Section.php(89): view('admin/section/schedule/Schedule11', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jpg')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

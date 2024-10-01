@@ -1,0 +1,22 @@
+CRITICAL - 2023-06-26 01:21:12 --> Maximum execution time of 60 seconds exceeded
+in VENDORPATH\dompdf\dompdf\src\Helpers.php on line 578.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-06-26 01:22:13 --> Maximum execution time of 60 seconds exceeded
+in VENDORPATH\dompdf\dompdf\src\Helpers.php on line 578.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-06-26 02:21:27 --> Undefined variable $pdfContent
+in APPPATH\Controllers\Credentials.php on line 255.
+ 1 APPPATH\Controllers\Credentials.php(255): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pdfContent', 'APPPATH\\Controllers\\Credentials.php', 255)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->req_cred()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-26 02:35:14 --> Undefined variable $pdfContent
+in APPPATH\Controllers\Credentials.php on line 255.
+ 1 APPPATH\Controllers\Credentials.php(255): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pdfContent', 'APPPATH\\Controllers\\Credentials.php', 255)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->req_cred()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

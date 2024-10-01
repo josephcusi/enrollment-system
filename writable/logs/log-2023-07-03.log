@@ -1,0 +1,1590 @@
+CRITICAL - 2023-07-03 01:58:35 --> usort(): Returning bool from comparison function is deprecated, return an integer less than, equal to, or greater than zero
+in APPPATH\Views\user\viewSchedule.php on line 199.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'usort(): Returning bool from comparison function is deprecated, return an integer less than, equal to, or greater than zero', 'APPPATH\\Views\\user\\viewSchedule.php', 199)
+ 2 APPPATH\Views\user\viewSchedule.php(199): usort([...], 'compareStrTue')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 6 APPPATH\Controllers\UserSchedule.php(62): view('user/viewSchedule', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 01:58:49 --> sort(): Argument #2 ($flags) must be of type int, string given
+in APPPATH\Views\user\viewSchedule.php on line 199.
+ 1 APPPATH\Views\user\viewSchedule.php(199): sort([...], 'compareStrTue')
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(62): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 01:59:45 --> sort(): Argument #2 ($flags) must be of type int, string given
+in APPPATH\Views\user\viewSchedule.php on line 199.
+ 1 APPPATH\Views\user\viewSchedule.php(199): sort([...], 'compareStrTue')
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(62): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 02:00:05 --> Undefined variable $time
+in APPPATH\Views\user\viewSchedule.php on line 200.
+ 1 APPPATH\Views\user\viewSchedule.php(200): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $time', 'APPPATH\\Views\\user\\viewSchedule.php', 200)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(62): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 02:01:02 --> Undefined variable $time
+in APPPATH\Views\user\viewSchedule.php on line 203.
+ 1 APPPATH\Views\user\viewSchedule.php(203): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $time', 'APPPATH\\Views\\user\\viewSchedule.php', 203)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(62): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 02:05:14 --> sort(): Argument #2 ($flags) must be of type int, string given
+in APPPATH\Views\user\viewSchedule.php on line 199.
+ 1 APPPATH\Views\user\viewSchedule.php(199): sort([...], 'compareStrTue')
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(62): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 02:05:29 --> sort(): Argument #2 ($flags) must be of type int, string given
+in APPPATH\Views\user\viewSchedule.php on line 199.
+ 1 APPPATH\Views\user\viewSchedule.php(199): sort([...], 'compareStrTue')
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(62): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 02:06:39 --> Undefined variable $stdnt_sjct
+in APPPATH\Views\user\viewSchedule.php on line 199.
+ 1 APPPATH\Views\user\viewSchedule.php(199): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $stdnt_sjct', 'APPPATH\\Views\\user\\viewSchedule.php', 199)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(62): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 02:06:59 --> usort(): Argument #1 ($array) must be of type array, null given
+in APPPATH\Views\user\viewSchedule.php on line 199.
+ 1 APPPATH\Views\user\viewSchedule.php(199): usort(null, 'compareStrTue')
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(62): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 02:07:15 --> Undefined variable $a
+in APPPATH\Views\user\viewSchedule.php on line 195.
+ 1 APPPATH\Views\user\viewSchedule.php(195): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $a', 'APPPATH\\Views\\user\\viewSchedule.php', 195)
+ 2 [internal function]: compareStrTue([...], [...])
+ 3 APPPATH\Views\user\viewSchedule.php(199): usort([...], 'compareStrTue')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 7 APPPATH\Controllers\UserSchedule.php(62): view('user/viewSchedule', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 02:09:54 --> Cannot redeclare compareStrTue() (previously declared in C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\app\Views\user\viewSchedule.php:200)
+in APPPATH\Views\user\viewSchedule.php on line 200.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-07-03 02:10:24 --> Cannot redeclare compareStrTue() (previously declared in C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\app\Views\user\viewSchedule.php:200)
+in APPPATH\Views\user\viewSchedule.php on line 200.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-07-03 02:11:46 --> usort(): Argument #2 ($callback) must be a valid callback, function "compareStrTue" not found or invalid function name
+in APPPATH\Views\user\viewSchedule.php on line 205.
+ 1 APPPATH\Views\user\viewSchedule.php(205): usort([...], 'compareStrTue')
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(62): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 02:11:55 --> usort() expects exactly 2 arguments, 1 given
+in APPPATH\Views\user\viewSchedule.php on line 205.
+ 1 APPPATH\Views\user\viewSchedule.php(205): usort([...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(62): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 02:12:14 --> usort(): Argument #1 ($array) must be of type array, string given
+in APPPATH\Views\user\viewSchedule.php on line 205.
+ 1 APPPATH\Views\user\viewSchedule.php(205): usort('07:00', '07:00')
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(62): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 02:12:57 --> usort(): Argument #1 ($array) must be of type array, string given
+in APPPATH\Views\user\viewSchedule.php on line 201.
+ 1 APPPATH\Views\user\viewSchedule.php(201): usort('07:00', 'compareStrTue')
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(62): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 05:39:57 --> usort(): Argument #1 ($array) must be of type array, string given
+in APPPATH\Views\user\viewSchedule.php on line 205.
+ 1 APPPATH\Views\user\viewSchedule.php(205): usort('07:00', '07:00')
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(62): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 05:40:32 --> strtotime() expects at least 1 argument, 0 given
+in APPPATH\Views\user\viewSchedule.php on line 205.
+ 1 APPPATH\Views\user\viewSchedule.php(205): strtotime()
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(62): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 05:40:56 --> usort(): Argument #2 ($callback) must be a valid callback, no array or string given
+in APPPATH\Views\user\viewSchedule.php on line 205.
+ 1 APPPATH\Views\user\viewSchedule.php(205): usort([...], 0)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(62): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 05:47:56 --> usort(): Argument #2 ($callback) must be a valid callback, no array or string given
+in APPPATH\Views\user\viewSchedule.php on line 205.
+ 1 APPPATH\Views\user\viewSchedule.php(205): usort([...], 0)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(62): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 05:48:47 --> usort(): Argument #1 ($array) must be of type array, string given
+in APPPATH\Views\user\viewSchedule.php on line 203.
+ 1 APPPATH\Views\user\viewSchedule.php(203): usort('07:00', Object(Closure))
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(62): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 05:50:11 --> usort(): Argument #1 ($array) must be of type array, string given
+in APPPATH\Views\user\viewSchedule.php on line 199.
+ 1 APPPATH\Views\user\viewSchedule.php(199): usort('07:00', Object(Closure))
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(62): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 05:50:28 --> usort(): Argument #1 ($array) must be of type array, null given
+in APPPATH\Views\user\viewSchedule.php on line 197.
+ 1 APPPATH\Views\user\viewSchedule.php(197): usort(null, Object(Closure))
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(62): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 05:54:32 --> Undefined array key "id"
+in APPPATH\Views\user\viewSchedule.php on line 199.
+ 1 APPPATH\Views\user\viewSchedule.php(199): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'APPPATH\\Views\\user\\viewSchedule.php', 199)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(62): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 05:55:39 --> Undefined array key "subject_id"
+in APPPATH\Views\user\viewSchedule.php on line 199.
+ 1 APPPATH\Views\user\viewSchedule.php(199): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "subject_id"', 'APPPATH\\Views\\user\\viewSchedule.php', 199)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(62): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 05:55:51 --> Undefined array key "id"
+in APPPATH\Views\user\viewSchedule.php on line 199.
+ 1 APPPATH\Views\user\viewSchedule.php(199): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'APPPATH\\Views\\user\\viewSchedule.php', 199)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(62): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 05:58:25 --> usort(): Argument #1 ($array) must be of type array, string given
+in APPPATH\Views\user\viewSchedule.php on line 197.
+ 1 APPPATH\Views\user\viewSchedule.php(197): usort('07:00', Object(Closure))
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(62): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 05:58:46 --> Cannot access offset of type string on string
+in APPPATH\Views\user\viewSchedule.php on line 196.
+ 1 [internal function]: CodeIgniter\View\View->{closure}('Reynaldo  Panopio, LPT, MAEd', '07:00')
+ 2 APPPATH\Views\user\viewSchedule.php(197): usort([...], Object(Closure))
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 6 APPPATH\Controllers\UserSchedule.php(62): view('user/viewSchedule', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 06:03:18 --> usort(): Argument #1 ($array) must be of type array, null given
+in APPPATH\Views\user\viewSchedule.php on line 200.
+ 1 APPPATH\Views\user\viewSchedule.php(200): usort(null, Object(Closure))
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(62): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 06:05:42 --> Undefined array key "startMonA"
+in APPPATH\Controllers\UserSchedule.php on line 75.
+ 1 APPPATH\Controllers\UserSchedule.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "startMonA"', 'APPPATH\\Controllers\\UserSchedule.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 06:06:13 --> Undefined variable $startMonA
+in APPPATH\Controllers\UserSchedule.php on line 75.
+ 1 APPPATH\Controllers\UserSchedule.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $startMonA', 'APPPATH\\Controllers\\UserSchedule.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 06:06:15 --> Undefined variable $startMonA
+in APPPATH\Controllers\UserSchedule.php on line 75.
+ 1 APPPATH\Controllers\UserSchedule.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $startMonA', 'APPPATH\\Controllers\\UserSchedule.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 06:10:37 --> usort(): Argument #1 ($array) must be of type array, null given
+in APPPATH\Views\user\viewSchedule.php on line 302.
+ 1 APPPATH\Views\user\viewSchedule.php(302): usort(null, Object(Closure))
+ 2 APPPATH\Views\user\viewSchedule.php(204): formatTime('07:00')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 6 APPPATH\Controllers\UserSchedule.php(62): view('user/viewSchedule', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 06:13:53 --> usort(): Argument #1 ($array) must be of type array, string given
+in APPPATH\Views\user\viewSchedule.php on line 304.
+ 1 APPPATH\Views\user\viewSchedule.php(304): usort('07:00', Object(Closure))
+ 2 APPPATH\Views\user\viewSchedule.php(204): formatTime('07:00')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 6 APPPATH\Controllers\UserSchedule.php(62): view('user/viewSchedule', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 06:14:32 --> usort(): Argument #1 ($array) must be of type array, string given
+in APPPATH\Views\user\viewSchedule.php on line 303.
+ 1 APPPATH\Views\user\viewSchedule.php(303): usort('07:00', Object(Closure))
+ 2 APPPATH\Views\user\viewSchedule.php(204): formatTime('07:00')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 6 APPPATH\Controllers\UserSchedule.php(62): view('user/viewSchedule', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 06:15:01 --> usort(): Argument #1 ($array) must be of type array, string given
+in APPPATH\Views\user\viewSchedule.php on line 303.
+ 1 APPPATH\Views\user\viewSchedule.php(303): usort('07:00', Object(Closure))
+ 2 APPPATH\Views\user\viewSchedule.php(204): formatTime('07:00')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 6 APPPATH\Controllers\UserSchedule.php(62): view('user/viewSchedule', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 06:15:29 --> usort(): Argument #1 ($array) must be of type array, string given
+in APPPATH\Views\user\viewSchedule.php on line 303.
+ 1 APPPATH\Views\user\viewSchedule.php(303): usort('07:00', Object(Closure))
+ 2 APPPATH\Views\user\viewSchedule.php(204): formatTime('07:00')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 6 APPPATH\Controllers\UserSchedule.php(62): view('user/viewSchedule', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 06:16:20 --> usort(): Argument #1 ($array) must be of type array, string given
+in APPPATH\Views\user\viewSchedule.php on line 303.
+ 1 APPPATH\Views\user\viewSchedule.php(303): usort('07:00', Object(Closure))
+ 2 APPPATH\Views\user\viewSchedule.php(204): formatTime('07:00')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 6 APPPATH\Controllers\UserSchedule.php(62): view('user/viewSchedule', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 06:18:57 --> usort(): Argument #1 ($array) must be of type array, string given
+in APPPATH\Views\user\viewSchedule.php on line 303.
+ 1 APPPATH\Views\user\viewSchedule.php(303): usort('07:00', Object(Closure))
+ 2 APPPATH\Views\user\viewSchedule.php(204): formatTime('07:00')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 6 APPPATH\Controllers\UserSchedule.php(62): view('user/viewSchedule', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 06:19:33 --> Array to string conversion
+in APPPATH\Views\user\viewSchedule.php on line 204.
+ 1 APPPATH\Views\user\viewSchedule.php(204): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\user\\viewSchedule.php', 204)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(62): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 06:20:04 --> Array to string conversion
+in APPPATH\Views\user\viewSchedule.php on line 204.
+ 1 APPPATH\Views\user\viewSchedule.php(204): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\user\\viewSchedule.php', 204)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(62): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 06:20:48 --> usort(): Argument #1 ($array) must be of type array, string given
+in APPPATH\Views\user\viewSchedule.php on line 303.
+ 1 APPPATH\Views\user\viewSchedule.php(303): usort('07:00', Object(Closure))
+ 2 APPPATH\Views\user\viewSchedule.php(204): formatTime('07:00')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 6 APPPATH\Controllers\UserSchedule.php(62): view('user/viewSchedule', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 06:21:06 --> Array to string conversion
+in APPPATH\Views\user\viewSchedule.php on line 204.
+ 1 APPPATH\Views\user\viewSchedule.php(204): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\user\\viewSchedule.php', 204)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(62): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 06:21:26 --> Call to undefined function formatTime()
+in APPPATH\Views\user\viewSchedule.php on line 204.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 4 APPPATH\Controllers\UserSchedule.php(62): view('user/viewSchedule', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 06:21:57 --> Array to string conversion
+in APPPATH\Views\user\viewSchedule.php on line 204.
+ 1 APPPATH\Views\user\viewSchedule.php(204): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\user\\viewSchedule.php', 204)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(62): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 06:22:50 --> Undefined variable $timeA
+in APPPATH\Views\user\viewSchedule.php on line 317.
+ 1 APPPATH\Views\user\viewSchedule.php(317): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $timeA', 'APPPATH\\Views\\user\\viewSchedule.php', 317)
+ 2 APPPATH\Views\user\viewSchedule.php(204): formatTime([...])
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 6 APPPATH\Controllers\UserSchedule.php(62): view('user/viewSchedule', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 06:25:03 --> Undefined array key "str_sat"
+in APPPATH\Views\user\viewSchedule.php on line 319.
+ 1 APPPATH\Views\user\viewSchedule.php(319): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "str_sat"', 'APPPATH\\Views\\user\\viewSchedule.php', 319)
+ 2 [internal function]: {closure}('fri', 'sat')
+ 3 APPPATH\Views\user\viewSchedule.php(321): usort([...], Object(Closure))
+ 4 APPPATH\Views\user\viewSchedule.php(199): hasNoData([...])
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 8 APPPATH\Controllers\UserSchedule.php(62): view('user/viewSchedule', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 06:47:13 --> Undefined array key "teacher_id"
+in APPPATH\Views\user\viewSchedule.php on line 197.
+ 1 APPPATH\Views\user\viewSchedule.php(197): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "teacher_id"', 'APPPATH\\Views\\user\\viewSchedule.php', 197)
+ 2 [internal function]: compareStrMon([...], [...])
+ 3 APPPATH\Views\user\viewSchedule.php(201): usort([...], 'compareStrMon')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 7 APPPATH\Controllers\UserSchedule.php(62): view('user/viewSchedule', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 06:47:38 --> Undefined array key "end_tuesday"
+in APPPATH\Views\user\viewSchedule.php on line 197.
+ 1 APPPATH\Views\user\viewSchedule.php(197): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "end_tuesday"', 'APPPATH\\Views\\user\\viewSchedule.php', 197)
+ 2 [internal function]: compareStrMon([...], [...])
+ 3 APPPATH\Views\user\viewSchedule.php(201): usort([...], 'compareStrMon')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 7 APPPATH\Controllers\UserSchedule.php(62): view('user/viewSchedule', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 06:53:08 --> Undefined array key "subject_id"
+in APPPATH\Controllers\UserSchedule.php on line 50.
+ 1 APPPATH\Controllers\UserSchedule.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "subject_id"', 'APPPATH\\Controllers\\UserSchedule.php', 50)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 07:01:23 --> Undefined array key 0
+in APPPATH\Views\user\viewSchedule.php on line 133.
+ 1 APPPATH\Views\user\viewSchedule.php(133): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\user\\viewSchedule.php', 133)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(61): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 07:04:00 --> Undefined array key "subject_id"
+in APPPATH\Views\user\viewSchedule.php on line 229.
+ 1 APPPATH\Views\user\viewSchedule.php(229): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "subject_id"', 'APPPATH\\Views\\user\\viewSchedule.php', 229)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(61): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 07:04:13 --> Array to string conversion
+in APPPATH\Views\user\viewSchedule.php on line 229.
+ 1 APPPATH\Views\user\viewSchedule.php(229): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\user\\viewSchedule.php', 229)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(61): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 07:04:18 --> Array to string conversion
+in APPPATH\Views\user\viewSchedule.php on line 229.
+ 1 APPPATH\Views\user\viewSchedule.php(229): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\user\\viewSchedule.php', 229)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(61): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 07:05:42 --> Undefined array key "subject_id"
+in APPPATH\Views\user\viewSchedule.php on line 229.
+ 1 APPPATH\Views\user\viewSchedule.php(229): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "subject_id"', 'APPPATH\\Views\\user\\viewSchedule.php', 229)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(61): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 07:06:15 --> Undefined array key "subject"
+in APPPATH\Views\user\viewSchedule.php on line 229.
+ 1 APPPATH\Views\user\viewSchedule.php(229): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "subject"', 'APPPATH\\Views\\user\\viewSchedule.php', 229)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(61): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 07:11:47 --> Undefined array key "subject"
+in APPPATH\Views\user\viewSchedule.php on line 229.
+ 1 APPPATH\Views\user\viewSchedule.php(229): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "subject"', 'APPPATH\\Views\\user\\viewSchedule.php', 229)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(61): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 07:11:56 --> Undefined array key 10
+in APPPATH\Views\user\viewSchedule.php on line 207.
+ 1 APPPATH\Views\user\viewSchedule.php(207): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 10', 'APPPATH\\Views\\user\\viewSchedule.php', 207)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(61): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 07:12:12 --> Uninitialized string offset 1
+in APPPATH\Views\user\viewSchedule.php on line 207.
+ 1 APPPATH\Views\user\viewSchedule.php(207): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Uninitialized string offset 1', 'APPPATH\\Views\\user\\viewSchedule.php', 207)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(61): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 07:14:01 --> Undefined array key "subject_id"
+in APPPATH\Views\user\viewSchedule.php on line 229.
+ 1 APPPATH\Views\user\viewSchedule.php(229): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "subject_id"', 'APPPATH\\Views\\user\\viewSchedule.php', 229)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(61): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 07:14:18 --> Undefined array key "subject_id"
+in APPPATH\Views\user\viewSchedule.php on line 229.
+ 1 APPPATH\Views\user\viewSchedule.php(229): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "subject_id"', 'APPPATH\\Views\\user\\viewSchedule.php', 229)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(61): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 07:14:29 --> Undefined array key "id"
+in APPPATH\Views\user\viewSchedule.php on line 229.
+ 1 APPPATH\Views\user\viewSchedule.php(229): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'APPPATH\\Views\\user\\viewSchedule.php', 229)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(61): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 07:14:37 --> Undefined array key "subject"
+in APPPATH\Views\user\viewSchedule.php on line 229.
+ 1 APPPATH\Views\user\viewSchedule.php(229): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "subject"', 'APPPATH\\Views\\user\\viewSchedule.php', 229)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(61): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 07:14:51 --> Array to string conversion
+in APPPATH\Views\user\viewSchedule.php on line 229.
+ 1 APPPATH\Views\user\viewSchedule.php(229): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\user\\viewSchedule.php', 229)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(61): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 07:15:05 --> Array to string conversion
+in APPPATH\Views\user\viewSchedule.php on line 229.
+ 1 APPPATH\Views\user\viewSchedule.php(229): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\user\\viewSchedule.php', 229)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(61): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 07:15:19 --> Undefined array key "GE 3"
+in APPPATH\Views\user\viewSchedule.php on line 229.
+ 1 APPPATH\Views\user\viewSchedule.php(229): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "GE 3"', 'APPPATH\\Views\\user\\viewSchedule.php', 229)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(61): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 07:17:53 --> Undefined array key "GE 3"
+in APPPATH\Views\user\viewSchedule.php on line 230.
+ 1 APPPATH\Views\user\viewSchedule.php(230): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "GE 3"', 'APPPATH\\Views\\user\\viewSchedule.php', 230)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(61): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 07:19:15 --> Undefined variable $sub
+in APPPATH\Views\user\viewSchedule.php on line 207.
+ 1 APPPATH\Views\user\viewSchedule.php(207): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sub', 'APPPATH\\Views\\user\\viewSchedule.php', 207)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(61): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 07:24:35 --> Undefined array key "GE 3"
+in APPPATH\Views\user\viewSchedule.php on line 229.
+ 1 APPPATH\Views\user\viewSchedule.php(229): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "GE 3"', 'APPPATH\\Views\\user\\viewSchedule.php', 229)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(61): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 07:26:23 --> Undefined array key "subject"
+in APPPATH\Views\user\viewSchedule.php on line 229.
+ 1 APPPATH\Views\user\viewSchedule.php(229): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "subject"', 'APPPATH\\Views\\user\\viewSchedule.php', 229)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(61): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 07:26:55 --> Undefined array key "subject_id"
+in APPPATH\Views\user\viewSchedule.php on line 229.
+ 1 APPPATH\Views\user\viewSchedule.php(229): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "subject_id"', 'APPPATH\\Views\\user\\viewSchedule.php', 229)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(61): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 07:27:51 --> Too few arguments to function CodeIgniter\View\View::{closure}(), 11 passed and exactly 12 expected
+in APPPATH\Views\user\viewSchedule.php on line 160.
+ 1 [internal function]: CodeIgniter\View\View->{closure}('26', '07:00', '08:30', 'ROOTPATH\\public', 'ROOTPATH\\public', 'ROOTPATH\\public', 'ROOTPATH\\public', 'ROOTPATH\\public', 'ROOTPATH\\public', '07:00', '08:30')
+ 2 APPPATH\Views\user\viewSchedule.php(193): array_map(Object(Closure), [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...])
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 6 APPPATH\Controllers\UserSchedule.php(61): view('user/viewSchedule', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 07:28:08 --> Undefined array key "sub"
+in APPPATH\Views\user\viewSchedule.php on line 231.
+ 1 APPPATH\Views\user\viewSchedule.php(231): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sub"', 'APPPATH\\Views\\user\\viewSchedule.php', 231)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(61): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 07:30:09 --> foreach() argument must be of type array|object, string given
+in APPPATH\Views\user\viewSchedule.php on line 169.
+ 1 APPPATH\Views\user\viewSchedule.php(169): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'APPPATH\\Views\\user\\viewSchedule.php', 169)
+ 2 [internal function]: CodeIgniter\View\View->{closure}('15', '26', '07:00', '08:30', 'ROOTPATH\\public', 'ROOTPATH\\public', 'ROOTPATH\\public', 'ROOTPATH\\public', 'ROOTPATH\\public', 'ROOTPATH\\public', '07:00', '08:30')
+ 3 APPPATH\Views\user\viewSchedule.php(201): array_map(Object(Closure), [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...])
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 7 APPPATH\Controllers\UserSchedule.php(61): view('user/viewSchedule', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 07:31:44 --> foreach() argument must be of type array|object, string given
+in APPPATH\Views\user\viewSchedule.php on line 168.
+ 1 APPPATH\Views\user\viewSchedule.php(168): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'APPPATH\\Views\\user\\viewSchedule.php', 168)
+ 2 [internal function]: CodeIgniter\View\View->{closure}('15', '26', '07:00', '08:30', 'ROOTPATH\\public', 'ROOTPATH\\public', 'ROOTPATH\\public', 'ROOTPATH\\public', 'ROOTPATH\\public', 'ROOTPATH\\public', '07:00', '08:30')
+ 3 APPPATH\Views\user\viewSchedule.php(201): array_map(Object(Closure), [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...])
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 7 APPPATH\Controllers\UserSchedule.php(61): view('user/viewSchedule', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 07:32:20 --> Undefined variable $subs
+in APPPATH\Views\user\viewSchedule.php on line 168.
+ 1 APPPATH\Views\user\viewSchedule.php(168): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $subs', 'APPPATH\\Views\\user\\viewSchedule.php', 168)
+ 2 [internal function]: CodeIgniter\View\View->{closure}('15', '26', '07:00', '08:30', 'ROOTPATH\\public', 'ROOTPATH\\public', 'ROOTPATH\\public', 'ROOTPATH\\public', 'ROOTPATH\\public', 'ROOTPATH\\public', '07:00', '08:30')
+ 3 APPPATH\Views\user\viewSchedule.php(201): array_map(Object(Closure), [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...])
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 7 APPPATH\Controllers\UserSchedule.php(61): view('user/viewSchedule', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 07:33:23 --> Too few arguments to function CodeIgniter\View\View::{closure}(), 11 passed and exactly 12 expected
+in APPPATH\Views\user\viewSchedule.php on line 160.
+ 1 [internal function]: CodeIgniter\View\View->{closure}('26', '07:00', '08:30', 'ROOTPATH\\public', 'ROOTPATH\\public', 'ROOTPATH\\public', 'ROOTPATH\\public', 'ROOTPATH\\public', 'ROOTPATH\\public', '07:00', '08:30')
+ 2 APPPATH\Views\user\viewSchedule.php(193): array_map(Object(Closure), [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...])
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 6 APPPATH\Controllers\UserSchedule.php(61): view('user/viewSchedule', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 07:33:35 --> Undefined array key "sub"
+in APPPATH\Views\user\viewSchedule.php on line 231.
+ 1 APPPATH\Views\user\viewSchedule.php(231): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sub"', 'APPPATH\\Views\\user\\viewSchedule.php', 231)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(61): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 07:34:39 --> Undefined variable $subs
+in APPPATH\Views\user\viewSchedule.php on line 167.
+ 1 APPPATH\Views\user\viewSchedule.php(167): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $subs', 'APPPATH\\Views\\user\\viewSchedule.php', 167)
+ 2 [internal function]: CodeIgniter\View\View->{closure}('15', '26', '07:00', '08:30', 'ROOTPATH\\public', 'ROOTPATH\\public', 'ROOTPATH\\public', 'ROOTPATH\\public', 'ROOTPATH\\public', 'ROOTPATH\\public', '07:00', '08:30')
+ 3 APPPATH\Views\user\viewSchedule.php(199): array_map(Object(Closure), [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...])
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 7 APPPATH\Controllers\UserSchedule.php(61): view('user/viewSchedule', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 07:35:47 --> foreach() argument must be of type array|object, string given
+in APPPATH\Views\user\viewSchedule.php on line 168.
+ 1 APPPATH\Views\user\viewSchedule.php(168): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'APPPATH\\Views\\user\\viewSchedule.php', 168)
+ 2 [internal function]: CodeIgniter\View\View->{closure}('15', '26', '07:00', '08:30', 'ROOTPATH\\public', 'ROOTPATH\\public', 'ROOTPATH\\public', 'ROOTPATH\\public', 'ROOTPATH\\public', 'ROOTPATH\\public', '07:00', '08:30')
+ 3 APPPATH\Views\user\viewSchedule.php(200): array_map(Object(Closure), [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...])
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 7 APPPATH\Controllers\UserSchedule.php(61): view('user/viewSchedule', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 07:43:59 --> Undefined variable $sched
+in APPPATH\Views\admin\section\pdf_section_schedule\pdf_schedule.php on line 85.
+ 1 APPPATH\Views\admin\section\pdf_section_schedule\pdf_schedule.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sched', 'APPPATH\\Views\\admin\\section\\pdf_section_schedule\\pdf_schedule.php', 85)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\section\\pdf_section_schedule\\pdf_schedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/section/pdf_section_schedule/pdf_schedule', [], true)
+ 5 APPPATH\Controllers\Section.php(523): view('admin/section/pdf_section_schedule/pdf_schedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->pdf_subject_schedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 07:50:01 --> Undefined array key "str_mon"
+in APPPATH\Views\admin\section\pdf_section_schedule\pdf_schedule.php on line 226.
+ 1 APPPATH\Views\admin\section\pdf_section_schedule\pdf_schedule.php(226): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "str_mon"', 'APPPATH\\Views\\admin\\section\\pdf_section_schedule\\pdf_schedule.php', 226)
+ 2 [internal function]: compareStrMonday([...], [...])
+ 3 APPPATH\Views\admin\section\pdf_section_schedule\pdf_schedule.php(230): usort([...], 'compareStrMonday')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\section\\pdf_section_schedule\\pdf_schedule.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/section/pdf_section_schedule/pdf_schedule', [], true)
+ 7 APPPATH\Controllers\Section.php(523): view('admin/section/pdf_section_schedule/pdf_schedule', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->pdf_subject_schedule()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 07:50:15 --> Undefined array key "start_saturday"
+in APPPATH\Views\admin\section\pdf_section_schedule\pdf_schedule.php on line 226.
+ 1 APPPATH\Views\admin\section\pdf_section_schedule\pdf_schedule.php(226): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "start_saturday"', 'APPPATH\\Views\\admin\\section\\pdf_section_schedule\\pdf_schedule.php', 226)
+ 2 [internal function]: compareStrMonday([...], [...])
+ 3 APPPATH\Views\admin\section\pdf_section_schedule\pdf_schedule.php(230): usort([...], 'compareStrMonday')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\section\\pdf_section_schedule\\pdf_schedule.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/section/pdf_section_schedule/pdf_schedule', [], true)
+ 7 APPPATH\Controllers\Section.php(523): view('admin/section/pdf_section_schedule/pdf_schedule', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->pdf_subject_schedule()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 07:53:50 --> Undefined array key 0
+in APPPATH\Views\admin\section\pdf_section_schedule\pdf_schedule.php on line 59.
+ 1 APPPATH\Views\admin\section\pdf_section_schedule\pdf_schedule.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\admin\\section\\pdf_section_schedule\\pdf_schedule.php', 59)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\section\\pdf_section_schedule\\pdf_schedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/section/pdf_section_schedule/pdf_schedule', [], true)
+ 5 APPPATH\Controllers\Section.php(523): view('admin/section/pdf_section_schedule/pdf_schedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->pdf_subject_schedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 08:02:27 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Section.php on line 292.
+ 1 APPPATH\Controllers\Section.php(292): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Section.php', 292)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->addedscheduling()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 08:10:20 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Section.php on line 292.
+ 1 APPPATH\Controllers\Section.php(292): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Section.php', 292)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->addedscheduling()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 08:10:46 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Section.php on line 292.
+ 1 APPPATH\Controllers\Section.php(292): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Section.php', 292)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->addedscheduling()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 08:11:16 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Section.php on line 292.
+ 1 APPPATH\Controllers\Section.php(292): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Section.php', 292)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->addedscheduling()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 08:11:38 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Section.php on line 292.
+ 1 APPPATH\Controllers\Section.php(292): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Section.php', 292)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->addedscheduling()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 08:12:05 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Section.php on line 292.
+ 1 APPPATH\Controllers\Section.php(292): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Section.php', 292)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->addedscheduling()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 08:13:09 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Section.php on line 292.
+ 1 APPPATH\Controllers\Section.php(292): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Section.php', 292)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->addedscheduling()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 08:38:04 --> The route for "newteacher" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('newteacher')
+ 2 APPPATH\Controllers\User.php(129): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->retrieve_profile()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 08:52:14 --> Undefined array key "depeartment"
+in APPPATH\Views\teacher\newteacher.php on line 234.
+ 1 APPPATH\Views\teacher\newteacher.php(234): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "depeartment"', 'APPPATH\\Views\\teacher\\newteacher.php', 234)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\teacher\\newteacher.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('teacher/newteacher', [], true)
+ 5 APPPATH\Controllers\Teacher.php(282): view('teacher/newteacher', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->newteacher()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 09:17:25 --> Invalid file: teacher/include/modal/passwordTeacher.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('teacher/include/modal/passwordTeacher.php')
+ 2 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('teacher/include/modal/passwordTeacher', null, true)
+ 3 APPPATH\Views\teacher\newteacher.php(267): CodeIgniter\View\View->include('teacher/include/modal/passwordTeacher')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\teacher\\newteacher.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('teacher/newteacher', [], true)
+ 7 APPPATH\Controllers\Teacher.php(282): view('teacher/newteacher', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->newteacher()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 10:10:19 --> Undefined variable $strand_id
+in APPPATH\Controllers\Teacher.php on line 92.
+ 1 APPPATH\Controllers\Teacher.php(92): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $strand_id', 'APPPATH\\Controllers\\Teacher.php', 92)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard('1st-Year', 'BPA')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 10:11:28 --> Undefined array key 0
+in APPPATH\Controllers\Excel.php on line 139.
+ 1 APPPATH\Controllers\Excel.php(139): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Controllers\\Excel.php', 139)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Excel->exceltest()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Excel))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 10:11:32 --> Undefined array key 0
+in APPPATH\Controllers\Excel.php on line 139.
+ 1 APPPATH\Controllers\Excel.php(139): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Controllers\\Excel.php', 139)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Excel->exceltest()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Excel))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 10:11:40 --> Undefined array key 0
+in APPPATH\Controllers\Excel.php on line 139.
+ 1 APPPATH\Controllers\Excel.php(139): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Controllers\\Excel.php', 139)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Excel->exceltest()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Excel))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 10:11:56 --> Undefined array key 0
+in APPPATH\Controllers\Excel.php on line 139.
+ 1 APPPATH\Controllers\Excel.php(139): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Controllers\\Excel.php', 139)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Excel->exceltest()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Excel))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 10:13:14 --> Undefined array key 0
+in APPPATH\Controllers\Teacher.php on line 94.
+ 1 APPPATH\Controllers\Teacher.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Controllers\\Teacher.php', 94)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard('1st-Year', 'adminlte.css.map')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 10:14:13 --> Undefined array key 0
+in APPPATH\Controllers\Teacher.php on line 94.
+ 1 APPPATH\Controllers\Teacher.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Controllers\\Teacher.php', 94)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard('1st-Year', 'adminlte.css.map')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 10:14:23 --> Undefined array key 0
+in APPPATH\Controllers\Excel.php on line 139.
+ 1 APPPATH\Controllers\Excel.php(139): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Controllers\\Excel.php', 139)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Excel->exceltest()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Excel))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 10:14:30 --> Undefined array key 0
+in APPPATH\Controllers\Excel.php on line 139.
+ 1 APPPATH\Controllers\Excel.php(139): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Controllers\\Excel.php', 139)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Excel->exceltest()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Excel))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 10:14:42 --> Undefined array key 0
+in APPPATH\Controllers\Teacher.php on line 94.
+ 1 APPPATH\Controllers\Teacher.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Controllers\\Teacher.php', 94)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard('1st-Year', 'adminlte.css.map')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 10:15:42 --> Undefined array key 0
+in APPPATH\Controllers\Excel.php on line 139.
+ 1 APPPATH\Controllers\Excel.php(139): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Controllers\\Excel.php', 139)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Excel->exceltest()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Excel))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 10:15:48 --> Undefined array key 0
+in APPPATH\Controllers\Excel.php on line 139.
+ 1 APPPATH\Controllers\Excel.php(139): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Controllers\\Excel.php', 139)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Excel->exceltest()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Excel))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 10:17:29 --> Undefined array key 0
+in APPPATH\Controllers\Teacher.php on line 94.
+ 1 APPPATH\Controllers\Teacher.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Controllers\\Teacher.php', 94)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard('1st-Year', 'adminlte.css.map')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 10:18:40 --> Undefined array key 0
+in APPPATH\Controllers\Excel.php on line 139.
+ 1 APPPATH\Controllers\Excel.php(139): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Controllers\\Excel.php', 139)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Excel->exceltest()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Excel))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 10:21:28 --> Undefined array key 0
+in APPPATH\Controllers\Excel.php on line 134.
+ 1 APPPATH\Controllers\Excel.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Controllers\\Excel.php', 134)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Excel->exceltest()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Excel))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 10:36:24 --> Undefined variable $grade_model
+in APPPATH\Controllers\Teacher.php on line 65.
+ 1 APPPATH\Controllers\Teacher.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $grade_model', 'APPPATH\\Controllers\\Teacher.php', 65)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard('1st-Year')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 11:10:24 --> Undefined variable $subject_id
+in APPPATH\Controllers\Teacher.php on line 140.
+ 1 APPPATH\Controllers\Teacher.php(140): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $subject_id', 'APPPATH\\Controllers\\Teacher.php', 140)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard('1st-Year', 'ABH')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 11:19:27 --> Undefined variable $xpldGrade
+in APPPATH\Controllers\Teacher.php on line 139.
+ 1 APPPATH\Controllers\Teacher.php(139): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $xpldGrade', 'APPPATH\\Controllers\\Teacher.php', 139)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard('1st-Year', 'ABH')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 11:20:13 --> explode(): Passing null to parameter #2 ($string) of type string is deprecated
+in APPPATH\Controllers\Excel.php on line 118.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'explode(): Passing null to parameter #2 ($string) of type string is deprecated', 'APPPATH\\Controllers\\Excel.php', 118)
+ 2 APPPATH\Controllers\Excel.php(118): explode(',', null)
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Excel->exceltest()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Excel))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 11:21:02 --> explode(): Passing null to parameter #2 ($string) of type string is deprecated
+in APPPATH\Controllers\Excel.php on line 118.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'explode(): Passing null to parameter #2 ($string) of type string is deprecated', 'APPPATH\\Controllers\\Excel.php', 118)
+ 2 APPPATH\Controllers\Excel.php(118): explode(',', null)
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Excel->exceltest()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Excel))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 11:25:29 --> foreach() argument must be of type array|object, string given
+in APPPATH\Controllers\Excel.php on line 121.
+ 1 APPPATH\Controllers\Excel.php(121): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'APPPATH\\Controllers\\Excel.php', 121)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Excel->exceltest()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Excel))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 11:26:00 --> foreach() argument must be of type array|object, int given
+in APPPATH\Controllers\Excel.php on line 121.
+ 1 APPPATH\Controllers\Excel.php(121): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, int given', 'APPPATH\\Controllers\\Excel.php', 121)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Excel->exceltest()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Excel))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 11:26:42 --> Undefined variable $index
+in APPPATH\Controllers\Excel.php on line 137.
+ 1 APPPATH\Controllers\Excel.php(137): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $index', 'APPPATH\\Controllers\\Excel.php', 137)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Excel->exceltest()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Excel))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 11:27:05 --> Undefined variable $index
+in APPPATH\Controllers\Excel.php on line 137.
+ 1 APPPATH\Controllers\Excel.php(137): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $index', 'APPPATH\\Controllers\\Excel.php', 137)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Excel->exceltest()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Excel))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 11:27:13 --> Undefined variable $index
+in APPPATH\Controllers\Excel.php on line 137.
+ 1 APPPATH\Controllers\Excel.php(137): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $index', 'APPPATH\\Controllers\\Excel.php', 137)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Excel->exceltest()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Excel))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 11:28:09 --> Undefined variable $index
+in APPPATH\Controllers\Excel.php on line 140.
+ 1 APPPATH\Controllers\Excel.php(140): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $index', 'APPPATH\\Controllers\\Excel.php', 140)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Excel->exceltest()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Excel))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 11:28:19 --> Undefined variable $index
+in APPPATH\Controllers\Excel.php on line 140.
+ 1 APPPATH\Controllers\Excel.php(140): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $index', 'APPPATH\\Controllers\\Excel.php', 140)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Excel->exceltest()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Excel))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 11:29:34 --> Call to undefined function App\Controllers\emtpy()
+in APPPATH\Controllers\Excel.php on line 137.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Excel->exceltest()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Excel))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 11:31:11 --> Undefined variable $index
+in APPPATH\Controllers\Excel.php on line 137.
+ 1 APPPATH\Controllers\Excel.php(137): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $index', 'APPPATH\\Controllers\\Excel.php', 137)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Excel->exceltest()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Excel))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 11:32:44 --> Undefined variable $index
+in APPPATH\Controllers\Excel.php on line 141.
+ 1 APPPATH\Controllers\Excel.php(141): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $index', 'APPPATH\\Controllers\\Excel.php', 141)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Excel->exceltest()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Excel))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 11:33:53 --> Undefined variable $index
+in APPPATH\Controllers\Teacher.php on line 148.
+ 1 APPPATH\Controllers\Teacher.php(148): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $index', 'APPPATH\\Controllers\\Teacher.php', 148)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard('1st-Year', 'BPA')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 11:33:57 --> Undefined variable $index
+in APPPATH\Controllers\Teacher.php on line 148.
+ 1 APPPATH\Controllers\Teacher.php(148): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $index', 'APPPATH\\Controllers\\Teacher.php', 148)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard('1st-Year', 'BPA')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 11:34:31 --> Undefined variable $index
+in APPPATH\Controllers\Teacher.php on line 151.
+ 1 APPPATH\Controllers\Teacher.php(151): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $index', 'APPPATH\\Controllers\\Teacher.php', 151)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard('1st-Year', 'BPA')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 11:35:09 --> Undefined variable $index
+in APPPATH\Controllers\Teacher.php on line 148.
+ 1 APPPATH\Controllers\Teacher.php(148): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $index', 'APPPATH\\Controllers\\Teacher.php', 148)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard('1st-Year', 'BPA')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 11:35:45 --> Undefined variable $sub_id
+in APPPATH\Controllers\Teacher.php on line 151.
+ 1 APPPATH\Controllers\Teacher.php(151): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sub_id', 'APPPATH\\Controllers\\Teacher.php', 151)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard('1st-Year', 'BPA')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 11:36:08 --> foreach() argument must be of type array|object, string given
+in APPPATH\Controllers\Teacher.php on line 140.
+ 1 APPPATH\Controllers\Teacher.php(140): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'APPPATH\\Controllers\\Teacher.php', 140)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard('1st-Year', 'BPA')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 11:47:46 --> Undefined array key 0
+in APPPATH\Controllers\Teacher.php on line 97.
+ 1 APPPATH\Controllers\Teacher.php(97): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Controllers\\Teacher.php', 97)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard('1st-Year', 'succes')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-03 11:54:37 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-07-03 11:54:37 --> 220 smtp.googlemail.com ESMTP w1-20020a627b01000000b0067903510abbsm5591268pfc.163 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [143.44.156.194]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+Failed to authenticate password. Error: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials w1-20020a627b01000000b0067903510abbsm5591268pfc.163 - gsmtp
+
+CRITICAL - 2023-07-03 11:59:50 --> Undefined variable $yearlevel
+in APPPATH\Controllers\Profile.php on line 734.
+ 1 APPPATH\Controllers\Profile.php(734): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $yearlevel', 'APPPATH\\Controllers\\Profile.php', 734)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->update()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 12:00:24 --> Undefined variable $data
+in APPPATH\Controllers\Profile.php on line 739.
+ 1 APPPATH\Controllers\Profile.php(739): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Controllers\\Profile.php', 739)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->update()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 12:09:50 --> Undefined variable $student_reg
+in APPPATH\Controllers\Profile.php on line 1076.
+ 1 APPPATH\Controllers\Profile.php(1076): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $student_reg', 'APPPATH\\Controllers\\Profile.php', 1076)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->test()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 12:09:59 --> Undefined variable $student_reg
+in APPPATH\Controllers\Profile.php on line 1076.
+ 1 APPPATH\Controllers\Profile.php(1076): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $student_reg', 'APPPATH\\Controllers\\Profile.php', 1076)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->test()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 12:10:14 --> Undefined variable $registration_model
+in APPPATH\Controllers\Profile.php on line 1090.
+ 1 APPPATH\Controllers\Profile.php(1090): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $registration_model', 'APPPATH\\Controllers\\Profile.php', 1090)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->test()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-03 12:11:30 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-07-03 12:11:30 --> 220 smtp.googlemail.com ESMTP z12-20020aa791cc000000b006827d9dd64esm3465644pfa.8 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [143.44.156.194]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+Failed to authenticate password. Error: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials z12-20020aa791cc000000b006827d9dd64esm3465644pfa.8 - gsmtp
+
+CRITICAL - 2023-07-03 20:51:50 --> Trying to access array offset on value of type null
+in APPPATH\Views\admin\grading\first_yearGrade.php on line 434.
+ 1 APPPATH\Views\admin\grading\first_yearGrade.php(434): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\admin\\grading\\first_yearGrade.php', 434)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\grading\\first_yearGrade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/grading/first_yearGrade', [], true)
+ 5 APPPATH\Controllers\Grading.php(46): view('admin/grading/first_yearGrade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-03 20:54:57 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-07-03 20:54:57 --> 220 smtp.googlemail.com ESMTP q68-20020a17090a1b4a00b002635341a7e8sm9540406pjq.3 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [143.44.156.194]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+Failed to authenticate password. Error: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials q68-20020a17090a1b4a00b002635341a7e8sm9540406pjq.3 - gsmtp
+
+CRITICAL - 2023-07-03 20:55:52 --> Undefined array key 0
+in APPPATH\Views\user\registrationpdf\corPDF.php on line 95.
+ 1 APPPATH\Views\user\registrationpdf\corPDF.php(95): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\user\\registrationpdf\\corPDF.php', 95)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\registrationpdf\\corPDF.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/registrationpdf/corPDF', [], true)
+ 5 APPPATH\Controllers\PreEnrolled.php(228): view('user/registrationpdf/corPDF', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->enrolled()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 20:56:15 --> Undefined array key 0
+in APPPATH\Views\user\registrationpdf\corPDF.php on line 95.
+ 1 APPPATH\Views\user\registrationpdf\corPDF.php(95): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\user\\registrationpdf\\corPDF.php', 95)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\registrationpdf\\corPDF.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/registrationpdf/corPDF', [], true)
+ 5 APPPATH\Controllers\PreEnrolled.php(228): view('user/registrationpdf/corPDF', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->enrolled()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 21:12:58 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Section.php on line 292.
+ 1 APPPATH\Controllers\Section.php(292): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Section.php', 292)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->addedscheduling()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 22:03:48 --> Undefined array key 0
+in APPPATH\Controllers\Teacher.php on line 103.
+ 1 APPPATH\Controllers\Teacher.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Controllers\\Teacher.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard('1st-Year', 'adminlte.css.map')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 22:04:27 --> Undefined array key 0
+in APPPATH\Controllers\Teacher.php on line 103.
+ 1 APPPATH\Controllers\Teacher.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Controllers\\Teacher.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard('1st-Year', 'adminlte.css.map')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 22:05:07 --> Undefined array key 0
+in APPPATH\Controllers\Teacher.php on line 103.
+ 1 APPPATH\Controllers\Teacher.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Controllers\\Teacher.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard('1st-Year', 'adminlte.css.map')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 22:05:41 --> Undefined array key 0
+in APPPATH\Controllers\Teacher.php on line 103.
+ 1 APPPATH\Controllers\Teacher.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Controllers\\Teacher.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard('1st-Year', 'adminlte.css.map')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 22:06:02 --> Undefined array key 0
+in APPPATH\Controllers\Teacher.php on line 103.
+ 1 APPPATH\Controllers\Teacher.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Controllers\\Teacher.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard('1st-Year', 'adminlte.css.map')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 23:14:21 --> Trying to access array offset on value of type null
+in APPPATH\Views\admin\grading\first_yearGrade.php on line 434.
+ 1 APPPATH\Views\admin\grading\first_yearGrade.php(434): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\admin\\grading\\first_yearGrade.php', 434)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\grading\\first_yearGrade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/grading/first_yearGrade', [], true)
+ 5 APPPATH\Controllers\Grading.php(46): view('admin/grading/first_yearGrade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 23:24:19 --> Trying to access array offset on value of type null
+in APPPATH\Views\admin\grading\first_yearGrade.php on line 434.
+ 1 APPPATH\Views\admin\grading\first_yearGrade.php(434): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\admin\\grading\\first_yearGrade.php', 434)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\grading\\first_yearGrade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/grading/first_yearGrade', [], true)
+ 5 APPPATH\Controllers\Grading.php(46): view('admin/grading/first_yearGrade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

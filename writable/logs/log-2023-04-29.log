@@ -1,0 +1,286 @@
+ERROR - 2023-04-29 21:09:08 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'enrollment_syst...', 3306, '', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System\app\Controllers\User.php(60): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\User->retrieve_profile()
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System\app\Controllers\User.php(60): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(927): App\Controllers\User->retrieve_profile()
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-04-29 21:09:08 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `school_year`
+WHERE `status` = :status:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(623): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\User.php(60): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->retrieve_profile()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-29 21:15:34 --> Undefined array key "profile_picture"
+in APPPATH\Views\admin\student_credentials\view_cred.php on line 285.
+ 1 APPPATH\Views\admin\student_credentials\view_cred.php(285): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "profile_picture"', 'APPPATH\\Views\\admin\\student_credentials\\view_cred.php', 285)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_credentials\\view_cred.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_credentials/view_cred', [], true)
+ 5 APPPATH\Controllers\Credentials.php(87): view('admin/student_credentials/view_cred', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->view_credential()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-29 21:17:21 --> Undefined array key "form_137"
+in APPPATH\Views\admin\student_credentials\view_cred.php on line 285.
+ 1 APPPATH\Views\admin\student_credentials\view_cred.php(285): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "form_137"', 'APPPATH\\Views\\admin\\student_credentials\\view_cred.php', 285)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_credentials\\view_cred.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_credentials/view_cred', [], true)
+ 5 APPPATH\Controllers\Credentials.php(87): view('admin/student_credentials/view_cred', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->view_credential()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-29 21:19:10 --> Call to a member function where() on string
+in APPPATH\Controllers\Credentials.php on line 78.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->view_credential()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-29 21:22:30 --> Call to undefined method CodeIgniter\Session\Session::where()
+in APPPATH\Controllers\Credentials.php on line 59.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->view_credential()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-29 21:22:53 --> Call to a member function where() on string
+in APPPATH\Controllers\Credentials.php on line 59.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->view_credential()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-29 21:23:03 --> Undefined variable $lrn
+in APPPATH\Controllers\Credentials.php on line 59.
+ 1 APPPATH\Controllers\Credentials.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $lrn', 'APPPATH\\Controllers\\Credentials.php', 59)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->view_credential()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-29 21:23:10 --> Too few arguments to function App\Controllers\Credentials::view_credential(), 0 passed in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php on line 927 and exactly 1 expected
+in APPPATH\Controllers\Credentials.php on line 52.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->view_credential()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-29 21:24:08 --> Undefined array key "form_137"
+in APPPATH\Views\admin\student_credentials\view_cred.php on line 285.
+ 1 APPPATH\Views\admin\student_credentials\view_cred.php(285): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "form_137"', 'APPPATH\\Views\\admin\\student_credentials\\view_cred.php', 285)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_credentials\\view_cred.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_credentials/view_cred', [], true)
+ 5 APPPATH\Controllers\Credentials.php(68): view('admin/student_credentials/view_cred', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->view_credential('B23-SHS5108')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-29 21:25:07 --> Undefined array key "good_moral"
+in APPPATH\Views\admin\student_credentials\view_cred.php on line 285.
+ 1 APPPATH\Views\admin\student_credentials\view_cred.php(285): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "good_moral"', 'APPPATH\\Views\\admin\\student_credentials\\view_cred.php', 285)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_credentials\\view_cred.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_credentials/view_cred', [], true)
+ 5 APPPATH\Controllers\Credentials.php(68): view('admin/student_credentials/view_cred', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->view_credential('B23-SHS5108')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-29 21:27:15 --> Undefined variable $user_model
+in APPPATH\Controllers\Credentials.php on line 60.
+ 1 APPPATH\Controllers\Credentials.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user_model', 'APPPATH\\Controllers\\Credentials.php', 60)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->view_credential('B23-SHS5108')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-29 21:32:46 --> Trying to access array offset on value of type null
+in APPPATH\Views\admin\student_credentials\view_cred.php on line 285.
+ 1 APPPATH\Views\admin\student_credentials\view_cred.php(285): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\admin\\student_credentials\\view_cred.php', 285)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_credentials\\view_cred.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_credentials/view_cred', [], true)
+ 5 APPPATH\Controllers\Credentials.php(69): view('admin/student_credentials/view_cred', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->view_credential('adminlte.css.map')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-29 21:35:13 --> mysqli_sql_exception: Column 'lrn' in where clause is ambiguous in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\Credentials.php(64): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\Credentials->view_credential('B23-SHS4207')
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-04-29 21:35:13 --> Column 'lrn' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `credential_tbl`
+INNER JOIN `user_tbl` ON `credential_tbl`.`lrn` = `user_tbl`.`lrn`
+WHERE `lrn` = \'B23-SHS4207\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `credential_tbl`
+INNER JOIN `user_tbl` ON `credential_tbl`.`lrn` = `user_tbl`.`lrn`
+WHERE `lrn` = \'B23-SHS4207\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `credential_tbl`
+INNER JOIN `user_tbl` ON `credential_tbl`.`lrn` = `user_tbl`.`lrn`
+WHERE `lrn` = \'B23-SHS4207\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `credential_tbl`
+INNER JOIN `user_tbl` ON `credential_tbl`.`lrn` = `user_tbl`.`lrn`
+WHERE `lrn` = :lrn:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(623): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Credentials.php(64): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->view_credential('B23-SHS4207')
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-29 21:37:23 --> Undefined array key "class_grade"
+in APPPATH\Views\admin\student_credentials\view_cred.php on line 291.
+ 1 APPPATH\Views\admin\student_credentials\view_cred.php(291): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "class_grade"', 'APPPATH\\Views\\admin\\student_credentials\\view_cred.php', 291)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_credentials\\view_cred.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_credentials/view_cred', [], true)
+ 5 APPPATH\Controllers\Credentials.php(73): view('admin/student_credentials/view_cred', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->view_credential('B23-SHS4207')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-29 22:03:11 --> Undefined variable $test
+in APPPATH\Views\user\updateregSubject.php on line 125.
+ 1 APPPATH\Views\user\updateregSubject.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $test', 'APPPATH\\Views\\user\\updateregSubject.php', 125)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\updateregSubject.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/updateregSubject', [], true)
+ 5 APPPATH\Controllers\Profile.php(687): view('user/updateregSubject', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->update()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-29 22:06:33 --> Call to a member function where() on string
+in APPPATH\Controllers\Profile.php on line 672.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->update()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-29 23:46:26 --> syntax error, unexpected end of file
+in APPPATH\Views\admin\include\navbar.php on line 100.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('admin/include/navbar', null, true)
+ 3 APPPATH\Views\admin\student_credentials\stud_cred.php(5): CodeIgniter\View\View->include('admin/include/navbar')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_credentials\\stud_cred.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_credentials/stud_cred', [], true)
+ 7 APPPATH\Controllers\Credentials.php(31): view('admin/student_credentials/stud_cred', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->student_approve()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-29 23:46:26 --> syntax error, unexpected end of file
+in APPPATH\Views\admin\include\navbar.php on line 100.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('admin/include/navbar', null, true)
+ 3 APPPATH\Views\admin\adminDashboard.php(6): CodeIgniter\View\View->include('admin/include/navbar')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\adminDashboard.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/admindashboard', [], true)
+ 7 APPPATH\Controllers\Admin.php(116): view('admin/admindashboard', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-29 23:46:29 --> syntax error, unexpected end of file
+in APPPATH\Views\admin\include\navbar.php on line 100.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('admin/include/navbar', null, true)
+ 3 APPPATH\Views\admin\adminDashboard.php(6): CodeIgniter\View\View->include('admin/include/navbar')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\adminDashboard.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/admindashboard', [], true)
+ 7 APPPATH\Controllers\Admin.php(116): view('admin/admindashboard', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-29 23:59:04 --> Invalid file: admin/modal/swirchModal.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/modal/swirchModal.php')
+ 2 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('admin/modal/swirchModal', null, true)
+ 3 APPPATH\Views\admin\include\navbar.php(63): CodeIgniter\View\View->include('admin/modal/swirchModal')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\include\\navbar.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('admin/include/navbar', null, true)
+ 7 APPPATH\Views\admin\adminDashboard.php(6): CodeIgniter\View\View->include('admin/include/navbar')
+ 8 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\adminDashboard.php')
+ 9 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+10 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/admindashboard', [], true)
+11 APPPATH\Controllers\Admin.php(116): view('admin/admindashboard', [...])
+12 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+13 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+14 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+16 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

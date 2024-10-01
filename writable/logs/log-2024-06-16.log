@@ -1,0 +1,52 @@
+ERROR - 2024-06-16 21:41:53 --> mysqli_sql_exception: Duplicate entry 'B24-29-11,12,13,14,15,16,17,18,19,20' for key 'subject_id' in /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query()
+#4 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/BaseModel.php(749): CodeIgniter\Model->doInsert()
+#6 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/Model.php(667): CodeIgniter\BaseModel->insert()
+#7 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/app/Controllers/Profile.php(1385): CodeIgniter\Model->insert()
+#8 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(927): App\Controllers\Profile->insert_subject()
+#9 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+#10 /home/u343516587/domains/bccwebportal.com/bacocommunitycollege/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/u343516587/domains/bccwebportal.com/public_html/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-06-16 21:41:53 --> Duplicate entry 'B24-29-11,12,13,14,15,16,17,18,19,20' for key 'subject_id'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(749): CodeIgniter\Model->doInsert()
+ 7 SYSTEMPATH/Model.php(667): CodeIgniter\BaseModel->insert()
+ 8 APPPATH/Controllers/Profile.php(1385): CodeIgniter\Model->insert()
+ 9 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_subject()
+10 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+12 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-16 22:19:20 --> Undefined array key "student_types"
+in APPPATH/Views/admin/modal/enroll.php on line 92.
+ 1 APPPATH/Views/admin/modal/enroll.php(92): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Views/admin/viewPreEnroll.php(611): include('APPPATH/Views/admin/modal/enroll.php')
+ 3 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/viewPreEnroll.php')
+ 4 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 6 APPPATH/Controllers/PreEnrolled.php(110): view()
+ 7 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\PreEnrolled->viewPreEnroll()
+ 8 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-16 22:24:21 --> Undefined array key 0
+in APPPATH/Views/admin/pre_enrolled.php on line 557.
+ 1 APPPATH/Views/admin/pre_enrolled.php(557): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/pre_enrolled.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/PreEnrolled.php(240): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\PreEnrolled->pre_enrolled_reg()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()

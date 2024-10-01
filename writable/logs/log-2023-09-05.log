@@ -1,0 +1,176 @@
+CRITICAL - 2023-09-05 01:43:47 --> ZipArchive::close(): Can't open file: No such file or directory
+in APPPATH/Controllers/PreEnrolled.php on line 606.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/PreEnrolled.php(606): ZipArchive->close()
+ 3 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\PreEnrolled->stud_cor_form()
+ 4 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-05 01:46:22 --> ZipArchive::close(): Failure to create temporary file: No such file or directory
+in APPPATH/Controllers/PreEnrolled.php on line 603.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/PreEnrolled.php(603): ZipArchive->close()
+ 3 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\PreEnrolled->stud_cor_form()
+ 4 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-05 01:49:50 --> ZipArchive::close(): Can't open file: No such file or directory
+in APPPATH/Controllers/PreEnrolled.php on line 606.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/PreEnrolled.php(606): ZipArchive->close()
+ 3 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\PreEnrolled->stud_cor_form()
+ 4 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-05 01:50:32 --> ZipArchive::close(): Can't open file: No such file or directory
+in APPPATH/Controllers/PreEnrolled.php on line 608.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/PreEnrolled.php(608): ZipArchive->close()
+ 3 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\PreEnrolled->stud_cor_form()
+ 4 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-05 01:57:54 --> ZipArchive::close(): Failure to create temporary file: No such file or directory
+in APPPATH/Controllers/PreEnrolled.php on line 597.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/PreEnrolled.php(597): ZipArchive->close()
+ 3 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\PreEnrolled->stud_cor_form()
+ 4 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-05 01:58:00 --> ZipArchive::close(): Failure to create temporary file: No such file or directory
+in APPPATH/Controllers/PreEnrolled.php on line 597.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/PreEnrolled.php(597): ZipArchive->close()
+ 3 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\PreEnrolled->stud_cor_form()
+ 4 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-05 01:58:09 --> ZipArchive::close(): Failure to create temporary file: No such file or directory
+in APPPATH/Controllers/PreEnrolled.php on line 597.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/PreEnrolled.php(597): ZipArchive->close()
+ 3 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\PreEnrolled->stud_cor_form()
+ 4 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-05 02:06:07 --> ZipArchive::close(): Can't remove file: No such file or directory
+in APPPATH/Controllers/PreEnrolled.php on line 614.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/PreEnrolled.php(614): ZipArchive->close()
+ 3 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\PreEnrolled->stud_cor_form()
+ 4 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-05 02:07:52 --> filesize(): stat failed for 1st Year BPA - cor_file.zip
+in APPPATH/Controllers/PreEnrolled.php on line 619.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/PreEnrolled.php(619): filesize()
+ 3 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\PreEnrolled->stud_cor_form()
+ 4 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-05 02:07:56 --> ZipArchive::close(): Can't remove file: No such file or directory
+in APPPATH/Controllers/PreEnrolled.php on line 614.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/PreEnrolled.php(614): ZipArchive->close()
+ 3 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\PreEnrolled->stud_cor_form()
+ 4 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-05 02:16:38 --> ZipArchive::close(): Can't open file: No such file or directory
+in APPPATH/Controllers/PreEnrolled.php on line 611.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/PreEnrolled.php(611): ZipArchive->close()
+ 3 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\PreEnrolled->stud_cor_form()
+ 4 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-05 02:18:30 --> file_put_contents(/home/u343516587/domains/bccwebportal.com/bacocommunitycollege/writable/pdf/Certificate of Registration (1st Semester, 2023-2024) - balls.dragon012@gmail.com.pdf): Failed to open stream: No such file or directory
+in APPPATH/Controllers/PreEnrolled.php on line 601.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/PreEnrolled.php(601): file_put_contents()
+ 3 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\PreEnrolled->stud_cor_form()
+ 4 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-05 02:21:53 --> ZipArchive::close(): Can't open file: No such file or directory
+in APPPATH/Controllers/PreEnrolled.php on line 613.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/PreEnrolled.php(613): ZipArchive->close()
+ 3 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\PreEnrolled->stud_cor_form()
+ 4 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-05 02:22:51 --> ZipArchive::close(): Can't open file: No such file or directory
+in APPPATH/Controllers/PreEnrolled.php on line 613.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/PreEnrolled.php(613): ZipArchive->close()
+ 3 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\PreEnrolled->stud_cor_form()
+ 4 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-05 02:46:11 --> unlink() expects at least 1 argument, 0 given
+in APPPATH/Controllers/PreEnrolled.php on line 607.
+ 1 APPPATH/Controllers/PreEnrolled.php(607): unlink()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\PreEnrolled->stud_cor_form()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-05 02:46:22 --> ZipArchive::close(): Can't open file: No such file or directory
+in APPPATH/Controllers/PreEnrolled.php on line 609.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/PreEnrolled.php(609): ZipArchive->close()
+ 3 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\PreEnrolled->stud_cor_form()
+ 4 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-05 02:47:09 --> ZipArchive::close(): Can't open file: No such file or directory
+in APPPATH/Controllers/PreEnrolled.php on line 606.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/PreEnrolled.php(606): ZipArchive->close()
+ 3 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\PreEnrolled->stud_cor_form()
+ 4 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-05 02:47:29 --> ZipArchive::close(): Can't open file: No such file or directory
+in APPPATH/Controllers/PreEnrolled.php on line 606.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/PreEnrolled.php(606): ZipArchive->close()
+ 3 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\PreEnrolled->stud_cor_form()
+ 4 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-05 22:37:18 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 408.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(408): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-05 22:39:22 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 408.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(408): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-05 23:53:39 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/section/schedule/Schedule11.php on line 408.
+ 1 APPPATH/Views/admin/section/schedule/Schedule11.php(408): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/section/schedule/Schedule11.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Section.php(96): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Section->schedule11()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()

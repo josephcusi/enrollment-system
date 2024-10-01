@@ -24,7 +24,7 @@ class App extends BaseConfig
      *
      * @var string
      */
-   public $baseURL = 'http://localhost:8080/';
+  public $baseURL = 'http://localhost:8080/';
    // public $baseURL = 'https://08d0-131-226-82-41.ap.ngrok.io/';
 
     /**
@@ -176,7 +176,7 @@ class App extends BaseConfig
      *
      * @var int
      */
-    public $sessionExpiration = 7200;
+    public $sessionExpiration = 86400;
 
     /**
      * --------------------------------------------------------------------------

@@ -2,7 +2,7 @@
         <div class="modal-dialog" style = "font-family:poppins">
           <div class="modal-content">
             <div class="modal-header">
-              <h4 class="modal-title">Strand Maintenance</h4>
+              <h4 class="modal-title">Update Program</h4>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -11,7 +11,7 @@
             <form action="<?= base_url('update_strand'); ?>" method="post">
                     <div class="form-row">
                     <div class="form-group col-md-6">
-                      <label for="inputStrand">Strand</label>
+                      <label for="inputStrand">Program</label>
                       <input type="hidden" name="id" class="form-control id" id="inputStrand" placeholder="Abbreviation">
                       <input type="text" name="strand" class="form-control strand" id="inputStrand" placeholder="Abbreviation">
                       <span class="text-danger">
@@ -46,3 +46,20 @@
         <!-- /.modal-dialog -->
       </div>
       <!-- /.modal -->
+      <script>
+$(document).ready(function() {
+    // sa button
+    $('.btn-updateStrand').on('click', function() {
+        // data galing buton
+        const id = $(this).data('id');
+        const strand = $(this).data('strand');
+        const title = $(this).data('title');
+        // // sa modal
+        $('.id').val(id);
+        $('.title').val(title);
+        $('.strand').val(strand).trigger('change');
+        // Call Modal
+        $('#updateStrand').modal('show');
+    });
+});
+</script>

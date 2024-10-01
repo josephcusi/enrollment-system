@@ -1,0 +1,31 @@
+CRITICAL - 2023-09-27 21:43:35 --> Array to string conversion
+in SYSTEMPATH/Database/Query.php on line 329.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Database/Query.php(329): implode()
+ 3 SYSTEMPATH/Database/Query.php(310): CodeIgniter\Database\Query->matchNamedBinds()
+ 4 SYSTEMPATH/Database/Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 5 SYSTEMPATH/Debug/Toolbar/Collectors/Database.php(86): CodeIgniter\Database\Query->getQuery()
+ 6 SYSTEMPATH/Events/Events.php(149): CodeIgniter\Debug\Toolbar\Collectors\Database::collect()
+ 7 SYSTEMPATH/Database/BaseConnection.php(622): CodeIgniter\Events\Events::trigger()
+ 8 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+ 9 SYSTEMPATH/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+10 SYSTEMPATH/BaseModel.php(585): CodeIgniter\Model->doFindAll()
+11 APPPATH/Controllers/Profile.php(734): CodeIgniter\BaseModel->findAll()
+12 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+13 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+14 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+15 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-27 21:45:28 --> Undefined variable $missingSubjects
+in APPPATH/Controllers/Profile.php on line 775.
+ 1 APPPATH/Controllers/Profile.php(775): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-27 22:01:45 --> Trying to access array offset on value of type null
+in APPPATH/Filters/AuthAdmin.php on line 38.
+ 1 APPPATH/Filters/AuthAdmin.php(38): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Filters/Filters.php(173): App\Filters\AuthAdmin->before()
+ 3 SYSTEMPATH/CodeIgniter.php(455): CodeIgniter\Filters\Filters->run()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()

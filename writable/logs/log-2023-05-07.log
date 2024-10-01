@@ -1,0 +1,1744 @@
+ERROR - 2023-05-07 03:22:36 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'enrollment_syst...', 3306, '', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\User.php(60): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\User->retrieve_profile()
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\User.php(60): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\User->retrieve_profile()
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-05-07 03:22:36 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `school_year`
+WHERE `status` = :status:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(623): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\User.php(60): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->retrieve_profile()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 03:26:20 --> count(): Argument #1 ($value) must be of type Countable|array, string given
+in APPPATH\Views\admin\prospectus\first_year.php on line 368.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/prospectus/first_year', [], true)
+ 4 APPPATH\Controllers\Prospectus.php(84): view('admin/prospectus/first_year', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Prospectus->strandProspectus11('1', 'GAS')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prospectus))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 03:27:48 --> Undefined array key "pre_requisit"
+in APPPATH\Views\admin\prospectus\first_year.php on line 368.
+ 1 APPPATH\Views\admin\prospectus\first_year.php(368): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "pre_requisit"', 'APPPATH\\Views\\admin\\prospectus\\first_year.php', 368)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\prospectus\\first_year.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/prospectus/first_year', [], true)
+ 5 APPPATH\Controllers\Prospectus.php(84): view('admin/prospectus/first_year', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Prospectus->strandProspectus11('1', 'GAS')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prospectus))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 03:27:56 --> count(): Argument #1 ($value) must be of type Countable|array, string given
+in APPPATH\Views\admin\prospectus\first_year.php on line 368.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/prospectus/first_year', [], true)
+ 4 APPPATH\Controllers\Prospectus.php(84): view('admin/prospectus/first_year', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Prospectus->strandProspectus11('1', 'GAS')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prospectus))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 03:29:20 --> Undefined array key "prospectus"
+in APPPATH\Views\admin\prospectus\first_year.php on line 368.
+ 1 APPPATH\Views\admin\prospectus\first_year.php(368): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "prospectus"', 'APPPATH\\Views\\admin\\prospectus\\first_year.php', 368)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\prospectus\\first_year.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/prospectus/first_year', [], true)
+ 5 APPPATH\Controllers\Prospectus.php(84): view('admin/prospectus/first_year', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Prospectus->strandProspectus11('1', 'GAS')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prospectus))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 03:31:53 --> Undefined array key "pre_requisite"
+in APPPATH\Views\admin\prospectus\first_year.php on line 368.
+ 1 APPPATH\Views\admin\prospectus\first_year.php(368): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "pre_requisite"', 'APPPATH\\Views\\admin\\prospectus\\first_year.php', 368)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\prospectus\\first_year.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/prospectus/first_year', [], true)
+ 5 APPPATH\Controllers\Prospectus.php(84): view('admin/prospectus/first_year', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Prospectus->strandProspectus11('1', 'GAS')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prospectus))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 03:33:33 --> Undefined variable $data
+in APPPATH\Views\admin\prospectus\first_year.php on line 372.
+ 1 APPPATH\Views\admin\prospectus\first_year.php(372): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\admin\\prospectus\\first_year.php', 372)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\prospectus\\first_year.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/prospectus/first_year', [], true)
+ 5 APPPATH\Controllers\Prospectus.php(84): view('admin/prospectus/first_year', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Prospectus->strandProspectus11('1', 'GAS')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prospectus))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 03:33:47 --> count(): Argument #1 ($value) must be of type Countable|array, string given
+in APPPATH\Views\admin\prospectus\first_year.php on line 372.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/prospectus/first_year', [], true)
+ 4 APPPATH\Controllers\Prospectus.php(84): view('admin/prospectus/first_year', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Prospectus->strandProspectus11('1', 'GAS')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prospectus))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 03:34:55 --> count(): Argument #1 ($value) must be of type Countable|array, string given
+in APPPATH\Views\admin\prospectus\first_year.php on line 368.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/prospectus/first_year', [], true)
+ 4 APPPATH\Controllers\Prospectus.php(84): view('admin/prospectus/first_year', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Prospectus->strandProspectus11('1', 'GAS')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prospectus))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 03:35:02 --> count(): Argument #1 ($value) must be of type Countable|array, string given
+in APPPATH\Views\admin\prospectus\first_year.php on line 368.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/prospectus/first_year', [], true)
+ 4 APPPATH\Controllers\Prospectus.php(84): view('admin/prospectus/first_year', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Prospectus->strandProspectus11('1', 'GAS')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prospectus))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 03:36:41 --> sizeof(): Argument #1 ($value) must be of type Countable|array, string given
+in APPPATH\Views\admin\prospectus\first_year.php on line 368.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/prospectus/first_year', [], true)
+ 4 APPPATH\Controllers\Prospectus.php(84): view('admin/prospectus/first_year', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Prospectus->strandProspectus11('1', 'GAS')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prospectus))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 03:37:47 --> Undefined variable $data
+in APPPATH\Views\admin\prospectus\first_year.php on line 369.
+ 1 APPPATH\Views\admin\prospectus\first_year.php(369): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\admin\\prospectus\\first_year.php', 369)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\prospectus\\first_year.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/prospectus/first_year', [], true)
+ 5 APPPATH\Controllers\Prospectus.php(84): view('admin/prospectus/first_year', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Prospectus->strandProspectus11('1', 'GAS')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prospectus))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 03:37:55 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+in APPPATH\Views\admin\prospectus\first_year.php on line 369.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/prospectus/first_year', [], true)
+ 4 APPPATH\Controllers\Prospectus.php(84): view('admin/prospectus/first_year', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Prospectus->strandProspectus11('1', 'GAS')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prospectus))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 03:39:20 --> foreach() argument must be of type array|object, string given
+in APPPATH\Views\admin\prospectus\first_year.php on line 370.
+ 1 APPPATH\Views\admin\prospectus\first_year.php(370): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'APPPATH\\Views\\admin\\prospectus\\first_year.php', 370)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\prospectus\\first_year.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/prospectus/first_year', [], true)
+ 5 APPPATH\Controllers\Prospectus.php(84): view('admin/prospectus/first_year', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Prospectus->strandProspectus11('1', 'GAS')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prospectus))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 03:40:06 --> Undefined array key "pre_requisit"
+in APPPATH\Views\admin\prospectus\first_year.php on line 370.
+ 1 APPPATH\Views\admin\prospectus\first_year.php(370): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "pre_requisit"', 'APPPATH\\Views\\admin\\prospectus\\first_year.php', 370)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\prospectus\\first_year.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/prospectus/first_year', [], true)
+ 5 APPPATH\Controllers\Prospectus.php(84): view('admin/prospectus/first_year', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Prospectus->strandProspectus11('1', 'GAS')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prospectus))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 03:40:13 --> foreach() argument must be of type array|object, string given
+in APPPATH\Views\admin\prospectus\first_year.php on line 370.
+ 1 APPPATH\Views\admin\prospectus\first_year.php(370): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'APPPATH\\Views\\admin\\prospectus\\first_year.php', 370)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\prospectus\\first_year.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/prospectus/first_year', [], true)
+ 5 APPPATH\Controllers\Prospectus.php(84): view('admin/prospectus/first_year', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Prospectus->strandProspectus11('1', 'GAS')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prospectus))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 03:41:24 --> foreach() argument must be of type array|object, string given
+in APPPATH\Views\admin\prospectus\first_year.php on line 370.
+ 1 APPPATH\Views\admin\prospectus\first_year.php(370): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'APPPATH\\Views\\admin\\prospectus\\first_year.php', 370)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\prospectus\\first_year.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/prospectus/first_year', [], true)
+ 5 APPPATH\Controllers\Prospectus.php(84): view('admin/prospectus/first_year', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Prospectus->strandProspectus11('1', 'GAS')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prospectus))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 03:43:39 --> Call to a member function getNumRows() on string
+in APPPATH\Views\admin\prospectus\first_year.php on line 368.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/prospectus/first_year', [], true)
+ 4 APPPATH\Controllers\Prospectus.php(84): view('admin/prospectus/first_year', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Prospectus->strandProspectus11('1', 'GAS')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prospectus))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 03:44:10 --> Call to a member function get() on string
+in APPPATH\Views\admin\prospectus\first_year.php on line 368.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/prospectus/first_year', [], true)
+ 4 APPPATH\Controllers\Prospectus.php(84): view('admin/prospectus/first_year', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Prospectus->strandProspectus11('1', 'GAS')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prospectus))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 03:44:21 --> Call to a member function getNumRows() on string
+in APPPATH\Views\admin\prospectus\first_year.php on line 368.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/prospectus/first_year', [], true)
+ 4 APPPATH\Controllers\Prospectus.php(84): view('admin/prospectus/first_year', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Prospectus->strandProspectus11('1', 'GAS')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prospectus))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 03:45:33 --> Call to a member function getNumRows() on string
+in APPPATH\Views\admin\prospectus\first_year.php on line 369.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/prospectus/first_year', [], true)
+ 4 APPPATH\Controllers\Prospectus.php(84): view('admin/prospectus/first_year', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Prospectus->strandProspectus11('1', 'GAS')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prospectus))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 03:53:55 --> Undefined array key "pre_requisit"
+in APPPATH\Views\admin\prospectus\first_year.php on line 369.
+ 1 APPPATH\Views\admin\prospectus\first_year.php(369): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "pre_requisit"', 'APPPATH\\Views\\admin\\prospectus\\first_year.php', 369)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\prospectus\\first_year.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/prospectus/first_year', [], true)
+ 5 APPPATH\Controllers\Prospectus.php(84): view('admin/prospectus/first_year', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Prospectus->strandProspectus11('1', 'GAS')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prospectus))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 03:54:08 --> Call to a member function getNumRows() on string
+in APPPATH\Views\admin\prospectus\first_year.php on line 369.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/prospectus/first_year', [], true)
+ 4 APPPATH\Controllers\Prospectus.php(84): view('admin/prospectus/first_year', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Prospectus->strandProspectus11('1', 'GAS')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prospectus))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 03:56:05 --> count(): Argument #1 ($value) must be of type Countable|array, string given
+in APPPATH\Views\admin\prospectus\first_year.php on line 369.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/prospectus/first_year', [], true)
+ 4 APPPATH\Controllers\Prospectus.php(84): view('admin/prospectus/first_year', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Prospectus->strandProspectus11('1', 'GAS')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prospectus))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 03:59:29 --> Undefined array key "prospectrus_tbl.id"
+in APPPATH\Controllers\Prospectus.php on line 65.
+ 1 APPPATH\Controllers\Prospectus.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "prospectrus_tbl.id"', 'APPPATH\\Controllers\\Prospectus.php', 65)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Prospectus->strandProspectus11('1', 'GAS')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prospectus))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 04:00:21 --> Undefined array key "prospectrus_tbl.id"
+in APPPATH\Controllers\Prospectus.php on line 65.
+ 1 APPPATH\Controllers\Prospectus.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "prospectrus_tbl.id"', 'APPPATH\\Controllers\\Prospectus.php', 65)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Prospectus->strandProspectus11('1', 'GAS')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prospectus))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 04:00:51 --> Cannot access offset of type string on string
+in APPPATH\Views\admin\prospectus\first_year.php on line 369.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/prospectus/first_year', [], true)
+ 4 APPPATH\Controllers\Prospectus.php(92): view('admin/prospectus/first_year', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Prospectus->strandProspectus11('1', 'GAS')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prospectus))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 04:01:08 --> Undefined array key "pre_requisit"
+in APPPATH\Controllers\Prospectus.php on line 65.
+ 1 APPPATH\Controllers\Prospectus.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "pre_requisit"', 'APPPATH\\Controllers\\Prospectus.php', 65)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Prospectus->strandProspectus11('1', 'GAS')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prospectus))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 04:06:09 --> Attempt to read property "countAllResults" on string
+in APPPATH\Views\admin\prospectus\first_year.php on line 368.
+ 1 APPPATH\Views\admin\prospectus\first_year.php(368): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "countAllResults" on string', 'APPPATH\\Views\\admin\\prospectus\\first_year.php', 368)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\prospectus\\first_year.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/prospectus/first_year', [], true)
+ 5 APPPATH\Controllers\Prospectus.php(92): view('admin/prospectus/first_year', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Prospectus->strandProspectus11('1', 'GAS')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prospectus))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 04:23:29 --> Attempt to read property "countAllResults" on string
+in APPPATH\Views\admin\prospectus\first_year.php on line 368.
+ 1 APPPATH\Views\admin\prospectus\first_year.php(368): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "countAllResults" on string', 'APPPATH\\Views\\admin\\prospectus\\first_year.php', 368)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\prospectus\\first_year.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/prospectus/first_year', [], true)
+ 5 APPPATH\Controllers\Prospectus.php(92): view('admin/prospectus/first_year', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Prospectus->strandProspectus11('1', 'SMAW')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prospectus))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 04:35:37 --> array_combine() expects exactly 2 arguments, 3 given
+in APPPATH\Views\user\userProspectus.php on line 159.
+ 1 APPPATH\Views\user\userProspectus.php(159): array_combine([...], [...], [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\userProspectus.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/userProspectus', [], true)
+ 5 APPPATH\Controllers\Profile.php(118): view('user/userProspectus', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->userProspectus()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 04:36:58 --> Array to string conversion
+in APPPATH\Views\user\userProspectus.php on line 169.
+ 1 APPPATH\Views\user\userProspectus.php(169): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\user\\userProspectus.php', 169)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\userProspectus.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/userProspectus', [], true)
+ 5 APPPATH\Controllers\Profile.php(118): view('user/userProspectus', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->userProspectus()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 04:38:07 --> Array to string conversion
+in APPPATH\Views\user\userProspectus.php on line 172.
+ 1 APPPATH\Views\user\userProspectus.php(172): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\user\\userProspectus.php', 172)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\userProspectus.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/userProspectus', [], true)
+ 5 APPPATH\Controllers\Profile.php(118): view('user/userProspectus', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->userProspectus()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 04:39:08 --> Undefined array key "id"
+in APPPATH\Views\user\userProspectus.php on line 164.
+ 1 APPPATH\Views\user\userProspectus.php(164): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'APPPATH\\Views\\user\\userProspectus.php', 164)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\userProspectus.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/userProspectus', [], true)
+ 5 APPPATH\Controllers\Profile.php(118): view('user/userProspectus', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->userProspectus()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 04:39:28 --> Undefined array key "subject_grade"
+in APPPATH\Views\user\userProspectus.php on line 164.
+ 1 APPPATH\Views\user\userProspectus.php(164): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "subject_grade"', 'APPPATH\\Views\\user\\userProspectus.php', 164)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\userProspectus.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/userProspectus', [], true)
+ 5 APPPATH\Controllers\Profile.php(118): view('user/userProspectus', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->userProspectus()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 04:39:35 --> Undefined array key 0
+in APPPATH\Views\user\userProspectus.php on line 164.
+ 1 APPPATH\Views\user\userProspectus.php(164): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\user\\userProspectus.php', 164)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\userProspectus.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/userProspectus', [], true)
+ 5 APPPATH\Controllers\Profile.php(118): view('user/userProspectus', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->userProspectus()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 04:40:50 --> Array to string conversion
+in APPPATH\Views\user\userProspectus.php on line 174.
+ 1 APPPATH\Views\user\userProspectus.php(174): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\user\\userProspectus.php', 174)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\userProspectus.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/userProspectus', [], true)
+ 5 APPPATH\Controllers\Profile.php(118): view('user/userProspectus', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->userProspectus()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 04:56:24 --> Undefined variable $value
+in APPPATH\Controllers\Profile.php on line 599.
+ 1 APPPATH\Controllers\Profile.php(599): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $value', 'APPPATH\\Controllers\\Profile.php', 599)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 05:05:51 --> Undefined variable $grade_model
+in APPPATH\Controllers\Profile.php on line 584.
+ 1 APPPATH\Controllers\Profile.php(584): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $grade_model', 'APPPATH\\Controllers\\Profile.php', 584)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-05-07 05:06:08 --> mysqli_sql_exception: Column 'semester' in where clause is ambiguous in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\Profile.php(591): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-05-07 05:06:08 --> Column 'semester' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `student_grading`
+INNER JOIN `prospectrus_tbl` ON `student_grading`.`subject_id` = `prospectrus_tbl`.`id`
+INNER JOIN `strand_tbl` ON `prospectrus_tbl`.`strand_id` = `strand_tbl`.`id`
+WHERE `prospectrus_tbl`.`strand_id` = \'1\'
+AND `year_level` = \'Grade 11\'
+AND `semester` = \'2nd Semester\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `student_grading`
+INNER JOIN `prospectrus_tbl` ON `student_grading`.`subject_id` = `prospectrus_tbl`.`id`
+INNER JOIN `strand_tbl` ON `prospectrus_tbl`.`strand_id` = `strand_tbl`.`id`
+WHERE `prospectrus_tbl`.`strand_id` = \'1\'
+AND `year_level` = \'Grade 11\'
+AND `semester` = \'2nd Semester\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `student_grading`
+INNER JOIN `prospectrus_tbl` ON `student_grading`.`subject_id` = `prospectrus_tbl`.`id`
+INNER JOIN `strand_tbl` ON `prospectrus_tbl`.`strand_id` = `strand_tbl`.`id`
+WHERE `prospectrus_tbl`.`strand_id` = \'1\'
+AND `year_level` = \'Grade 11\'
+AND `semester` = \'2nd Semester\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `student_grading`
+INNER JOIN `prospectrus_tbl` ON `student_grading`.`subject_id` = `prospectrus_tbl`.`id`
+INNER JOIN `strand_tbl` ON `prospectrus_tbl`.`strand_id` = `strand_tbl`.`id`
+WHERE `prospectrus_tbl`.`strand_id` = :prospectrus_tbl.strand_id:
+AND `year_level` = :year_level:
+AND `semester` = :semester:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(623): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Profile.php(591): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-05-07 05:06:32 --> mysqli_sql_exception: Unknown column 'student_grading.year_level' in 'where clause' in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\Profile.php(591): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-05-07 05:06:32 --> Unknown column 'student_grading.year_level' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `student_grading`
+INNER JOIN `prospectrus_tbl` ON `student_grading`.`subject_id` = `prospectrus_tbl`.`id`
+INNER JOIN `strand_tbl` ON `prospectrus_tbl`.`strand_id` = `strand_tbl`.`id`
+WHERE `prospectrus_tbl`.`strand_id` = \'1\'
+AND `student_grading`.`year_level` = \'Grade 11\'
+AND `student_grading`.`semester` = \'2nd Semester\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `student_grading`
+INNER JOIN `prospectrus_tbl` ON `student_grading`.`subject_id` = `prospectrus_tbl`.`id`
+INNER JOIN `strand_tbl` ON `prospectrus_tbl`.`strand_id` = `strand_tbl`.`id`
+WHERE `prospectrus_tbl`.`strand_id` = \'1\'
+AND `student_grading`.`year_level` = \'Grade 11\'
+AND `student_grading`.`semester` = \'2nd Semester\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `student_grading`
+INNER JOIN `prospectrus_tbl` ON `student_grading`.`subject_id` = `prospectrus_tbl`.`id`
+INNER JOIN `strand_tbl` ON `prospectrus_tbl`.`strand_id` = `strand_tbl`.`id`
+WHERE `prospectrus_tbl`.`strand_id` = \'1\'
+AND `student_grading`.`year_level` = \'Grade 11\'
+AND `student_grading`.`semester` = \'2nd Semester\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `student_grading`
+INNER JOIN `prospectrus_tbl` ON `student_grading`.`subject_id` = `prospectrus_tbl`.`id`
+INNER JOIN `strand_tbl` ON `prospectrus_tbl`.`strand_id` = `strand_tbl`.`id`
+WHERE `prospectrus_tbl`.`strand_id` = :prospectrus_tbl.strand_id:
+AND `student_grading`.`year_level` = :student_grading.year_level:
+AND `student_grading`.`semester` = :student_grading.semester:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(623): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Profile.php(591): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-05-07 08:52:20 --> mysqli_sql_exception: Column 'semester' in where clause is ambiguous in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\Profile.php(589): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-05-07 08:52:20 --> Column 'semester' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `student_grading` ON `prospectrus_tbl`.`id` = `student_grading`.`subject_id`
+WHERE `strand_id` = \'1\'
+AND `year_level` = \'Grade 11\'
+AND `semester` = \'2nd Semester\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `student_grading` ON `prospectrus_tbl`.`id` = `student_grading`.`subject_id`
+WHERE `strand_id` = \'1\'
+AND `year_level` = \'Grade 11\'
+AND `semester` = \'2nd Semester\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `student_grading` ON `prospectrus_tbl`.`id` = `student_grading`.`subject_id`
+WHERE `strand_id` = \'1\'
+AND `year_level` = \'Grade 11\'
+AND `semester` = \'2nd Semester\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `student_grading` ON `prospectrus_tbl`.`id` = `student_grading`.`subject_id`
+WHERE `strand_id` = :strand_id:
+AND `year_level` = :year_level:
+AND `semester` = :semester:', [...], false)
+ 5 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Profile.php(589): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-05-07 09:03:13 --> mysqli_sql_exception: Unknown column 'prospectrus_tbl.remark' in 'where clause' in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\Profile.php(589): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-05-07 09:03:13 --> Unknown column 'prospectrus_tbl.remark' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `prospectrus_tbl`
+RIGHT JOIN `student_grading` ON `prospectrus_tbl`.`id` = `student_grading`.`subject_id`
+WHERE `strand_id` = \'1\'
+AND `prospectrus_tbl`.`remark` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `prospectrus_tbl`
+RIGHT JOIN `student_grading` ON `prospectrus_tbl`.`id` = `student_grading`.`subject_id`
+WHERE `strand_id` = \'1\'
+AND `prospectrus_tbl`.`remark` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `prospectrus_tbl`
+RIGHT JOIN `student_grading` ON `prospectrus_tbl`.`id` = `student_grading`.`subject_id`
+WHERE `strand_id` = \'1\'
+AND `prospectrus_tbl`.`remark` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `prospectrus_tbl`
+RIGHT JOIN `student_grading` ON `prospectrus_tbl`.`id` = `student_grading`.`subject_id`
+WHERE `strand_id` = :strand_id:
+AND `prospectrus_tbl`.`remark` = :prospectrus_tbl.remark:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Profile.php(589): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 09:10:39 --> in_array(): Argument #2 ($haystack) must be of type array, string given
+in APPPATH\Controllers\Profile.php on line 594.
+ 1 APPPATH\Controllers\Profile.php(594): in_array('1', '1,2')
+ 2 [internal function]: App\Controllers\Profile->App\Controllers\{closure}([...])
+ 3 APPPATH\Controllers\Profile.php(595): array_filter([...], Object(Closure))
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 09:10:59 --> in_array(): Argument #2 ($haystack) must be of type array, string given
+in APPPATH\Controllers\Profile.php on line 594.
+ 1 APPPATH\Controllers\Profile.php(594): in_array('1', '1,2')
+ 2 [internal function]: App\Controllers\Profile->App\Controllers\{closure}([...])
+ 3 APPPATH\Controllers\Profile.php(595): array_filter([...], Object(Closure))
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 09:11:09 --> in_array(): Argument #2 ($haystack) must be of type array, string given
+in APPPATH\Controllers\Profile.php on line 594.
+ 1 APPPATH\Controllers\Profile.php(594): in_array('1', '1,2')
+ 2 [internal function]: App\Controllers\Profile->App\Controllers\{closure}([...])
+ 3 APPPATH\Controllers\Profile.php(595): array_filter([...], Object(Closure))
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 09:13:38 --> Undefined variable $subject
+in APPPATH\Controllers\Profile.php on line 581.
+ 1 APPPATH\Controllers\Profile.php(581): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $subject', 'APPPATH\\Controllers\\Profile.php', 581)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 09:14:34 --> Undefined array key "subject_id"
+in APPPATH\Controllers\Profile.php on line 588.
+ 1 APPPATH\Controllers\Profile.php(588): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "subject_id"', 'APPPATH\\Controllers\\Profile.php', 588)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 09:14:50 --> Undefined array key "subject_id"
+in APPPATH\Controllers\Profile.php on line 586.
+ 1 APPPATH\Controllers\Profile.php(586): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "subject_id"', 'APPPATH\\Controllers\\Profile.php', 586)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 09:14:59 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::first()
+in APPPATH\Controllers\Profile.php on line 585.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-05-07 09:16:23 --> mysqli_sql_exception: Table 'student_grading.lrn' doesn't exist in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\Profile.php(583): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-05-07 09:16:23 --> Table 'student_grading.lrn' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `student_grading` ON `prospectrus_tbl`.`id` = `student_grading`.`subject_id`
+JOIN `student_grading`.`lrn` USING (`B23-SHS4207`)
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `student_grading` ON `prospectrus_tbl`.`id` = `student_grading`.`subject_id`
+JOIN `student_grading`.`lrn` USING (`B23-SHS4207`)
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `student_grading` ON `prospectrus_tbl`.`id` = `student_grading`.`subject_id`
+JOIN `student_grading`.`lrn` USING (`B23-SHS4207`)
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `student_grading` ON `prospectrus_tbl`.`id` = `student_grading`.`subject_id`
+JOIN `student_grading`.`lrn` USING (`B23-SHS4207`)
+ LIMIT 1', [], false)
+ 5 SYSTEMPATH\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(623): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Profile.php(583): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 09:20:25 --> Undefined array key "grade"
+in APPPATH\Controllers\Profile.php on line 586.
+ 1 APPPATH\Controllers\Profile.php(586): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "grade"', 'APPPATH\\Controllers\\Profile.php', 586)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 09:22:36 --> Undefined variable $subject_id
+in APPPATH\Controllers\Profile.php on line 591.
+ 1 APPPATH\Controllers\Profile.php(591): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $subject_id', 'APPPATH\\Controllers\\Profile.php', 591)
+ 2 [internal function]: App\Controllers\Profile->App\Controllers\{closure}('90', '1')
+ 3 APPPATH\Controllers\Profile.php(593): array_map(Object(Closure), [...], [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 09:23:34 --> Too few arguments to function App\Controllers\Profile::App\Controllers\{closure}(), 2 passed and exactly 3 expected
+in APPPATH\Controllers\Profile.php on line 587.
+ 1 [internal function]: App\Controllers\Profile->App\Controllers\{closure}('90', '1')
+ 2 APPPATH\Controllers\Profile.php(593): array_map(Object(Closure), [...], [...])
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 09:24:13 --> Undefined variable $prospectus
+in APPPATH\Controllers\Profile.php on line 591.
+ 1 APPPATH\Controllers\Profile.php(591): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $prospectus', 'APPPATH\\Controllers\\Profile.php', 591)
+ 2 [internal function]: App\Controllers\Profile->App\Controllers\{closure}('90', '1')
+ 3 APPPATH\Controllers\Profile.php(593): array_map(Object(Closure), [...], [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 09:27:12 --> array_combine() expects exactly 2 arguments, 1 given
+in APPPATH\Controllers\Profile.php on line 588.
+ 1 APPPATH\Controllers\Profile.php(588): array_combine([...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 09:27:24 --> Undefined variable $ids
+in APPPATH\Controllers\Profile.php on line 587.
+ 1 APPPATH\Controllers\Profile.php(587): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ids', 'APPPATH\\Controllers\\Profile.php', 587)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 09:29:34 --> Array to string conversion
+in SYSTEMPATH\Database\Query.php on line 329.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'SYSTEMPATH\\Database\\Query.php', 329)
+ 2 SYSTEMPATH\Database\Query.php(329): implode(',', [...])
+ 3 SYSTEMPATH\Database\Query.php(310): CodeIgniter\Database\Query->matchNamedBinds('SELECT *
+FROM `prospectrus_tbl`
+RIGHT JOIN `student_grading` ON `prospectrus_tbl`.`id` = `student_grading`.`subject_id`
+WHERE `strand_id` = :strand_id:
+AND `prospectrus_tbl`.`id` = :prospectrus_tbl.id:', [...])
+ 4 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 5 SYSTEMPATH\Debug\Toolbar\Collectors\Database.php(86): CodeIgniter\Database\Query->getQuery()
+ 6 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Debug\Toolbar\Collectors\Database::collect(Object(CodeIgniter\Database\Query))
+ 7 SYSTEMPATH\Database\BaseConnection.php(622): CodeIgniter\Events\Events::trigger('DBQuery', Object(CodeIgniter\Database\Query))
+ 8 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `prospectrus_tbl`
+RIGHT JOIN `student_grading` ON `prospectrus_tbl`.`id` = `student_grading`.`subject_id`
+WHERE `strand_id` = :strand_id:
+AND `prospectrus_tbl`.`id` = :prospectrus_tbl.id:', [...], false)
+ 9 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+10 APPPATH\Controllers\Profile.php(608): CodeIgniter\Model->__call('get', [])
+11 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+12 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+13 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-05-07 09:30:16 --> mysqli_sql_exception: Illegal parameter data types int and row for operation '=' in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\Profile.php(608): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-05-07 09:30:16 --> Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `prospectrus_tbl`
+RIGHT JOIN `student_grading` ON `prospectrus_tbl`.`id` = `student_grading`.`subject_id`
+WHERE `strand_id` = \'1\'
+AND `prospectrus_tbl`.`id` = (\'1\',\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `prospectrus_tbl`
+RIGHT JOIN `student_grading` ON `prospectrus_tbl`.`id` = `student_grading`.`subject_id`
+WHERE `strand_id` = \'1\'
+AND `prospectrus_tbl`.`id` = (\'1\',\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `prospectrus_tbl`
+RIGHT JOIN `student_grading` ON `prospectrus_tbl`.`id` = `student_grading`.`subject_id`
+WHERE `strand_id` = \'1\'
+AND `prospectrus_tbl`.`id` = (\'1\',\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `prospectrus_tbl`
+RIGHT JOIN `student_grading` ON `prospectrus_tbl`.`id` = `student_grading`.`subject_id`
+WHERE `strand_id` = :strand_id:
+AND `prospectrus_tbl`.`id` = :prospectrus_tbl.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Profile.php(608): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 09:31:32 --> Undefined variable $subject
+in APPPATH\Controllers\Profile.php on line 621.
+ 1 APPPATH\Controllers\Profile.php(621): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $subject', 'APPPATH\\Controllers\\Profile.php', 621)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 09:32:59 --> Undefined variable $subject
+in APPPATH\Controllers\Profile.php on line 586.
+ 1 APPPATH\Controllers\Profile.php(586): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $subject', 'APPPATH\\Controllers\\Profile.php', 586)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 09:33:14 --> Array to string conversion
+in SYSTEMPATH\Database\Query.php on line 329.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'SYSTEMPATH\\Database\\Query.php', 329)
+ 2 SYSTEMPATH\Database\Query.php(329): implode(',', [...])
+ 3 SYSTEMPATH\Database\Query.php(310): CodeIgniter\Database\Query->matchNamedBinds('SELECT *
+FROM `prospectrus_tbl`
+RIGHT JOIN `student_grading` ON `prospectrus_tbl`.`id` = `student_grading`.`subject_id`
+WHERE `prospectrus_tbl`.`id` IN :prospectrus_tbl.id:
+AND `strand_id` = :strand_id:
+AND `student_grading`.`remark` = :student_grading.remark:', [...])
+ 4 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 5 SYSTEMPATH\Debug\Toolbar\Collectors\Database.php(86): CodeIgniter\Database\Query->getQuery()
+ 6 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Debug\Toolbar\Collectors\Database::collect(Object(CodeIgniter\Database\Query))
+ 7 SYSTEMPATH\Database\BaseConnection.php(622): CodeIgniter\Events\Events::trigger('DBQuery', Object(CodeIgniter\Database\Query))
+ 8 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `prospectrus_tbl`
+RIGHT JOIN `student_grading` ON `prospectrus_tbl`.`id` = `student_grading`.`subject_id`
+WHERE `prospectrus_tbl`.`id` IN :prospectrus_tbl.id:
+AND `strand_id` = :strand_id:
+AND `student_grading`.`remark` = :student_grading.remark:', [...], false)
+ 9 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+10 APPPATH\Controllers\Profile.php(607): CodeIgniter\Model->__call('get', [])
+11 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+12 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+13 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-05-07 09:36:47 --> mysqli_sql_exception: Column 'semester' in where clause is ambiguous in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\Profile.php(609): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-05-07 09:36:47 --> Column 'semester' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `prospectrus_tbl`
+RIGHT JOIN `student_grading` ON `prospectrus_tbl`.`id` = `student_grading`.`subject_id`
+WHERE `prospectrus_tbl`.`id` IN (1,2)
+AND `strand_id` = \'1\'
+AND `year_level` = \'Grade 11\'
+AND `semester` = \'2nd Semester\'
+AND `student_grading`.`remark` = \'1,2\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `prospectrus_tbl`
+RIGHT JOIN `student_grading` ON `prospectrus_tbl`.`id` = `student_grading`.`subject_id`
+WHERE `prospectrus_tbl`.`id` IN (1,2)
+AND `strand_id` = \'1\'
+AND `year_level` = \'Grade 11\'
+AND `semester` = \'2nd Semester\'
+AND `student_grading`.`remark` = \'1,2\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `prospectrus_tbl`
+RIGHT JOIN `student_grading` ON `prospectrus_tbl`.`id` = `student_grading`.`subject_id`
+WHERE `prospectrus_tbl`.`id` IN (1,2)
+AND `strand_id` = \'1\'
+AND `year_level` = \'Grade 11\'
+AND `semester` = \'2nd Semester\'
+AND `student_grading`.`remark` = \'1,2\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `prospectrus_tbl`
+RIGHT JOIN `student_grading` ON `prospectrus_tbl`.`id` = `student_grading`.`subject_id`
+WHERE `prospectrus_tbl`.`id` IN :prospectrus_tbl.id:
+AND `strand_id` = :strand_id:
+AND `year_level` = :year_level:
+AND `semester` = :semester:
+AND `student_grading`.`remark` = :student_grading.remark:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Profile.php(609): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-05-07 09:36:58 --> mysqli_sql_exception: Column 'semester' in where clause is ambiguous in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\Profile.php(609): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-05-07 09:36:58 --> Column 'semester' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `prospectrus_tbl`
+RIGHT JOIN `student_grading` ON `prospectrus_tbl`.`id` = `student_grading`.`subject_id`
+WHERE `prospectrus_tbl`.`id` IN (1,2)
+AND `strand_id` = \'1\'
+AND `prospectrus_tbl`.`year_level` = \'Grade 11\'
+AND `semester` = \'2nd Semester\'
+AND `student_grading`.`remark` = \'1,2\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `prospectrus_tbl`
+RIGHT JOIN `student_grading` ON `prospectrus_tbl`.`id` = `student_grading`.`subject_id`
+WHERE `prospectrus_tbl`.`id` IN (1,2)
+AND `strand_id` = \'1\'
+AND `prospectrus_tbl`.`year_level` = \'Grade 11\'
+AND `semester` = \'2nd Semester\'
+AND `student_grading`.`remark` = \'1,2\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `prospectrus_tbl`
+RIGHT JOIN `student_grading` ON `prospectrus_tbl`.`id` = `student_grading`.`subject_id`
+WHERE `prospectrus_tbl`.`id` IN (1,2)
+AND `strand_id` = \'1\'
+AND `prospectrus_tbl`.`year_level` = \'Grade 11\'
+AND `semester` = \'2nd Semester\'
+AND `student_grading`.`remark` = \'1,2\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `prospectrus_tbl`
+RIGHT JOIN `student_grading` ON `prospectrus_tbl`.`id` = `student_grading`.`subject_id`
+WHERE `prospectrus_tbl`.`id` IN :prospectrus_tbl.id:
+AND `strand_id` = :strand_id:
+AND `prospectrus_tbl`.`year_level` = :prospectrus_tbl.year_level:
+AND `semester` = :semester:
+AND `student_grading`.`remark` = :student_grading.remark:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Profile.php(609): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 09:42:15 --> Undefined array key "remark"
+in APPPATH\Controllers\Profile.php on line 583.
+ 1 APPPATH\Controllers\Profile.php(583): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "remark"', 'APPPATH\\Controllers\\Profile.php', 583)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 09:42:32 --> Undefined array key "remark"
+in APPPATH\Controllers\Profile.php on line 582.
+ 1 APPPATH\Controllers\Profile.php(582): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "remark"', 'APPPATH\\Controllers\\Profile.php', 582)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 09:42:40 --> Undefined array key "remark"
+in APPPATH\Controllers\Profile.php on line 582.
+ 1 APPPATH\Controllers\Profile.php(582): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "remark"', 'APPPATH\\Controllers\\Profile.php', 582)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->insert_registration()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 09:45:57 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 09:48:19 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 09:50:52 --> Undefined array key "overall_remark"
+in APPPATH\Views\admin\grading\first_year.php on line 363.
+ 1 APPPATH\Views\admin\grading\first_year.php(363): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "overall_remark"', 'APPPATH\\Views\\admin\\grading\\first_year.php', 363)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\grading\\first_year.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/grading/first_year', [], true)
+ 5 APPPATH\Controllers\Grading.php(207): view('admin/grading/first_year', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrading('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 09:53:02 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 09:54:09 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 09:54:12 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-05-07 22:08:23 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'enrollment_syst...', 3306, '', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\User.php(60): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\User->retrieve_profile()
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\User.php(60): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\User->retrieve_profile()
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-05-07 22:08:23 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `school_year`
+WHERE `status` = :status:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(623): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\User.php(60): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->retrieve_profile()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 22:10:16 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 22:11:27 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 22:11:51 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 22:11:55 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 22:12:28 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 22:12:32 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 22:13:27 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 22:13:41 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 22:14:12 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 22:14:41 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 22:14:56 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 22:15:08 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 22:15:34 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 22:15:42 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 22:16:06 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 22:16:27 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 22:16:38 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 22:16:49 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 22:17:25 --> Undefined array key "total_grade"
+in APPPATH\Views\admin\grading\first_yearGrade.php on line 368.
+ 1 APPPATH\Views\admin\grading\first_yearGrade.php(368): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "total_grade"', 'APPPATH\\Views\\admin\\grading\\first_yearGrade.php', 368)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\grading\\first_yearGrade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/grading/first_yearGrade', [], true)
+ 5 APPPATH\Controllers\Grading.php(145): view('admin/grading/first_yearGrade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('1', 'B23-SHS4207', 'GAS')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 22:18:18 --> Undefined array key "total_grading"
+in APPPATH\Views\admin\grading\first_yearGrade.php on line 368.
+ 1 APPPATH\Views\admin\grading\first_yearGrade.php(368): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "total_grading"', 'APPPATH\\Views\\admin\\grading\\first_yearGrade.php', 368)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\grading\\first_yearGrade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/grading/first_yearGrade', [], true)
+ 5 APPPATH\Controllers\Grading.php(145): view('admin/grading/first_yearGrade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('1', 'B23-SHS4207', 'GAS')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 22:18:21 --> Undefined array key "total_grading"
+in APPPATH\Views\admin\grading\first_yearGrade.php on line 368.
+ 1 APPPATH\Views\admin\grading\first_yearGrade.php(368): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "total_grading"', 'APPPATH\\Views\\admin\\grading\\first_yearGrade.php', 368)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\grading\\first_yearGrade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/grading/first_yearGrade', [], true)
+ 5 APPPATH\Controllers\Grading.php(145): view('admin/grading/first_yearGrade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('1', 'B23-SHS4207', 'GAS')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 22:18:47 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 22:19:04 --> Undefined array key "subject_remark"
+in APPPATH\Views\admin\grading\first_yearGrade.php on line 368.
+ 1 APPPATH\Views\admin\grading\first_yearGrade.php(368): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "subject_remark"', 'APPPATH\\Views\\admin\\grading\\first_yearGrade.php', 368)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\grading\\first_yearGrade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/grading/first_yearGrade', [], true)
+ 5 APPPATH\Controllers\Grading.php(145): view('admin/grading/first_yearGrade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('1', 'B23-SHS4207', 'GAS')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 22:19:47 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 22:21:01 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 22:22:06 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 22:22:18 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 22:22:31 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 22:22:48 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 22:22:56 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 22:25:32 --> Undefined variable $totalGrade
+in APPPATH\Views\admin\grading\first_yearGrade.php on line 371.
+ 1 APPPATH\Views\admin\grading\first_yearGrade.php(371): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $totalGrade', 'APPPATH\\Views\\admin\\grading\\first_yearGrade.php', 371)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\grading\\first_yearGrade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/grading/first_yearGrade', [], true)
+ 5 APPPATH\Controllers\Grading.php(145): view('admin/grading/first_yearGrade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('1', 'B23-SHS4207', 'GAS')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 22:25:55 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 22:26:28 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 22:26:39 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 22:27:54 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 22:28:08 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 22:51:01 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 22:51:48 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 22:52:04 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 22:52:46 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 22:53:21 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 22:53:48 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 22:55:44 --> Undefined array key 104
+in APPPATH\Views\admin\grading\first_yearGrade.php on line 378.
+ 1 APPPATH\Views\admin\grading\first_yearGrade.php(378): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 104', 'APPPATH\\Views\\admin\\grading\\first_yearGrade.php', 378)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\grading\\first_yearGrade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/grading/first_yearGrade', [], true)
+ 5 APPPATH\Controllers\Grading.php(145): view('admin/grading/first_yearGrade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('1', 'B23-SHS4207', 'index3.html')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 22:59:33 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 23:00:21 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 23:00:24 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 23:00:38 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 23:01:08 --> Undefined array key 104
+in APPPATH\Views\admin\grading\first_yearGrade.php on line 378.
+ 1 APPPATH\Views\admin\grading\first_yearGrade.php(378): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 104', 'APPPATH\\Views\\admin\\grading\\first_yearGrade.php', 378)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\grading\\first_yearGrade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/grading/first_yearGrade', [], true)
+ 5 APPPATH\Controllers\Grading.php(145): view('admin/grading/first_yearGrade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('1', 'B23-SHS4207', 'GAS')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 23:01:18 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 23:01:49 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 23:02:26 --> Undefined array key 104
+in APPPATH\Views\admin\grading\first_yearGrade.php on line 384.
+ 1 APPPATH\Views\admin\grading\first_yearGrade.php(384): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 104', 'APPPATH\\Views\\admin\\grading\\first_yearGrade.php', 384)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\grading\\first_yearGrade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/grading/first_yearGrade', [], true)
+ 5 APPPATH\Controllers\Grading.php(145): view('admin/grading/first_yearGrade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('1', 'B23-SHS4207', 'GAS')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 23:02:51 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 23:02:59 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 23:03:21 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 23:03:53 --> Undefined variable $totalGrade
+in APPPATH\Views\admin\grading\first_yearGrade.php on line 377.
+ 1 APPPATH\Views\admin\grading\first_yearGrade.php(377): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $totalGrade', 'APPPATH\\Views\\admin\\grading\\first_yearGrade.php', 377)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\grading\\first_yearGrade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/grading/first_yearGrade', [], true)
+ 5 APPPATH\Controllers\Grading.php(145): view('admin/grading/first_yearGrade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('1', 'B23-SHS4207', 'GAS')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 23:04:14 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 23:04:21 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 23:07:27 --> Undefined variable $totalGrade
+in APPPATH\Views\admin\grading\first_yearGrade.php on line 375.
+ 1 APPPATH\Views\admin\grading\first_yearGrade.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $totalGrade', 'APPPATH\\Views\\admin\\grading\\first_yearGrade.php', 375)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\grading\\first_yearGrade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/grading/first_yearGrade', [], true)
+ 5 APPPATH\Controllers\Grading.php(145): view('admin/grading/first_yearGrade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('1', 'B23-SHS4207', 'GAS')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 23:07:48 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 23:08:03 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 23:08:25 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 23:09:31 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 23:09:42 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 23:09:52 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 23:10:48 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-07 23:12:32 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

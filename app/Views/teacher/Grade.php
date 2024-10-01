@@ -136,32 +136,36 @@
                 <table id="example1" class="table table-bordered table" style="font-family:poppins">
                     <thead>
                         <tr>
-                            <th>Subject</th>
-                            <th>Subject Grade</th>
-                            <th>Remarks</th>
+                            <th>Course</th>
+                            <th>Course Grade</th>
 
                         </tr>
                     </thead>
-                    <?php if($count_grade == 1):?>
+                    <?php if($test123 == 1):?>
                     <tbody class="userData">
                         <?php 
-          $grades = array_combine(explode(",", $student_grade['subject_id']), explode(",", $student_grade['subject_grade']));
-          foreach($subject as $sub):
-              if(isset($grades[$sub['id']])):
-      ?>
+                                            $ids = array_combine(
+                                                explode(',', $grading['subject_id']),
+                                                array_map(function($grade, $remark) {
+                                                    return [
+                                                        'grade' => $grade,
+                                                        'remark' => $remark,
+                                                    ];
+                                                }, explode(',', $grading['subject_grade']), explode(',', $grading['subject_remark']))
+                                            );
+                                        ?>
+                        <?php foreach($stud_sub as $stdnt_sjct):?>
+                        <?php if(isset($ids[$stdnt_sjct['id']])):?>
                         <tr>
-                            <td><?=$sub['subject']?></td>
-                            <td><?=$grades[$sub['id']]?></td>
-                            <td><?=$student_grade['remark']?></td>
+                            <td><?=$stdnt_sjct['subject'];?></td>
+                            <td><?=$ids[$stdnt_sjct['id']]['grade']?></td>
                         </tr>
-                        <?php 
-            endif;
-        endforeach; 
-    ?>
+                        <?php endif; endforeach; ?>
                         <button type="button" class="btn btn-default btn-update"
-                            style="border-radius:20px;font-family:poppins; background-color:maroon; color: white;" data-id="<?= $student_grade['stud_id']?>" data-lrn="<?= $student_grade['lrn']?>">Update
+                            style="border-radius:20px;font-family:poppins; background-color:maroon; color: white;"
+                            data-id="<?//= $infoStud['stud_id']?>" data-lrn="<?//= $infoStud['lrn']?>">Update
                         </button>
-                        <?php include 'include/grademodal/updategrademodal.php'?>
+                        <?//php include 'include/grademodal/updategrademodal.php'?>
                     </tbody>
                     <?php else:?>
                     <tbody class="userData">
@@ -174,8 +178,9 @@
                     </tbody>
                     <?php endif?>
             </div>
-            <button type="button" class="btn btn-default btn-add" style="border-radius:20px;font-family:poppins; background-color:gray; color: white;"
-                data-lrn="<?= $info['lrn']?>">Add Grade</button>
+            <button type="button" class="btn btn-default btn-add"
+                style="border-radius:20px;font-family:poppins; background-color:gray; color: white;"
+                data-lrn="<?= $stud['lrn']?>">Add Grade</button>
             <?php include 'include/grademodal/grademodal.php';?>
             </table>
             <!-- /.card-body -->

@@ -9,7 +9,7 @@ class AuthController extends Controller
 {
   public function forgot()
 {
-    helper('form');
+      helper(['url', 'Form_helper', 'form']);
 
     if ($this->request->getMethod() == 'post') {
         // Validate the form
@@ -49,7 +49,7 @@ class AuthController extends Controller
         $email->setTo($to);
         $email->setMailType("html");
         $email->setSubject('PASSWORD RESET');
-        $email->setFrom('zasuke277379597@gmail.com', $subject);
+        $email->setFrom('bccregistrar1@gmail.com', $subject);
         $email->setMessage("Hello, You recently requested a password reset for your account.
         Please click the following link to reset your password: $resetLink <br>
         If you did not request a password reset, you can safely ignore this email.");

@@ -1,0 +1,1208 @@
+ERROR - 2023-06-17 00:14:48 --> mysqli_sql_exception: Unknown column 'student_registration.ysemesterear' in 'where clause' in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `stud...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `stud...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `stud...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `stud...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\Credentials.php(143): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\Credentials->studreq()
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-06-17 00:14:48 --> Unknown column 'student_registration.ysemesterear' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `stud_req_tbl`.`id`
+FROM `user_tbl`
+INNER JOIN `stud_req_tbl` ON `user_tbl`.`lrn` = `stud_req_tbl`.`lrn`
+INNER JOIN `user_profile` ON `user_tbl`.`email` = `user_profile`.`email`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+WHERE `user_tbl`.`usertype` = \'COLLEGE\'
+AND `student_registration`.`year` = \'2023-2024\'
+AND `student_registration`.`ysemesterear` = \'1st Semester\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `stud_req_tbl`.`id`
+FROM `user_tbl`
+INNER JOIN `stud_req_tbl` ON `user_tbl`.`lrn` = `stud_req_tbl`.`lrn`
+INNER JOIN `user_profile` ON `user_tbl`.`email` = `user_profile`.`email`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+WHERE `user_tbl`.`usertype` = \'COLLEGE\'
+AND `student_registration`.`year` = \'2023-2024\'
+AND `student_registration`.`ysemesterear` = \'1st Semester\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `stud_req_tbl`.`id`
+FROM `user_tbl`
+INNER JOIN `stud_req_tbl` ON `user_tbl`.`lrn` = `stud_req_tbl`.`lrn`
+INNER JOIN `user_profile` ON `user_tbl`.`email` = `user_profile`.`email`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+WHERE `user_tbl`.`usertype` = \'COLLEGE\'
+AND `student_registration`.`year` = \'2023-2024\'
+AND `student_registration`.`ysemesterear` = \'1st Semester\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `stud_req_tbl`.`id`
+FROM `user_tbl`
+INNER JOIN `stud_req_tbl` ON `user_tbl`.`lrn` = `stud_req_tbl`.`lrn`
+INNER JOIN `user_profile` ON `user_tbl`.`email` = `user_profile`.`email`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+WHERE `user_tbl`.`usertype` = :user_tbl.usertype:
+AND `student_registration`.`year` = :student_registration.year:
+AND `student_registration`.`ysemesterear` = :student_registration.ysemesterear:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Credentials.php(143): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->studreq()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-06-17 00:40:42 --> mysqli_sql_exception: Table 'enrollment_system.year_tbl' doesn't exist in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `stud...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `stud...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `stud...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `stud...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\Credentials.php(145): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\Credentials->studreq()
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-06-17 00:40:42 --> Table 'enrollment_system.year_tbl' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `stud_req_tbl`.`id`
+FROM `user_tbl`
+INNER JOIN `stud_req_tbl` ON `user_tbl`.`lrn` = `stud_req_tbl`.`lrn`
+INNER JOIN `user_profile` ON `user_tbl`.`email` = `user_profile`.`email`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `section_tbl` ON `student_registration`.`user_section` = `section_tbl`.`id`
+INNER JOIN `year_tbl` ON `user_tbl`.`semester` = `year_tbl`.`semester`
+WHERE `user_tbl`.`usertype` = \'COLLEGE\'
+AND `year_tbl`.`year` = \'2023-2024\'
+AND `year_tbl`.`semester` = \'2nd Semester\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `stud_req_tbl`.`id`
+FROM `user_tbl`
+INNER JOIN `stud_req_tbl` ON `user_tbl`.`lrn` = `stud_req_tbl`.`lrn`
+INNER JOIN `user_profile` ON `user_tbl`.`email` = `user_profile`.`email`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `section_tbl` ON `student_registration`.`user_section` = `section_tbl`.`id`
+INNER JOIN `year_tbl` ON `user_tbl`.`semester` = `year_tbl`.`semester`
+WHERE `user_tbl`.`usertype` = \'COLLEGE\'
+AND `year_tbl`.`year` = \'2023-2024\'
+AND `year_tbl`.`semester` = \'2nd Semester\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `stud_req_tbl`.`id`
+FROM `user_tbl`
+INNER JOIN `stud_req_tbl` ON `user_tbl`.`lrn` = `stud_req_tbl`.`lrn`
+INNER JOIN `user_profile` ON `user_tbl`.`email` = `user_profile`.`email`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `section_tbl` ON `student_registration`.`user_section` = `section_tbl`.`id`
+INNER JOIN `year_tbl` ON `user_tbl`.`semester` = `year_tbl`.`semester`
+WHERE `user_tbl`.`usertype` = \'COLLEGE\'
+AND `year_tbl`.`year` = \'2023-2024\'
+AND `year_tbl`.`semester` = \'2nd Semester\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `stud_req_tbl`.`id`
+FROM `user_tbl`
+INNER JOIN `stud_req_tbl` ON `user_tbl`.`lrn` = `stud_req_tbl`.`lrn`
+INNER JOIN `user_profile` ON `user_tbl`.`email` = `user_profile`.`email`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `section_tbl` ON `student_registration`.`user_section` = `section_tbl`.`id`
+INNER JOIN `year_tbl` ON `user_tbl`.`semester` = `year_tbl`.`semester`
+WHERE `user_tbl`.`usertype` = :user_tbl.usertype:
+AND `year_tbl`.`year` = :year_tbl.year:
+AND `year_tbl`.`semester` = :year_tbl.semester:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Credentials.php(145): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->studreq()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-06-17 00:41:00 --> mysqli_sql_exception: Unknown column 'user_tbl.semester' in 'on clause' in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `stud...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `stud...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `stud...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `stud...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\Credentials.php(145): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\Credentials->studreq()
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-06-17 00:41:00 --> Unknown column 'user_tbl.semester' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `stud_req_tbl`.`id`
+FROM `user_tbl`
+INNER JOIN `stud_req_tbl` ON `user_tbl`.`lrn` = `stud_req_tbl`.`lrn`
+INNER JOIN `user_profile` ON `user_tbl`.`email` = `user_profile`.`email`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `section_tbl` ON `student_registration`.`user_section` = `section_tbl`.`id`
+INNER JOIN `school_year` ON `user_tbl`.`semester` = `school_year`.`semester`
+WHERE `user_tbl`.`usertype` = \'COLLEGE\'
+AND `school_year`.`year` = \'2023-2024\'
+AND `school_year`.`semester` = \'2nd Semester\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `stud_req_tbl`.`id`
+FROM `user_tbl`
+INNER JOIN `stud_req_tbl` ON `user_tbl`.`lrn` = `stud_req_tbl`.`lrn`
+INNER JOIN `user_profile` ON `user_tbl`.`email` = `user_profile`.`email`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `section_tbl` ON `student_registration`.`user_section` = `section_tbl`.`id`
+INNER JOIN `school_year` ON `user_tbl`.`semester` = `school_year`.`semester`
+WHERE `user_tbl`.`usertype` = \'COLLEGE\'
+AND `school_year`.`year` = \'2023-2024\'
+AND `school_year`.`semester` = \'2nd Semester\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `stud_req_tbl`.`id`
+FROM `user_tbl`
+INNER JOIN `stud_req_tbl` ON `user_tbl`.`lrn` = `stud_req_tbl`.`lrn`
+INNER JOIN `user_profile` ON `user_tbl`.`email` = `user_profile`.`email`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `section_tbl` ON `student_registration`.`user_section` = `section_tbl`.`id`
+INNER JOIN `school_year` ON `user_tbl`.`semester` = `school_year`.`semester`
+WHERE `user_tbl`.`usertype` = \'COLLEGE\'
+AND `school_year`.`year` = \'2023-2024\'
+AND `school_year`.`semester` = \'2nd Semester\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `stud_req_tbl`.`id`
+FROM `user_tbl`
+INNER JOIN `stud_req_tbl` ON `user_tbl`.`lrn` = `stud_req_tbl`.`lrn`
+INNER JOIN `user_profile` ON `user_tbl`.`email` = `user_profile`.`email`
+INNER JOIN `student_registration` ON `user_tbl`.`lrn` = `student_registration`.`lrn`
+INNER JOIN `section_tbl` ON `student_registration`.`user_section` = `section_tbl`.`id`
+INNER JOIN `school_year` ON `user_tbl`.`semester` = `school_year`.`semester`
+WHERE `user_tbl`.`usertype` = :user_tbl.usertype:
+AND `school_year`.`year` = :school_year.year:
+AND `school_year`.`semester` = :school_year.semester:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Credentials.php(145): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->studreq()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 07:15:55 --> explode(): Passing null to parameter #2 ($string) of type string is deprecated
+in APPPATH\Controllers\Section.php on line 437.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'explode(): Passing null to parameter #2 ($string) of type string is deprecated', 'APPPATH\\Controllers\\Section.php', 437)
+ 2 APPPATH\Controllers\Section.php(437): explode(',', null)
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->add_room()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 07:24:54 --> explode(): Passing null to parameter #2 ($string) of type string is deprecated
+in APPPATH\Controllers\Section.php on line 437.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'explode(): Passing null to parameter #2 ($string) of type string is deprecated', 'APPPATH\\Controllers\\Section.php', 437)
+ 2 APPPATH\Controllers\Section.php(437): explode(',', null)
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->add_room()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 07:26:35 --> explode(): Passing null to parameter #2 ($string) of type string is deprecated
+in APPPATH\Controllers\Section.php on line 437.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'explode(): Passing null to parameter #2 ($string) of type string is deprecated', 'APPPATH\\Controllers\\Section.php', 437)
+ 2 APPPATH\Controllers\Section.php(437): explode(',', null)
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->add_room()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-06-17 07:29:37 --> mysqli_sql_exception: Column 'purpose' cannot be null in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `st...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `st...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `st...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\Credentials.php(168): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\Credentials->request_form()
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-06-17 07:29:37 --> Column 'purpose' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `stud_req_tbl` (`lrn`, `purpose`, `cred_requested`, `cred_status`) VALUES (\'ADMINID-3718\', NULL, NULL, \'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `stud_req_tbl` (`lrn`, `purpose`, `cred_requested`, `cred_status`) VALUES (\'ADMINID-3718\', NULL, NULL, \'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `stud_req_tbl` (`lrn`, `purpose`, `cred_requested`, `cred_status`) VALUES (\'ADMINID-3718\', NULL, NULL, \'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `stud_req_tbl` (`lrn`, `purpose`, `cred_requested`, `cred_status`) VALUES (:lrn:, :purpose:, :cred_requested:, :cred_status:)', [...], false)
+ 5 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Credentials.php(168): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->request_form()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 07:31:58 --> Undefined array key 0
+in APPPATH\Views\user\viewSchedule.php on line 132.
+ 1 APPPATH\Views\user\viewSchedule.php(132): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\user\\viewSchedule.php', 132)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(36): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 07:32:09 --> Undefined array key 0
+in APPPATH\Views\user\viewSchedule.php on line 132.
+ 1 APPPATH\Views\user\viewSchedule.php(132): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\user\\viewSchedule.php', 132)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\viewSchedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/viewSchedule', [], true)
+ 5 APPPATH\Controllers\UserSchedule.php(36): view('user/viewSchedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserSchedule->viewSchedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserSchedule))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 07:33:12 --> explode(): Passing null to parameter #2 ($string) of type string is deprecated
+in APPPATH\Controllers\Section.php on line 437.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'explode(): Passing null to parameter #2 ($string) of type string is deprecated', 'APPPATH\\Controllers\\Section.php', 437)
+ 2 APPPATH\Controllers\Section.php(437): explode(',', null)
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->add_room()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 07:48:13 --> Undefined variable $stud_cred_req
+in APPPATH\Views\admin\student_request\studreq.php on line 344.
+ 1 APPPATH\Views\admin\student_request\studreq.php(344): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $stud_cred_req', 'APPPATH\\Views\\admin\\student_request\\studreq.php', 344)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\studreq.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_request/studreq', [], true)
+ 5 APPPATH\Controllers\Credentials.php(155): view('admin/student_request/studreq', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->studreq()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 09:45:34 --> Undefined variable $stud_cred_req
+in APPPATH\Views\admin\student_request\cred_schedule.php on line 19.
+ 1 APPPATH\Views\admin\student_request\cred_schedule.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $stud_cred_req', 'APPPATH\\Views\\admin\\student_request\\cred_schedule.php', 19)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\cred_schedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('admin/student_request/cred_schedule', null, true)
+ 5 APPPATH\Views\admin\student_request\studreq.php(369): CodeIgniter\View\View->include('admin/student_request/cred_schedule')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\studreq.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_request/studreq', [], true)
+ 9 APPPATH\Controllers\Credentials.php(155): view('admin/student_request/studreq', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->studreq()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 09:46:56 --> include(admin/student_request/cred_schedule.php): Failed to open stream: No such file or directory
+in APPPATH\Views\admin\student_request\studreq.php on line 369.
+ 1 APPPATH\Views\admin\student_request\studreq.php(369): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(admin/student_request/cred_schedule.php): Failed to open stream: No such file or directory', 'APPPATH\\Views\\admin\\student_request\\studreq.php', 369)
+ 2 APPPATH\Views\admin\student_request\studreq.php(369): include()
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\studreq.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_request/studreq', [], true)
+ 6 APPPATH\Controllers\Credentials.php(155): view('admin/student_request/studreq', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->studreq()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 09:47:15 --> include(admin/student_request/cred_schedule.php): Failed to open stream: No such file or directory
+in APPPATH\Views\admin\student_request\studreq.php on line 369.
+ 1 APPPATH\Views\admin\student_request\studreq.php(369): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(admin/student_request/cred_schedule.php): Failed to open stream: No such file or directory', 'APPPATH\\Views\\admin\\student_request\\studreq.php', 369)
+ 2 APPPATH\Views\admin\student_request\studreq.php(369): include()
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\studreq.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_request/studreq', [], true)
+ 6 APPPATH\Controllers\Credentials.php(155): view('admin/student_request/studreq', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->studreq()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 09:47:20 --> include(admin/student_request/cred_schedule.php): Failed to open stream: No such file or directory
+in APPPATH\Views\admin\student_request\studreq.php on line 369.
+ 1 APPPATH\Views\admin\student_request\studreq.php(369): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(admin/student_request/cred_schedule.php): Failed to open stream: No such file or directory', 'APPPATH\\Views\\admin\\student_request\\studreq.php', 369)
+ 2 APPPATH\Views\admin\student_request\studreq.php(369): include()
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\studreq.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_request/studreq', [], true)
+ 6 APPPATH\Controllers\Credentials.php(155): view('admin/student_request/studreq', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->studreq()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 09:47:30 --> Undefined variable $stud_cred_req
+in APPPATH\Views\admin\student_request\cred_schedule.php on line 19.
+ 1 APPPATH\Views\admin\student_request\cred_schedule.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $stud_cred_req', 'APPPATH\\Views\\admin\\student_request\\cred_schedule.php', 19)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\cred_schedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('admin/student_request/cred_schedule', null, true)
+ 5 APPPATH\Views\admin\student_request\studreq.php(369): CodeIgniter\View\View->include('admin/student_request/cred_schedule')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\studreq.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_request/studreq', [], true)
+ 9 APPPATH\Controllers\Credentials.php(155): view('admin/student_request/studreq', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->studreq()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 09:48:43 --> Undefined variable $stud_cred_req
+in APPPATH\Views\admin\student_request\cred_schedule.php on line 19.
+ 1 APPPATH\Views\admin\student_request\cred_schedule.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $stud_cred_req', 'APPPATH\\Views\\admin\\student_request\\cred_schedule.php', 19)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\cred_schedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('admin/student_request/cred_schedule', null, true)
+ 5 APPPATH\Views\admin\student_request\studreq.php(369): CodeIgniter\View\View->include('admin/student_request/cred_schedule')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\studreq.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_request/studreq', [], true)
+ 9 APPPATH\Controllers\Credentials.php(155): view('admin/student_request/studreq', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->studreq()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 09:48:57 --> Undefined variable $stud_cred_req
+in APPPATH\Views\admin\student_request\cred_schedule.php on line 19.
+ 1 APPPATH\Views\admin\student_request\cred_schedule.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $stud_cred_req', 'APPPATH\\Views\\admin\\student_request\\cred_schedule.php', 19)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\cred_schedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('admin/student_request/cred_schedule', null, true)
+ 5 APPPATH\Views\admin\student_request\studreq.php(390): CodeIgniter\View\View->include('admin/student_request/cred_schedule')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\studreq.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_request/studreq', [], true)
+ 9 APPPATH\Controllers\Credentials.php(155): view('admin/student_request/studreq', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->studreq()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 09:51:04 --> Invalid file: student_request/cred_schedule.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('student_request/cred_schedule.php')
+ 2 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('student_request/cred_schedule', null, true)
+ 3 APPPATH\Views\admin\student_request\studreq.php(369): CodeIgniter\View\View->include('student_request/cred_schedule')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\studreq.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_request/studreq', [], true)
+ 7 APPPATH\Controllers\Credentials.php(155): view('admin/student_request/studreq', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->studreq()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 09:51:10 --> Undefined variable $stud_cred_req
+in APPPATH\Views\admin\student_request\cred_schedule.php on line 19.
+ 1 APPPATH\Views\admin\student_request\cred_schedule.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $stud_cred_req', 'APPPATH\\Views\\admin\\student_request\\cred_schedule.php', 19)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\cred_schedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('admin/student_request/cred_schedule', null, true)
+ 5 APPPATH\Views\admin\student_request\studreq.php(369): CodeIgniter\View\View->include('admin/student_request/cred_schedule')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\studreq.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_request/studreq', [], true)
+ 9 APPPATH\Controllers\Credentials.php(155): view('admin/student_request/studreq', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->studreq()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 09:52:51 --> Undefined array key "status"
+in APPPATH\Views\admin\student_request\cred_schedule.php on line 19.
+ 1 APPPATH\Views\admin\student_request\cred_schedule.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "status"', 'APPPATH\\Views\\admin\\student_request\\cred_schedule.php', 19)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\cred_schedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('admin/student_request/cred_schedule', null, true)
+ 5 APPPATH\Views\admin\student_request\studreq.php(369): CodeIgniter\View\View->include('admin/student_request/cred_schedule')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\studreq.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_request/studreq', [], true)
+ 9 APPPATH\Controllers\Credentials.php(155): view('admin/student_request/studreq', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->studreq()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 09:53:14 --> Undefined array key "cred_status"
+in APPPATH\Views\admin\student_request\cred_schedule.php on line 19.
+ 1 APPPATH\Views\admin\student_request\cred_schedule.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cred_status"', 'APPPATH\\Views\\admin\\student_request\\cred_schedule.php', 19)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\cred_schedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('admin/student_request/cred_schedule', null, true)
+ 5 APPPATH\Views\admin\student_request\studreq.php(369): CodeIgniter\View\View->include('admin/student_request/cred_schedule')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\studreq.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_request/studreq', [], true)
+ 9 APPPATH\Controllers\Credentials.php(155): view('admin/student_request/studreq', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->studreq()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 09:57:02 --> Undefined variable $stud_cred_req
+in APPPATH\Views\admin\student_request\cred_schedule.php on line 19.
+ 1 APPPATH\Views\admin\student_request\cred_schedule.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $stud_cred_req', 'APPPATH\\Views\\admin\\student_request\\cred_schedule.php', 19)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\cred_schedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('admin/student_request/cred_schedule', [...], true)
+ 5 APPPATH\Views\admin\student_request\studreq.php(369): CodeIgniter\View\View->include('admin/student_request/cred_schedule', [...])
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\studreq.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_request/studreq', [], true)
+ 9 APPPATH\Controllers\Credentials.php(155): view('admin/student_request/studreq', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->studreq()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 09:57:32 --> Undefined variable $stud_cred_req
+in APPPATH\Views\admin\student_request\cred_schedule.php on line 19.
+ 1 APPPATH\Views\admin\student_request\cred_schedule.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $stud_cred_req', 'APPPATH\\Views\\admin\\student_request\\cred_schedule.php', 19)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\cred_schedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('admin/student_request/cred_schedule', null, true)
+ 5 APPPATH\Views\admin\student_request\studreq.php(369): CodeIgniter\View\View->include('admin/student_request/cred_schedule')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\studreq.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_request/studreq', [], true)
+ 9 APPPATH\Controllers\Credentials.php(155): view('admin/student_request/studreq', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->studreq()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 09:58:44 --> Undefined variable $stud_cred_req
+in APPPATH\Views\admin\student_request\cred_schedule.php on line 19.
+ 1 APPPATH\Views\admin\student_request\cred_schedule.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $stud_cred_req', 'APPPATH\\Views\\admin\\student_request\\cred_schedule.php', 19)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\cred_schedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('admin/student_request/cred_schedule', null, true)
+ 5 APPPATH\Views\admin\student_request\studreq.php(369): CodeIgniter\View\View->include('admin/student_request/cred_schedule')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\studreq.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_request/studreq', [], true)
+ 9 APPPATH\Controllers\Credentials.php(155): view('admin/student_request/studreq', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->studreq()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 09:59:10 --> include(student_request/cred_schedule.php): Failed to open stream: No such file or directory
+in APPPATH\Views\admin\student_request\studreq.php on line 369.
+ 1 APPPATH\Views\admin\student_request\studreq.php(369): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(student_request/cred_schedule.php): Failed to open stream: No such file or directory', 'APPPATH\\Views\\admin\\student_request\\studreq.php', 369)
+ 2 APPPATH\Views\admin\student_request\studreq.php(369): include()
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\studreq.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_request/studreq', [], true)
+ 6 APPPATH\Controllers\Credentials.php(155): view('admin/student_request/studreq', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->studreq()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 09:59:30 --> include(&lt;admin&gt;/student_request/cred_schedule.php): Failed to open stream: No such file or directory
+in APPPATH\Views\admin\student_request\studreq.php on line 369.
+ 1 APPPATH\Views\admin\student_request\studreq.php(369): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(&lt;admin&gt;/student_request/cred_schedule.php): Failed to open stream: No such file or directory', 'APPPATH\\Views\\admin\\student_request\\studreq.php', 369)
+ 2 APPPATH\Views\admin\student_request\studreq.php(369): include()
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\studreq.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_request/studreq', [], true)
+ 6 APPPATH\Controllers\Credentials.php(155): view('admin/student_request/studreq', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->studreq()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 09:59:40 --> include(admin/student_request/cred_schedule.php): Failed to open stream: No such file or directory
+in APPPATH\Views\admin\student_request\studreq.php on line 369.
+ 1 APPPATH\Views\admin\student_request\studreq.php(369): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(admin/student_request/cred_schedule.php): Failed to open stream: No such file or directory', 'APPPATH\\Views\\admin\\student_request\\studreq.php', 369)
+ 2 APPPATH\Views\admin\student_request\studreq.php(369): include()
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\studreq.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_request/studreq', [], true)
+ 6 APPPATH\Controllers\Credentials.php(155): view('admin/student_request/studreq', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->studreq()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 10:30:00 --> syntax error, unexpected end of file, expecting "elseif" or "else" or "endif"
+in APPPATH\Views\admin\student_request\cred_schedule.php on line 76.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_request/studreq', [], true)
+ 4 APPPATH\Controllers\Credentials.php(155): view('admin/student_request/studreq', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->studreq()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 10:37:32 --> Undefined variable $stud_cred_req
+in APPPATH\Views\admin\student_request\cred_schedule.php on line 42.
+ 1 APPPATH\Views\admin\student_request\cred_schedule.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $stud_cred_req', 'APPPATH\\Views\\admin\\student_request\\cred_schedule.php', 42)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\cred_schedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('admin/student_request/cred_schedule', null, true)
+ 5 APPPATH\Views\admin\student_request\studreq.php(388): CodeIgniter\View\View->include('admin/student_request/cred_schedule')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\studreq.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_request/studreq', [], true)
+ 9 APPPATH\Controllers\Credentials.php(155): view('admin/student_request/studreq', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->studreq()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 10:38:55 --> Undefined variable $stud_cred_req
+in APPPATH\Views\admin\student_request\cred_schedule.php on line 42.
+ 1 APPPATH\Views\admin\student_request\cred_schedule.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $stud_cred_req', 'APPPATH\\Views\\admin\\student_request\\cred_schedule.php', 42)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\cred_schedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('admin/student_request/cred_schedule', null, true)
+ 5 APPPATH\Views\admin\student_request\studreq.php(407): CodeIgniter\View\View->include('admin/student_request/cred_schedule')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\studreq.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_request/studreq', [], true)
+ 9 APPPATH\Controllers\Credentials.php(155): view('admin/student_request/studreq', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->studreq()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 10:39:16 --> Undefined variable $stud_cred_req
+in APPPATH\Views\admin\student_request\cred_schedule.php on line 42.
+ 1 APPPATH\Views\admin\student_request\cred_schedule.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $stud_cred_req', 'APPPATH\\Views\\admin\\student_request\\cred_schedule.php', 42)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\cred_schedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('admin/student_request/cred_schedule', null, true)
+ 5 APPPATH\Views\admin\student_request\studreq.php(358): CodeIgniter\View\View->include('admin/student_request/cred_schedule')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\studreq.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_request/studreq', [], true)
+ 9 APPPATH\Controllers\Credentials.php(155): view('admin/student_request/studreq', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->studreq()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 10:40:53 --> Undefined variable $stud_cred_req
+in APPPATH\Views\admin\student_request\cred_schedule.php on line 42.
+ 1 APPPATH\Views\admin\student_request\cred_schedule.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $stud_cred_req', 'APPPATH\\Views\\admin\\student_request\\cred_schedule.php', 42)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\cred_schedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('admin/student_request/cred_schedule', [...], true)
+ 5 APPPATH\Views\admin\student_request\studreq.php(390): CodeIgniter\View\View->include('admin/student_request/cred_schedule', [...])
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\studreq.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_request/studreq', [], true)
+ 9 APPPATH\Controllers\Credentials.php(155): view('admin/student_request/studreq', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->studreq()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 10:41:29 --> Undefined variable $stud_cred_req
+in APPPATH\Views\admin\student_request\cred_schedule.php on line 42.
+ 1 APPPATH\Views\admin\student_request\cred_schedule.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $stud_cred_req', 'APPPATH\\Views\\admin\\student_request\\cred_schedule.php', 42)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\cred_schedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('admin/student_request/cred_schedule', [...], true)
+ 5 APPPATH\Views\admin\student_request\studreq.php(390): CodeIgniter\View\View->include('admin/student_request/cred_schedule', [...])
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\studreq.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_request/studreq', [], true)
+ 9 APPPATH\Controllers\Credentials.php(155): view('admin/student_request/studreq', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->studreq()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 10:41:49 --> Call to undefined function set()
+in APPPATH\Views\admin\student_request\cred_schedule.php on line 42.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('admin/student_request/cred_schedule', [...], true)
+ 4 APPPATH\Views\admin\student_request\studreq.php(390): CodeIgniter\View\View->include('admin/student_request/cred_schedule', [...])
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\studreq.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_request/studreq', [], true)
+ 8 APPPATH\Controllers\Credentials.php(155): view('admin/student_request/studreq', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->studreq()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 10:42:42 --> Undefined variable $stud_cred_req
+in APPPATH\Views\admin\student_request\cred_schedule.php on line 42.
+ 1 APPPATH\Views\admin\student_request\cred_schedule.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $stud_cred_req', 'APPPATH\\Views\\admin\\student_request\\cred_schedule.php', 42)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\cred_schedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('admin/student_request/cred_schedule', [...], true)
+ 5 APPPATH\Views\admin\student_request\studreq.php(390): CodeIgniter\View\View->include('admin/student_request/cred_schedule', [...])
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\studreq.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_request/studreq', [], true)
+ 9 APPPATH\Controllers\Credentials.php(155): view('admin/student_request/studreq', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->studreq()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 10:45:08 --> Undefined variable $status
+in APPPATH\Views\admin\student_request\cred_schedule.php on line 42.
+ 1 APPPATH\Views\admin\student_request\cred_schedule.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $status', 'APPPATH\\Views\\admin\\student_request\\cred_schedule.php', 42)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\cred_schedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('admin/student_request/cred_schedule', null, true)
+ 5 APPPATH\Views\admin\student_request\studreq.php(388): CodeIgniter\View\View->include('admin/student_request/cred_schedule')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\studreq.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_request/studreq', [], true)
+ 9 APPPATH\Controllers\Credentials.php(155): view('admin/student_request/studreq', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->studreq()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 10:51:39 --> Undefined variable $stud_cred_req
+in APPPATH\Views\admin\student_request\cred_schedule.php on line 42.
+ 1 APPPATH\Views\admin\student_request\cred_schedule.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $stud_cred_req', 'APPPATH\\Views\\admin\\student_request\\cred_schedule.php', 42)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\cred_schedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('admin/student_request/cred_schedule', null, true)
+ 5 APPPATH\Views\admin\student_request\studreq.php(388): CodeIgniter\View\View->include('admin/student_request/cred_schedule')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\studreq.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_request/studreq', [], true)
+ 9 APPPATH\Controllers\Credentials.php(155): view('admin/student_request/studreq', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->studreq()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 10:52:07 --> Undefined variable $stud_cred_req
+in APPPATH\Views\admin\student_request\cred_schedule.php on line 42.
+ 1 APPPATH\Views\admin\student_request\cred_schedule.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $stud_cred_req', 'APPPATH\\Views\\admin\\student_request\\cred_schedule.php', 42)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\cred_schedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('admin/student_request/cred_schedule', null, true)
+ 5 APPPATH\Views\admin\student_request\studreq.php(388): CodeIgniter\View\View->include('admin/student_request/cred_schedule')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\studreq.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_request/studreq', [], true)
+ 9 APPPATH\Controllers\Credentials.php(155): view('admin/student_request/studreq', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->studreq()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 10:53:52 --> Undefined variable $sem
+in APPPATH\Views\admin\student_request\cred_schedule.php on line 42.
+ 1 APPPATH\Views\admin\student_request\cred_schedule.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sem', 'APPPATH\\Views\\admin\\student_request\\cred_schedule.php', 42)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\cred_schedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('admin/student_request/cred_schedule', null, true)
+ 5 APPPATH\Views\admin\student_request\studreq.php(388): CodeIgniter\View\View->include('admin/student_request/cred_schedule')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\studreq.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_request/studreq', [], true)
+ 9 APPPATH\Controllers\Credentials.php(155): view('admin/student_request/studreq', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->studreq()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 10:54:03 --> Undefined array key "cred_status"
+in APPPATH\Views\admin\student_request\cred_schedule.php on line 42.
+ 1 APPPATH\Views\admin\student_request\cred_schedule.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cred_status"', 'APPPATH\\Views\\admin\\student_request\\cred_schedule.php', 42)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\cred_schedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('admin/student_request/cred_schedule', null, true)
+ 5 APPPATH\Views\admin\student_request\studreq.php(388): CodeIgniter\View\View->include('admin/student_request/cred_schedule')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\studreq.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_request/studreq', [], true)
+ 9 APPPATH\Controllers\Credentials.php(155): view('admin/student_request/studreq', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->studreq()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 10:54:39 --> Undefined array key "cred_status"
+in APPPATH\Views\admin\student_request\cred_schedule.php on line 42.
+ 1 APPPATH\Views\admin\student_request\cred_schedule.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cred_status"', 'APPPATH\\Views\\admin\\student_request\\cred_schedule.php', 42)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\cred_schedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('admin/student_request/cred_schedule', null, true)
+ 5 APPPATH\Views\admin\student_request\studreq.php(424): CodeIgniter\View\View->include('admin/student_request/cred_schedule')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\studreq.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_request/studreq', [], true)
+ 9 APPPATH\Controllers\Credentials.php(155): view('admin/student_request/studreq', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->studreq()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 10:55:29 --> Undefined array key "cred_status"
+in APPPATH\Views\admin\student_request\cred_schedule.php on line 42.
+ 1 APPPATH\Views\admin\student_request\cred_schedule.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cred_status"', 'APPPATH\\Views\\admin\\student_request\\cred_schedule.php', 42)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\cred_schedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('admin/student_request/cred_schedule', null, true)
+ 5 APPPATH\Views\admin\student_request\studreq.php(424): CodeIgniter\View\View->include('admin/student_request/cred_schedule')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\studreq.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_request/studreq', [], true)
+ 9 APPPATH\Controllers\Credentials.php(155): view('admin/student_request/studreq', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->studreq()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 10:55:51 --> Undefined array key "cred_status"
+in APPPATH\Views\admin\student_request\cred_schedule.php on line 42.
+ 1 APPPATH\Views\admin\student_request\cred_schedule.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cred_status"', 'APPPATH\\Views\\admin\\student_request\\cred_schedule.php', 42)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\cred_schedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('admin/student_request/cred_schedule', null, true)
+ 5 APPPATH\Views\admin\student_request\studreq.php(388): CodeIgniter\View\View->include('admin/student_request/cred_schedule')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\studreq.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_request/studreq', [], true)
+ 9 APPPATH\Controllers\Credentials.php(155): view('admin/student_request/studreq', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->studreq()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 10:56:00 --> Undefined variable $stud_cred_req
+in APPPATH\Views\admin\student_request\cred_schedule.php on line 42.
+ 1 APPPATH\Views\admin\student_request\cred_schedule.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $stud_cred_req', 'APPPATH\\Views\\admin\\student_request\\cred_schedule.php', 42)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\cred_schedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('admin/student_request/cred_schedule', null, true)
+ 5 APPPATH\Views\admin\student_request\studreq.php(388): CodeIgniter\View\View->include('admin/student_request/cred_schedule')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\studreq.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_request/studreq', [], true)
+ 9 APPPATH\Controllers\Credentials.php(155): view('admin/student_request/studreq', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->studreq()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 10:56:31 --> Undefined variable $stud_cred_req
+in APPPATH\Views\admin\student_request\cred_schedule.php on line 42.
+ 1 APPPATH\Views\admin\student_request\cred_schedule.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $stud_cred_req', 'APPPATH\\Views\\admin\\student_request\\cred_schedule.php', 42)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\cred_schedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('admin/student_request/cred_schedule', null, true)
+ 5 APPPATH\Views\admin\student_request\studreq.php(407): CodeIgniter\View\View->include('admin/student_request/cred_schedule')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\studreq.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_request/studreq', [], true)
+ 9 APPPATH\Controllers\Credentials.php(155): view('admin/student_request/studreq', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->studreq()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 10:56:48 --> Undefined variable $stud_cred_req
+in APPPATH\Views\admin\student_request\cred_schedule.php on line 42.
+ 1 APPPATH\Views\admin\student_request\cred_schedule.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $stud_cred_req', 'APPPATH\\Views\\admin\\student_request\\cred_schedule.php', 42)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\cred_schedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('admin/student_request/cred_schedule', null, true)
+ 5 APPPATH\Views\admin\student_request\studreq.php(349): CodeIgniter\View\View->include('admin/student_request/cred_schedule')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\studreq.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_request/studreq', [], true)
+ 9 APPPATH\Controllers\Credentials.php(155): view('admin/student_request/studreq', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->studreq()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 11:01:03 --> Undefined variable $stud_cred_req
+in APPPATH\Views\admin\student_request\cred_schedule.php on line 42.
+ 1 APPPATH\Views\admin\student_request\cred_schedule.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $stud_cred_req', 'APPPATH\\Views\\admin\\student_request\\cred_schedule.php', 42)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\cred_schedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('admin/student_request/cred_schedule', null, true)
+ 5 APPPATH\Views\admin\student_request\studreq.php(349): CodeIgniter\View\View->include('admin/student_request/cred_schedule')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\studreq.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_request/studreq', [], true)
+ 9 APPPATH\Controllers\Credentials.php(155): view('admin/student_request/studreq', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->studreq()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 11:01:19 --> Undefined variable $stud_cred_req
+in APPPATH\Views\admin\student_request\shwreq.php on line 51.
+ 1 APPPATH\Views\admin\student_request\shwreq.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $stud_cred_req', 'APPPATH\\Views\\admin\\student_request\\shwreq.php', 51)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\shwreq.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('admin/student_request/shwreq', null, true)
+ 5 APPPATH\Views\admin\student_request\studreq.php(400): CodeIgniter\View\View->include('admin/student_request/shwreq')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\studreq.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_request/studreq', [], true)
+ 9 APPPATH\Controllers\Credentials.php(155): view('admin/student_request/studreq', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->studreq()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 11:01:46 --> Undefined variable $stud_cred_req
+in APPPATH\Views\admin\student_request\cred_schedule.php on line 42.
+ 1 APPPATH\Views\admin\student_request\cred_schedule.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $stud_cred_req', 'APPPATH\\Views\\admin\\student_request\\cred_schedule.php', 42)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\cred_schedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('admin/student_request/cred_schedule', null, true)
+ 5 APPPATH\Views\admin\student_request\studreq.php(389): CodeIgniter\View\View->include('admin/student_request/cred_schedule')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\studreq.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_request/studreq', [], true)
+ 9 APPPATH\Controllers\Credentials.php(155): view('admin/student_request/studreq', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->studreq()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 11:03:27 --> Undefined variable $stud_cred_req
+in APPPATH\Views\admin\student_request\cred_schedule.php on line 42.
+ 1 APPPATH\Views\admin\student_request\cred_schedule.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $stud_cred_req', 'APPPATH\\Views\\admin\\student_request\\cred_schedule.php', 42)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\cred_schedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('admin/student_request/cred_schedule', null, true)
+ 5 APPPATH\Views\admin\student_request\studreq.php(389): CodeIgniter\View\View->include('admin/student_request/cred_schedule')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\studreq.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_request/studreq', [], true)
+ 9 APPPATH\Controllers\Credentials.php(155): view('admin/student_request/studreq', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->studreq()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 11:03:57 --> Undefined variable $stud_cred_req
+in APPPATH\Views\admin\student_request\shwreq.php on line 51.
+ 1 APPPATH\Views\admin\student_request\shwreq.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $stud_cred_req', 'APPPATH\\Views\\admin\\student_request\\shwreq.php', 51)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\shwreq.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('admin/student_request/shwreq', null, true)
+ 5 APPPATH\Views\admin\student_request\studreq.php(398): CodeIgniter\View\View->include('admin/student_request/shwreq')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_request\\studreq.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_request/studreq', [], true)
+ 9 APPPATH\Controllers\Credentials.php(155): view('admin/student_request/studreq', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->studreq()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 11:31:29 --> syntax error, unexpected single-quoted string "strand", expecting "]"
+in APPPATH\Controllers\Credentials.php on line 166.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Credentials.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Credentials')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Credentials')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Credentials', true)
+ 5 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 11:31:30 --> syntax error, unexpected single-quoted string "strand", expecting "]"
+in APPPATH\Controllers\Credentials.php on line 166.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Credentials.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Credentials')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Credentials')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Credentials', true)
+ 5 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 11:35:20 --> Undefined variable $registration_model
+in APPPATH\Controllers\Credentials.php on line 112.
+ 1 APPPATH\Controllers\Credentials.php(112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $registration_model', 'APPPATH\\Controllers\\Credentials.php', 112)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->req()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-06-17 11:35:34 --> mysqli_sql_exception: Unknown column 'year' in 'where clause' in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\Credentials.php(116): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\Credentials->req()
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-06-17 11:35:34 --> Unknown column 'year' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `user_tbl`
+WHERE `year` = \'2023-2024\'
+AND `semester` = \'1st Semester\'
+AND `lrn` = \'B23-SHS232038\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user_tbl`
+WHERE `year` = \'2023-2024\'
+AND `semester` = \'1st Semester\'
+AND `lrn` = \'B23-SHS232038\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user_tbl`
+WHERE `year` = \'2023-2024\'
+AND `semester` = \'1st Semester\'
+AND `lrn` = \'B23-SHS232038\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_tbl`
+WHERE `year` = :year:
+AND `semester` = :semester:
+AND `lrn` = :lrn:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(623): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Credentials.php(116): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->req()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-06-17 11:40:47 --> mysqli_sql_exception: Unknown column 'student_registration.user_id' in 'on clause' in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\Credentials.php(117): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\Credentials->req()
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-06-17 11:40:47 --> Unknown column 'student_registration.user_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `student_registration`
+INNER JOIN `section_tbl` ON `student_registration`.`user_id` = `section_tbl`.`id`
+WHERE `year` = \'2023-2024\'
+AND `semester` = \'1st Semester\'
+AND `lrn` = \'B23-SHS232038\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `student_registration`
+INNER JOIN `section_tbl` ON `student_registration`.`user_id` = `section_tbl`.`id`
+WHERE `year` = \'2023-2024\'
+AND `semester` = \'1st Semester\'
+AND `lrn` = \'B23-SHS232038\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `student_registration`
+INNER JOIN `section_tbl` ON `student_registration`.`user_id` = `section_tbl`.`id`
+WHERE `year` = \'2023-2024\'
+AND `semester` = \'1st Semester\'
+AND `lrn` = \'B23-SHS232038\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `student_registration`
+INNER JOIN `section_tbl` ON `student_registration`.`user_id` = `section_tbl`.`id`
+WHERE `year` = :year:
+AND `semester` = :semester:
+AND `lrn` = :lrn:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(623): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Credentials.php(117): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->req()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 11:40:59 --> Undefined variable $strand
+in APPPATH\Views\user\makereq.php on line 136.
+ 1 APPPATH\Views\user\makereq.php(136): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $strand', 'APPPATH\\Views\\user\\makereq.php', 136)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\makereq.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/makereq', [], true)
+ 5 APPPATH\Controllers\Credentials.php(134): view('user/makereq', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->makereq()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 11:41:47 --> Undefined variable $registration_model
+in APPPATH\Controllers\Credentials.php on line 124.
+ 1 APPPATH\Controllers\Credentials.php(124): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $registration_model', 'APPPATH\\Controllers\\Credentials.php', 124)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->makereq()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 22:25:35 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Excel.php on line 91.
+ 1 APPPATH\Controllers\Excel.php(91): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Excel.php', 91)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Excel->exceltest()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Excel))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 22:34:21 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Excel.php on line 91.
+ 1 APPPATH\Controllers\Excel.php(91): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Excel.php', 91)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Excel->exceltest()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Excel))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 22:42:40 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Excel.php on line 91.
+ 1 APPPATH\Controllers\Excel.php(91): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Excel.php', 91)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Excel->exceltest()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Excel))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-06-17 22:49:37 --> Email: sendWithSmtp throwed ErrorException: fsockopen(): php_network_getaddresses: getaddrinfo for smtp.googlemail.com failed: No such host is known.  in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Email\Email.php:1863
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fsockopen(): ph...', 'C:\\xampp\\htdocs...', 1863)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Email\Email.php(1863): fsockopen('tls://smtp.goog...', 465, NULL, NULL, 60)
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Email\Email.php(1777): CodeIgniter\Email\Email->SMTPConnect()
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Email\Email.php(1662): CodeIgniter\Email\Email->sendWithSmtp()
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Email\Email.php(1560): CodeIgniter\Email\Email->spoolEmail()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\PreEnrolled.php(214): CodeIgniter\Email\Email->send()
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\PreEnrolled->enrolled('5')
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2023-06-17 22:49:37 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-06-17 22:49:37 --> 
+CRITICAL - 2023-06-17 23:07:33 --> explode(): Passing null to parameter #2 ($string) of type string is deprecated
+in APPPATH\Controllers\Teacher.php on line 345.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'explode(): Passing null to parameter #2 ($string) of type string is deprecated', 'APPPATH\\Controllers\\Teacher.php', 345)
+ 2 APPPATH\Controllers\Teacher.php(345): explode(',', null)
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->update_student_grade()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 23:08:34 --> Trying to access array offset on value of type null
+in APPPATH\Views\teacher\grading\first_year.php on line 229.
+ 1 APPPATH\Views\teacher\grading\first_year.php(229): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\teacher\\grading\\first_year.php', 229)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\teacher\\grading\\first_year.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('teacher/grading/first_year', [], true)
+ 5 APPPATH\Controllers\Teacher.php(120): view('teacher/grading/first_year', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard('adminlte.css.map')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 23:10:32 --> Trying to access array offset on value of type null
+in APPPATH\Views\teacher\grading\first_year.php on line 229.
+ 1 APPPATH\Views\teacher\grading\first_year.php(229): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\teacher\\grading\\first_year.php', 229)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\teacher\\grading\\first_year.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('teacher/grading/first_year', [], true)
+ 5 APPPATH\Controllers\Teacher.php(120): view('teacher/grading/first_year', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard('adminlte.css.map')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 23:11:02 --> Trying to access array offset on value of type null
+in APPPATH\Views\teacher\grading\first_year.php on line 229.
+ 1 APPPATH\Views\teacher\grading\first_year.php(229): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\teacher\\grading\\first_year.php', 229)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\teacher\\grading\\first_year.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('teacher/grading/first_year', [], true)
+ 5 APPPATH\Controllers\Teacher.php(120): view('teacher/grading/first_year', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard('adminlte.css.map')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 23:23:55 --> Undefined variable $subject_index
+in APPPATH\Controllers\Teacher.php on line 377.
+ 1 APPPATH\Controllers\Teacher.php(377): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $subject_index', 'APPPATH\\Controllers\\Teacher.php', 377)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->update_student_grade()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 23:24:16 --> Undefined variable $subject_index
+in APPPATH\Controllers\Teacher.php on line 368.
+ 1 APPPATH\Controllers\Teacher.php(368): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $subject_index', 'APPPATH\\Controllers\\Teacher.php', 368)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->update_student_grade()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 23:27:38 --> Undefined variable $subjectRemark
+in APPPATH\Controllers\Teacher.php on line 377.
+ 1 APPPATH\Controllers\Teacher.php(377): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $subjectRemark', 'APPPATH\\Controllers\\Teacher.php', 377)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->update_student_grade()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 23:28:08 --> var_dump() expects at least 1 argument, 0 given
+in APPPATH\Controllers\Teacher.php on line 378.
+ 1 APPPATH\Controllers\Teacher.php(378): var_dump()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->update_student_grade()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 23:28:55 --> Undefined variable $subjectRemark
+in APPPATH\Controllers\Teacher.php on line 369.
+ 1 APPPATH\Controllers\Teacher.php(369): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $subjectRemark', 'APPPATH\\Controllers\\Teacher.php', 369)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->update_student_grade()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 23:54:23 --> whereIn() expects $values to be of type array or closure
+in SYSTEMPATH\Database\BaseBuilder.php on line 907.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(789): CodeIgniter\Database\BaseBuilder->_whereIn('id', '1,2', false, 'AND ', null)
+ 2 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->whereIn('id', '1,2')
+ 3 APPPATH\Controllers\Excel.php(256): CodeIgniter\Model->__call('whereIn', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Excel->update_student_grade_excel()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Excel))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-17 23:56:56 --> explode(): Passing null to parameter #2 ($string) of type string is deprecated
+in APPPATH\Controllers\Excel.php on line 256.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'explode(): Passing null to parameter #2 ($string) of type string is deprecated', 'APPPATH\\Controllers\\Excel.php', 256)
+ 2 APPPATH\Controllers\Excel.php(256): explode(',', null)
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Excel->update_student_grade_excel()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Excel))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

@@ -1,0 +1,698 @@
+CRITICAL - 2023-12-12 11:13:57 --> syntax error, unexpected token "public"
+in APPPATH/Config/Email.php on line 71.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/Config/Factories.php(155): class_exists()
+ 5 SYSTEMPATH/Config/Factories.php(125): CodeIgniter\Config\Factories::locateClass()
+ 6 SYSTEMPATH/Common.php(203): CodeIgniter\Config\Factories::__callStatic()
+ 7 SYSTEMPATH/Config/Services.php(218): config()
+ 8 SYSTEMPATH/Config/BaseService.php(253): CodeIgniter\Config\Services::email()
+ 9 SYSTEMPATH/Config/BaseService.php(194): CodeIgniter\Config\BaseService::__callStatic()
+10 SYSTEMPATH/Config/Services.php(214): CodeIgniter\Config\BaseService::getSharedInstance()
+11 SYSTEMPATH/Config/BaseService.php(253): CodeIgniter\Config\Services::email()
+12 APPPATH/Controllers/PreEnrolled.php(277): CodeIgniter\Config\BaseService::__callStatic()
+13 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\PreEnrolled->enrolled()
+14 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+15 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+16 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-12 11:15:30 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-12-12 11:15:30 --> 220 smtp.googlemail.com ESMTP mf5-20020a17090b184500b0028a0628dcd1sm9305674pjb.51 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [2a02:4780:3:1140:0:1479:a5ab:3]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError mf5-20020a17090b184500b0028a0628dcd1sm9305674pjb.51 - gsmtp
+
+The following SMTP error was encountered: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError mf5-20020a17090b184500b0028a0628dcd1sm9305674pjb.51 - gsmtp
+
+quit: 221 2.0.0 closing connection mf5-20020a17090b184500b0028a0628dcd1sm9305674pjb.51 - gsmtp
+
+ERROR - 2023-12-12 11:15:41 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-12-12 11:15:41 --> 220 smtp.googlemail.com ESMTP jc1-20020a17090325c100b001cc2dc61c99sm8896361plb.22 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [2a02:4780:3:1140:0:1479:a5ab:3]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError jc1-20020a17090325c100b001cc2dc61c99sm8896361plb.22 - gsmtp
+
+The following SMTP error was encountered: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError jc1-20020a17090325c100b001cc2dc61c99sm8896361plb.22 - gsmtp
+
+quit: 221 2.0.0 closing connection jc1-20020a17090325c100b001cc2dc61c99sm8896361plb.22 - gsmtp
+
+ERROR - 2023-12-12 11:15:51 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-12-12 11:15:51 --> 220 smtp.googlemail.com ESMTP iz15-20020a170902ef8f00b001cfcf0fcc56sm775200plb.84 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [2a02:4780:3:1140:0:1479:a5ab:3]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError iz15-20020a170902ef8f00b001cfcf0fcc56sm775200plb.84 - gsmtp
+
+The following SMTP error was encountered: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError iz15-20020a170902ef8f00b001cfcf0fcc56sm775200plb.84 - gsmtp
+
+quit: 221 2.0.0 closing connection iz15-20020a170902ef8f00b001cfcf0fcc56sm775200plb.84 - gsmtp
+
+ERROR - 2023-12-12 11:17:13 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-12-12 11:17:13 --> 220 smtp.googlemail.com ESMTP i186-20020a6387c3000000b00578b8fab907sm7988895pge.73 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [2a02:4780:3:1140:0:1479:a5ab:3]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError i186-20020a6387c3000000b00578b8fab907sm7988895pge.73 - gsmtp
+
+The following SMTP error was encountered: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError i186-20020a6387c3000000b00578b8fab907sm7988895pge.73 - gsmtp
+
+quit: 221 2.0.0 closing connection i186-20020a6387c3000000b00578b8fab907sm7988895pge.73 - gsmtp
+
+ERROR - 2023-12-12 11:17:31 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-12-12 11:17:31 --> 220 smtp.googlemail.com ESMTP pw10-20020a17090b278a00b002867594de40sm10786933pjb.14 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [2a02:4780:3:1140:0:1479:a5ab:3]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError pw10-20020a17090b278a00b002867594de40sm10786933pjb.14 - gsmtp
+
+The following SMTP error was encountered: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError pw10-20020a17090b278a00b002867594de40sm10786933pjb.14 - gsmtp
+
+quit: 221 2.0.0 closing connection pw10-20020a17090b278a00b002867594de40sm10786933pjb.14 - gsmtp
+
+ERROR - 2023-12-12 11:17:48 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-12-12 11:17:48 --> 220 smtp.googlemail.com ESMTP ik24-20020a170902ab1800b001cfbd3f38dcsm9072374plb.225 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [2a02:4780:3:1140:0:1479:a5ab:3]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError ik24-20020a170902ab1800b001cfbd3f38dcsm9072374plb.225 - gsmtp
+
+The following SMTP error was encountered: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError ik24-20020a170902ab1800b001cfbd3f38dcsm9072374plb.225 - gsmtp
+
+quit: 221 2.0.0 closing connection ik24-20020a170902ab1800b001cfbd3f38dcsm9072374plb.225 - gsmtp
+
+ERROR - 2023-12-12 11:18:10 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-12-12 11:18:10 --> 220 smtp.googlemail.com ESMTP ik2-20020a170902ab0200b001cfc9c926b7sm9058201plb.75 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [2a02:4780:3:1140:0:1479:a5ab:3]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError ik2-20020a170902ab0200b001cfc9c926b7sm9058201plb.75 - gsmtp
+
+The following SMTP error was encountered: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError ik2-20020a170902ab0200b001cfc9c926b7sm9058201plb.75 - gsmtp
+
+quit: 221 2.0.0 closing connection ik2-20020a170902ab0200b001cfc9c926b7sm9058201plb.75 - gsmtp
+
+ERROR - 2023-12-12 11:18:26 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-12-12 11:18:26 --> 220 smtp.googlemail.com ESMTP y72-20020a62ce4b000000b006cb7bdbc3besm9028591pfg.17 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [2a02:4780:3:1140:0:1479:a5ab:3]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError y72-20020a62ce4b000000b006cb7bdbc3besm9028591pfg.17 - gsmtp
+
+The following SMTP error was encountered: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError y72-20020a62ce4b000000b006cb7bdbc3besm9028591pfg.17 - gsmtp
+
+quit: 221 2.0.0 closing connection y72-20020a62ce4b000000b006cb7bdbc3besm9028591pfg.17 - gsmtp
+
+ERROR - 2023-12-12 11:18:38 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-12-12 11:18:38 --> 220 smtp.googlemail.com ESMTP c7-20020a056a00008700b006ce458995f8sm8442999pfj.173 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [2a02:4780:3:1140:0:1479:a5ab:3]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError c7-20020a056a00008700b006ce458995f8sm8442999pfj.173 - gsmtp
+
+The following SMTP error was encountered: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError c7-20020a056a00008700b006ce458995f8sm8442999pfj.173 - gsmtp
+
+quit: 221 2.0.0 closing connection c7-20020a056a00008700b006ce458995f8sm8442999pfj.173 - gsmtp
+
+ERROR - 2023-12-12 11:18:49 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-12-12 11:18:49 --> 220 smtp.googlemail.com ESMTP 13-20020a170902e9cd00b001d33369bd86sm1951400plk.194 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [2a02:4780:3:1140:0:1479:a5ab:3]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError 13-20020a170902e9cd00b001d33369bd86sm1951400plk.194 - gsmtp
+
+The following SMTP error was encountered: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError 13-20020a170902e9cd00b001d33369bd86sm1951400plk.194 - gsmtp
+
+quit: 221 2.0.0 closing connection 13-20020a170902e9cd00b001d33369bd86sm1951400plk.194 - gsmtp
+
+ERROR - 2023-12-12 11:19:02 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-12-12 11:19:02 --> 220 smtp.googlemail.com ESMTP i7-20020a17090aee8700b002864c6c47afsm1190951pjz.0 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [2a02:4780:3:1140:0:1479:a5ab:3]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError i7-20020a17090aee8700b002864c6c47afsm1190951pjz.0 - gsmtp
+
+The following SMTP error was encountered: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError i7-20020a17090aee8700b002864c6c47afsm1190951pjz.0 - gsmtp
+
+quit: 221 2.0.0 closing connection i7-20020a17090aee8700b002864c6c47afsm1190951pjz.0 - gsmtp
+
+ERROR - 2023-12-12 11:19:15 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-12-12 11:19:15 --> 220 smtp.googlemail.com ESMTP qj13-20020a17090b28cd00b0028adb5b7644sm54113pjb.35 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [2a02:4780:3:1140:0:1479:a5ab:3]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError qj13-20020a17090b28cd00b0028adb5b7644sm54113pjb.35 - gsmtp
+
+The following SMTP error was encountered: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError qj13-20020a17090b28cd00b0028adb5b7644sm54113pjb.35 - gsmtp
+
+quit: 221 2.0.0 closing connection qj13-20020a17090b28cd00b0028adb5b7644sm54113pjb.35 - gsmtp
+
+ERROR - 2023-12-12 11:19:31 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-12-12 11:19:31 --> 220 smtp.googlemail.com ESMTP f16-20020a056a001ad000b006cedd530420sm7937734pfv.52 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [2a02:4780:3:1140:0:1479:a5ab:3]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError f16-20020a056a001ad000b006cedd530420sm7937734pfv.52 - gsmtp
+
+The following SMTP error was encountered: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError f16-20020a056a001ad000b006cedd530420sm7937734pfv.52 - gsmtp
+
+quit: 221 2.0.0 closing connection f16-20020a056a001ad000b006cedd530420sm7937734pfv.52 - gsmtp
+
+ERROR - 2023-12-12 11:19:49 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-12-12 11:19:49 --> 220 smtp.googlemail.com ESMTP b8-20020a170903228800b001d077c9a9acsm8812858plh.185 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [2a02:4780:3:1140:0:1479:a5ab:3]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError b8-20020a170903228800b001d077c9a9acsm8812858plh.185 - gsmtp
+
+The following SMTP error was encountered: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError b8-20020a170903228800b001d077c9a9acsm8812858plh.185 - gsmtp
+
+quit: 221 2.0.0 closing connection b8-20020a170903228800b001d077c9a9acsm8812858plh.185 - gsmtp
+
+ERROR - 2023-12-12 11:20:10 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-12-12 11:20:10 --> 220 smtp.googlemail.com ESMTP iw1-20020a170903044100b001cc29ffcd96sm8468631plb.192 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [2a02:4780:3:1140:0:1479:a5ab:3]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError iw1-20020a170903044100b001cc29ffcd96sm8468631plb.192 - gsmtp
+
+The following SMTP error was encountered: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError iw1-20020a170903044100b001cc29ffcd96sm8468631plb.192 - gsmtp
+
+quit: 221 2.0.0 closing connection iw1-20020a170903044100b001cc29ffcd96sm8468631plb.192 - gsmtp
+
+ERROR - 2023-12-12 11:20:25 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-12-12 11:20:25 --> 220 smtp.googlemail.com ESMTP c7-20020a634e07000000b005bd627c05c3sm8268013pgb.19 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [2a02:4780:3:1140:0:1479:a5ab:3]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError c7-20020a634e07000000b005bd627c05c3sm8268013pgb.19 - gsmtp
+
+The following SMTP error was encountered: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError c7-20020a634e07000000b005bd627c05c3sm8268013pgb.19 - gsmtp
+
+quit: 221 2.0.0 closing connection c7-20020a634e07000000b005bd627c05c3sm8268013pgb.19 - gsmtp
+
+ERROR - 2023-12-12 11:20:38 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-12-12 11:20:38 --> 220 smtp.googlemail.com ESMTP n37-20020a634d65000000b005c21c23180bsm8430132pgl.76 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [2a02:4780:3:1140:0:1479:a5ab:3]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError n37-20020a634d65000000b005c21c23180bsm8430132pgl.76 - gsmtp
+
+The following SMTP error was encountered: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError n37-20020a634d65000000b005c21c23180bsm8430132pgl.76 - gsmtp
+
+quit: 221 2.0.0 closing connection n37-20020a634d65000000b005c21c23180bsm8430132pgl.76 - gsmtp
+
+ERROR - 2023-12-12 11:20:53 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-12-12 11:20:53 --> 220 smtp.googlemail.com ESMTP ha18-20020a17090af3d200b0028a7daaa93fsm5380411pjb.54 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [2a02:4780:3:1140:0:1479:a5ab:3]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError ha18-20020a17090af3d200b0028a7daaa93fsm5380411pjb.54 - gsmtp
+
+The following SMTP error was encountered: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError ha18-20020a17090af3d200b0028a7daaa93fsm5380411pjb.54 - gsmtp
+
+quit: 221 2.0.0 closing connection ha18-20020a17090af3d200b0028a7daaa93fsm5380411pjb.54 - gsmtp
+
+ERROR - 2023-12-12 11:21:05 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-12-12 11:21:05 --> 220 smtp.googlemail.com ESMTP fa40-20020a056a002d2800b006cb6ba5fe72sm8406607pfb.122 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [2a02:4780:3:1140:0:1479:a5ab:3]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError fa40-20020a056a002d2800b006cb6ba5fe72sm8406607pfb.122 - gsmtp
+
+The following SMTP error was encountered: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError fa40-20020a056a002d2800b006cb6ba5fe72sm8406607pfb.122 - gsmtp
+
+quit: 221 2.0.0 closing connection fa40-20020a056a002d2800b006cb6ba5fe72sm8406607pfb.122 - gsmtp
+
+ERROR - 2023-12-12 11:21:16 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-12-12 11:21:16 --> 220 smtp.googlemail.com ESMTP gu4-20020a056a004e4400b006ce4e3e2524sm8424334pfb.135 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [2a02:4780:3:1140:0:1479:a5ab:3]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError gu4-20020a056a004e4400b006ce4e3e2524sm8424334pfb.135 - gsmtp
+
+The following SMTP error was encountered: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError gu4-20020a056a004e4400b006ce4e3e2524sm8424334pfb.135 - gsmtp
+
+quit: 221 2.0.0 closing connection gu4-20020a056a004e4400b006ce4e3e2524sm8424334pfb.135 - gsmtp
+
+ERROR - 2023-12-12 11:21:33 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-12-12 11:21:33 --> 220 smtp.googlemail.com ESMTP b13-20020a170902ed0d00b001d078445059sm8894265pld.143 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [2a02:4780:3:1140:0:1479:a5ab:3]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError b13-20020a170902ed0d00b001d078445059sm8894265pld.143 - gsmtp
+
+The following SMTP error was encountered: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError b13-20020a170902ed0d00b001d078445059sm8894265pld.143 - gsmtp
+
+quit: 221 2.0.0 closing connection b13-20020a170902ed0d00b001d078445059sm8894265pld.143 - gsmtp
+
+ERROR - 2023-12-12 11:21:44 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-12-12 11:21:44 --> 220 smtp.googlemail.com ESMTP f10-20020a17090a664a00b00285fd1a6611sm875391pjm.1 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [2a02:4780:3:1140:0:1479:a5ab:3]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError f10-20020a17090a664a00b00285fd1a6611sm875391pjm.1 - gsmtp
+
+The following SMTP error was encountered: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError f10-20020a17090a664a00b00285fd1a6611sm875391pjm.1 - gsmtp
+
+quit: 221 2.0.0 closing connection f10-20020a17090a664a00b00285fd1a6611sm875391pjm.1 - gsmtp
+
+ERROR - 2023-12-12 11:22:16 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-12-12 11:22:16 --> 220 smtp.googlemail.com ESMTP o2-20020a17090ac08200b0028ac924c59dsm568164pjs.0 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [2a02:4780:3:1140:0:1479:a5ab:3]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError o2-20020a17090ac08200b0028ac924c59dsm568164pjs.0 - gsmtp
+
+The following SMTP error was encountered: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError o2-20020a17090ac08200b0028ac924c59dsm568164pjs.0 - gsmtp
+
+quit: 221 2.0.0 closing connection o2-20020a17090ac08200b0028ac924c59dsm568164pjs.0 - gsmtp
+
+ERROR - 2023-12-12 11:22:32 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-12-12 11:22:32 --> 220 smtp.googlemail.com ESMTP p17-20020a170903249100b001d0b4693539sm8839614plw.189 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [2a02:4780:3:1140:0:1479:a5ab:3]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError p17-20020a170903249100b001d0b4693539sm8839614plw.189 - gsmtp
+
+The following SMTP error was encountered: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError p17-20020a170903249100b001d0b4693539sm8839614plw.189 - gsmtp
+
+quit: 221 2.0.0 closing connection p17-20020a170903249100b001d0b4693539sm8839614plw.189 - gsmtp
+
+ERROR - 2023-12-12 11:22:49 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-12-12 11:22:49 --> 220 smtp.googlemail.com ESMTP q3-20020a170902f78300b001d083fed5f3sm8928508pln.60 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [2a02:4780:3:1140:0:1479:a5ab:3]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError q3-20020a170902f78300b001d083fed5f3sm8928508pln.60 - gsmtp
+
+The following SMTP error was encountered: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError q3-20020a170902f78300b001d083fed5f3sm8928508pln.60 - gsmtp
+
+quit: 221 2.0.0 closing connection q3-20020a170902f78300b001d083fed5f3sm8928508pln.60 - gsmtp
+
+ERROR - 2023-12-12 11:23:14 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-12-12 11:23:14 --> 220 smtp.googlemail.com ESMTP q16-20020a62ae10000000b006a77343b0ccsm8427419pff.89 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [2a02:4780:3:1140:0:1479:a5ab:3]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError q16-20020a62ae10000000b006a77343b0ccsm8427419pff.89 - gsmtp
+
+The following SMTP error was encountered: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError q16-20020a62ae10000000b006a77343b0ccsm8427419pff.89 - gsmtp
+
+quit: 221 2.0.0 closing connection q16-20020a62ae10000000b006a77343b0ccsm8427419pff.89 - gsmtp
+
+ERROR - 2023-12-12 11:23:28 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-12-12 11:23:28 --> 220 smtp.googlemail.com ESMTP jj17-20020a170903049100b001d2f0985020sm8273737plb.294 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [2a02:4780:3:1140:0:1479:a5ab:3]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError jj17-20020a170903049100b001d2f0985020sm8273737plb.294 - gsmtp
+
+The following SMTP error was encountered: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError jj17-20020a170903049100b001d2f0985020sm8273737plb.294 - gsmtp
+
+quit: 221 2.0.0 closing connection jj17-20020a170903049100b001d2f0985020sm8273737plb.294 - gsmtp
+
+ERROR - 2023-12-12 11:23:43 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-12-12 11:23:43 --> 220 smtp.googlemail.com ESMTP p6-20020a1709026b8600b001cfc50e5afesm8382212plk.23 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [2a02:4780:3:1140:0:1479:a5ab:3]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError p6-20020a1709026b8600b001cfc50e5afesm8382212plk.23 - gsmtp
+
+The following SMTP error was encountered: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError p6-20020a1709026b8600b001cfc50e5afesm8382212plk.23 - gsmtp
+
+quit: 221 2.0.0 closing connection p6-20020a1709026b8600b001cfc50e5afesm8382212plk.23 - gsmtp
+
+ERROR - 2023-12-12 11:23:53 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-12-12 11:23:53 --> 220 smtp.googlemail.com ESMTP a2-20020a170902ecc200b001d05fb4cf3csm8895909plh.62 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [2a02:4780:3:1140:0:1479:a5ab:3]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError a2-20020a170902ecc200b001d05fb4cf3csm8895909plh.62 - gsmtp
+
+The following SMTP error was encountered: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError a2-20020a170902ecc200b001d05fb4cf3csm8895909plh.62 - gsmtp
+
+quit: 221 2.0.0 closing connection a2-20020a170902ecc200b001d05fb4cf3csm8895909plh.62 - gsmtp
+
+ERROR - 2023-12-12 11:24:03 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-12-12 11:24:03 --> 220 smtp.googlemail.com ESMTP z28-20020a62d11c000000b006ce9c8c4001sm8741961pfg.47 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [2a02:4780:3:1140:0:1479:a5ab:3]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError z28-20020a62d11c000000b006ce9c8c4001sm8741961pfg.47 - gsmtp
+
+The following SMTP error was encountered: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError z28-20020a62d11c000000b006ce9c8c4001sm8741961pfg.47 - gsmtp
+
+quit: 221 2.0.0 closing connection z28-20020a62d11c000000b006ce9c8c4001sm8741961pfg.47 - gsmtp
+
+ERROR - 2023-12-12 11:24:14 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-12-12 11:24:14 --> 220 smtp.googlemail.com ESMTP 5-20020a17090a018500b0028658657e9csm10141995pjc.46 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [2a02:4780:3:1140:0:1479:a5ab:3]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError 5-20020a17090a018500b0028658657e9csm10141995pjc.46 - gsmtp
+
+The following SMTP error was encountered: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError 5-20020a17090a018500b0028658657e9csm10141995pjc.46 - gsmtp
+
+quit: 221 2.0.0 closing connection 5-20020a17090a018500b0028658657e9csm10141995pjc.46 - gsmtp
+
+ERROR - 2023-12-12 11:25:23 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-12-12 11:25:23 --> 220 smtp.googlemail.com ESMTP 26-20020a17090a005a00b00286596548bcsm10121750pjb.37 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [2a02:4780:3:1140:0:1479:a5ab:3]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError 26-20020a17090a005a00b00286596548bcsm10121750pjb.37 - gsmtp
+
+The following SMTP error was encountered: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError 26-20020a17090a005a00b00286596548bcsm10121750pjb.37 - gsmtp
+
+quit: 221 2.0.0 closing connection 26-20020a17090a005a00b00286596548bcsm10121750pjb.37 - gsmtp
+
+ERROR - 2023-12-12 11:26:44 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-12-12 11:26:44 --> 220 smtp.googlemail.com ESMTP b32-20020a630c20000000b0059d34fb9ccasm8383672pgl.2 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [2a02:4780:3:1140:0:1479:a5ab:3]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError b32-20020a630c20000000b0059d34fb9ccasm8383672pgl.2 - gsmtp
+
+The following SMTP error was encountered: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError b32-20020a630c20000000b0059d34fb9ccasm8383672pgl.2 - gsmtp
+
+quit: 221 2.0.0 closing connection b32-20020a630c20000000b0059d34fb9ccasm8383672pgl.2 - gsmtp
+
+ERROR - 2023-12-12 11:38:07 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-12-12 11:38:07 --> 220 smtp.googlemail.com ESMTP kr5-20020a056a004b4500b006ce403516f0sm8378199pfb.62 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [2a02:4780:3:1140:0:1479:a5ab:3]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError kr5-20020a056a004b4500b006ce403516f0sm8378199pfb.62 - gsmtp
+
+The following SMTP error was encountered: 530-5.7.0 Authentication Required. For more information, go to
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError kr5-20020a056a004b4500b006ce403516f0sm8378199pfb.62 - gsmtp
+
+quit: 221 2.0.0 closing connection kr5-20020a056a004b4500b006ce403516f0sm8378199pfb.62 - gsmtp
+

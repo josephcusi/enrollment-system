@@ -1,0 +1,304 @@
+ERROR - 2023-06-27 08:15:43 --> mysqli_sql_exception: Duplicate entry '(COLLEGE) ADMIN2023-' for key 'lrn' in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `user_tb...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `user_tb...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `user_tb...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `user_tb...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(693): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\TeacherAccount.php(232): CodeIgniter\Model->update('29', Array)
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\TeacherAccount->TeacherUpdate()
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TeacherAccount))
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-06-27 08:15:43 --> Duplicate entry '(COLLEGE) ADMIN2023-' for key 'lrn'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `user_tbl` SET `lrn` = \'(COLLEGE) ADMIN2023-2\', `email` = \'maravilla.elizabeth@gmail.com\', `lastname` = \'Maravilla, LPT\', `firstname` = \'Dr. Elizabeth\', `middlename` = \'A.\', `password` = \'$2y$10$XHJxns9Lr3H.8cE35v5w2e9P9kAn3PQM9n1vvYdSz3rivobHrwsQ2\', `profile_picture` = \'1687871743_2614910bbe692626c325.jpg\'
+WHERE `user_tbl`.`id` IN (\'29\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `user_tbl` SET `lrn` = \'(COLLEGE) ADMIN2023-2\', `email` = \'maravilla.elizabeth@gmail.com\', `lastname` = \'Maravilla, LPT\', `firstname` = \'Dr. Elizabeth\', `middlename` = \'A.\', `password` = \'$2y$10$XHJxns9Lr3H.8cE35v5w2e9P9kAn3PQM9n1vvYdSz3rivobHrwsQ2\', `profile_picture` = \'1687871743_2614910bbe692626c325.jpg\'
+WHERE `user_tbl`.`id` IN (\'29\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `user_tbl` SET `lrn` = \'(COLLEGE) ADMIN2023-2\', `email` = \'maravilla.elizabeth@gmail.com\', `lastname` = \'Maravilla, LPT\', `firstname` = \'Dr. Elizabeth\', `middlename` = \'A.\', `password` = \'$2y$10$XHJxns9Lr3H.8cE35v5w2e9P9kAn3PQM9n1vvYdSz3rivobHrwsQ2\', `profile_picture` = \'1687871743_2614910bbe692626c325.jpg\'
+WHERE `user_tbl`.`id` IN (\'29\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `user_tbl` SET `lrn` = :lrn:, `email` = :email:, `lastname` = :lastname:, `firstname` = :firstname:, `middlename` = :middlename:, `password` = :password:, `profile_picture` = :profile_picture:
+WHERE `user_tbl`.`id` IN :user_tbl.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\TeacherAccount.php(232): CodeIgniter\Model->update('29', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\TeacherAccount->TeacherUpdate()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TeacherAccount))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-06-27 08:20:39 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`enrollment_system`.`teacher_tbl`, CONSTRAINT `teacher_tbl_ibfk_1` FOREIGN KEY (`teacher_school_id`) REFERENCES `user_tbl` (`lrn`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `user_tb...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `user_tb...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `user_tb...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `user_tb...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(693): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\TeacherAccount.php(232): CodeIgniter\Model->update('28', Array)
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\TeacherAccount->TeacherUpdate()
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TeacherAccount))
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-06-27 08:20:39 --> Cannot delete or update a parent row: a foreign key constraint fails (`enrollment_system`.`teacher_tbl`, CONSTRAINT `teacher_tbl_ibfk_1` FOREIGN KEY (`teacher_school_id`) REFERENCES `user_tbl` (`lrn`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `user_tbl` SET `lrn` = \'(COLLEGE) ADMIN2023-1\', `email` = \'prado.lomelyn@gmail.com\', `lastname` = \'Prado\', `firstname` = \'Dr. Lomelyn\', `middlename` = \'B.\', `password` = \'$2y$10$rvZ.cUvDDm4ZVSpIOyU/weW9RjuAT0.Dz0MdADUVoJFtn6M3gnBby\', `profile_picture` = \'1687872039_5d2c7301203f0736572d.jpg\'
+WHERE `user_tbl`.`id` IN (\'28\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `user_tbl` SET `lrn` = \'(COLLEGE) ADMIN2023-1\', `email` = \'prado.lomelyn@gmail.com\', `lastname` = \'Prado\', `firstname` = \'Dr. Lomelyn\', `middlename` = \'B.\', `password` = \'$2y$10$rvZ.cUvDDm4ZVSpIOyU/weW9RjuAT0.Dz0MdADUVoJFtn6M3gnBby\', `profile_picture` = \'1687872039_5d2c7301203f0736572d.jpg\'
+WHERE `user_tbl`.`id` IN (\'28\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `user_tbl` SET `lrn` = \'(COLLEGE) ADMIN2023-1\', `email` = \'prado.lomelyn@gmail.com\', `lastname` = \'Prado\', `firstname` = \'Dr. Lomelyn\', `middlename` = \'B.\', `password` = \'$2y$10$rvZ.cUvDDm4ZVSpIOyU/weW9RjuAT0.Dz0MdADUVoJFtn6M3gnBby\', `profile_picture` = \'1687872039_5d2c7301203f0736572d.jpg\'
+WHERE `user_tbl`.`id` IN (\'28\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `user_tbl` SET `lrn` = :lrn:, `email` = :email:, `lastname` = :lastname:, `firstname` = :firstname:, `middlename` = :middlename:, `password` = :password:, `profile_picture` = :profile_picture:
+WHERE `user_tbl`.`id` IN :user_tbl.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\TeacherAccount.php(232): CodeIgniter\Model->update('28', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\TeacherAccount->TeacherUpdate()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TeacherAccount))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-06-27 08:22:50 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`enrollment_system`.`teacher_tbl`, CONSTRAINT `teacher_tbl_ibfk_1` FOREIGN KEY (`teacher_school_id`) REFERENCES `user_tbl` (`lrn`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `user_tb...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `user_tb...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `user_tb...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `user_tb...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(693): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\TeacherAccount.php(232): CodeIgniter\Model->update('29', Array)
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\TeacherAccount->TeacherUpdate()
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TeacherAccount))
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-06-27 08:22:50 --> Cannot delete or update a parent row: a foreign key constraint fails (`enrollment_system`.`teacher_tbl`, CONSTRAINT `teacher_tbl_ibfk_1` FOREIGN KEY (`teacher_school_id`) REFERENCES `user_tbl` (`lrn`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `user_tbl` SET `lrn` = \'(COLLEGE) ADMIN2023-2\', `email` = \'maravilla.elizabeth@gmail.com\', `lastname` = \'Maravilla, LPT\', `firstname` = \'Dr. Elizabeth\', `middlename` = \'A.\', `password` = \'$2y$10$j1Ja9U5Iq0JCCAiWy7R7T.Tfy/feaH9L1sA6dVHOEC4jwGah8eVAS\', `profile_picture` = \'1687872170_c8dfb56e1552ee933014.jpg\'
+WHERE `user_tbl`.`id` IN (\'29\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `user_tbl` SET `lrn` = \'(COLLEGE) ADMIN2023-2\', `email` = \'maravilla.elizabeth@gmail.com\', `lastname` = \'Maravilla, LPT\', `firstname` = \'Dr. Elizabeth\', `middlename` = \'A.\', `password` = \'$2y$10$j1Ja9U5Iq0JCCAiWy7R7T.Tfy/feaH9L1sA6dVHOEC4jwGah8eVAS\', `profile_picture` = \'1687872170_c8dfb56e1552ee933014.jpg\'
+WHERE `user_tbl`.`id` IN (\'29\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `user_tbl` SET `lrn` = \'(COLLEGE) ADMIN2023-2\', `email` = \'maravilla.elizabeth@gmail.com\', `lastname` = \'Maravilla, LPT\', `firstname` = \'Dr. Elizabeth\', `middlename` = \'A.\', `password` = \'$2y$10$j1Ja9U5Iq0JCCAiWy7R7T.Tfy/feaH9L1sA6dVHOEC4jwGah8eVAS\', `profile_picture` = \'1687872170_c8dfb56e1552ee933014.jpg\'
+WHERE `user_tbl`.`id` IN (\'29\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `user_tbl` SET `lrn` = :lrn:, `email` = :email:, `lastname` = :lastname:, `firstname` = :firstname:, `middlename` = :middlename:, `password` = :password:, `profile_picture` = :profile_picture:
+WHERE `user_tbl`.`id` IN :user_tbl.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\TeacherAccount.php(232): CodeIgniter\Model->update('29', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\TeacherAccount->TeacherUpdate()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TeacherAccount))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-06-27 08:26:44 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`enrollment_system`.`teacher_tbl`, CONSTRAINT `teacher_tbl_ibfk_1` FOREIGN KEY (`teacher_school_id`) REFERENCES `user_tbl` (`lrn`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `user_tb...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `user_tb...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `user_tb...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `user_tb...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(693): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\TeacherAccount.php(232): CodeIgniter\Model->update('28', Array)
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\TeacherAccount->TeacherUpdate()
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TeacherAccount))
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-06-27 08:26:44 --> Cannot delete or update a parent row: a foreign key constraint fails (`enrollment_system`.`teacher_tbl`, CONSTRAINT `teacher_tbl_ibfk_1` FOREIGN KEY (`teacher_school_id`) REFERENCES `user_tbl` (`lrn`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `user_tbl` SET `lrn` = \'(COLLEGE) COLLEGE2023-1\', `email` = \'prado.lomelyn@gmail.com\', `lastname` = \'Prado\', `firstname` = \'Dr. Lomelyn\', `middlename` = \'B.\', `password` = \'$2y$10$wy5878WuUyHr2J12rOaTIe/zHtoIHlQkhFwIKkgzC1ev5OxUhDzbe\', `profile_picture` = \'1687872404_b6682ef795a71b6d13ec.jpg\'
+WHERE `user_tbl`.`id` IN (\'28\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `user_tbl` SET `lrn` = \'(COLLEGE) COLLEGE2023-1\', `email` = \'prado.lomelyn@gmail.com\', `lastname` = \'Prado\', `firstname` = \'Dr. Lomelyn\', `middlename` = \'B.\', `password` = \'$2y$10$wy5878WuUyHr2J12rOaTIe/zHtoIHlQkhFwIKkgzC1ev5OxUhDzbe\', `profile_picture` = \'1687872404_b6682ef795a71b6d13ec.jpg\'
+WHERE `user_tbl`.`id` IN (\'28\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `user_tbl` SET `lrn` = \'(COLLEGE) COLLEGE2023-1\', `email` = \'prado.lomelyn@gmail.com\', `lastname` = \'Prado\', `firstname` = \'Dr. Lomelyn\', `middlename` = \'B.\', `password` = \'$2y$10$wy5878WuUyHr2J12rOaTIe/zHtoIHlQkhFwIKkgzC1ev5OxUhDzbe\', `profile_picture` = \'1687872404_b6682ef795a71b6d13ec.jpg\'
+WHERE `user_tbl`.`id` IN (\'28\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `user_tbl` SET `lrn` = :lrn:, `email` = :email:, `lastname` = :lastname:, `firstname` = :firstname:, `middlename` = :middlename:, `password` = :password:, `profile_picture` = :profile_picture:
+WHERE `user_tbl`.`id` IN :user_tbl.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\TeacherAccount.php(232): CodeIgniter\Model->update('28', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\TeacherAccount->TeacherUpdate()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TeacherAccount))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-06-27 08:28:12 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`enrollment_system`.`teacher_tbl`, CONSTRAINT `teacher_tbl_ibfk_1` FOREIGN KEY (`teacher_school_id`) REFERENCES `user_tbl` (`lrn`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `user_tb...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `user_tb...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `user_tb...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `user_tb...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(693): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\TeacherAccount.php(232): CodeIgniter\Model->update('31', Array)
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\TeacherAccount->TeacherUpdate()
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TeacherAccount))
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-06-27 08:28:12 --> Cannot delete or update a parent row: a foreign key constraint fails (`enrollment_system`.`teacher_tbl`, CONSTRAINT `teacher_tbl_ibfk_1` FOREIGN KEY (`teacher_school_id`) REFERENCES `user_tbl` (`lrn`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `user_tbl` SET `lrn` = \'(COLLEGE) ADMIN2023-4\', `email` = \'ronquillo.rundolp@gmail.com\', `lastname` = \'Ronquillo\', `firstname` = \'Rundolp\', `middlename` = \'M.\', `password` = \'$2y$10$t8W1RNGZH4073.GkF4AnnuShVJTjj9RJ14uZLMpeA9qCE7Ry0GzHu\', `profile_picture` = \'1687872492_b10ad9fc0e5b0a32192c.jpg\'
+WHERE `user_tbl`.`id` IN (\'31\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `user_tbl` SET `lrn` = \'(COLLEGE) ADMIN2023-4\', `email` = \'ronquillo.rundolp@gmail.com\', `lastname` = \'Ronquillo\', `firstname` = \'Rundolp\', `middlename` = \'M.\', `password` = \'$2y$10$t8W1RNGZH4073.GkF4AnnuShVJTjj9RJ14uZLMpeA9qCE7Ry0GzHu\', `profile_picture` = \'1687872492_b10ad9fc0e5b0a32192c.jpg\'
+WHERE `user_tbl`.`id` IN (\'31\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `user_tbl` SET `lrn` = \'(COLLEGE) ADMIN2023-4\', `email` = \'ronquillo.rundolp@gmail.com\', `lastname` = \'Ronquillo\', `firstname` = \'Rundolp\', `middlename` = \'M.\', `password` = \'$2y$10$t8W1RNGZH4073.GkF4AnnuShVJTjj9RJ14uZLMpeA9qCE7Ry0GzHu\', `profile_picture` = \'1687872492_b10ad9fc0e5b0a32192c.jpg\'
+WHERE `user_tbl`.`id` IN (\'31\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `user_tbl` SET `lrn` = :lrn:, `email` = :email:, `lastname` = :lastname:, `firstname` = :firstname:, `middlename` = :middlename:, `password` = :password:, `profile_picture` = :profile_picture:
+WHERE `user_tbl`.`id` IN :user_tbl.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\TeacherAccount.php(232): CodeIgniter\Model->update('31', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\TeacherAccount->TeacherUpdate()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TeacherAccount))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-06-27 08:29:54 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`enrollment_system`.`teacher_tbl`, CONSTRAINT `teacher_tbl_ibfk_1` FOREIGN KEY (`teacher_school_id`) REFERENCES `user_tbl` (`lrn`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `user_tb...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `user_tb...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `user_tb...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `user_tb...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(693): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\TeacherAccount.php(232): CodeIgniter\Model->update('28', Array)
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\TeacherAccount->TeacherUpdate()
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TeacherAccount))
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-06-27 08:29:54 --> Cannot delete or update a parent row: a foreign key constraint fails (`enrollment_system`.`teacher_tbl`, CONSTRAINT `teacher_tbl_ibfk_1` FOREIGN KEY (`teacher_school_id`) REFERENCES `user_tbl` (`lrn`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `user_tbl` SET `lrn` = \'(COLLEGE) ADMIN2023-1\', `email` = \'prado.lomelyn@gmail.com\', `lastname` = \'Prado\', `firstname` = \'Dr. Lomelyn\', `middlename` = \'B.\', `password` = \'$2y$10$ULAeu4Vlq6iHR0.vGBFP2uidM/6t/OPGhKCibhMajxwyTz2ePMs2e\', `profile_picture` = \'1687872594_ce22138ae9192f32c170.jpg\'
+WHERE `user_tbl`.`id` IN (\'28\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `user_tbl` SET `lrn` = \'(COLLEGE) ADMIN2023-1\', `email` = \'prado.lomelyn@gmail.com\', `lastname` = \'Prado\', `firstname` = \'Dr. Lomelyn\', `middlename` = \'B.\', `password` = \'$2y$10$ULAeu4Vlq6iHR0.vGBFP2uidM/6t/OPGhKCibhMajxwyTz2ePMs2e\', `profile_picture` = \'1687872594_ce22138ae9192f32c170.jpg\'
+WHERE `user_tbl`.`id` IN (\'28\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `user_tbl` SET `lrn` = \'(COLLEGE) ADMIN2023-1\', `email` = \'prado.lomelyn@gmail.com\', `lastname` = \'Prado\', `firstname` = \'Dr. Lomelyn\', `middlename` = \'B.\', `password` = \'$2y$10$ULAeu4Vlq6iHR0.vGBFP2uidM/6t/OPGhKCibhMajxwyTz2ePMs2e\', `profile_picture` = \'1687872594_ce22138ae9192f32c170.jpg\'
+WHERE `user_tbl`.`id` IN (\'28\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `user_tbl` SET `lrn` = :lrn:, `email` = :email:, `lastname` = :lastname:, `firstname` = :firstname:, `middlename` = :middlename:, `password` = :password:, `profile_picture` = :profile_picture:
+WHERE `user_tbl`.`id` IN :user_tbl.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\TeacherAccount.php(232): CodeIgniter\Model->update('28', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\TeacherAccount->TeacherUpdate()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TeacherAccount))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-06-27 08:32:42 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`enrollment_system`.`teacher_tbl`, CONSTRAINT `teacher_tbl_ibfk_1` FOREIGN KEY (`teacher_school_id`) REFERENCES `user_tbl` (`lrn`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `user_tb...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `user_tb...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `user_tb...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `user_tb...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(693): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\TeacherAccount.php(232): CodeIgniter\Model->update('28', Array)
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\TeacherAccount->TeacherUpdate()
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TeacherAccount))
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-06-27 08:32:42 --> Cannot delete or update a parent row: a foreign key constraint fails (`enrollment_system`.`teacher_tbl`, CONSTRAINT `teacher_tbl_ibfk_1` FOREIGN KEY (`teacher_school_id`) REFERENCES `user_tbl` (`lrn`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `user_tbl` SET `lrn` = \'(COLLEGE) ADMIN2023-1\', `email` = \'prado.lomelyn@gmail.com\', `lastname` = \'Prado\', `firstname` = \'Dr. Lomelyn\', `middlename` = \'B.\', `password` = \'$2y$10$DK7Xsc1afC2hBeyExOlwMelxhtZ84HgXnENXiN3h1LN7ouXda2yCi\', `profile_picture` = \'1687872762_fb574292b7b66193e66c.jpg\'
+WHERE `user_tbl`.`id` IN (\'28\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `user_tbl` SET `lrn` = \'(COLLEGE) ADMIN2023-1\', `email` = \'prado.lomelyn@gmail.com\', `lastname` = \'Prado\', `firstname` = \'Dr. Lomelyn\', `middlename` = \'B.\', `password` = \'$2y$10$DK7Xsc1afC2hBeyExOlwMelxhtZ84HgXnENXiN3h1LN7ouXda2yCi\', `profile_picture` = \'1687872762_fb574292b7b66193e66c.jpg\'
+WHERE `user_tbl`.`id` IN (\'28\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `user_tbl` SET `lrn` = \'(COLLEGE) ADMIN2023-1\', `email` = \'prado.lomelyn@gmail.com\', `lastname` = \'Prado\', `firstname` = \'Dr. Lomelyn\', `middlename` = \'B.\', `password` = \'$2y$10$DK7Xsc1afC2hBeyExOlwMelxhtZ84HgXnENXiN3h1LN7ouXda2yCi\', `profile_picture` = \'1687872762_fb574292b7b66193e66c.jpg\'
+WHERE `user_tbl`.`id` IN (\'28\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `user_tbl` SET `lrn` = :lrn:, `email` = :email:, `lastname` = :lastname:, `firstname` = :firstname:, `middlename` = :middlename:, `password` = :password:, `profile_picture` = :profile_picture:
+WHERE `user_tbl`.`id` IN :user_tbl.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\TeacherAccount.php(232): CodeIgniter\Model->update('28', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\TeacherAccount->TeacherUpdate()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TeacherAccount))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-06-27 08:33:02 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`enrollment_system`.`teacher_tbl`, CONSTRAINT `teacher_tbl_ibfk_1` FOREIGN KEY (`teacher_school_id`) REFERENCES `user_tbl` (`lrn`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `user_tb...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `user_tb...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `user_tb...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `user_tb...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(693): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\TeacherAccount.php(232): CodeIgniter\Model->update('4', Array)
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\TeacherAccount->TeacherUpdate()
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TeacherAccount))
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-06-27 08:33:02 --> Cannot delete or update a parent row: a foreign key constraint fails (`enrollment_system`.`teacher_tbl`, CONSTRAINT `teacher_tbl_ibfk_1` FOREIGN KEY (`teacher_school_id`) REFERENCES `user_tbl` (`lrn`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `user_tbl` SET `lrn` = \'(COLLEGE) ABH2023-12323\', `email` = \'marivel.adem@gmail.com\', `lastname` = \'Adem, LPT\', `firstname` = \'Marivel\', `middlename` = \'D.\', `password` = \'$2y$10$Sn35YmfCDd6q/yjLbmjq/.aC1/JMGmm3Juc8u5MqIGUn6YE5Cj6Yu\', `profile_picture` = \'1687872782_fc04e7e64337458865e6.jpg\'
+WHERE `user_tbl`.`id` IN (\'4\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `user_tbl` SET `lrn` = \'(COLLEGE) ABH2023-12323\', `email` = \'marivel.adem@gmail.com\', `lastname` = \'Adem, LPT\', `firstname` = \'Marivel\', `middlename` = \'D.\', `password` = \'$2y$10$Sn35YmfCDd6q/yjLbmjq/.aC1/JMGmm3Juc8u5MqIGUn6YE5Cj6Yu\', `profile_picture` = \'1687872782_fc04e7e64337458865e6.jpg\'
+WHERE `user_tbl`.`id` IN (\'4\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `user_tbl` SET `lrn` = \'(COLLEGE) ABH2023-12323\', `email` = \'marivel.adem@gmail.com\', `lastname` = \'Adem, LPT\', `firstname` = \'Marivel\', `middlename` = \'D.\', `password` = \'$2y$10$Sn35YmfCDd6q/yjLbmjq/.aC1/JMGmm3Juc8u5MqIGUn6YE5Cj6Yu\', `profile_picture` = \'1687872782_fc04e7e64337458865e6.jpg\'
+WHERE `user_tbl`.`id` IN (\'4\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `user_tbl` SET `lrn` = :lrn:, `email` = :email:, `lastname` = :lastname:, `firstname` = :firstname:, `middlename` = :middlename:, `password` = :password:, `profile_picture` = :profile_picture:
+WHERE `user_tbl`.`id` IN :user_tbl.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\TeacherAccount.php(232): CodeIgniter\Model->update('4', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\TeacherAccount->TeacherUpdate()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TeacherAccount))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-27 08:46:37 --> Undefined array key 0
+in APPPATH\Views\admin\section\pdf_section_schedule\pdf_schedule.php on line 54.
+ 1 APPPATH\Views\admin\section\pdf_section_schedule\pdf_schedule.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\admin\\section\\pdf_section_schedule\\pdf_schedule.php', 54)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\section\\pdf_section_schedule\\pdf_schedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/section/pdf_section_schedule/pdf_schedule', [], true)
+ 5 APPPATH\Controllers\Section.php(412): view('admin/section/pdf_section_schedule/pdf_schedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->pdf_subject_schedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-27 08:46:42 --> Undefined array key 0
+in APPPATH\Views\admin\section\pdf_section_schedule\pdf_schedule.php on line 54.
+ 1 APPPATH\Views\admin\section\pdf_section_schedule\pdf_schedule.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\admin\\section\\pdf_section_schedule\\pdf_schedule.php', 54)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\section\\pdf_section_schedule\\pdf_schedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/section/pdf_section_schedule/pdf_schedule', [], true)
+ 5 APPPATH\Controllers\Section.php(412): view('admin/section/pdf_section_schedule/pdf_schedule', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->pdf_subject_schedule()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

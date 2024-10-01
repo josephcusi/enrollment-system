@@ -1,0 +1,64 @@
+CRITICAL - 2023-05-02 04:40:50 --> Undefined array key "firstname"
+in APPPATH\Views\admin\grading\first_yearGrade.php on line 351.
+ 1 APPPATH\Views\admin\grading\first_yearGrade.php(351): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "firstname"', 'APPPATH\\Views\\admin\\grading\\first_yearGrade.php', 351)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\grading\\first_yearGrade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/grading/first_yearGrade', [], true)
+ 5 APPPATH\Controllers\Grading.php(145): view('admin/grading/first_yearGrade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('1', 'B23-SHS4207', 'GAS')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-02 04:42:55 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-02 04:43:52 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-02 08:21:23 --> Trying to access array offset on value of type null
+in APPPATH\Views\admin\student_credentials\stud_cred.php on line 64.
+ 1 APPPATH\Views\admin\student_credentials\stud_cred.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\admin\\student_credentials\\stud_cred.php', 64)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_credentials\\stud_cred.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_credentials/stud_cred', [], true)
+ 5 APPPATH\Controllers\Credentials.php(31): view('admin/student_credentials/stud_cred', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->student_approve()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-02 08:22:34 --> Trying to access array offset on value of type null
+in APPPATH\Views\admin\student_credentials\stud_cred.php on line 64.
+ 1 APPPATH\Views\admin\student_credentials\stud_cred.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\admin\\student_credentials\\stud_cred.php', 64)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_credentials\\stud_cred.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_credentials/stud_cred', [], true)
+ 5 APPPATH\Controllers\Credentials.php(31): view('admin/student_credentials/stud_cred', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->student_approve()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-02 08:22:35 --> Trying to access array offset on value of type null
+in APPPATH\Views\admin\student_credentials\stud_cred.php on line 64.
+ 1 APPPATH\Views\admin\student_credentials\stud_cred.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\admin\\student_credentials\\stud_cred.php', 64)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_credentials\\stud_cred.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_credentials/stud_cred', [], true)
+ 5 APPPATH\Controllers\Credentials.php(31): view('admin/student_credentials/stud_cred', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->student_approve()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

@@ -1,0 +1,32 @@
+CRITICAL - 2023-05-14 22:36:31 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 100.
+ 1 APPPATH\Controllers\Section.php(100): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 100)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-14 22:36:41 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 100.
+ 1 APPPATH\Controllers\Section.php(100): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 100)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-14 22:37:04 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 100.
+ 1 APPPATH\Controllers\Section.php(100): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 100)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-14 22:37:12 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 100.
+ 1 APPPATH\Controllers\Section.php(100): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 100)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

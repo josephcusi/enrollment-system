@@ -1,0 +1,2023 @@
+CRITICAL - 2023-05-28 00:02:39 --> CodeIgniter\HTTP\RedirectResponse::to(): Argument #2 ($code) must be of type ?int, string given, called in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\Announcement.php on line 54
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 32.
+ 1 APPPATH\Controllers\Announcement.php(54): CodeIgniter\HTTP\RedirectResponse->to('school_updates', '(event)')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Announcement->addAnnouncement()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Announcement))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 00:24:12 --> Call to a member function getRandomName() on null
+in APPPATH\Controllers\Announcement.php on line 54.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Announcement->addAnnouncement()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Announcement))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 00:25:17 --> Call to a member function getRandomName() on null
+in APPPATH\Controllers\Announcement.php on line 54.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Announcement->addAnnouncement()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Announcement))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 00:26:15 --> Call to a member function getRandomName() on null
+in APPPATH\Controllers\Announcement.php on line 54.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Announcement->addAnnouncement()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Announcement))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 00:26:36 --> Call to a member function getRandomName() on null
+in APPPATH\Controllers\Announcement.php on line 54.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Announcement->addAnnouncement()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Announcement))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 00:27:24 --> Call to a member function getRandomName() on null
+in APPPATH\Controllers\Announcement.php on line 55.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Announcement->addAnnouncement()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Announcement))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 00:30:14 --> Call to a member function hasMoved() on null
+in APPPATH\Controllers\Announcement.php on line 46.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Announcement->addAnnouncement()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Announcement))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 00:32:13 --> Call to a member function hasMoved() on null
+in APPPATH\Controllers\Announcement.php on line 46.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Announcement->addAnnouncement()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Announcement))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 00:33:30 --> Call to a member function hasMoved() on null
+in APPPATH\Controllers\Announcement.php on line 48.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Announcement->addAnnouncement()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Announcement))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 00:33:38 --> Call to a member function hasMoved() on null
+in APPPATH\Controllers\Announcement.php on line 48.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Announcement->addAnnouncement()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Announcement))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 00:34:31 --> Call to a member function hasMoved() on string
+in APPPATH\Controllers\Announcement.php on line 48.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Announcement->addAnnouncement()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Announcement))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 00:37:45 --> Call to a member function hasMoved() on null
+in APPPATH\Controllers\Announcement.php on line 48.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Announcement->addAnnouncement()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Announcement))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 02:13:17 --> Undefined variable $name
+in APPPATH\Views\webpage\index.php on line 149.
+ 1 APPPATH\Views\webpage\index.php(149): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $name', 'APPPATH\\Views\\webpage\\index.php', 149)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\webpage\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('webpage/index', [], true)
+ 5 APPPATH\Controllers\Webpage.php(27): view('webpage/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Webpage->landing()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Webpage))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 02:13:33 --> Undefined array key "profile_picture"
+in APPPATH\Views\webpage\index.php on line 149.
+ 1 APPPATH\Views\webpage\index.php(149): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "profile_picture"', 'APPPATH\\Views\\webpage\\index.php', 149)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\webpage\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('webpage/index', [], true)
+ 5 APPPATH\Controllers\Webpage.php(27): view('webpage/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Webpage->landing()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Webpage))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 02:22:43 --> Undefined variable $credentials
+in APPPATH\Views\webpage\index.php on line 149.
+ 1 APPPATH\Views\webpage\index.php(149): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $credentials', 'APPPATH\\Views\\webpage\\index.php', 149)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\webpage\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('webpage/index', [], true)
+ 5 APPPATH\Controllers\Webpage.php(27): view('webpage/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Webpage->landing()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Webpage))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 02:22:47 --> Undefined variable $credentials
+in APPPATH\Views\webpage\index.php on line 149.
+ 1 APPPATH\Views\webpage\index.php(149): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $credentials', 'APPPATH\\Views\\webpage\\index.php', 149)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\webpage\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('webpage/index', [], true)
+ 5 APPPATH\Controllers\Webpage.php(27): view('webpage/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Webpage->landing()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Webpage))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 02:34:25 --> Trying to access array offset on value of type null
+in APPPATH\Views\admin\student_credentials\view_cred.php on line 279.
+ 1 APPPATH\Views\admin\student_credentials\view_cred.php(279): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\admin\\student_credentials\\view_cred.php', 279)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student_credentials\\view_cred.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/student_credentials/view_cred', [], true)
+ 5 APPPATH\Controllers\Credentials.php(86): view('admin/student_credentials/view_cred', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->view_credential('adminlte.css.map')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 02:53:10 --> Undefined array key "school_upt_image"
+in APPPATH\Views\webpage\index.php on line 150.
+ 1 APPPATH\Views\webpage\index.php(150): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "school_upt_image"', 'APPPATH\\Views\\webpage\\index.php', 150)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\webpage\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('webpage/index', [], true)
+ 5 APPPATH\Controllers\Webpage.php(27): view('webpage/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Webpage->landing()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Webpage))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 02:53:27 --> Undefined array key "school_upt_image"
+in APPPATH\Views\webpage\index.php on line 151.
+ 1 APPPATH\Views\webpage\index.php(151): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "school_upt_image"', 'APPPATH\\Views\\webpage\\index.php', 151)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\webpage\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('webpage/index', [], true)
+ 5 APPPATH\Controllers\Webpage.php(27): view('webpage/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Webpage->landing()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Webpage))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 03:01:58 --> Array to string conversion
+in APPPATH\Controllers\Webpage.php on line 30.
+ 1 APPPATH\Controllers\Webpage.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Webpage.php', 30)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Webpage->landing()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Webpage))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 03:02:06 --> Array to string conversion
+in APPPATH\Controllers\Webpage.php on line 30.
+ 1 APPPATH\Controllers\Webpage.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Webpage.php', 30)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Webpage->landing()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Webpage))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 05:01:23 --> Undefined variable $announcement
+in APPPATH\Views\webpage\offered.php on line 167.
+ 1 APPPATH\Views\webpage\offered.php(167): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $announcement', 'APPPATH\\Views\\webpage\\offered.php', 167)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\webpage\\offered.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('webpage/offered', [], true)
+ 5 APPPATH\Controllers\Webpage.php(32): view('webpage/offered')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Webpage->offered()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Webpage))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 05:01:49 --> syntax error, unexpected token "endforeach", expecting end of file
+in APPPATH\Views\webpage\offered.php on line 180.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('webpage/offered', [], true)
+ 3 APPPATH\Controllers\Webpage.php(32): view('webpage/offered')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Webpage->offered()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Webpage))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 06:47:24 --> Trying to access array offset on value of type null
+in APPPATH\Views\user\updateregSubject.php on line 126.
+ 1 APPPATH\Views\user\updateregSubject.php(126): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\user\\updateregSubject.php', 126)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\updateregSubject.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/updateregSubject', [], true)
+ 5 APPPATH\Controllers\Profile.php(745): view('user/updateregSubject', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->update()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 07:03:37 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 07:03:47 --> Too few arguments to function App\Controllers\Section::schedule11(), 2 passed in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php on line 927 and exactly 3 expected
+in APPPATH\Controllers\Section.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('6', '16')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 07:03:55 --> Too few arguments to function App\Controllers\Section::schedule11(), 2 passed in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php on line 927 and exactly 3 expected
+in APPPATH\Controllers\Section.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('6', '16')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 07:04:01 --> Too few arguments to function App\Controllers\Section::schedule11(), 2 passed in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php on line 927 and exactly 3 expected
+in APPPATH\Controllers\Section.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('6', '15')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 07:04:10 --> Too few arguments to function App\Controllers\Section::schedule11(), 2 passed in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php on line 927 and exactly 3 expected
+in APPPATH\Controllers\Section.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('4', '7')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 07:04:25 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 07:04:31 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 07:04:40 --> Too few arguments to function App\Controllers\Section::schedule11(), 2 passed in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php on line 927 and exactly 3 expected
+in APPPATH\Controllers\Section.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('4', '7')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 07:06:28 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 07:06:37 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 07:08:07 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 07:08:50 --> Undefined variable $year_levelFour
+in APPPATH\Views\admin\section\fourth_year.php on line 397.
+ 1 APPPATH\Views\admin\section\fourth_year.php(397): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $year_levelFour', 'APPPATH\\Views\\admin\\section\\fourth_year.php', 397)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\section\\fourth_year.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/section/fourth_year', [], true)
+ 5 APPPATH\Controllers\Section.php(439): view('admin/section/fourth_year', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->section11('6')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 07:09:01 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 07:09:18 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 07:10:01 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 07:10:10 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 07:15:21 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 07:44:37 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 07:44:46 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 07:58:40 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Section.php on line 88.
+ 1 APPPATH\Controllers\Section.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Section.php', 88)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 09:40:47 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 09:41:02 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 09:42:31 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 09:42:56 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 09:43:18 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 09:45:44 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 09:45:52 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 09:46:58 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 09:47:13 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 09:47:45 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 09:55:47 --> syntax error, unexpected token "endif", expecting end of file
+in APPPATH\Views\teacher\include\grademodal\grademodal.php on line 23.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('teacher/Grade', [], true)
+ 4 APPPATH\Controllers\Teacher.php(227): view('teacher/Grade', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 09:55:52 --> Undefined variable $sub
+in APPPATH\Views\teacher\include\grademodal\grademodal.php on line 16.
+ 1 APPPATH\Views\teacher\include\grademodal\grademodal.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sub', 'APPPATH\\Views\\teacher\\include\\grademodal\\grademodal.php', 16)
+ 2 APPPATH\Views\teacher\Grade.php(179): include('APPPATH\\Views\\teacher\\include\\grademodal\\grademodal.php')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\teacher\\Grade.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('teacher/Grade', [], true)
+ 6 APPPATH\Controllers\Teacher.php(227): view('teacher/Grade', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 10:01:00 --> Cannot access offset of type string on string
+in APPPATH\Views\teacher\include\grademodal\grademodal.php on line 17.
+ 1 APPPATH\Views\teacher\Grade.php(179): include()
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\teacher\\Grade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('teacher/Grade', [], true)
+ 5 APPPATH\Controllers\Teacher.php(227): view('teacher/Grade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 10:01:38 --> Undefined array key "lrn"
+in APPPATH\Views\teacher\Grade.php on line 178.
+ 1 APPPATH\Views\teacher\Grade.php(178): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "lrn"', 'APPPATH\\Views\\teacher\\Grade.php', 178)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\teacher\\Grade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('teacher/Grade', [], true)
+ 5 APPPATH\Controllers\Teacher.php(227): view('teacher/Grade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 10:02:00 --> Undefined array key "subject"
+in APPPATH\Views\teacher\include\grademodal\grademodal.php on line 17.
+ 1 APPPATH\Views\teacher\include\grademodal\grademodal.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "subject"', 'APPPATH\\Views\\teacher\\include\\grademodal\\grademodal.php', 17)
+ 2 APPPATH\Views\teacher\Grade.php(179): include('APPPATH\\Views\\teacher\\include\\grademodal\\grademodal.php')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\teacher\\Grade.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('teacher/Grade', [], true)
+ 6 APPPATH\Controllers\Teacher.php(227): view('teacher/Grade', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 10:06:12 --> Too few arguments to function CodeIgniter\Database\BaseBuilder::join(), 1 passed in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php on line 772 and at least 2 expected
+in SYSTEMPATH\Database\BaseBuilder.php on line 593.
+ 1 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->join('schedule_tbl')
+ 2 APPPATH\Controllers\Teacher.php(199): CodeIgniter\Model->__call('join', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 10:06:36 --> Undefined array key "subject"
+in APPPATH\Views\teacher\include\grademodal\grademodal.php on line 17.
+ 1 APPPATH\Views\teacher\include\grademodal\grademodal.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "subject"', 'APPPATH\\Views\\teacher\\include\\grademodal\\grademodal.php', 17)
+ 2 APPPATH\Views\teacher\Grade.php(179): include('APPPATH\\Views\\teacher\\include\\grademodal\\grademodal.php')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\teacher\\Grade.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('teacher/Grade', [], true)
+ 6 APPPATH\Controllers\Teacher.php(227): view('teacher/Grade', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 10:14:51 --> Undefined array key "subject_id"
+in APPPATH\Views\teacher\include\grademodal\grademodal.php on line 14.
+ 1 APPPATH\Views\teacher\include\grademodal\grademodal.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "subject_id"', 'APPPATH\\Views\\teacher\\include\\grademodal\\grademodal.php', 14)
+ 2 APPPATH\Views\teacher\Grade.php(179): include('APPPATH\\Views\\teacher\\include\\grademodal\\grademodal.php')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\teacher\\Grade.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('teacher/Grade', [], true)
+ 6 APPPATH\Controllers\Teacher.php(227): view('teacher/Grade', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-05-28 10:21:53 --> mysqli_sql_exception: Unknown column 'remark' in 'field list' in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `st...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `st...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `st...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\Teacher.php(287): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\Teacher->gradingStud()
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-05-28 10:21:53 --> Unknown column 'remark' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `student_grading` (`year`, `semester`, `subject_id`, `subject_grade`, `lrn`, `remark`) VALUES (\'2023-2024\', \'1st Semester\', \'18,11,12,13,14,15,20,19,16,17\', \'90,90,90,90,90,90,90,90,90,90\', \'B23-SHS232038\', \'Pending\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `student_grading` (`year`, `semester`, `subject_id`, `subject_grade`, `lrn`, `remark`) VALUES (\'2023-2024\', \'1st Semester\', \'18,11,12,13,14,15,20,19,16,17\', \'90,90,90,90,90,90,90,90,90,90\', \'B23-SHS232038\', \'Pending\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `student_grading` (`year`, `semester`, `subject_id`, `subject_grade`, `lrn`, `remark`) VALUES (\'2023-2024\', \'1st Semester\', \'18,11,12,13,14,15,20,19,16,17\', \'90,90,90,90,90,90,90,90,90,90\', \'B23-SHS232038\', \'Pending\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `student_grading` (`year`, `semester`, `subject_id`, `subject_grade`, `lrn`, `remark`) VALUES (:year:, :semester:, :subject_id:, :subject_grade:, :lrn:, :remark:)', [...], false)
+ 5 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Teacher.php(287): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->gradingStud()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-05-28 10:21:54 --> mysqli_sql_exception: Unknown column 'remark' in 'field list' in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `st...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `st...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `st...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\Teacher.php(287): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\Teacher->gradingStud()
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-05-28 10:21:54 --> Unknown column 'remark' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `student_grading` (`year`, `semester`, `subject_id`, `subject_grade`, `lrn`, `remark`) VALUES (\'2023-2024\', \'1st Semester\', \'18,11,12,13,14,15,20,19,16,17\', \'90,90,90,90,90,90,90,90,90,90\', \'B23-SHS232038\', \'Pending\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `student_grading` (`year`, `semester`, `subject_id`, `subject_grade`, `lrn`, `remark`) VALUES (\'2023-2024\', \'1st Semester\', \'18,11,12,13,14,15,20,19,16,17\', \'90,90,90,90,90,90,90,90,90,90\', \'B23-SHS232038\', \'Pending\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `student_grading` (`year`, `semester`, `subject_id`, `subject_grade`, `lrn`, `remark`) VALUES (\'2023-2024\', \'1st Semester\', \'18,11,12,13,14,15,20,19,16,17\', \'90,90,90,90,90,90,90,90,90,90\', \'B23-SHS232038\', \'Pending\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `student_grading` (`year`, `semester`, `subject_id`, `subject_grade`, `lrn`, `remark`) VALUES (:year:, :semester:, :subject_id:, :subject_grade:, :lrn:, :remark:)', [...], false)
+ 5 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Teacher.php(287): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->gradingStud()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-05-28 10:22:27 --> mysqli_sql_exception: Unknown column 'remark' in 'field list' in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `st...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `st...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `st...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\Teacher.php(287): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\Teacher->gradingStud()
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-05-28 10:22:27 --> Unknown column 'remark' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `student_grading` (`year`, `semester`, `subject_id`, `subject_grade`, `lrn`, `remark`) VALUES (\'2023-2024\', \'1st Semester\', \'18,11,12,13,14,15,20,19,16,17\', \'90,90,90,90,90,90,90,90,90,90\', \'B23-SHS232038\', \'Pending\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `student_grading` (`year`, `semester`, `subject_id`, `subject_grade`, `lrn`, `remark`) VALUES (\'2023-2024\', \'1st Semester\', \'18,11,12,13,14,15,20,19,16,17\', \'90,90,90,90,90,90,90,90,90,90\', \'B23-SHS232038\', \'Pending\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `student_grading` (`year`, `semester`, `subject_id`, `subject_grade`, `lrn`, `remark`) VALUES (\'2023-2024\', \'1st Semester\', \'18,11,12,13,14,15,20,19,16,17\', \'90,90,90,90,90,90,90,90,90,90\', \'B23-SHS232038\', \'Pending\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `student_grading` (`year`, `semester`, `subject_id`, `subject_grade`, `lrn`, `remark`) VALUES (:year:, :semester:, :subject_id:, :subject_grade:, :lrn:, :remark:)', [...], false)
+ 5 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Teacher.php(287): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->gradingStud()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-05-28 10:24:15 --> mysqli_sql_exception: Unknown column 'remark' in 'field list' in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `st...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `st...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `st...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\Teacher.php(287): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\Teacher->gradingStud()
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-05-28 10:24:15 --> Unknown column 'remark' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `student_grading` (`year`, `semester`, `subject_id`, `subject_grade`, `lrn`, `remark`) VALUES (\'2023-2024\', \'1st Semester\', \'18,11,12,13,14,15,20,19,16,17\', \'90,90,90,90,90,90,90,90,90,90\', \'B23-SHS232038\', \'Pending\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `student_grading` (`year`, `semester`, `subject_id`, `subject_grade`, `lrn`, `remark`) VALUES (\'2023-2024\', \'1st Semester\', \'18,11,12,13,14,15,20,19,16,17\', \'90,90,90,90,90,90,90,90,90,90\', \'B23-SHS232038\', \'Pending\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `student_grading` (`year`, `semester`, `subject_id`, `subject_grade`, `lrn`, `remark`) VALUES (\'2023-2024\', \'1st Semester\', \'18,11,12,13,14,15,20,19,16,17\', \'90,90,90,90,90,90,90,90,90,90\', \'B23-SHS232038\', \'Pending\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `student_grading` (`year`, `semester`, `subject_id`, `subject_grade`, `lrn`, `remark`) VALUES (:year:, :semester:, :subject_id:, :subject_grade:, :lrn:, :remark:)', [...], false)
+ 5 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Teacher.php(287): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->gradingStud()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-05-28 10:24:30 --> mysqli_sql_exception: Unknown column 'remark' in 'field list' in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `st...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `st...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `st...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\Teacher.php(287): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\Teacher->gradingStud()
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-05-28 10:24:30 --> Unknown column 'remark' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `student_grading` (`year`, `semester`, `subject_id`, `subject_grade`, `lrn`, `remark`) VALUES (\'2023-2024\', \'1st Semester\', \'18,11,12,13,14,15,20,19,16,17\', \'90,90,90,90,90,90,90,90,90,90\', \'B23-SHS232038\', \'Pending\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `student_grading` (`year`, `semester`, `subject_id`, `subject_grade`, `lrn`, `remark`) VALUES (\'2023-2024\', \'1st Semester\', \'18,11,12,13,14,15,20,19,16,17\', \'90,90,90,90,90,90,90,90,90,90\', \'B23-SHS232038\', \'Pending\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `student_grading` (`year`, `semester`, `subject_id`, `subject_grade`, `lrn`, `remark`) VALUES (\'2023-2024\', \'1st Semester\', \'18,11,12,13,14,15,20,19,16,17\', \'90,90,90,90,90,90,90,90,90,90\', \'B23-SHS232038\', \'Pending\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `student_grading` (`year`, `semester`, `subject_id`, `subject_grade`, `lrn`, `remark`) VALUES (:year:, :semester:, :subject_id:, :subject_grade:, :lrn:, :remark:)', [...], false)
+ 5 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Teacher.php(287): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->gradingStud()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 10:24:31 --> Trying to access array offset on value of type null
+in APPPATH\Views\teacher\include\grademodal\updategrademodal.php on line 16.
+ 1 APPPATH\Views\teacher\include\grademodal\updategrademodal.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\teacher\\include\\grademodal\\updategrademodal.php', 16)
+ 2 APPPATH\Views\teacher\Grade.php(157): include('APPPATH\\Views\\teacher\\include\\grademodal\\updategrademodal.php')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\teacher\\Grade.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('teacher/Grade', [], true)
+ 6 APPPATH\Controllers\Teacher.php(227): view('teacher/Grade', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 10:24:34 --> Trying to access array offset on value of type null
+in APPPATH\Views\teacher\include\grademodal\updategrademodal.php on line 16.
+ 1 APPPATH\Views\teacher\include\grademodal\updategrademodal.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\teacher\\include\\grademodal\\updategrademodal.php', 16)
+ 2 APPPATH\Views\teacher\Grade.php(157): include('APPPATH\\Views\\teacher\\include\\grademodal\\updategrademodal.php')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\teacher\\Grade.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('teacher/Grade', [], true)
+ 6 APPPATH\Controllers\Teacher.php(227): view('teacher/Grade', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 10:24:38 --> Trying to access array offset on value of type null
+in APPPATH\Views\teacher\include\grademodal\updategrademodal.php on line 16.
+ 1 APPPATH\Views\teacher\include\grademodal\updategrademodal.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\teacher\\include\\grademodal\\updategrademodal.php', 16)
+ 2 APPPATH\Views\teacher\Grade.php(157): include('APPPATH\\Views\\teacher\\include\\grademodal\\updategrademodal.php')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\teacher\\Grade.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('teacher/Grade', [], true)
+ 6 APPPATH\Controllers\Teacher.php(227): view('teacher/Grade', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 10:24:38 --> Trying to access array offset on value of type null
+in APPPATH\Views\teacher\include\grademodal\updategrademodal.php on line 16.
+ 1 APPPATH\Views\teacher\include\grademodal\updategrademodal.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\teacher\\include\\grademodal\\updategrademodal.php', 16)
+ 2 APPPATH\Views\teacher\Grade.php(157): include('APPPATH\\Views\\teacher\\include\\grademodal\\updategrademodal.php')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\teacher\\Grade.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('teacher/Grade', [], true)
+ 6 APPPATH\Controllers\Teacher.php(227): view('teacher/Grade', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 10:25:01 --> Trying to access array offset on value of type null
+in APPPATH\Views\teacher\include\grademodal\updategrademodal.php on line 16.
+ 1 APPPATH\Views\teacher\include\grademodal\updategrademodal.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\teacher\\include\\grademodal\\updategrademodal.php', 16)
+ 2 APPPATH\Views\teacher\Grade.php(157): include('APPPATH\\Views\\teacher\\include\\grademodal\\updategrademodal.php')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\teacher\\Grade.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('teacher/Grade', [], true)
+ 6 APPPATH\Controllers\Teacher.php(227): view('teacher/Grade', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 10:25:41 --> Trying to access array offset on value of type null
+in APPPATH\Views\teacher\include\grademodal\updategrademodal.php on line 16.
+ 1 APPPATH\Views\teacher\include\grademodal\updategrademodal.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\teacher\\include\\grademodal\\updategrademodal.php', 16)
+ 2 APPPATH\Views\teacher\Grade.php(157): include('APPPATH\\Views\\teacher\\include\\grademodal\\updategrademodal.php')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\teacher\\Grade.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('teacher/Grade', [], true)
+ 6 APPPATH\Controllers\Teacher.php(227): view('teacher/Grade', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 10:31:51 --> Undefined variable $schedule_model
+in APPPATH\Controllers\Teacher.php on line 221.
+ 1 APPPATH\Controllers\Teacher.php(221): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $schedule_model', 'APPPATH\\Controllers\\Teacher.php', 221)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 10:37:56 --> syntax error, unexpected token "return"
+in APPPATH\Controllers\Teacher.php on line 213.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Teacher.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Teacher')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Teacher')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Teacher', true)
+ 5 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 10:38:08 --> explode(): Argument #2 ($string) must be of type string, array given
+in APPPATH\Controllers\Teacher.php on line 211.
+ 1 APPPATH\Controllers\Teacher.php(211): explode(',', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 10:38:42 --> Undefined array key "count_grade"
+in APPPATH\Controllers\Teacher.php on line 215.
+ 1 APPPATH\Controllers\Teacher.php(215): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "count_grade"', 'APPPATH\\Controllers\\Teacher.php', 215)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-05-28 10:47:28 --> mysqli_sql_exception: Illegal parameter data types int and row for operation '=' in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\Teacher.php(214): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-05-28 10:47:28 --> Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `prospectrus_tbl`
+WHERE `id` = (\'18\',\'11\',\'12\',\'13\',\'14\',\'15\',\'20\',\'19\',\'16\',\'17\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `prospectrus_tbl`
+WHERE `id` = (\'18\',\'11\',\'12\',\'13\',\'14\',\'15\',\'20\',\'19\',\'16\',\'17\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `prospectrus_tbl`
+WHERE `id` = (\'18\',\'11\',\'12\',\'13\',\'14\',\'15\',\'20\',\'19\',\'16\',\'17\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `prospectrus_tbl`
+WHERE `id` = :id:', [...], false)
+ 5 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Teacher.php(214): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-05-28 10:48:03 --> mysqli_sql_exception: Illegal parameter data types int and row for operation '=' in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\Teacher.php(214): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-05-28 10:48:03 --> Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `prospectrus_tbl`
+WHERE `id` = (\'18\',\'11\',\'12\',\'13\',\'14\',\'15\',\'20\',\'19\',\'16\',\'17\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `prospectrus_tbl`
+WHERE `id` = (\'18\',\'11\',\'12\',\'13\',\'14\',\'15\',\'20\',\'19\',\'16\',\'17\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `prospectrus_tbl`
+WHERE `id` = (\'18\',\'11\',\'12\',\'13\',\'14\',\'15\',\'20\',\'19\',\'16\',\'17\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `prospectrus_tbl`
+WHERE `id` = :id:', [...], false)
+ 5 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Teacher.php(214): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 10:48:38 --> Undefined array key "test"
+in APPPATH\Controllers\Teacher.php on line 220.
+ 1 APPPATH\Controllers\Teacher.php(220): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "test"', 'APPPATH\\Controllers\\Teacher.php', 220)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-05-28 10:51:43 --> mysqli_sql_exception: Column 'id' in where clause is ambiguous in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\Teacher.php(218): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-05-28 10:51:43 --> Column 'id' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `schedule_tbl` ON `prospectrus_tbl`.`id` = `schedule_tbl`.`subject_id`
+WHERE `teacher_id` = \'5\'
+AND `id` IN (\'18\',\'11\',\'12\',\'13\',\'14\',\'15\',\'20\',\'19\',\'16\',\'17\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `schedule_tbl` ON `prospectrus_tbl`.`id` = `schedule_tbl`.`subject_id`
+WHERE `teacher_id` = \'5\'
+AND `id` IN (\'18\',\'11\',\'12\',\'13\',\'14\',\'15\',\'20\',\'19\',\'16\',\'17\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `schedule_tbl` ON `prospectrus_tbl`.`id` = `schedule_tbl`.`subject_id`
+WHERE `teacher_id` = \'5\'
+AND `id` IN (\'18\',\'11\',\'12\',\'13\',\'14\',\'15\',\'20\',\'19\',\'16\',\'17\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `prospectrus_tbl`
+INNER JOIN `schedule_tbl` ON `prospectrus_tbl`.`id` = `schedule_tbl`.`subject_id`
+WHERE `teacher_id` = :teacher_id:
+AND `id` IN :id:', [...], false)
+ 5 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Teacher.php(218): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 10:53:19 --> Undefined variable $userSub
+in APPPATH\Views\teacher\include\grademodal\grademodal.php on line 14.
+ 1 APPPATH\Views\teacher\include\grademodal\grademodal.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userSub', 'APPPATH\\Views\\teacher\\include\\grademodal\\grademodal.php', 14)
+ 2 APPPATH\Views\teacher\Grade.php(163): include('APPPATH\\Views\\teacher\\include\\grademodal\\grademodal.php')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\teacher\\Grade.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('teacher/Grade', [], true)
+ 6 APPPATH\Controllers\Teacher.php(222): view('teacher/Grade', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 10:53:34 --> Undefined variable $userName
+in APPPATH\Views\teacher\include\navbar.php on line 20.
+ 1 APPPATH\Views\teacher\include\navbar.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userName', 'APPPATH\\Views\\teacher\\include\\navbar.php', 20)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\teacher\\include\\navbar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('teacher/include/navbar', null, true)
+ 5 APPPATH\Views\teacher\Grade.php(5): CodeIgniter\View\View->include('teacher/include/navbar')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\teacher\\Grade.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('teacher/Grade', [], true)
+ 9 APPPATH\Controllers\Teacher.php(222): view('teacher/Grade', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 10:54:43 --> Undefined variable $info
+in APPPATH\Views\teacher\Grade.php on line 162.
+ 1 APPPATH\Views\teacher\Grade.php(162): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $info', 'APPPATH\\Views\\teacher\\Grade.php', 162)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\teacher\\Grade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('teacher/Grade', [], true)
+ 5 APPPATH\Controllers\Teacher.php(220): view('teacher/Grade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 10:55:07 --> Undefined array key "lrn"
+in APPPATH\Views\teacher\Grade.php on line 162.
+ 1 APPPATH\Views\teacher\Grade.php(162): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "lrn"', 'APPPATH\\Views\\teacher\\Grade.php', 162)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\teacher\\Grade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('teacher/Grade', [], true)
+ 5 APPPATH\Controllers\Teacher.php(220): view('teacher/Grade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 10:57:09 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 10:57:19 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 11:01:06 --> Undefined variable $registration_model
+in APPPATH\Controllers\Teacher.php on line 194.
+ 1 APPPATH\Controllers\Teacher.php(194): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $registration_model', 'APPPATH\\Controllers\\Teacher.php', 194)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-05-28 11:02:08 --> mysqli_sql_exception: Unknown column 'remark' in 'field list' in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `st...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `st...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `st...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\Teacher.php(283): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\Teacher->gradingStud()
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-05-28 11:02:08 --> Unknown column 'remark' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `student_grading` (`year`, `semester`, `subject_id`, `subject_grade`, `lrn`, `remark`) VALUES (\'2023-2024\', \'1st Semester\', \'2\', \'90\', \'B23-SHS232038\', \'Pending\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `student_grading` (`year`, `semester`, `subject_id`, `subject_grade`, `lrn`, `remark`) VALUES (\'2023-2024\', \'1st Semester\', \'2\', \'90\', \'B23-SHS232038\', \'Pending\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `student_grading` (`year`, `semester`, `subject_id`, `subject_grade`, `lrn`, `remark`) VALUES (\'2023-2024\', \'1st Semester\', \'2\', \'90\', \'B23-SHS232038\', \'Pending\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `student_grading` (`year`, `semester`, `subject_id`, `subject_grade`, `lrn`, `remark`) VALUES (:year:, :semester:, :subject_id:, :subject_grade:, :lrn:, :remark:)', [...], false)
+ 5 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Teacher.php(283): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->gradingStud()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 11:03:39 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 11:03:56 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 11:23:08 --> Undefined variable $count_grade
+in APPPATH\Views\teacher\Grade.php on line 145.
+ 1 APPPATH\Views\teacher\Grade.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $count_grade', 'APPPATH\\Views\\teacher\\Grade.php', 145)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\teacher\\Grade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('teacher/Grade', [], true)
+ 5 APPPATH\Controllers\Teacher.php(239): view('teacher/Grade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 11:23:26 --> Undefined variable $student_grade
+in APPPATH\Views\teacher\Grade.php on line 148.
+ 1 APPPATH\Views\teacher\Grade.php(148): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $student_grade', 'APPPATH\\Views\\teacher\\Grade.php', 148)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\teacher\\Grade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('teacher/Grade', [], true)
+ 5 APPPATH\Controllers\Teacher.php(239): view('teacher/Grade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 11:24:00 --> Undefined array key "subject_grade"
+in APPPATH\Views\teacher\Grade.php on line 148.
+ 1 APPPATH\Views\teacher\Grade.php(148): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "subject_grade"', 'APPPATH\\Views\\teacher\\Grade.php', 148)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\teacher\\Grade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('teacher/Grade', [], true)
+ 5 APPPATH\Controllers\Teacher.php(239): view('teacher/Grade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 11:24:40 --> Undefined array key "subject_id"
+in APPPATH\Views\teacher\Grade.php on line 148.
+ 1 APPPATH\Views\teacher\Grade.php(148): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "subject_id"', 'APPPATH\\Views\\teacher\\Grade.php', 148)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\teacher\\Grade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('teacher/Grade', [], true)
+ 5 APPPATH\Controllers\Teacher.php(239): view('teacher/Grade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 11:25:27 --> Undefined array key "subject"
+in APPPATH\Views\teacher\Grade.php on line 148.
+ 1 APPPATH\Views\teacher\Grade.php(148): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "subject"', 'APPPATH\\Views\\teacher\\Grade.php', 148)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\teacher\\Grade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('teacher/Grade', [], true)
+ 5 APPPATH\Controllers\Teacher.php(239): view('teacher/Grade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 11:26:03 --> Undefined array key "subject"
+in APPPATH\Views\teacher\Grade.php on line 149.
+ 1 APPPATH\Views\teacher\Grade.php(149): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "subject"', 'APPPATH\\Views\\teacher\\Grade.php', 149)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\teacher\\Grade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('teacher/Grade', [], true)
+ 5 APPPATH\Controllers\Teacher.php(239): view('teacher/Grade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 11:26:51 --> Undefined array key "subject_grade"
+in APPPATH\Views\teacher\Grade.php on line 150.
+ 1 APPPATH\Views\teacher\Grade.php(150): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "subject_grade"', 'APPPATH\\Views\\teacher\\Grade.php', 150)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\teacher\\Grade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('teacher/Grade', [], true)
+ 5 APPPATH\Controllers\Teacher.php(239): view('teacher/Grade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 11:27:01 --> Undefined array key "subject_grade"
+in APPPATH\Views\teacher\Grade.php on line 150.
+ 1 APPPATH\Views\teacher\Grade.php(150): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "subject_grade"', 'APPPATH\\Views\\teacher\\Grade.php', 150)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\teacher\\Grade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('teacher/Grade', [], true)
+ 5 APPPATH\Controllers\Teacher.php(239): view('teacher/Grade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 11:27:16 --> Undefined array key "stud_id"
+in APPPATH\Views\teacher\Grade.php on line 155.
+ 1 APPPATH\Views\teacher\Grade.php(155): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "stud_id"', 'APPPATH\\Views\\teacher\\Grade.php', 155)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\teacher\\Grade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('teacher/Grade', [], true)
+ 5 APPPATH\Controllers\Teacher.php(239): view('teacher/Grade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 11:27:31 --> Undefined array key "stud_id"
+in APPPATH\Views\teacher\Grade.php on line 155.
+ 1 APPPATH\Views\teacher\Grade.php(155): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "stud_id"', 'APPPATH\\Views\\teacher\\Grade.php', 155)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\teacher\\Grade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('teacher/Grade', [], true)
+ 5 APPPATH\Controllers\Teacher.php(239): view('teacher/Grade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 11:27:43 --> Undefined variable $student_grade
+in APPPATH\Views\teacher\include\grademodal\updategrademodal.php on line 16.
+ 1 APPPATH\Views\teacher\include\grademodal\updategrademodal.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $student_grade', 'APPPATH\\Views\\teacher\\include\\grademodal\\updategrademodal.php', 16)
+ 2 APPPATH\Views\teacher\Grade.php(157): include('APPPATH\\Views\\teacher\\include\\grademodal\\updategrademodal.php')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\teacher\\Grade.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('teacher/Grade', [], true)
+ 6 APPPATH\Controllers\Teacher.php(239): view('teacher/Grade', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 11:29:56 --> Undefined array key "subject_grade"
+in APPPATH\Controllers\Teacher.php on line 187.
+ 1 APPPATH\Controllers\Teacher.php(187): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "subject_grade"', 'APPPATH\\Controllers\\Teacher.php', 187)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 11:30:58 --> Undefined array key "subject_grade"
+in APPPATH\Controllers\Teacher.php on line 187.
+ 1 APPPATH\Controllers\Teacher.php(187): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "subject_grade"', 'APPPATH\\Controllers\\Teacher.php', 187)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 11:31:01 --> Undefined array key "subject_grade"
+in APPPATH\Controllers\Teacher.php on line 187.
+ 1 APPPATH\Controllers\Teacher.php(187): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "subject_grade"', 'APPPATH\\Controllers\\Teacher.php', 187)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 11:31:08 --> Undefined variable $holder1
+in APPPATH\Controllers\Teacher.php on line 201.
+ 1 APPPATH\Controllers\Teacher.php(201): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $holder1', 'APPPATH\\Controllers\\Teacher.php', 201)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 11:38:02 --> Undefined variable $holder1
+in APPPATH\Controllers\Teacher.php on line 209.
+ 1 APPPATH\Controllers\Teacher.php(209): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $holder1', 'APPPATH\\Controllers\\Teacher.php', 209)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 11:42:38 --> Undefined variable $ids
+in APPPATH\Controllers\Teacher.php on line 249.
+ 1 APPPATH\Controllers\Teacher.php(249): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ids', 'APPPATH\\Controllers\\Teacher.php', 249)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 11:45:15 --> Undefined variable $test123
+in APPPATH\Views\teacher\Grade.php on line 145.
+ 1 APPPATH\Views\teacher\Grade.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $test123', 'APPPATH\\Views\\teacher\\Grade.php', 145)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\teacher\\Grade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('teacher/Grade', [], true)
+ 5 APPPATH\Controllers\Teacher.php(223): view('teacher/Grade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-05-28 11:55:59 --> mysqli_sql_exception: Unknown column 'student_registration' in 'where clause' in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\Teacher.php(225): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-05-28 11:55:59 --> Unknown column 'student_registration' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `student_grading`
+INNER JOIN `student_registration` ON `lrn` = `student_registration`.`lrn`
+WHERE `student_registration` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `student_grading`
+INNER JOIN `student_registration` ON `lrn` = `student_registration`.`lrn`
+WHERE `student_registration` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `student_grading`
+INNER JOIN `student_registration` ON `lrn` = `student_registration`.`lrn`
+WHERE `student_registration` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `student_grading`
+INNER JOIN `student_registration` ON `lrn` = `student_registration`.`lrn`
+WHERE `student_registration` = :student_registration:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Teacher.php(225): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-05-28 11:56:30 --> mysqli_sql_exception: Column 'lrn' in on clause is ambiguous in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\Teacher.php(225): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-05-28 11:56:30 --> Column 'lrn' in on clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `student_grading`
+INNER JOIN `student_registration` ON `lrn` = `student_registration`.`lrn`
+WHERE `student_registration`.`id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `student_grading`
+INNER JOIN `student_registration` ON `lrn` = `student_registration`.`lrn`
+WHERE `student_registration`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `student_grading`
+INNER JOIN `student_registration` ON `lrn` = `student_registration`.`lrn`
+WHERE `student_registration`.`id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `student_grading`
+INNER JOIN `student_registration` ON `lrn` = `student_registration`.`lrn`
+WHERE `student_registration`.`id` = :student_registration.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Teacher.php(225): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 11:56:43 --> Cannot access offset of type string on string
+in APPPATH\Views\teacher\Grade.php on line 147.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('teacher/Grade', [], true)
+ 4 APPPATH\Controllers\Teacher.php(237): view('teacher/Grade', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 11:57:17 --> Undefined array key "subject_id"
+in APPPATH\Views\teacher\Grade.php on line 147.
+ 1 APPPATH\Views\teacher\Grade.php(147): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "subject_id"', 'APPPATH\\Views\\teacher\\Grade.php', 147)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\teacher\\Grade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('teacher/Grade', [], true)
+ 5 APPPATH\Controllers\Teacher.php(237): view('teacher/Grade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 11:57:38 --> Undefined variable $studSub
+in APPPATH\Views\teacher\Grade.php on line 153.
+ 1 APPPATH\Views\teacher\Grade.php(153): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $studSub', 'APPPATH\\Views\\teacher\\Grade.php', 153)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\teacher\\Grade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('teacher/Grade', [], true)
+ 5 APPPATH\Controllers\Teacher.php(237): view('teacher/Grade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 12:03:49 --> Undefined array key "subject_grade"
+in APPPATH\Views\teacher\Grade.php on line 149.
+ 1 APPPATH\Views\teacher\Grade.php(149): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "subject_grade"', 'APPPATH\\Views\\teacher\\Grade.php', 149)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\teacher\\Grade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('teacher/Grade', [], true)
+ 5 APPPATH\Controllers\Teacher.php(237): view('teacher/Grade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 12:04:01 --> Undefined variable $stud_sub
+in APPPATH\Views\teacher\Grade.php on line 154.
+ 1 APPPATH\Views\teacher\Grade.php(154): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $stud_sub', 'APPPATH\\Views\\teacher\\Grade.php', 154)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\teacher\\Grade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('teacher/Grade', [], true)
+ 5 APPPATH\Controllers\Teacher.php(237): view('teacher/Grade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 12:04:25 --> Undefined variable $sub
+in APPPATH\Views\teacher\Grade.php on line 154.
+ 1 APPPATH\Views\teacher\Grade.php(154): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sub', 'APPPATH\\Views\\teacher\\Grade.php', 154)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\teacher\\Grade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('teacher/Grade', [], true)
+ 5 APPPATH\Controllers\Teacher.php(237): view('teacher/Grade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 12:05:21 --> Undefined array key "subject_id"
+in APPPATH\Views\teacher\Grade.php on line 149.
+ 1 APPPATH\Views\teacher\Grade.php(149): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "subject_id"', 'APPPATH\\Views\\teacher\\Grade.php', 149)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\teacher\\Grade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('teacher/Grade', [], true)
+ 5 APPPATH\Controllers\Teacher.php(237): view('teacher/Grade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 12:05:30 --> Undefined array key "subject_grade"
+in APPPATH\Views\teacher\Grade.php on line 155.
+ 1 APPPATH\Views\teacher\Grade.php(155): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "subject_grade"', 'APPPATH\\Views\\teacher\\Grade.php', 155)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\teacher\\Grade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('teacher/Grade', [], true)
+ 5 APPPATH\Controllers\Teacher.php(237): view('teacher/Grade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 12:05:43 --> Undefined variable $stud_sub
+in APPPATH\Views\teacher\Grade.php on line 158.
+ 1 APPPATH\Views\teacher\Grade.php(158): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $stud_sub', 'APPPATH\\Views\\teacher\\Grade.php', 158)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\teacher\\Grade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('teacher/Grade', [], true)
+ 5 APPPATH\Controllers\Teacher.php(237): view('teacher/Grade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 12:06:32 --> Undefined variable $sub
+in APPPATH\Views\teacher\Grade.php on line 161.
+ 1 APPPATH\Views\teacher\Grade.php(161): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sub', 'APPPATH\\Views\\teacher\\Grade.php', 161)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\teacher\\Grade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('teacher/Grade', [], true)
+ 5 APPPATH\Controllers\Teacher.php(237): view('teacher/Grade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->viewGrade('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 12:13:28 --> Trying to access array offset on value of type null
+in APPPATH\Views\user\userProspectus.php on line 165.
+ 1 APPPATH\Views\user\userProspectus.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\user\\userProspectus.php', 165)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\userProspectus.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/userProspectus', [], true)
+ 5 APPPATH\Controllers\Profile.php(118): view('user/userProspectus', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->userProspectus()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 19:52:19 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 19:58:27 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 20:00:32 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 20:09:24 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 20:11:04 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 20:11:38 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 20:11:39 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 20:12:07 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 20:13:12 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 21:24:15 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 21:24:29 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-05-28 22:15:34 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'enrollment_syst...', 3306, '', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\Webpage.php(24): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\Webpage->landing()
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Webpage))
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\Webpage.php(24): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\Webpage->landing()
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Webpage))
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-05-28 22:15:34 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `announcement_tbl`
+WHERE `type` = :type:', [...], false)
+ 3 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Webpage.php(24): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Webpage->landing()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Webpage))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 22:22:41 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 22:22:59 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 22:24:52 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 22:26:03 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 22:27:52 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 22:28:14 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 22:29:42 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 22:30:42 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 22:31:30 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 22:32:05 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 22:33:40 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 22:34:04 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 22:34:53 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 22:35:18 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 22:35:40 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 22:36:28 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 22:37:56 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 22:38:16 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 22:38:32 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 22:39:00 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 22:40:07 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 22:48:30 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 22:49:16 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 22:49:27 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 22:50:08 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 22:50:32 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 22:50:52 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 22:51:23 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 22:51:42 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 22:51:54 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 22:57:16 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 22:58:06 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 23:06:45 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 23:13:39 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 23:13:58 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 23:14:15 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 23:14:43 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 23:15:01 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 23:15:24 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 23:15:53 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 23:16:04 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 23:16:14 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 23:16:55 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 23:17:44 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 23:18:56 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 23:19:58 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 23:21:10 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 23:21:36 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 23:21:48 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 23:22:09 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 23:22:27 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-28 23:23:23 --> Undefined variable $view
+in APPPATH\Controllers\Section.php on line 98.
+ 1 APPPATH\Controllers\Section.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'APPPATH\\Controllers\\Section.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

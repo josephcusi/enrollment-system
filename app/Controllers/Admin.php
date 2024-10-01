@@ -9,6 +9,8 @@ use App\Models\ProfileModel;
 use App\Models\YearModel;
 use App\Models\YearlevelModel;
 use App\Libraries\Hash;
+use Dompdf\Options;
+use Dompdf\Dompdf;
 
 use App\Controllers\BaseController;
 
@@ -17,16 +19,9 @@ class Admin extends BaseController
     protected $db;
     public function __construct()
     {
-        helper(['url', 'form']);
+       helper(['url', 'Form_helper', 'form']);
         $this->db = \Config\Database::connect();
     }
-
-    // public function getGenderData()
-    // {
-    //     $male = $this->db->where('user_profile', array('gender' => 'male'))->num_rows();
-    //     $female = $this->db->where('user_profile', array('gender' => 'female'))->num_rows();
-    //     return array('male' => $male, 'female' => $female);
-    // }
 
     public function admin()
     {
@@ -35,85 +30,192 @@ class Admin extends BaseController
         $profile_model = new ProfileModel();
         $registration_model = new RegistrationModel();
         $year_level_model = new YearlevelModel();
-        
-        $male = $this->db->table('user_profile')->where('gender', 'male')->countAllResults();
-        $female = $this->db->table('user_profile')->where('gender', 'female')->countAllResults();
 
-        $total = $male + $female;
-
-        if ($total > 0) {
-            //Calculate the percentage
-            $male_percentage = ($male / $total) * 100;
-            $female_percentage = ($female / $total) * 100;
-        } else {
-            $male_percentage = 0;
-            $female_percentage = 0;
-        }
         $data = [
-            'male_percentage' => $male_percentage,
-            'female_percentage' => $female_percentage,
-            'male' => $profile_model
-            ->select('*, ')
-            ->join('user_tbl', 'user_profile.email = user_tbl.email', 'inner')
-            ->join('student_registration','user_tbl.lrn = student_registration.lrn', 'inner')
-            ->join('school_year','student_registration.year = school_year.year', 'inner')
-            ->join('yearlevel_tbl', 'student_registration.year_level = yearlevel_tbl.year_level', 'inner')
-            ->where('type', 'COLLEGE')
-            
+
+            'male' => $registration_model
+            ->select('*')
+            ->join('user_tbl', 'student_registration.lrn = user_tbl.lrn', 'inner')
+            ->join('user_profile', 'user_tbl.email = user_profile.email', 'inner')
+            ->where('usertype', session()->get('status'))
             ->where('state', 'Enrolled')
             ->where('gender', 'Male')
-            ->where('school_year.status', 'active')->get()->getNumRows(),
-            'female' => $profile_model
-            ->select('*, ')
-            ->join('user_tbl', 'user_profile.email = user_tbl.email', 'inner')
-            ->join('student_registration','user_tbl.lrn = student_registration.lrn', 'inner')
-            ->join('school_year','student_registration.year = school_year.year', 'inner')
+            ->where('year', session()->get('year'))
+            ->where('semester', session()->get('semester'))
+            ->get()->getNumRows(),
+            
+            'female' => $registration_model
+            ->select('*')
+            ->join('user_tbl', 'student_registration.lrn = user_tbl.lrn', 'inner')
+            ->join('user_profile', 'user_tbl.email = user_profile.email', 'inner')
+            ->where('usertype', session()->get('status'))
             ->where('state', 'Enrolled')
             ->where('gender', 'Female')
-            ->where('school_year.status', 'active')->get()->getNumRows(),
-            'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
-            'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
-            'usertypestudent' => $user_model->where('usertype', 'COLLEGE')->get()->getNumRows(),
+            ->where('year', session()->get('year'))
+            ->where('semester', session()->get('semester'))
+            ->get()->getNumRows(),
+
+            'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->findAll(),
+
+            'usertypestudent' => $user_model
+            ->join('credential_tbl', 'user_tbl.id = credential_tbl.user_id', 'inner')
+            ->where('usertype', session()->get('status'))
+            ->where('credential_status', 'Approved')
+            ->get()->getNumRows(),
             'usertypeteacher' => $user_model->where('usertype', 'teacher')->get()->getNumRows(),
-            'usertypeadmin' => $user_model->where('usertype', 'admin')->get()->getNumRows(),
-            'humss' => $registration_model->where('strand', 'HUMSS')->get()->getNumRows(),
-            'stem' => $year_level
-            ->select('*, ')
-            ->join('student_registration', 'school_year.year = student_registration.year', 'inner')
+            'usertypeadmin' => $user_model->where('status', session()->get('status'))->where('usertype', 'admin')->get()->getNumRows(),
+
+            'abh' => $registration_model
+            ->where('strand', 'ABH')
             ->where('state', 'Enrolled')
-            ->where('school_year.status', 'active')->get()->getNumRows(),
-            'abm' => $registration_model->where('strand', 'ABM')->get()->getNumRows(),
-            'grade11' => $year_level
-           ->select('*, ')
-           ->join('student_registration', 'school_year.year = student_registration.year', 'inner')
-           ->where('year_level', 'Grade 11')
-           ->where('state', 'Enrolled')
-           ->where('school_year.status', 'active')->get()->getNumRows(),
-           'grade12' => $year_level
-          ->select('*, ')
-          ->join('student_registration', 'school_year.year = student_registration.year', 'inner')
-          ->where('year_level', 'Grade 12')
-          ->where('state', 'Enrolled')
-          ->where('school_year.status', 'active')->get()->getNumRows(),
-            // 'grade12' => $registration_model->where('year_level', 'Grade 12')->where('year', '2022')->get()->getNumRows(),
-            'status' => $registration_model->where('state', 'pending')->get()->getNumRows(),
-            'enroll2022' => $registration_model->where('state', 'Enrolled')->where('year', '2022-2023')->get()->getNumRows(),
-            'enroll2023' => $registration_model->where('state', 'Enrolled')->where('year', '2023-2024')->get()->getNumRows(),
-            'enroll2024' => $registration_model->where('state', 'Enrolled')->where('year', '2024-2025')->get()->getNumRows(),
-            'enroll2025' => $registration_model->where('state', 'Enrolled')->where('year', '2025-2026')->get()->getNumRows(),
-            'reject' => $registration_model->where('state', 'Rejected')->get()->getNumRows(),
+            ->where('year', session()->get('year'))
+            ->where('semester', session()->get('semester'))
+            ->get()->getNumRows(),
+
+            'bpa' => $registration_model
+            ->where('strand', 'BPA')
+            ->where('state', 'Enrolled')
+            ->where('year', session()->get('year'))
+            ->where('semester', session()->get('semester'))
+            ->get()->getNumRows(),
+
+            'btvted' => $registration_model
+            ->where('strand', 'BTVTED')
+            ->where('state', 'Enrolled')
+            ->where('year', session()->get('year'))
+            ->where('semester', session()->get('semester'))
+            ->get()->getNumRows(),
+
+            'gas' => $registration_model
+            ->where('strand', 'GAS')
+            ->where('state', 'Enrolled')
+            ->where('year', session()->get('year'))
+            ->where('semester', session()->get('semester'))
+            ->get()->getNumRows(),
+
+            'smaw' => $registration_model
+            ->where('strand', 'SMAW')
+            ->where('state', 'Enrolled')
+            ->where('year', session()->get('year'))
+            ->where('semester', session()->get('semester'))
+            ->get()->getNumRows(),
+
+            'humss' => $registration_model
+            ->where('strand', 'HUMSS')
+            ->where('state', 'Enrolled')
+            ->where('year', session()->get('year'))
+            ->where('semester', session()->get('semester'))
+            ->get()->getNumRows(),
+
+            'css' => $registration_model
+            ->where('strand', 'CSS')
+            ->where('state', 'Enrolled')
+            ->where('year', session()->get('year'))
+            ->where('semester', session()->get('semester'))
+            ->get()->getNumRows(),
+
+
+            'lvlOne' => $registration_model
+            ->where('student_registration.year_level', '1st Year')
+            ->where('state', 'Enrolled')
+            ->where('year', session()->get('year'))
+            ->where('semester', session()->get('semester'))
+            ->get()->getNumRows(),
+
+            'lvlTwo' => $registration_model
+            ->where('student_registration.year_level', '2nd Year')
+              ->where('state', 'Enrolled')
+            ->where('year', session()->get('year'))
+            ->where('semester', session()->get('semester'))
+            ->get()->getNumRows(),
+
+            'lvlThree' => $registration_model
+            ->where('student_registration.year_level', '3rd Year')
+            ->where('state', 'Enrolled')
+            ->where('year', session()->get('year'))
+            ->where('semester', session()->get('semester'))
+            ->get()->getNumRows(),
+
+            'lvlFour' => $registration_model
+            ->where('student_registration.year_level', '4th Year')
+            ->where('state', 'Enrolled')
+            ->where('year', session()->get('year'))
+            ->where('semester', session()->get('semester'))
+            ->get()->getNumRows(),
+
+            'lvlEle' => $registration_model
+            ->where('student_registration.year_level', 'Grade 11')
+            ->where('state', 'Enrolled')
+            ->where('year', session()->get('year'))
+            ->where('semester', session()->get('semester'))
+            ->get()->getNumRows(),
+
+            'lvlTwe' => $registration_model
+            ->where('student_registration.year_level', 'Grade 12')
+            ->where('state', 'Enrolled')
+            ->where('year', session()->get('year'))
+            ->where('semester', session()->get('semester'))
+            ->get()->getNumRows(),
+
+            'pre_enrolled' => $registration_model
+            ->select('*')
+            ->join('user_tbl', 'student_registration.lrn = user_tbl.lrn', 'inner')
+            ->where('user_tbl.usertype', session()->get('status'))
+            ->where('state', 'Pending')
+            ->where('year', session()->get('year'))
+            ->where('semester', session()->get('semester'))
+            ->get()->getNumRows(),
+
+            'enroll' => $registration_model
+            ->select('*')
+            ->join('user_tbl', 'student_registration.lrn = user_tbl.lrn', 'inner')
+            ->where('user_tbl.usertype', session()->get('status'))
+            ->where('state', 'Enrolled')
+            ->where('year', session()->get('year'))
+            ->where('semester', session()->get('semester'))
+            ->get()->getNumRows(),
+
+            'testtt' => $registration_model
+            ->where('state', 'Enrolled')
+            ->groupBy('year')
+            ->first(),
+            
+            'rejected' => $registration_model
+            ->select('*')
+            ->join('user_tbl', 'student_registration.lrn = user_tbl.lrn', 'inner')
+            ->where('user_tbl.usertype', session()->get('status'))
+            ->where('state', 'Rejected')
+            ->where('year', session()->get('year'))
+            ->where('semester', session()->get('semester'))
+            ->get()->getNumRows(),
+            
+            'ips' => $registration_model
+            ->select('*')
+            ->join('user_tbl', 'student_registration.lrn = user_tbl.lrn', 'inner')
+            ->join('user_profile', 'user_tbl.email = user_profile.email', 'inner')
+            ->where('usertype', session()->get('status'))
+            ->where('state', 'Enrolled')
+            ->where('year', session()->get('year'))
+            ->where('semester', session()->get('semester'))
+            ->where("user_profile.ip IS NOT NULL") 
+            ->where("user_profile.ip !=", '')      
+            ->get()
+            ->getResultArray(),
+        
+
+            'e' => $registration_model->where('state', 'Enrolled')->where('year', '2023-2024')->get()->getNumRows(),
+            'n' => $registration_model->where('state', 'Enrolled')->where('year', '2024-2025')->get()->getNumRows(),
+            'r' => $registration_model->where('state', 'Enrolled')->where('year', '2025-2026')->get()->getNumRows(),
+            'o' => $registration_model->where('state', 'Enrolled')->where('year', '2025-2026')->get()->getNumRows(),
+            'l' => $registration_model->where('state', 'Enrolled')->where('year', '2026-2027')->get()->getNumRows(),
+
             'name' => $user_model->where('email', session()->get('email'))->first(),
             'sem_year' => $year_level->first(),
-
-            'year_levelOne' => $year_level_model->where('type', session()->get('status'))->where('year_level', 'Grade 11')->orWhere('year_level', '1st Year')->first(),
-            'year_levelTwo' => $year_level_model->where('type', session()->get('status'))->where('year_level', 'Grade 12')->orWhere('year_level', '2nd Year')->first(),
-            'year_levelThird' => $year_level_model->where('type', session()->get('status'))->where('year_level', '3rd Year')->first(),
-            'year_levelFourth' => $year_level_model->where('type', session()->get('status'))->where('year_level', '4th Year')->first(),
             'stat' => $user_model->where('status', session()->get('status'))->first()
 
         ];
-// var_dump($data['year_levelTwo']);
-		return view('admin/admindashboard', $data);
+        // var_dump($data['ips']);
+		return view('admin/adminDashboard', $data);
     }
     public function pre_enrolled()
     {
@@ -127,8 +229,7 @@ class Admin extends BaseController
 
         $data = [
             'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
-            'retrieveAdmin' => $user_model->where('status', session()->get('status'))->where('usertype', 'admin')->findAll(),
-            'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
+            'retrieveAdmin' => $user_model->where('status', session()->get('status'))->where('usertype', session()->get('usertype'))->findAll(),
             'sem_year' => $year_model->first(),
             'stat' => $user_model->where('status', session()->get('status'))->first(),
             'year_levelOne' => $year_level_model->where('type', session()->get('status'))->where('year_level', 'Grade 11')->orWhere('year_level', '1st Year')->first(),
@@ -146,7 +247,6 @@ class Admin extends BaseController
       $year_level_model = new YearlevelModel();
       $data = [
         'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
-        'profile_picture' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
         'sem_year' => $year_model->first(),
         'stat' => $user_model->where('status', session()->get('status'))->first(),
         'year_levelOne' => $year_level_model->where('type', session()->get('status'))->where('year_level', 'Grade 11')->orWhere('year_level', '1st Year')->first(),
@@ -242,14 +342,14 @@ class Admin extends BaseController
                 $adminEmail = $this->request->getPost('adminEmail');
                 $adminPassword = $this->request->getPost('adminPassword');
                 $prof_pic = $this->request->getFile('profile_picture');
+                
+                   $str_result = '1234567890';
+                    $bccid =  substr(str_shuffle($str_result),0, '4');
+                    $myLrn = '';
 
                 if (!$prof_pic->hasMoved()) {
                     $newName = $prof_pic->getRandomName();
-                    $prof_pic->move(FCPATH . 'profile', $newName);
-
-                    $str_result = '1234567890';
-                    $bccid =  substr(str_shuffle($str_result),0, '4');
-                    $myLrn = '';
+                    $prof_pic->move(FCPATH . 'registrar-profile' . '/' . $firstname . $lastname,  $newName);
 
                 $values = [
                     'lastname' => $lastname,
@@ -310,12 +410,14 @@ class Admin extends BaseController
                 $middlename = $this->request->getPost('middlename');
                 $password = $this->request->getPost('newPassword');
                 $prof_pic = $this->request->getFile('profile_picture');
+                $adminEmail = $this->request->getPost('newEmail');
 
                 if (!$prof_pic->hasMoved()) {
                     $newName = $prof_pic->getRandomName();
-                    $prof_pic->move(FCPATH . 'profile', $newName);
+                    $prof_pic->move(FCPATH . 'registrar-profile' . '/' .  $firstname . $lastname ,  $newName);
 
                 $data = [
+                    'email' => $adminEmail,
                     'lastname' => $lastname,
                     'firstname' => $firstname,
                     'middlename' => $middlename,
@@ -339,8 +441,82 @@ class Admin extends BaseController
             'semester' => $semester,
             'status' => 'active'
         ];
+        session()->setFlashdata('change', 'Welcome');
         $year_model->update($id, $data);
-        return redirect()->back();
+        return redirect()->route('login');
         // var_dump($data);
+    }
+    public function enrollment_status()
+    {
+        $year_model = new YearModel();
+        
+        $id = $this->request->getPost('id');
+        $status = $this->request->getPost('status');
+
+        $data = [
+            'enroll_status' => $status
+        ];
+
+        $year_model->update($id, $data);
+
+    }
+
+    public function download_records(){
+        $download_data = $this->request->getPost('download_data');
+        // $chartData = [];
+
+        if($download_data === "data_yearly_records"){
+            $chartData = [
+                'chartData' => $this->request->getPost('ChartDataLodi'),
+                'data' => 'data_yearly_records'
+            ];
+
+        }
+        else if($download_data === 'data_ip_records'){
+            $chartData = [
+                'chartData' => $this->request->getPost('ChartDataIps'),
+                'data' => 'data_ip_records'
+            ];
+         
+        }
+        else if($download_data === 'data_gender_records'){
+            $chartData = [
+                'chartData' => $this->request->getPost('ChartDataGender'),
+                'data' => 'data_gender_records',
+                'male' => $this->request->getPost('male'),
+                'female' => $this->request->getPost('female'),
+            ];
+        }
+        else if($download_data === 'data_year_level_records'){
+            $chartData = [
+                'chartData' => $this->request->getPost('ChartDataLevel'),
+                'data' => 'data_year_level_records',
+                'one' => $this->request->getPost('one'),
+                'two' => $this->request->getPost('two'),
+                'three' => $this->request->getPost('three'),
+                'four' => $this->request->getPost('four'),
+            ];
+        }
+        else if($download_data === 'data_course_records'){
+            $chartData = [
+                'chartData' => $this->request->getPost('ChartDataCourse'),
+                'data' => 'data_course_records',
+                'abh' => $this->request->getPost('abh'),
+                'bpa' => $this->request->getPost('bpa'),
+                'btvted' => $this->request->getPost('btvted'),
+            ];
+        }
+        $html = view('admin/download_dashboard/records', $chartData);
+        
+        $dompdf = new \Dompdf\Dompdf();
+        $dompdf->loadHtml($html);
+        $dompdf->set_option('isRemoteEnabled', TRUE);
+        $dompdf->setPaper('Letter', 'portrait');
+        $dompdf->render();
+        // Output the generated PDF
+        $dompdf->stream('chart.pdf', ['Attachment' => 0]);
+
+        exit();
+        
     }
 }

@@ -39,6 +39,30 @@
                         <br>
                         <br>
                         <li class="nav-item" style="font-family:poppins;">
+
+                            <a href="#" class="nav-link">
+                                <i class="fa-sharp fa-solid fa-envelopes-bulk"></i>
+                                <p>School Updates<i class="right fas fa-angle-left"></i></p>
+                            </a>
+
+                            <ul class="nav nav-treeview">
+
+                                <li class="nav-item">
+                                    <a href="<?= site_url('school_updates/' . 'announcement');?>" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Announcements</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="<?= site_url('school_updates/' . 'event')?>" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Events</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item" style="font-family:poppins;">
                         <li class="nav-item" style="font-family:poppins;">
                             <a href="<?=base_url('student_approve')?>" class="nav-link active">
                                 <i class="far fa-thin fa-newspaper"></i>
@@ -47,10 +71,145 @@
                         </li>
                         <li class="nav-item" style="font-family:poppins;">
                         <li class="nav-item" style="font-family:poppins;">
-                            <a href="<?=base_url('/pre_enrolled_reg')?>" class="nav-link">
-                                <i class="far fa-thin fa-newspaper"></i>
-                                <p>Pre-Enrolled</p>
+                            <a href="#" class="nav-link ">
+                                <i class="fa-sharp fa-solid fa-envelopes-bulk"></i>
+                                <p>Students Request<i class="right fas fa-angle-left"></i></p>
                             </a>
+
+                            <ul class="nav nav-treeview">
+                                <?php if ($stat['status'] === "SHS"): ?>
+                                <li class="nav-item">
+                                    <a href="<?= base_url('student-request/Grade-11')?>" class="nav-link ">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Grade 11</p>
+                                    </a>
+                                <li class="nav-item">
+                                    <a href="<?= base_url('student-request/Grade-12')?>" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Grade 12</p>
+                                    </a>
+                                </li>
+                                <?php else: ?>
+                                <li class="nav-item">
+                                    <a href="<?= base_url('student-request/1st-Year')?>" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>1st Year</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="<?= base_url('student-request/2nd-Year')?>" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>2nd Year</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="<?= base_url('student-request/3rd-Year')?>" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>3rd Year</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="<?= base_url('student-request/4th-Year')?>" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>4th Year</p>
+                                    </a>
+                                </li>
+                                <?php endif; ?>
+                            </ul>
+                        </li>
+                        <li class="nav-item" style="font-family:poppins;">
+                            <a href="#" class="nav-link ">
+                                <i class="fa-sharp fa-solid fa-envelopes-bulk"></i>
+                                <p>Students<i class="right fas fa-angle-left"></i></p>
+                            </a>
+
+                            <ul class="nav nav-treeview">
+                                <?php if ($stat['status'] === "SHS"): ?>
+                                <li class="nav-item">
+                                    <a href="<?= base_url('student-list/Grade-11')?>" class="nav-link ">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Grade 11</p>
+                                    </a>
+                                <li class="nav-item">
+                                    <a href="<?= base_url('student-list/Grade-12')?>" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Grade 12</p>
+                                    </a>
+                                </li>
+                                <?php else: ?>
+                                <li class="nav-item">
+                                    <a href="<?= base_url('student-list/1st-Year')?>" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>1st Year</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="<?= base_url('student-list/2nd-Year')?>" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>2nd Year</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="<?= base_url('student-list/3rd-Year')?>" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>3rd Year</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="<?= base_url('student-list/4th-Year')?>" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>4th Year</p>
+                                    </a>
+                                </li>
+                                <?php endif; ?>
+                            </ul>
+                        </li>
+                        <li class="nav-item" style="font-family:poppins;">
+                            <a href="#" class="nav-link ">
+                                <i class="fa-sharp fa-solid fa-envelopes-bulk"></i>
+                                <p>Pre-Enrolled<i class="right fas fa-angle-left"></i></p>
+                            </a>
+
+                            <ul class="nav nav-treeview">
+                                <?php if ($stat['status'] === "SHS"): ?>
+                                <li class="nav-item">
+                                    <a href="<?= base_url('pre-enrolled-registration/Grade-11')?>" class="nav-link ">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Grade 11</p>
+                                    </a>
+                                <li class="nav-item">
+                                    <a href="<?= base_url('pre-enrolled-registration/Grade-12')?>" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Grade 12</p>
+                                    </a>
+                                </li>
+                                <?php else: ?>
+                                <li class="nav-item">
+                                    <a href="<?= base_url('pre-enrolled-registration/1st-Year')?>" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>1st Year</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="<?= base_url('pre-enrolled-registration/2nd-Year')?>" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>2nd Year</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="<?= base_url('pre-enrolled-registration/3rd-Year')?>" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>3rd Year</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="<?= base_url('pre-enrolled-registration/4th-Year')?>" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>4th Year</p>
+                                    </a>
+                                </li>
+                                <?php endif; ?>
+                            </ul>
                         </li>
                         </li>
                         <li class="nav-item" style="font-family:poppins;">
@@ -63,38 +222,37 @@
                             <ul class="nav nav-treeview">
                                 <?php if ($stat['status'] === "SHS"): ?>
                                 <li class="nav-item">
-                                    <a href="<?= site_url('section11/' . $year_levelOne['id']);?>" class="nav-link">
+                                    <a href="<?= base_url('section/Grade-11')?>" class="nav-link ">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Grade 11</p>
                                     </a>
-                                </li>
                                 <li class="nav-item">
-                                <a href="<?= site_url('section11/' . $year_levelTwo['id']);?>" class="nav-link">
+                                    <a href="<?= base_url('section/Grade-12')?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Grade 12</p>
                                     </a>
                                 </li>
                                 <?php else: ?>
                                 <li class="nav-item">
-                                <a href="<?= site_url('section11/' . $year_levelOne['id']);?>" class="nav-link">
+                                    <a href="<?= base_url('section/1st-Year')?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>1st Year</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                <a href="<?= site_url('section11/' . $year_levelTwo['id']);?>" class="nav-link">
+                                    <a href="<?= base_url('section/2nd-Year')?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>2nd Year</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                <a href="<?= site_url('section11/' . $year_levelThird['id']);?>" class="nav-link">
+                                    <a href="<?= base_url('section/3rd-Year')?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>3rd Year</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                <a href="<?= site_url('section11/' . $year_levelFourth['id']);?>" class="nav-link">
+                                    <a href="<?= base_url('section/4th-Year')?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>4th Year</p>
                                     </a>
@@ -112,37 +270,37 @@
                             <ul class="nav nav-treeview">
                                 <?php if ($stat['status'] === "SHS"): ?>
                                 <li class="nav-item">
-                                <a href="<?= base_url('prospectus11/' . $year_levelOne['id'])?>" class="nav-link ">
+                                    <a href="<?= base_url('prospectus/Grade-11')?>" class="nav-link ">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Grade 11</p>
                                     </a>
-                                    <li class="nav-item">
-                                <a href="<?= base_url('prospectus11/' . $year_levelTwo['id'])?>" class="nav-link">
+                                <li class="nav-item">
+                                    <a href="<?= base_url('prospectus/Grade-12')?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Grade 12</p>
                                     </a>
                                 </li>
                                 <?php else: ?>
                                 <li class="nav-item">
-                                <a href="<?= base_url('prospectus11/' . $year_levelOne['id'])?>" class="nav-link">
+                                    <a href="<?= base_url('prospectus/1st-Year')?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>1st Year</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                <a href="<?= base_url('prospectus11/' . $year_levelTwo['id'])?>" class="nav-link">
+                                    <a href="<?= base_url('prospectus/2nd-Year')?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>2nd Year</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                <a href="<?= base_url('prospectus11/' . $year_levelThird['id'])?>" class="nav-link">
+                                    <a href="<?= base_url('prospectus/3rd-Year')?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>3rd Year</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                <a href="<?= base_url('prospectus11/' . $year_levelFourth['id'])?>" class="nav-link">
+                                    <a href="<?= base_url('prospectus/4th-Year')?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>4th Year</p>
                                     </a>
@@ -160,40 +318,43 @@
                             <ul class="nav nav-treeview">
                                 <?php if ($stat['status'] === "SHS"): ?>
                                 <li class="nav-item">
-                                    <a href="<?= site_url('StudentGrading/' . $year_levelOne['id'])?>" class="nav-link">
+                                    <a href="<?= base_url('student-grading/Grade-11')?>" class="nav-link ">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Grade 11</p>
                                     </a>
-                                </li>
                                 <li class="nav-item">
-                                    <a href="<?= site_url('StudentGrading/' . $year_levelTwo['id'])?>" class="nav-link">
+                                    <a href="<?= base_url('student-grading/Grade-12')?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Grade 12</p>
                                     </a>
                                 </li>
                                 <?php else: ?>
                                 <li class="nav-item">
-                                    <a href="<?= site_url('StudentGrading/' . $year_levelOne['id'])?>" class="nav-link">
+                                    <a href="<?= base_url('/deadline_form') ?>" class="nav-link ">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Submission of Grade </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="<?= base_url('student-grading/1st-Year')?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>1st Year</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="<?= site_url('StudentGrading/' . $year_levelTwo['id'])?>" class="nav-link">
+                                    <a href="<?= base_url('student-grading/2nd-Year')?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>2nd Year</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="<?= site_url('StudentGrading/' . $year_levelThird['id'])?>"
-                                        class="nav-link">
+                                    <a href="<?= base_url('student-grading/3rd-Year')?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>3rd Year</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="<?= site_url('StudentGrading/' . $year_levelFourth['id'])?>"
-                                        class="nav-link">
+                                    <a href="<?= base_url('student-grading/4th-Year')?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>4th Year</p>
                                     </a>
@@ -205,9 +366,12 @@
                         <li class="nav-item" style="font-family:poppins;">
                             <a href="<?=base_url('/retrieve_strand')?>" class="nav-link">
                                 <i class="fa-sharp fa-solid fa-envelopes-bulk"></i>
-                                <p>Strand</p>
+                                <p>Program</p>
                             </a>
                         </li>
+                        </li>
+
+
                         </li>
                         <li class="nav-item" style="font-family:poppins;">
                         <li class="nav-item" style="font-family:poppins;">
@@ -276,31 +440,62 @@
 
                         <thead>
                             <tr>
+                                <th>Active Student Indicator</th>
                                 <th>Name</th>
                                 <th>Email</th>
                                 <th>Status</th>
                                 <th>Actions</th>
                             </tr>
                         </thead>
+                        <?php
 
+                        // Sort the $credentials array based on 'credential_status'
+                        usort($credentials, function ($a, $b) {
+                            return ($a['credential_status'] == 'Pending') ? -1 : 1;
+                        });
+
+                        ?>
                         <tbody>
                             <?php foreach($credentials as $stud_cred):?>
                             <tr>
-                                <td><?= $stud_cred['firstname'] . ' ' . $stud_cred['middlename'] . ' ' . $stud_cred['lastname']?></td>
+                                <?php if ($stud_cred['status'] == 'inactive' || empty($stud_cred['status'])): ?>
+                                <td><span
+                                        style="display:inline-block; width: 10px; height: 10px; background-color: red; border-radius: 50%;"></span>
+                                </td>
+                                <?php else: ?>
+                                <td><span
+                                        style="display:inline-block; width: 10px; height: 10px; background-color: green; border-radius: 50%;"></span>
+                                </td>
+                                <?php endif; ?>
+                                <td><?= $stud_cred['firstname'] . ' ' . $stud_cred['middlename'] . ' ' . $stud_cred['lastname']?>
+                                </td>
                                 <td><?= $stud_cred['email']?></td>
                                 <td>
-                                <?php if($stud_cred['log_status'] == 'Approved'):?>
-                                    <a href="#"><button type="button" class="btn btn-primary btn-sm btn-status"
-                                            style="border-radius:15px" data-status="Pending" data-id="<?=$stud_cred['id']?>">Approved</button></a>
-                                <?php else:?>
-                                      <a href="#"><button type="button" class="btn btn-secondary btn-sm btn-status"
-                                            style="border-radius:15px" data-status="Approved" data-id="<?=$stud_cred['id']?>">Pending</button></a>
-                                </td>
-                                <?php endif;?>
-                                <td>
-                                    <a href="<?=base_url()?>/view_credential"><button type="button" class="btn btn-secondary btn-sm btn-updateStrand"
-                                            style="border-radius:15px">View</button></a>
+                                    <form action="">
+                                        <?php if($stud_cred['credential_status'] == 'Approved'):?>
+                                        <a
+                                            href="<?= site_url('student_status' . '/' . $stud_cred['id'] . '/' . 'Pending')?>"><button
+                                                type="button" class="btn btn-primary btn-sm btn-status"
+                                                style="border-radius:15px">Approved</button></a>
+                                        <?php else:?>
+                                        <a
+                                            href="<?= site_url('student_status' . '/' . $stud_cred['id'] . '/' . 'Approved')?>"><button
+                                                type="button" class="btn btn-secondary btn-sm btn-status"
+                                                style="border-radius:15px">Pending</button></a>
+                                        <?php endif;?>
+                                    </form>
 
+                                </td>
+                                <td>
+                                    <?php if($stud_cred['credential_status'] == 'Pending'):?>
+                                    <a href="<?=base_url('view_credential/'. $stud_cred['user_id'])?>"><button
+                                            type="button" class="btn btn-secondary btn-sm btn-updateStrand"
+                                            style="border-radius:15px">View</button></a>
+                                    <?php else:?>
+                                    <a href="<?=base_url('view_credential/'. $stud_cred['user_id'])?>"><button
+                                            type="button" class="btn btn-secondary btn-sm btn-updateStrand"
+                                            style="border-radius:15px">View</button></a>
+                                    <?php endif;?>
                                 </td>
                             </tr>
                             <?php endforeach; ?>
@@ -339,55 +534,81 @@ $(document).ready(function() {
     });
 });
 </script>
-<script>
+
+<!-- <script>
 function updateTable(status, id) {
-  $.ajax({
-    method: 'post',
-    url: '/student_status',
-    data: {
-      status: status,
-      id: id
-    },
-    success: function(response) {
-      $("#example1 tbody").empty();
-      console.log(response.credentials);
-      $.each(response.credentials, function(key, i) {
-        var logStatus = i['log_status'];
-        var url = "<?=site_url('credentials/')?>/" + i['lrn']
-        var buttonHtml = '';
-        if (logStatus == 'Approved') {
-          buttonHtml = '<a href="#"><button type="button" class="btn btn-primary btn-sm btn-status" style="border-radius:15px" data-status="Pending" data-id="' + i['id'] + '">Approved</button></a>';
-        } else {
-          buttonHtml = '<a href="#"><button type="button" class="btn btn-secondary btn-sm btn-status" style="border-radius:15px" data-status="Approved" data-id="' + i['id'] + '">Pending</button></a>';
-        }
-        $("#example1 tbody").append(`
+    $.ajax({
+        method: 'post',
+        url: '/student_status',
+        data: {
+            status: status,
+            id: id
+        },
+
+        success: function(response) {
+            $("#example1 tbody").empty();
+            console.log(response.credentials);
+            $.each(response.credentials, function(key, i) {
+                var logStatus = i['credential_status'];
+                var url = "<?=site_url('view_credential')?>/" + i['lrn'];
+                var logActiveStatus = i['status'];
+
+                var buttonActive = '';
+                if (logActiveStatus === 'inactive' || logActiveStatus === ''){
+                    buttonActive = `<span style="display:inline-block; width: 10px; height: 10px; background-color: red; border-radius: 50%;"></span>`;
+                } else {
+                    buttonActive = `<span style="display:inline-block; width: 10px; height: 10px; background-color: green; border-radius: 50%;"></span>`;
+                }
+                
+                var buttonHtml = '';
+                if (logStatus == 'Approved') {
+                    buttonHtml =
+                        '<a href="#"><button type="button" class="btn btn-primary btn-sm btn-status" style="border-radius:15px" data-status="Pending" data-id="' +
+                        i['id'] + '">Approved</button></a>';
+                } else {
+                    buttonHtml =
+                        '<a href="#"><button type="button" class="btn btn-secondary btn-sm btn-status" style="border-radius:15px" data-status="Approved" data-id="' +
+                        i['id'] + '">Pending</button></a>';
+                };
+
+                var buttonView = '';
+                if (logStatus == 'Pending') {
+                    buttonView =
+                        '<button type="button" class="btn btn-secondary btn-sm btn-updateStrand" style="border-radius:15px">View</button>';
+                } else {
+                    buttonView =
+                        '<button type="button" class="btn btn-secondary btn-sm btn-updateStrand" style="border-radius:15px">View</button>';
+                }
+                $("#example1 tbody").append(`
           <tr>
+            <td>${buttonActive}</td>
             <td style="display: none;"><input type="hidden" name="id" value="${i['id']}"></td>
             <td>${i['firstname']} ${i['middlename']} ${i['lastname']}</td>
             <td>${i['email']}</td>
             <td>${buttonHtml}</td>
             <td>
-              <a href="${url}"><button type="button" class="btn btn-secondary btn-sm btn-updateStrand" style="border-radius:15px">View</button></a>
+            <a href="${url}">${buttonView}</a>
+           
             </td>
           </tr>
         `);
-      });
-      // Rebind the click event to the new buttons
-      bindButtonClickEvent(".btn-status");
-    }
-  });
+            });
+            // Rebind the click event to the new buttons
+            bindButtonClickEvent(".btn-status");
+        }
+    });
 }
 
 function bindButtonClickEvent(buttonClass) {
-  $(buttonClass).off('click').on('click', function() {
-    var status = $(this).data('status');
-    var id = $(this).data('id');
-    console.log(id, status);
-    updateTable(status, id);
-  });
+    $(buttonClass).off('click').on('click', function() {
+        var status = $(this).data('status');
+        var id = $(this).data('id');
+        console.log(id, status);
+        updateTable(status, id);
+    });
 }
 
 $(document).ready(function() {
-  bindButtonClickEvent(".btn-status");
+    bindButtonClickEvent(".btn-status");
 });
-</script>
+</script> -->

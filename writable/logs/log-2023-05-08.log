@@ -1,0 +1,682 @@
+CRITICAL - 2023-05-08 02:09:25 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 02:10:34 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 02:11:05 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 02:11:16 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 02:12:30 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 02:12:46 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 02:13:09 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 02:13:40 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 02:13:55 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 02:14:34 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 02:15:07 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 02:15:28 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 02:15:44 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 02:15:49 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 02:16:41 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 02:16:53 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 02:17:05 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 02:17:28 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 02:17:44 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 135.
+ 1 APPPATH\Controllers\Grading.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 135)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 02:22:01 --> Undefined array key "student_grading"
+in APPPATH\Controllers\Grading.php on line 129.
+ 1 APPPATH\Controllers\Grading.php(129): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "student_grading"', 'APPPATH\\Controllers\\Grading.php', 129)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('1', 'B23-SHS4207', 'GAS')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 02:22:21 --> join(): Argument #2 ($array) must be of type ?array, string given
+in APPPATH\Controllers\Grading.php on line 129.
+ 1 APPPATH\Controllers\Grading.php(129): join(',', '90,70')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('1', 'B23-SHS4207', 'GAS')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 02:23:39 --> join(): Argument #2 ($array) must be of type ?array, string given
+in APPPATH\Controllers\Grading.php on line 118.
+ 1 APPPATH\Controllers\Grading.php(118): join(',', '90,70')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('1', 'B23-SHS4207', 'GAS')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 02:24:04 --> join(): Argument #2 ($array) must be of type ?array, string given
+in APPPATH\Controllers\Grading.php on line 118.
+ 1 APPPATH\Controllers\Grading.php(118): join(',', '90,70')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('1', 'B23-SHS4207', 'GAS')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-05-08 02:25:33 --> mysqli_sql_exception: Unknown column 'student_registration.lrn' in 'where clause' in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\Grading.php(112): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('1', 'B23-SHS4207', 'GAS')
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-05-08 02:25:33 --> Unknown column 'student_registration.lrn' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `student_grading`
+WHERE `student_registration`.`lrn` = \'B23-SHS4207\'
+AND `student_grading`.`year` = \'2025-2026\'
+AND `student_grading`.`semester` = \'1st Semester\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `student_grading`
+WHERE `student_registration`.`lrn` = \'B23-SHS4207\'
+AND `student_grading`.`year` = \'2025-2026\'
+AND `student_grading`.`semester` = \'1st Semester\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `student_grading`
+WHERE `student_registration`.`lrn` = \'B23-SHS4207\'
+AND `student_grading`.`year` = \'2025-2026\'
+AND `student_grading`.`semester` = \'1st Semester\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `student_grading`
+WHERE `student_registration`.`lrn` = :student_registration.lrn:
+AND `student_grading`.`year` = :student_grading.year:
+AND `student_grading`.`semester` = :student_grading.semester:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(623): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Grading.php(112): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('1', 'B23-SHS4207', 'GAS')
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 02:28:49 --> explode(): Argument #2 ($string) must be of type string, array given
+in APPPATH\Controllers\Grading.php on line 126.
+ 1 APPPATH\Controllers\Grading.php(126): explode(',', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('1', 'B23-SHS4207', 'GAS')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 02:29:12 --> Undefined array key "subject_grading"
+in APPPATH\Controllers\Grading.php on line 125.
+ 1 APPPATH\Controllers\Grading.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "subject_grading"', 'APPPATH\\Controllers\\Grading.php', 125)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('1', 'B23-SHS4207', 'GAS')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 02:30:27 --> Undefined array key "subject_grade"
+in APPPATH\Views\admin\grading\first_yearGrade.php on line 382.
+ 1 APPPATH\Views\admin\grading\first_yearGrade.php(382): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "subject_grade"', 'APPPATH\\Views\\admin\\grading\\first_yearGrade.php', 382)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\grading\\first_yearGrade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/grading/first_yearGrade', [], true)
+ 5 APPPATH\Controllers\Grading.php(155): view('admin/grading/first_yearGrade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('1', 'B23-SHS4207', 'GAS')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 02:31:02 --> Cannot access offset of type string on string
+in APPPATH\Views\admin\grading\first_yearGrade.php on line 382.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/grading/first_yearGrade', [], true)
+ 4 APPPATH\Controllers\Grading.php(155): view('admin/grading/first_yearGrade', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('1', 'B23-SHS4207', 'GAS')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 02:31:15 --> Undefined array key "subject_grade"
+in APPPATH\Views\admin\grading\first_yearGrade.php on line 382.
+ 1 APPPATH\Views\admin\grading\first_yearGrade.php(382): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "subject_grade"', 'APPPATH\\Views\\admin\\grading\\first_yearGrade.php', 382)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\grading\\first_yearGrade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/grading/first_yearGrade', [], true)
+ 5 APPPATH\Controllers\Grading.php(155): view('admin/grading/first_yearGrade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('1', 'B23-SHS4207', 'GAS')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 02:31:37 --> Array to string conversion
+in APPPATH\Views\admin\grading\first_yearGrade.php on line 382.
+ 1 APPPATH\Views\admin\grading\first_yearGrade.php(382): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\admin\\grading\\first_yearGrade.php', 382)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\grading\\first_yearGrade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/grading/first_yearGrade', [], true)
+ 5 APPPATH\Controllers\Grading.php(155): view('admin/grading/first_yearGrade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('1', 'B23-SHS4207', 'GAS')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 02:31:38 --> Array to string conversion
+in APPPATH\Views\admin\grading\first_yearGrade.php on line 382.
+ 1 APPPATH\Views\admin\grading\first_yearGrade.php(382): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\admin\\grading\\first_yearGrade.php', 382)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\grading\\first_yearGrade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/grading/first_yearGrade', [], true)
+ 5 APPPATH\Controllers\Grading.php(155): view('admin/grading/first_yearGrade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('1', 'B23-SHS4207', 'GAS')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 02:31:57 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 125.
+ 1 APPPATH\Controllers\Grading.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 125)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 02:33:11 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 125.
+ 1 APPPATH\Controllers\Grading.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 125)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 02:33:39 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 125.
+ 1 APPPATH\Controllers\Grading.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 125)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 02:34:52 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 125.
+ 1 APPPATH\Controllers\Grading.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 125)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 02:35:30 --> Call to a member function findAll() on array
+in APPPATH\Controllers\Grading.php on line 125.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('1', 'B23-SHS4207', 'GAS')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 02:35:41 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 125.
+ 1 APPPATH\Controllers\Grading.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 125)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 02:46:14 --> Undefined variable $test
+in APPPATH\Views\admin\grading\first_yearGrade.php on line 381.
+ 1 APPPATH\Views\admin\grading\first_yearGrade.php(381): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $test', 'APPPATH\\Views\\admin\\grading\\first_yearGrade.php', 381)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\grading\\first_yearGrade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/grading/first_yearGrade', [], true)
+ 5 APPPATH\Controllers\Grading.php(153): view('admin/grading/first_yearGrade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('1', 'B23-SHS4207', 'GAS')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 02:46:30 --> Undefined array key 1
+in APPPATH\Views\admin\grading\first_yearGrade.php on line 384.
+ 1 APPPATH\Views\admin\grading\first_yearGrade.php(384): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'APPPATH\\Views\\admin\\grading\\first_yearGrade.php', 384)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\grading\\first_yearGrade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/grading/first_yearGrade', [], true)
+ 5 APPPATH\Controllers\Grading.php(153): view('admin/grading/first_yearGrade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('1', 'B23-SHS4207', 'GAS')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 02:49:12 --> Undefined array key 1
+in APPPATH\Views\admin\grading\first_yearGrade.php on line 384.
+ 1 APPPATH\Views\admin\grading\first_yearGrade.php(384): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'APPPATH\\Views\\admin\\grading\\first_yearGrade.php', 384)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\grading\\first_yearGrade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/grading/first_yearGrade', [], true)
+ 5 APPPATH\Controllers\Grading.php(153): view('admin/grading/first_yearGrade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('1', 'B23-SHS4207', 'GAS')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 02:50:13 --> Undefined array key 0
+in APPPATH\Views\admin\grading\first_yearGrade.php on line 389.
+ 1 APPPATH\Views\admin\grading\first_yearGrade.php(389): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\admin\\grading\\first_yearGrade.php', 389)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\grading\\first_yearGrade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/grading/first_yearGrade', [], true)
+ 5 APPPATH\Controllers\Grading.php(153): view('admin/grading/first_yearGrade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('1', 'B23-SHS4207', 'GAS')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 02:50:32 --> Undefined variable $70
+in APPPATH\Views\admin\grading\first_yearGrade.php on line 389.
+ 1 APPPATH\Views\admin\grading\first_yearGrade.php(389): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $70', 'APPPATH\\Views\\admin\\grading\\first_yearGrade.php', 389)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\grading\\first_yearGrade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/grading/first_yearGrade', [], true)
+ 5 APPPATH\Controllers\Grading.php(153): view('admin/grading/first_yearGrade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('1', 'B23-SHS4207', 'GAS')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 02:50:43 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 143.
+ 1 APPPATH\Controllers\Grading.php(143): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 143)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 02:51:19 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 143.
+ 1 APPPATH\Controllers\Grading.php(143): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 143)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 02:55:10 --> Undefined array key 104
+in APPPATH\Views\admin\grading\first_yearGrade.php on line 382.
+ 1 APPPATH\Views\admin\grading\first_yearGrade.php(382): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 104', 'APPPATH\\Views\\admin\\grading\\first_yearGrade.php', 382)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\grading\\first_yearGrade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/grading/first_yearGrade', [], true)
+ 5 APPPATH\Controllers\Grading.php(147): view('admin/grading/first_yearGrade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('1', 'B23-SHS4207', 'GAS')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 02:58:17 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 137.
+ 1 APPPATH\Controllers\Grading.php(137): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 137)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 02:58:44 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 137.
+ 1 APPPATH\Controllers\Grading.php(137): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 137)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 03:00:26 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 137.
+ 1 APPPATH\Controllers\Grading.php(137): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 137)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 03:01:02 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 137.
+ 1 APPPATH\Controllers\Grading.php(137): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 137)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 03:01:35 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 137.
+ 1 APPPATH\Controllers\Grading.php(137): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 137)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 03:02:28 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 137.
+ 1 APPPATH\Controllers\Grading.php(137): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 137)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 03:03:40 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 137.
+ 1 APPPATH\Controllers\Grading.php(137): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 137)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 03:05:20 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 137.
+ 1 APPPATH\Controllers\Grading.php(137): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 137)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 03:05:53 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 137.
+ 1 APPPATH\Controllers\Grading.php(137): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 137)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 03:06:16 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 137.
+ 1 APPPATH\Controllers\Grading.php(137): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 137)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 08:29:55 --> Trying to access array offset on value of type null
+in APPPATH\Views\admin\grading\first_year.php on line 302.
+ 1 APPPATH\Views\admin\grading\first_year.php(302): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\admin\\grading\\first_year.php', 302)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\grading\\first_year.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/grading/first_year', [], true)
+ 5 APPPATH\Controllers\Grading.php(209): view('admin/grading/first_year', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrading('adminlte.css.map')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 08:30:00 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 137.
+ 1 APPPATH\Controllers\Grading.php(137): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 137)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 08:34:42 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 137.
+ 1 APPPATH\Controllers\Grading.php(137): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 137)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 08:37:14 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 137.
+ 1 APPPATH\Controllers\Grading.php(137): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 137)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 08:41:00 --> explode(): Argument #2 ($string) must be of type string, array given
+in APPPATH\Views\admin\grading\first_yearGrade.php on line 381.
+ 1 APPPATH\Views\admin\grading\first_yearGrade.php(381): explode(',', [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\grading\\first_yearGrade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/grading/first_yearGrade', [], true)
+ 5 APPPATH\Controllers\Grading.php(147): view('admin/grading/first_yearGrade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('1', 'B23-SHS4207', 'GAS')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 08:41:31 --> Undefined array key "subject_grading"
+in APPPATH\Views\admin\grading\first_yearGrade.php on line 381.
+ 1 APPPATH\Views\admin\grading\first_yearGrade.php(381): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "subject_grading"', 'APPPATH\\Views\\admin\\grading\\first_yearGrade.php', 381)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\grading\\first_yearGrade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/grading/first_yearGrade', [], true)
+ 5 APPPATH\Controllers\Grading.php(147): view('admin/grading/first_yearGrade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('1', 'B23-SHS4207', 'GAS')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 08:41:37 --> Array to string conversion
+in APPPATH\Views\admin\grading\first_yearGrade.php on line 381.
+ 1 APPPATH\Views\admin\grading\first_yearGrade.php(381): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\admin\\grading\\first_yearGrade.php', 381)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\grading\\first_yearGrade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/grading/first_yearGrade', [], true)
+ 5 APPPATH\Controllers\Grading.php(147): view('admin/grading/first_yearGrade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('1', 'B23-SHS4207', 'GAS')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 08:41:53 --> Undefined array key 0
+in APPPATH\Views\admin\grading\first_yearGrade.php on line 381.
+ 1 APPPATH\Views\admin\grading\first_yearGrade.php(381): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\admin\\grading\\first_yearGrade.php', 381)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\grading\\first_yearGrade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/grading/first_yearGrade', [], true)
+ 5 APPPATH\Controllers\Grading.php(147): view('admin/grading/first_yearGrade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('1', 'B23-SHS4207', 'GAS')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 08:42:34 --> Array to string conversion
+in APPPATH\Views\admin\grading\first_yearGrade.php on line 381.
+ 1 APPPATH\Views\admin\grading\first_yearGrade.php(381): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\admin\\grading\\first_yearGrade.php', 381)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\grading\\first_yearGrade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/grading/first_yearGrade', [], true)
+ 5 APPPATH\Controllers\Grading.php(147): view('admin/grading/first_yearGrade', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('1', 'B23-SHS4207', 'GAS')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 08:42:48 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 137.
+ 1 APPPATH\Controllers\Grading.php(137): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 137)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 08:44:37 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 137.
+ 1 APPPATH\Controllers\Grading.php(137): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 137)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 08:46:06 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 137.
+ 1 APPPATH\Controllers\Grading.php(137): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 137)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 08:54:29 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 137.
+ 1 APPPATH\Controllers\Grading.php(137): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 137)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 08:57:00 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 137.
+ 1 APPPATH\Controllers\Grading.php(137): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 137)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 08:59:36 --> Too few arguments to function App\Controllers\Grading::StudentGrade(), 1 passed in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php on line 927 and exactly 3 expected
+in APPPATH\Controllers\Grading.php on line 75.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('evaluate_grade')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 09:09:06 --> Undefined variable $data
+in APPPATH\Controllers\Grading.php on line 227.
+ 1 APPPATH\Controllers\Grading.php(227): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Controllers\\Grading.php', 227)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->evaluate_grade()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 09:09:06 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Grading.php on line 137.
+ 1 APPPATH\Controllers\Grading.php(137): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Grading.php', 137)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Grading->StudentGrade('FCPATH\\dist', 'img', 'profile.jfif')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grading))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

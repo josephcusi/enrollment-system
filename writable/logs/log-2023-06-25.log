@@ -1,0 +1,995 @@
+CRITICAL - 2023-06-25 00:40:49 --> Undefined array key "year_level"
+in APPPATH\Controllers\PreEnrolled.php on line 256.
+ 1 APPPATH\Controllers\PreEnrolled.php(256): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "year_level"', 'APPPATH\\Controllers\\PreEnrolled.php', 256)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->enrolled()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 00:41:04 --> Undefined array key 0
+in APPPATH\Controllers\PreEnrolled.php on line 256.
+ 1 APPPATH\Controllers\PreEnrolled.php(256): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Controllers\\PreEnrolled.php', 256)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->enrolled()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 00:41:25 --> Undefined array key "strand"
+in APPPATH\Controllers\PreEnrolled.php on line 257.
+ 1 APPPATH\Controllers\PreEnrolled.php(257): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "strand"', 'APPPATH\\Controllers\\PreEnrolled.php', 257)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->enrolled()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 01:07:02 --> Undefined variable $test
+in APPPATH\Views\admin\pre_enrolled.php on line 414.
+ 1 APPPATH\Views\admin\pre_enrolled.php(414): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $test', 'APPPATH\\Views\\admin\\pre_enrolled.php', 414)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\pre_enrolled.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/pre_enrolled', [], true)
+ 5 APPPATH\Controllers\PreEnrolled.php(179): view('admin/pre_enrolled', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PreEnrolled->pre_enrolled_reg('1st-Year', 'ABH', 'pending')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PreEnrolled))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 02:04:17 --> Undefined variable $enroll2022
+in APPPATH\Views\admin\adminDashboard.php on line 410.
+ 1 APPPATH\Views\admin\adminDashboard.php(410): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $enroll2022', 'APPPATH\\Views\\admin\\adminDashboard.php', 410)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\adminDashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/admindashboard', [], true)
+ 5 APPPATH\Controllers\Admin.php(118): view('admin/admindashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-06-25 02:05:12 --> mysqli_sql_exception: Unknown column 'status' in 'where clause' in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\Admin.php(102): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\Admin->admin()
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-06-25 02:05:12 --> Unknown column 'status' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `student_registration`
+WHERE `status` = \'admin\'
+AND `state` = \'Enrolled\'
+AND `year` = \'2022-2023\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `student_registration`
+WHERE `status` = \'admin\'
+AND `state` = \'Enrolled\'
+AND `year` = \'2022-2023\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `student_registration`
+WHERE `status` = \'admin\'
+AND `state` = \'Enrolled\'
+AND `year` = \'2022-2023\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `student_registration`
+WHERE `status` = :status:
+AND `state` = :state:
+AND `year` = :year:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(102): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 02:07:23 --> Undefined variable $enroll2022
+in APPPATH\Views\admin\adminDashboard.php on line 410.
+ 1 APPPATH\Views\admin\adminDashboard.php(410): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $enroll2022', 'APPPATH\\Views\\admin\\adminDashboard.php', 410)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\adminDashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/admindashboard', [], true)
+ 5 APPPATH\Controllers\Admin.php(123): view('admin/admindashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 02:07:31 --> Undefined variable $enroll2022
+in APPPATH\Views\admin\adminDashboard.php on line 610.
+ 1 APPPATH\Views\admin\adminDashboard.php(610): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $enroll2022', 'APPPATH\\Views\\admin\\adminDashboard.php', 610)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\adminDashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/admindashboard', [], true)
+ 5 APPPATH\Controllers\Admin.php(123): view('admin/admindashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 02:08:06 --> Undefined variable $enroll2022
+in APPPATH\Views\admin\adminDashboard.php on line 610.
+ 1 APPPATH\Views\admin\adminDashboard.php(610): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $enroll2022', 'APPPATH\\Views\\admin\\adminDashboard.php', 610)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\adminDashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/admindashboard', [], true)
+ 5 APPPATH\Controllers\Admin.php(124): view('admin/admindashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 02:20:45 --> Undefined variable $rejected
+in APPPATH\Views\admin\adminDashboard.php on line 438.
+ 1 APPPATH\Views\admin\adminDashboard.php(438): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $rejected', 'APPPATH\\Views\\admin\\adminDashboard.php', 438)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\adminDashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/admindashboard', [], true)
+ 5 APPPATH\Controllers\Admin.php(144): view('admin/admindashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 02:39:01 --> Undefined variable $ern
+in APPPATH\Controllers\Admin.php on line 57.
+ 1 APPPATH\Controllers\Admin.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ern', 'APPPATH\\Controllers\\Admin.php', 57)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 02:39:15 --> explode(): Argument #2 ($string) must be of type string, array given
+in APPPATH\Controllers\Admin.php on line 57.
+ 1 APPPATH\Controllers\Admin.php(57): explode('-', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 02:40:01 --> explode(): Argument #2 ($string) must be of type string, array given
+in APPPATH\Controllers\Admin.php on line 58.
+ 1 APPPATH\Controllers\Admin.php(58): explode('-', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 02:41:04 --> Array to string conversion
+in APPPATH\Views\admin\adminDashboard.php on line 600.
+ 1 APPPATH\Views\admin\adminDashboard.php(600): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\admin\\adminDashboard.php', 600)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\adminDashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/admindashboard', [], true)
+ 5 APPPATH\Controllers\Admin.php(154): view('admin/admindashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 02:41:17 --> Undefined variable $test
+in APPPATH\Controllers\Admin.php on line 57.
+ 1 APPPATH\Controllers\Admin.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $test', 'APPPATH\\Controllers\\Admin.php', 57)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 02:41:30 --> Array to string conversion
+in APPPATH\Views\admin\adminDashboard.php on line 600.
+ 1 APPPATH\Views\admin\adminDashboard.php(600): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\admin\\adminDashboard.php', 600)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\adminDashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/admindashboard', [], true)
+ 5 APPPATH\Controllers\Admin.php(154): view('admin/admindashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 02:42:48 --> Undefined array key "enrollee"
+in APPPATH\Controllers\Admin.php on line 153.
+ 1 APPPATH\Controllers\Admin.php(153): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "enrollee"', 'APPPATH\\Controllers\\Admin.php', 153)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 02:44:04 --> Undefined variable $test
+in APPPATH\Controllers\Admin.php on line 57.
+ 1 APPPATH\Controllers\Admin.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $test', 'APPPATH\\Controllers\\Admin.php', 57)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 02:44:55 --> Undefined variable $test
+in APPPATH\Controllers\Admin.php on line 57.
+ 1 APPPATH\Controllers\Admin.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $test', 'APPPATH\\Controllers\\Admin.php', 57)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 02:45:09 --> Undefined array key "year"
+in APPPATH\Controllers\Admin.php on line 57.
+ 1 APPPATH\Controllers\Admin.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "year"', 'APPPATH\\Controllers\\Admin.php', 57)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 02:45:22 --> Array to string conversion
+in APPPATH\Controllers\Admin.php on line 57.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Admin.php', 57)
+ 2 APPPATH\Controllers\Admin.php(57): join('-', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 02:45:40 --> Undefined array key "year"
+in APPPATH\Controllers\Admin.php on line 60.
+ 1 APPPATH\Controllers\Admin.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "year"', 'APPPATH\\Controllers\\Admin.php', 60)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 02:45:50 --> join(): Argument #2 ($array) must be of type ?array, string given
+in APPPATH\Controllers\Admin.php on line 60.
+ 1 APPPATH\Controllers\Admin.php(60): join('-', '2023-2024')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 02:46:23 --> Undefined variable $str_rep
+in APPPATH\Controllers\Admin.php on line 139.
+ 1 APPPATH\Controllers\Admin.php(139): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $str_rep', 'APPPATH\\Controllers\\Admin.php', 139)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 02:52:20 --> Maximum execution time of 60 seconds exceeded
+in APPPATH\Controllers\Admin.php on line 59.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-06-25 02:53:20 --> Maximum execution time of 60 seconds exceeded
+in APPPATH\Controllers\Admin.php on line 59.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-06-25 02:53:21 --> Undefined variable $tt
+in APPPATH\Controllers\Admin.php on line 154.
+ 1 APPPATH\Controllers\Admin.php(154): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tt', 'APPPATH\\Controllers\\Admin.php', 154)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 02:53:21 --> Undefined variable $tt
+in APPPATH\Controllers\Admin.php on line 154.
+ 1 APPPATH\Controllers\Admin.php(154): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tt', 'APPPATH\\Controllers\\Admin.php', 154)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 02:53:24 --> Undefined variable $tt
+in APPPATH\Controllers\Admin.php on line 154.
+ 1 APPPATH\Controllers\Admin.php(154): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tt', 'APPPATH\\Controllers\\Admin.php', 154)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 02:56:08 --> Undefined array key "year"
+in APPPATH\Controllers\Admin.php on line 58.
+ 1 APPPATH\Controllers\Admin.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "year"', 'APPPATH\\Controllers\\Admin.php', 58)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 02:56:19 --> join(): Argument #2 ($array) must be of type ?array, string given
+in APPPATH\Controllers\Admin.php on line 58.
+ 1 APPPATH\Controllers\Admin.php(58): join(',', '2023-2024')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 02:56:39 --> Undefined array key "year"
+in APPPATH\Controllers\Admin.php on line 58.
+ 1 APPPATH\Controllers\Admin.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "year"', 'APPPATH\\Controllers\\Admin.php', 58)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 02:59:22 --> Undefined array key "year"
+in APPPATH\Controllers\Admin.php on line 58.
+ 1 APPPATH\Controllers\Admin.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "year"', 'APPPATH\\Controllers\\Admin.php', 58)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 02:59:33 --> join(): Argument #2 ($array) must be of type ?array, string given
+in APPPATH\Controllers\Admin.php on line 58.
+ 1 APPPATH\Controllers\Admin.php(58): join(',', '2023-2024')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 02:59:41 --> join(): Argument #2 ($array) must be of type ?array, string given
+in APPPATH\Controllers\Admin.php on line 58.
+ 1 APPPATH\Controllers\Admin.php(58): join(',', '2023-2024')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 03:02:19 --> Undefined variable $i
+in APPPATH\Controllers\Admin.php on line 58.
+ 1 APPPATH\Controllers\Admin.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $i', 'APPPATH\\Controllers\\Admin.php', 58)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 03:03:28 --> Undefined variable $key
+in APPPATH\Controllers\Admin.php on line 154.
+ 1 APPPATH\Controllers\Admin.php(154): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $key', 'APPPATH\\Controllers\\Admin.php', 154)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 03:03:57 --> Undefined variable $key
+in APPPATH\Controllers\Admin.php on line 154.
+ 1 APPPATH\Controllers\Admin.php(154): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $key', 'APPPATH\\Controllers\\Admin.php', 154)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 03:06:41 --> Array to string conversion
+in APPPATH\Views\admin\adminDashboard.php on line 600.
+ 1 APPPATH\Views\admin\adminDashboard.php(600): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\admin\\adminDashboard.php', 600)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\adminDashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/admindashboard', [], true)
+ 5 APPPATH\Controllers\Admin.php(151): view('admin/admindashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 03:06:50 --> Array to string conversion
+in APPPATH\Views\admin\adminDashboard.php on line 600.
+ 1 APPPATH\Views\admin\adminDashboard.php(600): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\admin\\adminDashboard.php', 600)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\adminDashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/admindashboard', [], true)
+ 5 APPPATH\Controllers\Admin.php(151): view('admin/admindashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 03:07:33 --> Array to string conversion
+in APPPATH\Views\admin\adminDashboard.php on line 600.
+ 1 APPPATH\Views\admin\adminDashboard.php(600): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\admin\\adminDashboard.php', 600)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\adminDashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/admindashboard', [], true)
+ 5 APPPATH\Controllers\Admin.php(151): view('admin/admindashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 03:20:19 --> Undefined array key "year"
+in APPPATH\Controllers\Admin.php on line 58.
+ 1 APPPATH\Controllers\Admin.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "year"', 'APPPATH\\Controllers\\Admin.php', 58)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 03:20:45 --> Undefined variable $test
+in APPPATH\Controllers\Admin.php on line 57.
+ 1 APPPATH\Controllers\Admin.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $test', 'APPPATH\\Controllers\\Admin.php', 57)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 03:20:54 --> Undefined variable $test
+in APPPATH\Controllers\Admin.php on line 156.
+ 1 APPPATH\Controllers\Admin.php(156): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $test', 'APPPATH\\Controllers\\Admin.php', 156)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 03:48:21 --> Undefined variable $male
+in APPPATH\Controllers\Admin.php on line 40.
+ 1 APPPATH\Controllers\Admin.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $male', 'APPPATH\\Controllers\\Admin.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 03:49:15 --> Undefined variable $male
+in APPPATH\Controllers\Admin.php on line 40.
+ 1 APPPATH\Controllers\Admin.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $male', 'APPPATH\\Controllers\\Admin.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 03:49:34 --> Undefined variable $total
+in APPPATH\Controllers\Admin.php on line 40.
+ 1 APPPATH\Controllers\Admin.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $total', 'APPPATH\\Controllers\\Admin.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 03:49:41 --> Undefined variable $male_percentage
+in APPPATH\Controllers\Admin.php on line 49.
+ 1 APPPATH\Controllers\Admin.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $male_percentage', 'APPPATH\\Controllers\\Admin.php', 49)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 03:50:20 --> Undefined variable $enr
+in APPPATH\Controllers\Admin.php on line 117.
+ 1 APPPATH\Controllers\Admin.php(117): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $enr', 'APPPATH\\Controllers\\Admin.php', 117)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-06-25 03:54:54 --> mysqli_sql_exception: Unknown column 'student_registrtion.lrn' in 'on clause' in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\Admin.php(53): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\Admin->admin()
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-06-25 03:54:54 --> Unknown column 'student_registrtion.lrn' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `student_registration`
+INNER JOIN `user_tbl` ON `student_registrtion`.`lrn` = `user_tbl`.`lrn`
+INNER JOIN `user_profile` ON `user_tbl`.`email` = `user_profile`.`email`
+WHERE `usertype` = \'COLLEGE\'
+AND `state` = \'Enrolled\'
+AND `gender` = \'Male\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `student_registration`
+INNER JOIN `user_tbl` ON `student_registrtion`.`lrn` = `user_tbl`.`lrn`
+INNER JOIN `user_profile` ON `user_tbl`.`email` = `user_profile`.`email`
+WHERE `usertype` = \'COLLEGE\'
+AND `state` = \'Enrolled\'
+AND `gender` = \'Male\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `student_registration`
+INNER JOIN `user_tbl` ON `student_registrtion`.`lrn` = `user_tbl`.`lrn`
+INNER JOIN `user_profile` ON `user_tbl`.`email` = `user_profile`.`email`
+WHERE `usertype` = \'COLLEGE\'
+AND `state` = \'Enrolled\'
+AND `gender` = \'Male\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `student_registration`
+INNER JOIN `user_tbl` ON `student_registrtion`.`lrn` = `user_tbl`.`lrn`
+INNER JOIN `user_profile` ON `user_tbl`.`email` = `user_profile`.`email`
+WHERE `usertype` = :usertype:
+AND `state` = :state:
+AND `gender` = :gender:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(53): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 04:02:13 --> Undefined variable $abh
+in APPPATH\Controllers\Admin.php on line 145.
+ 1 APPPATH\Controllers\Admin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $abh', 'APPPATH\\Controllers\\Admin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 04:23:26 --> syntax error, unexpected token "}"
+in APPPATH\Controllers\Admin.php on line 179.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Admin.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Admin', true)
+ 5 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-06-25 04:25:48 --> mysqli_sql_exception: Column 'year_level' in where clause is ambiguous in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\Admin.php(124): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\Admin->admin()
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-06-25 04:25:48 --> Column 'year_level' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `yearlevel_tbl`
+INNER JOIN `student_registration` ON `yearlvl_tbl`.`year_level` = `student_registration`.`year_level`
+WHERE `type` = \'COLLEGE\'
+AND `year_level` = \'Grade 11\'
+OR `year_level` = \'1st Year\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `yearlevel_tbl`
+INNER JOIN `student_registration` ON `yearlvl_tbl`.`year_level` = `student_registration`.`year_level`
+WHERE `type` = \'COLLEGE\'
+AND `year_level` = \'Grade 11\'
+OR `year_level` = \'1st Year\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `yearlevel_tbl`
+INNER JOIN `student_registration` ON `yearlvl_tbl`.`year_level` = `student_registration`.`year_level`
+WHERE `type` = \'COLLEGE\'
+AND `year_level` = \'Grade 11\'
+OR `year_level` = \'1st Year\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `yearlevel_tbl`
+INNER JOIN `student_registration` ON `yearlvl_tbl`.`year_level` = `student_registration`.`year_level`
+WHERE `type` = :type:
+AND `year_level` = :year_level:
+OR `year_level` = :year_level.1:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(124): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-06-25 04:27:04 --> mysqli_sql_exception: Unknown column 'yearlvl_tbl.year_level' in 'on clause' in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\Admin.php(124): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\Admin->admin()
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-06-25 04:27:04 --> Unknown column 'yearlvl_tbl.year_level' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `yearlevel_tbl`
+INNER JOIN `student_registration` ON `yearlvl_tbl`.`year_level` = `student_registration`.`year_level`
+WHERE `type` = \'COLLEGE\'
+AND `student_registration`.`year_level` = \'Grade 11\'
+OR `student_registration`.`year_level` = \'1st Year\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `yearlevel_tbl`
+INNER JOIN `student_registration` ON `yearlvl_tbl`.`year_level` = `student_registration`.`year_level`
+WHERE `type` = \'COLLEGE\'
+AND `student_registration`.`year_level` = \'Grade 11\'
+OR `student_registration`.`year_level` = \'1st Year\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `yearlevel_tbl`
+INNER JOIN `student_registration` ON `yearlvl_tbl`.`year_level` = `student_registration`.`year_level`
+WHERE `type` = \'COLLEGE\'
+AND `student_registration`.`year_level` = \'Grade 11\'
+OR `student_registration`.`year_level` = \'1st Year\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `yearlevel_tbl`
+INNER JOIN `student_registration` ON `yearlvl_tbl`.`year_level` = `student_registration`.`year_level`
+WHERE `type` = :type:
+AND `student_registration`.`year_level` = :student_registration.year_level:
+OR `student_registration`.`year_level` = :student_registration.year_level.1:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(124): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-06-25 04:42:53 --> mysqli_sql_exception: Unknown column 'student_registration.year_level' in 'where clause' in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\Admin.php(129): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\Admin->admin()
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-06-25 04:42:53 --> Unknown column 'student_registration.year_level' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `yearlevel_tbl`
+WHERE `type` = \'SHS\'
+AND `student_registration`.`year_level` = \'1st Year\'
+AND `state` = \'Enrolled\'
+AND `year` = \'2023-2024\'
+AND `semester` = \'1st Semester\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `yearlevel_tbl`
+WHERE `type` = \'SHS\'
+AND `student_registration`.`year_level` = \'1st Year\'
+AND `state` = \'Enrolled\'
+AND `year` = \'2023-2024\'
+AND `semester` = \'1st Semester\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `yearlevel_tbl`
+WHERE `type` = \'SHS\'
+AND `student_registration`.`year_level` = \'1st Year\'
+AND `state` = \'Enrolled\'
+AND `year` = \'2023-2024\'
+AND `semester` = \'1st Semester\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `yearlevel_tbl`
+WHERE `type` = :type:
+AND `student_registration`.`year_level` = :student_registration.year_level:
+AND `state` = :state:
+AND `year` = :year:
+AND `semester` = :semester:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(129): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-06-25 04:43:10 --> mysqli_sql_exception: Unknown column 'state' in 'where clause' in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\Admin.php(129): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\Admin->admin()
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-06-25 04:43:10 --> Unknown column 'state' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `yearlevel_tbl`
+WHERE `type` = \'SHS\'
+AND `year_level` = \'1st Year\'
+AND `state` = \'Enrolled\'
+AND `year` = \'2023-2024\'
+AND `semester` = \'1st Semester\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `yearlevel_tbl`
+WHERE `type` = \'SHS\'
+AND `year_level` = \'1st Year\'
+AND `state` = \'Enrolled\'
+AND `year` = \'2023-2024\'
+AND `semester` = \'1st Semester\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `yearlevel_tbl`
+WHERE `type` = \'SHS\'
+AND `year_level` = \'1st Year\'
+AND `state` = \'Enrolled\'
+AND `year` = \'2023-2024\'
+AND `semester` = \'1st Semester\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `yearlevel_tbl`
+WHERE `type` = :type:
+AND `year_level` = :year_level:
+AND `state` = :state:
+AND `year` = :year:
+AND `semester` = :semester:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(129): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-06-25 04:43:29 --> mysqli_sql_exception: Unknown column 'type' in 'where clause' in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\Admin.php(129): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\Admin->admin()
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-06-25 04:43:29 --> Unknown column 'type' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `student_registration`
+WHERE `type` = \'SHS\'
+AND `student_registration`.`year_level` = \'1st Year\'
+AND `state` = \'Enrolled\'
+AND `year` = \'2023-2024\'
+AND `semester` = \'1st Semester\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `student_registration`
+WHERE `type` = \'SHS\'
+AND `student_registration`.`year_level` = \'1st Year\'
+AND `state` = \'Enrolled\'
+AND `year` = \'2023-2024\'
+AND `semester` = \'1st Semester\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `student_registration`
+WHERE `type` = \'SHS\'
+AND `student_registration`.`year_level` = \'1st Year\'
+AND `state` = \'Enrolled\'
+AND `year` = \'2023-2024\'
+AND `semester` = \'1st Semester\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `student_registration`
+WHERE `type` = :type:
+AND `student_registration`.`year_level` = :student_registration.year_level:
+AND `state` = :state:
+AND `year` = :year:
+AND `semester` = :semester:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(129): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 08:28:05 --> Undefined variable $enrollee
+in APPPATH\Views\admin\adminDashboard.php on line 609.
+ 1 APPPATH\Views\admin\adminDashboard.php(609): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $enrollee', 'APPPATH\\Views\\admin\\adminDashboard.php', 609)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\adminDashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/admindashboard', [], true)
+ 5 APPPATH\Controllers\Admin.php(215): view('admin/admindashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 08:28:52 --> Undefined variable $enrollee
+in APPPATH\Views\admin\adminDashboard.php on line 609.
+ 1 APPPATH\Views\admin\adminDashboard.php(609): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $enrollee', 'APPPATH\\Views\\admin\\adminDashboard.php', 609)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\adminDashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/admindashboard', [], true)
+ 5 APPPATH\Controllers\Admin.php(220): view('admin/admindashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 08:28:54 --> Undefined variable $enrollee
+in APPPATH\Views\admin\adminDashboard.php on line 609.
+ 1 APPPATH\Views\admin\adminDashboard.php(609): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $enrollee', 'APPPATH\\Views\\admin\\adminDashboard.php', 609)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\adminDashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/admindashboard', [], true)
+ 5 APPPATH\Controllers\Admin.php(220): view('admin/admindashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 08:28:55 --> Undefined variable $enrollee
+in APPPATH\Views\admin\adminDashboard.php on line 609.
+ 1 APPPATH\Views\admin\adminDashboard.php(609): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $enrollee', 'APPPATH\\Views\\admin\\adminDashboard.php', 609)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\adminDashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/admindashboard', [], true)
+ 5 APPPATH\Controllers\Admin.php(220): view('admin/admindashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 08:44:47 --> Undefined variable $enrollee
+in APPPATH\Views\admin\adminDashboard.php on line 619.
+ 1 APPPATH\Views\admin\adminDashboard.php(619): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $enrollee', 'APPPATH\\Views\\admin\\adminDashboard.php', 619)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\adminDashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/admindashboard', [], true)
+ 5 APPPATH\Controllers\Admin.php(220): view('admin/admindashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 08:52:31 --> Undefined variable $enr
+in APPPATH\Controllers\Admin.php on line 193.
+ 1 APPPATH\Controllers\Admin.php(193): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $enr', 'APPPATH\\Controllers\\Admin.php', 193)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->admin()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 09:28:36 --> Undefined array key "teacher_id"
+in APPPATH\Views\admin\teacher\listofteacher.php on line 382.
+ 1 APPPATH\Views\admin\teacher\listofteacher.php(382): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "teacher_id"', 'APPPATH\\Views\\admin\\teacher\\listofteacher.php', 382)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\teacher\\listofteacher.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/teacher/listofteacher', [], true)
+ 5 APPPATH\Controllers\TeacherAccount.php(34): view('admin/teacher/listofteacher', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\TeacherAccount->listofteacher()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TeacherAccount))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 09:32:49 --> Undefined array key "teacher_id"
+in APPPATH\Views\admin\teacher\listofteacher.php on line 382.
+ 1 APPPATH\Views\admin\teacher\listofteacher.php(382): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "teacher_id"', 'APPPATH\\Views\\admin\\teacher\\listofteacher.php', 382)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\teacher\\listofteacher.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/teacher/listofteacher', [], true)
+ 5 APPPATH\Controllers\TeacherAccount.php(37): view('admin/teacher/listofteacher', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\TeacherAccount->listofteacher()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TeacherAccount))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-06-25 09:34:06 --> mysqli_sql_exception: Unknown column '*.user_tbl.id' in 'field list' in C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `*`. `us...', 0)
+#1 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `*`. `us...')
+#2 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `*`. `us...')
+#3 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `*`. `us...', Array, false)
+#4 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\app\Controllers\TeacherAccount.php(28): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\TeacherAccount->listofteacher()
+#7 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TeacherAccount))
+#8 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-06-25 09:34:06 --> Unknown column '*.user_tbl.id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `*`. `user_tbl`.`id`, `teacher_tbl`.`id` as `teacher_id`
+FROM `user_tbl`
+INNER JOIN `teacher_tbl` ON `user_tbl`.`lrn` = `teacher_tbl`.`teacher_school_id`
+WHERE `status` = \'COLLEGE\'
+AND `usertype` = \'teacher\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `*`. `user_tbl`.`id`, `teacher_tbl`.`id` as `teacher_id`
+FROM `user_tbl`
+INNER JOIN `teacher_tbl` ON `user_tbl`.`lrn` = `teacher_tbl`.`teacher_school_id`
+WHERE `status` = \'COLLEGE\'
+AND `usertype` = \'teacher\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `*`. `user_tbl`.`id`, `teacher_tbl`.`id` as `teacher_id`
+FROM `user_tbl`
+INNER JOIN `teacher_tbl` ON `user_tbl`.`lrn` = `teacher_tbl`.`teacher_school_id`
+WHERE `status` = \'COLLEGE\'
+AND `usertype` = \'teacher\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `*`. `user_tbl`.`id`, `teacher_tbl`.`id` as `teacher_id`
+FROM `user_tbl`
+INNER JOIN `teacher_tbl` ON `user_tbl`.`lrn` = `teacher_tbl`.`teacher_school_id`
+WHERE `status` = :status:
+AND `usertype` = :usertype:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\TeacherAccount.php(28): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\TeacherAccount->listofteacher()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TeacherAccount))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 09:34:14 --> Call to undefined method CodeIgniter\View\View::inclue()
+in APPPATH\Views\admin\teacher\listofteacher.php on line 387.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/teacher/listofteacher', [], true)
+ 4 APPPATH\Controllers\TeacherAccount.php(37): view('admin/teacher/listofteacher', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\TeacherAccount->listofteacher()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TeacherAccount))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 09:34:25 --> Undefined variable $strand
+in APPPATH\Views\admin\teacher\teacherUpdate.php on line 74.
+ 1 APPPATH\Views\admin\teacher\teacherUpdate.php(74): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $strand', 'APPPATH\\Views\\admin\\teacher\\teacherUpdate.php', 74)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\teacher\\teacherUpdate.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('admin/teacher/teacherUpdate', null, true)
+ 5 APPPATH\Views\admin\teacher\listofteacher.php(387): CodeIgniter\View\View->include('admin/teacher/teacherUpdate')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\teacher\\listofteacher.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/teacher/listofteacher', [], true)
+ 9 APPPATH\Controllers\TeacherAccount.php(37): view('admin/teacher/listofteacher', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\TeacherAccount->listofteacher()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TeacherAccount))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 09:35:29 --> Undefined variable $strand_model
+in APPPATH\Controllers\TeacherAccount.php on line 29.
+ 1 APPPATH\Controllers\TeacherAccount.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $strand_model', 'APPPATH\\Controllers\\TeacherAccount.php', 29)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\TeacherAccount->listofteacher()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TeacherAccount))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 09:52:34 --> syntax error, unexpected token "}", expecting ";"
+in APPPATH\Controllers\TeacherAccount.php on line 197.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\TeacherAccount.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\TeacherAccount')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\TeacherAccount')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\TeacherAccount', true)
+ 5 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 10:04:52 --> include(teacher/teacherUpdate.php): Failed to open stream: No such file or directory
+in APPPATH\Views\admin\teacher\listofteacher.php on line 414.
+ 1 APPPATH\Views\admin\teacher\listofteacher.php(414): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(teacher/teacherUpdate.php): Failed to open stream: No such file or directory', 'APPPATH\\Views\\admin\\teacher\\listofteacher.php', 414)
+ 2 APPPATH\Views\admin\teacher\listofteacher.php(414): include()
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\teacher\\listofteacher.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/teacher/listofteacher', [], true)
+ 6 APPPATH\Controllers\TeacherAccount.php(40): view('admin/teacher/listofteacher', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\TeacherAccount->listofteacher()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TeacherAccount))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 10:30:21 --> Undefined array key "department"
+in APPPATH\Views\webpage\about.php on line 180.
+ 1 APPPATH\Views\webpage\about.php(180): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "department"', 'APPPATH\\Views\\webpage\\about.php', 180)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\webpage\\about.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('webpage/about', [], true)
+ 5 APPPATH\Controllers\Webpage.php(44): view('webpage/about', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Webpage->about()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Webpage))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-25 10:30:49 --> Undefined array key "department"
+in APPPATH\Views\webpage\about.php on line 180.
+ 1 APPPATH\Views\webpage\about.php(180): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "department"', 'APPPATH\\Views\\webpage\\about.php', 180)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\webpage\\about.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('webpage/about', [], true)
+ 5 APPPATH\Controllers\Webpage.php(44): view('webpage/about', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Webpage->about()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Webpage))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

@@ -14,7 +14,7 @@ class StrandModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['strand', 'title', 'year', 'month', 'type'];
+    protected $allowedFields    = ['strand', 'title', 'year', 'month', 'type', 'course_status'];
 
     // Dates
     protected $useTimestamps = false;

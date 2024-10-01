@@ -1,0 +1,11 @@
+CRITICAL - 2024-01-11 17:47:45 --> Trying to access array offset on value of type null
+in APPPATH/Views/admin/grading/first_yearGrade.php on line 487.
+ 1 APPPATH/Views/admin/grading/first_yearGrade.php(487): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/grading/first_yearGrade.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Grading.php(46): view()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Grading->StudentGrade()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()

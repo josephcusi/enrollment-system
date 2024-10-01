@@ -9,6 +9,12 @@ use App\Controllers\BaseController;
 
 class AccountController extends BaseController
 {
+
+public function __construct()
+    {
+        helper(['url', 'Form_helper', 'form']);
+    }
+    
   public function login()
   {
       return view('Auth/login');
@@ -16,8 +22,7 @@ class AccountController extends BaseController
 
   public function store()
   {
-    helper(['form']);
-    $rules = [
+  $validated = $this->validate([
       'lastname' => [
           'rules' => 'required',
           'errors' => [
@@ -28,12 +33,6 @@ class AccountController extends BaseController
           'rules' => 'required',
           'errors' => [
               'required' => 'Your First name is required.'
-          ]
-      ],
-      'middlename' => [
-          'rules' => 'required',
-          'errors' => [
-              'required' => 'Your Middle name is required.'
           ]
       ],
       'email' => [
@@ -58,27 +57,22 @@ class AccountController extends BaseController
               'min_length' => 'Confirm Password must have atleast 6 characters in length.',
               'matches' => 'Password do not match.'
           ]
-      ]
-    ];
-    if($this->validate($rules)){
+          ],
+    ]);
+    
+    if(!$validated){
+          
+      echo view('auth/register', ['validation' => $this->validator]);
+    
+      
+    }else{
+            
       $user_model = new UserModel();
       $token = $this->token(100);
       $to = $this->request->getPost('email');
-
-      $str_result = '1234567890';
-      $studID = substr(str_shuffle($str_result), 0, '4');
-      
-      $year_prefix = date('y');
-      if ($this->request->getPost('usertype') === 'college') {
-        $lrn_prefix = 'B'.$year_prefix.'-';
-      } else {
-        $lrn_prefix = 'B'.$year_prefix.'-SHS';
-      }
-      
       
       $data = [
         'agree' => $this->request->getPost('agree'),
-        'lrn' => $lrn_prefix . $year_prefix . str_pad($studID, 4, "0", STR_PAD_LEFT),
         'lastname' => $this->request->getPost('lastname'),
         'firstname' => $this->request->getPost('firstname'),
         'middlename' => $this->request->getPost('middlename'),
@@ -87,19 +81,24 @@ class AccountController extends BaseController
         'token' => $token,
         'status' => 'pending',
         'usertype' => $this->request->getPost('usertype'),
-        'log_status' => 'Pending'
       ];
       $user_model->save($data);
-      $subject = 'CONFIRM YOUR REGISTRATION';
-      $subject = 'BACO COMMUNITY COLLEGE';
-      $message = 'Good Day !'.'<br>'.'<br>'.'Hi, '. $this->request->getPost('firstname').' '.$this->request->getPost('lastname').'!'.
-      ' We are almost done setting up your account! Just one more step: please verify your email address by clicking
-        <a href="'.base_url().'/verify/'.$token.'">verify your account.</a>';
-      $this->sendMail($to, $subject, $message);
+      
+     
+        $emz = $to;
+        $email = \Config\Services::email();
+        $email->setTo($emz);
+        $email->setMailType("html");
+        $email->setSubject('CONFIRM YOUR REGISTRATION');
+        
+        $email->setFrom('bccregistrar1@gmail.com', 'BACO COMMUNITY COLLEGE REGISTRAR');
+        $email->setMessage("Good Day!<br><br>Hi, " . $this->request->getPost('firstname') . ' ' . $this->request->getPost('lastname') . "! " .
+        "We are almost done setting up your account! Just one more step: please verify your email address by clicking " .
+        "<a href='" . base_url() . "/verify/" . $token . "'>verify your account.</a>");
+
+        $email->send();
+        
       return redirect()->to('login')->with('register', 'Your request has been sent. Please check your email.');
-    }else{
-      $data['validation']=$this->validator;
-      echo view('auth/register', $data);
     }
   }
 
@@ -135,7 +134,7 @@ class AccountController extends BaseController
       $email = \Config\Services::email();
       $email->setMailType("html");
       $email->setTo($to);
-      $email->setFrom('zasuke277379597@gmail.com', $subject);
+      $email->setFrom('bccregistrar1@gmail.com', $subject);
       $email->setSubject('Confirm your Registration');
       $email->setMessage($message);
       if ($email->send()){

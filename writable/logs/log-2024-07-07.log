@@ -1,0 +1,14 @@
+CRITICAL - 2024-07-07 18:45:18 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Profile.php on line 1467.
+ 1 APPPATH/Controllers/Profile.php(1467): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->curriculumSubject()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-07 18:45:21 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Profile.php on line 1467.
+ 1 APPPATH/Controllers/Profile.php(1467): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Profile->curriculumSubject()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()

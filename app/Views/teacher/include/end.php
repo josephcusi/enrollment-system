@@ -51,7 +51,6 @@
 <script src="<?=base_url()?>/dist/js/adminlte.min.js"></script>
 <script src="<?=base_url()?>/dist/js/adminlte.js"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="<?=base_url()?>/dist/js/demo.js"></script>
 <script src="<?=base_url()?>/dist/js/ControlSidebar.js"></script>
 <script src="<?=base_url()?>/plugins/bs-stepper/js/bs-stepper.min.js"></script>
 

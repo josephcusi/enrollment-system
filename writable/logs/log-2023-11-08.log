@@ -1,0 +1,14 @@
+CRITICAL - 2023-11-08 03:05:33 --> Undefined variable $lrn
+in APPPATH/Controllers/User_Controller.php on line 125.
+ 1 APPPATH/Controllers/User_Controller.php(125): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\User_Controller->old_student()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-08 03:10:01 --> in_array() expects at least 2 arguments, 1 given
+in APPPATH/Controllers/User_Controller.php on line 149.
+ 1 APPPATH/Controllers/User_Controller.php(149): in_array()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\User_Controller->old_student()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()

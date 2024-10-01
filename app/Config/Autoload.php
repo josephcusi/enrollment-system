@@ -43,7 +43,8 @@ class Autoload extends AutoloadConfig
     public $psr4 = [
         APP_NAMESPACE => APPPATH, // For custom app namespace
         'Config'      => APPPATH . 'Config',
-        'Dompdf'      => APPPATH . 'ThirdParty/dompdf/src'
+        'Dompdf'      => APPPATH . 'ThirdParty/dompdf/src',
+        'Kenjis\\CI4'   => ROOTPATH . 'vendor/kenjis/codeigniter-composer-installer/src',
     ];
 
     /**
@@ -85,4 +86,5 @@ class Autoload extends AutoloadConfig
      * @var array<int, string>
      */
     public $files = [];
+
 }

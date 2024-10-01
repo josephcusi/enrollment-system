@@ -18,17 +18,23 @@ class ScheduleModel extends Model
         'subject_id',
         'teacher_id',
         'section_id',
-        'monday',
-        'mon_two',
-        'tuesday',
-        'tue_two',
-        'wednesday',
-        'wed_two',
-        'thursday',
-        'thu_two',
-        'friday',
-        'fri_two'
-
+        'start_monday',
+        'end_monday',
+        'start_tuesday',
+        'end_tuesday',
+        'start_wednesday',
+        'end_wednesday',
+        'start_thursday',
+        'end_thursday',
+        'start_friday',
+        'end_friday',
+        'start_saturday',
+        'end_saturday',
+        'room',
+        'created_at',
+        'year',
+        'semester',
+        'id'
     ];
 
     // Dates

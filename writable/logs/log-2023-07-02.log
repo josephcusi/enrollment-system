@@ -1,0 +1,687 @@
+CRITICAL - 2023-07-02 04:13:25 --> Cannot modify header information - headers already sent
+in SYSTEMPATH\HTTP\ResponseTrait.php on line 759.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify header information - headers already sent', 'SYSTEMPATH\\HTTP\\ResponseTrait.php', 759)
+ 2 SYSTEMPATH\HTTP\ResponseTrait.php(759): setcookie('ci_session', 'hstfh7gv3jota1vrop1etek81frrom8t', [...])
+ 3 SYSTEMPATH\HTTP\ResponseTrait.php(735): CodeIgniter\HTTP\Response->doSetCookie('ci_session', 'hstfh7gv3jota1vrop1etek81frrom8t', [...])
+ 4 SYSTEMPATH\HTTP\ResponseTrait.php(715): CodeIgniter\HTTP\Response->dispatchCookies()
+ 5 SYSTEMPATH\HTTP\ResponseTrait.php(446): CodeIgniter\HTTP\Response->sendCookies()
+ 6 SYSTEMPATH\CodeIgniter.php(1111): CodeIgniter\HTTP\Response->send()
+ 7 SYSTEMPATH\CodeIgniter.php(541): CodeIgniter\CodeIgniter->sendResponse()
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-02 04:13:25 --> Uncaught ErrorException: Cannot modify header information - headers already sent in C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\HTTP\ResponseTrait.php:759
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify h...', 'C:\\xampp\\htdocs...', 759)
+#1 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\HTTP\ResponseTrait.php(759): setcookie('ci_session', 'hstfh7gv3jota1v...', Array)
+#2 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\HTTP\ResponseTrait.php(735): CodeIgniter\HTTP\Response->doSetCookie('ci_session', 'hstfh7gv3jota1v...', Array)
+#3 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\HTTP\ResponseTrait.php(715): CodeIgniter\HTTP\Response->dispatchCookies()
+#4 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\HTTP\ResponseTrait.php(446): CodeIgniter\HTTP\Response->sendCookies()
+#5 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Debug\Exceptions.php(133): CodeIgniter\HTTP\Response->send()
+#6 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#7 {main}
+  thrown
+in SYSTEMPATH\HTTP\ResponseTrait.php on line 759.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-07-02 04:13:32 --> Cannot modify header information - headers already sent
+in SYSTEMPATH\HTTP\ResponseTrait.php on line 759.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify header information - headers already sent', 'SYSTEMPATH\\HTTP\\ResponseTrait.php', 759)
+ 2 SYSTEMPATH\HTTP\ResponseTrait.php(759): setcookie('ci_session', 'hstfh7gv3jota1vrop1etek81frrom8t', [...])
+ 3 SYSTEMPATH\HTTP\ResponseTrait.php(735): CodeIgniter\HTTP\Response->doSetCookie('ci_session', 'hstfh7gv3jota1vrop1etek81frrom8t', [...])
+ 4 SYSTEMPATH\HTTP\ResponseTrait.php(715): CodeIgniter\HTTP\Response->dispatchCookies()
+ 5 SYSTEMPATH\HTTP\ResponseTrait.php(446): CodeIgniter\HTTP\Response->sendCookies()
+ 6 SYSTEMPATH\CodeIgniter.php(1111): CodeIgniter\HTTP\Response->send()
+ 7 SYSTEMPATH\CodeIgniter.php(541): CodeIgniter\CodeIgniter->sendResponse()
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-02 04:13:32 --> Uncaught ErrorException: Cannot modify header information - headers already sent in C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\HTTP\ResponseTrait.php:759
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify h...', 'C:\\xampp\\htdocs...', 759)
+#1 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\HTTP\ResponseTrait.php(759): setcookie('ci_session', 'hstfh7gv3jota1v...', Array)
+#2 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\HTTP\ResponseTrait.php(735): CodeIgniter\HTTP\Response->doSetCookie('ci_session', 'hstfh7gv3jota1v...', Array)
+#3 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\HTTP\ResponseTrait.php(715): CodeIgniter\HTTP\Response->dispatchCookies()
+#4 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\HTTP\ResponseTrait.php(446): CodeIgniter\HTTP\Response->sendCookies()
+#5 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Debug\Exceptions.php(133): CodeIgniter\HTTP\Response->send()
+#6 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#7 {main}
+  thrown
+in SYSTEMPATH\HTTP\ResponseTrait.php on line 759.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-07-02 04:13:56 --> Cannot modify header information - headers already sent
+in SYSTEMPATH\HTTP\ResponseTrait.php on line 759.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify header information - headers already sent', 'SYSTEMPATH\\HTTP\\ResponseTrait.php', 759)
+ 2 SYSTEMPATH\HTTP\ResponseTrait.php(759): setcookie('ci_session', 'hstfh7gv3jota1vrop1etek81frrom8t', [...])
+ 3 SYSTEMPATH\HTTP\ResponseTrait.php(735): CodeIgniter\HTTP\Response->doSetCookie('ci_session', 'hstfh7gv3jota1vrop1etek81frrom8t', [...])
+ 4 SYSTEMPATH\HTTP\ResponseTrait.php(715): CodeIgniter\HTTP\Response->dispatchCookies()
+ 5 SYSTEMPATH\HTTP\ResponseTrait.php(446): CodeIgniter\HTTP\Response->sendCookies()
+ 6 SYSTEMPATH\CodeIgniter.php(1111): CodeIgniter\HTTP\Response->send()
+ 7 SYSTEMPATH\CodeIgniter.php(541): CodeIgniter\CodeIgniter->sendResponse()
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-02 04:13:56 --> Uncaught ErrorException: Cannot modify header information - headers already sent in C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\HTTP\ResponseTrait.php:759
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify h...', 'C:\\xampp\\htdocs...', 759)
+#1 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\HTTP\ResponseTrait.php(759): setcookie('ci_session', 'hstfh7gv3jota1v...', Array)
+#2 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\HTTP\ResponseTrait.php(735): CodeIgniter\HTTP\Response->doSetCookie('ci_session', 'hstfh7gv3jota1v...', Array)
+#3 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\HTTP\ResponseTrait.php(715): CodeIgniter\HTTP\Response->dispatchCookies()
+#4 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\HTTP\ResponseTrait.php(446): CodeIgniter\HTTP\Response->sendCookies()
+#5 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Debug\Exceptions.php(133): CodeIgniter\HTTP\Response->send()
+#6 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#7 {main}
+  thrown
+in SYSTEMPATH\HTTP\ResponseTrait.php on line 759.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-07-02 04:37:54 --> Undefined variable $prospectus_model
+in APPPATH\Controllers\Section.php on line 344.
+ 1 APPPATH\Controllers\Section.php(344): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $prospectus_model', 'APPPATH\\Controllers\\Section.php', 344)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->updateSched11()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-02 04:40:52 --> Undefined variable $in_array
+in APPPATH\Controllers\Section.php on line 402.
+ 1 APPPATH\Controllers\Section.php(402): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $in_array', 'APPPATH\\Controllers\\Section.php', 402)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->updateSched11()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-02 04:41:17 --> in_array() expects at least 2 arguments, 1 given
+in APPPATH\Controllers\Section.php on line 402.
+ 1 APPPATH\Controllers\Section.php(402): in_array([...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->updateSched11()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-02 04:45:29 --> mysqli_sql_exception: Unknown column 'strand_tbl' in 'field list' in C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `sche...', 0)
+#1 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `sche...')
+#2 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `sche...')
+#3 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `sche...', Array, false)
+#4 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\app\Controllers\Section.php(55): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\Section->schedule11('1st-Year', 'BPA-1B', 'BPA')
+#7 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+#8 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-07-02 04:45:29 --> Unknown column 'strand_tbl' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `schedule_tbl`.`id`, `strand_tbl` as `strand_id`
+FROM `schedule_tbl`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+INNER JOIN `prospectrus_tbl` ON `schedule_tbl`.`subject_id` = `prospectrus_tbl`.`id`
+INNER JOIN `school_year` ON `prospectrus_tbl`.`semester` = `school_year`.`semester`
+WHERE `section_tbl`.`section` = \'BPA 1B\'
+AND `section_tbl`.`year_level` = \'1st Year\'
+ORDER BY `schedule_tbl`.`teacher_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `schedule_tbl`.`id`, `strand_tbl` as `strand_id`
+FROM `schedule_tbl`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+INNER JOIN `prospectrus_tbl` ON `schedule_tbl`.`subject_id` = `prospectrus_tbl`.`id`
+INNER JOIN `school_year` ON `prospectrus_tbl`.`semester` = `school_year`.`semester`
+WHERE `section_tbl`.`section` = \'BPA 1B\'
+AND `section_tbl`.`year_level` = \'1st Year\'
+ORDER BY `schedule_tbl`.`teacher_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `schedule_tbl`.`id`, `strand_tbl` as `strand_id`
+FROM `schedule_tbl`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+INNER JOIN `prospectrus_tbl` ON `schedule_tbl`.`subject_id` = `prospectrus_tbl`.`id`
+INNER JOIN `school_year` ON `prospectrus_tbl`.`semester` = `school_year`.`semester`
+WHERE `section_tbl`.`section` = \'BPA 1B\'
+AND `section_tbl`.`year_level` = \'1st Year\'
+ORDER BY `schedule_tbl`.`teacher_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `schedule_tbl`.`id`, `strand_tbl` as `strand_id`
+FROM `schedule_tbl`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+INNER JOIN `prospectrus_tbl` ON `schedule_tbl`.`subject_id` = `prospectrus_tbl`.`id`
+INNER JOIN `school_year` ON `prospectrus_tbl`.`semester` = `school_year`.`semester`
+WHERE `section_tbl`.`section` = :section_tbl.section:
+AND `section_tbl`.`year_level` = :section_tbl.year_level:
+ORDER BY `schedule_tbl`.`teacher_id`', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Section.php(55): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->schedule11('1st-Year', 'BPA-1B', 'BPA')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-02 07:23:09 --> Undefined array key "secID"
+in APPPATH\Views\admin\section\first_year.php on line 473.
+ 1 APPPATH\Views\admin\section\first_year.php(473): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "secID"', 'APPPATH\\Views\\admin\\section\\first_year.php', 473)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\section\\first_year.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/section/first_year', [], true)
+ 5 APPPATH\Controllers\Section.php(460): view('admin/section/first_year', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->section11('1st-Year')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-02 07:23:27 --> mysqli_sql_exception: Unknown column 'student_registration' in 'field list' in C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `sect...', 0)
+#1 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `sect...')
+#2 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `sect...')
+#3 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `sect...', Array, false)
+#4 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\app\Controllers\Section.php(450): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\Section->section11('1st-Year')
+#7 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+#8 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-07-02 07:23:27 --> Unknown column 'student_registration' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `section_tbl`.`id`, `student_registration` as `sectID`
+FROM `section_tbl`
+INNER JOIN `strand_tbl` ON `section_tbl`.`strand_id` = `strand_tbl`.`id`
+INNER JOIN `student_registration` ON `section_tbl`.`id` = `student_registration`.`user_section`
+WHERE `section_tbl`.`strand_id` = \'6\'
+AND `section_tbl`.`year_level` = \'1st Year\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `section_tbl`.`id`, `student_registration` as `sectID`
+FROM `section_tbl`
+INNER JOIN `strand_tbl` ON `section_tbl`.`strand_id` = `strand_tbl`.`id`
+INNER JOIN `student_registration` ON `section_tbl`.`id` = `student_registration`.`user_section`
+WHERE `section_tbl`.`strand_id` = \'6\'
+AND `section_tbl`.`year_level` = \'1st Year\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `section_tbl`.`id`, `student_registration` as `sectID`
+FROM `section_tbl`
+INNER JOIN `strand_tbl` ON `section_tbl`.`strand_id` = `strand_tbl`.`id`
+INNER JOIN `student_registration` ON `section_tbl`.`id` = `student_registration`.`user_section`
+WHERE `section_tbl`.`strand_id` = \'6\'
+AND `section_tbl`.`year_level` = \'1st Year\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `section_tbl`.`id`, `student_registration` as `sectID`
+FROM `section_tbl`
+INNER JOIN `strand_tbl` ON `section_tbl`.`strand_id` = `strand_tbl`.`id`
+INNER JOIN `student_registration` ON `section_tbl`.`id` = `student_registration`.`user_section`
+WHERE `section_tbl`.`strand_id` = :section_tbl.strand_id:
+AND `section_tbl`.`year_level` = :section_tbl.year_level:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Section.php(450): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->section11('1st-Year')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-02 07:23:55 --> Undefined array key "secID"
+in APPPATH\Views\admin\section\first_year.php on line 473.
+ 1 APPPATH\Views\admin\section\first_year.php(473): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "secID"', 'APPPATH\\Views\\admin\\section\\first_year.php', 473)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\section\\first_year.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/section/first_year', [], true)
+ 5 APPPATH\Controllers\Section.php(460): view('admin/section/first_year', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->section11('1st-Year')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-02 07:24:18 --> Undefined array key 0
+in APPPATH\Views\admin\section\first_year.php on line 473.
+ 1 APPPATH\Views\admin\section\first_year.php(473): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\admin\\section\\first_year.php', 473)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\section\\first_year.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/section/first_year', [], true)
+ 5 APPPATH\Controllers\Section.php(460): view('admin/section/first_year', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->section11('1st-Year')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-02 07:26:28 --> Undefined array key "secyion"
+in APPPATH\Controllers\Section.php on line 461.
+ 1 APPPATH\Controllers\Section.php(461): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "secyion"', 'APPPATH\\Controllers\\Section.php', 461)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->section11('1st-Year', 'ABH')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-02 07:29:55 --> mysqli_sql_exception: Unknown column 'section_tbl' in 'field list' in C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `sect...', 0)
+#1 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `sect...')
+#2 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `sect...')
+#3 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `sect...', Array, false)
+#4 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\app\Controllers\Section.php(449): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\Section->section11('1st-Year', 'ABH')
+#7 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+#8 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-07-02 07:29:55 --> Unknown column 'section_tbl' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `section_tbl`.`id`, `section_tbl` as `secID`
+FROM `section_tbl`
+INNER JOIN `strand_tbl` ON `section_tbl`.`strand_id` = `strand_tbl`.`id`
+WHERE `section_tbl`.`strand_id` = \'6\'
+AND `section_tbl`.`year_level` = \'1st Year\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `section_tbl`.`id`, `section_tbl` as `secID`
+FROM `section_tbl`
+INNER JOIN `strand_tbl` ON `section_tbl`.`strand_id` = `strand_tbl`.`id`
+WHERE `section_tbl`.`strand_id` = \'6\'
+AND `section_tbl`.`year_level` = \'1st Year\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `section_tbl`.`id`, `section_tbl` as `secID`
+FROM `section_tbl`
+INNER JOIN `strand_tbl` ON `section_tbl`.`strand_id` = `strand_tbl`.`id`
+WHERE `section_tbl`.`strand_id` = \'6\'
+AND `section_tbl`.`year_level` = \'1st Year\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `section_tbl`.`id`, `section_tbl` as `secID`
+FROM `section_tbl`
+INNER JOIN `strand_tbl` ON `section_tbl`.`strand_id` = `strand_tbl`.`id`
+WHERE `section_tbl`.`strand_id` = :section_tbl.strand_id:
+AND `section_tbl`.`year_level` = :section_tbl.year_level:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Section.php(449): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->section11('1st-Year', 'ABH')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-02 07:30:05 --> mysqli_sql_exception: Unknown column 'section_tbl.subject' in 'field list' in C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `sect...', 0)
+#1 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `sect...')
+#2 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `sect...')
+#3 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `sect...', Array, false)
+#4 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\app\Controllers\Section.php(449): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\Section->section11('1st-Year', 'ABH')
+#7 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+#8 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-07-02 07:30:05 --> Unknown column 'section_tbl.subject' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `section_tbl`.`id`, `section_tbl`.`subject` as `secID`
+FROM `section_tbl`
+INNER JOIN `strand_tbl` ON `section_tbl`.`strand_id` = `strand_tbl`.`id`
+WHERE `section_tbl`.`strand_id` = \'6\'
+AND `section_tbl`.`year_level` = \'1st Year\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `section_tbl`.`id`, `section_tbl`.`subject` as `secID`
+FROM `section_tbl`
+INNER JOIN `strand_tbl` ON `section_tbl`.`strand_id` = `strand_tbl`.`id`
+WHERE `section_tbl`.`strand_id` = \'6\'
+AND `section_tbl`.`year_level` = \'1st Year\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `section_tbl`.`id`, `section_tbl`.`subject` as `secID`
+FROM `section_tbl`
+INNER JOIN `strand_tbl` ON `section_tbl`.`strand_id` = `strand_tbl`.`id`
+WHERE `section_tbl`.`strand_id` = \'6\'
+AND `section_tbl`.`year_level` = \'1st Year\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `section_tbl`.`id`, `section_tbl`.`subject` as `secID`
+FROM `section_tbl`
+INNER JOIN `strand_tbl` ON `section_tbl`.`strand_id` = `strand_tbl`.`id`
+WHERE `section_tbl`.`strand_id` = :section_tbl.strand_id:
+AND `section_tbl`.`year_level` = :section_tbl.year_level:', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Section.php(449): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->section11('1st-Year', 'ABH')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-02 07:30:24 --> Undefined variable $en
+in APPPATH\Views\admin\section\first_year.php on line 473.
+ 1 APPPATH\Views\admin\section\first_year.php(473): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $en', 'APPPATH\\Views\\admin\\section\\first_year.php', 473)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\section\\first_year.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/section/first_year', [], true)
+ 5 APPPATH\Controllers\Section.php(466): view('admin/section/first_year', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Section->section11('1st-Year', 'ABH')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Section))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-02 08:43:33 --> mysqli_sql_exception: Column 'cred_requested' cannot be null in C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `st...', 0)
+#1 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `st...')
+#2 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `st...')
+#3 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\app\Controllers\Credentials.php(179): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\Credentials->request_form()
+#9 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+#10 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-07-02 08:43:33 --> Column 'cred_requested' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `stud_req_tbl` (`lrn`, `purpose`, `cred_requested`, `cred_status`, `strand`, `section`) VALUES (\'B23-SHS232038\', \'asd\', NULL, \'3\', \'BPA\', \'BPA 1A\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `stud_req_tbl` (`lrn`, `purpose`, `cred_requested`, `cred_status`, `strand`, `section`) VALUES (\'B23-SHS232038\', \'asd\', NULL, \'3\', \'BPA\', \'BPA 1A\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `stud_req_tbl` (`lrn`, `purpose`, `cred_requested`, `cred_status`, `strand`, `section`) VALUES (\'B23-SHS232038\', \'asd\', NULL, \'3\', \'BPA\', \'BPA 1A\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `stud_req_tbl` (`lrn`, `purpose`, `cred_requested`, `cred_status`, `strand`, `section`) VALUES (:lrn:, :purpose:, :cred_requested:, :cred_status:, :strand:, :section:)', [...], false)
+ 5 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Credentials.php(179): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->request_form()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-02 08:44:22 --> mysqli_sql_exception: Column 'cred_requested' cannot be null in C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `st...', 0)
+#1 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `st...')
+#2 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `st...')
+#3 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\app\Controllers\Credentials.php(179): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\Credentials->request_form()
+#9 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+#10 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-07-02 08:44:22 --> Column 'cred_requested' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `stud_req_tbl` (`lrn`, `purpose`, `cred_requested`, `cred_status`, `strand`, `section`) VALUES (\'B23-SHS232038\', \'asd\', NULL, \'3\', \'BPA\', \'BPA 1A\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `stud_req_tbl` (`lrn`, `purpose`, `cred_requested`, `cred_status`, `strand`, `section`) VALUES (\'B23-SHS232038\', \'asd\', NULL, \'3\', \'BPA\', \'BPA 1A\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `stud_req_tbl` (`lrn`, `purpose`, `cred_requested`, `cred_status`, `strand`, `section`) VALUES (\'B23-SHS232038\', \'asd\', NULL, \'3\', \'BPA\', \'BPA 1A\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `stud_req_tbl` (`lrn`, `purpose`, `cred_requested`, `cred_status`, `strand`, `section`) VALUES (:lrn:, :purpose:, :cred_requested:, :cred_status:, :strand:, :section:)', [...], false)
+ 5 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Credentials.php(179): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->request_form()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-02 08:47:12 --> mysqli_sql_exception: Column 'cred_requested' cannot be null in C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `st...', 0)
+#1 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `st...')
+#2 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `st...')
+#3 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\app\Controllers\Credentials.php(179): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\Credentials->request_form()
+#9 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+#10 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-07-02 08:47:12 --> Column 'cred_requested' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `stud_req_tbl` (`lrn`, `purpose`, `cred_requested`, `cred_status`, `strand`, `section`) VALUES (\'B23-SHS232038\', \'asd\', NULL, \'3\', \'BPA\', \'BPA 1A\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `stud_req_tbl` (`lrn`, `purpose`, `cred_requested`, `cred_status`, `strand`, `section`) VALUES (\'B23-SHS232038\', \'asd\', NULL, \'3\', \'BPA\', \'BPA 1A\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `stud_req_tbl` (`lrn`, `purpose`, `cred_requested`, `cred_status`, `strand`, `section`) VALUES (\'B23-SHS232038\', \'asd\', NULL, \'3\', \'BPA\', \'BPA 1A\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `stud_req_tbl` (`lrn`, `purpose`, `cred_requested`, `cred_status`, `strand`, `section`) VALUES (:lrn:, :purpose:, :cred_requested:, :cred_status:, :strand:, :section:)', [...], false)
+ 5 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Credentials.php(179): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->request_form()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-02 08:47:24 --> mysqli_sql_exception: Column 'cred_requested' cannot be null in C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `st...', 0)
+#1 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `st...')
+#2 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `st...')
+#3 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\app\Controllers\Credentials.php(179): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\Credentials->request_form()
+#9 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+#10 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-07-02 08:47:24 --> Column 'cred_requested' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `stud_req_tbl` (`lrn`, `purpose`, `cred_requested`, `cred_status`, `strand`, `section`) VALUES (\'B23-SHS232038\', \'asd\', NULL, \'3\', \'BPA\', \'BPA 1A\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `stud_req_tbl` (`lrn`, `purpose`, `cred_requested`, `cred_status`, `strand`, `section`) VALUES (\'B23-SHS232038\', \'asd\', NULL, \'3\', \'BPA\', \'BPA 1A\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `stud_req_tbl` (`lrn`, `purpose`, `cred_requested`, `cred_status`, `strand`, `section`) VALUES (\'B23-SHS232038\', \'asd\', NULL, \'3\', \'BPA\', \'BPA 1A\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `stud_req_tbl` (`lrn`, `purpose`, `cred_requested`, `cred_status`, `strand`, `section`) VALUES (:lrn:, :purpose:, :cred_requested:, :cred_status:, :strand:, :section:)', [...], false)
+ 5 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Credentials.php(179): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->request_form()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-02 08:49:36 --> mysqli_sql_exception: Column 'cred_requested' cannot be null in C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `st...', 0)
+#1 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `st...')
+#2 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `st...')
+#3 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\app\Controllers\Credentials.php(190): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\Credentials->request_form()
+#9 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+#10 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-07-02 08:49:36 --> Column 'cred_requested' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `stud_req_tbl` (`lrn`, `purpose`, `cred_requested`, `cred_status`, `strand`, `section`) VALUES (\'B23-SHS232038\', \'asd\', NULL, \'3\', \'BPA\', \'BPA 1A\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `stud_req_tbl` (`lrn`, `purpose`, `cred_requested`, `cred_status`, `strand`, `section`) VALUES (\'B23-SHS232038\', \'asd\', NULL, \'3\', \'BPA\', \'BPA 1A\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `stud_req_tbl` (`lrn`, `purpose`, `cred_requested`, `cred_status`, `strand`, `section`) VALUES (\'B23-SHS232038\', \'asd\', NULL, \'3\', \'BPA\', \'BPA 1A\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `stud_req_tbl` (`lrn`, `purpose`, `cred_requested`, `cred_status`, `strand`, `section`) VALUES (:lrn:, :purpose:, :cred_requested:, :cred_status:, :strand:, :section:)', [...], false)
+ 5 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Credentials.php(190): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->request_form()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-02 08:52:05 --> mysqli_sql_exception: Operand should contain 1 column(s) in C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `st...', 0)
+#1 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `st...')
+#2 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `st...')
+#3 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\app\Controllers\Credentials.php(190): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\Credentials->request_form()
+#9 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+#10 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-07-02 08:52:05 --> Operand should contain 1 column(s)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `stud_req_tbl` (`lrn`, `purpose`, `cred_requested`, `cred_status`, `strand`, `section`) VALUES (\'B23-SHS232038\', \'Scholarship\', (\'COR\',\'1st Year\',\'1st Semester\'), \'3\', \'BPA\', \'BPA 1A\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `stud_req_tbl` (`lrn`, `purpose`, `cred_requested`, `cred_status`, `strand`, `section`) VALUES (\'B23-SHS232038\', \'Scholarship\', (\'COR\',\'1st Year\',\'1st Semester\'), \'3\', \'BPA\', \'BPA 1A\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `stud_req_tbl` (`lrn`, `purpose`, `cred_requested`, `cred_status`, `strand`, `section`) VALUES (\'B23-SHS232038\', \'Scholarship\', (\'COR\',\'1st Year\',\'1st Semester\'), \'3\', \'BPA\', \'BPA 1A\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `stud_req_tbl` (`lrn`, `purpose`, `cred_requested`, `cred_status`, `strand`, `section`) VALUES (:lrn:, :purpose:, :cred_requested:, :cred_status:, :strand:, :section:)', [...], false)
+ 5 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Credentials.php(190): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->request_form()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-02 08:55:51 --> join(): Argument #2 ($array) must be of type ?array, string given
+in APPPATH\Controllers\Credentials.php on line 176.
+ 1 APPPATH\Controllers\Credentials.php(176): join(',', 'COR')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->request_form()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-02 09:21:22 --> join(): Argument #1 ($pieces) must be of type array, string given
+in APPPATH\Controllers\Credentials.php on line 171.
+ 1 APPPATH\Controllers\Credentials.php(171): join(', ', null)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->request_form()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-02 09:21:28 --> join(): Argument #1 ($pieces) must be of type array, string given
+in APPPATH\Controllers\Credentials.php on line 171.
+ 1 APPPATH\Controllers\Credentials.php(171): join(', ', null)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->request_form()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-02 10:42:47 --> join(): Argument #1 ($pieces) must be of type array, string given
+in APPPATH\Controllers\Credentials.php on line 171.
+ 1 APPPATH\Controllers\Credentials.php(171): join(', ', null)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->request_form()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-02 10:43:16 --> mysqli_sql_exception: Column 'cred_requested' cannot be null in C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `st...', 0)
+#1 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `st...')
+#2 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `st...')
+#3 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\app\Controllers\Credentials.php(182): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\Credentials->request_form()
+#9 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+#10 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-07-02 10:43:16 --> Column 'cred_requested' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `stud_req_tbl` (`lrn`, `purpose`, `cred_requested`, `cred_status`, `strand`, `section`) VALUES (\'B23-SHS232038\', \'asd\', NULL, \'3\', \'BPA\', \'BPA 1A\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `stud_req_tbl` (`lrn`, `purpose`, `cred_requested`, `cred_status`, `strand`, `section`) VALUES (\'B23-SHS232038\', \'asd\', NULL, \'3\', \'BPA\', \'BPA 1A\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `stud_req_tbl` (`lrn`, `purpose`, `cred_requested`, `cred_status`, `strand`, `section`) VALUES (\'B23-SHS232038\', \'asd\', NULL, \'3\', \'BPA\', \'BPA 1A\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `stud_req_tbl` (`lrn`, `purpose`, `cred_requested`, `cred_status`, `strand`, `section`) VALUES (:lrn:, :purpose:, :cred_requested:, :cred_status:, :strand:, :section:)', [...], false)
+ 5 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Credentials.php(182): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->request_form()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-02 10:43:48 --> mysqli_sql_exception: Column 'cred_requested' cannot be null in C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `st...', 0)
+#1 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `st...')
+#2 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `st...')
+#3 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\app\Controllers\Credentials.php(184): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(927): App\Controllers\Credentials->request_form()
+#9 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+#10 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\New folder\New folder\Dormehi-Enrollment-System - Copy\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-07-02 10:43:48 --> Column 'cred_requested' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `stud_req_tbl` (`lrn`, `purpose`, `cred_requested`, `cred_status`, `strand`, `section`) VALUES (\'B23-SHS232038\', \'asd\', NULL, \'3\', \'BPA\', \'BPA 1A\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `stud_req_tbl` (`lrn`, `purpose`, `cred_requested`, `cred_status`, `strand`, `section`) VALUES (\'B23-SHS232038\', \'asd\', NULL, \'3\', \'BPA\', \'BPA 1A\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `stud_req_tbl` (`lrn`, `purpose`, `cred_requested`, `cred_status`, `strand`, `section`) VALUES (\'B23-SHS232038\', \'asd\', NULL, \'3\', \'BPA\', \'BPA 1A\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `stud_req_tbl` (`lrn`, `purpose`, `cred_requested`, `cred_status`, `strand`, `section`) VALUES (:lrn:, :purpose:, :cred_requested:, :cred_status:, :strand:, :section:)', [...], false)
+ 5 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Credentials.php(184): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->request_form()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-02 11:21:56 --> Undefined array key "credential"
+in APPPATH\Controllers\Credentials.php on line 171.
+ 1 APPPATH\Controllers\Credentials.php(171): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "credential"', 'APPPATH\\Controllers\\Credentials.php', 171)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->request_form()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-02 11:22:05 --> Undefined array key "credential[]"
+in APPPATH\Controllers\Credentials.php on line 171.
+ 1 APPPATH\Controllers\Credentials.php(171): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "credential[]"', 'APPPATH\\Controllers\\Credentials.php', 171)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->request_form()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-02 11:39:08 --> implode(): Argument #2 ($array) must be of type ?array, string given
+in APPPATH\Controllers\Credentials.php on line 176.
+ 1 APPPATH\Controllers\Credentials.php(176): implode(', ', 'TOR')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->request_form()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-02 11:42:58 --> join(): Argument #2 ($array) must be of type ?array, string given
+in APPPATH\Controllers\Credentials.php on line 174.
+ 1 APPPATH\Controllers\Credentials.php(174): join(', ', '1st Sem')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->request_form()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-02 11:43:16 --> join(): Argument #2 ($array) must be of type ?array, string given
+in APPPATH\Controllers\Credentials.php on line 174.
+ 1 APPPATH\Controllers\Credentials.php(174): join(', ', '1st Sem')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->request_form()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-02 11:43:27 --> join(): Argument #1 ($pieces) must be of type array, string given
+in APPPATH\Controllers\Credentials.php on line 176.
+ 1 APPPATH\Controllers\Credentials.php(176): join(', ', null)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->request_form()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-02 11:44:26 --> join(): Argument #1 ($pieces) must be of type array, string given
+in APPPATH\Controllers\Credentials.php on line 177.
+ 1 APPPATH\Controllers\Credentials.php(177): join(', ', null)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->request_form()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-02 11:49:47 --> implode(): Argument #2 ($array) must be of type ?array, string given
+in APPPATH\Controllers\Credentials.php on line 176.
+ 1 APPPATH\Controllers\Credentials.php(176): implode(', ', 'TOR')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Credentials->request_form()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Credentials))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

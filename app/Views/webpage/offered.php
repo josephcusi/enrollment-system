@@ -1,221 +1,400 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+<!-- Mirrored from kalanidhithemes.com/live-preview/landing-page/apper/all-demo/01-app-landing-page-defoult/blog-list.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 08 Aug 2023 09:08:13 GMT -->
+<head>
 
-    <title>BCC | Offers</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BCC | Courses</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="<?=base_url()?>/webpage/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<!--
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-TemplateMo 546 Sixteen Clothing
+  <!-- icofont-css-link -->
+  <link rel="stylesheet" href="<?=base_url()?>/webpage/css/icofont.min.css">
+  <!-- Owl-Carosal-Style-link -->
+  <link rel="stylesheet" href="<?=base_url()?>/webpage/css/owl.carousel.min.css">
+  <!-- Bootstrap-Style-link -->
+  <link rel="stylesheet" href="<?=base_url()?>/webpage/css/bootstrap.min.css">
+  <!-- Aos-Style-link -->
+  <link rel="stylesheet" href="<?=base_url()?>/webpage/css/aos.css">
+  <!-- Coustome-Style-link -->
+  <link rel="stylesheet" href="<?=base_url()?>/webpage/css/style.css">
+  <!-- Responsive-Style-link -->
+  <link rel="stylesheet" href="<?=base_url()?>/webpage/css/responsive.css">
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="<?=base_url()?>/webpage/images/bccLogo.png" type="image/x-icon">
+  <style>
+      .containerz {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 20vh;
+      
+    }
+    .box {
+      width: 900px;
+      height: auto;
+      border: 1px solid #ccc;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+    }
+    .table {
+      font-size: 14px;
+    }
+    .card-title {
+      margin: 0;
+    }
+    .custom-list-icon {
+      padding-right: 0px;
+    }
+    .custom-link {
+      display: block;
+      color: maroon;
+      text-decoration: none;
+    }
+    .custom-link:hover {
+      text-decoration: underline;
+    }
+        .lds-hidden {
+                display: none;
+            }
 
-https://templatemo.com/tm-546-sixteen-clothing
+            .lds-container {
+                background: #8c0001;
+                height: 100%;
+                position: fixed;
+                text-align: center;
+                user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                -webkit-user-select: none;
+                width: 100%;
+                z-index: 10000000000000000000000000000000000000000000;
+            }
 
--->
+            .lds-container>div {
+                height: 100%;
+                position: relative;
+                width: 100%;
+            }
 
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="<?=base_url()?>/webpage/assets/css/fontawesome.css">
-    <link rel="stylesheet" href="<?=base_url()?>/webpage/assets/css/templatemo-sixteen.css">
-    <link rel="stylesheet" href="<?=base_url()?>/webpage/assets/css/owl.css">
+            .lds-logo {
+                position: absolute;
+                top: 50%;
+                transform: translate(0, -50%);
+                width: 100%;
+            }
 
-  </head>
+            .lds-logo img {
+              min-width: 0%;
+              min-height:0%;
+              max-width: 100%;
+              max-height:100%;
+                            }
 
-  <body>
+            .lds-logo-caption {
+                                color: #ffffff;
+                margin-top: 1rem;
+            }
+  </style>
+</head>
 
-    <!-- ***** Preloader Start ***** -->
-    <div id="preloader">
-        <div class="jumper">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </div>
-    <!-- ***** Preloader End ***** -->
+<body>
 
-    <!-- Header -->
-    <header class="">
-      <nav class="navbar navbar-expand-lg">
-        <div class="container">
-          <a class="navbar-brand" href="index.html"><img src="<?=base_url()?>/cssjs/img/bccLogo.png" alt="dormehi Logo" class="brand-image img-circle elevation-3" style="opacity: 10;width:65px;">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+  <!-- Page-wrapper-Start -->
+  <div class="page_wrapper">
+
+    <!-- Preloader -->
+   <!--<div id = "loaderist" class="lds-container">-->
+   <!--     <div>-->
+   <!--       <div class="lds-logo">-->
+   <!--         <img src="<?=base_url()?>/webpage/images/loading-screen.gif" alt="Loading Screen" />-->
+   <!--         <div class="lds-logo-caption">Getting things ready. Please wait...</div>-->
+   <!--       </div>-->
+   <!--     </div>-->
+   <!--   </div>-->
+
+    <!-- Header Start -->
+    <header>
+      <!-- container start -->
+      <div class="container">
+      	<!-- navigation bar -->
+        <nav class="navbar navbar-expand-lg"style = "color:maroon;">
+          <a class="navbar-brand" href="#">
+            <img src="<?=base_url()?>/webpage/images/logo.png" alt="image" >
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">
+              <!-- <i class="icofont-navigation-menu ico_menu"></i> -->
+              <div class="toggle-wrap">
+                <span class="toggle-bar"></span>
+              </div>
+            </span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarResponsive">
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
+              <!-- secondery menu start -->
               <li class="nav-item">
-                <a class="nav-link" href="<?=base_url('/landing')?>">Home
-                  <span class="sr-only">(current)</span>
-                </a>
+                <a class="nav-link" href="<?=base_url('/landing')?>">Home</a>
               </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="<?=base_url('/offered')?>">Offers</a>
+              <li>
+                <a class="nav-link active" href="<?=base_url('/offered')?>">Courses</a>
               </li>
+              <!-- secondery menu end -->
               <li class="nav-item">
-                <a class="nav-link" href="<?=base_url('/about')?>">About Us</a>
+                <a class="nav-link" href="<?=base_url('/landing#faq')?>">FAQs</a>
               </li>
-              <li class="nav-item">
+              <li>
+                <a class="nav-link"  href="<?=base_url('/about')?>">About Us</a>
+              </li>
+              <li>
                 <a class="nav-link" href="<?=base_url('/contact')?>">Contact Us</a>
               </li>
-              <li class="nav-item" style = "color:maroon;">
-                <a class="nav-link" href="<?=base_url('/login')?>">Login</a>
+           
+              <li class="nav-item">
+                <a class="nav-link dark_btn" href="<?=base_url('/login')?>">ENROLL NOW</a>
               </li>
             </ul>
           </div>
-        </div>
-      </nav>
+        </nav>
+        <!-- navigation end -->
+      </div>
+      <!-- container end -->
     </header>
 
-    <!-- Page Content -->
-    <div class="page-heading products-heading header-text">
+
+    <!-- BredCrumb-Section -->
+    <div class="bred_crumb">
       <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="text-content">
-              <h4>offers</h4>
-              <h2>Track and Program</h2>
-            </div>
-          </div>
+        <!-- shape animation  -->
+        <span class="banner_shape1"> <img src="<?=base_url()?>/webpage/images/banner-shape1.png" alt="image" > </span>
+        <span class="banner_shape2"> <img src="<?=base_url()?>/webpage/images/banner-shape2.png" alt="image" > </span>
+        <span class="banner_shape3"> <img src="<?=base_url()?>/webpage/images/banner-shape3.png" alt="image" > </span>
+
+        <div class="bred_text" style = "color:gray">
+          <h1>Courses</h1>
+          <ul>
+            <li><a href="<?=base_url('/landing')?>">Home</a></li>
+            <li><span>»</span></li>
+            <li><a href="#">Courses</a></li>
+          </ul>
+         
         </div>
       </div>
     </div>
+<br>
 
+   
+  <!-- Card body END -->
+</div>
+<br>
+<div class="section_title" data-aos="fade-in" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
+  <h2><span>College Programs</span></h2>
+  <p>Prepare yourself for success with essential skills and knowledge, making you a <br>sought-after professional ready for real-world challenges.</p>
+</div>
+<div class="containerz" data-aos="fade-in" data-aos-duration="1500" data-aos-delay="100">
+ 
+<div class="box">
+  <h5 class="card-title mb-3">Arts and Sciences</h5>
+  <table class="table align-middle p-4 mb-0">
+    <tr>
+      <td class="custom-list-icon">
+        <i class="fas fa-angle-double-right"></i>
+      </td>
+      <td>
+        <a class="custom-link" 
+        style="background-color:none;"  data-courses="ABH" 
+        data-post="post" href="<?= base_url('offered' . '/' . 'ABH');?>">Bachelor of Arts in History (ABH)</a>
 
-    <div class="latest-products">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="section-heading">
-              <h2 style = "color:maroon;font-weight:bold;text-align:center;">Academic Track</h2>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="product-item">
-              <a href="#"><img src="<?=base_url()?>/webpage/assets/images/product_01.jpg" alt=""></a>
-              <div class="down-content">
-                <a href="#"><h4>Tittle goes here</h4></a>
-                    <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
+      </td>
+    </tr>
+    <tr>
+      <td class="custom-list-icon">
+        <i class="fas fa-angle-double-right"></i>
+      </td>
+      <td>
+        <a class="custom-link" 
+        style="background-color:none;"  data-courses="BPA" 
+        data-post="post" href="<?= base_url('offered' . '/' . 'BPA');?>">Bachelor of Public Administration (BPA)</a>
+      </td>
+    </tr>
+      
+  </table>
 
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="product-item">
-              <a href="#"><img src="<?=base_url()?>/webpage/assets/images/product_02.jpg" alt=""></a>
-              <div class="down-content">
-                <a href="#"><h4>Tittle goes here</h4></a>
-                    <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
-
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="product-item">
-              <a href="#"><img src="<?=base_url()?>/webpage/assets/images/product_03.jpg" alt=""></a>
-              <div class="down-content">
-                <a href="#"><h4>Tittle goes here</h4></a>
-                    <p>Sixteen Clothing is free CSS template provided by TemplateMo.</p>
-
-              </div>
-            </div>
-          </div>
-
-
-
-        </div>
-      </div>
-    </div>
-    <div class="latest-products">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="section-heading">
-              <h2 style = "color:maroon;font-weight:bold;text-align:center;">College Program/s</h2>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="product-item">
-              <a href="#"><img src="<?=base_url()?>/webpage/assets/images/product_01.jpg" alt=""></a>
-              <div class="down-content">
-                <a href="#"><h4>Tittle goes here</h4></a>
-                    <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
-
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="product-item">
-              <a href="#"><img src="<?=base_url()?>/webpage/assets/images/product_02.jpg" alt=""></a>
-              <div class="down-content">
-                <a href="#"><h4>Tittle goes here</h4></a>
-                    <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
-
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="product-item">
-              <a href="#"><img src="<?=base_url()?>/webpage/assets/images/product_03.jpg" alt=""></a>
-              <div class="down-content">
-                <a href="#"><h4>Tittle goes here</h4></a>
-                    <p>Sixteen Clothing is free CSS template provided by TemplateMo.</p>
-
-              </div>
-            </div>
-          </div>
-
-
-
-        </div>
-      </div>
-    </div>
-
-
+</div>
+<!-- Card body END -->
+</div>
+<div class="containerz" data-aos="fade-in" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
+ 
+  <div class="box">
+    <h5 class="card-title mb-3">Education</h5>
+    <table class="table align-middle p-4 mb-0">
+      <tr>
+        <td class="custom-list-icon">
+          <i class="fas fa-angle-double-right"></i>
+        </td>
+        <td>
+        <a class="custom-link" 
+        style="background-color:none;"  data-courses="BTVTED" 
+        data-post="post" href="<?= base_url('offered' . '/' . 'BTVTED');?>">Bachelor in Technical-Vocational Teacher Education (BTVTED)</a>
+      </td>
+      </tr>
+      <tr>
+      </tr>
+        
+    </table>
+  
+  </div>
+  <!-- Card body END -->
+  </div>
+<br>
+<br>
+    <!-- Story-Section-end -->
+    <!-- News-Letter-Section-Start -->
     <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="inner-content">
-              <p>Copyright &copy; 2023 <a style = "color:maroon;font-weight:bold;">Baco Community College.<a>
-            </div>
+        <div class="top_footer" id="contact">
+          <!-- animation line -->
+          <div class="anim_line dark_bg">
+            <span><img src="<?=base_url()?>/webpage/images/anim_line.png" alt="anim_line"></span>
+            <span><img src="<?=base_url()?>/webpage/images/anim_line.png" alt="anim_line"></span>
+            <span><img src="<?=base_url()?>/webpage/images/anim_line.png" alt="anim_line"></span>
+            <span><img src="<?=base_url()?>/webpage/images/anim_line.png" alt="anim_line"></span>
+            <span><img src="<?=base_url()?>/webpage/images/anim_line.png" alt="anim_line"></span>
+            <span><img src="<?=base_url()?>/webpage/images/anim_line.png" alt="anim_line"></span>
+            <span><img src="<?=base_url()?>/webpage/images/anim_line.png" alt="anim_line"></span>
+            <span><img src="<?=base_url()?>/webpage/images/anim_line.png" alt="anim_line"></span>
+            <span><img src="<?=base_url()?>/webpage/images/anim_line.png" alt="anim_line"></span>
           </div>
+          	<!-- container start -->
+            <div class="container">
+              <!-- row start -->
+              <div class="row">
+              	  <!-- footer link 1 -->
+                  <div class="col-lg-4 col-md-6 col-12">
+                      <div class="abt_side">
+                        <div class="logo"> <img src="<?=base_url()?>/webpage/images/logo.png" alt="image" ></div>
+                        <ul>
+                          <li><a href="#">bccregistrar1@gmail.com</a></li>
+                          <li><a href="#">+63 995 (462) 318</a></li>
+                        </ul>
+                        <ul class="social_media">
+                            <li><a href="https://www.facebook.com/BCCbaco2014/"><i class="icofont-facebook"></i></a></li>
+                          
+                        </ul>
+                      </div>
+                  </div>
+
+                  <!-- footer link 2 -->
+                  <div class="col-lg-3 col-md-6 col-12">
+                      <div class="links">
+                        <h3>Useful Links</h3>
+                          <ul>
+                            <li><a href="<?=base_url('/landing')?>">Home</a></li>
+                            <li><a href="<?=base_url('/about')?>">About us</a></li>
+                            <li><a href="<?=base_url('/offered')?>">Courses</a></li>
+        
+                            <li><a href="<?=base_url('/contact')?>">Contact us</a></li>
+                          </ul>
+                      </div>
+                  </div>
+
+                  <!-- footer link 3 -->
+                  <div class="col-lg-3 col-md-6 col-12">
+                    <div class="links">
+                      <h3>Help & Support</h3>
+                        <ul>
+                          <li><a href="<?=base_url('/landing#faq')?>">FAQs</a></li>
+                          
+                        
+                        </ul>
+                    </div>
+                  </div>
+
+                  <!-- footer link 4 -->
+                  
+              </div>
+              <!-- row end -->
+          </div>
+          <!-- container end -->
         </div>
-      </div>
+
+        <!-- last footer -->
+        <div class="bottom_footer">
+        	<!-- container start -->
+            <div class="container">
+              <!-- row start -->
+              <div class="row">
+                <div class="col-md-6">
+                    <p>© Copyrights 2023. All rights reserved.</p>
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+            <!-- row end -->
+            </div>
+            <!-- container end -->
+        </div>
+
+        <!-- go top button -->
+       
     </footer>
+    <!-- Footer-Section end -->
+        <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
 
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="<?=base_url()?>/webpage/vendor/jquery/jquery.min.js"></script>
-    <script src="<?=base_url()?>/webpage/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-
-    <!-- Additional Scripts -->
-    <script src="<?=base_url()?>/webpage/assets/js/custom.js"></script>
-    <script src="<?=base_url()?>/webpage/assets/js/owl.js"></script>
-    <script src="<?=base_url()?>/webpage/assets/js/slick.js"></script>
-    <script src="<?=base_url()?>/webpage/assets/js/isotope.js"></script>
-    <script src="<?=base_url()?>/webpage/assets/js/accordions.js"></script>
-
-
-    <script language = "text/Javascript">
-      cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
-      function clearField(t){                   //declaring the array outside of the
-      if(! cleared[t.id]){                      // function makes it static and global
-          cleared[t.id] = 1;  // you could use true and false, but that's more typing
-          t.value='';         // with more chance of typos
-          t.style.color='#fff';
-          }
-      }
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "103273191216469");
+      chatbox.setAttribute("attribution", "biz_inbox");
     </script>
 
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v17.0'
+        });
+      };
 
-  </body>
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
 
+  </div>
+  <!-- Page-wrapper-End -->
+
+  <!-- Jquery-js-Link -->
+  <script src="<?=base_url()?>/webpage/js/jquery.js"></script>
+  <!-- owl-js-Link -->
+  <script src="<?=base_url()?>/webpage/js/owl.carousel.min.js"></script>
+  <!-- bootstrap-js-Link -->
+  <script src="<?=base_url()?>/webpage/js/bootstrap.min.js"></script>
+  <!-- aos-js-Link -->
+  <script src="<?=base_url()?>/webpage/js/aos.js"></script>
+  <!-- main-js-Link -->
+  <script src="<?=base_url()?>/webpage/js/main.js"></script>
+  <script src="<?=base_url()?>/webpage/js/loads.js"></script>
+
+</body>
+
+
+<!-- Mirrored from kalanidhithemes.com/live-preview/landing-page/apper/all-demo/01-app-landing-page-defoult/blog-list.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 08 Aug 2023 09:08:40 GMT -->
 </html>

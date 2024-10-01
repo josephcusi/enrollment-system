@@ -14,7 +14,7 @@ class YearModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['year', 'semester', 'status'];
+    protected $allowedFields    = ['school_logo', 'year', 'semester', 'status', 'enroll_status'];
 
     // Dates
     protected $useTimestamps = false;

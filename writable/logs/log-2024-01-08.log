@@ -1,0 +1,22 @@
+ERROR - 2024-01-08 15:57:55 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2024-01-08 15:57:55 --> 220 smtp.googlemail.com ESMTP jl3-20020a170903134300b001d4e04b6411sm365166plb.69 - gsmtp
+
+hello: 250-smtp.googlemail.com at your service, [2a02:4780:3:1140:0:1479:a5ab:3]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 250 2.1.0 OK jl3-20020a170903134300b001d4e04b6411sm365166plb.69 - gsmtp
+
+to: 250 2.1.5 OK jl3-20020a170903134300b001d4e04b6411sm365166plb.69 - gsmtp
+
+data: 
+The following SMTP error was encountered: 
+quit: 354  Go ahead jl3-20020a170903134300b001d4e04b6411sm365166plb.69 - gsmtp
+
+The following SMTP error was encountered: 354  Go ahead jl3-20020a170903134300b001d4e04b6411sm365166plb.69 - gsmtp
+

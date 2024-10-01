@@ -14,7 +14,7 @@ class CredentialModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['lrn', 'class_card', 'good_moral', 'form_137', 'birth_cert'];
+    protected $allowedFields    = ['user_id', 'class_card', 'good_moral', 'form_137', 'birth_cert', 'brgy_certificate', '2x2_picture', 'credential_status', 'online_status'];
 
     // Dates
     protected $useTimestamps = false;

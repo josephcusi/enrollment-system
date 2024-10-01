@@ -1,0 +1,519 @@
+CRITICAL - 2024-09-11 09:48:00 --> Class "Locale" not found
+in SYSTEMPATH\CodeIgniter.php on line 186.
+ 1 ROOTPATH\spark(83): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-09-11 02:49:04 --> Creation of dynamic property App\Controllers\Webpage::$announcement_model is deprecated
+in APPPATH\Controllers\Webpage.php on line 22.
+ 1 APPPATH\Controllers\Webpage.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Creation of dynamic property App\\Controllers\\Webpage::$announcement_model is deprecated', 'APPPATH\\Controllers\\Webpage.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\Webpage->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2024-09-11 03:06:07 --> Creation of dynamic property App\Controllers\Webpage::$announcement_model is deprecated
+in APPPATH\Controllers\Webpage.php on line 22.
+ 1 APPPATH\Controllers\Webpage.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Creation of dynamic property App\\Controllers\\Webpage::$announcement_model is deprecated', 'APPPATH\\Controllers\\Webpage.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\Webpage->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2024-09-11 03:07:54 --> Creation of dynamic property App\Controllers\Webpage::$announcement_model is deprecated
+in APPPATH\Controllers\Webpage.php on line 23.
+ 1 APPPATH\Controllers\Webpage.php(23): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Creation of dynamic property App\\Controllers\\Webpage::$announcement_model is deprecated', 'APPPATH\\Controllers\\Webpage.php', 23)
+ 2 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\Webpage->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2024-09-11 03:07:55 --> Creation of dynamic property App\Controllers\Webpage::$announcement_model is deprecated
+in APPPATH\Controllers\Webpage.php on line 23.
+ 1 APPPATH\Controllers\Webpage.php(23): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Creation of dynamic property App\\Controllers\\Webpage::$announcement_model is deprecated', 'APPPATH\\Controllers\\Webpage.php', 23)
+ 2 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\Webpage->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2024-09-11 03:08:53 --> Attribute "AllowDynamicProperties" cannot target method (allowed targets: class)
+in APPPATH\Controllers\Webpage.php on line 19.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2024-09-11 03:09:11 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\bacocommunitycollege\system\Database\MySQLi\Connection.php:170
+Stack trace:
+#0 C:\xampp\htdocs\bacocommunitycollege\system\Database\MySQLi\Connection.php(170): mysqli->real_connect('127.0.0.1', 'root', Object(SensitiveParameterValue), 'u343516587_bccw...', 3306, '', 0)
+#1 C:\xampp\htdocs\bacocommunitycollege\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\bacocommunitycollege\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\bacocommunitycollege\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\bacocommunitycollege\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\bacocommunitycollege\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\bacocommunitycollege\app\Controllers\Webpage.php(52): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\bacocommunitycollege\system\CodeIgniter.php(927): App\Controllers\Webpage->landing()
+#8 C:\xampp\htdocs\bacocommunitycollege\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Webpage))
+#9 C:\xampp\htdocs\bacocommunitycollege\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\bacocommunitycollege\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\bacocommunitycollege\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\bacocommunitycollege\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\bacocommunitycollege\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\bacocommunitycollege\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\bacocommunitycollege\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\bacocommunitycollege\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\bacocommunitycollege\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\bacocommunitycollege\app\Controllers\Webpage.php(52): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\bacocommunitycollege\system\CodeIgniter.php(927): App\Controllers\Webpage->landing()
+#7 C:\xampp\htdocs\bacocommunitycollege\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Webpage))
+#8 C:\xampp\htdocs\bacocommunitycollege\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\bacocommunitycollege\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\bacocommunitycollege\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-09-11 03:09:11 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `announcement_tbl`
+WHERE `type` = :type:
+AND YEAR(event_start) = :YEAR(event_start):
+AND MONTH(event_start) = :MONTH(event_start):', [...], false)
+ 3 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Webpage.php(52): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Webpage->landing()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Webpage))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2024-09-11 03:09:40 --> Creation of dynamic property App\Controllers\Webpage::$announcement_model is deprecated
+in APPPATH\Controllers\Webpage.php on line 21.
+ 1 APPPATH\Controllers\Webpage.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Creation of dynamic property App\\Controllers\\Webpage::$announcement_model is deprecated', 'APPPATH\\Controllers\\Webpage.php', 21)
+ 2 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\Webpage->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2024-09-11 03:09:42 --> Creation of dynamic property App\Controllers\Webpage::$announcement_model is deprecated
+in APPPATH\Controllers\Webpage.php on line 21.
+ 1 APPPATH\Controllers\Webpage.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Creation of dynamic property App\\Controllers\\Webpage::$announcement_model is deprecated', 'APPPATH\\Controllers\\Webpage.php', 21)
+ 2 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\Webpage->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2024-09-11 03:09:42 --> Creation of dynamic property App\Controllers\Webpage::$announcement_model is deprecated
+in APPPATH\Controllers\Webpage.php on line 21.
+ 1 APPPATH\Controllers\Webpage.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Creation of dynamic property App\\Controllers\\Webpage::$announcement_model is deprecated', 'APPPATH\\Controllers\\Webpage.php', 21)
+ 2 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\Webpage->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2024-09-11 03:09:49 --> Creation of dynamic property App\Controllers\Webpage::$announcement_model is deprecated
+in APPPATH\Controllers\Webpage.php on line 22.
+ 1 APPPATH\Controllers\Webpage.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Creation of dynamic property App\\Controllers\\Webpage::$announcement_model is deprecated', 'APPPATH\\Controllers\\Webpage.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\Webpage->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2024-09-11 03:10:16 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\bacocommunitycollege\system\Database\MySQLi\Connection.php:170
+Stack trace:
+#0 C:\xampp\htdocs\bacocommunitycollege\system\Database\MySQLi\Connection.php(170): mysqli->real_connect('127.0.0.1', 'root', Object(SensitiveParameterValue), 'u343516587_bccw...', 3306, '', 0)
+#1 C:\xampp\htdocs\bacocommunitycollege\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\bacocommunitycollege\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\bacocommunitycollege\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\bacocommunitycollege\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\bacocommunitycollege\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\bacocommunitycollege\app\Controllers\Webpage.php(51): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\bacocommunitycollege\system\CodeIgniter.php(927): App\Controllers\Webpage->landing()
+#8 C:\xampp\htdocs\bacocommunitycollege\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Webpage))
+#9 C:\xampp\htdocs\bacocommunitycollege\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\bacocommunitycollege\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\bacocommunitycollege\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\bacocommunitycollege\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\bacocommunitycollege\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\bacocommunitycollege\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\bacocommunitycollege\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\bacocommunitycollege\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\bacocommunitycollege\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\bacocommunitycollege\app\Controllers\Webpage.php(51): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\bacocommunitycollege\system\CodeIgniter.php(927): App\Controllers\Webpage->landing()
+#7 C:\xampp\htdocs\bacocommunitycollege\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Webpage))
+#8 C:\xampp\htdocs\bacocommunitycollege\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\bacocommunitycollege\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\bacocommunitycollege\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-09-11 03:10:16 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `announcement_tbl`
+WHERE `type` = :type:
+AND YEAR(event_start) = :YEAR(event_start):
+AND MONTH(event_start) = :MONTH(event_start):', [...], false)
+ 3 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Webpage.php(51): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Webpage->landing()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Webpage))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2024-09-11 03:11:46 --> Creation of dynamic property App\Controllers\User::$session is deprecated
+in APPPATH\Controllers\BaseController.php on line 50.
+ 1 APPPATH\Controllers\BaseController.php(50): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Creation of dynamic property App\\Controllers\\User::$session is deprecated', 'APPPATH\\Controllers\\BaseController.php', 50)
+ 2 SYSTEMPATH\CodeIgniter.php(890): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2024-09-11 03:19:54 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Profile.php on line 1467.
+ 1 APPPATH\Controllers\Profile.php(1467): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Profile.php', 1467)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->curriculumSubject()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2024-09-11 03:20:01 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Profile.php on line 1467.
+ 1 APPPATH\Controllers\Profile.php(1467): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Profile.php', 1467)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->curriculumSubject()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2024-09-11 03:21:37 --> The PHP GD extension is required, but is not installed.
+in VENDORPATH\dompdf\dompdf\lib\Cpdf.php on line 5813.
+ 1 VENDORPATH\dompdf\dompdf\src\Adapter\CPDF.php(669): Dompdf\Cpdf->addPngFromFile('C:\\Users\\user\\AppData\\Local\\Temp\\ca_15DE.tmp', 12.24, 366.89324999999997, 556.5, 210.75)
+ 2 VENDORPATH\dompdf\dompdf\src\Renderer\Image.php(65): Dompdf\Adapter\CPDF->image('C:\\Users\\user\\AppData\\Local\\Temp\\ca_15DE.tmp', 12.24, 214.35675000000003, 556.5, 210.75, 'normal')
+ 3 VENDORPATH\dompdf\dompdf\src\Renderer.php(289): Dompdf\Renderer\Image->render(Object(Dompdf\FrameDecorator\Image))
+ 4 VENDORPATH\dompdf\dompdf\src\Renderer.php(128): Dompdf\Renderer->_render_frame('image', Object(Dompdf\FrameDecorator\Image))
+ 5 VENDORPATH\dompdf\dompdf\src\Renderer.php(195): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Image))
+ 6 VENDORPATH\dompdf\dompdf\src\Renderer.php(195): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+ 7 VENDORPATH\dompdf\dompdf\src\Renderer.php(195): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+ 8 VENDORPATH\dompdf\dompdf\src\Renderer.php(195): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+ 9 VENDORPATH\dompdf\dompdf\src\FrameReflower\Page.php(149): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+10 VENDORPATH\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(913): Dompdf\FrameReflower\Page->reflow(null)
+11 VENDORPATH\dompdf\dompdf\src\Dompdf.php(765): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow()
+12 APPPATH\Controllers\Admin.php(515): Dompdf\Dompdf->render()
+13 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->download_records()
+14 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+15 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+17 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2024-09-11 03:21:42 --> Allowed memory size of 536870912 bytes exhausted (tried to allocate 262148096 bytes)
+in APPPATH\Views\errors\html\error_exception.php on line 96.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2024-09-11 03:23:09 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
+AND `student_registration`.`year` = '2024-2025'
+AND `student_registration`....' at line 14 in C:\xampp\htdocs\bacocommunitycollege\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\bacocommunitycollege\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `stud...', 0)
+#1 C:\xampp\htdocs\bacocommunitycollege\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `stud...')
+#2 C:\xampp\htdocs\bacocommunitycollege\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `stud...')
+#3 C:\xampp\htdocs\bacocommunitycollege\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `stud...', Array, false)
+#4 C:\xampp\htdocs\bacocommunitycollege\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\bacocommunitycollege\app\Controllers\Teacher.php(174): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\bacocommunitycollege\system\CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard('1st-Year')
+#7 C:\xampp\htdocs\bacocommunitycollege\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+#8 C:\xampp\htdocs\bacocommunitycollege\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\bacocommunitycollege\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\bacocommunitycollege\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-09-11 03:23:09 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
+AND `student_registration`.`year` = '2024-2025'
+AND `student_registration`....' at line 14
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `student_registration`.`id`, `prospectrus_tbl`.`id` as `prospectus_id`, `student_registration`.`lrn` as `stud_lrn`, `student_grading`.`id` as `stud_id`, `student_grading`.`subject_id` as `sub_id`, `prospectrus_tbl`.`id` as `pros_id`, `schedule_tbl`.`subject_id` as `sched_id`
+FROM `student_registration`
+INNER JOIN `schedule_tbl` ON `student_registration`.`user_section` = `schedule_tbl`.`section_id`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+LEFT JOIN `student_grading` ON `student_registration`.`lrn` = `student_grading`.`lrn`
+INNER JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+INNER JOIN `prospectrus_tbl` ON `strand_tbl`.`id` = `prospectrus_tbl`.`strand_id`
+INNER JOIN `user_tbl` ON `student_registration`.`lrn` = `user_tbl`.`lrn`
+WHERE `section_tbl`.`year_level` = \'1st Year\'
+AND `student_registration`.`strand` = \'ABH\'
+AND `schedule_tbl`.`section_id` IN (0)
+AND `section_tbl`.`section` = \'ABH 1A\'
+AND `prospectrus_tbl`.`id` IN (NULL)
+AND `student_registration`.`lrn` IN ()
+AND `student_registration`.`year` = \'2024-2025\'
+AND `student_registration`.`semester` = \'1st Semester\'
+AND `student_registration`.`state` = \'Enrolled\'
+GROUP BY `student_registration`.`lrn`
+ORDER BY `user_tbl`.`lrn` ASC, `section_tbl`.`section` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `student_registration`.`id`, `prospectrus_tbl`.`id` as `prospectus_id`, `student_registration`.`lrn` as `stud_lrn`, `student_grading`.`id` as `stud_id`, `student_grading`.`subject_id` as `sub_id`, `prospectrus_tbl`.`id` as `pros_id`, `schedule_tbl`.`subject_id` as `sched_id`
+FROM `student_registration`
+INNER JOIN `schedule_tbl` ON `student_registration`.`user_section` = `schedule_tbl`.`section_id`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+LEFT JOIN `student_grading` ON `student_registration`.`lrn` = `student_grading`.`lrn`
+INNER JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+INNER JOIN `prospectrus_tbl` ON `strand_tbl`.`id` = `prospectrus_tbl`.`strand_id`
+INNER JOIN `user_tbl` ON `student_registration`.`lrn` = `user_tbl`.`lrn`
+WHERE `section_tbl`.`year_level` = \'1st Year\'
+AND `student_registration`.`strand` = \'ABH\'
+AND `schedule_tbl`.`section_id` IN (0)
+AND `section_tbl`.`section` = \'ABH 1A\'
+AND `prospectrus_tbl`.`id` IN (NULL)
+AND `student_registration`.`lrn` IN ()
+AND `student_registration`.`year` = \'2024-2025\'
+AND `student_registration`.`semester` = \'1st Semester\'
+AND `student_registration`.`state` = \'Enrolled\'
+GROUP BY `student_registration`.`lrn`
+ORDER BY `user_tbl`.`lrn` ASC, `section_tbl`.`section` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `student_registration`.`id`, `prospectrus_tbl`.`id` as `prospectus_id`, `student_registration`.`lrn` as `stud_lrn`, `student_grading`.`id` as `stud_id`, `student_grading`.`subject_id` as `sub_id`, `prospectrus_tbl`.`id` as `pros_id`, `schedule_tbl`.`subject_id` as `sched_id`
+FROM `student_registration`
+INNER JOIN `schedule_tbl` ON `student_registration`.`user_section` = `schedule_tbl`.`section_id`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+LEFT JOIN `student_grading` ON `student_registration`.`lrn` = `student_grading`.`lrn`
+INNER JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+INNER JOIN `prospectrus_tbl` ON `strand_tbl`.`id` = `prospectrus_tbl`.`strand_id`
+INNER JOIN `user_tbl` ON `student_registration`.`lrn` = `user_tbl`.`lrn`
+WHERE `section_tbl`.`year_level` = \'1st Year\'
+AND `student_registration`.`strand` = \'ABH\'
+AND `schedule_tbl`.`section_id` IN (0)
+AND `section_tbl`.`section` = \'ABH 1A\'
+AND `prospectrus_tbl`.`id` IN (NULL)
+AND `student_registration`.`lrn` IN ()
+AND `student_registration`.`year` = \'2024-2025\'
+AND `student_registration`.`semester` = \'1st Semester\'
+AND `student_registration`.`state` = \'Enrolled\'
+GROUP BY `student_registration`.`lrn`
+ORDER BY `user_tbl`.`lrn` ASC, `section_tbl`.`section` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `student_registration`.`id`, `prospectrus_tbl`.`id` as `prospectus_id`, `student_registration`.`lrn` as `stud_lrn`, `student_grading`.`id` as `stud_id`, `student_grading`.`subject_id` as `sub_id`, `prospectrus_tbl`.`id` as `pros_id`, `schedule_tbl`.`subject_id` as `sched_id`
+FROM `student_registration`
+INNER JOIN `schedule_tbl` ON `student_registration`.`user_section` = `schedule_tbl`.`section_id`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+LEFT JOIN `student_grading` ON `student_registration`.`lrn` = `student_grading`.`lrn`
+INNER JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+INNER JOIN `prospectrus_tbl` ON `strand_tbl`.`id` = `prospectrus_tbl`.`strand_id`
+INNER JOIN `user_tbl` ON `student_registration`.`lrn` = `user_tbl`.`lrn`
+WHERE `section_tbl`.`year_level` = :section_tbl.year_level:
+AND `student_registration`.`strand` = :student_registration.strand:
+AND `schedule_tbl`.`section_id` IN :schedule_tbl.section_id:
+AND `section_tbl`.`section` = :section_tbl.section:
+AND `prospectrus_tbl`.`id` IN :prospectrus_tbl.id:
+AND `student_registration`.`lrn` IN :student_registration.lrn:
+AND `student_registration`.`year` = :student_registration.year:
+AND `student_registration`.`semester` = :student_registration.semester:
+AND `student_registration`.`state` = :student_registration.state:
+GROUP BY `student_registration`.`lrn`
+ORDER BY `user_tbl`.`lrn` ASC, `section_tbl`.`section` ASC', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Teacher.php(174): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard('1st-Year')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2024-09-11 03:23:20 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
+AND `student_registration`.`year` = '2024-2025'
+AND `student_registration`....' at line 14 in C:\xampp\htdocs\bacocommunitycollege\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\bacocommunitycollege\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `stud...', 0)
+#1 C:\xampp\htdocs\bacocommunitycollege\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `stud...')
+#2 C:\xampp\htdocs\bacocommunitycollege\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `stud...')
+#3 C:\xampp\htdocs\bacocommunitycollege\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `stud...', Array, false)
+#4 C:\xampp\htdocs\bacocommunitycollege\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\bacocommunitycollege\app\Controllers\Teacher.php(174): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\bacocommunitycollege\system\CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard('2nd-Year')
+#7 C:\xampp\htdocs\bacocommunitycollege\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+#8 C:\xampp\htdocs\bacocommunitycollege\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\bacocommunitycollege\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\bacocommunitycollege\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-09-11 03:23:20 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
+AND `student_registration`.`year` = '2024-2025'
+AND `student_registration`....' at line 14
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `student_registration`.`id`, `prospectrus_tbl`.`id` as `prospectus_id`, `student_registration`.`lrn` as `stud_lrn`, `student_grading`.`id` as `stud_id`, `student_grading`.`subject_id` as `sub_id`, `prospectrus_tbl`.`id` as `pros_id`, `schedule_tbl`.`subject_id` as `sched_id`
+FROM `student_registration`
+INNER JOIN `schedule_tbl` ON `student_registration`.`user_section` = `schedule_tbl`.`section_id`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+LEFT JOIN `student_grading` ON `student_registration`.`lrn` = `student_grading`.`lrn`
+INNER JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+INNER JOIN `prospectrus_tbl` ON `strand_tbl`.`id` = `prospectrus_tbl`.`strand_id`
+INNER JOIN `user_tbl` ON `student_registration`.`lrn` = `user_tbl`.`lrn`
+WHERE `section_tbl`.`year_level` = \'2nd Year\'
+AND `student_registration`.`strand` = \'ABH\'
+AND `schedule_tbl`.`section_id` IN (0)
+AND `section_tbl`.`section` = \'ABH 2A\'
+AND `prospectrus_tbl`.`id` IN (NULL)
+AND `student_registration`.`lrn` IN ()
+AND `student_registration`.`year` = \'2024-2025\'
+AND `student_registration`.`semester` = \'1st Semester\'
+AND `student_registration`.`state` = \'Enrolled\'
+GROUP BY `student_registration`.`lrn`
+ORDER BY `user_tbl`.`lrn` ASC, `section_tbl`.`section` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `student_registration`.`id`, `prospectrus_tbl`.`id` as `prospectus_id`, `student_registration`.`lrn` as `stud_lrn`, `student_grading`.`id` as `stud_id`, `student_grading`.`subject_id` as `sub_id`, `prospectrus_tbl`.`id` as `pros_id`, `schedule_tbl`.`subject_id` as `sched_id`
+FROM `student_registration`
+INNER JOIN `schedule_tbl` ON `student_registration`.`user_section` = `schedule_tbl`.`section_id`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+LEFT JOIN `student_grading` ON `student_registration`.`lrn` = `student_grading`.`lrn`
+INNER JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+INNER JOIN `prospectrus_tbl` ON `strand_tbl`.`id` = `prospectrus_tbl`.`strand_id`
+INNER JOIN `user_tbl` ON `student_registration`.`lrn` = `user_tbl`.`lrn`
+WHERE `section_tbl`.`year_level` = \'2nd Year\'
+AND `student_registration`.`strand` = \'ABH\'
+AND `schedule_tbl`.`section_id` IN (0)
+AND `section_tbl`.`section` = \'ABH 2A\'
+AND `prospectrus_tbl`.`id` IN (NULL)
+AND `student_registration`.`lrn` IN ()
+AND `student_registration`.`year` = \'2024-2025\'
+AND `student_registration`.`semester` = \'1st Semester\'
+AND `student_registration`.`state` = \'Enrolled\'
+GROUP BY `student_registration`.`lrn`
+ORDER BY `user_tbl`.`lrn` ASC, `section_tbl`.`section` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `student_registration`.`id`, `prospectrus_tbl`.`id` as `prospectus_id`, `student_registration`.`lrn` as `stud_lrn`, `student_grading`.`id` as `stud_id`, `student_grading`.`subject_id` as `sub_id`, `prospectrus_tbl`.`id` as `pros_id`, `schedule_tbl`.`subject_id` as `sched_id`
+FROM `student_registration`
+INNER JOIN `schedule_tbl` ON `student_registration`.`user_section` = `schedule_tbl`.`section_id`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+LEFT JOIN `student_grading` ON `student_registration`.`lrn` = `student_grading`.`lrn`
+INNER JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+INNER JOIN `prospectrus_tbl` ON `strand_tbl`.`id` = `prospectrus_tbl`.`strand_id`
+INNER JOIN `user_tbl` ON `student_registration`.`lrn` = `user_tbl`.`lrn`
+WHERE `section_tbl`.`year_level` = \'2nd Year\'
+AND `student_registration`.`strand` = \'ABH\'
+AND `schedule_tbl`.`section_id` IN (0)
+AND `section_tbl`.`section` = \'ABH 2A\'
+AND `prospectrus_tbl`.`id` IN (NULL)
+AND `student_registration`.`lrn` IN ()
+AND `student_registration`.`year` = \'2024-2025\'
+AND `student_registration`.`semester` = \'1st Semester\'
+AND `student_registration`.`state` = \'Enrolled\'
+GROUP BY `student_registration`.`lrn`
+ORDER BY `user_tbl`.`lrn` ASC, `section_tbl`.`section` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `student_registration`.`id`, `prospectrus_tbl`.`id` as `prospectus_id`, `student_registration`.`lrn` as `stud_lrn`, `student_grading`.`id` as `stud_id`, `student_grading`.`subject_id` as `sub_id`, `prospectrus_tbl`.`id` as `pros_id`, `schedule_tbl`.`subject_id` as `sched_id`
+FROM `student_registration`
+INNER JOIN `schedule_tbl` ON `student_registration`.`user_section` = `schedule_tbl`.`section_id`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+LEFT JOIN `student_grading` ON `student_registration`.`lrn` = `student_grading`.`lrn`
+INNER JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+INNER JOIN `prospectrus_tbl` ON `strand_tbl`.`id` = `prospectrus_tbl`.`strand_id`
+INNER JOIN `user_tbl` ON `student_registration`.`lrn` = `user_tbl`.`lrn`
+WHERE `section_tbl`.`year_level` = :section_tbl.year_level:
+AND `student_registration`.`strand` = :student_registration.strand:
+AND `schedule_tbl`.`section_id` IN :schedule_tbl.section_id:
+AND `section_tbl`.`section` = :section_tbl.section:
+AND `prospectrus_tbl`.`id` IN :prospectrus_tbl.id:
+AND `student_registration`.`lrn` IN :student_registration.lrn:
+AND `student_registration`.`year` = :student_registration.year:
+AND `student_registration`.`semester` = :student_registration.semester:
+AND `student_registration`.`state` = :student_registration.state:
+GROUP BY `student_registration`.`lrn`
+ORDER BY `user_tbl`.`lrn` ASC, `section_tbl`.`section` ASC', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Teacher.php(174): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard('2nd-Year')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2024-09-11 03:23:23 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
+AND `student_registration`.`year` = '2024-2025'
+AND `student_registration`....' at line 14 in C:\xampp\htdocs\bacocommunitycollege\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\bacocommunitycollege\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `stud...', 0)
+#1 C:\xampp\htdocs\bacocommunitycollege\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `stud...')
+#2 C:\xampp\htdocs\bacocommunitycollege\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `stud...')
+#3 C:\xampp\htdocs\bacocommunitycollege\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `stud...', Array, false)
+#4 C:\xampp\htdocs\bacocommunitycollege\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\bacocommunitycollege\app\Controllers\Teacher.php(174): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\bacocommunitycollege\system\CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard('3rd-Year')
+#7 C:\xampp\htdocs\bacocommunitycollege\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+#8 C:\xampp\htdocs\bacocommunitycollege\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\bacocommunitycollege\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\bacocommunitycollege\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-09-11 03:23:23 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
+AND `student_registration`.`year` = '2024-2025'
+AND `student_registration`....' at line 14
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `student_registration`.`id`, `prospectrus_tbl`.`id` as `prospectus_id`, `student_registration`.`lrn` as `stud_lrn`, `student_grading`.`id` as `stud_id`, `student_grading`.`subject_id` as `sub_id`, `prospectrus_tbl`.`id` as `pros_id`, `schedule_tbl`.`subject_id` as `sched_id`
+FROM `student_registration`
+INNER JOIN `schedule_tbl` ON `student_registration`.`user_section` = `schedule_tbl`.`section_id`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+LEFT JOIN `student_grading` ON `student_registration`.`lrn` = `student_grading`.`lrn`
+INNER JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+INNER JOIN `prospectrus_tbl` ON `strand_tbl`.`id` = `prospectrus_tbl`.`strand_id`
+INNER JOIN `user_tbl` ON `student_registration`.`lrn` = `user_tbl`.`lrn`
+WHERE `section_tbl`.`year_level` = \'3rd Year\'
+AND `student_registration`.`strand` = \'ABH\'
+AND `schedule_tbl`.`section_id` IN (0)
+AND `section_tbl`.`section` = \'ABH 3\'
+AND `prospectrus_tbl`.`id` IN (NULL)
+AND `student_registration`.`lrn` IN ()
+AND `student_registration`.`year` = \'2024-2025\'
+AND `student_registration`.`semester` = \'1st Semester\'
+AND `student_registration`.`state` = \'Enrolled\'
+GROUP BY `student_registration`.`lrn`
+ORDER BY `user_tbl`.`lrn` ASC, `section_tbl`.`section` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `student_registration`.`id`, `prospectrus_tbl`.`id` as `prospectus_id`, `student_registration`.`lrn` as `stud_lrn`, `student_grading`.`id` as `stud_id`, `student_grading`.`subject_id` as `sub_id`, `prospectrus_tbl`.`id` as `pros_id`, `schedule_tbl`.`subject_id` as `sched_id`
+FROM `student_registration`
+INNER JOIN `schedule_tbl` ON `student_registration`.`user_section` = `schedule_tbl`.`section_id`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+LEFT JOIN `student_grading` ON `student_registration`.`lrn` = `student_grading`.`lrn`
+INNER JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+INNER JOIN `prospectrus_tbl` ON `strand_tbl`.`id` = `prospectrus_tbl`.`strand_id`
+INNER JOIN `user_tbl` ON `student_registration`.`lrn` = `user_tbl`.`lrn`
+WHERE `section_tbl`.`year_level` = \'3rd Year\'
+AND `student_registration`.`strand` = \'ABH\'
+AND `schedule_tbl`.`section_id` IN (0)
+AND `section_tbl`.`section` = \'ABH 3\'
+AND `prospectrus_tbl`.`id` IN (NULL)
+AND `student_registration`.`lrn` IN ()
+AND `student_registration`.`year` = \'2024-2025\'
+AND `student_registration`.`semester` = \'1st Semester\'
+AND `student_registration`.`state` = \'Enrolled\'
+GROUP BY `student_registration`.`lrn`
+ORDER BY `user_tbl`.`lrn` ASC, `section_tbl`.`section` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `student_registration`.`id`, `prospectrus_tbl`.`id` as `prospectus_id`, `student_registration`.`lrn` as `stud_lrn`, `student_grading`.`id` as `stud_id`, `student_grading`.`subject_id` as `sub_id`, `prospectrus_tbl`.`id` as `pros_id`, `schedule_tbl`.`subject_id` as `sched_id`
+FROM `student_registration`
+INNER JOIN `schedule_tbl` ON `student_registration`.`user_section` = `schedule_tbl`.`section_id`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+LEFT JOIN `student_grading` ON `student_registration`.`lrn` = `student_grading`.`lrn`
+INNER JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+INNER JOIN `prospectrus_tbl` ON `strand_tbl`.`id` = `prospectrus_tbl`.`strand_id`
+INNER JOIN `user_tbl` ON `student_registration`.`lrn` = `user_tbl`.`lrn`
+WHERE `section_tbl`.`year_level` = \'3rd Year\'
+AND `student_registration`.`strand` = \'ABH\'
+AND `schedule_tbl`.`section_id` IN (0)
+AND `section_tbl`.`section` = \'ABH 3\'
+AND `prospectrus_tbl`.`id` IN (NULL)
+AND `student_registration`.`lrn` IN ()
+AND `student_registration`.`year` = \'2024-2025\'
+AND `student_registration`.`semester` = \'1st Semester\'
+AND `student_registration`.`state` = \'Enrolled\'
+GROUP BY `student_registration`.`lrn`
+ORDER BY `user_tbl`.`lrn` ASC, `section_tbl`.`section` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `student_registration`.`id`, `prospectrus_tbl`.`id` as `prospectus_id`, `student_registration`.`lrn` as `stud_lrn`, `student_grading`.`id` as `stud_id`, `student_grading`.`subject_id` as `sub_id`, `prospectrus_tbl`.`id` as `pros_id`, `schedule_tbl`.`subject_id` as `sched_id`
+FROM `student_registration`
+INNER JOIN `schedule_tbl` ON `student_registration`.`user_section` = `schedule_tbl`.`section_id`
+INNER JOIN `section_tbl` ON `schedule_tbl`.`section_id` = `section_tbl`.`id`
+LEFT JOIN `student_grading` ON `student_registration`.`lrn` = `student_grading`.`lrn`
+INNER JOIN `strand_tbl` ON `student_registration`.`strand` = `strand_tbl`.`strand`
+INNER JOIN `prospectrus_tbl` ON `strand_tbl`.`id` = `prospectrus_tbl`.`strand_id`
+INNER JOIN `user_tbl` ON `student_registration`.`lrn` = `user_tbl`.`lrn`
+WHERE `section_tbl`.`year_level` = :section_tbl.year_level:
+AND `student_registration`.`strand` = :student_registration.strand:
+AND `schedule_tbl`.`section_id` IN :schedule_tbl.section_id:
+AND `section_tbl`.`section` = :section_tbl.section:
+AND `prospectrus_tbl`.`id` IN :prospectrus_tbl.id:
+AND `student_registration`.`lrn` IN :student_registration.lrn:
+AND `student_registration`.`year` = :student_registration.year:
+AND `student_registration`.`semester` = :student_registration.semester:
+AND `student_registration`.`state` = :student_registration.state:
+GROUP BY `student_registration`.`lrn`
+ORDER BY `user_tbl`.`lrn` ASC, `section_tbl`.`section` ASC', [...], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Teacher.php(174): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard('3rd-Year')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teacher))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

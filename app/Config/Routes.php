@@ -17,8 +17,8 @@ if (is_file(SYSTEMPATH . 'Config/Routes.php')) {
  * --------------------------------------------------------------------
  */
 $routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('User');
-$routes->setDefaultMethod('login');
+$routes->setDefaultController('Webpage');
+$routes->setDefaultMethod('landing');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
 // The Auto Routing (Legacy) is very dangerous. It is easy to create vulnerable apps
@@ -38,28 +38,30 @@ $routes->setAutoRoute(true);
 
 // $routes->get('/user/profile', 'UserController::profile');
 
+
+$routes->get('/generatePdf', 'PdfGenerator::generatePdf');
+
 //--------------USER-----------------
-$routes->get('/', 'User::login');
+$routes->get('/', 'Webpage::landing');
 $routes->get('/login', 'User::login');
 $routes->get('/forgot', 'User::forgot');
-$routes->get('/register', 'User::register');
 $routes->get('/emailVerification', 'User::emailVerification');
-$routes->post('/retrieve_profile', 'User::retrieve_profile');
-$routes->post('/insert_reg', 'User::insert_reg');
+$routes->post('/my_profile', 'User::retrieve_profile');
 $routes->get('/logout', 'User::logout');
 $routes->get('/mail', 'AccountController::mail');
 // $routes->get('/register', 'AccountController::register');
 $routes->match(['get', 'post'],'/store', 'AccountController::store');
 $routes->match(['get', 'post'],'/login', 'AccountController::login');
-$routes->match(['get', 'post'],'/register', 'AccountController::register');
+$routes->match(['get', 'post'],'/account_registration', 'AccountController::register');
 $routes->match(['get', 'post'],'/verify/(:any)', 'AccountController::verify/$1');
-$routes->match(['get', 'post'],'/exceltest', 'Excel::exceltest');
 
 //webpage controller
 $routes->match(['get', 'post'],'/landing', 'Webpage::landing');
+$routes->match(['get', 'post'],'/sendmail', 'Webpage::sendmail');
 $routes->match(['get', 'post'],'/contact', 'Webpage::contact');
 $routes->match(['get', 'post'],'/about', 'Webpage::about');
 $routes->match(['get', 'post'],'/offered', 'Webpage::offered');
+$routes->get('/offered/(:any)', 'Webpage::offered/($1)');
 
 //authcontroller/ forgot//
 $routes->get('forgot-password', 'AuthController::forgot');
@@ -67,16 +69,15 @@ $routes->post('forgot-password', 'AuthController::forgot');
 $routes->get('reset_Password', 'AuthController::reset_Password');
 $routes->get('login', 'AuthController::login');
 $routes->post('reset-password', 'AuthController::resetPassword');
-// $routes->get('/generate-pdf', 'PdfGenerator::generatePdf');
-// $routes->get('/test123', 'PdfGenerator::test123');
+$routes->post('/download_form', 'PreEnrolled::download_form');
 
 //------------USER PROFILE------------
-$routes->group('', ['filter' => 'AuthCheck'], function ($routes) {
+$routes->group('', ['filter' => 'AuthStudent'], function ($routes) {
 $routes->get('/auth', 'User::auth');
-
 $routes->get('/insert_reg', 'User::insert_reg');
+$routes->match(['get', 'post'],'/curriculum-subject', 'Profile::curriculumSubject');
 $routes->get('/get_profile', 'Profile::get_profile');
-$routes->get('/retrieve_profile', 'Profile::retrieve_profile');
+$routes->get('/my_profile', 'Profile::my_profile');
 $routes->post('/insertProfile', 'Profile::insertProfile');
 $routes->match(['get', 'post'],'/subject', 'Profile::subject');
 $routes->get('/try', 'Profile::try');
@@ -94,24 +95,40 @@ $routes->post('/insert_registration', 'Profile::insert_registration');
 $routes->get('/updateReg', 'Profile::updateReg');
 $routes->get('/edit_reg/(:any)', 'Profile::edit_reg/$1');
 $routes->put('/update', 'Profile::update');
-$routes->put('/updateProfile/(:any)', 'Profile::updateProfile/$1');
+$routes->put('/updateProfile', 'Profile::updateProfile');
 $routes->get('/strandProspectus/(:any)', 'Prospectus::strandProspectus/$1');
-$routes->put('/updatePassword/(:any)', 'Profile::updatePassword/$1');
-$routes->put('/updateUserProfile/(:any)', 'Profile::updateUserProfile/$1');
+$routes->put('/updatePassword', 'Profile::updatePassword');
+$routes->put('/updateUserProfile', 'Profile::updateUserProfile');
 $routes->post('/insert_credeantials', 'User::insert_credeantials');
 $routes->get('/credentials', 'User::credentials');
 $routes->post('/insert_subject', 'Profile::insert_subject');
 $routes->post('/test', 'Profile::test');
+$routes->get('/cred_skip', 'User::cred_skip');
+
+//-----------User Schedule---------
+$routes->get('/viewSchedule', 'UserSchedule::viewSchedule');
+
+//------------CREDENTIALS------------
+$routes->match(['get', 'post'],'/student-request', 'Credentials::req');
+$routes->match(['get', 'post'],'/makereq', 'Credentials::makereq');
+$routes->match(['get', 'post'],'/request_form', 'Credentials::request_form');
+
 });
 
+
+
+$routes->group('', ['filter' => 'AuthAdmin'], function ($routes) {
+    //--------------ANNOUNCEMENT-----------------
+
+
+$routes->get('/school_updates/(:any)', 'Announcement::school_updates/($1)');
+$routes->post('/addAnnouncement', 'Announcement::addAnnouncement');
+$routes->post('school_updates/announcement', 'Announcement::announcement');
+$routes->post('school_updates/UpdateAnnouncement', 'Announcement::UpdateAnnouncement');
+
 //------------ADMIN PROFILE------------
-$routes->match(['get', 'post'],'/student_approve', 'Credentials::student_approve');
-$routes->match(['get', 'post'],'/view_credential', 'Credentials::view_credential');
-$routes->match(['get', 'post'],'/student_status', 'Credentials::student_status');
-$routes->match(['get', 'post'],'/credentials/(:any)', 'Credentials::credentials/$1');
-//------------ADMIN PROFILE------------
-$routes->group('', ['filter' => 'AuthCheck'], function ($routes) {
 $routes->get('/admin', 'Admin::admin');
+
 $routes->get('gender-data', 'Admin::admin');
 $routes->get('/pre_enrolled', 'Admin::pre_enrolled');
 $routes->get('/prospectus', 'Admin::prospectus');
@@ -122,39 +139,47 @@ $routes->get('/adminlogout', 'Admin::adminlogout');
 $routes->post('/insertAdmin', 'Admin::insertAdmin');
 $routes->put('/adminUpdate', 'Admin::adminUpdate');
 $routes->post('/updateYear', 'Admin::updateYear');
+$routes->post('/enrollment_status', 'Admin::enrollment_status');
+$routes->post('/download_records', 'Admin::download_records');
+$routes->post('/test', 'Admin::test');
+
+
+//-----------------ADMIN CREDENTIALS--------------
+$routes->match(['get', 'post'],'/student_approve', 'Credentials::student_approve');
+$routes->match(['get', 'post'],'/student_status/(:any)', 'Credentials::student_status/$1');
+$routes->match(['get', 'post'],'/view_credential/(:any)', 'Credentials::view_credential/$1');
+$routes->match(['get', 'post'],'/student-request/(:any)', 'Credentials::studreq/$1');
+$routes->match(['get', 'post'],'/cred_schedule', 'Credentials::cred_schedule');
+$routes->match(['get', 'post'],'/req_cred', 'Credentials::req_cred');
 
 //------------TEACHER ADDING------------
 $routes->get('/listofteacher', 'TeacherAccount::listofteacher');
 $routes->post('/addNewTeacher', 'TeacherAccount::addNewTeacher');
 $routes->match(['get', 'post'],'/addteacher', 'TeacherAccount::addteacher');
+$routes->post('/TeacherUpdate', 'TeacherAccount::TeacherUpdate');
 
 //------------ADMIN STRAND------------
 $routes->get('/retrieve_strand', 'Strand::retrieve_strand');
 $routes->post('/insert_strand', 'Strand::insert_strand');
 $routes->get('/edit_strand/(:any)', 'Strand::edit_strand/$1');
 $routes->post('/update_strand', 'Strand::update_strand');
+$routes->post('/update_program_status', 'Strand::update_program_status');
 
 //-----------ADMIN SECTION---------
 $routes->get('/section', 'Section::section');
 $routes->post('/newsection11', 'Section::newsection11');
-$routes->get('/schedule11/(:any)', 'Section::schedule11/$1');
-$routes->get('/schedule12/(:any)', 'Section::schedule12/$1');
-$routes->get('/schedule3rd/(:any)', 'Section::schedule3rd/$1');
-$routes->get('/schedule4th/(:any)', 'Section::schedule4th/$1');
+$routes->match(['get', 'post'],'/schedule11/(:any)', 'Section::schedule11/$1');
 $routes->put('/section_update11', 'Section::section_update11');
 $routes->put('/section_update12', 'Section::section_update12');
 $routes->get('/strandSec/(:any)', 'Section::strandSec/$1');
 $routes->post('/addsched11/(:any)', 'Section::addsched11/$1');
-$routes->post('/addsched12/(:any)', 'Section::addsched12/$1');
-$routes->post('/updateSched11/(:any)', 'Section::updateSched11/$1');
-$routes->match(['get', 'post'],'/section11/(:any)', 'Section::section11/$1');
-$routes->match(['get', 'post'],'/section12', 'Section::section12');
-$routes->match(['get', 'post'],'/section3rd', 'Section::section3rd');
-$routes->match(['get', 'post'],'/section4th', 'Section::section4th');
+$routes->post('/updateSched11', 'Section::updateSched11');
+$routes->match(['get', 'post'],'/section/(:any)', 'Section::section11/$1');
 $routes->get('/strandSec11/(:any)', 'Section::strandSec11/$1');
-$routes->get('/strandSec12/(:any)', 'Section::strandSec12/$1');
-$routes->get('/courseThirdyear/(:any)', 'Section::courseThirdyear/$1');
-$routes->get('/courseFourthyear/(:any)', 'Section::courseFourthyear/$1');
+$routes->post('/add_room', 'Section::add_room');
+$routes->post('/pdf_subject_schedule', 'Section::pdf_subject_schedule');
+$routes->post('/addedscheduling', 'Section::addedscheduling');
+$routes->post('/all_year', 'Section::all_year');
 
 //-----------ADMIN PROSPECTUS---------
 $routes->post('/addprospectus11', 'Prospectus::addprospectus11');
@@ -162,7 +187,7 @@ $routes->post('/addprospectus12', 'Prospectus::addprospectus12');
 $routes->get('/edit_prospectus/(:any)', 'Prospectus::edit_prospectus/$1');
 $routes->put('/updateProspectus11', 'Prospectus::updateProspectus11');
 $routes->put('/updateProspectus12', 'Prospectus::updateProspectus12');
-$routes->match(['get', 'post'],'/prospectus11/(:any)', 'Prospectus::prospectus11/$1');
+$routes->match(['get', 'post'],'/prospectus/(:any)', 'Prospectus::prospectus11/$1');
 $routes->get('/prospectusThirdyear/(:any)', 'Prospectus::prospectusThirdyear/$1');
 $routes->get('/prospectusFourthyear/(:any)', 'Prospectus::prospectusFourthyear/$1');
 $routes->get('/strandProspectus12/(:any)', 'Prospectus::strandProspectus12/$1');
@@ -171,38 +196,51 @@ $routes->get('/strandProspectus11/(:any)', 'Prospectus::strandProspectus11/$1');
 //-----------ADMIN PRE ENROLLED---------
 $routes->get('/viewPreEnroll', 'PreEnrolled::viewPreEnroll');
 $routes->get('/enroll', 'PreEnrolled::enroll');
-$routes->get('/pre_enrolled_reg', 'PreEnrolled::pre_enrolled_reg');
-$routes->get('/viewPreEnroll/(:any)', 'PreEnrolled::viewPreEnroll/$1');
+$routes->get('/pre-enrolled-registration/(:any)', 'PreEnrolled::pre_enrolled_reg/$1');
+$routes->match(['get', 'post'],'/viewPreEnroll/(:any)', 'PreEnrolled::viewPreEnroll/$1');
 $routes->get('/enroll/(:any)', 'PreEnrolled::enroll/$1');
 $routes->post('/generate', 'PreEnrolled::generate');
-$routes->put('/enrolled/(:any)', 'PreEnrolled::enrolled/$1');
+$routes->post('/enrolled', 'PreEnrolled::enrolled');
 $routes->get('/rejected/(:any)', 'PreEnrolled::rejected/$1');
+$routes->post('/enroll_all', 'PreEnrolled::enroll_all');
+$routes->post('/stud_cor_form', 'PreEnrolled::stud_cor_form');
 
+//-----------ADMIN PRE ENROLLED---------
 
-//-----------User Schedule---------
-$routes->get('/viewSchedule', 'UserSchedule::viewSchedule');
+$routes->match(['get', 'post'],'/student-list/(:any)', 'User_Controller::old_student/$1');
+$routes->post('/update_student_info', 'User_Controller::update_student_info');
 
-//teacherr side
-$routes->match(['get', 'post'],'/t_dashboard/(:any)', 'Teacher::t_dashboard/$1');
-$routes->match(['get', 'post'],'/newteacher', 'Teacher::newteacher');
-$routes->get('/grading', 'Teacher::grading');
-$routes->post('/gradingStud', 'Teacher::gradingStud');
-
-// $routes->get('/viewGrade', 'Teacher::viewGrade');
-// $routes->get('/viewGrades', 'Teacher::viewGrades');
-// $routes->post('/viewGrade', 'Teacher::viewGrade');
-$routes->get('/viewGrade/(:any)', 'Teacher::viewGrade/$1');
-$routes->post('/updateGrade', 'Teacher::updateGrade');
-$routes->put('/TeacherUpdate', 'TeacherAccount::TeacherUpdate');
-$routes->post('/Teacher_StudentGrading', 'Teacher::Teacher_StudentGrading');
 //-----------Grading
-
-
-$routes->post('/GradeSection', 'Grading::GradeSection');
-$routes->get('/StudentGrade/(:any)', 'Grading::StudentGrade/$1');
-$routes->get('/StudentGrading/(:any)', 'Grading::StudentGrading/$1');
+$routes->post('delete_all_data', 'DeadlineController::deleteAllData');
+$routes->get('/deadline_form', 'DeadlineController::deadline_form');
+$routes->post('/save_deadline', 'DeadlineController::saveDeadline');
+$routes->match(['get', 'post'],'/studentGrade/(:any)', 'Grading::StudentGrade/$1');
+$routes->get('/student-grading/(:any)', 'Grading::StudentGrading/$1');
+$routes->post('/evaluate_grade', 'Grading::evaluate_grade');
 });
 
+$routes->group('', ['filter' => 'AuthTeacher'], function ($routes) {
+//teacherr side
+$routes->match(['get', 'post'],'/student_grading/(:any)', 'Teacher::t_dashboard/$1');
+$routes->match(['get', 'post'],'/teacher_profile', 'Teacher::newteacher');
+$routes->match(['get', 'post'],'/updatePasswordTeacher', 'TeacherAccount::updatePasswordTeacher');
+$routes->get('/grading', 'Teacher::grading');
+$routes->post('/gradingStud', 'Teacher::gradingStud');
+$routes->post('/update_student_grade', 'Teacher::update_student_grade');
+
+$routes->get('/viewGrade/(:any)', 'Teacher::viewGrade/$1');
+$routes->post('/updateGrade', 'Teacher::updateGrade');
+$routes->get('/Teacher_StudentGrading/(:any)', 'Teacher::Teacher_StudentGrading/$1');
+
+    //--------------Excel
+
+$routes->match(['get', 'post'],'/exceltest', 'Excel::exceltest');
+$routes->match(['get', 'post'],'/upload', 'Excel::upload');
+$routes->match(['get', 'post'],'/convertExcelToHtml', 'Excel::convertExcelToHtml');
+$routes->match(['get', 'post'],'/update_student_grade_excel', 'Excel::update_student_grade_excel');
+$routes->match(['get', 'post'],'/teacher_side', 'User::teacher_side');
+$routes->match(['get', 'post'],'/teacher_side_option', 'User::teacher_side_option');
+});
 // $routes->post('add_subject_g11', 'Prospectus::add_subject_g11');
 // $routes->post('add_subject_g12', 'Prospectus::add_subject_g12');
 // $routes->get('/pros11', 'Prospectus::pros11');

@@ -1,0 +1,7 @@
+CRITICAL - 2023-07-21 03:24:11 --> Undefined array key 0
+in APPPATH/Controllers/Teacher.php on line 135.
+ 1 APPPATH/Controllers/Teacher.php(135): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Teacher->t_dashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()

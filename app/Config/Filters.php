@@ -8,7 +8,9 @@ use CodeIgniter\Filters\DebugToolbar;
 use CodeIgniter\Filters\Honeypot;
 use CodeIgniter\Filters\InvalidChars;
 use CodeIgniter\Filters\SecureHeaders;
-use App\Filters\AuthCheckFilter;
+use App\Filters\AuthAdmin;
+use App\Filters\AuthTeacher;
+use App\Filters\AuthStudent;
 
 class Filters extends BaseConfig
 {
@@ -24,8 +26,9 @@ class Filters extends BaseConfig
         'honeypot'      => Honeypot::class,
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
-        'AuthCheck'     => AuthCheckFilter::class,
-        'authGuard'     => \App\Filters\AuthGuard::class,
+        'AuthAdmin'     => AuthAdmin::class,
+        'AuthStudent'     => AuthStudent::class,
+        'AuthTeacher'     => AuthTeacher::class,
     ];
 
     /**
@@ -41,7 +44,7 @@ class Filters extends BaseConfig
             // 'invalidchars',
         ],
         'after' => [
-            'toolbar',
+            // 'toolbar',
             // 'honeypot',
             // 'secureheaders',
         ],

@@ -13,66 +13,7 @@ use App\Models\YearlevelModel;
 
 class Grading extends BaseController
 {
-
-    public function GradeSection()
-    {
-
-        $strand = $this->request->getPost('course');
-        $year_levels = $this->request->getPost('year');
-
-        $student_grading = new GradeModel();
-        $strand_model = new StrandModel();
-        $user_model = new UserModel();
-        $year_model = new YearModel();
-        $year_level_model = new YearlevelModel();
-
-        $data = $user_model->where('email', session()->get('loggedInUser'))->first();
-
-        $year_levelOne = $year_level_model->where('type', session()->get('status'))->where('year_level', 'Grade 11')->orWhere('year_level', '1st Year')->first();
-        $year_levelTwo = $year_level_model->where('type', session()->get('status'))->where('year_level', 'Grade 12')->orWhere('year_level', '2nd Year')->first();
-        $year_levelThree = $year_level_model->where('type', session()->get('status'))->where('year_level', '3rd Year')->first();
-        $year_levelFour = $year_level_model->where('type', session()->get('status'))->where('year_level', '4th Year')->first();
-
-        $year_level = $data['status'] == "SHS" ? 
-        ($year_levels == $year_levelOne['id'] ? 'Grade 11' : 
-            ($year_levels == $year_levelTwo['id'] ? 'Grade 12' : 'Unknown Year Level'
-            )
-        ) : 
-        ($year_levels == $year_levelOne['id'] ? '1st Year' : 
-            ($year_levels == $year_levelTwo['id'] ? '2nd Year' :
-                ($year_levels == $year_levelThree['id'] ? '3rd Year' : 
-                    ($year_levels == $year_levelFour['id'] ? '4th Year' : 'Unknown Year Level')
-                )
-            )
-        );
-        $strand_id = $strand_model->where('strand', $strand)->find();
-        session()->setFlashdata('strand', $strand);
-
-        $data = [ 
-            'grade' => $student_grading
-            ->select('*, student_registration.id')
-            ->join('student_registration', 'student_grading.lrn = student_registration.lrn', 'inner')
-            ->join('user_tbl', 'student_registration.lrn = user_tbl.lrn', 'inner')
-            ->join('prospectrus_tbl', 'student_grading.subject_id = prospectrus_tbl.id', 'inner')
-            ->where('student_registration.strand', $strand_id[0]['strand'])
-            ->where('student_registration.year_level', $year_level)
-            ->where('student_grading.semester', session()->get('semester'))
-            ->where('student_grading.year', session()->get('year'))
-            ->groupBy('student_registration.lrn')
-            ->get()->getResultArray(),
-
-            'stat' => $user_model->where('status', session()->get('status'))->first(),
-            'userName' => $user_model->where('email', session()->get('loggedInUser'))->find(),
-            'sem_year' => $year_model->first(),
-            'year_levelOne' => $year_level_model->where('type', session()->get('status'))->where('year_level', 'Grade 11')->orWhere('year_level', '1st Year')->first(),
-            'year_levelTwo' => $year_level_model->where('type', session()->get('status'))->where('year_level', 'Grade 12')->orWhere('year_level', '2nd Year')->first(),
-            'year_levelThird' => $year_level_model->where('type', session()->get('status'))->where('year_level', '3rd Year')->first(),
-            'year_levelFourth' => $year_level_model->where('type', session()->get('status'))->where('year_level', '4th Year')->first(),
-            'stud_id' => $year_level_model->where('id', $year_levels)->first()
-        ];
-        return $this->response->setJSON($data);
-    }
-    public function StudentGrade($year_levels, $lrn, $strand)
+    public function StudentGrade($year_levels, $strand, $lrn)
     {
         $year_level_model = new YearlevelModel();
         $year_model = new YearModel();
@@ -82,73 +23,31 @@ class Grading extends BaseController
         $student_grading = new GradeModel();
         $prospectus_add_model = new StudentProspectusModel();
 
-        $year_levelOne = $year_level_model->where('type', session()->get('status'))->where('year_level', 'Grade 11')->orWhere('year_level', '1st Year')->first();
-        $year_levelTwo = $year_level_model->where('type', session()->get('status'))->where('year_level', 'Grade 12')->orWhere('year_level', '2nd Year')->first();
-        $year_levelThree = $year_level_model->where('type', session()->get('status'))->where('year_level', '3rd Year')->first();
-        $year_levelFour = $year_level_model->where('type', session()->get('status'))->where('year_level', '4th Year')->first();
-
-
-        $data = $user_model->where('email', session()->get('loggedInUser'))->first();
-        $year_level = $data['status'] == "SHS" ?
-        ($year_levels == $year_levelOne ? 'Grade 11' :
-            ($year_levels == $year_levelTwo ? 'Grade 12' : 'Unknown Level'
-            )
-        ):
-        ($year_levels == $year_levelTwo ? '1st Year' :
-            ($year_levels == $year_levelTwo ? '2nd Year' :
-                ($year_levels == $year_levelThree ? '3rd Year' :
-                    ($year_levels == $year_levelFour ? '4th Year' : 'Unknown Level'
-                    )
-                )
-            )
-        );
         session()->setFlashdata('strand', $strand);
 
         $values = [ 
             'stud_sub' => $student_grading
-                ->select('*')
+                ->select('*, student_grading.id')
                 ->join('student_registration', 'student_grading.lrn = student_registration.lrn', 'inner')
                 ->join('user_tbl', 'student_registration.lrn = user_tbl.lrn', 'inner')
                 ->join('prospectrus_tbl', 'student_grading.subject_id = prospectrus_tbl.id', 'inner')
                 ->where('student_registration.lrn', $lrn)
                 ->where('student_grading.year', session()->get('year'))
                 ->where('student_grading.semester', session()->get('semester'))
-                ->get()->getResultArray(),
+                ->first(),
             'subject' => $prospectus_model->find(),
+            
 
             'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
             'stat' => $user_model->where('status', session()->get('status'))->first(),
             'sem_year' => $year_model->first(),
-            'year_levelOne' => $year_level_model->where('type', session()->get('status'))->where('year_level', 'Grade 11')->orWhere('year_level', '1st Year')->first(),
-            'year_levelTwo' => $year_level_model->where('type', session()->get('status'))->where('year_level', 'Grade 12')->orWhere('year_level', '2nd Year')->first(),
-            'year_levelThird' => $year_level_model->where('type', session()->get('status'))->where('year_level', '3rd Year')->first(),
-            'year_levelFourth' => $year_level_model->where('type', session()->get('status'))->where('year_level', '4th Year')->first(),
-            'stud_id' => $year_level_model->where('id', $year_levels)->first()
+            'yearlvl' => $year_levels
         ];
-        
-        if ($year_levels == $year_levelOne['id']) {
-            $yearLevelText = 'Grade 11';
-            $view = 'first_yearGrade';
-            } elseif ($year_levels == $year_levelTwo['id']) {
-                $yearLevelText = 'Grade 12';
-                $view = 'second_yearGrade';
-            } elseif ($year_levels == $year_levelThree['id']) {
-                $yearLevelText = 'Grade 13';
-                $view = 'third_yearGrade';
-            } elseif ($year_levels == $year_levelFour['id']) {
-                $yearLevelText = 'Grade 14';
-                $view = 'fourth_yearGrade';
-            } else {
-                // Handle invalid year level here
-            }
-            
-            return view('admin/grading/' . $view, $values);
-        // return view('admin/grading/first_yearGrade', $values);
-        // var_dump($year_level);
-        // echo 1;
+        return view('admin/grading/first_yearGrade', $values);
     }
-        public function StudentGrading($yearLevel)
+        public function StudentGrading($yearLevel, $strand = null)
     {
+        $yearlvl = str_replace('-',' ', $yearLevel);
         $year_model = new YearModel();
         $user_model = new UserModel();
         $prospectus_model = new ProspectusModel();
@@ -156,29 +55,29 @@ class Grading extends BaseController
         $student_grading = new GradeModel();
         $prospectus_add_model = new StudentProspectusModel();
         $year_level_model = new YearlevelModel();
-
-        $year_levelOne = $year_level_model->where('type', session()->get('status'))->where('year_level', 'Grade 11')->orWhere('year_level', '1st Year')->first();
-        $year_levelTwo = $year_level_model->where('type', session()->get('status'))->where('year_level', 'Grade 12')->orWhere('year_level', '2nd Year')->first();
-        $year_levelThree = $year_level_model->where('type', session()->get('status'))->where('year_level', '3rd Year')->first();
-        $year_levelFour = $year_level_model->where('type', session()->get('status'))->where('year_level', '4th Year')->first();
         
         $data = $user_model->where('email', session()->get('loggedInUser'))->first();
         
         $year_level = $data['status'] == "SHS" ? 
-        ($yearLevel == $year_levelOne['id'] ? 'Grade 11' : 
-            ($yearLevel == $year_levelTwo['id'] ? 'Grade 12' : 'Unknown Year Level'
+        ($yearlvl == 'Grade 11' ? 'Grade 11' : 
+            ($yearlvl == 'Grade 12' ? 'Grade 12' : 'Unknown Year Level'
             )
         ) : 
-        ($yearLevel == $year_levelOne['id'] ? '1st Year' : 
-            ($yearLevel == $year_levelTwo['id'] ? '2nd Year' :
-                ($yearLevel == $year_levelThree['id'] ? '3rd Year' : 
-                    ($yearLevel == $year_levelFour['id'] ? '4th Year' : 'Unknown Year Level')
+        ($yearlvl == '1st Year' ? '1st Year' : 
+            ($yearlvl == '2nd Year' ? '2nd Year' :
+                ($yearlvl == '3rd Year' ? '3rd Year' : 
+                    ($yearlvl == '4th Year' ? '4th Year' : 'Unknown Year Level')
                 )
             )
         );
-        
-        $set_year_level = $data['status'] == "SHS" ? 'GAS' : 'ABH';
-        $strand_id = $strand_model->where('strand', $set_year_level)->find();
+        if($strand == null){
+            $set_year_level = $data['status'] == "SHS" ? 'GAS' : 'ABH';
+            $strand_id = $strand_model->where('strand', $set_year_level)->find();
+        }
+        else{
+            $set_year_level = $data['status'] == "SHS" ? $strand : $strand;
+            $strand_id = $strand_model->where('strand', $set_year_level)->find();
+        }
         session()->setFlashdata('strand', $set_year_level);
 
         $values = [ 
@@ -186,25 +85,62 @@ class Grading extends BaseController
             ->select('*, student_registration.id')
             ->join('user_tbl', 'student_grading.lrn = user_tbl.lrn', 'inner')
             ->join('student_registration', 'user_tbl.lrn = student_registration.lrn', 'inner')
+            ->join('school_year', 'student_registration.semester = school_year.semester', 'inner')
             ->where('student_registration.strand', $strand_id[0]['strand'])
             ->where('student_registration.year_level', $year_level)
-            ->where('student_registration.year', session()->get('year'))
-            ->where('student_registration.semester', session()->get('semester'))
+            ->where('student_grading.year', session()->get('year'))
+            ->where('student_grading.semester', session()->get('semester'))
             ->groupBy('student_registration.lrn')
             ->get()->getResultArray(),
 
             'userName' => $user_model->where('email', $email = session()->get('loggedInUser'))->find(),
             'stat' => $user_model->where('status', session()->get('status'))->first(),
             'sem_year' => $year_model->first(),
-            'year_levelOne' => $year_level_model->where('type', session()->get('status'))->where('year_level', 'Grade 11')->orWhere('year_level', '1st Year')->first(),
-            'year_levelTwo' => $year_level_model->where('type', session()->get('status'))->where('year_level', 'Grade 12')->orWhere('year_level', '2nd Year')->first(),
-            'year_levelThird' => $year_level_model->where('type', session()->get('status'))->where('year_level', '3rd Year')->first(),
-            'year_levelFourth' => $year_level_model->where('type', session()->get('status'))->where('year_level', '4th Year')->first(),
-            'stud_id' => $year_level_model->where('id', $yearLevel)->first()
+            'yearlvl' => $yearLevel
         ];
-    //   var_dump($yearLevel);
 
     return view('admin/grading/first_year', $values);
     
+    }
+    public function evaluate_grade()
+    {
+        $student_grading = new GradeModel();
+
+        $lrn = $this->request->getPost('lrn');
+        $id = $this->request->getPost('id');
+        // $lrn = 'B23-SHS232038';
+        // $id = '1';
+
+        $grade = $student_grading
+        ->where('lrn', $lrn)
+        ->where('year', session()->get('year'))
+        ->where('semester', session()->get('semester'))
+        ->first();
+
+        $gradeResult = 0;
+
+        $sub_grade = explode(',', $grade['subject_grade']);
+        $sub_id = count(explode(',', $grade['subject_id']));
+        foreach($sub_grade as $sub_grading){
+            $gradeResult += (int)$sub_grading/$sub_id;
+        }
+
+        $average = ($gradeResult >= 75 && $gradeResult <= 100) ? 1 : 2;
+        $value = [
+            'total_grading' => $gradeResult,
+            'overall_remark' => $average
+        ];
+
+        $student_grading->update($id, $value);
+
+        $gradingg = [
+            'grading' => $student_grading
+            ->where('lrn', $lrn)
+            ->where('year', session()->get('year'))
+            ->where('semester', session()->get('semester'))
+            ->first()
+        ];
+
+        return $this->response->setJSON($gradingg);
     }
 }

@@ -45,3 +45,21 @@
     </div>
     <!-- /.modal-dialog -->
 </div>
+
+<script>
+$(document).ready(function() {
+    // sa button
+    $('.btn-updateSection').on('click', function() {
+        // data galing buton
+        const id = $(this).data('id');
+        const section = $(this).data('section');
+        const year_level = $(this).data('year_level');
+        // // sa modal
+        $('.id').val(id);
+        $('.sectionModal').val(section);
+        $('.year_levelModal').val(year_level).trigger('change');
+        // Call Modal
+        $('#updatesection').modal('show');
+    });
+});
+</script>

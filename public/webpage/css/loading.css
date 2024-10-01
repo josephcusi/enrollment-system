@@ -1,0 +1,41 @@
+.lds-hidden {
+     display: none;
+            }
+
+    .lds-container {
+                background: #8c0001;
+                height: 100%;
+                position: fixed;
+                text-align: center;
+                user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                -webkit-user-select: none;
+                width: 100%;
+                z-index: 10000000000000000000000000000000000000000000;
+            }
+
+            .lds-container>div {
+                height: 100%;
+                position: relative;
+                width: 100%;
+            }
+
+            .lds-logo {
+                position: absolute;
+                top: 50%;
+                transform: translate(0, -50%);
+                width: 100%;
+            }
+
+            .lds-logo img {
+              min-width: 0%;
+              min-height:0%;
+              max-width: 100%;
+              max-height:100%;
+                            }
+
+            .lds-logo-caption {
+                                color: #ffffff;
+                margin-top: 1rem;
+            }

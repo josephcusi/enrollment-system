@@ -16,8 +16,8 @@
 
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <!-- <input type="hidden" name="strand" class="form-control" value="<$strand ?>"> -->
-                                    <label for="inputSubject">Subject Code</label>
+                                    <input type="hidden" name="strand" class="form-control strand_idModal">
+                                    <label for="inputSubject">Course Code</label>
                                     <input type="hidden" name="id" class="id">
                                     <input type="text" name="subject" class="form-control subjectModal"
                                         id="inputSubject" placeholder="Subject">
@@ -43,8 +43,17 @@
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="PreRequisit">Pre-requisit</label>
-                                    <input type="text" name="pre_requisit" class="form-control pre_requisitModel"
-                                        id="PreRequisit" placeholder="Pre-Requisit">
+                                    <select class="form-control" id="studentStrand" name="pre_requisit">
+                                        <option type="text" class="form-control" id="semester"
+                                            placeholder="1st Semester" value="N/A">N/A
+                                        </option>
+                                        <?php foreach($sub as $newSub):?>
+                                        <option type="text" class="form-control" id="semester"
+                                            placeholder="1st Semester" value="<?= $newSub['id']?>">
+                                            <?= $newSub['subject']?>
+                                        </option>
+                                        <?php endforeach;?>
+                                    </select>
                                     <span class="text-danger">
                                         <?= isset($validation) ? display_error($validation, 'pre_requisit') : '' ?>
                                     </span>
@@ -54,7 +63,8 @@
                                     <select class="form-control year_levelModal" id="studentStrand" name="year_level">
 
                                         <option type="text" class="form-control year_levelModal" id="year_level"
-                                            placeholder="Year Level" value="<?=$prospectus[0]['year_level']?>"><?=$prospectus[0]['year_level']?></option>
+                                            placeholder="Year Level" value="<?=$prospectus[0]['year_level']?>">
+                                            <?=$prospectus[0]['year_level']?></option>
 
                                     </select>
 
@@ -65,7 +75,9 @@
                                 <div class="form-group col-md-6">
                                     <label for="semester">Semester</label>
                                     <select class="form-control semesterModal" id="studentStrand" name="semester">
-                                    <option type="text" class="form-control" id="semester" placeholder="1st Semester" value="<?= $sem_year['semester']?>"><?= $sem_year['semester']?></option>
+                                        <option type="text" class="form-control" id="semester"
+                                            placeholder="1st Semester" value="<?= $sem_year['semester']?>">
+                                            <?= $sem_year['semester']?></option>
                                     </select>
                                     <span class="text-danger">
                                         <?= isset($validation) ? display_error($validation, 'semester') : '' ?>
@@ -91,3 +103,32 @@
 
     </div>
 </div>
+<script>
+$(document).ready(function() {
+    // sa button
+    $('.btn-updateProspectus').on('click', function() {
+        // data galing buton
+        const id = $(this).data('id');
+        const subject = $(this).data('subject');
+        const subject_title = $(this).data('subject_title');
+        const unit = $(this).data('unit');
+        const pre_requisit = $(this).data('pre_requisit');
+        const year_level = $(this).data('year_level');
+        const semester = $(this).data('semester');
+        const strand_id = $(this).data('strand_id');
+
+        console.log(id);
+        // // sa modal
+        $('.id').val(id);
+        $('.strand_idModal').val(strand_id);
+        $('.subjectModal').val(subject);
+        $('.subject_titleModal').val(subject_title);
+        $('.unitModal').val(unit);
+        $('.year_levelModal').val(year_level);
+        $('.semesterModal').val(semester);
+        $('.pre_requisitModel').val(pre_requisit).trigger('change');
+        // Call Modal
+        $('#updatesubject').modal('show');
+    });
+});
+</script>

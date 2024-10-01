@@ -62,6 +62,12 @@
   <script>swal("Duplicate!", "You already set grade for this student.", "error");</script>
   <?php endif ?>
 
+  <?php if(!empty(session()->getFlashdata('already'))) : ?>
+  <script>swal("Duplicate!", "You already set grade for this student.", "error");</script>
+  <?php endif ?>
+
+  
+
   <?php if(!empty(session()->getFlashdata('teacher'))) : ?>
   <script>swal("Welcome   <?= isset($userName['firstname']) ? $userName['firstname'] : $userName['firstname'];?>!", "You successfully login your account.", "success");</script>
   <?php endif ?>
@@ -98,7 +104,7 @@
             <th>Student LRN</th>
             <th>Name</th>
             <th>Section</th>
-            <th>Strand</th>
+            <th>Program</th>
             <th>Semester</th>
             <th>Year Level</th>
             <th>Action</th>

@@ -1,0 +1,98 @@
+CRITICAL - 2023-04-30 23:08:58 --> CodeIgniter\BaseModel::transformDataToArray(): Return value must be of type array, string returned
+in SYSTEMPATH\BaseModel.php on line 1624.
+ 1 SYSTEMPATH\BaseModel.php(853): CodeIgniter\BaseModel->transformDataToArray('off', 'update')
+ 2 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], 'off')
+ 3 APPPATH\Controllers\Admin.php(356): CodeIgniter\Model->update('1', 'off')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->enrollment_status()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-30 23:09:14 --> CodeIgniter\BaseModel::transformDataToArray(): Return value must be of type array, string returned
+in SYSTEMPATH\BaseModel.php on line 1624.
+ 1 SYSTEMPATH\BaseModel.php(853): CodeIgniter\BaseModel->transformDataToArray('off', 'update')
+ 2 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], 'off')
+ 3 APPPATH\Controllers\Admin.php(356): CodeIgniter\Model->update('1', 'off')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->enrollment_status()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-30 23:11:07 --> CodeIgniter\BaseModel::transformDataToArray(): Return value must be of type array, string returned
+in SYSTEMPATH\BaseModel.php on line 1624.
+ 1 SYSTEMPATH\BaseModel.php(853): CodeIgniter\BaseModel->transformDataToArray('off', 'update')
+ 2 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], 'off')
+ 3 APPPATH\Controllers\Admin.php(356): CodeIgniter\Model->update('1', 'off')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->enrollment_status()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-30 23:12:15 --> CodeIgniter\BaseModel::transformDataToArray(): Return value must be of type array, string returned
+in SYSTEMPATH\BaseModel.php on line 1624.
+ 1 SYSTEMPATH\BaseModel.php(853): CodeIgniter\BaseModel->transformDataToArray('tt', 'update')
+ 2 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], 'tt')
+ 3 APPPATH\Controllers\Admin.php(357): CodeIgniter\Model->update('tt', 'tt')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->enrollment_status()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-30 23:12:40 --> CodeIgniter\BaseModel::transformDataToArray(): Return value must be of type array, string returned
+in SYSTEMPATH\BaseModel.php on line 1624.
+ 1 SYSTEMPATH\BaseModel.php(853): CodeIgniter\BaseModel->transformDataToArray('tt', 'update')
+ 2 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], 'tt')
+ 3 APPPATH\Controllers\Admin.php(357): CodeIgniter\Model->update('1', 'tt')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->enrollment_status()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-30 23:13:02 --> CodeIgniter\BaseModel::transformDataToArray(): Return value must be of type array, string returned
+in SYSTEMPATH\BaseModel.php on line 1624.
+ 1 SYSTEMPATH\BaseModel.php(853): CodeIgniter\BaseModel->transformDataToArray('tt', 'update')
+ 2 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], 'tt')
+ 3 APPPATH\Controllers\Admin.php(357): CodeIgniter\Model->update('1', 'tt')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->enrollment_status()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-30 23:13:04 --> CodeIgniter\BaseModel::transformDataToArray(): Return value must be of type array, string returned
+in SYSTEMPATH\BaseModel.php on line 1624.
+ 1 SYSTEMPATH\BaseModel.php(853): CodeIgniter\BaseModel->transformDataToArray('tt', 'update')
+ 2 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], 'tt')
+ 3 APPPATH\Controllers\Admin.php(357): CodeIgniter\Model->update('1', 'tt')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->enrollment_status()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-30 23:13:46 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 867.
+ 1 SYSTEMPATH\BaseModel.php(867): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Admin.php(357): CodeIgniter\Model->update('1', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->enrollment_status()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-30 23:14:04 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 867.
+ 1 SYSTEMPATH\BaseModel.php(867): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Admin.php(357): CodeIgniter\Model->update('1', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->enrollment_status()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-30 23:51:01 --> Undefined array key "enroll_status"
+in APPPATH\Controllers\Profile.php on line 399.
+ 1 APPPATH\Controllers\Profile.php(399): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "enroll_status"', 'APPPATH\\Controllers\\Profile.php', 399)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->retrieve_yearUser()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

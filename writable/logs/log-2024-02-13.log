@@ -1,0 +1,10 @@
+CRITICAL - 2024-02-13 07:45:03 --> iconv_strlen(): Detected an illegal character in input string
+in SYSTEMPATH/Email/Email.php on line 1487.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Email/Email.php(1487): iconv_strlen()
+ 3 SYSTEMPATH/Email/Email.php(627): CodeIgniter\Email\Email->prepQEncoding()
+ 4 APPPATH/Controllers/Webpage.php(104): CodeIgniter\Email\Email->setSubject()
+ 5 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Webpage->sendmail()
+ 6 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
